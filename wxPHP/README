@@ -1,0 +1,20 @@
+Building in Windows
+
+
+. Download and install wxWidgets 2.8
+	make sure to have your enviroment variables configured.
+	set LIB=%LIB%;%WXWIN%\lib\vc_lib
+	set INCLUDE=%INCLUDE%;%WXWIN%\include
+	set INCLUDE=%INCLUDE%;%WXWIN%\include\msvc
+
+. Put the source code in the ext folder of your php build folder, ext/wxWidgets
+
+. Configure your php:
+	cscript /nologo configure.js  "--enable-wxWidgets=shared"
+
+. Build it:
+	nmake php_wxwidgets.dll
+	
+
+Any problems, please refer to the project forum:
+	https://sourceforge.net/projects/wxphp5/
