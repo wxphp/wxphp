@@ -6,7 +6,8 @@
 
 /* Define Extension Properties */
 #define PHP_WXWIDGETS_EXTNAME    "wxWidgets"
-#define PHP_WXWIDGETS_EXTVER    "1.0"
+//#define PHP_WXWIDGETS_EXTVER    "1.0"
+#define PHP_WXWIDGETS_VERSION	"1.0"
 
 /* Import configure options
    when building outside of
@@ -123,7 +124,6 @@ PHP_METHOD(php_wxSizer, SetVirtualSizeHints);
 PHP_METHOD(php_wxSizer, GetChildren);
 PHP_METHOD(php_wxSizer, SetDimension);
 PHP_METHOD(php_wxSizer, GetItem);
-PHP_METHOD(php_wxSizer, Show);
 PHP_METHOD(php_wxSizer, Hide);
 PHP_METHOD(php_wxSizer, IsShown);
 PHP_METHOD(php_wxColour, __construct);

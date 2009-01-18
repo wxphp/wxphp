@@ -13,37 +13,37 @@ void wxFrame_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -1077,37 +1077,37 @@ void wxWindow_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -3019,37 +3019,37 @@ void wxStatusBar_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -5631,134 +5631,6 @@ PHP_METHOD(php_wxSizer, GetItem)
 		}
 	}
 }
-PHP_METHOD(php_wxSizer, Show)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	void *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), "wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
-	{
-		return;
-	}
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = zend_list_find(id_to_find, &rsrc_type);
-	
-	bool _argBool0;
-	bool _argBool1;
-	long _argLong0;
-	void *_ptrObj0 = 0;
-	zval *_argObj0 = 0;
-	int id_to_find0;
-	valid=1;
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!|b!b!", &_argObj0 , &_argBool0 , &_argBool1 ) == SUCCESS)
-	{
-		
-		if(_argObj0)
-		if (valid) 
-		{
-			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), "wxResource", sizeof("wxResource"),  (void **)&tmp) == SUCCESS)
-			{
-				id_to_find0 = Z_RESVAL_P(*tmp);
-				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox))
-					valid = 0;
-			}
-			else if(_argObj0->type==IS_LONG)
-				_ptrObj0= (void *)_argObj0->value.lval;
-			else if(_argObj0->type!=IS_NULL)
-				valid = 0;
-		}
-		else
-			valid = 0;
-		if(valid)
-		{
-			bool ret0;
-			int gr = ZEND_NUM_ARGS(); 
-			switch(gr)
-			{
-				case 3:
-					ret0 =  ((wxSizer_php*)_this)->Show((wxWindow*) _ptrObj0 , _argBool0 , _argBool1);
-					break;
-				case 2:
-					ret0 =  ((wxSizer_php*)_this)->Show((wxWindow*) _ptrObj0 , _argBool0);
-					break;
-				case 1:
-					ret0 =  ((wxSizer_php*)_this)->Show((wxWindow*) _ptrObj0);
-					break;
-				default:
-					break;
-			}
-			RETURN_BOOL(ret0)			
-		}
-	}
-	valid=1;
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!|b!b!", &_argObj0 , &_argBool0 , &_argBool1 ) == SUCCESS)
-	{
-		
-		if(_argObj0)
-		if (valid) 
-		{
-			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), "wxResource", sizeof("wxResource"),  (void **)&tmp) == SUCCESS)
-			{
-				id_to_find0 = Z_RESVAL_P(*tmp);
-				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
-					valid = 0;
-			}
-			else if(_argObj0->type==IS_LONG)
-				_ptrObj0= (void *)_argObj0->value.lval;
-			else if(_argObj0->type!=IS_NULL)
-				valid = 0;
-		}
-		else
-			valid = 0;
-		if(valid)
-		{
-			bool ret1;
-			int gr = ZEND_NUM_ARGS(); 
-			switch(gr)
-			{
-				case 3:
-					ret1 =  ((wxSizer_php*)_this)->Show((wxSizer*) _ptrObj0 , _argBool0 , _argBool1);
-					break;
-				case 2:
-					ret1 =  ((wxSizer_php*)_this)->Show((wxSizer*) _ptrObj0 , _argBool0);
-					break;
-				case 1:
-					ret1 =  ((wxSizer_php*)_this)->Show((wxSizer*) _ptrObj0);
-					break;
-				default:
-					break;
-			}
-			RETURN_BOOL(ret1)			
-		}
-	}
-	valid=1;
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!|b!", &_argLong0 , &_argBool0 ) == SUCCESS)
-	{
-		
-		if(valid)
-		{
-			bool ret2;
-			int gr = ZEND_NUM_ARGS(); 
-			switch(gr)
-			{
-				case 2:
-					ret2 =  ((wxSizer_php*)_this)->Show((unsigned int)_argLong0 , _argBool0);
-					break;
-				case 1:
-					ret2 =  ((wxSizer_php*)_this)->Show((unsigned int)_argLong0);
-					break;
-				default:
-					break;
-			}
-			RETURN_BOOL(ret2)			
-		}
-	}
-}
 PHP_METHOD(php_wxSizer, Hide)
 {
 	zval **tmp;
@@ -7926,37 +7798,37 @@ void wxMenu_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -12103,37 +11975,37 @@ void wxPanel_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -12566,37 +12438,37 @@ void wxSplitterWindow_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -13035,37 +12907,37 @@ void wxTreeCtrl_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -13513,7 +13385,10 @@ PHP_METHOD(php_wxTreeCtrl, GetItemText)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;
+			ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));
+			strcpy ( ro2, (const char *) ret0.char_str() );
+			RETURN_STRING( ro2 ,1)
 		}
 	}
 }
@@ -13530,37 +13405,37 @@ void wxValidator_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -13735,37 +13610,37 @@ void wxCheckListBox_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -14770,37 +14645,37 @@ void wxTextCtrl_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -15172,37 +15047,37 @@ void wxNotebook_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -16609,37 +16484,37 @@ void wxStaticText_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -17010,37 +16885,37 @@ void wxButton_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -17415,37 +17290,37 @@ void wxStaticBox_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -17835,37 +17710,37 @@ void wxListBox_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -18399,37 +18274,37 @@ void wxFileDialog_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -19097,37 +18972,37 @@ void wxDialog_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -19516,37 +19391,37 @@ void wxMessageDialog_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -20006,37 +19881,37 @@ void wxListCtrl_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -21189,37 +21064,37 @@ void wxStaticBitmap_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -21536,37 +21411,37 @@ void wxGauge_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -22216,37 +22091,37 @@ void wxComboBox_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -25977,37 +25852,37 @@ void wxSplashScreen_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -26302,37 +26177,37 @@ void wxCalendarCtrl_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -28622,37 +28497,37 @@ void wxEvtHandler_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));
@@ -29348,37 +29223,37 @@ void wxCheckBox_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
 	{
 		object_init_ex(arg[0],php_wxEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCommandEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCommandEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTreeEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
 	{
 		object_init_ex(arg[0],php_wxTreeEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTreeEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxListEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
 	{
 		object_init_ex(arg[0],php_wxListEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxListEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxCalendarEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
 	{
 		object_init_ex(arg[0],php_wxCalendarEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxCalendarEvent));
 	}
 	
-	else if(!strcmp(evnt.GetClassInfo()->GetClassName(),"wxTimerEvent"))
+	else if(!wcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
 	{
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_wxTimerEvent));

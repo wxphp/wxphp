@@ -386,7 +386,6 @@ static function_entry php_wxBoxSizer_functions[] = {
 	PHP_ME(php_wxSizer, GetChildren, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, SetDimension, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, GetItem, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Show, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, Hide, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, IsShown, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxBoxSizer, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -440,7 +439,6 @@ static function_entry php_wxSizer_functions[] = {
 	PHP_ME(php_wxSizer, GetChildren, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, SetDimension, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, GetItem, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Show, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, Hide, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, IsShown, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -1172,7 +1170,7 @@ void php_wxSplitterWindow_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxSplitterWindow_php : public wxSplitterWindow{
 	public:
-	wxSplitterWindow_php(wxWindow* arg0 , int arg1 = wxID_ANY , const wxPoint& arg2 = wxDefaultPosition , const wxSize& arg3 = wxDefaultSize , long int arg4 = 768 , const wxString& arg5 = "\000\000\000s\000\000\000p\000\000\000l\000\000\000i\000\000\000t\000\000\000t\000\000\000e\000\000\000r\000\000\000"):wxSplitterWindow(arg0 , arg1 , arg2 , arg3 , arg4 , arg5)
+	wxSplitterWindow_php(wxWindow* arg0 , int arg1 = wxID_ANY , const wxPoint& arg2 = wxDefaultPosition , const wxSize& arg3 = wxDefaultSize , long int arg4 = 768 , const wxString& arg5 = wxT("\000\000\000s\000\000\000p\000\000\000l\000\000\000i\000\000\000t\000\000\000t\000\000\000e\000\000\000r\000\000\000")):wxSplitterWindow(arg0 , arg1 , arg2 , arg3 , arg4 , arg5)
 	{
 	}
 	zval *evnArray;
@@ -1795,7 +1793,6 @@ static function_entry php_wxFlexGridSizer_functions[] = {
 	PHP_ME(php_wxSizer, GetChildren, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, SetDimension, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, GetItem, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Show, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, Hide, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, IsShown, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFlexGridSizer, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -2030,7 +2027,6 @@ static function_entry php_wxStaticBoxSizer_functions[] = {
 	PHP_ME(php_wxSizer, GetChildren, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, SetDimension, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, GetItem, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxSizer, Show, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, Hide, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSizer, IsShown, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStaticBoxSizer, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -2670,7 +2666,7 @@ void php_wxPrintout_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxPrintout_php : public wxPrintout{
 	public:
-	wxPrintout_php(const wxString& arg0 = "Printout"):wxPrintout(arg0)
+	wxPrintout_php(const wxString& arg0 = wxT("Printout")):wxPrintout(arg0)
 	{
 	}
 		virtual bool OnPrintPage(int arg0);
@@ -2965,7 +2961,7 @@ void php_wxCalendarCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxCalendarCtrl_php : public wxCalendarCtrl{
 	public:
-	wxCalendarCtrl_php(wxWindow* arg0 , int arg1 , const wxDateTime& arg2 = wxDefaultDateTime , const wxPoint& arg3 = wxDefaultPosition , const wxSize& arg4 = wxDefaultSize , long int arg5 = 262146 , const wxString& arg6 = "CalendarCtrl"):wxCalendarCtrl(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6)
+	wxCalendarCtrl_php(wxWindow* arg0 , int arg1 , const wxDateTime& arg2 = wxDefaultDateTime , const wxPoint& arg3 = wxDefaultPosition , const wxSize& arg4 = wxDefaultSize , long int arg5 = 262146 , const wxString& arg6 = wxT("CalendarCtrl")):wxCalendarCtrl(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6)
 	{
 	}
 	zval *evnArray;

@@ -1,5 +1,5 @@
 <?php
-	dl('php_wxWidgets.dll');
+	dl('wxWidgets.so');
 	
 	class mainFrame extends wxFrame
 	{
@@ -17,9 +17,10 @@
 		function mainFrame()
 		{
 			parent::__construct(null ,null,"Minimal wxPHP App",wxDefaultPosition, new wxSize(350,260));
-			$ico = new wxIcon();
+			echo "aqui3\n";
+			/*$ico = new wxIcon();
 			$ico->CopyFromBitmap(new wxBitmap("sample.xpm",wxBITMAP_TYPE_XPM));
-			$this->SetIcon($ico);
+			$this->SetIcon($ico);*/
 			
 			$mb = new wxMenuBar();
 			
@@ -38,6 +39,7 @@
 			
 			$this->Connect(2,wxEVT_COMMAND_MENU_SELECTED,array($this,"onQuit"));
 			$this->Connect(4,wxEVT_COMMAND_MENU_SELECTED,array($this,"onAbout"));
+			echo "aqui2\n";
 		}
 	}
 	
@@ -47,11 +49,13 @@
 		function OnInit()
 		{
 			global $mf;
+			echo "aqui\n";
 			
 			$mf = new mainFrame();
+			//$mf->Destroy();
 			$mf->Show();
 			
-			return true;
+			return 0;
 		}
 		
 		function OnExit()
@@ -64,10 +68,12 @@
 
 	$xt = new myApp();
 
-	if(wxInitialize())
+	//if(wxInitialize())
 	{
 		wxApp::SetInstance($xt);
+		echo "aqui4\n";
 		wxEntry();
+		echo "aqui5\n";
 	}	
 
 ?>

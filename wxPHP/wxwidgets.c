@@ -2096,7 +2096,7 @@ zend_module_entry wxWidgets_module_entry = {
     NULL, /* RSHUTDOWN */
     NULL, /* MINFO */
 #if ZEND_MODULE_API_NO >= 20010901
-    PHP_WXWIDGETS_EXTVER,
+    PHP_WXWIDGETS_VERSION,
 #endif
     STANDARD_MODULE_PROPERTIES
 };

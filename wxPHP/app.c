@@ -8,7 +8,7 @@ int wxAppWrapper::OnExit()
 	zval *retval;
 	zval func_name;
 
-	ZVAL_STRINGL(&func_name, "OnExit", sizeof("OnExit")-1, 0);
+	ZVAL_STRINGL(&func_name, (char *)"OnExit", sizeof("OnExit")-1, 0);
 	
 	if (call_user_function_ex(NULL, &phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC) == FAILURE) {
 		wxMessageBox(_T("Failed Call!\n"));
@@ -21,7 +21,7 @@ bool wxAppWrapper::OnInit()
 	zval *retval;
 	zval func_name;
 
-	ZVAL_STRINGL(&func_name, "OnInit", sizeof("OnInit")-1, 0);
+	ZVAL_STRINGL(&func_name, (char *)"OnInit", sizeof("OnInit")-1, 0);
 	
 	if (call_user_function_ex(NULL, &phpObj, &func_name, &retval, 0, NULL, 0, NULL TSRMLS_CC) == FAILURE) {
 		wxMessageBox(_T("Failed Call!\n"));
@@ -57,7 +57,7 @@ PHP_METHOD(php_wxApp, __construct)
 #ifdef ZTS
 	my->tsrm_ls = tsrm_ls;
 #endif
-	add_property_resource(getThis(), "wxResource", zend_list_insert(my, le_wxApp));
+	add_property_resource(getThis(),(char *)"wxResource", zend_list_insert(my, le_wxApp));
 }
 
 PHP_METHOD(php_wxApp, SetInstance)
@@ -66,11 +66,11 @@ PHP_METHOD(php_wxApp, SetInstance)
 	int id_to_find;
 	void *property;
 	zval *objvar;
-	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "O", &objvar, php_wxApp_entry) == FAILURE) {
+	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, (char *)"O", &objvar, php_wxApp_entry) == FAILURE) {
 		RETURN_NULL();
 	}
 	
-	if (zend_hash_find(Z_OBJPROP_P(objvar), "wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
+	if (zend_hash_find(Z_OBJPROP_P(objvar), (char *)"wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
 	{
 		return;
 	}
@@ -90,7 +90,7 @@ PHP_METHOD(php_wxApp, Yield)
 	int valid = 1;
 	void *_this;
 	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), "wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), (char *)"wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
 	{
 		return;
 	}
