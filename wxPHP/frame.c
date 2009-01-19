@@ -3343,7 +3343,7 @@ PHP_METHOD(php_wxStatusBar, GetStatusText)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -7369,7 +7369,7 @@ PHP_METHOD(php_wxMenuItemBase, GetLabel)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -7406,7 +7406,7 @@ PHP_METHOD(php_wxMenuItemBase, GetLabelFromText)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -9353,7 +9353,7 @@ PHP_METHOD(php_wxMenuBase, GetLabel)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -9426,7 +9426,7 @@ PHP_METHOD(php_wxMenuBase, GetHelpString)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -10853,7 +10853,7 @@ PHP_METHOD(php_wxToolBarBase, GetToolShortHelp)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -10926,7 +10926,7 @@ PHP_METHOD(php_wxToolBarBase, GetToolLongHelp)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -11598,7 +11598,7 @@ PHP_METHOD(php_wxControl, GetLabel)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -11748,7 +11748,7 @@ PHP_METHOD(php_wxCommandEvent, GetString)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -13385,10 +13385,7 @@ PHP_METHOD(php_wxTreeCtrl, GetItemText)
 				default:
 					break;
 			}
-			char * ro2;
-			ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));
-			strcpy ( ro2, (const char *) ret0.char_str() );
-			RETURN_STRING( ro2 ,1)
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -14959,7 +14956,7 @@ PHP_METHOD(php_wxTextCtrl, GetValue)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -15377,7 +15374,7 @@ PHP_METHOD(php_wxNotebook, GetPageText)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -16069,7 +16066,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetPageText)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -16813,7 +16810,7 @@ PHP_METHOD(php_wxStaticText, GetLabel)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -18149,7 +18146,7 @@ PHP_METHOD(php_wxListBox, GetString)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -18561,7 +18558,7 @@ PHP_METHOD(php_wxFileDialog, GetPath)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -18596,7 +18593,7 @@ PHP_METHOD(php_wxFileDialog, GetDirectory)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -18631,7 +18628,7 @@ PHP_METHOD(php_wxFileDialog, GetFilename)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -19826,7 +19823,7 @@ PHP_METHOD(php_wxStatusBarBase, GetStatusText)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -20282,7 +20279,7 @@ PHP_METHOD(php_wxListCtrl, OnGetItemText)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -20515,7 +20512,7 @@ PHP_METHOD(php_wxListCtrl, GetItemText)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -22639,7 +22636,7 @@ PHP_METHOD(php_wxComboBox, GetValue)
 				default:
 					break;
 			}
-			RETURN_STRING((char *)ret0.c_str(),1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
