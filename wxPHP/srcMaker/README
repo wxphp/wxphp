@@ -1,0 +1,15 @@
+parser.php:
+
+Code generator, this takes the class mapping (classes, methods and arguments) and 
+generates corresponding source code.
+This script currently as the following file dependencies/templates:
+	wxwidgets.c
+	php_wxwidgets.h
+It takes two arguments
+	1 - the filename of the file with the serialized classes
+	2 - the filename of the file with the serialized constants
+	
+ex: php parser.php classes.out consts.dump
+	
+
+The generated file ".c" and ".h" are meant to replace the ones in the module source root.

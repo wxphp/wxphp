@@ -1890,8 +1890,6 @@ static function_entry php_wxButton_functions[] = {
 	PHP_ME(php_wxWindow, WarpPointer, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, Update, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, ClearBackground, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetBackgroundColour, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxWindow, SetForegroundColour, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetCursor, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, SetFont, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, GetCharHeight, NULL,ZEND_ACC_PUBLIC)
@@ -1909,6 +1907,8 @@ static function_entry php_wxButton_functions[] = {
 	PHP_ME(php_wxButton, SetLabel, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxButton, Enable, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxButton, SetDefault, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxButton, SetBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxButton, SetForegroundColour, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxButton, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
@@ -2165,6 +2165,8 @@ static function_entry php_wxFileDialog_functions[] = {
 	PHP_ME(php_wxFileDialog, SetFilterIndex, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileDialog, ShowModal, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileDialog, Show, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxFileDialog, GetPaths, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxFileDialog, GetFilenames, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileDialog, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
@@ -3404,5 +3406,232 @@ static function_entry php_wxCheckBox_functions[] = {
 	PHP_ME(php_wxCheckBox, SetValue, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxCheckBox, GetValue, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxCheckBox, Connect, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxDirDialog_entry;
+void php_wxDirDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxDirDialog_NAME "wxDirDialog"
+#define le_wxDirDialog_name  "native wxDirDialog"
+
+class wxDirDialog_php : public wxDirDialog{
+	public:
+	wxDirDialog_php(wxWindow* arg0 , const wxString& arg1 = wxDirSelectorPromptStr , const wxString& arg2 = wxEmptyString , long int arg3 = 536877120 , const wxPoint& arg4 = wxDefaultPosition , const wxSize& arg5 = wxDefaultSize , const wxString& arg6 = wxDirDialogNameStr):wxDirDialog(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxDirDialog;
+
+static function_entry php_wxDirDialog_functions[] = {
+	PHP_ME(php_wxDialog, Show, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDialog, EndModal, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDialog, IsModal, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Raise, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Lower, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Enable, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsRetained, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFocus, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Reparent, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, WarpPointer, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Update, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, ClearBackground, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetForegroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetCursor, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFont, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharHeight, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharWidth, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollbar, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollPos, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollThumb, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollRange, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, AddChild, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, RemoveChild, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetHandle, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Refresh, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsFrozen, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDirDialog, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxDirDialog, SetPath, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDirDialog, ShowModal, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDirDialog, Connect, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxBitmapButton_entry;
+void php_wxBitmapButton_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxBitmapButton_NAME "wxBitmapButton"
+#define le_wxBitmapButton_name  "native wxBitmapButton"
+
+class wxBitmapButton_php : public wxBitmapButton{
+	public:
+	wxBitmapButton_php(wxWindow* arg0 , int arg1 , const wxBitmap& arg2 , const wxPoint& arg3 = wxDefaultPosition , const wxSize& arg4 = wxDefaultSize , long int arg5 = 4 , const wxValidator& arg6 = wxDefaultValidator , const wxString& arg7 = wxButtonNameStr):wxBitmapButton(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6 , arg7)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxBitmapButton;
+
+static function_entry php_wxBitmapButton_functions[] = {
+	PHP_ME(php_wxButton, SetLabel, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxButton, Enable, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxButton, SetDefault, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxButton, SetBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxButton, SetForegroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Raise, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Lower, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsRetained, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFocus, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Reparent, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, WarpPointer, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Update, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, ClearBackground, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetCursor, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFont, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharHeight, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharWidth, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollbar, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollPos, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollThumb, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollRange, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, AddChild, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, RemoveChild, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetHandle, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Refresh, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsFrozen, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxBitmapButton, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxBitmapButton, Connect, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxToggleButton_entry;
+void php_wxToggleButton_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxToggleButton_NAME "wxToggleButton"
+#define le_wxToggleButton_name  "native wxToggleButton"
+
+class wxToggleButton_php : public wxToggleButton{
+	public:
+	wxToggleButton_php(wxWindow* arg0 , int arg1 , const wxString& arg2 , const wxPoint& arg3 = wxDefaultPosition , const wxSize& arg4 = wxDefaultSize , long int arg5 = 0 , const wxValidator& arg6 = wxDefaultValidator , const wxString& arg7 = wxCheckBoxNameStr):wxToggleButton(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6 , arg7)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxToggleButton;
+
+static function_entry php_wxToggleButton_functions[] = {
+	PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Raise, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Lower, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Enable, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsRetained, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFocus, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Reparent, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, WarpPointer, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Update, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, ClearBackground, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetForegroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetCursor, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFont, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharHeight, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharWidth, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollbar, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollPos, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollThumb, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollRange, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, AddChild, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, RemoveChild, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetHandle, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Refresh, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsFrozen, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxToggleButton, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxToggleButton, SetValue, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxToggleButton, GetValue, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxToggleButton, Connect, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxChoice_entry;
+void php_wxChoice_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxChoice_NAME "wxChoice"
+#define le_wxChoice_name  "native wxChoice"
+
+class wxChoice_php : public wxChoice{
+	public:
+	wxChoice_php(wxWindow* arg0 , int arg1 , const wxPoint& arg2 = wxDefaultPosition , const wxSize& arg3 = wxDefaultSize , int arg4 = 0 , const wxString* arg5 = 0 , long int arg6 = 0 , const wxValidator& arg7 = wxDefaultValidator , const wxString& arg8 = wxChoiceNameStr):wxChoice(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6 , arg7 , arg8)
+	{
+	}
+	wxChoice_php(wxWindow* arg0 , int arg1 , const wxPoint& arg2 , const wxSize& arg3 , const wxArrayString& arg4 , long int arg5 = 0 , const wxValidator& arg6 = wxDefaultValidator , const wxString& arg7 = wxChoiceNameStr):wxChoice(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6 , arg7)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxChoice;
+
+static function_entry php_wxChoice_functions[] = {
+	PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Raise, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Lower, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Enable, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsRetained, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFocus, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Reparent, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, WarpPointer, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Update, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, ClearBackground, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetForegroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetCursor, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFont, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharHeight, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharWidth, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollbar, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollPos, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollThumb, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollRange, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, AddChild, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, RemoveChild, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetHandle, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Refresh, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsFrozen, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxChoice, GetCount, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, Clear, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, GetSelection, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, GetCurrentSelection, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, SetSelection, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, FindString, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, GetString, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, SetString, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxChoice, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };

@@ -1,5 +1,6 @@
 <?php
-	dl('wxWidgets.so');
+	dl('php_wxWidgets.dll');
+	//dl('wxWidgets.so');
 	
 	class mainFrame extends wxFrame
 	{
@@ -68,12 +69,13 @@
 
 	$xt = new myApp();
 
-	//if(wxInitialize())
+//	if(wxInitialize())
 	{
 		wxApp::SetInstance($xt);
 		echo "aqui4\n";
 		wxEntry();
 		echo "aqui5\n";
+		die();
 	}	
 
 ?>

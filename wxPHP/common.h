@@ -6,6 +6,9 @@
 	#pragma hdrstop
 #endif
 
+#ifndef wxUSE_GUI
+#define wxUSE_GUI
+
 #ifndef WX_PRECOMP
 	#include <wx/wx.h>
 #else
@@ -16,6 +19,12 @@
 #if !wxUSE_THREADS
     #error "This sample requires thread support!"
 #endif // wxUSE_THREADS
+
+#if !wxUSE_UNICODE
+#define tcscmp strcmp
+#else
+#define tcscmp wcscmp
+#endif // wxUSE_UNICODE
 
 #include <wx/thread.h>
 
@@ -36,6 +45,7 @@
 #include <wx/print.h>
 #include <wx/splash.h>
 #include <wx/protocol/http.h>
+#include <wx/dataview.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
