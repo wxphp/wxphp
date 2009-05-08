@@ -1,3 +1,3 @@
 php parser.php %*
-del ..\wxwidgets.c
+del ..\wxwidgets.cpp
 php update.php

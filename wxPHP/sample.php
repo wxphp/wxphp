@@ -1,6 +1,6 @@
 <?php
-	dl('php_wxWidgets.dll');
-	//dl('wxWidgets.so');
+	//dl('php_wxWidgets.dll');
+	dl('wxwidgets.so');
 	
 	class mainFrame extends wxFrame
 	{
@@ -18,7 +18,6 @@
 		function mainFrame()
 		{
 			parent::__construct(null ,null,"Minimal wxPHP App",wxDefaultPosition, new wxSize(350,260));
-			echo "aqui3\n";
 			/*$ico = new wxIcon();
 			$ico->CopyFromBitmap(new wxBitmap("sample.xpm",wxBITMAP_TYPE_XPM));
 			$this->SetIcon($ico);*/
@@ -35,12 +34,20 @@
 			
 			$this->SetMenuBar($mb);
 			
+			//$dummy = new wxPanel($this);
+			//$sz = new wxBoxSizer(wxVERTICAL);
+			$scite = new wxStyledTextCtrl($this);
+			//$sz->Add($scite);
+
+			//$dummy->SetSizer($sz);
+			
+			
+			
 			$sbar = $this->CreateStatusBar(2);
 			$sbar->SetStatusText("Welcome to wxPHP...");
 			
 			$this->Connect(2,wxEVT_COMMAND_MENU_SELECTED,array($this,"onQuit"));
 			$this->Connect(4,wxEVT_COMMAND_MENU_SELECTED,array($this,"onAbout"));
-			echo "aqui2\n";
 		}
 	}
 	
@@ -50,7 +57,6 @@
 		function OnInit()
 		{
 			global $mf;
-			echo "aqui\n";
 			
 			$mf = new mainFrame();
 			//$mf->Destroy();
@@ -62,20 +68,16 @@
 		function OnExit()
 		{
 			
-			echo "Application terminated";
 			return 0;
 		}
 	}
 
 	$xt = new myApp();
 
-//	if(wxInitialize())
+	//if(wxInitialize())
 	{
 		wxApp::SetInstance($xt);
-		echo "aqui4\n";
 		wxEntry();
-		echo "aqui5\n";
-		die();
 	}	
 
 ?>

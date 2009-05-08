@@ -1,13 +1,7 @@
-#ifdef PHP_WIN32
-	#include <winsock2.h>
-#endif
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
 #endif
-
-#ifndef wxUSE_GUI
-#define wxUSE_GUI
 
 #ifndef WX_PRECOMP
 	#include <wx/wx.h>
@@ -46,6 +40,7 @@
 #include <wx/splash.h>
 #include <wx/protocol/http.h>
 #include <wx/dataview.h>
+#include <wx/stc/stc.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
@@ -64,4 +59,6 @@
 #endif
 
 /* Include PHP Standard Header */
+extern "C" {
 #include "php.h"
+}

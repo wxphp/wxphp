@@ -1,0 +1,14 @@
+run.php:
+
+This script takes the output of gccxml (http://www.gccxml.org/) "wx.xml", 
+and produces 2 files "consts.dump" and "classes.dump". These files contain
+a serialized mapping interpretation of the library methods, and constants.
+
+It's usefull, but it's not complete. There are some problems at variable types 
+interpretation. Every time that happens, the type is replaced by a "ref: [0-9]+"
+string.
+
+The output of this script, is the input for srcMaker/srcGui scripts.
+
+In linux:
+gccxml teste.c -fxml=testing.xml -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/include/wx-2.8 -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES -D__WXGTK__ -I/usr/include/php5 -I/usr/include/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/php5/ext -I/usr/include/php5/ext/date/lib

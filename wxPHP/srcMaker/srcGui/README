@@ -1,0 +1,6 @@
+srcMaker.gui.php:
+
+This tool enables/disables methods within the library mapping.
+Takes "classes.dump" and generates "classes.out". This tool already
+requires the wxwidgets library module. It's part of a later development,
+initially the the method mapping was done by hand.

@@ -1152,6 +1152,10 @@
 	{
 		$temp = unserialize(file_get_contents($argv[2]));
 		$defConsts = array_merge($temp,$defConsts);
+
+                unset($defConsts['wxHTTP_GET']);
+                unset($defConsts['wxHTTP_POST']);
+                unset($defConsts['wxHTTP_HEAD']);
 		
 		unset($defConsts['wxHIDE_READONLY']);
 		unset($defConsts['wxBATTERY_NORMAL_STATE']);
@@ -1524,6 +1528,7 @@ void <?=$className?>_php::onEvent(wxEvent& evnt)
 	HashTable* htl;
 	zval *arg[1];
 	MAKE_STD_ZVAL(arg[0]);
+	char _wxResource[] = "wxResource";
 
 	if(0)
 	{}
@@ -1533,7 +1538,7 @@ void <?=$className?>_php::onEvent(wxEvent& evnt)
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("<?=$kevn?>")))
 	{
 		object_init_ex(arg[0],php_<?=$kevn?>_entry);
-		add_property_resource(arg[0], "wxResource", zend_list_insert(&evnt, le_<?=$kevn?>));
+		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_<?=$kevn?>));
 	}
 <?
 	}
@@ -1610,9 +1615,10 @@ PHP_METHOD(php_<?=$className?>, Connect)
 	int rsrc_type;
 	int id_to_find;
 	int valid = 1;
+	char _wxResource[] = "wxResource";
 	<?=$className?>_php *_this;
 	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), "wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
 		return;
 	id_to_find = Z_RESVAL_P(*tmp);
 	_this = (<?=$className?>_php*)zend_list_find(id_to_find, &rsrc_type);
@@ -1979,13 +1985,14 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 ?>
 	int id_to_find;
 <?			}?>
+	char _wxResource[] = "wxResource";
 	int valid = 1;
 	void *_this;
 <?
 			if($methodName!=$className)
 			{
 ?>	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), "wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
 	{
 		return;
 	}
@@ -2082,7 +2089,7 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 		if(_argObj<?=$i?>)
 		if (valid) 
 		{
-			if(_argObj<?=$i?>->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj<?=$i?>), "wxResource", sizeof("wxResource"),  (void **)&tmp) == SUCCESS)
+			if(_argObj<?=$i?>->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj<?=$i?>), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 			{
 				id_to_find<?=$i?> = Z_RESVAL_P(*tmp);
 				_ptrObj<?=$i?> = zend_list_find(id_to_find<?=$i?>, &rsrc_type);
@@ -2114,7 +2121,7 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 			?>
 		if(valid && _argObj<?=$L+$i?>)
 		{
-			if (_argObj<?=$L+$i?>->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj<?=$L+$i?>), "wxResource", sizeof("wxResource"),  (void **)&tmp) == SUCCESS) 
+			if (_argObj<?=$L+$i?>->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj<?=$L+$i?>), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
 			{
 				id_to_find<?=$L+$i?> = Z_RESVAL_P(*tmp);
 				_ptrObj<?=$L+$i?> = zend_list_find(id_to_find<?=$L+$i?>, &rsrc_type);
@@ -2184,7 +2191,7 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 				if($methodName==$className)
 				{?>
 			long id_to_find = zend_list_insert(_this, le_<?=$className?>);
-			add_property_resource(getThis(), "wxResource", id_to_find);					
+			add_property_resource(getThis(), _wxResource, id_to_find);					
 <?
 					$argsProps = $defIni[$className][$methodName][$k*2+1];
 					if(is_array($argsProps[0]))
@@ -2241,7 +2248,7 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 
 	$data = "#include \"php_wxwidgets.h\"\n".$headers.$data;
 	
-	$hd = fopen($fileN.".c","w");
+	$hd = fopen($fileN.".cpp","w");
 	fwrite($hd,$data);
 	fclose($hd);
 	
@@ -2426,7 +2433,7 @@ int le_<?=$className?>;
 	
 	
 
-	$old = file_get_contents("wxwidgets.c");
+	$old = file_get_contents("wxwidgets.cpp");
 	if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$matches))
 	{
 		$data = $matches[1]."\n".$data."\n".$matches[2];
@@ -2435,7 +2442,7 @@ int le_<?=$className?>;
 		{
 			$data = $matches[1]."\n".$data2."\n".$matches[2];
 		
-			$hd = fopen("wxwidgets.c","w");
+			$hd = fopen("wxwidgets.cpp","w");
 			fwrite($hd,$data);
 			fclose($hd);
 		}
