@@ -23,8 +23,9 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_LIB("oleacc.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_LIB("wxmsw28d_core.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_LIB("wxmsw28d_adv.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw28d_stc.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\wx.h", "CFLAGS_WXWIDGETS")) {
-		EXTENSION("wxWidgets", "app.c frame.c wxwidgets.c");
+		EXTENSION("wxWidgets", "app.cpp frame.cpp wxwidgets.cpp");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc");
 		AC_DEFINE('WX_DEBUG', 0, 'Have WX_DEBug library');
 	} else {

@@ -1204,6 +1204,13 @@
 		unset($defConsts['wxIMAGE_LIST_SMALL']);
 		unset($defConsts['wxIMAGE_LIST_STATE']);
 		unset($defConsts['PHP_WXWIDGETS_VERSION']);
+
+		unset($defConsts['wxInside']);
+		unset($defConsts['wxOutLeft']);
+		unset($defConsts['wxOutRight']);
+		unset($defConsts['wxOutTop']);
+		unset($defConsts['wxOutBottom']);
+		
 	}
 	
 	/*$hd = fopen("classes.dump","w");

@@ -1,3 +1,6 @@
+#ifdef PHP_WIN32
+	#include <winsock2.h>
+#endif
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
