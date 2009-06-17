@@ -178,6 +178,10 @@ zend_class_entry *php_wxChoice_entry;
 int le_wxChoice;
 zend_class_entry *php_wxStyledTextCtrl_entry;
 int le_wxStyledTextCtrl;
+zend_class_entry *php_wxImageList_entry;
+int le_wxImageList;
+zend_class_entry *php_wxGenericImageList_entry;
+int le_wxGenericImageList;
 
 // <--- entries
 
@@ -191,6 +195,12 @@ PHP_FUNCTION(php_wxInitialize)
 	RETVAL_BOOL(wxInitialize());
 }
 
+PHP_FUNCTION(php_wxInitAllImageHandlers)
+{
+        wxInitAllImageHandlers();
+	RETVAL_TRUE;
+}
+
 PHP_FUNCTION(php_wxEntry)
 {
 	int argc = 1;
@@ -199,6 +209,7 @@ PHP_FUNCTION(php_wxEntry)
 }
 
 static function_entry php_wxWidgets_functions[] = {
+	PHP_FALIAS(wxInitAllImageHandlers, php_wxInitAllImageHandlers, NULL)
 	PHP_FALIAS(wxInitialize, php_wxInitialize, NULL)
 	PHP_FALIAS(wxEntry, php_wxEntry, NULL)
 	{ NULL, NULL, NULL }
@@ -563,6 +574,14 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	INIT_CLASS_ENTRY(cf, PHP_wxStyledTextCtrl_NAME , php_wxStyledTextCtrl_functions);
 	php_wxStyledTextCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
 	le_wxStyledTextCtrl = zend_register_list_destructors_ex(php_wxStyledTextCtrl_destruction_handler,NULL, le_wxStyledTextCtrl_name ,module_number);
+
+	INIT_CLASS_ENTRY(cf, PHP_wxImageList_NAME , php_wxImageList_functions);
+	php_wxImageList_entry = zend_register_internal_class(&cf TSRMLS_CC);
+	le_wxImageList = zend_register_list_destructors_ex(php_wxImageList_destruction_handler,NULL, le_wxImageList_name ,module_number);
+
+	INIT_CLASS_ENTRY(cf, PHP_wxGenericImageList_NAME , php_wxGenericImageList_functions);
+	php_wxGenericImageList_entry = zend_register_internal_class(&cf TSRMLS_CC);
+	le_wxGenericImageList = zend_register_list_destructors_ex(php_wxGenericImageList_destruction_handler,NULL, le_wxGenericImageList_name ,module_number);
 
 	REGISTER_LONG_CONSTANT("wxBG_STYLE_SYSTEM",	wxBG_STYLE_SYSTEM	, CONST_CS |CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxBG_STYLE_COLOUR",	wxBG_STYLE_COLOUR	, CONST_CS |CONST_PERSISTENT);
@@ -1843,11 +1862,6 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	REGISTER_LONG_CONSTANT("wxLOCALE_DECIMAL_POINT",	wxLOCALE_DECIMAL_POINT	, CONST_CS |CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxLOCALE_LOAD_DEFAULT",	wxLOCALE_LOAD_DEFAULT	, CONST_CS |CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxLOCALE_CONV_ENCODING",	wxLOCALE_CONV_ENCODING	, CONST_CS |CONST_PERSISTENT);
-	REGISTER_LONG_CONSTANT("wxInside",	wxInside	, CONST_CS |CONST_PERSISTENT);
-	REGISTER_LONG_CONSTANT("wxOutLeft",	wxOutLeft	, CONST_CS |CONST_PERSISTENT);
-	REGISTER_LONG_CONSTANT("wxOutRight",	wxOutRight	, CONST_CS |CONST_PERSISTENT);
-	REGISTER_LONG_CONSTANT("wxOutTop",	wxOutTop	, CONST_CS |CONST_PERSISTENT);
-	REGISTER_LONG_CONSTANT("wxOutBottom",	wxOutBottom	, CONST_CS |CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxFONTSTYLE_NORMAL",	wxFONTSTYLE_NORMAL	, CONST_CS |CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxFONTSTYLE_ITALIC",	wxFONTSTYLE_ITALIC	, CONST_CS |CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxFONTSTYLE_SLANT",	wxFONTSTYLE_SLANT	, CONST_CS |CONST_PERSISTENT);

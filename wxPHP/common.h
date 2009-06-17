@@ -44,6 +44,7 @@
 #include <wx/protocol/http.h>
 #include <wx/dataview.h>
 #include <wx/stc/stc.h>
+#include <wx/imaglist.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

@@ -54,7 +54,9 @@
 	}
 	echo "Found ".count($defConsts)." enumVariables\n";
 	
-	$entries = $xpath->evaluate('//Variable[@name and @type="_1405c"]', $doc);
+	//mapped to another const index in Linux
+	$entries = $xpath->evaluate('//Variable[@name and @type="_4867c"]', $doc);
+	//$entries = $xpath->evaluate('//Variable[@name and @type="_1405c"]', $doc);
 	for ($i = 0; $i < $entries->length; $i++) 
 	{
 		$k = $entries->item($i)->getAttribute('name');

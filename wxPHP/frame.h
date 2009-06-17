@@ -1279,6 +1279,29 @@ static function_entry php_wxTreeCtrl_functions[] = {
 	PHP_ME(php_wxTreeCtrl, AddRoot, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, AppendItem, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, GetItemText, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetButtonsImageList, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, AssignButtonsImageList, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, Delete, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, DeleteChildren, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, DeleteAllItems, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, Expand, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, Collapse, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, CollapseAndReset, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, Toggle, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, Unselect, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, UnselectAll, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SelectItem, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, EnsureVisible, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, ScrollTo, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetItemTextColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetItemDropHighlight, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetItemBold, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetItemText, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, GetItemTextColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, GetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetImageList, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetStateImageList, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
@@ -3973,5 +3996,68 @@ static function_entry php_wxStyledTextCtrl_functions[] = {
 	PHP_ME(php_wxStyledTextCtrl, ScrollToLine, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStyledTextCtrl, ScrollToColumn, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStyledTextCtrl, Connect, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxImageList_entry;
+void php_wxImageList_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxImageList_NAME "wxImageList"
+#define le_wxImageList_name  "native wxImageList"
+
+class wxImageList_php : public wxImageList{
+	public:
+	wxImageList_php():wxImageList()
+	{
+	}
+	wxImageList_php(int arg0 , int arg1 , bool arg2 = true , int arg3 = 1):wxImageList(arg0 , arg1 , arg2 , arg3)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxImageList;
+
+static function_entry php_wxImageList_functions[] = {
+	PHP_ME(php_wxGenericImageList, Add, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, GetBitmap, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, GetIcon, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, Replace, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, Remove, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, RemoveAll, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxImageList, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxGenericImageList_entry;
+void php_wxGenericImageList_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxGenericImageList_NAME "wxGenericImageList"
+#define le_wxGenericImageList_name  "native wxGenericImageList"
+
+class wxGenericImageList_php : public wxGenericImageList{
+	public:
+	wxGenericImageList_php():wxGenericImageList()
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxGenericImageList;
+
+static function_entry php_wxGenericImageList_functions[] = {
+	PHP_ME(php_wxGenericImageList, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxGenericImageList, Add, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, GetBitmap, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, GetIcon, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, Replace, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, Remove, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxGenericImageList, RemoveAll, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
