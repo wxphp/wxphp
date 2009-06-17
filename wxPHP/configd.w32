@@ -1,14 +1,14 @@
 ARG_ENABLE("wxWidgets", "enable wxWdigets extension", "no");
 if (PHP_WXWIDGETS != "no") {
 	if (
-		CHECK_LIB("wxjpeg.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxpng.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxtiff.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxzlib.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxregex.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxexpat.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxbase28.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxbase28_net.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxjpegd.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxpngd.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxtiffd.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxzlibd.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxregexd.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxexpatd.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxbase28d.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxbase28d_net.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_LIB("gdi32.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_LIB("comdlg32.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_LIB("winspool.lib", "wxWidgets", PHP_WXWIDGETS) &&
@@ -21,9 +21,9 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_LIB("wsock32.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_LIB("odbc32.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_LIB("oleacc.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw28_core.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw28_adv.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw28_stc.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw28d_core.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw28d_adv.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw28d_stc.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\wx.h", "CFLAGS_WXWIDGETS")) {
 		EXTENSION("wxWidgets", "app.cpp frame.cpp wxwidgets.cpp");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc");
