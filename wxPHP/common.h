@@ -45,6 +45,7 @@
 #include <wx/dataview.h>
 #include <wx/stc/stc.h>
 #include <wx/imaglist.h>
+#include <wx/process.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

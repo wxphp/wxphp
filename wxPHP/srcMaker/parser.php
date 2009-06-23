@@ -1849,6 +1849,7 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 						case "long int":
 						case "void**":
 						case "int":
+                                                case "double":
 						case "long":
 							$argStr[$e/2].="l";
 							$parseArgs[$e/2][] = "&_argLong".$types['l'];

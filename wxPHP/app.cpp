@@ -41,7 +41,6 @@ PHP_METHOD(php_wxApp, helloWorld)
     php_printf("Hello World\n");
 }
 
-
 PHP_METHOD(php_wxApp, __construct)
 {
 	/*zval *retval;

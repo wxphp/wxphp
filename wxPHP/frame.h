@@ -1224,6 +1224,15 @@ static function_entry php_wxSplitterWindow_functions[] = {
 	PHP_ME(php_wxSplitterWindow, SplitVertically, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSplitterWindow, SplitHorizontally, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSplitterWindow, SetMinimumPaneSize, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, SetSashSize, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, SetBorderSize, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, GetSashSize, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, GetBorderSize, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, SetSashPosition, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, GetSashPosition, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, SetSashGravity, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, GetSashGravity, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSplitterWindow, GetMinimumPaneSize, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSplitterWindow, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
@@ -1275,6 +1284,16 @@ static function_entry php_wxTreeCtrl_functions[] = {
 	PHP_ME(php_wxWindow, GetHandle, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, Refresh, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxWindow, IsFrozen, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, SetSizer, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetSizer, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Layout, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Fit, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, SetWindowStyle, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, PopupMenu, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, IsShown, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxTreeCtrl, AddRoot, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, AppendItem, NULL,ZEND_ACC_PUBLIC)
@@ -1302,6 +1321,19 @@ static function_entry php_wxTreeCtrl_functions[] = {
 	PHP_ME(php_wxTreeCtrl, GetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, SetImageList, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, SetStateImageList, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, IsExpanded, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, IsSelected, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, IsBold, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetIndent, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, GetIndent, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, GetCount, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, SetItemHasChildren, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, IsVisible, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, ItemHasChildren, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, GetChildrenCount, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, GetRootItem, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, GetSelection, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTreeCtrl, GetItemParent, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
@@ -1449,6 +1481,7 @@ extern int le_wxTreeItemId;
 
 static function_entry php_wxTreeItemId_functions[] = {
 	PHP_ME(php_wxTreeItemId, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxTreeItemId, IsOk, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxFrameBase_entry;
@@ -3995,6 +4028,9 @@ static function_entry php_wxStyledTextCtrl_functions[] = {
 	PHP_ME(php_wxStyledTextCtrl, PointFromPosition, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStyledTextCtrl, ScrollToLine, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStyledTextCtrl, ScrollToColumn, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxStyledTextCtrl, GetStyleBitsNeeded, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxStyledTextCtrl, SetStyleBits, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxStyledTextCtrl, GetStyleBits, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStyledTextCtrl, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
