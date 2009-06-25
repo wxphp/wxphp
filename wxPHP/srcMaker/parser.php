@@ -1735,10 +1735,15 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 					case	"wxSize":
 						$retVals[$e/2] = "object_init_ex(return_value,php_wxSize_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(&ret".($e/2).", le_wxSize));return;";
 						break;
+					case 	"wchar_t*":
+						$retVals[$e/2] = "RETURN_STRING((char *)wxString(ret".($e/2).").c_str(),1)";
+						break;
 					case	"const wchar_t*":
 						$defIni[$className][$methodName][$e][0] = "const wxChar *";
 						$retVals[$e/2] = "RETURN_STRING((char *)wxString(ret".($e/2).").c_str(),1)";
 						break;
+					case	"const wxString&":
+						$defIni[$className][$methodName][$e][0] = "wxString";
 					case	"wxString":
 						$retVals[$e/2] = "char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret".($e/2).".size()+1));strcpy ( ro2, (const char *) ret".($e/2).".char_str() );RETURN_STRING( ro2 ,1)";
 						//$retVals[$e/2] = "RETURN_STRING((char *)ret".($e/2).".c_str(),1)";
@@ -1787,6 +1792,7 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 						$optionalArgs = true;
 						$argStr[$e/2].="|";
 					}
+					
 					switch($methodArgs[$e][$i])
 					{
 						case "const wxDateTime&":
@@ -1818,6 +1824,14 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 							$callArgs[$e/2][] = "&_argStr".$types['s'];
 							$types['s']++;
 							break;
+                                                case "const wchar_t*":
+                                                        $methodArgs[$e][$i] = "wchar_t *";
+                                                        $argStr[$e/2].="s";
+                                                        $parseArgs[$e/2][] = "&_argStr".$types['s'];
+                                                        $parseArgs[$e/2][] = "&_argStr".$types['s']."_len";
+                                                        $callArgs[$e/2][] = "wxString(_argStr{$types['s']}, wxConvUTF8)";
+                                                        $types['s']++;
+                                                        break;
 						case "const wxString&":
 							$methodArgs[$e][$i] = "char *";
 							$argStr[$e/2].="s";

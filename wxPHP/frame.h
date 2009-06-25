@@ -3517,6 +3517,7 @@ static function_entry php_wxDirDialog_functions[] = {
 	PHP_ME(php_wxDirDialog, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxDirDialog, SetPath, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDirDialog, ShowModal, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDirDialog, GetPath, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDirDialog, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
@@ -4095,5 +4096,86 @@ static function_entry php_wxGenericImageList_functions[] = {
 	PHP_ME(php_wxGenericImageList, Replace, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGenericImageList, Remove, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGenericImageList, RemoveAll, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxXmlResource_entry;
+void php_wxXmlResource_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxXmlResource_NAME "wxXmlResource"
+#define le_wxXmlResource_name  "native wxXmlResource"
+
+class wxXmlResource_php : public wxXmlResource{
+	public:
+	wxXmlResource_php(int arg0 = wxXRC_USE_LOCALE , const wxString& arg1 = wxEmptyString):wxXmlResource(arg0 , arg1)
+	{
+	}
+	wxXmlResource_php(const wxString& arg0 , int arg1 = wxXRC_USE_LOCALE , const wxString& arg2 = wxEmptyString):wxXmlResource(arg0 , arg1 , arg2)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxXmlResource;
+
+static function_entry php_wxXmlResource_functions[] = {
+	PHP_ME(php_wxXmlResource, LoadToolBar, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, LoadDialog, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, LoadPanel, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, LoadFrame, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, LoadBitmap, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, LoadIcon, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxXmlResource, Load, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, Unload, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, InitAllHandlers, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, ClearHandlers, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, LoadMenu, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, LoadMenuBar, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, GetXRCID, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, GetDomain, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxXmlResource, SetDomain, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxLocale_entry;
+void php_wxLocale_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxLocale_NAME "wxLocale"
+#define le_wxLocale_name  "native wxLocale"
+
+class wxLocale_php : public wxLocale{
+	public:
+	wxLocale_php():wxLocale()
+	{
+	}
+	wxLocale_php(int arg0 , int arg1 = 3):wxLocale(arg0 , arg1)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxLocale;
+
+static function_entry php_wxLocale_functions[] = {
+	PHP_ME(php_wxLocale, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxLocale, Init, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, IsAvailable, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, IsLoaded, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, AddCatalogLookupPathPrefix, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, AddCatalog, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, GetName, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, GetLocale, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, GetLanguage, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, GetCanonicalName, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, GetSystemLanguage, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, GetSystemEncoding, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxLocale, GetSystemEncodingName, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
