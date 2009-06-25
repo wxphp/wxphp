@@ -180,8 +180,6 @@ zend_class_entry *php_wxStyledTextCtrl_entry;
 int le_wxStyledTextCtrl;
 zend_class_entry *php_wxImageList_entry;
 int le_wxImageList;
-zend_class_entry *php_wxGenericImageList_entry;
-int le_wxGenericImageList;
 zend_class_entry *php_wxXmlResource_entry;
 int le_wxXmlResource;
 zend_class_entry *php_wxLocale_entry;
@@ -595,10 +593,6 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	INIT_CLASS_ENTRY(cf, PHP_wxImageList_NAME , php_wxImageList_functions);
 	php_wxImageList_entry = zend_register_internal_class(&cf TSRMLS_CC);
 	le_wxImageList = zend_register_list_destructors_ex(php_wxImageList_destruction_handler,NULL, le_wxImageList_name ,module_number);
-
-	INIT_CLASS_ENTRY(cf, PHP_wxGenericImageList_NAME , php_wxGenericImageList_functions);
-	php_wxGenericImageList_entry = zend_register_internal_class(&cf TSRMLS_CC);
-	le_wxGenericImageList = zend_register_list_destructors_ex(php_wxGenericImageList_destruction_handler,NULL, le_wxGenericImageList_name ,module_number);
 
 	INIT_CLASS_ENTRY(cf, PHP_wxXmlResource_NAME , php_wxXmlResource_functions);
 	php_wxXmlResource_entry = zend_register_internal_class(&cf TSRMLS_CC);

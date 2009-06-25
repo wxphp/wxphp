@@ -4059,43 +4059,13 @@ class wxImageList_php : public wxImageList{
 extern int le_wxImageList;
 
 static function_entry php_wxImageList_functions[] = {
-	PHP_ME(php_wxGenericImageList, Add, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, GetBitmap, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, GetIcon, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, Replace, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, Remove, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, RemoveAll, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxImageList, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	{ NULL, NULL, NULL }
-};
-extern zend_class_entry *php_wxGenericImageList_entry;
-void php_wxGenericImageList_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
-
-#define PHP_wxGenericImageList_NAME "wxGenericImageList"
-#define le_wxGenericImageList_name  "native wxGenericImageList"
-
-class wxGenericImageList_php : public wxGenericImageList{
-	public:
-	wxGenericImageList_php():wxGenericImageList()
-	{
-	}
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
-	void ***tsrm_ls;
-	zval* phpObj;
-};
-
-
-extern int le_wxGenericImageList;
-
-static function_entry php_wxGenericImageList_functions[] = {
-	PHP_ME(php_wxGenericImageList, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxGenericImageList, Add, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, GetBitmap, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, GetIcon, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, Replace, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, Remove, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxGenericImageList, RemoveAll, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxImageList, Add, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxImageList, GetBitmap, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxImageList, GetIcon, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxImageList, Replace, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxImageList, Remove, NULL,ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxImageList, RemoveAll, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxXmlResource_entry;

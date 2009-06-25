@@ -1441,6 +1441,8 @@ if(isset($defIni['wxGenericTreeCtrl']))
 	$defIni['wxGenericTreeCtrl']['_doNotImplement']=true;
 if(isset($defIni['wxGenericListCtrl']))
 	$defIni['wxGenericListCtrl']['_doNotImplement']=true;
+if(isset($defIni['wxGenericImageList']))
+        $defIni['wxGenericImageList']['_doNotImplement']=true;
 
 $delCl = array();//classes to erase
 foreach($defIni as $className => $classDef)

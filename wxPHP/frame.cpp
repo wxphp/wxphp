@@ -45646,44 +45646,7 @@ PHP_METHOD(php_wxImageList, __construct)
 		}
 	}
 }
-void php_wxGenericImageList_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
-{
-	}			
-PHP_METHOD(php_wxGenericImageList, __construct)
-{
-	char _wxResource[] = "wxResource";
-	int valid = 1;
-	void *_this;
-	valid=1;
-	if (ZEND_NUM_ARGS()==0)
-	{
-		
-		if(valid)
-		{
-			int gr = ZEND_NUM_ARGS(); 
-			switch(gr)
-			{
-				case 0:
-					_this = new wxGenericImageList_php();
-					break;
-				default:
-					break;
-			}
-			long id_to_find = zend_list_insert(_this, le_wxGenericImageList);
-			add_property_resource(getThis(), _wxResource, id_to_find);					
-			MAKE_STD_ZVAL(((wxGenericImageList_php*) _this)->evnArray);
-			array_init(((wxGenericImageList_php*) _this)->evnArray);
-			MAKE_STD_ZVAL(((wxGenericImageList_php*) _this)->phpObj);
-			*((wxGenericImageList_php*) _this)->phpObj = *getThis();
-			zval_copy_ctor(((wxGenericImageList_php*) _this)->phpObj);
-			#ifdef ZTS 
-			((wxGenericImageList_php*) _this)->TSRMLS_C = TSRMLS_C;
-			#endif
-			
-		}
-	}
-}
-PHP_METHOD(php_wxGenericImageList, Add)
+PHP_METHOD(php_wxImageList, Add)
 {
 	zval **tmp;
 	int rsrc_type;
@@ -45733,7 +45696,7 @@ PHP_METHOD(php_wxGenericImageList, Add)
 			switch(gr)
 			{
 				case 1:
-					ret0 =  ((wxGenericImageList_php*)_this)->Add(*(wxBitmap *) _ptrObj0);
+					ret0 =  ((wxImageList_php*)_this)->Add(*(wxBitmap *) _ptrObj0);
 					break;
 				default:
 					break;
@@ -45786,7 +45749,7 @@ PHP_METHOD(php_wxGenericImageList, Add)
 			switch(gr)
 			{
 				case 2:
-					ret1 =  ((wxGenericImageList_php*)_this)->Add(*(wxBitmap *) _ptrObj0 , *(wxBitmap *) _ptrObj1);
+					ret1 =  ((wxImageList_php*)_this)->Add(*(wxBitmap *) _ptrObj0 , *(wxBitmap *) _ptrObj1);
 					break;
 				default:
 					break;
@@ -45839,7 +45802,7 @@ PHP_METHOD(php_wxGenericImageList, Add)
 			switch(gr)
 			{
 				case 2:
-					ret2 =  ((wxGenericImageList_php*)_this)->Add(*(wxBitmap *) _ptrObj0 , *(wxColour *) _ptrObj1);
+					ret2 =  ((wxImageList_php*)_this)->Add(*(wxBitmap *) _ptrObj0 , *(wxColour *) _ptrObj1);
 					break;
 				default:
 					break;
@@ -45848,7 +45811,7 @@ PHP_METHOD(php_wxGenericImageList, Add)
 		}
 	}
 }
-PHP_METHOD(php_wxGenericImageList, GetBitmap)
+PHP_METHOD(php_wxImageList, GetBitmap)
 {
 	zval **tmp;
 	int rsrc_type;
@@ -45876,7 +45839,7 @@ PHP_METHOD(php_wxGenericImageList, GetBitmap)
 			switch(gr)
 			{
 				case 1:
-					ret0 =  ((wxGenericImageList_php*)_this)->GetBitmap((int)_argLong0);
+					ret0 =  ((wxImageList_php*)_this)->GetBitmap((int)_argLong0);
 					break;
 				default:
 					break;
@@ -45885,7 +45848,7 @@ PHP_METHOD(php_wxGenericImageList, GetBitmap)
 		}
 	}
 }
-PHP_METHOD(php_wxGenericImageList, GetIcon)
+PHP_METHOD(php_wxImageList, GetIcon)
 {
 	zval **tmp;
 	int rsrc_type;
@@ -45913,7 +45876,7 @@ PHP_METHOD(php_wxGenericImageList, GetIcon)
 			switch(gr)
 			{
 				case 1:
-					ret0 =  ((wxGenericImageList_php*)_this)->GetIcon((int)_argLong0);
+					ret0 =  ((wxImageList_php*)_this)->GetIcon((int)_argLong0);
 					break;
 				default:
 					break;
@@ -45922,7 +45885,7 @@ PHP_METHOD(php_wxGenericImageList, GetIcon)
 		}
 	}
 }
-PHP_METHOD(php_wxGenericImageList, Replace)
+PHP_METHOD(php_wxImageList, Replace)
 {
 	zval **tmp;
 	int rsrc_type;
@@ -45973,7 +45936,7 @@ PHP_METHOD(php_wxGenericImageList, Replace)
 			switch(gr)
 			{
 				case 2:
-					ret0 =  ((wxGenericImageList_php*)_this)->Replace((int)_argLong0 , *(wxBitmap *) _ptrObj0);
+					ret0 =  ((wxImageList_php*)_this)->Replace((int)_argLong0 , *(wxBitmap *) _ptrObj0);
 					break;
 				default:
 					break;
@@ -46026,7 +45989,7 @@ PHP_METHOD(php_wxGenericImageList, Replace)
 			switch(gr)
 			{
 				case 3:
-					ret1 =  ((wxGenericImageList_php*)_this)->Replace((int)_argLong0 , *(wxBitmap *) _ptrObj0 , *(wxBitmap *) _ptrObj1);
+					ret1 =  ((wxImageList_php*)_this)->Replace((int)_argLong0 , *(wxBitmap *) _ptrObj0 , *(wxBitmap *) _ptrObj1);
 					break;
 				default:
 					break;
@@ -46035,7 +45998,7 @@ PHP_METHOD(php_wxGenericImageList, Replace)
 		}
 	}
 }
-PHP_METHOD(php_wxGenericImageList, Remove)
+PHP_METHOD(php_wxImageList, Remove)
 {
 	zval **tmp;
 	int rsrc_type;
@@ -46063,7 +46026,7 @@ PHP_METHOD(php_wxGenericImageList, Remove)
 			switch(gr)
 			{
 				case 1:
-					ret0 =  ((wxGenericImageList_php*)_this)->Remove((int)_argLong0);
+					ret0 =  ((wxImageList_php*)_this)->Remove((int)_argLong0);
 					break;
 				default:
 					break;
@@ -46072,7 +46035,7 @@ PHP_METHOD(php_wxGenericImageList, Remove)
 		}
 	}
 }
-PHP_METHOD(php_wxGenericImageList, RemoveAll)
+PHP_METHOD(php_wxImageList, RemoveAll)
 {
 	zval **tmp;
 	int rsrc_type;
@@ -46099,7 +46062,7 @@ PHP_METHOD(php_wxGenericImageList, RemoveAll)
 			switch(gr)
 			{
 				case 0:
-					ret0 =  ((wxGenericImageList_php*)_this)->RemoveAll();
+					ret0 =  ((wxImageList_php*)_this)->RemoveAll();
 					break;
 				default:
 					break;
