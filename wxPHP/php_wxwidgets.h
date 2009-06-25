@@ -276,8 +276,6 @@ PHP_METHOD(php_wxTreeCtrl, __construct);
 PHP_METHOD(php_wxTreeCtrl, AddRoot);
 PHP_METHOD(php_wxTreeCtrl, AppendItem);
 PHP_METHOD(php_wxTreeCtrl, GetItemText);
-PHP_METHOD(php_wxTreeCtrl, SetButtonsImageList);
-PHP_METHOD(php_wxTreeCtrl, AssignButtonsImageList);
 PHP_METHOD(php_wxTreeCtrl, Delete);
 PHP_METHOD(php_wxTreeCtrl, DeleteChildren);
 PHP_METHOD(php_wxTreeCtrl, DeleteAllItems);

@@ -1738,6 +1738,7 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 						$retVals[$e/2] = "object_init_ex(return_value,php_wxSize_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(&ret".($e/2).", le_wxSize));return;";
 						break;
 					case 	"wchar_t*":
+						$defIni[$className][$methodName][$e][0] = "wxChar *";
 						$retVals[$e/2] = "RETURN_STRING((char *)wxString(ret".($e/2).").c_str(),1)";
 						break;
 					case	"const wchar_t*":

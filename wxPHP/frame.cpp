@@ -13960,116 +13960,6 @@ PHP_METHOD(php_wxTreeCtrl, GetItemText)
 		}
 	}
 }
-PHP_METHOD(php_wxTreeCtrl, SetButtonsImageList)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	int valid = 1;
-	void *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-	{
-		return;
-	}
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = zend_list_find(id_to_find, &rsrc_type);
-	
-	void *_ptrObj0 = 0;
-	zval *_argObj0 = 0;
-	int id_to_find0;
-	valid=1;
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
-	{
-		
-		if(_argObj0)
-		if (valid) 
-		{
-			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-			{
-				id_to_find0 = Z_RESVAL_P(*tmp);
-				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxImageList))
-					valid = 0;
-			}
-			else if(_argObj0->type==IS_LONG)
-				_ptrObj0= (void *)_argObj0->value.lval;
-			else if(_argObj0->type!=IS_NULL)
-				valid = 0;
-		}
-		else
-			valid = 0;
-		if(valid)
-		{
-			int gr = ZEND_NUM_ARGS(); 
-			switch(gr)
-			{
-				case 1:
-					 ((wxTreeCtrl_php*)_this)->SetButtonsImageList((wxImageList*) _ptrObj0);
-					break;
-				default:
-					break;
-			}
-			
-		}
-	}
-}
-PHP_METHOD(php_wxTreeCtrl, AssignButtonsImageList)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	int valid = 1;
-	void *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-	{
-		return;
-	}
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = zend_list_find(id_to_find, &rsrc_type);
-	
-	void *_ptrObj0 = 0;
-	zval *_argObj0 = 0;
-	int id_to_find0;
-	valid=1;
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
-	{
-		
-		if(_argObj0)
-		if (valid) 
-		{
-			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-			{
-				id_to_find0 = Z_RESVAL_P(*tmp);
-				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxImageList))
-					valid = 0;
-			}
-			else if(_argObj0->type==IS_LONG)
-				_ptrObj0= (void *)_argObj0->value.lval;
-			else if(_argObj0->type!=IS_NULL)
-				valid = 0;
-		}
-		else
-			valid = 0;
-		if(valid)
-		{
-			int gr = ZEND_NUM_ARGS(); 
-			switch(gr)
-			{
-				case 1:
-					 ((wxTreeCtrl_php*)_this)->AssignButtonsImageList((wxImageList*) _ptrObj0);
-					break;
-				default:
-					break;
-			}
-			
-		}
-	}
-}
 PHP_METHOD(php_wxTreeCtrl, Delete)
 {
 	zval **tmp;
@@ -46954,7 +46844,7 @@ PHP_METHOD(php_wxXmlResource, GetDomain)
 		
 		if(valid)
 		{
-			wchar_t* ret0;
+			wxChar * ret0;
 			int gr = ZEND_NUM_ARGS(); 
 			switch(gr)
 			{

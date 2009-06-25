@@ -1298,8 +1298,6 @@ static function_entry php_wxTreeCtrl_functions[] = {
 	PHP_ME(php_wxTreeCtrl, AddRoot, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, AppendItem, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, GetItemText, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTreeCtrl, SetButtonsImageList, NULL,ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxTreeCtrl, AssignButtonsImageList, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, Delete, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, DeleteChildren, NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeCtrl, DeleteAllItems, NULL,ZEND_ACC_PUBLIC)
