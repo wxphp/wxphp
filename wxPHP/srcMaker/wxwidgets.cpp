@@ -184,6 +184,8 @@ zend_class_entry *php_wxXmlResource_entry;
 int le_wxXmlResource;
 zend_class_entry *php_wxLocale_entry;
 int le_wxLocale;
+zend_class_entry *php_wxTreeCtrlBase_entry;
+int le_wxTreeCtrlBase;
 
 // <--- entries
 
@@ -601,6 +603,10 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	INIT_CLASS_ENTRY(cf, PHP_wxLocale_NAME , php_wxLocale_functions);
 	php_wxLocale_entry = zend_register_internal_class(&cf TSRMLS_CC);
 	le_wxLocale = zend_register_list_destructors_ex(php_wxLocale_destruction_handler,NULL, le_wxLocale_name ,module_number);
+
+	INIT_CLASS_ENTRY(cf, PHP_wxTreeCtrlBase_NAME , php_wxTreeCtrlBase_functions);
+	php_wxTreeCtrlBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+	le_wxTreeCtrlBase = zend_register_list_destructors_ex(php_wxTreeCtrlBase_destruction_handler,NULL, le_wxTreeCtrlBase_name ,module_number);
 
 	REGISTER_LONG_CONSTANT("wxBG_STYLE_SYSTEM",	wxBG_STYLE_SYSTEM	, CONST_CS |CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxBG_STYLE_COLOUR",	wxBG_STYLE_COLOUR	, CONST_CS |CONST_PERSISTENT);

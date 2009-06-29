@@ -1282,58 +1282,104 @@
 	
 	$evnHandlers = derivationsOfClass('wxEvtHandler');
 	
-	function funcsOfClass($classN,$ctor=0)
+	function funcsOfClass($classN,$ctor=0,$ar = array())
 	{
 		global $defIni;
 		global $evnHandlers;
 		if(!isset($defIni[$classN]))
-			return;
+			return array();
+
 		$classDef3 = $classDef = $defIni[$classN];
-		
+
+		foreach($classDef as $funcName => $funcDef)
+                {
+                        if($funcName[0]=="_")
+                                continue;
+                        $funcName2 = $funcName;
+                        if($classN==$funcName)
+                        {
+                                if(!$ctor)
+                                        continue;
+                                $funcName2 = "__construct";
+                        }
+			if(in_array($funcName2,$ar))
+                                continue;
+			$ar[] = $funcName2;
+			
+?>
+        PHP_ME(php_<?=$classN?>, <?=$funcName2?>, NULL,ZEND_ACC_PUBLIC<? if($funcName2 == "__construct" && $ctor){?>|ZEND_ACC_CTOR<?}?>)
+<?
+                }
+
+
+                if(isset($evnHandlers[$classN])  && $ctor)
+                {
+?>
+        PHP_ME(php_<?=$classN?>, Connect, NULL,ZEND_ACC_PUBLIC)
+<?
+                }	
+
+		//becarefull not to mark a subclasse tha is derived from another
+		//this should be recursive
 		if(isset($classDef['_implements']))
 		{
 			foreach($classDef['_implements'] as $imp)
 			{
+				$ar = array_merge($ar,funcsOfClass($imp,0,$ar));
+				continue;
+				
 				if(!isset($defIni[$imp]))
 					continue;
 				$classDef2 = $defIni[$imp];
 				foreach($classDef2 as $funcName2 => $funcDef2)
 				{
-					if($funcName2[0]=="_" || $funcName2==$imp)//ignore implements and constructors
+					if($funcName2[0]=="_")//ignore implements and constructors
 						continue;
 					$found=false;
+					$funcNamer = $funcName2;
+					if($funcName2==$imp)
+						$funcNamer = $classN;
 					foreach($classDef3 as $funcName => $funcDef)
-						if($funcName2==$funcName)
+						if($funcNamer==$funcName)
 							$found = true;
 							
 					//if already exists functions with yhe same name, verify if equal args
 					if($found)
 					{
-						for($i=0;$i<count($funcDef2[$funcName2]);$i+=2)
+						for($i=0;$i<count($funcDef2);$i+=2)
 						{
 							$found = false;
-							for($e=0;$e<count($funcDef[$funcName2]);$e+=2)
-								if($funcDef2[$funcName2][$i]==$funcDef[$funcName2][$e])
+							for($e=0;$e<count($classDef[$funcNamer]);$e+=2)
+								if($funcDef2[$i]==$classDef[$funcNamer][$e])
 									$found = true;
-									
-							if(!$found)
+
+							if(!$found)//merge overloads
 							{
-								$classDef[$funcName2][] = $classDef2[$funcName2][$i];
-								$classDef[$funcName2][] = $classDef2[$funcName2][$i+1];
+								$classDef[$funcNamer][] = $classDef2[$funcName2][$i];
+								$classDef[$funcNamer][] = $classDef2[$funcName2][$i+1];
 							}
 						}
 					}
-					else
+					elseif($funcName2==$imp){// prevent foreign constructors
+						//just skip it
+					}else
 					{
 ?>
 	PHP_ME(php_<?=$imp?>, <?=$funcName2?>, NULL,ZEND_ACC_PUBLIC)
 <?
-						$classDef3[$funcName2]=$funcDef2;
+						//$classDef3[$funcName2]=$funcDef2;
 					}
 				}
 			}
 		}
-		
+		if($classN=="wxFrame"){
+			//var_dump($ar);
+			//var_dump($classDef);
+			//die();
+		}
+
+		return $ar;
+
 		foreach($classDef as $funcName => $funcDef)
 		{
 			if($funcName[0]=="_")
@@ -1381,7 +1427,6 @@
 		}
 		else
 			funcsOfClass($classDef['_extends']);
-		
 	}
 
 	ob_start();
@@ -1504,6 +1549,59 @@ foreach($defIni as $className => $classDef)
 
 foreach($delCl as $cl)
 	unset($defIni[$cl]);
+
+//overload merger
+foreach($defIni as $className => $classDef)
+{
+	if(isset($classDef['_implements']))
+	foreach($classDef['_implements'] as $implName)
+        {
+	        if(!isset($defIni[$implName]))
+        	        continue;
+
+		$implDef = $defIni[$implName];
+
+		foreach($implDef as $implMeth => $implMethDef){
+
+			if($implMeth[0]=="_")//jump internal structures
+				continue;
+
+			if($implMeth==$implName)//CONSTRUCTORS CANNOT BE OVERLOADED IN C++
+				continue;
+			
+			$methName = $implMeth;
+			if($implMeth==$implName)//because constructors
+				$methName = $className;
+
+			if(in_array($methName,array_keys($classDef))){//method with same name exists in this class
+				//merge overloads
+				$overloads = $classDef[$methName];
+				for($i=0;$i<count($implMethDef);$i+=2){
+					//iterate every base classe overload
+					$found = false;
+					for($e=0;$e<count($overloads);$e+=2)
+						if($implMethDef[$i]==$overloads[$e])
+							$found = true;
+					if(!$found){
+						$overloads[] = $implMethDef[$i];
+						$overloads[] = $implMethDef[$i+1];
+						//print_r($overloads);
+						//print_r($implMethDef);
+						//var_dump($methName);
+						//var_dump($implMeth);
+						//for($l=0;$l<count($overloads);$l+=2)
+						//	var_dump(serialize($overloads[$l]));
+						//var_dump(serialize($implMethDef[$i]));
+						//die("aquii\n");
+					}
+				}
+				if(count($implMethDef))
+					$defIni[$className][$methName] = $overloads;
+			}
+
+		}
+	}
+}
 	
 //template.c
 foreach($groups as $fileN => $classList)
@@ -2507,6 +2605,7 @@ PHP_METHOD(php_<?=$className?>, Connect);
 		fwrite($hd,$data);
 		fclose($hd);
 	}
+
 	die();
 
 		?>
