@@ -1136,6 +1136,8 @@
 											)
 							)*/
 	);
+
+	$dynCasts = array("wxDialog");
 	
 	$groups	= array(
 				"frame"	=> array()
@@ -1602,6 +1604,14 @@ foreach($defIni as $className => $classDef)
 		}
 	}
 }
+
+function retWxOb($type,$poi){
+	global $dynCasts;
+	if(!in_array($type,$dynCasts))
+		return "object_init_ex(return_value,php_{$type}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert({$poi}, le_$type));return;";
+	else
+		return "{$type}_php* cret = wxDynamicCast($poi, {$type}_php);object_init_ex(return_value,php_{$type}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(cret, le_{$type}));MAKE_STD_ZVAL(cret->evnArray);array_init(cret->evnArray);return;";
+}
 	
 //template.c
 foreach($groups as $fileN => $classList)
@@ -1833,7 +1843,7 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 						$retVals[$e/2] = "RETURN_LONG((long)ret".($e/2).".GetTicks())";
 						break;
 					case	"wxSize":
-						$retVals[$e/2] = "object_init_ex(return_value,php_wxSize_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(&ret".($e/2).", le_wxSize));return;";
+						$retVals[$e/2] =  "object_init_ex(return_value,php_wxSize_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(&ret".($e/2).", le_wxSize));return;";
 						break;
 					case 	"wchar_t*":
 						$defIni[$className][$methodName][$e][0] = "wxChar *";
@@ -1867,17 +1877,17 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 						if(preg_match("/const[ ]+(.+?)[ ]*\&/",$methodArgs[$e][0],$matches))
 						{
 							$defIni[$className][$methodName][$e][0] = $matches[1];
-							$retVals[$e/2] = "object_init_ex(return_value,php_{$matches[1]}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(&ret".($e/2).", le_{$matches[1]}));return;";
+							$retVals[$e/2] = retWxOb($matches[1],"&ret".($e/2)); //"object_init_ex(return_value,php_{$matches[1]}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(&ret".($e/2).", le_{$matches[1]}));return;";
 						}
 						elseif(preg_match("/(.+?)[ ]*\*/",$methodArgs[$e][0],$matches))
 						{
 							$defIni[$className][$methodName][$e][0] = $matches[1]."*";
-							$retVals[$e/2] = "object_init_ex(return_value,php_{$matches[1]}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(ret".($e/2).", le_{$matches[1]}));return;";
+							$retVals[$e/2] = retWxOb($matches[1],"ret".($e/2)); //"object_init_ex(return_value,php_{$matches[1]}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(ret".($e/2).", le_{$matches[1]}));return;";
 						}
 						elseif(isset($defIni[$methodArgs[$e][0]]))
 						{
 							$defIni[$className][$methodName][$e][0] = $methodArgs[$e][0];
-							$retVals[$e/2] = "void* ptr = safe_emalloc(1,sizeof(".$methodArgs[$e][0]."),0);memcpy(ptr,&ret0,sizeof(".$methodArgs[$e][0]."));object_init_ex(return_value,php_{$methodArgs[$e][0]}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(ptr, le_{$methodArgs[$e][0]}));return;";
+							$retVals[$e/2] = "void* ptr = safe_emalloc(1,sizeof(".$methodArgs[$e][0]."),0);memcpy(ptr,&ret0,sizeof(".$methodArgs[$e][0]."));"."object_init_ex(return_value,php_{$methodArgs[$e][0]}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(ptr, le_{$methodArgs[$e][0]}));return;";
 						}
 						break;
 				}
@@ -2532,6 +2542,7 @@ int le_<?=$className?>;
 <?
 			/*if(isset($evnHandlers[$className])
 			{
+
 				$evnCnt=0;
 				foreach($classDef['_events'] as $event => $evnVal)
 				{
@@ -2560,6 +2571,62 @@ int le_<?=$className?>;
 	if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$matches))
 	{
 		$data = $matches[1]."\n".$data."\n".$matches[2];
+
+		if($res =preg_match("/(.*?\/\/ cast --->)[^<]+(\/\/ <--- cast[^§]+)/sm",$data,$matches)){
+			ob_start();
+?>
+PHP_FUNCTION(php_wxDynamicCast){
+        zval **tmp;
+        int rsrc_type;
+        char _wxResource[] = "wxResource";
+        int valid = 1;
+
+        char* _argStr0;
+        int _argStr0_len;
+        void *_ptrObj0 = 0;
+        zval *_argObj0 = 0;
+        int id_to_find0;
+
+
+        if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!s!",  &_argObj0 , &_argStr0 , &_argStr0_len ) == SUCCESS){
+
+                if(_argObj0)
+                {
+                        if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+                        {
+                                id_to_find0 = Z_RESVAL_P(*tmp);
+                                _ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+                                //if (!_ptrObj0 || rsrc_type != le_wxTextCtrl)
+                                //      valid = 0;
+                        }
+                }
+
+                if(valid){
+			if(0){
+			}
+<?			foreach($defIni as $className => $classDef):
+				if(!isset($classDef['_type']) && $classDef['_type']=="abstract")
+		                        continue;
+				if(in_array($className,array("wxPoint","wxSize","wxSizerFlags","wxClassInfo","wxTreeItemData","wxTreeItemId","wxArrayString","wxRect","wxDateTime","wxCalendarDateAttr","wxLocale")))
+					continue;
+?>
+                        else if(!strcmp(_argStr0,"<?=$className?>")){
+                                object_init_ex(return_value,php_<?=$className?>_entry);
+                                <?=$className?>* ret = wxDynamicCast(_ptrObj0,<?=$className?>_php);
+                                long id_to_find = zend_list_insert(ret, le_<?=$className?>);
+                                add_property_resource(return_value, _wxResource, id_to_find);
+                                return;
+                        }
+<?			endforeach;?>
+                }
+
+        }
+
+}
+<?
+			$data = $matches[1]."\n".ob_get_clean()."\n".$matches[2];
+		}
+
 		
 		if($res =preg_match("/(.*?\/\/ classes --->)[^<]+(\/\/ <--- classes[^§]+)/sm",$data,$matches))
 		{
@@ -2570,6 +2637,8 @@ int le_<?=$className?>;
 			fclose($hd);
 		}
 	}
+
+
 
 	ob_start();
 	foreach($defIni as $className => $classDef)

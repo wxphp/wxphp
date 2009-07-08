@@ -3,9 +3,9 @@ PHP_ARG_WITH(wxWidgets,for wxwidgets support,[  --with-wxwidgets[=DIR]       ena
 if test "$PHP_WXWIDGETS" != "no"; then
 
 	PHP_REQUIRE_CXX()
-	PHP_WXWIDGETS_CFLAGS=`wx-config --cxxflags`
-dnl	PHP_WXWIDGETS_LIBS=`wx-config --debug=yes --libs std,stc`
-        PHP_WXWIDGETS_LIBS=`wx-config --libs std,stc`
+	PHP_WXWIDGETS_CFLAGS=`wx-config --debug --cxxflags`
+	PHP_WXWIDGETS_LIBS=`wx-config --debug --libs std,stc`
+dnl     PHP_WXWIDGETS_LIBS=`wx-config --libs std,stc`
 	CXXFLAGS="$CXXFLAGS $PHP_WXWIDGETS_CFLAGS"
 
 dnl	AC_MSG_RESULT($PHP_WXWIDGETS_CFLAGS)

@@ -139,6 +139,7 @@ PHP_METHOD(php_wxWindowBase, IsShown);
 PHP_METHOD(php_wxWindowBase, IsEnabled);
 PHP_METHOD(php_wxWindowBase, IsShownOnScreen);
 PHP_METHOD(php_wxWindowBase, UpdateWindowUI);
+PHP_METHOD(php_wxWindowBase, FindWindow);
 PHP_METHOD(php_wxSizerFlags, __construct);
 PHP_METHOD(php_wxSizerItem, __construct);
 PHP_METHOD(php_wxClassInfo, GetSize);
@@ -948,6 +949,12 @@ PHP_METHOD(php_wxLocale, GetSystemLanguage);
 PHP_METHOD(php_wxLocale, GetSystemEncoding);
 PHP_METHOD(php_wxLocale, GetSystemEncodingName);
 PHP_METHOD(php_wxTreeCtrlBase, AssignImageList);
+PHP_METHOD(php_wxRadioButton, __construct);
+PHP_METHOD(php_wxRadioButton, SetLabel);
+PHP_METHOD(php_wxRadioButton, SetValue);
+PHP_METHOD(php_wxRadioButton, GetValue);
+PHP_METHOD(php_wxRadioButton, Enable);
+PHP_METHOD(php_wxRadioButton, Connect);
 
 // <--- entries
 

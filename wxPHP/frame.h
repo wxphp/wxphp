@@ -66,6 +66,7 @@ static function_entry php_wxFrame_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFrameBase, SetMenuBar, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTopLevelWindowBase, SetIcon, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -167,6 +168,7 @@ static function_entry php_wxWindow_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxPoint_entry;
@@ -350,6 +352,7 @@ static function_entry php_wxStatusBar_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxBoxSizer_entry;
@@ -570,6 +573,7 @@ static function_entry php_wxWindowBase_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxSizerFlags_entry;
@@ -1162,6 +1166,7 @@ static function_entry php_wxPanel_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxTopLevelWindowBase_entry;
@@ -1257,6 +1262,7 @@ static function_entry php_wxSplitterWindow_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxTreeCtrl_entry;
@@ -1356,6 +1362,7 @@ static function_entry php_wxTreeCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, AssignImageList, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
@@ -1449,6 +1456,7 @@ static function_entry php_wxCheckListBox_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, GetString, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, GetSelection, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, IsSelected, NULL,ZEND_ACC_PUBLIC)
@@ -1734,6 +1742,7 @@ static function_entry php_wxTextCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxNotebook_entry;
@@ -1807,6 +1816,7 @@ static function_entry php_wxNotebook_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, AddPage, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, RemovePage, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, DeletePage, NULL,ZEND_ACC_PUBLIC)
@@ -1969,6 +1979,7 @@ static function_entry php_wxStaticText_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxButton_entry;
@@ -2033,6 +2044,7 @@ static function_entry php_wxButton_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStaticBox_entry;
@@ -2096,6 +2108,7 @@ static function_entry php_wxStaticBox_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStaticBoxSizer_entry;
@@ -2224,6 +2237,7 @@ static function_entry php_wxListBox_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxFileDialog_entry;
@@ -2302,6 +2316,7 @@ static function_entry php_wxFileDialog_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxDialog_entry;
@@ -2368,6 +2383,7 @@ static function_entry php_wxDialog_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxMessageDialog_entry;
@@ -2434,6 +2450,7 @@ static function_entry php_wxMessageDialog_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStatusBarBase_entry;
@@ -2544,6 +2561,7 @@ static function_entry php_wxListCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStaticBitmap_entry;
@@ -2607,6 +2625,7 @@ static function_entry php_wxStaticBitmap_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxGauge_entry;
@@ -2678,6 +2697,7 @@ static function_entry php_wxGauge_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxListEvent_entry;
@@ -2796,6 +2816,7 @@ static function_entry php_wxComboBox_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxPrinter_entry;
@@ -3115,6 +3136,7 @@ static function_entry php_wxSplashScreen_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFrameBase, SetMenuBar, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTopLevelWindowBase, SetIcon, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -3196,6 +3218,7 @@ static function_entry php_wxCalendarCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxCalendarEvent_entry;
@@ -3594,6 +3617,7 @@ static function_entry php_wxCheckBox_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxDirDialog_entry;
@@ -3662,6 +3686,7 @@ static function_entry php_wxDirDialog_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxBitmapButton_entry;
@@ -3726,6 +3751,7 @@ static function_entry php_wxBitmapButton_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxToggleButton_entry;
@@ -3790,6 +3816,7 @@ static function_entry php_wxToggleButton_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxChoice_entry;
@@ -3863,6 +3890,7 @@ static function_entry php_wxChoice_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStyledTextCtrl_entry;
@@ -4216,6 +4244,7 @@ static function_entry php_wxStyledTextCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxImageList_entry;
@@ -4352,5 +4381,91 @@ extern int le_wxTreeCtrlBase;
 
 static function_entry php_wxTreeCtrlBase_functions[] = {
         PHP_ME(php_wxTreeCtrlBase, AssignImageList, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxRadioBox_entry;
+void php_wxRadioBox_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxRadioBox_NAME "wxRadioBox"
+#define le_wxRadioBox_name  "native wxRadioBox"
+
+class wxRadioBox_php : public wxRadioBox{
+	public:
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxRadioBox;
+
+static function_entry php_wxRadioBox_functions[] = {
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxRadioButton_entry;
+void php_wxRadioButton_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxRadioButton_NAME "wxRadioButton"
+#define le_wxRadioButton_name  "native wxRadioButton"
+
+class wxRadioButton_php : public wxRadioButton{
+	public:
+	wxRadioButton_php(wxWindow* arg0 , int arg1 , const wxString& arg2 , const wxPoint& arg3 = wxDefaultPosition , const wxSize& arg4 = wxDefaultSize , long int arg5 = 0 , const wxValidator& arg6 = wxDefaultValidator , const wxString& arg7 = wxRadioButtonNameStr):wxRadioButton(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6 , arg7)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxRadioButton;
+
+static function_entry php_wxRadioButton_functions[] = {
+        PHP_ME(php_wxRadioButton, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxRadioButton, SetLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxRadioButton, SetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxRadioButton, GetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxRadioButton, Enable, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxRadioButton, Connect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Raise, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Lower, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, IsRetained, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetFocus, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Reparent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, WarpPointer, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Update, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, ClearBackground, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetForegroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetCursor, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetFont, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetCharHeight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetCharWidth, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetScrollbar, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetScrollPos, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetScrollThumb, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetScrollRange, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, AddChild, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, RemoveChild, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetHandle, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Refresh, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, IsFrozen, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, SetSizer, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetSizer, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, Layout, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, Fit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, SetWindowStyle, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, PopupMenu, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, IsShown, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
