@@ -25,6 +25,16 @@
 extern zend_module_entry wxWidgets_module_entry;
 #define phpext_sample_ptr &wxWidgets_module_entry
 
+
+class wxPhpClientData : public wxClientData
+{
+public:
+        wxPhpClientData(zval* phpObj){
+                this->phpObj = phpObj;
+        }
+        zval* phpObj;
+};
+
 PHP_METHOD(php_wxApp, helloWorld);
 PHP_METHOD(php_wxApp, __construct);
 PHP_METHOD(php_wxApp, SetInstance);
@@ -478,6 +488,10 @@ PHP_METHOD(php_wxComboBox, SetValue);
 PHP_METHOD(php_wxComboBox, Replace);
 PHP_METHOD(php_wxComboBox, Remove);
 PHP_METHOD(php_wxComboBox, SelectAll);
+PHP_METHOD(php_wxComboBox, Clear);
+PHP_METHOD(php_wxComboBox, Delete);
+PHP_METHOD(php_wxComboBox, Append);
+PHP_METHOD(php_wxComboBox, Insert);
 PHP_METHOD(php_wxComboBox, Connect);
 PHP_METHOD(php_wxPrinter, __construct);
 PHP_METHOD(php_wxPrinter, Print);
@@ -580,6 +594,7 @@ PHP_METHOD(php_wxTimer, Stop);
 PHP_METHOD(php_wxTimer, IsRunning);
 PHP_METHOD(php_wxEvtHandler, __construct);
 PHP_METHOD(php_wxEvtHandler, Connect);
+PHP_METHOD(php_wxEvtHandler, Connect);
 PHP_METHOD(php_wxTimerEvent, GetInterval);
 PHP_METHOD(php_wxIPV4address, Hostname);
 PHP_METHOD(php_wxIPV4address, Service);
@@ -617,6 +632,9 @@ PHP_METHOD(php_wxChoice, SetSelection);
 PHP_METHOD(php_wxChoice, FindString);
 PHP_METHOD(php_wxChoice, GetString);
 PHP_METHOD(php_wxChoice, SetString);
+PHP_METHOD(php_wxChoice, Delete);
+PHP_METHOD(php_wxChoice, Append);
+PHP_METHOD(php_wxChoice, Insert);
 PHP_METHOD(php_wxChoice, Connect);
 PHP_METHOD(php_wxStyledTextCtrl, __construct);
 PHP_METHOD(php_wxStyledTextCtrl, AddText);
@@ -955,6 +973,26 @@ PHP_METHOD(php_wxRadioButton, SetValue);
 PHP_METHOD(php_wxRadioButton, GetValue);
 PHP_METHOD(php_wxRadioButton, Enable);
 PHP_METHOD(php_wxRadioButton, Connect);
+PHP_METHOD(php_wxListItem, __construct);
+PHP_METHOD(php_wxListItem, Clear);
+PHP_METHOD(php_wxListItem, ClearAttributes);
+PHP_METHOD(php_wxListItem, SetMask);
+PHP_METHOD(php_wxListItem, SetId);
+PHP_METHOD(php_wxListItem, SetColumn);
+PHP_METHOD(php_wxListItem, SetImage);
+PHP_METHOD(php_wxListItem, SetText);
+PHP_METHOD(php_wxListItem, SetWidth);
+PHP_METHOD(php_wxListItem, GetId);
+PHP_METHOD(php_wxListItem, GetColumn);
+PHP_METHOD(php_wxListItem, GetText);
+PHP_METHOD(php_wxListItem, GetWidth);
+PHP_METHOD(php_wxHtmlHelpController, __construct);
+PHP_METHOD(php_wxHtmlHelpController, AddBook);
+PHP_METHOD(php_wxHtmlHelpController, Display);
+PHP_METHOD(php_wxHtmlHelpController, DisplayContents);
+PHP_METHOD(php_wxHtmlHelpController, DisplayIndex);
+PHP_METHOD(php_wxHtmlHelpController, SetTempDir);
+PHP_METHOD(php_wxHtmlHelpController, SetTitleFormat);
 
 // <--- entries
 

@@ -1137,7 +1137,7 @@
 							)*/
 	);
 
-	$dynCasts = array("wxDialog");
+	$dynCasts = array();//"wxDialog"
 	
 	$groups	= array(
 				"frame"	=> array()
@@ -1213,6 +1213,11 @@
 		unset($defConsts['wxOutTop']);
 		unset($defConsts['wxOutBottom']);
 		
+		unset($defConsts['wxTextFileType_None']);
+		unset($defConsts['wxTextFileType_Unix']);
+		unset($defConsts['wxTextFileType_Dos']);
+		unset($defConsts['wxTextFileType_Mac']);
+		unset($defConsts['wxTextFileType_Os2']);
 	}
 	
 	/*$hd = fopen("classes.dump","w");
@@ -1313,13 +1318,6 @@
 <?
                 }
 
-
-                if(isset($evnHandlers[$classN])  && $ctor)
-                {
-?>
-        PHP_ME(php_<?=$classN?>, Connect, NULL,ZEND_ACC_PUBLIC)
-<?
-                }	
 
 		//becarefull not to mark a subclasse tha is derived from another
 		//this should be recursive
@@ -1490,6 +1488,8 @@ if(isset($defIni['wxGenericListCtrl']))
 	$defIni['wxGenericListCtrl']['_doNotImplement']=true;
 if(isset($defIni['wxGenericImageList']))
         $defIni['wxGenericImageList']['_doNotImplement']=true;
+if(isset($defIni['wxItemContainer']))
+        $defIni['wxItemContainer']['_doNotImplement']=true;
 
 $delCl = array();//classes to erase
 foreach($defIni as $className => $classDef)
@@ -1636,157 +1636,6 @@ void php_<?=$className?>_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 }			
 <?		}
 
-		if(isset($evnHandlers[$className]))
-		{
-		?>
-void <?=$className?>_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-<?
-	foreach(derivationsOfClass('wxEvent') as $kevn=>$vevn)
-	{?>	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("<?=$kevn?>")))
-	{
-		object_init_ex(arg[0],php_<?=$kevn?>_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_<?=$kevn?>));
-	}
-<?
-	}
-?>
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - <?=$className?>\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_<?=$className?>, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	<?=$className?>_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (<?=$className?>_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(<?=$className?>_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
-<?		}
-
 		//virtuals
 		if(isset($classDef['_virtuals']))
 		{
@@ -1816,6 +1665,111 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 				var_dump($methodArgs);
 				die();
 			}*/
+
+			// Force some implementations
+			if($className=="wxEvtHandler" && $methodName=="Connect"){
+?>
+
+void <?=$className?>_php::onEvent(wxEvent& evnt)
+{
+	zval *arg[1];
+	MAKE_STD_ZVAL(arg[0]);
+	char _wxResource[] = "wxResource";
+	TSRMLS_FETCH();
+
+	if(0)
+	{}
+<?
+	foreach(derivationsOfClass('wxEvent') as $kevn=>$vevn)
+	{?>	
+	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("<?=$kevn?>")))
+	{
+		object_init_ex(arg[0],php_<?=$kevn?>_entry);
+		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_<?=$kevn?>));
+	}
+<?
+	}
+?>
+
+        char* wxname;
+        zval dummy;
+        zval* fc_name;
+        wxCommandEvent* ce;
+        wxPhpClientData* co;
+
+        ce = (wxCommandEvent*)evnt.m_callbackUserData;
+        co = (wxPhpClientData*)ce->GetClientObject();
+
+        MAKE_STD_ZVAL(fc_name);
+        wxname = (char*)ce->GetString().c_str();
+        ZVAL_STRING(fc_name, wxname,1);
+
+        if (call_user_function(NULL, &(co->phpObj), fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
+                wxMessageBox(_T("Failed method Call!\n"));
+        }	
+	
+}
+PHP_METHOD(php_<?=$className?>, Connect)
+{
+        zval **tmp;
+        int rsrc_type;
+        int id_to_find;
+        int valid = 1;
+        char _wxResource[] = "wxResource";
+        wxEvtHandler *_this;
+
+        if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+                return;
+        id_to_find = Z_RESVAL_P(*tmp);
+        _this = (wxEvtHandler*)zend_list_find(id_to_find, &rsrc_type);
+
+        zval* fc;
+        int flag,id0 = 0,id1 = 0;
+
+        zval** fc_obj;
+        zval** fc_name;
+        char* ct;
+        int args;
+        args = ZEND_NUM_ARGS();
+
+        if(
+                zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "lllz", &id0, &id1, &flag , (void**)&fc) == SUCCESS   ||
+                zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "llz" , &id0, &flag , (void**)&fc) == SUCCESS ||
+                zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "lz"  , &flag , (void**)&fc) == SUCCESS
+                )
+        {
+                zend_hash_index_find(HASH_OF(fc),0,(void**)&fc_obj);
+                zend_hash_index_find(HASH_OF(fc),1,(void**)&fc_name);
+                ZVAL_ADDREF(*fc_obj);
+
+
+                ct = (*fc_name)->value.str.val;
+
+                wxCommandEvent* ce = new wxCommandEvent();
+                ce->SetString(wxString::Format(wxT("%s"),ct));
+                ce->SetClientObject(new wxPhpClientData(*fc_obj));
+
+                switch(args){
+                        case 4:
+                                _this->Connect(id0, id1, flag, wxEventHandler(<?=$className?>_php::onEvent),ce);
+                                break;
+                        case 3:
+                                _this->Connect(id0, flag, wxEventHandler(<?=$className?>_php::onEvent),ce);
+                                break;
+                        case 2:
+                                _this->Connect(flag, wxEventHandler(<?=$className?>_php::onEvent),ce);
+                                break;
+                        default:
+                                wxMessageBox(_T("Failed to create event\n"));
+                                break;
+                }
+        }
+}
+<?
+				continue;
+			}
+
+
 
 			$argStr = array();
 			$parseArgs = array();
@@ -1856,7 +1810,8 @@ void* php_<?=$className?>::<?=$kVirtual?>()
 					case	"const wxString&":
 						$defIni[$className][$methodName][$e][0] = "wxString";
 					case	"wxString":
-						$retVals[$e/2] = "char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret".($e/2).".size()+1));strcpy ( ro2, (const char *) ret".($e/2).".char_str() );RETURN_STRING( ro2 ,1)";
+						//$retVals[$e/2] = "char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret".($e/2).".size()+1));strcpy ( ro2, (const char *) ret".($e/2).".char_str() );RETURN_STRING( ro2 ,1)";
+						$retVals[$e/2] = "char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret".($e/2).".size()+1));strcpy ( ro2, (const char *) ret".($e/2).".char_str() );RETURN_STRING( ro2 ,1)";
 						//$retVals[$e/2] = "RETURN_STRING((char *)ret".($e/2).".c_str(),1)";
 						//$retVals[$e/2] = "RETURN_STRING((char *)ret".($e/2)."._str(wxConvUTF8),1)";
 						break;
@@ -2607,7 +2562,7 @@ PHP_FUNCTION(php_wxDynamicCast){
 <?			foreach($defIni as $className => $classDef):
 				if(!isset($classDef['_type']) && $classDef['_type']=="abstract")
 		                        continue;
-				if(in_array($className,array("wxPoint","wxSize","wxSizerFlags","wxClassInfo","wxTreeItemData","wxTreeItemId","wxArrayString","wxRect","wxDateTime","wxCalendarDateAttr","wxLocale")))
+				if(in_array($className,array("wxPoint","wxSize","wxSizerFlags","wxClassInfo","wxTreeItemData","wxTreeItemId","wxArrayString","wxRect","wxDateTime","wxCalendarDateAttr","wxLocale","wxItemContainer")))
 					continue;
 ?>
                         else if(!strcmp(_argStr0,"<?=$className?>")){

@@ -47,6 +47,8 @@
 #include <wx/imaglist.h>
 #include <wx/process.h>
 #include <wx/xrc/xmlres.h>
+#include <wx/html/helpctrl.h>
+#include <wx/fs_zip.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

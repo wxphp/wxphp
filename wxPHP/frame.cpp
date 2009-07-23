@@ -3,177 +3,6 @@
 void php_wxFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxFrame_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxFrame\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxFrame, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxFrame_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxFrame_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxFrame_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxFrame, __construct)
 {
 	zval **tmp;
@@ -1089,177 +918,6 @@ PHP_METHOD(php_wxEvent, ResumePropagation)
 void php_wxWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxWindow_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxWindow\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxWindow, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxWindow_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxWindow_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxWindow_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxWindow, __construct)
 {
 	zval **tmp;
@@ -3069,177 +2727,6 @@ PHP_METHOD(php_wxToolBar, SetToolShortHelp)
 void php_wxStatusBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxStatusBar_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxStatusBar\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxStatusBar, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxStatusBar_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxStatusBar_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxStatusBar_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxStatusBar, __construct)
 {
 	zval **tmp;
@@ -3408,7 +2895,7 @@ PHP_METHOD(php_wxStatusBar, GetStatusText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -7882,7 +7369,7 @@ PHP_METHOD(php_wxMenuItemBase, GetLabel)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -7920,7 +7407,7 @@ PHP_METHOD(php_wxMenuItemBase, GetLabelFromText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -8312,177 +7799,6 @@ PHP_METHOD(php_wxMenuItemBase, SetHelp)
 void php_wxMenu_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxMenu_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxMenu\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxMenu, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxMenu_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxMenu_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxMenu_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxMenu, __construct)
 {
 	char _wxResource[] = "wxResource";
@@ -10106,7 +9422,7 @@ PHP_METHOD(php_wxMenuBase, GetLabel)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -10181,7 +9497,7 @@ PHP_METHOD(php_wxMenuBase, GetHelpString)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -11639,7 +10955,7 @@ PHP_METHOD(php_wxToolBarBase, GetToolShortHelp)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -11714,7 +11030,7 @@ PHP_METHOD(php_wxToolBarBase, GetToolLongHelp)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -12400,7 +11716,7 @@ PHP_METHOD(php_wxControl, GetLabel)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -12554,7 +11870,7 @@ PHP_METHOD(php_wxCommandEvent, GetString)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -12777,177 +12093,6 @@ PHP_METHOD(php_wxCommandEvent, GetInt)
 void php_wxPanel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxPanel_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxPanel\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxPanel, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxPanel_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxPanel_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxPanel_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxPanel, __construct)
 {
 	zval **tmp;
@@ -13247,177 +12392,6 @@ PHP_METHOD(php_wxTopLevelWindowBase, SetIcon)
 void php_wxSplitterWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxSplitterWindow_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxSplitterWindow\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxSplitterWindow, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxSplitterWindow_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxSplitterWindow_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxSplitterWindow_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxSplitterWindow, __construct)
 {
 	zval **tmp;
@@ -14049,177 +13023,6 @@ PHP_METHOD(php_wxSplitterWindow, GetMinimumPaneSize)
 void php_wxTreeCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxTreeCtrl_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxTreeCtrl\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxTreeCtrl, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxTreeCtrl_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxTreeCtrl_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxTreeCtrl_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxTreeCtrl, __construct)
 {
 	zval **tmp;
@@ -14543,7 +13346,7 @@ PHP_METHOD(php_wxTreeCtrl, GetItemText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -16335,177 +15138,6 @@ PHP_METHOD(php_wxTreeCtrl, GetItemParent)
 void php_wxValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxValidator_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxValidator\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxValidator, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxValidator_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxValidator_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxValidator_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxValidator, __construct)
 {
 	char _wxResource[] = "wxResource";
@@ -16543,177 +15175,6 @@ PHP_METHOD(php_wxValidator, __construct)
 void php_wxCheckListBox_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxCheckListBox_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxCheckListBox\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxCheckListBox, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxCheckListBox_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxCheckListBox_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxCheckListBox_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxCheckListBox, Check)
 {
 	zval **tmp;
@@ -17632,177 +16093,6 @@ PHP_METHOD(php_wxIcon, CopyFromBitmap)
 void php_wxTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxTextCtrl_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxTextCtrl\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxTextCtrl, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxTextCtrl_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxTextCtrl_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxTextCtrl_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxTextCtrl, __construct)
 {
 	zval **tmp;
@@ -17960,7 +16250,7 @@ PHP_METHOD(php_wxTextCtrl, GetValue)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -18040,177 +16330,6 @@ PHP_METHOD(php_wxTextCtrl, SetMaxLength)
 void php_wxNotebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxNotebook_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxNotebook\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxNotebook, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxNotebook_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxNotebook_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxNotebook_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxNotebook, __construct)
 {
 	zval **tmp;
@@ -18385,7 +16504,7 @@ PHP_METHOD(php_wxNotebook, GetPageText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -19093,7 +17212,7 @@ PHP_METHOD(php_wxBookCtrlBase, GetPageText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -19508,177 +17627,6 @@ PHP_METHOD(php_wxFlexGridSizer, GetFlexibleDirection)
 void php_wxStaticText_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxStaticText_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxStaticText\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxStaticText, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxStaticText_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxStaticText_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxStaticText_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxStaticText, __construct)
 {
 	zval **tmp;
@@ -19852,7 +17800,7 @@ PHP_METHOD(php_wxStaticText, GetLabel)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -19915,177 +17863,6 @@ PHP_METHOD(php_wxStaticText, SetFont)
 void php_wxButton_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxButton_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxButton\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxButton, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxButton_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxButton_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxButton_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxButton, __construct)
 {
 	zval **tmp;
@@ -20438,177 +18215,6 @@ PHP_METHOD(php_wxButton, SetForegroundColour)
 void php_wxStaticBox_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxStaticBox_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxStaticBox\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxStaticBox, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxStaticBox_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxStaticBox_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxStaticBox_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxStaticBox, __construct)
 {
 	zval **tmp;
@@ -20863,177 +18469,6 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 void php_wxListBox_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxListBox_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxListBox\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxListBox, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxListBox_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxListBox_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxListBox_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxListBox, __construct)
 {
 	zval **tmp;
@@ -21316,7 +18751,7 @@ PHP_METHOD(php_wxListBox, GetString)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -21434,177 +18869,6 @@ PHP_METHOD(php_wxListBox, SetString)
 void php_wxFileDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxFileDialog_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxFileDialog\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxFileDialog, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxFileDialog_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxFileDialog_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxFileDialog_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxFileDialog, __construct)
 {
 	zval **tmp;
@@ -21735,7 +18999,7 @@ PHP_METHOD(php_wxFileDialog, GetPath)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -21771,7 +19035,7 @@ PHP_METHOD(php_wxFileDialog, GetDirectory)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -21807,7 +19071,7 @@ PHP_METHOD(php_wxFileDialog, GetFilename)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -22257,177 +19521,6 @@ PHP_METHOD(php_wxFileDialog, GetFilenames)
 void php_wxDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxDialog_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxDialog\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxDialog, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxDialog_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxDialog_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxDialog_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxDialog, __construct)
 {
 	zval **tmp;
@@ -22683,177 +19776,6 @@ PHP_METHOD(php_wxDialog, IsModal)
 void php_wxMessageDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxMessageDialog_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxMessageDialog\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxMessageDialog, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxMessageDialog_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxMessageDialog_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxMessageDialog_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxMessageDialog, ShowModal)
 {
 	zval **tmp;
@@ -23136,7 +20058,7 @@ PHP_METHOD(php_wxStatusBarBase, GetStatusText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -23182,177 +20104,6 @@ PHP_METHOD(php_wxStatusBarBase, PopStatusText)
 void php_wxListCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxListCtrl_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxListCtrl\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxListCtrl, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxListCtrl_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxListCtrl_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxListCtrl_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxListCtrl, __construct)
 {
 	zval **tmp;
@@ -23599,7 +20350,7 @@ PHP_METHOD(php_wxListCtrl, OnGetItemText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -23838,7 +20589,7 @@ PHP_METHOD(php_wxListCtrl, GetItemText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -24044,6 +20795,9 @@ PHP_METHOD(php_wxListCtrl, InsertItem)
 	long _argLong1;
 	char* _argStr0;
 	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
 	valid=1;
 	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!s!", &_argLong0 , &_argStr0 , &_argStr0_len ) == SUCCESS)
 	{
@@ -24099,6 +20853,42 @@ PHP_METHOD(php_wxListCtrl, InsertItem)
 					break;
 			}
 			RETURN_LONG((long)ret2)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxListItem))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			long int ret3;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret3 =  ((wxListCtrl_php*)_this)->InsertItem(*(wxListItem *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret3)			
 		}
 	}
 }
@@ -24389,177 +21179,6 @@ PHP_METHOD(php_wxListCtrl, SetItemTextColour)
 void php_wxStaticBitmap_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxStaticBitmap_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxStaticBitmap\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxStaticBitmap, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxStaticBitmap_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxStaticBitmap_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxStaticBitmap_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxStaticBitmap, __construct)
 {
 	zval **tmp;
@@ -24740,177 +21359,6 @@ PHP_METHOD(php_wxStaticBitmap, SetBitmap)
 void php_wxGauge_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxGauge_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxGauge\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxGauge, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxGauge_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxGauge_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxGauge_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxGauge, __construct)
 {
 	zval **tmp;
@@ -25434,177 +21882,6 @@ PHP_METHOD(php_wxListEvent, GetColumn)
 void php_wxComboBox_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxComboBox_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxComboBox\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxComboBox, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxComboBox_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxComboBox_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxComboBox_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxComboBox, __construct)
 {
 	zval **tmp;
@@ -25999,7 +22276,7 @@ PHP_METHOD(php_wxComboBox, GetValue)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -26148,6 +22425,192 @@ PHP_METHOD(php_wxComboBox, SelectAll)
 					break;
 			}
 			
+		}
+	}
+}
+PHP_METHOD(php_wxComboBox, Clear)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxComboBox_php*)_this)->Clear();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxComboBox, Delete)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxComboBox_php*)_this)->Delete((unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxComboBox, Append)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxComboBox_php*)_this)->Append(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxArrayString))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxComboBox_php*)_this)->Append(*(wxArrayString *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxComboBox, Insert)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!l!", &_argStr0 , &_argStr0_len , &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxComboBox_php*)_this)->Insert(wxString(_argStr0, wxConvUTF8) , (unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
 		}
 	}
 }
@@ -29255,177 +25718,6 @@ PHP_METHOD(php_wxBrush, SetStipple)
 void php_wxSplashScreen_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxSplashScreen_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxSplashScreen\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxSplashScreen, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxSplashScreen_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxSplashScreen_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxSplashScreen_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxSplashScreen, __construct)
 {
 	zval **tmp;
@@ -29584,177 +25876,6 @@ PHP_METHOD(php_wxSplashScreen, GetTimeout)
 void php_wxCalendarCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxCalendarCtrl_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxCalendarCtrl\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxCalendarCtrl, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxCalendarCtrl_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxCalendarCtrl_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxCalendarCtrl_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxCalendarCtrl, __construct)
 {
 	zval **tmp;
@@ -31952,13 +28073,47 @@ PHP_METHOD(php_wxTimer, IsRunning)
 void php_wxEvtHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
+PHP_METHOD(php_wxEvtHandler, __construct)
+{
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxEvtHandler_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxEvtHandler);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxEvtHandler_php*) _this)->evnArray);
+			array_init(((wxEvtHandler_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxEvtHandler_php*) _this)->phpObj);
+			*((wxEvtHandler_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxEvtHandler_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxEvtHandler_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+
 void wxEvtHandler_php::onEvent(wxEvent& evnt)
 {
-	zval** fc;
-	HashTable* htl;
 	zval *arg[1];
 	MAKE_STD_ZVAL(arg[0]);
 	char _wxResource[] = "wxResource";
+	TSRMLS_FETCH();
 
 	if(0)
 	{}
@@ -31998,164 +28153,80 @@ void wxEvtHandler_php::onEvent(wxEvent& evnt)
 		object_init_ex(arg[0],php_wxTimerEvent_entry);
 		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
 	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
 
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxEvtHandler\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
+        char* wxname;
+        zval dummy;
+        zval* fc_name;
+        wxCommandEvent* ce;
+        wxPhpClientData* co;
+
+        ce = (wxCommandEvent*)evnt.m_callbackUserData;
+        co = (wxPhpClientData*)ce->GetClientObject();
+
+        MAKE_STD_ZVAL(fc_name);
+        wxname = (char*)ce->GetString().c_str();
+        ZVAL_STRING(fc_name, wxname,1);
+
+        if (call_user_function(NULL, &(co->phpObj), fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
+                wxMessageBox(_T("Failed method Call!\n"));
+        }	
+	
 }
-
 PHP_METHOD(php_wxEvtHandler, Connect)
 {
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxEvtHandler_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxEvtHandler_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxEvtHandler_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
+        zval **tmp;
+        int rsrc_type;
+        int id_to_find;
+        int valid = 1;
+        char _wxResource[] = "wxResource";
+        wxEvtHandler *_this;
 
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
+        if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+                return;
+        id_to_find = Z_RESVAL_P(*tmp);
+        _this = (wxEvtHandler*)zend_list_find(id_to_find, &rsrc_type);
 
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
-PHP_METHOD(php_wxEvtHandler, __construct)
-{
-	char _wxResource[] = "wxResource";
-	int valid = 1;
-	void *_this;
-	valid=1;
-	if (ZEND_NUM_ARGS()==0)
-	{
-		
-		if(valid)
-		{
-			int gr = ZEND_NUM_ARGS(); 
-			switch(gr)
-			{
-				case 0:
-					_this = new wxEvtHandler_php();
-					break;
-				default:
-					break;
-			}
-			long id_to_find = zend_list_insert(_this, le_wxEvtHandler);
-			add_property_resource(getThis(), _wxResource, id_to_find);					
-			MAKE_STD_ZVAL(((wxEvtHandler_php*) _this)->evnArray);
-			array_init(((wxEvtHandler_php*) _this)->evnArray);
-			MAKE_STD_ZVAL(((wxEvtHandler_php*) _this)->phpObj);
-			*((wxEvtHandler_php*) _this)->phpObj = *getThis();
-			zval_copy_ctor(((wxEvtHandler_php*) _this)->phpObj);
-			#ifdef ZTS 
-			((wxEvtHandler_php*) _this)->TSRMLS_C = TSRMLS_C;
-			#endif
-			
-		}
-	}
+        zval* fc;
+        int flag,id0 = 0,id1 = 0;
+
+        zval** fc_obj;
+        zval** fc_name;
+        char* ct;
+        int args;
+        args = ZEND_NUM_ARGS();
+
+        if(
+                zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "lllz", &id0, &id1, &flag , (void**)&fc) == SUCCESS   ||
+                zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "llz" , &id0, &flag , (void**)&fc) == SUCCESS ||
+                zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "lz"  , &flag , (void**)&fc) == SUCCESS
+                )
+        {
+                zend_hash_index_find(HASH_OF(fc),0,(void**)&fc_obj);
+                zend_hash_index_find(HASH_OF(fc),1,(void**)&fc_name);
+                ZVAL_ADDREF(*fc_obj);
+
+
+                ct = (*fc_name)->value.str.val;
+
+                wxCommandEvent* ce = new wxCommandEvent();
+                ce->SetString(wxString::Format(wxT("%s"),ct));
+                ce->SetClientObject(new wxPhpClientData(*fc_obj));
+
+                switch(args){
+                        case 4:
+                                _this->Connect(id0, id1, flag, wxEventHandler(wxEvtHandler_php::onEvent),ce);
+                                break;
+                        case 3:
+                                _this->Connect(id0, flag, wxEventHandler(wxEvtHandler_php::onEvent),ce);
+                                break;
+                        case 2:
+                                _this->Connect(flag, wxEventHandler(wxEvtHandler_php::onEvent),ce);
+                                break;
+                        default:
+                                wxMessageBox(_T("Failed to create event\n"));
+                                break;
+                }
+        }
 }
 void php_wxTimerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
@@ -32694,177 +28765,6 @@ PHP_METHOD(php_wxSocketBase, Write)
 void php_wxCheckBox_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxCheckBox_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxCheckBox\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxCheckBox, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxCheckBox_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxCheckBox_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxCheckBox_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxCheckBox, __construct)
 {
 	zval **tmp;
@@ -33062,177 +28962,6 @@ PHP_METHOD(php_wxCheckBox, GetValue)
 void php_wxDirDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxDirDialog_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxDirDialog\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxDirDialog, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxDirDialog_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxDirDialog_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxDirDialog_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxDirDialog, __construct)
 {
 	zval **tmp;
@@ -33449,184 +29178,13 @@ PHP_METHOD(php_wxDirDialog, GetPath)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
 void php_wxBitmapButton_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxBitmapButton_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxBitmapButton\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxBitmapButton, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxBitmapButton_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxBitmapButton_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxBitmapButton_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxBitmapButton, __construct)
 {
 	zval **tmp;
@@ -33770,177 +29328,6 @@ PHP_METHOD(php_wxBitmapButton, __construct)
 void php_wxToggleButton_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxToggleButton_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxToggleButton\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxToggleButton, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxToggleButton_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxToggleButton_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxToggleButton_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxToggleButton, __construct)
 {
 	zval **tmp;
@@ -34138,177 +29525,6 @@ PHP_METHOD(php_wxToggleButton, GetValue)
 void php_wxChoice_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxChoice_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxChoice\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxChoice, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxChoice_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxChoice_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxChoice_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxChoice, __construct)
 {
 	zval **tmp;
@@ -34812,7 +30028,7 @@ PHP_METHOD(php_wxChoice, GetString)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -34854,180 +30070,160 @@ PHP_METHOD(php_wxChoice, SetString)
 		}
 	}
 }
-void php_wxStyledTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
-{
-	}			
-void wxStyledTextCtrl_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxStyledTextCtrl\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxStyledTextCtrl, Connect)
+PHP_METHOD(php_wxChoice, Delete)
 {
 	zval **tmp;
 	int rsrc_type;
 	int id_to_find;
-	int valid = 1;
 	char _wxResource[] = "wxResource";
-	wxStyledTextCtrl_php *_this;
+	int valid = 1;
+	void *_this;
 	
 	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxStyledTextCtrl_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
 	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxStyledTextCtrl_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
+		return;
 	}
-}		
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxChoice_php*)_this)->Delete((unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxChoice, Append)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxChoice_php*)_this)->Append(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxArrayString))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxChoice_php*)_this)->Append(*(wxArrayString *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxChoice, Insert)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!l!", &_argStr0 , &_argStr0_len , &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxChoice_php*)_this)->Insert(wxString(_argStr0, wxConvUTF8) , (unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+void php_wxStyledTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
 PHP_METHOD(php_wxStyledTextCtrl, __construct)
 {
 	zval **tmp;
@@ -40079,7 +35275,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -40368,7 +35564,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectedText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -40406,7 +35602,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -41016,7 +36212,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetText)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -45547,7 +40743,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -45585,7 +40781,7 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -46702,7 +41898,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 				default:
 					break;
 			}
-			wxDialog_php* cret = wxDynamicCast(ret0, wxDialog_php);object_init_ex(return_value,php_wxDialog_entry);add_property_resource(return_value, "wxResource", zend_list_insert(cret, le_wxDialog));MAKE_STD_ZVAL(cret->evnArray);array_init(cret->evnArray);return;			
+			object_init_ex(return_value,php_wxDialog_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret0, le_wxDialog));return;			
 		}
 	}
 	valid=1;
@@ -47814,7 +43010,7 @@ PHP_METHOD(php_wxLocale, GetName)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -47922,7 +43118,7 @@ PHP_METHOD(php_wxLocale, GetCanonicalName)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -48029,7 +43225,7 @@ PHP_METHOD(php_wxLocale, GetSystemEncodingName)
 				default:
 					break;
 			}
-			char * ro2;ro2 = (char*)malloc(sizeof(char)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
 		}
 	}
 }
@@ -48097,177 +43293,6 @@ void php_wxRadioBox_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 void php_wxRadioButton_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
-void wxRadioButton_php::onEvent(wxEvent& evnt)
-{
-	zval** fc;
-	HashTable* htl;
-	zval *arg[1];
-	MAKE_STD_ZVAL(arg[0]);
-	char _wxResource[] = "wxResource";
-
-	if(0)
-	{}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
-	{
-		object_init_ex(arg[0],php_wxCommandEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCommandEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTreeEvent")))
-	{
-		object_init_ex(arg[0],php_wxTreeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTreeEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxListEvent")))
-	{
-		object_init_ex(arg[0],php_wxListEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxListEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCalendarEvent")))
-	{
-		object_init_ex(arg[0],php_wxCalendarEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalendarEvent));
-	}
-	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxTimerEvent")))
-	{
-		object_init_ex(arg[0],php_wxTimerEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxTimerEvent));
-	}
-	
-	zval** zPtr;
-	htl = this->evnArray->value.ht;
-	if(zend_hash_index_find(htl,evnt.GetEventType(),(void **)&zPtr)== FAILURE)
-		return;
-	
-	htl = (*zPtr)->value.ht;
-	
-	zval funcname;
-	zval dummy;
-
-	for(zend_hash_internal_pointer_reset(htl);
-	    zend_hash_has_more_elements(htl) == SUCCESS;
-	    zend_hash_move_forward(htl)) {
-		    
-		zend_hash_get_current_data(htl,(void**)&fc);
-		funcname = **fc;
-		    
-		if(funcname.type==IS_ARRAY)
-		{
-			zval** ob;
-			zval** obId0=0;
-			zval** obId1=0;
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),2,(void**)&obId1)==SUCCESS)
-			{
-				if((*obId1)->value.lval && (*obId1)->value.lval<evnt.GetId())
-					continue;
-			}
-			
-			if(zend_hash_index_find(HASH_OF(&funcname),1,(void**)&obId0)==SUCCESS)
-			{
-				if(obId1 && (*obId1)->value.lval)
-				{
-					if((*obId0)->value.lval>evnt.GetId())
-						continue;
-				}
-				else
-				{
-					if((*obId0)->value.lval!=evnt.GetId())
-						continue;
-				}
-			}
-			
-			zend_hash_index_find(HASH_OF(&funcname),0,(void**)&ob);
-			
-			if((*ob)->type==IS_ARRAY)
-			{
-				zval** fc_obj;
-				zval** fc_name;
-				zend_hash_index_find(HASH_OF(*ob),0,(void**)&fc_obj);
-				zend_hash_index_find(HASH_OF(*ob),1,(void**)&fc_name);
-				if (call_user_function(NULL, fc_obj, *fc_name, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed method Call! - wxRadioButton\n"));
-				}
-			}
-			else if((*ob)->type==IS_STRING)
-			{
-				if (call_user_function(EG(function_table), NULL, *ob, &dummy, 1, arg TSRMLS_CC) == FAILURE) {
-					wxMessageBox(_T("Failed Call!\n"));
-				}		    
-			}
-		}
-	}
-}
-
-PHP_METHOD(php_wxRadioButton, Connect)
-{
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	int valid = 1;
-	char _wxResource[] = "wxResource";
-	wxRadioButton_php *_this;
-	
-	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-		return;
-	id_to_find = Z_RESVAL_P(*tmp);
-	_this = (wxRadioButton_php*)zend_list_find(id_to_find, &rsrc_type);
-	
-		zval** zPtr;
-	zval* pPtr;
-	zval* fc,ud,es;
-	zval* fc3;
-	int flag,id0 = 0,id1 = 0;
-	HashTable* htl;
-	
-	if (	
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lllz|zz"	, &id0, &id1, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "llz|zz"	, &id0, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS	||
-		zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "lz|z"	, &flag , (void**)&fc, (void**)&ud, (void**)&es) == SUCCESS
-		)
-	{
-		htl = _this->evnArray->value.ht;
-		
-		// Type of event
-		if(zend_hash_index_find(htl,flag,(void **)&zPtr)== FAILURE)
-		{	//create a new array
-			_this->Connect(flag, wxEventHandler(wxRadioButton_php::onEvent));
-			MAKE_STD_ZVAL(pPtr);
-			array_init(pPtr);
-			add_index_zval(_this->evnArray,flag,pPtr);
-			
-			zend_hash_index_find(htl,flag,(void **)&zPtr);
-		}
-		
-		htl = (*zPtr)->value.ht;
-
-		MAKE_STD_ZVAL(fc3);
-		*fc3 = *fc;
-		zval_copy_ctor(fc3);
-		
-		MAKE_STD_ZVAL(pPtr);
-		array_init(pPtr);
-		add_index_zval(pPtr,0,fc3);
-		if(id0)
-			add_index_long(pPtr,1,id0);
-		if(id1)
-			add_index_long(pPtr,2,id1);
-		
-
-		add_next_index_zval(*zPtr,pPtr);
-		
-	}
-}		
 PHP_METHOD(php_wxRadioButton, __construct)
 {
 	zval **tmp;
@@ -48536,6 +43561,831 @@ PHP_METHOD(php_wxRadioButton, Enable)
 					break;
 			}
 			RETURN_BOOL(ret0)			
+		}
+	}
+}
+void php_wxListItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxListItem, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxListItem_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxListItem);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxListItem_php*) _this)->evnArray);
+			array_init(((wxListItem_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxListItem_php*) _this)->phpObj);
+			*((wxListItem_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxListItem_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxListItem_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxListItem))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					_this = new wxListItem_php(*(wxListItem *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxListItem);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxListItem_php*) _this)->evnArray);
+			array_init(((wxListItem_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxListItem_php*) _this)->phpObj);
+			*((wxListItem_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxListItem_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxListItem_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, Clear)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxListItem_php*)_this)->Clear();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, ClearAttributes)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxListItem_php*)_this)->ClearAttributes();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, SetMask)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxListItem_php*)_this)->SetMask((long int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, SetId)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxListItem_php*)_this)->SetId((long int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, SetColumn)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxListItem_php*)_this)->SetColumn((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, SetImage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxListItem_php*)_this)->SetImage((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, SetText)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxListItem_php*)_this)->SetText(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, SetWidth)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxListItem_php*)_this)->SetWidth((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, GetId)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			long int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxListItem_php*)_this)->GetId();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, GetColumn)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxListItem_php*)_this)->GetColumn();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, GetText)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxString ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxListItem_php*)_this)->GetText();
+					break;
+				default:
+					break;
+			}
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+}
+PHP_METHOD(php_wxListItem, GetWidth)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxListItem_php*)_this)->GetWidth();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+void php_wxHtmlHelpController_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxHtmlHelpController, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|l!z!", &_argLong0 , &_argObj0 ) == SUCCESS)
+	{
+		
+		if(valid && _argObj0)
+		{
+			if (_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+		}
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					_this = new wxHtmlHelpController_php((int)_argLong0 , (wxWindow*) _ptrObj0);
+					break;
+				case 1:
+					_this = new wxHtmlHelpController_php((int)_argLong0);
+					break;
+				case 0:
+					_this = new wxHtmlHelpController_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxHtmlHelpController);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxHtmlHelpController_php*) _this)->evnArray);
+			array_init(((wxHtmlHelpController_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxHtmlHelpController_php*) _this)->phpObj);
+			*((wxHtmlHelpController_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxHtmlHelpController_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxHtmlHelpController_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+PHP_METHOD(php_wxHtmlHelpController, AddBook)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!|b!", &_argStr0 , &_argStr0_len , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxHtmlHelpController_php*)_this)->AddBook(wxString(_argStr0, wxConvUTF8) , _argBool0);
+					break;
+				case 1:
+					ret0 =  ((wxHtmlHelpController_php*)_this)->AddBook(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxHtmlHelpController, Display)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxHtmlHelpController_php*)_this)->Display(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret1;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret1 =  ((wxHtmlHelpController_php*)_this)->Display((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret1)			
+		}
+	}
+}
+PHP_METHOD(php_wxHtmlHelpController, DisplayContents)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxHtmlHelpController_php*)_this)->DisplayContents();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxHtmlHelpController, DisplayIndex)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxHtmlHelpController_php*)_this)->DisplayIndex();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxHtmlHelpController, SetTempDir)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxHtmlHelpController_php*)_this)->SetTempDir(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxHtmlHelpController, SetTitleFormat)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxHtmlHelpController_php*)_this)->SetTitleFormat(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
 		}
 	}
 }
