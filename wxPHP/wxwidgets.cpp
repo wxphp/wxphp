@@ -194,6 +194,8 @@ zend_class_entry *php_wxListItem_entry;
 int le_wxListItem;
 zend_class_entry *php_wxHtmlHelpController_entry;
 int le_wxHtmlHelpController;
+zend_class_entry *php_wxTaskBarIcon_entry;
+int le_wxTaskBarIcon;
 
 // <--- entries
 
@@ -851,6 +853,13 @@ PHP_FUNCTION(php_wxDynamicCast){
                                 add_property_resource(return_value, _wxResource, id_to_find);
                                 return;
                         }
+                        else if(!strcmp(_argStr0,"wxTaskBarIcon")){
+                                object_init_ex(return_value,php_wxTaskBarIcon_entry);
+                                wxTaskBarIcon* ret = wxDynamicCast(_ptrObj0,wxTaskBarIcon_php);
+                                long id_to_find = zend_list_insert(ret, le_wxTaskBarIcon);
+                                add_property_resource(return_value, _wxResource, id_to_find);
+                                return;
+                        }
                 }
 
         }
@@ -1259,6 +1268,10 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	INIT_CLASS_ENTRY(cf, PHP_wxHtmlHelpController_NAME , php_wxHtmlHelpController_functions);
 	php_wxHtmlHelpController_entry = zend_register_internal_class(&cf TSRMLS_CC);
 	le_wxHtmlHelpController = zend_register_list_destructors_ex(php_wxHtmlHelpController_destruction_handler,NULL, le_wxHtmlHelpController_name ,module_number);
+
+	INIT_CLASS_ENTRY(cf, PHP_wxTaskBarIcon_NAME , php_wxTaskBarIcon_functions);
+	php_wxTaskBarIcon_entry = zend_register_internal_class(&cf TSRMLS_CC);
+	le_wxTaskBarIcon = zend_register_list_destructors_ex(php_wxTaskBarIcon_destruction_handler,NULL, le_wxTaskBarIcon_name ,module_number);
 
 	REGISTER_LONG_CONSTANT("wxBG_STYLE_SYSTEM",	wxBG_STYLE_SYSTEM	, CONST_CS |CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxBG_STYLE_COLOUR",	wxBG_STYLE_COLOUR	, CONST_CS |CONST_PERSISTENT);

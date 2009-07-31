@@ -1917,6 +1917,7 @@ PHP_METHOD(php_<?=$className?>, Connect)
 							$classDef[$methodName][$e][$i] = "long";
 						case "wxCalendarDateBorder":
 						case "wxDataViewCellMode":
+						case "wxLanguage":
 						case "wxItemKind":
 							$argStr[$e/2].="l";
 							$parseArgs[$e/2][] = "&_argLong".$types['l'];

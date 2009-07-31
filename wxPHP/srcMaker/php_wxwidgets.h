@@ -351,6 +351,10 @@ PHP_METHOD(php_wxArrayString, Clear);
 PHP_METHOD(php_wxCheckListBoxBase, Check);
 PHP_METHOD(php_wxListBoxBase, Set);
 PHP_METHOD(php_wxListBoxBase, Deselect);
+PHP_METHOD(php_wxListBoxBase, Insert);
+PHP_METHOD(php_wxListBoxBase, InsertItems);
+PHP_METHOD(php_wxListBoxBase, DeselectAll);
+PHP_METHOD(php_wxListBoxBase, SetSelection);
 PHP_METHOD(php_wxIcon, __construct);
 PHP_METHOD(php_wxIcon, CopyFromBitmap);
 PHP_METHOD(php_wxTextCtrl, __construct);
@@ -409,6 +413,9 @@ PHP_METHOD(php_wxListBox, GetString);
 PHP_METHOD(php_wxListBox, GetSelection);
 PHP_METHOD(php_wxListBox, IsSelected);
 PHP_METHOD(php_wxListBox, SetString);
+PHP_METHOD(php_wxListBox, Clear);
+PHP_METHOD(php_wxListBox, Delete);
+PHP_METHOD(php_wxListBox, GetCount);
 PHP_METHOD(php_wxListBox, Connect);
 PHP_METHOD(php_wxFileDialog, __construct);
 PHP_METHOD(php_wxFileDialog, GetPath);
@@ -993,6 +1000,13 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayContents);
 PHP_METHOD(php_wxHtmlHelpController, DisplayIndex);
 PHP_METHOD(php_wxHtmlHelpController, SetTempDir);
 PHP_METHOD(php_wxHtmlHelpController, SetTitleFormat);
+PHP_METHOD(php_wxTaskBarIcon, __construct);
+PHP_METHOD(php_wxTaskBarIcon, SetIcon);
+PHP_METHOD(php_wxTaskBarIcon, IsIconInstalled);
+PHP_METHOD(php_wxTaskBarIcon, RemoveIcon);
+PHP_METHOD(php_wxTaskBarIcon, PopupMenu);
+PHP_METHOD(php_wxTaskBarIcon, IsOk);
+PHP_METHOD(php_wxTaskBarIcon, Connect);
 
 // <--- entries
 

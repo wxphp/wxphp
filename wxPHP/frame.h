@@ -1461,8 +1461,15 @@ static function_entry php_wxCheckListBox_functions[] = {
         PHP_ME(php_wxListBox, GetSelection, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, IsSelected, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, SetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBox, Clear, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBox, Delete, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBox, GetCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBoxBase, Set, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBoxBase, Deselect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, Insert, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, InsertItems, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, DeselectAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, SetSelection, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxTreeItemData_entry;
@@ -1647,6 +1654,10 @@ extern int le_wxListBoxBase;
 static function_entry php_wxListBoxBase_functions[] = {
         PHP_ME(php_wxListBoxBase, Set, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBoxBase, Deselect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, Insert, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, InsertItems, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, DeselectAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, SetSelection, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxIcon_entry;
@@ -2197,8 +2208,15 @@ static function_entry php_wxListBox_functions[] = {
         PHP_ME(php_wxListBox, GetSelection, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, IsSelected, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, SetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBox, Clear, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBox, Delete, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBox, GetCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBoxBase, Set, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBoxBase, Deselect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, Insert, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, InsertItems, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, DeselectAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxListBoxBase, SetSelection, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
@@ -4543,5 +4561,35 @@ static function_entry php_wxHtmlHelpController_functions[] = {
         PHP_ME(php_wxHtmlHelpController, DisplayIndex, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxHtmlHelpController, SetTempDir, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxHtmlHelpController, SetTitleFormat, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxTaskBarIcon_entry;
+void php_wxTaskBarIcon_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxTaskBarIcon_NAME "wxTaskBarIcon"
+#define le_wxTaskBarIcon_name  "native wxTaskBarIcon"
+
+class wxTaskBarIcon_php : public wxTaskBarIcon{
+	public:
+	wxTaskBarIcon_php():wxTaskBarIcon()
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxTaskBarIcon;
+
+static function_entry php_wxTaskBarIcon_functions[] = {
+        PHP_ME(php_wxTaskBarIcon, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxTaskBarIcon, SetIcon, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTaskBarIcon, IsIconInstalled, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTaskBarIcon, RemoveIcon, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTaskBarIcon, PopupMenu, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTaskBarIcon, IsOk, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvtHandler, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
