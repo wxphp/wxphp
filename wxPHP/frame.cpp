@@ -36,7 +36,7 @@ PHP_METHOD(php_wxFrame, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -52,7 +52,7 @@ PHP_METHOD(php_wxFrame, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -64,7 +64,7 @@ PHP_METHOD(php_wxFrame, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -303,7 +303,7 @@ PHP_METHOD(php_wxFrame, SetStatusBar)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxStatusBar))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -358,7 +358,7 @@ PHP_METHOD(php_wxFrame, SetToolBar)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxToolBar))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -560,7 +560,7 @@ PHP_METHOD(php_wxEvent, SetEventObject)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxObject))
+				if (!_ptrObj0 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -949,7 +949,7 @@ PHP_METHOD(php_wxWindow, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -965,7 +965,7 @@ PHP_METHOD(php_wxWindow, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -977,7 +977,7 @@ PHP_METHOD(php_wxWindow, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -1128,7 +1128,7 @@ PHP_METHOD(php_wxWindow, Create)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -1144,7 +1144,7 @@ PHP_METHOD(php_wxWindow, Create)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -1156,7 +1156,7 @@ PHP_METHOD(php_wxWindow, Create)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -1437,7 +1437,7 @@ PHP_METHOD(php_wxWindow, Reparent)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindowBase && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -1600,7 +1600,7 @@ PHP_METHOD(php_wxWindow, SetBackgroundColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -1656,7 +1656,7 @@ PHP_METHOD(php_wxWindow, SetForegroundColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -1712,7 +1712,7 @@ PHP_METHOD(php_wxWindow, SetCursor)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxCursor))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -1768,7 +1768,7 @@ PHP_METHOD(php_wxWindow, SetFont)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxFont))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -2054,7 +2054,7 @@ PHP_METHOD(php_wxWindow, AddChild)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindowBase && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -2109,7 +2109,7 @@ PHP_METHOD(php_wxWindow, RemoveChild)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindowBase && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -2199,7 +2199,7 @@ PHP_METHOD(php_wxWindow, Refresh)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxRect))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -2259,6 +2259,42 @@ PHP_METHOD(php_wxWindow, IsFrozen)
 					break;
 			}
 			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxWindow, SetWindowStyleFlag)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxWindow_php*)_this)->SetWindowStyleFlag((long int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
 		}
 	}
 }
@@ -2402,7 +2438,7 @@ PHP_METHOD(php_wxToolBar, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -2418,7 +2454,7 @@ PHP_METHOD(php_wxToolBar, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -2430,7 +2466,7 @@ PHP_METHOD(php_wxToolBar, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -2513,7 +2549,7 @@ PHP_METHOD(php_wxToolBar, Create)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -2529,7 +2565,7 @@ PHP_METHOD(php_wxToolBar, Create)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -2541,7 +2577,7 @@ PHP_METHOD(php_wxToolBar, Create)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -2780,7 +2816,7 @@ PHP_METHOD(php_wxStatusBar, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3085,7 +3121,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3101,7 +3137,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxObject))
+				if (!_ptrObj1 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3145,7 +3181,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3162,7 +3198,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxSizerFlags))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3198,7 +3234,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3214,7 +3250,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxObject))
+				if (!_ptrObj1 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3258,7 +3294,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3275,7 +3311,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxSizerFlags))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3310,7 +3346,7 @@ PHP_METHOD(php_wxSizer, Add)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxObject))
+				if (!_ptrObj0 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3460,7 +3496,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3476,7 +3512,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxObject))
+				if (!_ptrObj1 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3520,7 +3556,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3536,7 +3572,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxObject))
+				if (!_ptrObj1 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3579,7 +3615,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxObject))
+				if (!_ptrObj0 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3623,7 +3659,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3640,7 +3676,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxSizerFlags))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3676,7 +3712,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3693,7 +3729,7 @@ PHP_METHOD(php_wxSizer, Insert)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxSizerFlags))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3836,7 +3872,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3853,7 +3889,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxSizerFlags))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3889,7 +3925,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3905,7 +3941,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxObject))
+				if (!_ptrObj1 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -3949,7 +3985,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -3965,7 +4001,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxObject))
+				if (!_ptrObj1 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -4009,7 +4045,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4026,7 +4062,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxSizerFlags))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -4061,7 +4097,7 @@ PHP_METHOD(php_wxSizer, Prepend)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxObject))
+				if (!_ptrObj0 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4203,7 +4239,7 @@ PHP_METHOD(php_wxSizer, Remove)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4239,7 +4275,7 @@ PHP_METHOD(php_wxSizer, Remove)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4315,7 +4351,7 @@ PHP_METHOD(php_wxSizer, Detach)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4351,7 +4387,7 @@ PHP_METHOD(php_wxSizer, Detach)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4505,7 +4541,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4541,7 +4577,7 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4830,7 +4866,7 @@ PHP_METHOD(php_wxSizer, Fit)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4886,7 +4922,7 @@ PHP_METHOD(php_wxSizer, FitInside)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4941,7 +4977,7 @@ PHP_METHOD(php_wxSizer, SetSizeHints)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -4996,7 +5032,7 @@ PHP_METHOD(php_wxSizer, SetVirtualSizeHints)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5112,7 +5148,6 @@ PHP_METHOD(php_wxSizer, GetItem)
 	_this = zend_list_find(id_to_find, &rsrc_type);
 	
 	bool _argBool0;
-	long _argLong0;
 	void *_ptrObj0 = 0;
 	zval *_argObj0 = 0;
 	int id_to_find0;
@@ -5127,7 +5162,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5166,7 +5201,7 @@ PHP_METHOD(php_wxSizer, GetItem)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5192,25 +5227,6 @@ PHP_METHOD(php_wxSizer, GetItem)
 					break;
 			}
 			object_init_ex(return_value,php_wxSizerItem_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret1, le_wxSizerItem));return;			
-		}
-	}
-	valid=1;
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
-	{
-		
-		if(valid)
-		{
-			wxSizerItem* ret2;
-			int gr = ZEND_NUM_ARGS(); 
-			switch(gr)
-			{
-				case 1:
-					ret2 =  ((wxSizer_php*)_this)->GetItem((unsigned int)_argLong0);
-					break;
-				default:
-					break;
-			}
-			object_init_ex(return_value,php_wxSizerItem_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret2, le_wxSizerItem));return;			
 		}
 	}
 }
@@ -5246,7 +5262,7 @@ PHP_METHOD(php_wxSizer, Hide)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5285,7 +5301,7 @@ PHP_METHOD(php_wxSizer, Hide)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5364,7 +5380,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5400,7 +5416,7 @@ PHP_METHOD(php_wxSizer, IsShown)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5527,7 +5543,7 @@ PHP_METHOD(php_wxColour, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5643,7 +5659,7 @@ PHP_METHOD(php_wxCursor, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxImage))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5688,7 +5704,7 @@ PHP_METHOD(php_wxCursor, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxCursor))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -5731,6 +5747,8 @@ PHP_METHOD(php_wxFont, __construct)
 	char _wxResource[] = "wxResource";
 	int valid = 1;
 	void *_this;
+	char* _argStr0;
+	int _argStr0_len;
 	valid=1;
 	if (ZEND_NUM_ARGS()==0)
 	{
@@ -5742,6 +5760,34 @@ PHP_METHOD(php_wxFont, __construct)
 			{
 				case 0:
 					_this = new wxFont_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxFont);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxFont_php*) _this)->evnArray);
+			array_init(((wxFont_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxFont_php*) _this)->phpObj);
+			*((wxFont_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxFont_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxFont_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					_this = new wxFont_php(wxString(_argStr0, wxConvUTF8));
 					break;
 				default:
 					break;
@@ -5794,7 +5840,7 @@ PHP_METHOD(php_wxWindowBase, SetSizer)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
+				if (!_ptrObj0 || (rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxFlexGridSizer))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -6000,7 +6046,7 @@ PHP_METHOD(php_wxWindowBase, PopupMenu)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -6016,7 +6062,7 @@ PHP_METHOD(php_wxWindowBase, PopupMenu)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -6051,7 +6097,7 @@ PHP_METHOD(php_wxWindowBase, PopupMenu)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -6306,7 +6352,7 @@ PHP_METHOD(php_wxSizerFlags, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSizerFlags))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -6450,7 +6496,7 @@ PHP_METHOD(php_wxObject, IsKindOf)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxClassInfo))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -6567,7 +6613,7 @@ PHP_METHOD(php_wxImage, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxImage))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -6752,7 +6798,7 @@ PHP_METHOD(php_wxImage, Resize)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSize))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -6769,7 +6815,7 @@ PHP_METHOD(php_wxImage, Resize)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -6838,7 +6884,7 @@ PHP_METHOD(php_wxImage, Rotate)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -6854,7 +6900,7 @@ PHP_METHOD(php_wxImage, Rotate)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -7109,7 +7155,7 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -7167,7 +7213,7 @@ PHP_METHOD(php_wxMenuItemBase, SetMenu)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -7548,7 +7594,7 @@ PHP_METHOD(php_wxMenuItemBase, SetSubMenu)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -7956,7 +8002,7 @@ PHP_METHOD(php_wxBitmap, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxImage))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -8132,7 +8178,7 @@ PHP_METHOD(php_wxBitmap, CopyFromIcon)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -8234,7 +8280,7 @@ PHP_METHOD(php_wxMenuBase, Append)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -8273,7 +8319,7 @@ PHP_METHOD(php_wxMenuBase, Append)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenuItem))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -8496,7 +8542,7 @@ PHP_METHOD(php_wxMenuBase, Insert)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenuItem))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -8679,7 +8725,7 @@ PHP_METHOD(php_wxMenuBase, Prepend)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenuItem))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -8879,7 +8925,7 @@ PHP_METHOD(php_wxMenuBase, Remove)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenuItem))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -8955,7 +9001,7 @@ PHP_METHOD(php_wxMenuBase, Delete)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenuItem))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -9031,7 +9077,7 @@ PHP_METHOD(php_wxMenuBase, Destroy)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenuItem))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -9672,7 +9718,7 @@ PHP_METHOD(php_wxMenuBar, Append)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -9731,7 +9777,7 @@ PHP_METHOD(php_wxMenuBar, Insert)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -9790,7 +9836,7 @@ PHP_METHOD(php_wxMenuBar, Replace)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -10014,7 +10060,7 @@ PHP_METHOD(php_wxToolBarBase, AddCheckTool)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -10030,7 +10076,7 @@ PHP_METHOD(php_wxToolBarBase, AddCheckTool)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -10042,7 +10088,7 @@ PHP_METHOD(php_wxToolBarBase, AddCheckTool)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxObject))
+				if (!_ptrObj2 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -10119,7 +10165,7 @@ PHP_METHOD(php_wxToolBarBase, AddRadioTool)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -10135,7 +10181,7 @@ PHP_METHOD(php_wxToolBarBase, AddRadioTool)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -10147,7 +10193,7 @@ PHP_METHOD(php_wxToolBarBase, AddRadioTool)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxObject))
+				if (!_ptrObj2 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -10212,7 +10258,7 @@ PHP_METHOD(php_wxToolBarBase, InsertTool)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxToolBarToolBase))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -10268,7 +10314,7 @@ PHP_METHOD(php_wxToolBarBase, AddControl)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxControl && rsrc_type != le_wxToolBarBase && rsrc_type != le_wxToolBar && rsrc_type != le_wxListCtrl))
+				if (!_ptrObj0 || (rsrc_type != le_wxToolBarBase && rsrc_type != le_wxToolBar && rsrc_type != le_wxListCtrl))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -10325,7 +10371,7 @@ PHP_METHOD(php_wxToolBarBase, InsertControl)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxControl && rsrc_type != le_wxToolBarBase && rsrc_type != le_wxToolBar && rsrc_type != le_wxListCtrl))
+				if (!_ptrObj0 || (rsrc_type != le_wxToolBarBase && rsrc_type != le_wxToolBar && rsrc_type != le_wxListCtrl))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -10748,7 +10794,7 @@ PHP_METHOD(php_wxToolBarBase, SetToolClientData)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxObject))
+				if (!_ptrObj0 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -11172,7 +11218,7 @@ PHP_METHOD(php_wxToolBarBase, SetToolBitmapSize)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSize))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -11460,7 +11506,7 @@ PHP_METHOD(php_wxToolBarBase, AddTool)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxToolBarToolBase))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -11496,7 +11542,7 @@ PHP_METHOD(php_wxToolBarBase, AddTool)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -11538,7 +11584,7 @@ PHP_METHOD(php_wxToolBarBase, AddTool)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -11555,7 +11601,7 @@ PHP_METHOD(php_wxToolBarBase, AddTool)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -11571,7 +11617,7 @@ PHP_METHOD(php_wxToolBarBase, AddTool)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxObject))
+				if (!_ptrObj2 || (rsrc_type != le_wxAuiManager && rsrc_type != le_wxGDIObject))
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -12124,7 +12170,7 @@ PHP_METHOD(php_wxPanel, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -12140,7 +12186,7 @@ PHP_METHOD(php_wxPanel, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -12152,7 +12198,7 @@ PHP_METHOD(php_wxPanel, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -12364,7 +12410,7 @@ PHP_METHOD(php_wxTopLevelWindowBase, SetIcon)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -12381,6 +12427,60 @@ PHP_METHOD(php_wxTopLevelWindowBase, SetIcon)
 			{
 				case 1:
 					 ((wxTopLevelWindowBase_php*)_this)->SetIcon(*(wxIcon *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxTopLevelWindowBase_php::Maximize(bool arg0=true){
+	zval *args[1];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "Maximize", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxTopLevelWindowBase, Maximize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxTopLevelWindowBase_php*)_this)->Maximize(_argBool0);
+					break;
+				case 0:
+					 ((wxTopLevelWindowBase_php*)_this)->Maximize();
 					break;
 				default:
 					break;
@@ -12423,7 +12523,7 @@ PHP_METHOD(php_wxSplitterWindow, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -12439,7 +12539,7 @@ PHP_METHOD(php_wxSplitterWindow, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -12451,7 +12551,7 @@ PHP_METHOD(php_wxSplitterWindow, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -12531,7 +12631,7 @@ PHP_METHOD(php_wxSplitterWindow, SplitVertically)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -12548,7 +12648,7 @@ PHP_METHOD(php_wxSplitterWindow, SplitVertically)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -12611,7 +12711,7 @@ PHP_METHOD(php_wxSplitterWindow, SplitHorizontally)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -12628,7 +12728,7 @@ PHP_METHOD(php_wxSplitterWindow, SplitHorizontally)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -13057,7 +13157,7 @@ PHP_METHOD(php_wxTreeCtrl, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13073,7 +13173,7 @@ PHP_METHOD(php_wxTreeCtrl, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -13085,7 +13185,7 @@ PHP_METHOD(php_wxTreeCtrl, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -13097,7 +13197,7 @@ PHP_METHOD(php_wxTreeCtrl, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -13179,7 +13279,7 @@ PHP_METHOD(php_wxTreeCtrl, AddRoot)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemData))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13247,7 +13347,7 @@ PHP_METHOD(php_wxTreeCtrl, AppendItem)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13263,7 +13363,7 @@ PHP_METHOD(php_wxTreeCtrl, AppendItem)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxTreeItemData))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -13324,7 +13424,7 @@ PHP_METHOD(php_wxTreeCtrl, GetItemText)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13380,7 +13480,7 @@ PHP_METHOD(php_wxTreeCtrl, Delete)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13435,7 +13535,7 @@ PHP_METHOD(php_wxTreeCtrl, DeleteChildren)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13525,7 +13625,7 @@ PHP_METHOD(php_wxTreeCtrl, Expand)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13580,7 +13680,7 @@ PHP_METHOD(php_wxTreeCtrl, Collapse)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13635,7 +13735,7 @@ PHP_METHOD(php_wxTreeCtrl, CollapseAndReset)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13690,7 +13790,7 @@ PHP_METHOD(php_wxTreeCtrl, Toggle)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13816,7 +13916,7 @@ PHP_METHOD(php_wxTreeCtrl, SelectItem)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13874,7 +13974,7 @@ PHP_METHOD(php_wxTreeCtrl, EnsureVisible)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13929,7 +14029,7 @@ PHP_METHOD(php_wxTreeCtrl, ScrollTo)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -13987,7 +14087,7 @@ PHP_METHOD(php_wxTreeCtrl, SetItemTextColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14004,7 +14104,7 @@ PHP_METHOD(php_wxTreeCtrl, SetItemTextColour)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -14062,7 +14162,7 @@ PHP_METHOD(php_wxTreeCtrl, SetItemBackgroundColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14079,7 +14179,7 @@ PHP_METHOD(php_wxTreeCtrl, SetItemBackgroundColour)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -14135,7 +14235,7 @@ PHP_METHOD(php_wxTreeCtrl, SetItemDropHighlight)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14194,7 +14294,7 @@ PHP_METHOD(php_wxTreeCtrl, SetItemBold)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14254,7 +14354,7 @@ PHP_METHOD(php_wxTreeCtrl, SetItemText)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14309,7 +14409,7 @@ PHP_METHOD(php_wxTreeCtrl, GetItemTextColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14365,7 +14465,7 @@ PHP_METHOD(php_wxTreeCtrl, GetItemBackgroundColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14421,7 +14521,7 @@ PHP_METHOD(php_wxTreeCtrl, SetImageList)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxImageList))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14476,7 +14576,7 @@ PHP_METHOD(php_wxTreeCtrl, SetStateImageList)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxImageList))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14531,7 +14631,7 @@ PHP_METHOD(php_wxTreeCtrl, IsExpanded)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14587,7 +14687,7 @@ PHP_METHOD(php_wxTreeCtrl, IsSelected)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14643,7 +14743,7 @@ PHP_METHOD(php_wxTreeCtrl, IsBold)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14808,7 +14908,7 @@ PHP_METHOD(php_wxTreeCtrl, SetItemHasChildren)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14866,7 +14966,7 @@ PHP_METHOD(php_wxTreeCtrl, IsVisible)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14922,7 +15022,7 @@ PHP_METHOD(php_wxTreeCtrl, ItemHasChildren)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -14979,7 +15079,7 @@ PHP_METHOD(php_wxTreeCtrl, GetChildrenCount)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -15109,7 +15209,7 @@ PHP_METHOD(php_wxTreeCtrl, GetItemParent)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxTreeItemId))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -15255,7 +15355,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -15271,7 +15371,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -15283,7 +15383,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -15295,7 +15395,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -15357,7 +15457,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -15374,7 +15474,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -15391,7 +15491,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -15408,7 +15508,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -15424,7 +15524,7 @@ PHP_METHOD(php_wxCheckListBox, __construct)
 			{
 				id_to_find4 = Z_RESVAL_P(*tmp);
 				_ptrObj4 = zend_list_find(id_to_find4, &rsrc_type);
-				if (!_ptrObj4 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj4 )
 					valid = 0;
 			}
 			else if(_argObj4->type==IS_LONG)
@@ -15644,7 +15744,7 @@ PHP_METHOD(php_wxFrameBase, SetMenuBar)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenuBar))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -15934,7 +16034,7 @@ PHP_METHOD(php_wxListBoxBase, Set)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -16088,7 +16188,7 @@ PHP_METHOD(php_wxListBoxBase, InsertItems)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -16274,7 +16374,7 @@ PHP_METHOD(php_wxIcon, CopyFromBitmap)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -16338,7 +16438,7 @@ PHP_METHOD(php_wxTextCtrl, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -16354,7 +16454,7 @@ PHP_METHOD(php_wxTextCtrl, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -16366,7 +16466,7 @@ PHP_METHOD(php_wxTextCtrl, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -16378,7 +16478,7 @@ PHP_METHOD(php_wxTextCtrl, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -16570,7 +16670,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -16586,7 +16686,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -16598,7 +16698,7 @@ PHP_METHOD(php_wxNotebook, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -16822,7 +16922,7 @@ PHP_METHOD(php_wxNotebook, SetPageSize)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSize))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -16877,7 +16977,7 @@ PHP_METHOD(php_wxNotebook, SetPadding)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSize))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -16932,7 +17032,7 @@ PHP_METHOD(php_wxNotebook, SetTabSize)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSize))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -17101,7 +17201,7 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -17170,7 +17270,7 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -17869,7 +17969,7 @@ PHP_METHOD(php_wxStaticText, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -17885,7 +17985,7 @@ PHP_METHOD(php_wxStaticText, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -17897,7 +17997,7 @@ PHP_METHOD(php_wxStaticText, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -18043,7 +18143,7 @@ PHP_METHOD(php_wxStaticText, SetFont)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxFont))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18108,7 +18208,7 @@ PHP_METHOD(php_wxButton, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18124,7 +18224,7 @@ PHP_METHOD(php_wxButton, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -18136,7 +18236,7 @@ PHP_METHOD(php_wxButton, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -18148,7 +18248,7 @@ PHP_METHOD(php_wxButton, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -18339,7 +18439,7 @@ PHP_METHOD(php_wxButton, SetBackgroundColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18395,7 +18495,7 @@ PHP_METHOD(php_wxButton, SetForegroundColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18457,7 +18557,7 @@ PHP_METHOD(php_wxStaticBox, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18473,7 +18573,7 @@ PHP_METHOD(php_wxStaticBox, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -18485,7 +18585,7 @@ PHP_METHOD(php_wxStaticBox, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -18592,7 +18692,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxStaticBox))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18637,7 +18737,7 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18718,7 +18818,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18734,7 +18834,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -18746,7 +18846,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -18758,7 +18858,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -18820,7 +18920,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -18837,7 +18937,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -18854,7 +18954,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -18871,7 +18971,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -18887,7 +18987,7 @@ PHP_METHOD(php_wxListBox, __construct)
 			{
 				id_to_find4 = Z_RESVAL_P(*tmp);
 				_ptrObj4 = zend_list_find(id_to_find4, &rsrc_type);
-				if (!_ptrObj4 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj4 )
 					valid = 0;
 			}
 			else if(_argObj4->type==IS_LONG)
@@ -19218,7 +19318,7 @@ PHP_METHOD(php_wxFileDialog, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -19234,7 +19334,7 @@ PHP_METHOD(php_wxFileDialog, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -19754,7 +19854,7 @@ PHP_METHOD(php_wxFileDialog, GetPaths)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -19809,7 +19909,7 @@ PHP_METHOD(php_wxFileDialog, GetFilenames)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -19870,7 +19970,7 @@ PHP_METHOD(php_wxDialog, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -19886,7 +19986,7 @@ PHP_METHOD(php_wxDialog, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -19898,7 +19998,7 @@ PHP_METHOD(php_wxDialog, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -20157,7 +20257,7 @@ PHP_METHOD(php_wxMessageDialog, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -20173,7 +20273,7 @@ PHP_METHOD(php_wxMessageDialog, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -20454,7 +20554,7 @@ PHP_METHOD(php_wxListCtrl, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -20470,7 +20570,7 @@ PHP_METHOD(php_wxListCtrl, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -20482,7 +20582,7 @@ PHP_METHOD(php_wxListCtrl, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -20494,7 +20594,7 @@ PHP_METHOD(php_wxListCtrl, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -20620,6 +20720,8 @@ wxString wxListCtrl_php::OnGetItemText(long int arg0 , long int arg1) const{
 	zval retval, funcname;
 	ZVAL_STRING(&funcname, "OnGetItemText", 0);
 	
+	
+	
 		zval argLng0;
 	ZVAL_LONG(&argLng0,arg0);
 	args[0]= &argLng0;
@@ -20630,8 +20732,9 @@ wxString wxListCtrl_php::OnGetItemText(long int arg0 , long int arg1) const{
 	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
 		wxMessageBox(_T("Failed method Call!\n"));
 	}
-	else
-		return wxString(retval.value.str.val,wxConvUTF8);}
+		else{
+		return wxString(Z_STRVAL(retval),wxConvUTF8);	}
+	}
 PHP_METHOD(php_wxListCtrl, OnGetItemText)
 {
 	zval **tmp;
@@ -21182,7 +21285,7 @@ PHP_METHOD(php_wxListCtrl, InsertItem)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxListItem))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -21311,7 +21414,7 @@ PHP_METHOD(php_wxListCtrl, SetTextColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -21411,7 +21514,7 @@ PHP_METHOD(php_wxListCtrl, SetItemBackgroundColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -21467,7 +21570,7 @@ PHP_METHOD(php_wxListCtrl, SetItemTextColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -21529,7 +21632,7 @@ PHP_METHOD(php_wxStaticBitmap, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -21546,7 +21649,7 @@ PHP_METHOD(php_wxStaticBitmap, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -21562,7 +21665,7 @@ PHP_METHOD(php_wxStaticBitmap, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -21574,7 +21677,7 @@ PHP_METHOD(php_wxStaticBitmap, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxSize))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -21647,7 +21750,7 @@ PHP_METHOD(php_wxStaticBitmap, SetBitmap)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -21710,7 +21813,7 @@ PHP_METHOD(php_wxGauge, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -21726,7 +21829,7 @@ PHP_METHOD(php_wxGauge, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -21738,7 +21841,7 @@ PHP_METHOD(php_wxGauge, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -21750,7 +21853,7 @@ PHP_METHOD(php_wxGauge, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -22120,6 +22223,41 @@ PHP_METHOD(php_wxGauge, IsVertical)
 		}
 	}
 }
+PHP_METHOD(php_wxGauge, Pulse)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGauge_php*)_this)->Pulse();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
 void php_wxListEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
@@ -22240,7 +22378,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -22256,7 +22394,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -22268,7 +22406,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -22280,7 +22418,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -22345,7 +22483,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -22362,7 +22500,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -22379,7 +22517,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -22396,7 +22534,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -22412,7 +22550,7 @@ PHP_METHOD(php_wxComboBox, __construct)
 			{
 				id_to_find4 = Z_RESVAL_P(*tmp);
 				_ptrObj4 = zend_list_find(id_to_find4, &rsrc_type);
-				if (!_ptrObj4 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj4 )
 					valid = 0;
 			}
 			else if(_argObj4->type==IS_LONG)
@@ -22866,7 +23004,7 @@ PHP_METHOD(php_wxComboBox, Append)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -22953,7 +23091,7 @@ PHP_METHOD(php_wxPrinter, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPrintDialogData))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23021,7 +23159,7 @@ PHP_METHOD(php_wxPrinter, Print)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23038,7 +23176,7 @@ PHP_METHOD(php_wxPrinter, Print)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPrintout))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -23097,7 +23235,7 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23231,7 +23369,7 @@ PHP_METHOD(php_wxPrintout, SetDC)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxDC))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23261,6 +23399,8 @@ bool wxPrintout_php::OnPrintPage(int arg0){
 	zval retval, funcname;
 	ZVAL_STRING(&funcname, "OnPrintPage", 0);
 	
+	
+	
 		zval argLng0;
 	ZVAL_LONG(&argLng0,arg0);
 	args[0]= &argLng0;
@@ -23268,8 +23408,9 @@ bool wxPrintout_php::OnPrintPage(int arg0){
 	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
 		wxMessageBox(_T("Failed method Call!\n"));
 	}
-	else
-		return Z_BVAL(retval);}
+		else{
+		return Z_BVAL(retval);	}
+	}
 PHP_METHOD(php_wxPrintout, OnPrintPage)
 {
 	zval **tmp;
@@ -23376,7 +23517,7 @@ PHP_METHOD(php_wxDC, SetFont)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxFont))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23574,7 +23715,7 @@ PHP_METHOD(php_wxDC, SetPen)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPen))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23629,7 +23770,7 @@ PHP_METHOD(php_wxDC, SetBrush)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBrush))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23816,7 +23957,7 @@ PHP_METHOD(php_wxDCBase, DrawText)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23892,7 +24033,7 @@ PHP_METHOD(php_wxDCBase, DrawCircle)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23972,7 +24113,7 @@ PHP_METHOD(php_wxDCBase, DrawEllipse)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -23989,7 +24130,7 @@ PHP_METHOD(php_wxDCBase, DrawEllipse)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxSize))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -24024,7 +24165,7 @@ PHP_METHOD(php_wxDCBase, DrawEllipse)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxRect))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24084,7 +24225,7 @@ PHP_METHOD(php_wxDCBase, DrawIcon)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24119,7 +24260,7 @@ PHP_METHOD(php_wxDCBase, DrawIcon)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24136,7 +24277,7 @@ PHP_METHOD(php_wxDCBase, DrawIcon)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -24197,7 +24338,7 @@ PHP_METHOD(php_wxDCBase, DrawBitmap)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24235,7 +24376,7 @@ PHP_METHOD(php_wxDCBase, DrawBitmap)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24252,7 +24393,7 @@ PHP_METHOD(php_wxDCBase, DrawBitmap)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -24316,7 +24457,7 @@ PHP_METHOD(php_wxDCBase, FloodFill)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24355,7 +24496,7 @@ PHP_METHOD(php_wxDCBase, FloodFill)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24372,7 +24513,7 @@ PHP_METHOD(php_wxDCBase, FloodFill)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -24440,7 +24581,7 @@ PHP_METHOD(php_wxDCBase, GradientFillConcentric)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxRect))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24457,7 +24598,7 @@ PHP_METHOD(php_wxDCBase, GradientFillConcentric)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -24474,7 +24615,7 @@ PHP_METHOD(php_wxDCBase, GradientFillConcentric)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxColour))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -24509,7 +24650,7 @@ PHP_METHOD(php_wxDCBase, GradientFillConcentric)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxRect))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24526,7 +24667,7 @@ PHP_METHOD(php_wxDCBase, GradientFillConcentric)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -24543,7 +24684,7 @@ PHP_METHOD(php_wxDCBase, GradientFillConcentric)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxColour))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -24560,7 +24701,7 @@ PHP_METHOD(php_wxDCBase, GradientFillConcentric)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -24640,7 +24781,7 @@ PHP_METHOD(php_wxDCBase, DrawLine)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24657,7 +24798,7 @@ PHP_METHOD(php_wxDCBase, DrawLine)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -24742,7 +24883,7 @@ PHP_METHOD(php_wxDCBase, DrawArc)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24759,7 +24900,7 @@ PHP_METHOD(php_wxDCBase, DrawArc)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -24776,7 +24917,7 @@ PHP_METHOD(php_wxDCBase, DrawArc)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -24853,7 +24994,7 @@ PHP_METHOD(php_wxDCBase, DrawCheckMark)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxRect))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24928,7 +25069,7 @@ PHP_METHOD(php_wxDCBase, DrawPoint)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -24986,7 +25127,7 @@ PHP_METHOD(php_wxDCBase, DrawLines)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -25072,7 +25213,7 @@ PHP_METHOD(php_wxDCBase, DrawRectangle)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -25089,7 +25230,7 @@ PHP_METHOD(php_wxDCBase, DrawRectangle)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxSize))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -25124,7 +25265,7 @@ PHP_METHOD(php_wxDCBase, DrawRectangle)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxRect))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -25203,7 +25344,7 @@ PHP_METHOD(php_wxDCBase, DrawSpline)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -25581,7 +25722,7 @@ PHP_METHOD(php_wxPen, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -25724,7 +25865,7 @@ PHP_METHOD(php_wxPen, SetColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -25802,7 +25943,7 @@ PHP_METHOD(php_wxBrush, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -25850,7 +25991,7 @@ PHP_METHOD(php_wxBrush, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -25915,7 +26056,7 @@ PHP_METHOD(php_wxBrush, SetColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -26006,7 +26147,7 @@ PHP_METHOD(php_wxBrush, SetStipple)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -26068,7 +26209,7 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -26085,7 +26226,7 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -26101,7 +26242,7 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -26113,7 +26254,7 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxSize))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -26224,7 +26365,7 @@ PHP_METHOD(php_wxCalendarCtrl, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -26240,7 +26381,7 @@ PHP_METHOD(php_wxCalendarCtrl, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -26252,7 +26393,7 @@ PHP_METHOD(php_wxCalendarCtrl, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -26717,7 +26858,7 @@ PHP_METHOD(php_wxCalendarCtrl, SetHeaderColours)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -26734,7 +26875,7 @@ PHP_METHOD(php_wxCalendarCtrl, SetHeaderColours)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -26792,7 +26933,7 @@ PHP_METHOD(php_wxCalendarCtrl, SetHighlightColours)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -26809,7 +26950,7 @@ PHP_METHOD(php_wxCalendarCtrl, SetHighlightColours)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -26867,7 +27008,7 @@ PHP_METHOD(php_wxCalendarCtrl, SetHolidayColours)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -26884,7 +27025,7 @@ PHP_METHOD(php_wxCalendarCtrl, SetHolidayColours)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -27129,7 +27270,7 @@ PHP_METHOD(php_wxCalendarCtrl, SetAttr)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxCalendarDateAttr))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -27366,7 +27507,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -27382,7 +27523,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -27394,7 +27535,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxColour))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -27406,7 +27547,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxFont))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -27458,7 +27599,7 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -27522,7 +27663,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetTextColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -27577,7 +27718,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBackgroundColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -27632,7 +27773,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBorderColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -27687,7 +27828,7 @@ PHP_METHOD(php_wxCalendarDateAttr, SetFont)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxFont))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -28233,7 +28374,7 @@ PHP_METHOD(php_wxTimer, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxMenu && rsrc_type != le_wxValidator && rsrc_type != le_wxTaskBarIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxMenu && rsrc_type != le_wxValidator && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxAuiManager))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -28434,12 +28575,6 @@ void wxEvtHandler_php::onEvent(wxEvent& evnt)
 	if(0)
 	{}
 	
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxEvent")))
-	{
-		object_init_ex(arg[0],php_wxEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxEvent));
-	}
-	
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(),wxT("wxCommandEvent")))
 	{
 		object_init_ex(arg[0],php_wxCommandEvent_entry);
@@ -28519,7 +28654,7 @@ PHP_METHOD(php_wxEvtHandler, Connect)
         {
                 zend_hash_index_find(HASH_OF(fc),0,(void**)&fc_obj);
                 zend_hash_index_find(HASH_OF(fc),1,(void**)&fc_name);
-                ZVAL_ADDREF(*fc_obj);
+                Z_ADDREF_P(*fc_obj);
 
 
                 ct = (*fc_name)->value.str.val;
@@ -28768,7 +28903,7 @@ PHP_METHOD(php_wxSocketClient, Connect)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxSockAddress && rsrc_type != le_wxIPV4address))
+				if (!_ptrObj0 || (rsrc_type != le_wxIPV4address))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -28869,7 +29004,7 @@ PHP_METHOD(php_wxSocketBase, SetEventHandler)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxMenu && rsrc_type != le_wxValidator && rsrc_type != le_wxTaskBarIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxWindow && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxMenu && rsrc_type != le_wxValidator && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxAuiManager))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -29117,7 +29252,7 @@ PHP_METHOD(php_wxCheckBox, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -29133,7 +29268,7 @@ PHP_METHOD(php_wxCheckBox, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -29145,7 +29280,7 @@ PHP_METHOD(php_wxCheckBox, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -29157,7 +29292,7 @@ PHP_METHOD(php_wxCheckBox, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -29312,7 +29447,7 @@ PHP_METHOD(php_wxDirDialog, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -29328,7 +29463,7 @@ PHP_METHOD(php_wxDirDialog, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -29340,7 +29475,7 @@ PHP_METHOD(php_wxDirDialog, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -29538,7 +29673,7 @@ PHP_METHOD(php_wxBitmapButton, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -29555,7 +29690,7 @@ PHP_METHOD(php_wxBitmapButton, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -29571,7 +29706,7 @@ PHP_METHOD(php_wxBitmapButton, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -29583,7 +29718,7 @@ PHP_METHOD(php_wxBitmapButton, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxSize))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -29595,7 +29730,7 @@ PHP_METHOD(php_wxBitmapButton, __construct)
 			{
 				id_to_find4 = Z_RESVAL_P(*tmp);
 				_ptrObj4 = zend_list_find(id_to_find4, &rsrc_type);
-				if (!_ptrObj4 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj4 )
 					valid = 0;
 			}
 			else if(_argObj4->type==IS_LONG)
@@ -29680,7 +29815,7 @@ PHP_METHOD(php_wxToggleButton, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -29696,7 +29831,7 @@ PHP_METHOD(php_wxToggleButton, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -29708,7 +29843,7 @@ PHP_METHOD(php_wxToggleButton, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -29720,7 +29855,7 @@ PHP_METHOD(php_wxToggleButton, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -29881,7 +30016,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -29897,7 +30032,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -29909,7 +30044,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -29921,7 +30056,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -29983,7 +30118,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -30000,7 +30135,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -30017,7 +30152,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -30034,7 +30169,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -30050,7 +30185,7 @@ PHP_METHOD(php_wxChoice, __construct)
 			{
 				id_to_find4 = Z_RESVAL_P(*tmp);
 				_ptrObj4 = zend_list_find(id_to_find4, &rsrc_type);
-				if (!_ptrObj4 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj4 )
 					valid = 0;
 			}
 			else if(_argObj4->type==IS_LONG)
@@ -30473,7 +30608,7 @@ PHP_METHOD(php_wxChoice, Append)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxArrayString))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -30571,7 +30706,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -30587,7 +30722,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -30599,7 +30734,7 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -31689,7 +31824,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -31701,7 +31836,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -31759,7 +31894,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -31815,7 +31950,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -32095,7 +32230,7 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -32556,7 +32691,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -32612,7 +32747,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -33000,7 +33135,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -33056,7 +33191,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -33183,7 +33318,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -33532,7 +33667,7 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -33625,7 +33760,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -33681,7 +33816,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -37072,7 +37207,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -37127,7 +37262,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -37182,7 +37317,7 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -38951,7 +39086,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -39007,7 +39142,7 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxColour))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -41244,7 +41379,7 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxFont))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -41668,7 +41803,7 @@ PHP_METHOD(php_wxImageList, Add)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -41704,7 +41839,7 @@ PHP_METHOD(php_wxImageList, Add)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -41721,7 +41856,7 @@ PHP_METHOD(php_wxImageList, Add)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -41757,7 +41892,7 @@ PHP_METHOD(php_wxImageList, Add)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -41774,7 +41909,7 @@ PHP_METHOD(php_wxImageList, Add)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxColour))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -41908,7 +42043,7 @@ PHP_METHOD(php_wxImageList, Replace)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -41944,7 +42079,7 @@ PHP_METHOD(php_wxImageList, Replace)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -41961,7 +42096,7 @@ PHP_METHOD(php_wxImageList, Replace)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxBitmap && rsrc_type != le_wxIcon))
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -42131,7 +42266,7 @@ PHP_METHOD(php_wxXmlResource, LoadToolBar)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -42192,7 +42327,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -42228,7 +42363,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog))
+				if (!_ptrObj0 || (rsrc_type != le_wxFileDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -42245,7 +42380,7 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -42306,7 +42441,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -42342,7 +42477,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxPanel))
+				if (!_ptrObj0 || (rsrc_type != le_wxGrid))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -42359,7 +42494,7 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -42420,7 +42555,7 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -42456,7 +42591,7 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen))
+				if (!_ptrObj0 || (rsrc_type != le_wxSplashScreen))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -42473,7 +42608,7 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -42870,7 +43005,7 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -43600,7 +43735,7 @@ PHP_METHOD(php_wxTreeCtrlBase, AssignImageList)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxImageList))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -43667,7 +43802,7 @@ PHP_METHOD(php_wxRadioButton, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -43683,7 +43818,7 @@ PHP_METHOD(php_wxRadioButton, __construct)
 			{
 				id_to_find1 = Z_RESVAL_P(*tmp);
 				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
-				if (!_ptrObj1 || (rsrc_type != le_wxPoint))
+				if (!_ptrObj1 )
 					valid = 0;
 			}
 			else if(_argObj1->type==IS_LONG)
@@ -43695,7 +43830,7 @@ PHP_METHOD(php_wxRadioButton, __construct)
 			{
 				id_to_find2 = Z_RESVAL_P(*tmp);
 				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
-				if (!_ptrObj2 || (rsrc_type != le_wxSize))
+				if (!_ptrObj2 )
 					valid = 0;
 			}
 			else if(_argObj2->type==IS_LONG)
@@ -43707,7 +43842,7 @@ PHP_METHOD(php_wxRadioButton, __construct)
 			{
 				id_to_find3 = Z_RESVAL_P(*tmp);
 				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
-				if (!_ptrObj3 || (rsrc_type != le_wxValidator))
+				if (!_ptrObj3 )
 					valid = 0;
 			}
 			else if(_argObj3->type==IS_LONG)
@@ -43954,7 +44089,7 @@ PHP_METHOD(php_wxListItem, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxListItem))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -44444,7 +44579,7 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton))
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -44796,7 +44931,7 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -44927,7 +45062,7 @@ PHP_METHOD(php_wxTaskBarIcon, PopupMenu)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxMenu))
+				if (!_ptrObj0 )
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -44986,6 +45121,13146 @@ PHP_METHOD(php_wxTaskBarIcon, IsOk)
 					break;
 			}
 			RETURN_BOOL(ret0)			
+		}
+	}
+}
+void php_wxAuiManager_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxAuiManager, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|z!l!", &_argObj0 , &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid && _argObj0)
+		{
+			if (_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+		}
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					_this = new wxAuiManager_php((wxWindow*) _ptrObj0 , (unsigned int)_argLong0);
+					break;
+				case 1:
+					_this = new wxAuiManager_php((wxWindow*) _ptrObj0);
+					break;
+				case 0:
+					_this = new wxAuiManager_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiManager);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiManager_php*) _this)->evnArray);
+			array_init(((wxAuiManager_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiManager_php*) _this)->phpObj);
+			*((wxAuiManager_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiManager_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiManager_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, AddPane)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!", &_argObj0 , &_argObj1 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxAuiManager_php*)_this)->AddPane((wxWindow*) _ptrObj0 , *(wxAuiPaneInfo *) _ptrObj1);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!z!", &_argObj0 , &_argObj1 , &_argObj2 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret1;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					ret1 =  ((wxAuiManager_php*)_this)->AddPane((wxWindow*) _ptrObj0 , *(wxAuiPaneInfo *) _ptrObj1 , *(wxPoint *) _ptrObj2);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret1)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!|l!s!", &_argObj0 , &_argLong0 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret2;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					ret2 =  ((wxAuiManager_php*)_this)->AddPane((wxWindow*) _ptrObj0 , (int)_argLong0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				case 2:
+					ret2 =  ((wxAuiManager_php*)_this)->AddPane((wxWindow*) _ptrObj0 , (int)_argLong0);
+					break;
+				case 1:
+					ret2 =  ((wxAuiManager_php*)_this)->AddPane((wxWindow*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret2)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, Update)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiManager_php*)_this)->Update();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, DetachPane)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiManager_php*)_this)->DetachPane((wxWindow*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, GetAllPanes)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiManager_php*)_this)->GetAllPanes();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, GetArtProvider)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxAuiDockArt* ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiManager_php*)_this)->GetArtProvider();
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxAuiDockArt_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret0, le_wxAuiDockArt));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, GetDockSizeConstraint)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!", &_argObj0 , &_argObj1 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiManager_php*)_this)->GetDockSizeConstraint((double*) _ptrObj0 , (double*) _ptrObj1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, GetFlags)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			unsigned int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiManager_php*)_this)->GetFlags();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, GetManagedWindow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxWindow* ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiManager_php*)_this)->GetManagedWindow();
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxWindow_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret0, le_wxWindow));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, GetManager)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			wxAuiManager* ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiManager_php*)_this)->GetManager((wxWindow*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxAuiManager_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret0, le_wxAuiManager));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, GetPane)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiManager_php*)_this)->GetPane((wxWindow*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiManager_php*)_this)->GetPane(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, HideHint)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiManager_php*)_this)->HideHint();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& arg0 , const wxAuiPaneInfo& arg1){
+	zval *args[2];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "ProcessDockResult", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(const long int) &arg1);
+	args[1]= &argLng1;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_BVAL(retval);	}
+	}
+PHP_METHOD(php_wxAuiManager, ProcessDockResult)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!", &_argObj0 , &_argObj1 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxAuiManager_php*)_this)->ProcessDockResult(*(wxAuiPaneInfo *) _ptrObj0 , *(wxAuiPaneInfo *) _ptrObj1);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, SavePaneInfo)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			wxString ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiManager_php*)_this)->SavePaneInfo(*(wxAuiPaneInfo *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, SavePerspective)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxString ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiManager_php*)_this)->SavePerspective();
+					break;
+				default:
+					break;
+			}
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, SetArtProvider)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxAuiDefaultDockArt))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiManager_php*)_this)->SetArtProvider((wxAuiDockArt*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, SetDockSizeConstraint)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiManager_php*)_this)->SetDockSizeConstraint((double)_argLong0 , (double)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, SetFlags)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiManager_php*)_this)->SetFlags((unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, SetManagedWindow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiManager_php*)_this)->SetManagedWindow((wxWindow*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, ShowHint)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiManager_php*)_this)->ShowHint(*(wxRect *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, UnInit)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiManager_php*)_this)->UnInit();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, InsertPane)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!|l!", &_argObj0 , &_argObj1 , &_argLong0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					ret0 =  ((wxAuiManager_php*)_this)->InsertPane((wxWindow*) _ptrObj0 , *(wxAuiPaneInfo *) _ptrObj1 , (int)_argLong0);
+					break;
+				case 2:
+					ret0 =  ((wxAuiManager_php*)_this)->InsertPane((wxWindow*) _ptrObj0 , *(wxAuiPaneInfo *) _ptrObj1);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiManager, LoadPerspective)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!|b!", &_argStr0 , &_argStr0_len , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxAuiManager_php*)_this)->LoadPerspective(wxString(_argStr0, wxConvUTF8) , _argBool0);
+					break;
+				case 1:
+					ret0 =  ((wxAuiManager_php*)_this)->LoadPerspective(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+void php_wxAuiDockArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxAuiDockArt, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxAuiDefaultDockArt))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					_this = new wxAuiDockArt_php(*(wxAuiDockArt *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiDockArt);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiDockArt_php*) _this)->evnArray);
+			array_init(((wxAuiDockArt_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiDockArt_php*) _this)->phpObj);
+			*((wxAuiDockArt_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiDockArt_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiDockArt_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxAuiDockArt_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiDockArt);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiDockArt_php*) _this)->evnArray);
+			array_init(((wxAuiDockArt_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiDockArt_php*) _this)->phpObj);
+			*((wxAuiDockArt_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiDockArt_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiDockArt_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+void wxAuiDockArt_php::SetFont(int arg0 , const wxFont& arg1){
+	zval *args[2];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetFont", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(const long int) &arg1);
+	args[1]= &argLng1;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, SetFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!z!", &_argLong0 , &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiDockArt_php*)_this)->SetFont((int)_argLong0 , *(wxFont *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiDockArt_php::SetColour(int arg0 , const wxColour& arg1){
+	zval *args[2];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetColour", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(const long int) &arg1);
+	args[1]= &argLng1;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, SetColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!z!", &_argLong0 , &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiDockArt_php*)_this)->SetColour((int)_argLong0 , *(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiDockArt, GetColor)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxColour ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiDockArt_php*)_this)->GetColor((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			void* ptr = safe_emalloc(1,sizeof(wxColour),0);memcpy(ptr,&ret0,sizeof(wxColour));object_init_ex(return_value,php_wxColour_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiDockArt, SetColor)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!z!", &_argLong0 , &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiDockArt_php*)_this)->SetColor((int)_argLong0 , *(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiDockArt_php::DrawBackground(wxDC& arg0 , wxWindow* arg1 , int arg2 , const wxRect& arg3){
+	zval *args[4];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawBackground", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,(const long int) &arg3);
+	args[3]= &argLng3;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 4, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, DrawBackground)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!l!z!", &_argObj0 , &_argObj1 , &_argLong0 , &_argObj2 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 4:
+					 ((wxAuiDockArt_php*)_this)->DrawBackground(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , (int)_argLong0 , *(wxRect *) _ptrObj2);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiDockArt_php::DrawBorder(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2 , wxAuiPaneInfo& arg3){
+	zval *args[4];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawBorder", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,(const long int) &arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,(long int) &arg3);
+	args[3]= &argLng3;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 4, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, DrawBorder)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	void *_ptrObj3 = 0;
+	zval *_argObj3 = 0;
+	int id_to_find3;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!z!z!", &_argObj0 , &_argObj1 , &_argObj2 , &_argObj3 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj3)
+		if (valid) 
+		{
+			if(_argObj3->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find3 = Z_RESVAL_P(*tmp);
+				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
+				if (!_ptrObj3 )
+					valid = 0;
+			}
+			else if(_argObj3->type==IS_LONG)
+				_ptrObj3= (void *)_argObj3->value.lval;
+			else if(_argObj3->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 4:
+					 ((wxAuiDockArt_php*)_this)->DrawBorder(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , *(wxRect *) _ptrObj2 , *(wxAuiPaneInfo *) _ptrObj3);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiDockArt_php::DrawGripper(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2 , wxAuiPaneInfo& arg3){
+	zval *args[4];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawGripper", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,(const long int) &arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,(long int) &arg3);
+	args[3]= &argLng3;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 4, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, DrawGripper)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	void *_ptrObj3 = 0;
+	zval *_argObj3 = 0;
+	int id_to_find3;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!z!z!", &_argObj0 , &_argObj1 , &_argObj2 , &_argObj3 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj3)
+		if (valid) 
+		{
+			if(_argObj3->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find3 = Z_RESVAL_P(*tmp);
+				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
+				if (!_ptrObj3 )
+					valid = 0;
+			}
+			else if(_argObj3->type==IS_LONG)
+				_ptrObj3= (void *)_argObj3->value.lval;
+			else if(_argObj3->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 4:
+					 ((wxAuiDockArt_php*)_this)->DrawGripper(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , *(wxRect *) _ptrObj2 , *(wxAuiPaneInfo *) _ptrObj3);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiDockArt_php::DrawPaneButton(wxDC& arg0 , wxWindow* arg1 , int arg2 , int arg3 , const wxRect& arg4 , wxAuiPaneInfo& arg5){
+	zval *args[6];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawPaneButton", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,arg3);
+	args[3]= &argLng3;
+		zval argLng4;
+	ZVAL_LONG(&argLng4,(const long int) &arg4);
+	args[4]= &argLng4;
+		zval argLng5;
+	ZVAL_LONG(&argLng5,(long int) &arg5);
+	args[5]= &argLng5;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 6, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, DrawPaneButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	void *_ptrObj3 = 0;
+	zval *_argObj3 = 0;
+	int id_to_find3;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!l!l!z!z!", &_argObj0 , &_argObj1 , &_argLong0 , &_argLong1 , &_argObj2 , &_argObj3 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj3)
+		if (valid) 
+		{
+			if(_argObj3->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find3 = Z_RESVAL_P(*tmp);
+				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
+				if (!_ptrObj3 )
+					valid = 0;
+			}
+			else if(_argObj3->type==IS_LONG)
+				_ptrObj3= (void *)_argObj3->value.lval;
+			else if(_argObj3->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 6:
+					 ((wxAuiDockArt_php*)_this)->DrawPaneButton(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , (int)_argLong0 , (int)_argLong1 , *(wxRect *) _ptrObj2 , *(wxAuiPaneInfo *) _ptrObj3);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiDockArt_php::DrawSash(wxDC& arg0 , wxWindow* arg1 , int arg2 , const wxRect& arg3){
+	zval *args[4];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawSash", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,(const long int) &arg3);
+	args[3]= &argLng3;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 4, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, DrawSash)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!l!z!", &_argObj0 , &_argObj1 , &_argLong0 , &_argObj2 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 4:
+					 ((wxAuiDockArt_php*)_this)->DrawSash(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , (int)_argLong0 , *(wxRect *) _ptrObj2);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+int wxAuiDockArt_php::GetMetric(int arg0){
+	zval *args[1];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "GetMetric", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_DVAL(retval);	}
+	}
+PHP_METHOD(php_wxAuiDockArt, GetMetric)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiDockArt_php*)_this)->GetMetric((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+void wxAuiDockArt_php::SetMetric(int arg0 , int arg1){
+	zval *args[2];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetMetric", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,arg1);
+	args[1]= &argLng1;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, SetMetric)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiDockArt_php*)_this)->SetMetric((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiDockArt_php::DrawCaption(wxDC& arg0 , wxWindow* arg1 , const wxString& arg2 , const wxRect& arg3 , wxAuiPaneInfo& arg4){
+	zval *args[5];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawCaption", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,(const long int) &arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,(const long int) &arg3);
+	args[3]= &argLng3;
+		zval argLng4;
+	ZVAL_LONG(&argLng4,(long int) &arg4);
+	args[4]= &argLng4;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 5, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiDockArt, DrawCaption)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	void *_ptrObj3 = 0;
+	zval *_argObj3 = 0;
+	int id_to_find3;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!s!z!z!", &_argObj0 , &_argObj1 , &_argStr0 , &_argStr0_len , &_argObj2 , &_argObj3 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj3)
+		if (valid) 
+		{
+			if(_argObj3->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find3 = Z_RESVAL_P(*tmp);
+				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
+				if (!_ptrObj3 )
+					valid = 0;
+			}
+			else if(_argObj3->type==IS_LONG)
+				_ptrObj3= (void *)_argObj3->value.lval;
+			else if(_argObj3->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 5:
+					 ((wxAuiDockArt_php*)_this)->DrawCaption(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , wxString(_argStr0, wxConvUTF8) , *(wxRect *) _ptrObj2 , *(wxAuiPaneInfo *) _ptrObj3);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+wxColour wxAuiDockArt_php::GetColour(int arg0){
+	zval *args[1];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "GetColour", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		wxColour* return_var = (wxColour*) zend_object_store_get_object(&retval TSRMLS_CC);return *return_var;	}
+	}
+PHP_METHOD(php_wxAuiDockArt, GetColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxColour ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiDockArt_php*)_this)->GetColour((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			void* ptr = safe_emalloc(1,sizeof(wxColour),0);memcpy(ptr,&ret0,sizeof(wxColour));object_init_ex(return_value,php_wxColour_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));return;			
+		}
+	}
+}
+wxFont wxAuiDockArt_php::GetFont(int arg0){
+	zval *args[1];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "GetFont", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		wxFont* return_var = (wxFont*) zend_object_store_get_object(&retval TSRMLS_CC);return *return_var;	}
+	}
+PHP_METHOD(php_wxAuiDockArt, GetFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxFont ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiDockArt_php*)_this)->GetFont((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			void* ptr = safe_emalloc(1,sizeof(wxFont),0);memcpy(ptr,&ret0,sizeof(wxFont));object_init_ex(return_value,php_wxFont_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxFont));return;			
+		}
+	}
+}
+void php_wxAuiPaneInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxAuiPaneInfo, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxAuiPaneInfo_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiPaneInfo);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiPaneInfo_php*) _this)->evnArray);
+			array_init(((wxAuiPaneInfo_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiPaneInfo_php*) _this)->phpObj);
+			*((wxAuiPaneInfo_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiPaneInfo_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiPaneInfo_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					_this = new wxAuiPaneInfo_php(*(wxAuiPaneInfo *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiPaneInfo);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiPaneInfo_php*) _this)->evnArray);
+			array_init(((wxAuiPaneInfo_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiPaneInfo_php*) _this)->phpObj);
+			*((wxAuiPaneInfo_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiPaneInfo_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiPaneInfo_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, BestSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->BestSize(*(wxSize *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiPaneInfo_php*)_this)->BestSize((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Bottom)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Bottom();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, BottomDockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->BottomDockable(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->BottomDockable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Caption)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Caption(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, CaptionVisible)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->CaptionVisible(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->CaptionVisible();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Centre)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Centre();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, CentrePane)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->CentrePane();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, CloseButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->CloseButton(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->CloseButton();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, DefaultPane)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->DefaultPane();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, DestroyOnClose)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->DestroyOnClose(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->DestroyOnClose();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Direction)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Direction((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Dock)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Dock();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, DockFixed)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->DockFixed(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->DockFixed();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Dockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Dockable(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Dockable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Fixed)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Fixed();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Float)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Float();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Floatable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Floatable(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Floatable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->FloatingPosition(*(wxPoint *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiPaneInfo_php*)_this)->FloatingPosition((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->FloatingSize(*(wxSize *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiPaneInfo_php*)_this)->FloatingSize((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Gripper)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Gripper(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Gripper();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, GripperTop)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->GripperTop(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->GripperTop();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasBorder)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasBorder();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasCaption)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasCaption();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasCloseButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasCloseButton();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasFlag)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasFlag((unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasGripper)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasGripper();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasGripperTop)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasGripperTop();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasMaximizeButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasMaximizeButton();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasMinimizeButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasMinimizeButton();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, HasPinButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->HasPinButton();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Hide)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Hide();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsBottomDockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsBottomDockable();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsDocked)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsDocked();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsFixed)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsFixed();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsFloatable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsFloatable();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsFloating)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsFloating();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsLeftDockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsLeftDockable();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsMovable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsMovable();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsOk)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsOk();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsResizable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsResizable();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsRightDockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsRightDockable();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsShown)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsShown();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsToolbar)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsToolbar();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsTopDockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsTopDockable();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Layer)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Layer((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Left)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Left();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, LeftDockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->LeftDockable(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->LeftDockable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->MaxSize(*(wxSize *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiPaneInfo_php*)_this)->MaxSize((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Maximize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Maximize();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, MaximizeButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->MaximizeButton(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->MaximizeButton();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, MinSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->MinSize(*(wxSize *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiPaneInfo_php*)_this)->MinSize((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, MinimizeButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->MinimizeButton(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->MinimizeButton();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Movable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Movable(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Movable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Name)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Name(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, PaneBorder)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->PaneBorder(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->PaneBorder();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, PinButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->PinButton(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->PinButton();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Position)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Position((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Resizable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Resizable(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Resizable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Right)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Right();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, RightDockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->RightDockable(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->RightDockable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Row)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Row((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, SetFlag)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!b!", &_argLong0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiPaneInfo_php*)_this)->SetFlag((unsigned int)_argLong0 , _argBool0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Show)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Show(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Show();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, ToolbarPane)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->ToolbarPane();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Top)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Top();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, TopDockable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->TopDockable(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->TopDockable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Window)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiPaneInfo_php*)_this)->Window((wxWindow*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Center)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Center();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, CenterPane)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->CenterPane();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, IsMaximized)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiPaneInfo_php*)_this)->IsMaximized();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiPaneInfo, Restore)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiPaneInfo_php*)_this)->Restore();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void php_wxAuiNotebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxAuiNotebook, AddPage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!s!|b!z!", &_argObj0 , &_argStr0 , &_argStr0_len , &_argBool0 , &_argObj1 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid && _argObj1)
+		{
+			if (_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+		}
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 4:
+					ret0 =  ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8) , _argBool0 , *(wxBitmap *) _ptrObj1);
+					break;
+				case 3:
+					ret0 =  ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8) , _argBool0);
+					break;
+				case 2:
+					ret0 =  ((wxAuiNotebook_php*)_this)->AddPage((wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, AdvanceSelection)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiNotebook_php*)_this)->AdvanceSelection(_argBool0);
+					break;
+				case 0:
+					 ((wxAuiNotebook_php*)_this)->AdvanceSelection();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, DeletePage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiNotebook_php*)_this)->DeletePage((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetArtProvider)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxAuiTabArt* ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiNotebook_php*)_this)->GetArtProvider();
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxAuiTabArt_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret0, le_wxAuiTabArt));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetHeightForPageHeight)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiNotebook_php*)_this)->GetHeightForPageHeight((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetPage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxWindow* ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiNotebook_php*)_this)->GetPage((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxWindow_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret0, le_wxWindow));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetPageBitmap)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxBitmap ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiNotebook_php*)_this)->GetPageBitmap((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			void* ptr = safe_emalloc(1,sizeof(wxBitmap),0);memcpy(ptr,&ret0,sizeof(wxBitmap));object_init_ex(return_value,php_wxBitmap_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxBitmap));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetPageCount)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxAuiNotebook_php*)_this)->GetPageCount();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetPageIndex)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiNotebook_php*)_this)->GetPageIndex((wxWindow*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetPageText)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxString ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiNotebook_php*)_this)->GetPageText((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetSelection)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiNotebook_php*)_this)->GetSelection();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, GetTabCtrlHeight)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiNotebook_php*)_this)->GetTabCtrlHeight();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, InsertPage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!z!s!|b!z!", &_argLong0 , &_argObj0 , &_argStr0 , &_argStr0_len , &_argBool0 , &_argObj1 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid && _argObj1)
+		{
+			if (_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxIcon))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+		}
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 5:
+					ret0 =  ((wxAuiNotebook_php*)_this)->InsertPage((long unsigned int)_argLong0 , (wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8) , _argBool0 , *(wxBitmap *) _ptrObj1);
+					break;
+				case 4:
+					ret0 =  ((wxAuiNotebook_php*)_this)->InsertPage((long unsigned int)_argLong0 , (wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8) , _argBool0);
+					break;
+				case 3:
+					ret0 =  ((wxAuiNotebook_php*)_this)->InsertPage((long unsigned int)_argLong0 , (wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, RemovePage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiNotebook_php*)_this)->RemovePage((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetArtProvider)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiNotebook_php*)_this)->SetArtProvider((wxAuiTabArt*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxAuiNotebook_php*)_this)->SetFont(*(wxFont *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetMeasuringFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiNotebook_php*)_this)->SetMeasuringFont(*(wxFont *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetNormalFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiNotebook_php*)_this)->SetNormalFont(*(wxFont *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetPageBitmap)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!z!", &_argLong0 , &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxIcon))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxAuiNotebook_php*)_this)->SetPageBitmap((long unsigned int)_argLong0 , *(wxBitmap *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetPageText)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!s!", &_argLong0 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxAuiNotebook_php*)_this)->SetPageText((long unsigned int)_argLong0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetSelectedFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiNotebook_php*)_this)->SetSelectedFont(*(wxFont *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetSelection)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiNotebook_php*)_this)->SetSelection((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetTabCtrlHeight)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiNotebook_php*)_this)->SetTabCtrlHeight((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, SetUniformBitmapSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiNotebook_php*)_this)->SetUniformBitmapSize(*(wxSize *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, ShowWindowMenu)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiNotebook_php*)_this)->ShowWindowMenu();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxAuiNotebook, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	long _argLong0;
+	long _argLong1;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!|l!z!z!l!", &_argObj0 , &_argLong0 , &_argObj1 , &_argObj2 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid && _argObj1)
+		{
+			if (_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+		}
+		if(valid && _argObj2)
+		{
+			if (_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+		}
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 5:
+					_this = new wxAuiNotebook_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1 , *(wxSize *) _ptrObj2 , (long int)_argLong1);
+					break;
+				case 4:
+					_this = new wxAuiNotebook_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1 , *(wxSize *) _ptrObj2);
+					break;
+				case 3:
+					_this = new wxAuiNotebook_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1);
+					break;
+				case 2:
+					_this = new wxAuiNotebook_php((wxWindow*) _ptrObj0 , (int)_argLong0);
+					break;
+				case 1:
+					_this = new wxAuiNotebook_php((wxWindow*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiNotebook);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiNotebook_php*) _this)->evnArray);
+			array_init(((wxAuiNotebook_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiNotebook_php*) _this)->phpObj);
+			*((wxAuiNotebook_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiNotebook_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiNotebook_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxAuiNotebook_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiNotebook);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiNotebook_php*) _this)->evnArray);
+			array_init(((wxAuiNotebook_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiNotebook_php*) _this)->phpObj);
+			*((wxAuiNotebook_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiNotebook_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiNotebook_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+void php_wxAuiDefaultDockArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxAuiDefaultDockArt, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					_this = new wxAuiDefaultDockArt_php(*(wxAuiDefaultDockArt *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiDefaultDockArt);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiDefaultDockArt_php*) _this)->evnArray);
+			array_init(((wxAuiDefaultDockArt_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiDefaultDockArt_php*) _this)->phpObj);
+			*((wxAuiDefaultDockArt_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiDefaultDockArt_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiDefaultDockArt_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxAuiDefaultDockArt_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiDefaultDockArt);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiDefaultDockArt_php*) _this)->evnArray);
+			array_init(((wxAuiDefaultDockArt_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiDefaultDockArt_php*) _this)->phpObj);
+			*((wxAuiDefaultDockArt_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiDefaultDockArt_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiDefaultDockArt_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+void php_wxAuiMDIParentFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+void php_wxAuiTabArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxAuiTabArt, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					_this = new wxAuiTabArt_php(*(wxAuiTabArt *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiTabArt);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiTabArt_php*) _this)->evnArray);
+			array_init(((wxAuiTabArt_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiTabArt_php*) _this)->phpObj);
+			*((wxAuiTabArt_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiTabArt_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiTabArt_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxAuiTabArt_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxAuiTabArt);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxAuiTabArt_php*) _this)->evnArray);
+			array_init(((wxAuiTabArt_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxAuiTabArt_php*) _this)->phpObj);
+			*((wxAuiTabArt_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxAuiTabArt_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxAuiTabArt_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+void wxAuiTabArt_php::DrawBackground(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2){
+	zval *args[3];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawBackground", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,(const long int) &arg2);
+	args[2]= &argLng2;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 3, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiTabArt, DrawBackground)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!z!", &_argObj0 , &_argObj1 , &_argObj2 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					 ((wxAuiTabArt_php*)_this)->DrawBackground(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , *(wxRect *) _ptrObj2);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiTabArt_php::DrawButton(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2 , int arg3 , int arg4 , int arg5 , wxRect* arg6){
+	zval *args[7];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawButton", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,(const long int) &arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,arg3);
+	args[3]= &argLng3;
+		zval argLng4;
+	ZVAL_LONG(&argLng4,arg4);
+	args[4]= &argLng4;
+		zval argLng5;
+	ZVAL_LONG(&argLng5,arg5);
+	args[5]= &argLng5;
+		zval argLng6;
+	ZVAL_LONG(&argLng6,(long int) arg6);
+	args[6]= &argLng6;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 7, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiTabArt, DrawButton)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	long _argLong2;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	void *_ptrObj3 = 0;
+	zval *_argObj3 = 0;
+	int id_to_find3;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!z!l!l!l!z!", &_argObj0 , &_argObj1 , &_argObj2 , &_argLong0 , &_argLong1 , &_argLong2 , &_argObj3 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj3)
+		if (valid) 
+		{
+			if(_argObj3->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find3 = Z_RESVAL_P(*tmp);
+				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
+				if (!_ptrObj3 )
+					valid = 0;
+			}
+			else if(_argObj3->type==IS_LONG)
+				_ptrObj3= (void *)_argObj3->value.lval;
+			else if(_argObj3->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 7:
+					 ((wxAuiTabArt_php*)_this)->DrawButton(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , *(wxRect *) _ptrObj2 , (int)_argLong0 , (int)_argLong1 , (int)_argLong2 , (wxRect*) _ptrObj3);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiTabArt_php::DrawTab(wxDC& arg0 , wxWindow* arg1 , const wxAuiNotebookPage& arg2 , const wxRect& arg3 , int arg4 , wxRect* arg5 , wxRect* arg6 , int* arg7){
+	zval *args[8];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DrawTab", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,(const long int) &arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,(const long int) &arg3);
+	args[3]= &argLng3;
+		zval argLng4;
+	ZVAL_LONG(&argLng4,arg4);
+	args[4]= &argLng4;
+		zval argLng5;
+	ZVAL_LONG(&argLng5,(long int) arg5);
+	args[5]= &argLng5;
+		zval argLng6;
+	ZVAL_LONG(&argLng6,(long int) arg6);
+	args[6]= &argLng6;
+		zval argLng7;
+	ZVAL_LONG(&argLng7,(long int) arg7);
+	args[7]= &argLng7;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 8, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiTabArt, DrawTab)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	void *_ptrObj3 = 0;
+	zval *_argObj3 = 0;
+	int id_to_find3;
+	void *_ptrObj4 = 0;
+	zval *_argObj4 = 0;
+	int id_to_find4;
+	void *_ptrObj5 = 0;
+	zval *_argObj5 = 0;
+	int id_to_find5;
+	void *_ptrObj6 = 0;
+	zval *_argObj6 = 0;
+	int id_to_find6;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!z!z!l!z!z!z!", &_argObj0 , &_argObj1 , &_argObj2 , &_argObj3 , &_argLong0 , &_argObj4 , &_argObj5 , &_argObj6 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj3)
+		if (valid) 
+		{
+			if(_argObj3->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find3 = Z_RESVAL_P(*tmp);
+				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
+				if (!_ptrObj3 )
+					valid = 0;
+			}
+			else if(_argObj3->type==IS_LONG)
+				_ptrObj3= (void *)_argObj3->value.lval;
+			else if(_argObj3->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj4)
+		if (valid) 
+		{
+			if(_argObj4->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj4), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find4 = Z_RESVAL_P(*tmp);
+				_ptrObj4 = zend_list_find(id_to_find4, &rsrc_type);
+				if (!_ptrObj4 )
+					valid = 0;
+			}
+			else if(_argObj4->type==IS_LONG)
+				_ptrObj4= (void *)_argObj4->value.lval;
+			else if(_argObj4->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj5)
+		if (valid) 
+		{
+			if(_argObj5->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj5), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find5 = Z_RESVAL_P(*tmp);
+				_ptrObj5 = zend_list_find(id_to_find5, &rsrc_type);
+				if (!_ptrObj5 )
+					valid = 0;
+			}
+			else if(_argObj5->type==IS_LONG)
+				_ptrObj5= (void *)_argObj5->value.lval;
+			else if(_argObj5->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj6)
+		if (valid) 
+		{
+			if(_argObj6->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj6), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find6 = Z_RESVAL_P(*tmp);
+				_ptrObj6 = zend_list_find(id_to_find6, &rsrc_type);
+				if (!_ptrObj6 )
+					valid = 0;
+			}
+			else if(_argObj6->type==IS_LONG)
+				_ptrObj6= (void *)_argObj6->value.lval;
+			else if(_argObj6->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 8:
+					 ((wxAuiTabArt_php*)_this)->DrawTab(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , *(wxAuiNotebookPage *) _ptrObj2 , *(wxRect *) _ptrObj3 , (int)_argLong0 , (wxRect*) _ptrObj4 , (wxRect*) _ptrObj5 , (int*) _ptrObj6);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+int wxAuiTabArt_php::GetBestTabCtrlSize(wxWindow* arg0 , const wxAuiNotebookPageArray& arg1 , const wxSize& arg2){
+	zval *args[3];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "GetBestTabCtrlSize", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(const long int) &arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,(const long int) &arg2);
+	args[2]= &argLng2;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 3, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_DVAL(retval);	}
+	}
+PHP_METHOD(php_wxAuiTabArt, GetBestTabCtrlSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!z!", &_argObj0 , &_argObj1 , &_argObj2 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					ret0 =  ((wxAuiTabArt_php*)_this)->GetBestTabCtrlSize((wxWindow*) _ptrObj0 , *(wxAuiNotebookPageArray *) _ptrObj1 , *(wxSize *) _ptrObj2);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+int wxAuiTabArt_php::GetIndentSize(){
+	zval *args[0];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "GetIndentSize", 0);
+	
+	
+	
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 0, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_DVAL(retval);	}
+	}
+PHP_METHOD(php_wxAuiTabArt, GetIndentSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiTabArt_php*)_this)->GetIndentSize();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+wxSize wxAuiTabArt_php::GetTabSize(wxDC& arg0 , wxWindow* arg1 , const wxString& arg2 , const wxBitmap& arg3 , bool arg4 , int arg5 , int* arg6){
+	zval *args[7];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "GetTabSize", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(long int) arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,(const long int) &arg2);
+	args[2]= &argLng2;
+		zval argLng3;
+	ZVAL_LONG(&argLng3,(const long int) &arg3);
+	args[3]= &argLng3;
+		zval argLng4;
+	ZVAL_LONG(&argLng4,arg4);
+	args[4]= &argLng4;
+		zval argLng5;
+	ZVAL_LONG(&argLng5,arg5);
+	args[5]= &argLng5;
+		zval argLng6;
+	ZVAL_LONG(&argLng6,(long int) arg6);
+	args[6]= &argLng6;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 7, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		wxSize* return_var = (wxSize*) zend_object_store_get_object(&retval TSRMLS_CC);return *return_var;	}
+	}
+PHP_METHOD(php_wxAuiTabArt, GetTabSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	void *_ptrObj3 = 0;
+	zval *_argObj3 = 0;
+	int id_to_find3;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!s!z!b!l!z!", &_argObj0 , &_argObj1 , &_argStr0 , &_argStr0_len , &_argObj2 , &_argBool0 , &_argLong0 , &_argObj3 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj2)
+		if (valid) 
+		{
+			if(_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 || (rsrc_type != le_wxIcon))
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+			else if(_argObj2->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj3)
+		if (valid) 
+		{
+			if(_argObj3->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find3 = Z_RESVAL_P(*tmp);
+				_ptrObj3 = zend_list_find(id_to_find3, &rsrc_type);
+				if (!_ptrObj3 )
+					valid = 0;
+			}
+			else if(_argObj3->type==IS_LONG)
+				_ptrObj3= (void *)_argObj3->value.lval;
+			else if(_argObj3->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			wxSize ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 7:
+					ret0 =  ((wxAuiTabArt_php*)_this)->GetTabSize(*(wxDC *) _ptrObj0 , (wxWindow*) _ptrObj1 , wxString(_argStr0, wxConvUTF8) , *(wxBitmap *) _ptrObj2 , _argBool0 , (int)_argLong0 , (int*) _ptrObj3);
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxSize_entry);add_property_resource(return_value, "wxResource", zend_list_insert(&ret0, le_wxSize));return;			
+		}
+	}
+}
+void wxAuiTabArt_php::SetFlags(unsigned int arg0){
+	zval *args[1];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetFlags", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiTabArt, SetFlags)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiTabArt_php*)_this)->SetFlags((unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiTabArt_php::SetMeasuringFont(const wxFont& arg0){
+	zval *args[1];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetMeasuringFont", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(const long int) &arg0);
+	args[0]= &argLng0;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiTabArt, SetMeasuringFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiTabArt_php*)_this)->SetMeasuringFont(*(wxFont *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiTabArt_php::SetNormalFont(const wxFont& arg0){
+	zval *args[1];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetNormalFont", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(const long int) &arg0);
+	args[0]= &argLng0;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiTabArt, SetNormalFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiTabArt_php*)_this)->SetNormalFont(*(wxFont *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiTabArt_php::SetSelectedFont(const wxFont& arg0){
+	zval *args[1];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetSelectedFont", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(const long int) &arg0);
+	args[0]= &argLng0;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 1, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiTabArt, SetSelectedFont)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxAuiTabArt_php*)_this)->SetSelectedFont(*(wxFont *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxAuiTabArt_php::SetSizingInfo(const wxSize& arg0 , long unsigned int arg1){
+	zval *args[2];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetSizingInfo", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(const long int) &arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,arg1);
+	args[1]= &argLng1;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxAuiTabArt, SetSizingInfo)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!l!", &_argObj0 , &_argLong0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxAuiTabArt_php*)_this)->SetSizingInfo(*(wxSize *) _ptrObj0 , (long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+int wxAuiTabArt_php::ShowDropDown(wxWindow* arg0 , const wxAuiNotebookPageArray& arg1 , int arg2){
+	zval *args[3];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "ShowDropDown", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,(long int) arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,(const long int) &arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,arg2);
+	args[2]= &argLng2;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 3, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_DVAL(retval);	}
+	}
+PHP_METHOD(php_wxAuiTabArt, ShowDropDown)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!z!l!", &_argObj0 , &_argObj1 , &_argLong0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(_argObj1)
+		if (valid) 
+		{
+			if(_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+			else if(_argObj1->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					ret0 =  ((wxAuiTabArt_php*)_this)->ShowDropDown((wxWindow*) _ptrObj0 , *(wxAuiNotebookPageArray *) _ptrObj1 , (int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+wxAuiTabArt* wxAuiTabArt_php::Clone(){
+	zval *args[0];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "Clone", 0);
+	
+	
+	
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 0, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return (wxAuiTabArt*) zend_object_store_get_object(&retval TSRMLS_CC);	}
+	}
+PHP_METHOD(php_wxAuiTabArt, Clone)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxAuiTabArt* ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxAuiTabArt_php*)_this)->Clone();
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxAuiTabArt_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret0, le_wxAuiTabArt));return;			
+		}
+	}
+}
+void php_wxGDIObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxGDIObject, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					_this = new wxGDIObject_php(*(wxGDIObject *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGDIObject);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGDIObject_php*) _this)->evnArray);
+			array_init(((wxGDIObject_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGDIObject_php*) _this)->phpObj);
+			*((wxGDIObject_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGDIObject_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGDIObject_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxGDIObject_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGDIObject);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGDIObject_php*) _this)->evnArray);
+			array_init(((wxGDIObject_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGDIObject_php*) _this)->phpObj);
+			*((wxGDIObject_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGDIObject_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGDIObject_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+void php_wxChoicebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxChoicebook, ChangeSelection)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxChoicebook_php*)_this)->ChangeSelection((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, DeleteAllPages)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxChoicebook_php*)_this)->DeleteAllPages();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, GetPageText)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxString ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxChoicebook_php*)_this)->GetPageText((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxString ret1;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret1 =  ((wxChoicebook_php*)_this)->GetPageText((unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret1.size()+1));strcpy ( ro2, (const char *) ret1.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, GetSelection)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxChoicebook_php*)_this)->GetSelection();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, GetPageImage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxChoicebook_php*)_this)->GetPageImage((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, InsertPage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	long _argLong1;
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!z!s!|b!l!", &_argLong0 , &_argObj0 , &_argStr0 , &_argStr0_len , &_argBool0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 5:
+					ret0 =  ((wxChoicebook_php*)_this)->InsertPage((long unsigned int)_argLong0 , (wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8) , _argBool0 , (int)_argLong1);
+					break;
+				case 4:
+					ret0 =  ((wxChoicebook_php*)_this)->InsertPage((long unsigned int)_argLong0 , (wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8) , _argBool0);
+					break;
+				case 3:
+					ret0 =  ((wxChoicebook_php*)_this)->InsertPage((long unsigned int)_argLong0 , (wxWindow*) _ptrObj0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, SetImageList)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxChoicebook_php*)_this)->SetImageList((wxImageList*) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, SetPageImage)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxChoicebook_php*)_this)->SetPageImage((long unsigned int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, SetPageText)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!s!", &_argLong0 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxChoicebook_php*)_this)->SetPageText((long unsigned int)_argLong0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!s!", &_argLong0 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret1;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret1 =  ((wxChoicebook_php*)_this)->SetPageText((unsigned int)_argLong0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret1)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, SetSelection)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxChoicebook_php*)_this)->SetSelection((long unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret1;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret1 =  ((wxChoicebook_php*)_this)->SetSelection((unsigned int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret1)			
+		}
+	}
+}
+PHP_METHOD(php_wxChoicebook, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	long _argLong0;
+	long _argLong1;
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!l!|z!z!l!s!", &_argObj0 , &_argLong0 , &_argObj1 , &_argObj2 , &_argLong1 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid && _argObj1)
+		{
+			if (_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+		}
+		if(valid && _argObj2)
+		{
+			if (_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+		}
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 6:
+					_this = new wxChoicebook_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1 , *(wxSize *) _ptrObj2 , (long int)_argLong1 , wxString(_argStr0, wxConvUTF8));
+					break;
+				case 5:
+					_this = new wxChoicebook_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1 , *(wxSize *) _ptrObj2 , (long int)_argLong1);
+					break;
+				case 4:
+					_this = new wxChoicebook_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1 , *(wxSize *) _ptrObj2);
+					break;
+				case 3:
+					_this = new wxChoicebook_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1);
+					break;
+				case 2:
+					_this = new wxChoicebook_php((wxWindow*) _ptrObj0 , (int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxChoicebook);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxChoicebook_php*) _this)->evnArray);
+			array_init(((wxChoicebook_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxChoicebook_php*) _this)->phpObj);
+			*((wxChoicebook_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxChoicebook_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxChoicebook_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+void php_wxGrid_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxGrid, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	long _argLong0;
+	long _argLong1;
+	long _argLong2;
+	long _argLong3;
+	long _argLong4;
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	void *_ptrObj1 = 0;
+	zval *_argObj1 = 0;
+	int id_to_find1;
+	void *_ptrObj2 = 0;
+	zval *_argObj2 = 0;
+	int id_to_find2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!l!|z!z!l!s!", &_argObj0 , &_argLong0 , &_argObj1 , &_argObj2 , &_argLong1 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid && _argObj1)
+		{
+			if (_argObj1->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find1 = Z_RESVAL_P(*tmp);
+				_ptrObj1 = zend_list_find(id_to_find1, &rsrc_type);
+				if (!_ptrObj1 )
+					valid = 0;
+			}
+			else if(_argObj1->type==IS_LONG)
+				_ptrObj1= (void *)_argObj1->value.lval;
+		}
+		if(valid && _argObj2)
+		{
+			if (_argObj2->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS) 
+			{
+				id_to_find2 = Z_RESVAL_P(*tmp);
+				_ptrObj2 = zend_list_find(id_to_find2, &rsrc_type);
+				if (!_ptrObj2 )
+					valid = 0;
+			}
+			else if(_argObj2->type==IS_LONG)
+				_ptrObj2= (void *)_argObj2->value.lval;
+		}
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 6:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1 , *(wxSize *) _ptrObj2 , (long int)_argLong1 , wxString(_argStr0, wxConvUTF8));
+					break;
+				case 5:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1 , *(wxSize *) _ptrObj2 , (long int)_argLong1);
+					break;
+				case 4:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1 , *(wxSize *) _ptrObj2);
+					break;
+				case 3:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , *(wxPoint *) _ptrObj1);
+					break;
+				case 2:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGrid);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGrid_php*) _this)->evnArray);
+			array_init(((wxGrid_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGrid_php*) _this)->phpObj);
+			*((wxGrid_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGrid_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGrid_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!l!l!|l!l!l!s!", &_argObj0 , &_argLong0 , &_argLong1 , &_argLong2 , &_argLong3 , &_argLong4 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxStatusBar && rsrc_type != le_wxPanel && rsrc_type != le_wxGrid && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxNotebook && rsrc_type != le_wxStaticText && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxStaticBox && rsrc_type != le_wxListBox && rsrc_type != le_wxFileDialog && rsrc_type != le_wxDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxListCtrl && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxGauge && rsrc_type != le_wxComboBox && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxCheckBox && rsrc_type != le_wxToggleButton && rsrc_type != le_wxChoice && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxRadioButton && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxChoicebook))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 7:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , (int)_argLong1 , (int)_argLong2 , (int)_argLong3 , (long int)_argLong4 , wxString(_argStr0, wxConvUTF8));
+					break;
+				case 6:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , (int)_argLong1 , (int)_argLong2 , (int)_argLong3 , (long int)_argLong4);
+					break;
+				case 5:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , (int)_argLong1 , (int)_argLong2 , (int)_argLong3);
+					break;
+				case 4:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , (int)_argLong1 , (int)_argLong2);
+					break;
+				case 3:
+					_this = new wxGrid_php((wxWindow*) _ptrObj0 , (int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGrid);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGrid_php*) _this)->evnArray);
+			array_init(((wxGrid_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGrid_php*) _this)->phpObj);
+			*((wxGrid_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGrid_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGrid_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, YToRow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->YToRow((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, YToEdgeOfRow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->YToEdgeOfRow((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, XToEdgeOfCol)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->XToEdgeOfCol((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, XToCol)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!|b!", &_argLong0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->XToCol((int)_argLong0 , _argBool0);
+					break;
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->XToCol((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, UpdateDimensions)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->UpdateDimensions();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, StringToLines)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!z!", &_argStr0 , &_argStr0_len , &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->StringToLines(wxString(_argStr0, wxConvUTF8) , *(wxArrayString *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, ShowCellEditControl)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->ShowCellEditControl();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetSelectionForeground)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetSelectionForeground(*(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetSelectionBackground)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetSelectionBackground(*(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetScrollY)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetScrollY((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetScrollX)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetScrollX((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetScrollLineY)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetScrollLineY((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetScrollLineX)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetScrollLineX((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetRowSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetRowSize((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetRowMinimalHeight)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetRowMinimalHeight((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetRowMinimalAcceptableHeight)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetRowMinimalAcceptableHeight((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetRowLabelValue)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!s!", &_argLong0 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetRowLabelValue((int)_argLong0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetRowLabelSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetRowLabelSize((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetRowLabelAlignment)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetRowLabelAlignment((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetRowHeight)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetRowHeight((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetReadOnly)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!|b!", &_argLong0 , &_argLong1 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					 ((wxGrid_php*)_this)->SetReadOnly((int)_argLong0 , (int)_argLong1 , _argBool0);
+					break;
+				case 2:
+					 ((wxGrid_php*)_this)->SetReadOnly((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+int wxGrid_php::SetOrCalcRowSizes(bool arg0 , bool arg1=true){
+	zval *args[2];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetOrCalcRowSizes", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,arg1);
+	args[1]= &argLng1;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_DVAL(retval);	}
+	}
+PHP_METHOD(php_wxGrid, SetOrCalcRowSizes)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	bool _argBool1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "b!|b!", &_argBool0 , &_argBool1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->SetOrCalcRowSizes(_argBool0 , _argBool1);
+					break;
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->SetOrCalcRowSizes(_argBool0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+int wxGrid_php::SetOrCalcColumnSizes(bool arg0 , bool arg1=true){
+	zval *args[2];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetOrCalcColumnSizes", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,arg1);
+	args[1]= &argLng1;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_DVAL(retval);	}
+	}
+PHP_METHOD(php_wxGrid, SetOrCalcColumnSizes)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	bool _argBool1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "b!|b!", &_argBool0 , &_argBool1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->SetOrCalcColumnSizes(_argBool0 , _argBool1);
+					break;
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->SetOrCalcColumnSizes(_argBool0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+bool wxGrid_php::SetModelValues(){
+	zval *args[0];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetModelValues", 0);
+	
+	
+	
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 0, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_BVAL(retval);	}
+	}
+PHP_METHOD(php_wxGrid, SetModelValues)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->SetModelValues();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetMargins)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetMargins((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetLabelValue)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!s!l!", &_argLong0 , &_argStr0 , &_argStr0_len , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					 ((wxGrid_php*)_this)->SetLabelValue((int)_argLong0 , wxString(_argStr0, wxConvUTF8) , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetLabelTextColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetLabelTextColour(*(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetLabelSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetLabelSize((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetLabelBackgroundColour(*(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetLabelAlignment)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetLabelAlignment((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetGridLineColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetGridLineColour(*(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetGridCursor)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetGridCursor((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetEditable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetEditable(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->SetEditable();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetEditInPlace)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetEditInPlace(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->SetEditInPlace();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetDividerPen)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetDividerPen(*(wxPen *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetDefaultRowSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!|b!", &_argLong0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetDefaultRowSize((int)_argLong0 , _argBool0);
+					break;
+				case 1:
+					 ((wxGrid_php*)_this)->SetDefaultRowSize((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetDefaultColSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!|b!", &_argLong0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetDefaultColSize((int)_argLong0 , _argBool0);
+					break;
+				case 1:
+					 ((wxGrid_php*)_this)->SetDefaultColSize((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetDefaultCellTextColour(*(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetDefaultCellOverflow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetDefaultCellOverflow(_argBool0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetDefaultCellBackgroundColour(*(wxColour *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetDefaultCellAlignment)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetDefaultCellAlignment((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxGrid_php::SetCurrentCell(int arg0 , int arg1){
+	zval *args[2];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "SetCurrentCell", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,arg1);
+	args[1]= &argLng1;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 2, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxGrid, SetCurrentCell)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetCurrentCell((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColumnWidth)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetColumnWidth((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetColSize((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColPos)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetColPos((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColMinimalWidth)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetColMinimalWidth((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColMinimalAcceptableWidth)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetColMinimalAcceptableWidth((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColLabelValue)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!s!", &_argLong0 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetColLabelValue((int)_argLong0 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColLabelTextOrientation)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetColLabelTextOrientation((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColLabelSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetColLabelSize((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColLabelAlignment)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->SetColLabelAlignment((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColFormatNumber)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->SetColFormatNumber((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AppendCols)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|l!b!", &_argLong0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->AppendCols((int)_argLong0 , _argBool0);
+					break;
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->AppendCols((int)_argLong0);
+					break;
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->AppendCols();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AppendRows)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|l!b!", &_argLong0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->AppendRows((int)_argLong0 , _argBool0);
+					break;
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->AppendRows((int)_argLong0);
+					break;
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->AppendRows();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AutoSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->AutoSize();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AutoSizeColLabelSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->AutoSizeColLabelSize((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void wxGrid_php::AutoSizeColOrRow(int arg0 , bool arg1 , bool arg2){
+	zval *args[3];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "AutoSizeColOrRow", 0);
+	
+	
+	
+		zval argLng0;
+	ZVAL_LONG(&argLng0,arg0);
+	args[0]= &argLng0;
+		zval argLng1;
+	ZVAL_LONG(&argLng1,arg1);
+	args[1]= &argLng1;
+		zval argLng2;
+	ZVAL_LONG(&argLng2,arg2);
+	args[2]= &argLng2;
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 3, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+	}
+PHP_METHOD(php_wxGrid, AutoSizeColOrRow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	bool _argBool1;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!b!b!", &_argLong0 , &_argBool0 , &_argBool1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					 ((wxGrid_php*)_this)->AutoSizeColOrRow((int)_argLong0 , _argBool0 , _argBool1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AutoSizeColumn)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!|b!", &_argLong0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->AutoSizeColumn((int)_argLong0 , _argBool0);
+					break;
+				case 1:
+					 ((wxGrid_php*)_this)->AutoSizeColumn((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AutoSizeColumns)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->AutoSizeColumns(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->AutoSizeColumns();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AutoSizeRow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!|b!", &_argLong0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->AutoSizeRow((int)_argLong0 , _argBool0);
+					break;
+				case 1:
+					 ((wxGrid_php*)_this)->AutoSizeRow((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AutoSizeRowLabelSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->AutoSizeRowLabelSize((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, AutoSizeRows)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->AutoSizeRows(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->AutoSizeRows();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, ClearGrid)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->ClearGrid();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, ClearSelection)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->ClearSelection();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DeleteCols)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|l!l!b!", &_argLong0 , &_argLong1 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					ret0 =  ((wxGrid_php*)_this)->DeleteCols((int)_argLong0 , (int)_argLong1 , _argBool0);
+					break;
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->DeleteCols((int)_argLong0 , (int)_argLong1);
+					break;
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->DeleteCols((int)_argLong0);
+					break;
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->DeleteCols();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DeleteRows)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|l!l!b!", &_argLong0 , &_argLong1 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					ret0 =  ((wxGrid_php*)_this)->DeleteRows((int)_argLong0 , (int)_argLong1 , _argBool0);
+					break;
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->DeleteRows((int)_argLong0 , (int)_argLong1);
+					break;
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->DeleteRows((int)_argLong0);
+					break;
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->DeleteRows();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DeselectCell)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGrid_php*)_this)->DeselectCell((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DeselectCol)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->DeselectCol((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DeselectRow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->DeselectRow((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DisableCellEditControl)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DisableCellEditControl();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DisableDragCell)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DisableDragCell();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DisableDragColMove)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DisableDragColMove();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DisableDragColSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DisableDragColSize();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DisableDragGridSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DisableDragGridSize();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DisableDragRowSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DisableDragRowSize();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DoEndDragMoveCol)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DoEndDragMoveCol();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DoEndDragResizeCol)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DoEndDragResizeCol();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, DoEndDragResizeRow)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->DoEndDragResizeRow();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+wxSize wxGrid_php::DoGetBestSize() const{
+	zval *args[0];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "DoGetBestSize", 0);
+	
+	
+	
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 0, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		wxSize* return_var = (wxSize*) zend_object_store_get_object(&retval TSRMLS_CC);return *return_var;	}
+	}
+PHP_METHOD(php_wxGrid, DoGetBestSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxSize ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->DoGetBestSize();
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxSize_entry);add_property_resource(return_value, "wxResource", zend_list_insert(&ret0, le_wxSize));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, Enable)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->Enable(_argBool0);
+					break;
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->Enable();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EnableCellEditControl)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->EnableCellEditControl(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->EnableCellEditControl();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EnableDragCell)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->EnableDragCell(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->EnableDragCell();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EnableDragColMove)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->EnableDragColMove(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->EnableDragColMove();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EnableDragColSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->EnableDragColSize(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->EnableDragColSize();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EnableDragGridSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->EnableDragGridSize(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->EnableDragGridSize();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EnableDragRowSize)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->EnableDragRowSize(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->EnableDragRowSize();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EnableEditing)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->EnableEditing(_argBool0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EnableGridLines)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	bool _argBool0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|b!", &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGrid_php*)_this)->EnableGridLines(_argBool0);
+					break;
+				case 0:
+					 ((wxGrid_php*)_this)->EnableGridLines();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, EndBatch)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->EndBatch();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, Fit)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->Fit();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, ForceRefresh)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					 ((wxGrid_php*)_this)->ForceRefresh();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, GetBatchCount)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->GetBatchCount();
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxColour ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->GetCellBackgroundColour((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			void* ptr = safe_emalloc(1,sizeof(wxColour),0);memcpy(ptr,&ret0,sizeof(wxColour));object_init_ex(return_value,php_wxColour_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, GetCellHighlightColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxColour ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxGrid_php*)_this)->GetCellHighlightColour();
+					break;
+				default:
+					break;
+			}
+			void* ptr = safe_emalloc(1,sizeof(wxColour),0);memcpy(ptr,&ret0,sizeof(wxColour));object_init_ex(return_value,php_wxColour_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, GetCellTextColour)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxColour ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->GetCellTextColour((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			void* ptr = safe_emalloc(1,sizeof(wxColour),0);memcpy(ptr,&ret0,sizeof(wxColour));object_init_ex(return_value,php_wxColour_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, GetCellValue)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			wxString ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					ret0 =  ((wxGrid_php*)_this)->GetCellValue((int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, GetColAt)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!", &_argLong0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxGrid_php*)_this)->GetColAt((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			RETURN_LONG((long)ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetColFormatFloat)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	long _argLong2;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!|l!l!", &_argLong0 , &_argLong1 , &_argLong2 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					 ((wxGrid_php*)_this)->SetColFormatFloat((int)_argLong0 , (int)_argLong1 , (int)_argLong2);
+					break;
+				case 2:
+					 ((wxGrid_php*)_this)->SetColFormatFloat((int)_argLong0 , (int)_argLong1);
+					break;
+				case 1:
+					 ((wxGrid_php*)_this)->SetColFormatFloat((int)_argLong0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetCellValue)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!s!", &_argLong0 , &_argLong1 , &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					 ((wxGrid_php*)_this)->SetCellValue((int)_argLong0 , (int)_argLong1 , wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
 		}
 	}
 }
