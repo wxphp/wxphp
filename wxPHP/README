@@ -1,5 +1,5 @@
 Building in Windows
-
+========================================================================
 
 . Download and install wxWidgets 2.8
 	make sure to have your enviroment variables configured.
@@ -15,6 +15,57 @@ Building in Windows
 . Build it:
 	nmake php_wxwidgets.dll
 	
+	
+	
+Building and Installing on Linux
+========================================================================
 
+. Install wxWidgets library and development packages
+
+	Ubuntu 10.04:
+		apt-get install libwxgtk2.8-0 libwxgtk2.8-dev
+	
+. Install php5 development packages 
+
+	Ubuntu 10.04:
+		apt-get install php5-dev
+	
+. Some necessary changes
+	By default the extension is set to build with a debug version of wxWidgets.
+	In order to compile with no debug build of wxWidgets you would need to
+	open config.m4 with your favorite text editor and remove all the --debug flags
+	found on the file.
+	
+	Another change necesarry when building with PHP 5.3.x versions is on 
+	frame.cpp source file. Search for the line that reads:
+	
+		ZVAL_ADDREF(*fc_obj); 
+		
+	and change it to:
+		
+		Z_ADDREF_P(*fc_obj);
+	
+	
+. Configure and build the extension
+	cd wxphp
+	phpize
+	./configure
+	make
+	
+. Installing the extension
+	Copy the resulting wxwidgets.so file on the modules directory to the php 
+	extensions directory. PHP extensions directory is usually found on /usr/lib/php5/
+	On ubuntu 10.04 this directory is /usr/lib/php5/20090626/
+	
+	If you want the wxWidget extension to be automatically loaded, add the
+	following lines to your php.ini:
+	
+		; load php wxwidgets module
+		extension=wxwidgets.so
+	
+	
+
+Support
+========================================================================
 Any problems, please refer to the project forum:
-	https://sourceforge.net/projects/wxphp5/
+	https://sourceforge.net/projects/wxphp/
