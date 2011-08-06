@@ -12,3 +12,21 @@ The output of this script, is the input for srcMaker/srcGui scripts.
 
 In linux:
 gccxml ../common.h -fxml=testing.xml -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/include/wx-2.8 -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES -D__WXGTK__ -I/usr/include/php5 -I/usr/include/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/php5/ext -I/usr/include/php5/ext/date/lib
+
+If having an error that outputs:
+
+/usr/include/bits/fcntl2.h: In function 'int open(const char*, int, ...)':
+/usr/include/bits/fcntl2.h:44: error: '__builtin_va_arg_pack_len' was not declared in this scope
+/usr/include/bits/fcntl2.h:49: error: '__builtin_va_arg_pack_len' was not declared in this scope
+/usr/include/bits/fcntl2.h:57: error: '__builtin_va_arg_pack_len' was not declared in this scope
+
+Then you need to update a gccxml header file (/usr/share/gccxml-0.9/GCC/4.x/gccxml_builtins.h). 
+
+Find the line that reads:
+
+bool __builtin_va_arg_pack(...);
+
+and replace it with
+
+bool __builtin_va_arg_pack(...);
+int  __builtin_va_arg_pack_len(...);
