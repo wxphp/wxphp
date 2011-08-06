@@ -49,6 +49,26 @@
 #include <wx/xrc/xmlres.h>
 #include <wx/html/helpctrl.h>
 #include <wx/fs_zip.h>
+#include <wx/aui/aui.h>
+
+//Added 
+#include <wx/grid.h>
+#include <wx/richtext/richtextctrl.h>
+#include <wx/choicebk.h>
+#include <wx/toolbook.h>
+#include <wx/listbook.h>
+#include <wx/wizard.h>
+#include <wx/hyperlink.h>
+#include <wx/clrpicker.h>
+#include <wx/filepicker.h>
+#include <wx/fontpicker.h>
+#include <wx/srchctrl.h>
+#include <wx/treebook.h>
+#include <wx/mediactrl.h>
+#include <wx/fdrepdlg.h>
+#include <wx/collpane.h>
+#include <wx/dialup.h>
+#include <wx/laywin.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
