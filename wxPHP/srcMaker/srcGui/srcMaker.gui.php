@@ -35,6 +35,7 @@
 			if(isset($cls[$class]))
 			{
 				$selClass = $class;
+				ksort($cls[$class]);
 				foreach($cls[$class] as $mName => $mArr)
 				{
 					var_dump($mName);

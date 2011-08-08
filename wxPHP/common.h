@@ -69,6 +69,7 @@
 #include <wx/collpane.h>
 #include <wx/dialup.h>
 #include <wx/laywin.h>
+#include <wx/font.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

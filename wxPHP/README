@@ -20,7 +20,8 @@ Building in Windows
 Building and Installing on Linux
 ========================================================================
 
-. Install wxWidgets library and development packages
+. Install wxWidgets library and development packages, currently we have
+  tested with latest 2.8.x branch distributed on wxwidgets.org
 
 	Ubuntu 10.04:
 		apt-get install libwxgtk2.8-0 libwxgtk2.8-dev
@@ -47,7 +48,7 @@ Building and Installing on Linux
 	
 	
 . Configure and build the extension
-	cd wxphp
+	cd wxPHP
 	phpize
 	./configure
 	make
@@ -63,6 +64,18 @@ Building and Installing on Linux
 		; load php wxwidgets module
 		extension=wxwidgets.so
 	
+
+Running the sample
+========================================================================
+
+In order to run the sample you need to install php cli version.
+On ubuntu this is done by running:
+
+	sudo apt-get install php5-cli
+	
+To run the sample just run:
+
+	php sample.php
 	
 
 Support
