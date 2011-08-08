@@ -1,4 +1,8 @@
 <?php
+
+//Disable anoying warnings and notices
+error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+
 	$mapClasses = array(
 				"wxBoxSizer"
 				,"wxSizer"
@@ -45,14 +49,32 @@
 	
 	//variables;
 	$defConsts = array();
+	$enumsConsts = array();
+	$varsConsts = array();
 	$entries = $xpath->evaluate('//EnumValue[@name]', $doc);
+	
 	for ($i = 0; $i < $entries->length; $i++) 
 	{
-		$k = $entries->item($i)->getAttribute('name');
-		if(substr($k,0,2)=="wx")
-			$defConsts[$k]=1;
+		$enumName = $entries->item($i)->getAttribute('name');
+		$enumValue = $entries->item($i)->getAttribute('init');
+		$parentName = $entries->item($i)->parentNode->getAttribute('name');
+		$parentID = $entries->item($i)->parentNode->getAttribute('id');
+		$parentAccess = $entries->item($i)->parentNode->getAttribute('access');
+		
+		if(substr($enumName,0,2)=="wx" || substr($parentName,0,2)=="wx")
+		{
+			$enumsConsts[] = array(
+				"name"=>$enumName,
+				"value"=>$enumValue,
+				"parent_name"=>$parentName,
+				"parent_id"=>$parentID,
+				"parent_access"=>$parentAccess
+			);
+		}
+			
+		
 	}
-	echo "Found ".count($defConsts)." enumVariables\n";
+	echo "Found ".count($enumsConsts)." enumVariables\n";
 	
 	//mapped to another const index in Linux
 	//$entries = $xpath->evaluate('//Variable[@name and @type="_5372c"]', $doc);
@@ -63,14 +85,15 @@
 	{
 		$k = $entries->item($i)->getAttribute('name');
 		if(substr($k,0,2)=="wx")
-			$defConsts[$k]=1;
+			$varsConsts[$k]=1;
 	}
-	echo "Found ".count($defConsts)." variables\n";
+	echo "Found ".count($varsConsts)." variables\n";
 	
-	$hd = fopen("consts.dump","w");
+	$defConsts = $varsConsts;
+	
+	/*$hd = fopen("consts.dump","w");
 	fwrite($hd,serialize($defConsts));
-	fclose($hd);
-	
+	fclose($hd);*/
 	
 	
 	
@@ -220,7 +243,7 @@
 	{
 		global $_classes;
 		$implements = trim($implements);
-		$implements = split(" ",$implements);
+		$implements = explode(" ",$implements);
 		
 		$results = array();
 		if($implements)
@@ -243,7 +266,7 @@
 	$entries = $xpath->evaluate($query, $doc);
 	for ($i = 0; $i < $entries->length; $i++) {
 		
-		$members = split(" ",$entries->item($i)->getAttribute('members'));
+		$members = explode(" ",$entries->item($i)->getAttribute('members'));
 		
 		foreach($members as $memberId)
 		{
@@ -256,8 +279,8 @@
 				
 				$ptr['_implements'] = iterateImplements($_classes[$memberId]['bases']);
 				
-				echo $_classes[$memberId]['name']."::".(isset($_classes[$_classes[$memberId]['bases']])?$_classes[$_classes[$memberId]['bases']]['name']:"")."\n";
-				$meths = split(" ",$_classes[$memberId]['members']);
+				//echo $_classes[$memberId]['name']."::".(isset($_classes[$_classes[$memberId]['bases']])?$_classes[$_classes[$memberId]['bases']]['name']:"")."\n";
+				$meths = explode(" ",$_classes[$memberId]['members']);
 				foreach($meths as $meth)
 				{
 					if(isset($_methods[$meth])) 
@@ -285,7 +308,7 @@
 						$ptm[] = array(array(1),array(null));
 						$ptb = &$ptm[count($ptm)-1];
 						
-						echo "\t".$_methods[$meth]['name']." => ".$_methods[$meth]['returns']."\n";
+						//echo "\t".$_methods[$meth]['name']." => ".$_methods[$meth]['returns']."\n";
 						foreach($_methods[$meth]['Argument'] as $argk => $argv)
 						{
 							$pta[] = $argv['type'];
@@ -297,7 +320,7 @@
 							else
 								$ptb[1][]=$argv['default'];
 							
-							echo "\t\t".$argk." => ".$argv['type'].(isset($argv['default'])?" = ".$argv['default']:"")."\n";
+							//echo "\t\t".$argk." => ".$argv['type'].(isset($argv['default'])?" = ".$argv['default']:"")."\n";
 						}
 					}
 				}
@@ -309,6 +332,65 @@
 	
 	$hd = fopen("classes.dump","w");
 	fwrite($hd,serialize($defIni));
+	fclose($hd);
+	
+	
+	
+	//Get all enumarations global defined in a container and inside a class
+	$defEnums = array();
+	$classEnumsCount = 0;
+	$globalEnumsCount = 0;
+	
+	foreach($enumsConsts as $enumData)
+	{
+		if($enumData["parent_access"] != "private" && $enumData["parent_access"] != "protected")
+		{
+			$enumInsideClass = false;
+			foreach($_classes as $classID=>$classData)
+			{
+				$members = explode(" ", $classData["members"]);
+				
+				//Add to classes enums
+				if(in_array($enumData["parent_id"], $members))
+				{
+					$enumInsideClass = true;
+					$defEnums[0][$classData["name"]][$enumData["parent_name"]][$enumData["name"]] = $enumData["value"];
+					
+					$classEnumsCount++;
+					
+					break;
+				}
+			}
+			
+			//Add to global enums
+			if(!$enumInsideClass)
+			{
+				if(substr($enumData["name"], 0, 2) == "wx")
+				{
+					$defConsts[$enumData["name"]] = 1;
+					
+					if(substr($enumData["parent_name"], 0, 2) == "wx")
+					{
+						$defEnums[1][$classData["name"]][$enumData["parent_name"]][$enumData["name"]] = $enumData["value"];
+						$globalEnumsCount++;
+					}
+				}
+			}
+		}
+	}
+	
+	echo "Found ".$classEnumsCount." class enums\n";
+	
+	//Write global enumerations
+	$hd = fopen("consts.dump","w");
+	fwrite($hd,serialize($defConsts));
+	fclose($hd);
+	
+	echo "Found ".$globalEnumsCount." global enums\n";
+	
+	//Write class and global enumerations defined with a container name
+	$hd = fopen("enums.dump","w");
+	fwrite($hd,serialize($defEnums));
 	fclose($hd);
 	
 	//print_r($defIni);

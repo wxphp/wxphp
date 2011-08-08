@@ -9,6 +9,11 @@
  * 
 */
 
+error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+
+//Initialize class enums
+$defEnums = array();
+
 //Initialize constant definitions
 $defConsts = array(
 	"wxSP_3D"=>1,
@@ -231,11 +236,6 @@ $defConsts = array(
 	"wxSOCKET_OUTPUT"=>1,
 	"wxSOCKET_CONNECTION"=>1,
 	"wxSOCKET_LOST"=>1,
-	"wxSPLASH_CENTRE_ON_PARENT"=>1,
-	"wxSPLASH_CENTRE_ON_SCREEN"=>1,
-	"wxSPLASH_NO_CENTRE"=>1,
-	"wxSPLASH_TIMEOUT"=>1,
-	"wxSPLASH_NO_TIMEOUT"=>1,
 	"wxEVT_SOCKET"=>1,
 	"wxFD_DEFAULT_STYLE"=>1,
 	"wxFD_OPEN"=>1,
@@ -260,7 +260,12 @@ $defConsts = array(
 	"wxTR_HAS_VARIABLE_ROW_HEIGHT"=>1,
 	"wxTR_SINGLE"=>1,
 	"wxTR_MULTIPLE"=>1,
-	"wxTR_DEFAULT_STYLE"=>1
+	"wxTR_DEFAULT_STYLE"=>1,
+	"wxHL_CONTEXTMENU"=>1,
+	"wxHL_ALIGN_LEFT"=>1,
+	"wxHL_ALIGN_RIGHT"=>1,
+	"wxHL_ALIGN_CENTRE"=>1,
+	"wxHL_DEFAULT_STYLE"=>1
 );
 
 //Initialize classes definitios
@@ -1179,6 +1184,12 @@ if(isset($argv[1]) && file_exists($argv[1]))
 	unset($defIni['wxDialog']['SetModal']);
 }
 
+//Load class enums parsed by gccxml
+if(isset($argv[3]) && file_exists($argv[3]))
+{
+	$defEnums = unserialize(file_get_contents($argv[3]));
+}
+
 //Load constants parsed by gccxml
 if(isset($argv[2]) && file_exists($argv[2]))
 {
@@ -1187,7 +1198,7 @@ if(isset($argv[2]) && file_exists($argv[2]))
 
 	//blacklist constants
 	
-	unset($defConsts['wxGridSelectCells']);
+	/*unset($defConsts['wxGridSelectCells']);
 	unset($defConsts['wxGridSelectRows']);
 	unset($defConsts['wxGridSelectColumns']);
 	unset($defConsts['wxGRID_CELLCTRL']);
@@ -1195,7 +1206,7 @@ if(isset($argv[2]) && file_exists($argv[2]))
 	unset($defConsts['wxGRID_TEXTCTRL']);
 	unset($defConsts['wxGRID_CHECKBOX']);
 	unset($defConsts['wxGRID_CHOICE']);
-	unset($defConsts['wxGRID_COMBOBOX']);
+	unset($defConsts['wxGRID_COMBOBOX']);*/
 
 	unset($defConsts['wxHTTP_GET']);
 	unset($defConsts['wxHTTP_POST']);
@@ -1275,52 +1286,89 @@ foreach($defIni as $cName => $cVal)
 		$groups["frame"][] = $cName;
 }
 
-
-	function extensionsOfClass($myType)
+//Gets the parent class of an enumeration if applicable otherwise returns false
+function enumParentClass($dataType)
+{
+	global $defEnums;
+	
+	foreach($defEnums[0] as $className=>$enumsArray)
 	{
-		global $defIni;
-		$typeVerifier = array();
-		//if($defIni[$myType]['_type']!="abstract")
-		$typeVerifier[$myType] = 1;
-		
-		if(isset($defIni[$myType]['_implements']))
+		foreach($enumsArray as $enumName=>$enumData)
 		{
-			foreach($defIni[$myType]['_implements'] as $imp)
-				$typeVerifier[$imp]=1;
-		
+			if($enumName == $dataType)
+			{
+				return $className;
+			}
 		}
-		elseif(isset($defIni[$myType]['_extends']))
-		{
-			$typeVerifier = array_merge($typeVerifier,extensionsOfClass($defIni[$myType]['_extends']));
-		}
-		return $typeVerifier;
 	}
 	
-	function derivationsOfClass($myType)
+	return false;
+}
+
+//Check if a type is a global enum
+function isGlobalEnum($dataType)
+{
+	global $defEnums;
+	
+	foreach($defEnums[1] as $className=>$enumsArray)
 	{
-		//returns list of all the subclasses derived from this + this
-		global $defIni;
-		$typeVerifier = array();
-		if(isset($defIni[$myType]['_type']) && $defIni[$myType]['_type']!="abstract")
-			$typeVerifier[$myType] = 1;
-		foreach($defIni as $k=> $v)
+		foreach($enumsArray as $enumName=>$enumData)
 		{
-			if(isset($v['_implements']))
+			if($enumName == $dataType)
 			{
-				if(in_array($myType,$v['_implements']))
-				{
-					$typeVerifier[$k]=1;
-					$typeVerifier = array_merge($typeVerifier,derivationsOfClass($k));
-				}
+				return true;
 			}
-			if(isset($v['_extends']) && $v['_extends']==$myType)
+		}
+	}
+	
+	return false;
+}
+
+function extensionsOfClass($myType)
+{
+	global $defIni;
+	$typeVerifier = array();
+	//if($defIni[$myType]['_type']!="abstract")
+	$typeVerifier[$myType] = 1;
+	
+	if(isset($defIni[$myType]['_implements']))
+	{
+		foreach($defIni[$myType]['_implements'] as $imp)
+			$typeVerifier[$imp]=1;
+	
+	}
+	elseif(isset($defIni[$myType]['_extends']))
+	{
+		$typeVerifier = array_merge($typeVerifier,extensionsOfClass($defIni[$myType]['_extends']));
+	}
+	return $typeVerifier;
+}
+
+//returns list of all the subclasses derived from this + this	
+function derivationsOfClass($myType)
+{
+	global $defIni;
+	$typeVerifier = array();
+	if(isset($defIni[$myType]['_type']) && $defIni[$myType]['_type']!="abstract")
+		$typeVerifier[$myType] = 1;
+	foreach($defIni as $k=> $v)
+	{
+		if(isset($v['_implements']))
+		{
+			if(in_array($myType,$v['_implements']))
 			{
 				$typeVerifier[$k]=1;
 				$typeVerifier = array_merge($typeVerifier,derivationsOfClass($k));
 			}
 		}
-		return $typeVerifier;
+		if(isset($v['_extends']) && $v['_extends']==$myType)
+		{
+			$typeVerifier[$k]=1;
+			$typeVerifier = array_merge($typeVerifier,derivationsOfClass($k));
+		}
 	}
+	return $typeVerifier;
+}
 	
 	$evnHandlers = derivationsOfClass('wxEvtHandler');
 	
@@ -1354,7 +1402,7 @@ foreach($defIni as $cName => $cVal)
                 }
 
 
-		//becarefull not to mark a subclasse tha is derived from another
+		//becarefull not to mark a subclasse that is derived from another
 		//this should be recursive
 		if(isset($classDef['_implements']))
 		{
@@ -1939,6 +1987,7 @@ PHP_METHOD(php_<?=$className?>, Connect)
 							{
 								$methodArgs[$e][$i] = "char *";
 							}
+							
 							$argStr[$e/2].="s";
 							$parseArgs[$e/2][] = "&_argStr".$types['s'];
 							$parseArgs[$e/2][] = "&_argStr".$types['s']."_len";
@@ -1971,6 +2020,7 @@ PHP_METHOD(php_<?=$className?>, Connect)
 						case "int":
                         case "double":
 						case "long":
+						case "unsigned char":
 							$argStr[$e/2].="l";
 							$parseArgs[$e/2][] = "&_argLong".$types['l'];
 							$callArgs[$e/2][] = "(".$methodArgs[$e][$i].")_argLong".$types['l'];
@@ -2005,12 +2055,28 @@ PHP_METHOD(php_<?=$className?>, Connect)
 								$objsArgs[$e/2][$types['o']] = $maches[1];
 								$callArgs[$e/2][] = "*(".$maches[1]." *) _ptrObj".$types['o'];
 							}
+							elseif($enumClass = enumParentClass($methodArgs[$e][$i]))
+							{
+								$classDef[$methodName][$e][$i] = "long";
+								$argStr[$e/2].="l";
+								$parseArgs[$e/2][] = "&_argLong".$types['l'];
+								$callArgs[$e/2][] = "($enumClass::{$methodArgs[$e][$i]}) _argLong".$types['l'];
+								$types['l']++;
+							}
+							elseif(isGlobalEnum($methodArgs[$e][$i]))
+							{
+								$classDef[$methodName][$e][$i] = "long";
+								$argStr[$e/2].="l";
+								$parseArgs[$e/2][] = "&_argLong".$types['l'];
+								$callArgs[$e/2][] = "({$methodArgs[$e][$i]}) _argLong".$types['l'];
+								$types['l']++;
+							}
 							else
 							{
 								ob_get_clean();
 								var_dump($methodName);
 								var_dump($className);
-								die("cant match ".$methodArgs[$e][$i]);
+								die("cant match ".$methodArgs[$e][$i]."\n");
 							}
 							$mtype = $objsArgs[$e/2][$types['o']];
 							$types['o']++;
@@ -2349,6 +2415,7 @@ PHP_METHOD(php_<?=$className?>, Connect)
 				for($i=$g;$i>=$l;$i--)
 				{
 					array_splice($callArgs[$k],$i);
+					
 					if($methodName!=$className)
 					{
 				?>
@@ -2551,178 +2618,180 @@ static function_entry php_<?=$className?>_functions[] = {
 	
 	
 }
-
-	//wxwidgets.c
-	
-	ob_start();
-	
-	foreach($groups as $k => $v)
-	{?>
-#include "<?=$k?>.h"
-<?	
-	}
-	
-	
-	foreach($defIni as $className => $classDef)
-	{
-		if(!isset($classDef['_type']) && $classDef['_type']=="abstract")
-			continue;
-		
 ?>
-zend_class_entry *php_<?=$className?>_entry;
-int le_<?=$className?>;
-<?
-	}
-	$data = ob_get_clean();	
-	
-	
-	ob_start();
-	foreach($defIni as $className => $classDef)
-	{
-		if(isset($classDef['_type']) && $classDef['_type']=="abstract")
-			continue;
-		
-?>
-	INIT_CLASS_ENTRY(cf, PHP_<?=$className?>_NAME , php_<?=$className?>_functions);
-	php_<?=$className?>_entry = zend_register_internal_class(&cf TSRMLS_CC);
-	le_<?=$className?> = zend_register_list_destructors_ex(php_<?=$className?>_destruction_handler,NULL, le_<?=$className?>_name ,module_number);
 
 <?
-			/*if(isset($evnHandlers[$className])
-			{
+//Update wxwidgets.cpp by just upgrading the code betewen 
+//entries ---> code <--- entries and classes ---> code <--- classes
+echo "Generating wxwidgets.cpp...\n";
 
-				$evnCnt=0;
-				foreach($classDef['_events'] as $event => $evnVal)
-				{
-					if(isset($defConsts[$event]))
-						continue;
-					$defConsts[$event] = $event;
-					?>
-	REGISTER_LONG_CONSTANT("<?=$event?>",	<?=$event?>	, CONST_CS |CONST_PERSISTENT);					
-<?				}
-			}*/
-	}
-	foreach($defConsts as $kConst => $vConst)
-	{
-		if($vConst!=1)
-			continue;
-?>
-	REGISTER_LONG_CONSTANT("<?=$kConst?>",	<?=$kConst?>	, CONST_CS |CONST_PERSISTENT);
-<?	
-	}
+$entries = "";
 	
-	$data2 = ob_get_clean();	
-	
-	
-
-	$old = file_get_contents("wxwidgets.cpp");
-	if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$matches))
-	{
-		$data = $matches[1]."\n".$data."\n".$matches[2];
-
-		if($res =preg_match("/(.*?\/\/ cast --->)[^<]+(\/\/ <--- cast[^§]+)/sm",$data,$matches)){
-			ob_start();
-?>
-PHP_FUNCTION(php_wxDynamicCast){
-        zval **tmp;
-        int rsrc_type;
-        char _wxResource[] = "wxResource";
-        int valid = 1;
-
-        char* _argStr0;
-        int _argStr0_len;
-        void *_ptrObj0 = 0;
-        zval *_argObj0 = 0;
-        int id_to_find0;
-
-
-        if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!s!",  &_argObj0 , &_argStr0 , &_argStr0_len ) == SUCCESS){
-
-                if(_argObj0)
-                {
-                        if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-                        {
-                                id_to_find0 = Z_RESVAL_P(*tmp);
-                                _ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-                                //if (!_ptrObj0 || rsrc_type != le_wxTextCtrl)
-                                //      valid = 0;
-                        }
-                }
-
-                if(valid){
-			if(0){
-			}
-<?			foreach($defIni as $className => $classDef):
-				if(!isset($classDef['_type']) && $classDef['_type']=="abstract")
-		                        continue;
-				if(in_array($className,array("wxPoint","wxSize","wxSizerFlags","wxClassInfo","wxTreeItemData","wxTreeItemId","wxArrayString","wxRect","wxDateTime","wxCalendarDateAttr","wxLocale","wxItemContainer", "wxAuiDockArt", "wxAuiPaneInfo", "wxAuiDefaultDockArt", "wxAuiTabArt")))
-					continue;
-?>
-                        else if(!strcmp(_argStr0,"<?=$className?>")){
-                                object_init_ex(return_value,php_<?=$className?>_entry);
-                                <?=$className?>* ret = wxDynamicCast(_ptrObj0,<?=$className?>_php);
-                                long id_to_find = zend_list_insert(ret, le_<?=$className?>);
-                                add_property_resource(return_value, _wxResource, id_to_find);
-                                return;
-                        }
-<?			endforeach;?>
-                }
-
-        }
-
+foreach($groups as $k => $v)
+{
+	$entries .= "#include \"$k.h\"\n";
 }
-<?
-			$data = $matches[1]."\n".ob_get_clean()."\n".$matches[2];
-		}
 
+$entries .= "\n";
+
+foreach($defIni as $className => $classDef)
+{
+	if(!isset($classDef['_type']) && $classDef['_type']=="abstract")
+		continue;
 		
-		if($res =preg_match("/(.*?\/\/ classes --->)[^<]+(\/\/ <--- classes[^§]+)/sm",$data,$matches))
+	$entries .= "zend_class_entry *php_{$className}_entry;\n";
+	$entries .= "int le_$className;\n";
+}
+
+$classes = "";
+foreach($defIni as $className => $classDef)
+{
+	if(isset($classDef['_type']) && $classDef['_type']=="abstract")
+		continue;
+		
+	$classes .= "INIT_CLASS_ENTRY(cf, PHP_{$className}_NAME , php_{$className}_functions);\n";
+	$classes .= "php_{$className}_entry = zend_register_internal_class(&cf TSRMLS_CC);\n";
+	$classes .= "le_{$className} = zend_register_list_destructors_ex(php_{$className}_destruction_handler, NULL, le_{$className}_name, module_number);\n";
+	$classes .= "\n";
+}
+
+$classes .= "\n";
+
+foreach($defConsts as $kConst => $vConst)
+{
+	if($vConst!=1)
+		continue;
+		
+	$classes .= "REGISTER_LONG_CONSTANT(\"$kConst\", $kConst, CONST_CS | CONST_PERSISTENT);\n";
+}
+
+$classes .= "\n";
+
+foreach($defEnums[0] as $enumClassName=>$classEnums)
+{
+	foreach($classEnums as $enumName=>$enumList)
+	{
+		foreach($enumList as $enumOption=>$enumValue)
 		{
-			$data = $matches[1]."\n".$data2."\n".$matches[2];
-		
-			$hd = fopen("wxwidgets.cpp","w");
-			fwrite($hd,$data);
-			fclose($hd);
+			$classes .= "REGISTER_NS_LONG_CONSTANT(\"$enumClassName\", \"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
 		}
 	}
+}
 
+$dynamicCastCode = "";
 
+$old = file_get_contents("wxwidgets.cpp");
+if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$matches))
+{
+	$data = $matches[1]."\n".$entries."\n".$matches[2];
 
-	ob_start();
-	foreach($defIni as $className => $classDef)
+	if($res =preg_match("/(.*?\/\/ cast --->)[^<]+(\/\/ <--- cast[^§]+)/sm",$data,$matches))
 	{
-		foreach($classDef as $fcName => $fc)
+		$dynamicCastCode .= "PHP_FUNCTION(php_wxDynamicCast){\n";
+			$dynamicCastCode .=	"\tzval **tmp;\n";
+			$dynamicCastCode .= "\tint rsrc_type;\n";
+			$dynamicCastCode .= "\tchar _wxResource[] = \"wxResource\";\n";
+			$dynamicCastCode .= "\tint valid = 1;\n";
+			$dynamicCastCode .= "\n";
+			$dynamicCastCode .= "\tchar* _argStr0;\n";
+			$dynamicCastCode .= "\tint _argStr0_len;\n";
+			$dynamicCastCode .= "\tvoid *_ptrObj0 = 0;\n";
+			$dynamicCastCode .= "\tzval *_argObj0 = 0;\n";
+			$dynamicCastCode .= "\tint id_to_find0;\n";
+
+
+			$dynamicCastCode .= "\tif (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, \"z!s!\",  &_argObj0 , &_argStr0 , &_argStr0_len ) == SUCCESS){\n";
+			$dynamicCastCode .= "\n";
+					$dynamicCastCode .= "\t\tif(_argObj0)\n";
+					$dynamicCastCode .= "\t\t{\n";
+							$dynamicCastCode .= "\t\t\tif(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)\n";
+							$dynamicCastCode .= "\t\t\t{\n";
+									$dynamicCastCode .= "\t\t\t\tid_to_find0 = Z_RESVAL_P(*tmp);\n";
+									$dynamicCastCode .= "\t\t\t\t_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);\n";
+									$dynamicCastCode .= "\t\t\t\t//if (!_ptrObj0 || rsrc_type != le_wxTextCtrl)\n";
+									$dynamicCastCode .= "\t\t\t\t//      valid = 0;\n";
+							$dynamicCastCode .= "\t\t\t}\n";
+					$dynamicCastCode .= "\t\t}\n";
+					$dynamicCastCode .= "\t\t\n";
+					$dynamicCastCode .= "\t\tif(valid){\n";
+						$dynamicCastCode .= "\t\t\tif(0){\n";
+						$dynamicCastCode .= "\t\t\t}\n";
+                
+		foreach($defIni as $className => $classDef)
 		{
-			if($fcName[0]=="_")
+			if(!isset($classDef['_type']) && $classDef['_type']=="abstract")
 				continue;
-			$fcName2 =$fcName;
-			if($fcName==$className)
-				$fcName = "__construct";
+				
+			if(in_array($className,array("wxPoint","wxSize","wxSizerFlags","wxClassInfo","wxTreeItemData","wxTreeItemId","wxArrayString","wxRect","wxDateTime","wxCalendarDateAttr","wxLocale","wxItemContainer", "wxAuiDockArt", "wxAuiPaneInfo", "wxAuiDefaultDockArt", "wxAuiTabArt")))
+				continue;
 
-?>
-PHP_METHOD(php_<?=$className?>, <?=$fcName?>);
-<?
-		}
-		if(isset($evnHandlers[$className]))
-		{
-?>
-PHP_METHOD(php_<?=$className?>, Connect);
-<?
+                        $dynamicCastCode .= "\t\t\telse if(!strcmp(_argStr0, \"$className\")){\n";
+                               $dynamicCastCode .= "\t\t\t\tobject_init_ex(return_value, php_{$className}_entry);\n";
+                                $dynamicCastCode .= "\t\t\t\t{$className}* ret = wxDynamicCast(_ptrObj0, {$className}_php);\n";
+                                $dynamicCastCode .= "\t\t\t\tlong id_to_find = zend_list_insert(ret, le_{$className});\n";
+                                $dynamicCastCode .= "\t\t\t\tadd_property_resource(return_value, _wxResource, id_to_find);\n";
+                                $dynamicCastCode .= "\t\t\t\treturn;\n";
+                        $dynamicCastCode .= "\t\t\t}\n";
 		}
 		
+				$dynamicCastCode .= "\t\t}\n";
+			$dynamicCastCode .= "\t}\n";
+		$dynamicCastCode .= "}\n";
+				
+		$data = $matches[1]."\n".$dynamicCastCode."\n".$matches[2];
 	}
-	$data = ob_get_flush();	
 
-	$old = file_get_contents("php_wxwidgets.h");
-	if(preg_match("/(.*?\/\/ entries --->).+?(.*?\/\/ <--- entries[^§]+)/sm",$old,$matches))
+	if($res =preg_match("/(.*?\/\/ classes --->)[^<]+(\/\/ <--- classes[^§]+)/sm",$data,$matches))
 	{
-		$data = $matches[1]."\n".$data."\n".$matches[2];
-		
-		$hd = fopen("php_wxwidgets.h","w");
-		fwrite($hd, $data);
+		$data = $matches[1]."\n".$classes."\n".$matches[2];
+
+		$hd = fopen("wxwidgets.cpp","w");
+		fwrite($hd,$data);
 		fclose($hd);
 	}
 
-	die();
+}
 
-		?>
+//Update php_wxwidgets.h by just upgrading the code betewen 
+//entries ---> code <--- entries
+echo "Generating php_wxwidgets.h...\n";
+$output = "";
+foreach($defIni as $className => $classDef)
+{
+	foreach($classDef as $fcName => $fc)
+	{
+		//Skip specification attributes like _pure_virtual, _implements, etc...
+		if($fcName{0}=="_")
+		{
+			continue;
+		}
+		
+		if($fcName==$className)
+		{
+			$fcName = "__construct";
+		}
+
+		$output .= "PHP_METHOD(php_$className, $fcName);\n";
+	}
+	
+	if(isset($evnHandlers[$className]))
+	{
+		$output .= "PHP_METHOD(php_$className, Connect);\n";
+	}
+		
+}
+
+$old = file_get_contents("php_wxwidgets.h");
+
+if(preg_match("/(.*?\/\/ entries --->)[^<]+(\/\/ <--- entries[^§]+)/sm", $old, $matches))
+{
+	$output = $matches[1]."\n".$output."\n".$matches[2];
+	
+	$hd = fopen("php_wxwidgets.h", "w");
+	fwrite($hd, $output);
+	fclose($hd);
+}
+
+die("Done!\n");
+
+?>
