@@ -2675,7 +2675,8 @@ foreach($defEnums[0] as $enumClassName=>$classEnums)
 	{
 		foreach($enumList as $enumOption=>$enumValue)
 		{
-			$classes .= "REGISTER_NS_LONG_CONSTANT(\"$enumClassName\", \"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
+			//$classes .= "REGISTER_NS_LONG_CONSTANT(\"$enumClassName\", \"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
+			$classes .= "zend_declare_class_constant_long(php_{$enumClassName}_entry, \"$enumOption\", " . strlen($enumOption) . ",  $enumClassName::$enumOption TSRMLS_DC);\n";
 		}
 	}
 }
