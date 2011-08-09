@@ -61,6 +61,9 @@
 #include <wx/hyperlink.h>
 #include <wx/clrpicker.h>
 #include <wx/filepicker.h>
+#include <wx/datectrl.h>
+#include <wx/spinctrl.h>
+#include <wx/dirctrl.h>
 #include <wx/fontpicker.h>
 #include <wx/srchctrl.h>
 #include <wx/treebook.h>
@@ -70,6 +73,9 @@
 #include <wx/dialup.h>
 #include <wx/laywin.h>
 #include <wx/font.h>
+#include <wx/bmpcbox.h>
+#include <wx/statline.h>
+#include <wx/gbsizer.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

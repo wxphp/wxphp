@@ -265,7 +265,8 @@ $defConsts = array(
 	"wxHL_ALIGN_LEFT"=>1,
 	"wxHL_ALIGN_RIGHT"=>1,
 	"wxHL_ALIGN_CENTRE"=>1,
-	"wxHL_DEFAULT_STYLE"=>1
+	"wxHL_DEFAULT_STYLE"=>1,
+	"wxDEFAULT_DIALOG_STYLE"=>1
 );
 
 //Initialize classes definitios
@@ -2018,6 +2019,7 @@ PHP_METHOD(php_<?=$className?>, Connect)
 						case "long int":
 						case "void**":
 						case "int":
+						case "const int":
                         case "double":
 						case "long":
 						case "unsigned char":
@@ -2722,7 +2724,13 @@ if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$matc
 			if(!isset($classDef['_type']) && $classDef['_type']=="abstract")
 				continue;
 				
-			if(in_array($className,array("wxPoint","wxSize","wxSizerFlags","wxClassInfo","wxTreeItemData","wxTreeItemId","wxArrayString","wxRect","wxDateTime","wxCalendarDateAttr","wxLocale","wxItemContainer", "wxAuiDockArt", "wxAuiPaneInfo", "wxAuiDefaultDockArt", "wxAuiTabArt")))
+			if(in_array($className,array("wxPoint","wxSize","wxSizerFlags","wxClassInfo",
+			"wxTreeItemData","wxTreeItemId","wxArrayString","wxRect","wxDateTime","wxCalendarDateAttr",
+			"wxLocale","wxItemContainer", "wxAuiDockArt", "wxAuiPaneInfo", "wxAuiDefaultDockArt", "wxAuiTabArt", 
+			"wxAuiToolBarItem", "wxAuiToolBarArt", "wxHtmlRenderingInfo", "wxHtmlSelection", "wxTextAttr", "wxTextAttrEx",
+			"wxRichTextRange", "wxRichTextAttr", "wxRichTextLine", "wxGridCellCoords", "wxGridCellAttr", "wxGridCellRenderer",
+			"wxGridCellWorker","wxGridCellEditor", "wxGridCellAttrProvider", "wxRadioBoxBase", "wxScrollHelper"))
+			)
 				continue;
 
                         $dynamicCastCode .= "\t\t\telse if(!strcmp(_argStr0, \"$className\")){\n";
