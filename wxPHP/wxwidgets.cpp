@@ -221,6 +221,124 @@ zend_class_entry *php_wxHyperlinkCtrl_entry;
 int le_wxHyperlinkCtrl;
 zend_class_entry *php_wxHyperlinkEvent_entry;
 int le_wxHyperlinkEvent;
+zend_class_entry *php_wxMenuBarBase_entry;
+int le_wxMenuBarBase;
+zend_class_entry *php_wxAuiToolBarItem_entry;
+int le_wxAuiToolBarItem;
+zend_class_entry *php_wxAuiToolBarArt_entry;
+int le_wxAuiToolBarArt;
+zend_class_entry *php_wxAuiToolBar_entry;
+int le_wxAuiToolBar;
+zend_class_entry *php_wxDialogBase_entry;
+int le_wxDialogBase;
+zend_class_entry *php_wxStdDialogButtonSizer_entry;
+int le_wxStdDialogButtonSizer;
+zend_class_entry *php_wxHtmlWindow_entry;
+int le_wxHtmlWindow;
+zend_class_entry *php_wxHtmlContainerCell_entry;
+int le_wxHtmlContainerCell;
+zend_class_entry *php_wxHtmlCell_entry;
+int le_wxHtmlCell;
+zend_class_entry *php_wxHtmlRenderingInfo_entry;
+int le_wxHtmlRenderingInfo;
+zend_class_entry *php_wxHtmlSelection_entry;
+int le_wxHtmlSelection;
+zend_class_entry *php_wxHtmlLinkInfo_entry;
+int le_wxHtmlLinkInfo;
+zend_class_entry *php_wxRichTextCtrl_entry;
+int le_wxRichTextCtrl;
+zend_class_entry *php_wxTextAttr_entry;
+int le_wxTextAttr;
+zend_class_entry *php_wxTextAttrEx_entry;
+int le_wxTextAttrEx;
+zend_class_entry *php_wxRichTextRange_entry;
+int le_wxRichTextRange;
+zend_class_entry *php_wxRichTextAttr_entry;
+int le_wxRichTextAttr;
+zend_class_entry *php_wxCommandProcessor_entry;
+int le_wxCommandProcessor;
+zend_class_entry *php_wxRichTextLine_entry;
+int le_wxRichTextLine;
+zend_class_entry *php_wxGridCellCoords_entry;
+int le_wxGridCellCoords;
+zend_class_entry *php_wxGridCellAttr_entry;
+int le_wxGridCellAttr;
+zend_class_entry *php_wxGridCellRenderer_entry;
+int le_wxGridCellRenderer;
+zend_class_entry *php_wxGridCellWorker_entry;
+int le_wxGridCellWorker;
+zend_class_entry *php_wxRegion_entry;
+int le_wxRegion;
+zend_class_entry *php_wxRegionBase_entry;
+int le_wxRegionBase;
+zend_class_entry *php_wxGridCellEditor_entry;
+int le_wxGridCellEditor;
+zend_class_entry *php_wxGridTableBase_entry;
+int le_wxGridTableBase;
+zend_class_entry *php_wxGridCellAttrProvider_entry;
+int le_wxGridCellAttrProvider;
+zend_class_entry *php_wxSearchCtrl_entry;
+int le_wxSearchCtrl;
+zend_class_entry *php_wxColourPickerCtrl_entry;
+int le_wxColourPickerCtrl;
+zend_class_entry *php_wxFontPickerCtrl_entry;
+int le_wxFontPickerCtrl;
+zend_class_entry *php_wxFilePickerCtrl_entry;
+int le_wxFilePickerCtrl;
+zend_class_entry *php_wxFileDirPickerCtrlBase_entry;
+int le_wxFileDirPickerCtrlBase;
+zend_class_entry *php_wxDirPickerCtrl_entry;
+int le_wxDirPickerCtrl;
+zend_class_entry *php_wxDatePickerCtrlBase_entry;
+int le_wxDatePickerCtrlBase;
+zend_class_entry *php_wxDatePickerCtrlGeneric_entry;
+int le_wxDatePickerCtrlGeneric;
+zend_class_entry *php_wxDatePickerCtrl_entry;
+int le_wxDatePickerCtrl;
+zend_class_entry *php_wxScrollBar_entry;
+int le_wxScrollBar;
+zend_class_entry *php_wxSpinCtrl_entry;
+int le_wxSpinCtrl;
+zend_class_entry *php_wxSpinButton_entry;
+int le_wxSpinButton;
+zend_class_entry *php_wxGenericDirCtrl_entry;
+int le_wxGenericDirCtrl;
+zend_class_entry *php_wxDirFilterListCtrl_entry;
+int le_wxDirFilterListCtrl;
+zend_class_entry *php_wxChoiceBase_entry;
+int le_wxChoiceBase;
+zend_class_entry *php_wxBitmapButtonBase_entry;
+int le_wxBitmapButtonBase;
+zend_class_entry *php_wxTextCtrlBase_entry;
+int le_wxTextCtrlBase;
+zend_class_entry *php_wxBitmapComboBox_entry;
+int le_wxBitmapComboBox;
+zend_class_entry *php_wxCheckBoxBase_entry;
+int le_wxCheckBoxBase;
+zend_class_entry *php_wxRadioBoxBase_entry;
+int le_wxRadioBoxBase;
+zend_class_entry *php_wxStaticLineBase_entry;
+int le_wxStaticLineBase;
+zend_class_entry *php_wxStaticLine_entry;
+int le_wxStaticLine;
+zend_class_entry *php_wxSlider_entry;
+int le_wxSlider;
+zend_class_entry *php_wxSliderBase_entry;
+int le_wxSliderBase;
+zend_class_entry *php_wxScrolledWindow_entry;
+int le_wxScrolledWindow;
+zend_class_entry *php_wxScrollHelper_entry;
+int le_wxScrollHelper;
+zend_class_entry *php_wxNotebookBase_entry;
+int le_wxNotebookBase;
+zend_class_entry *php_wxListbook_entry;
+int le_wxListbook;
+zend_class_entry *php_wxGridSizer_entry;
+int le_wxGridSizer;
+zend_class_entry *php_wxGridBagSizer_entry;
+int le_wxGridBagSizer;
+zend_class_entry *php_wxGBSizerItem_entry;
+int le_wxGBSizerItem;
 
 // <--- entries
 
@@ -939,6 +1057,300 @@ PHP_FUNCTION(php_wxDynamicCast){
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
+			else if(!strcmp(_argStr0, "wxMenuBarBase")){
+				object_init_ex(return_value, php_wxMenuBarBase_entry);
+				wxMenuBarBase* ret = wxDynamicCast(_ptrObj0, wxMenuBarBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxMenuBarBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxAuiToolBar")){
+				object_init_ex(return_value, php_wxAuiToolBar_entry);
+				wxAuiToolBar* ret = wxDynamicCast(_ptrObj0, wxAuiToolBar_php);
+				long id_to_find = zend_list_insert(ret, le_wxAuiToolBar);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxDialogBase")){
+				object_init_ex(return_value, php_wxDialogBase_entry);
+				wxDialogBase* ret = wxDynamicCast(_ptrObj0, wxDialogBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxDialogBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxStdDialogButtonSizer")){
+				object_init_ex(return_value, php_wxStdDialogButtonSizer_entry);
+				wxStdDialogButtonSizer* ret = wxDynamicCast(_ptrObj0, wxStdDialogButtonSizer_php);
+				long id_to_find = zend_list_insert(ret, le_wxStdDialogButtonSizer);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxHtmlWindow")){
+				object_init_ex(return_value, php_wxHtmlWindow_entry);
+				wxHtmlWindow* ret = wxDynamicCast(_ptrObj0, wxHtmlWindow_php);
+				long id_to_find = zend_list_insert(ret, le_wxHtmlWindow);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxHtmlContainerCell")){
+				object_init_ex(return_value, php_wxHtmlContainerCell_entry);
+				wxHtmlContainerCell* ret = wxDynamicCast(_ptrObj0, wxHtmlContainerCell_php);
+				long id_to_find = zend_list_insert(ret, le_wxHtmlContainerCell);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxHtmlCell")){
+				object_init_ex(return_value, php_wxHtmlCell_entry);
+				wxHtmlCell* ret = wxDynamicCast(_ptrObj0, wxHtmlCell_php);
+				long id_to_find = zend_list_insert(ret, le_wxHtmlCell);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxHtmlLinkInfo")){
+				object_init_ex(return_value, php_wxHtmlLinkInfo_entry);
+				wxHtmlLinkInfo* ret = wxDynamicCast(_ptrObj0, wxHtmlLinkInfo_php);
+				long id_to_find = zend_list_insert(ret, le_wxHtmlLinkInfo);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxRichTextCtrl")){
+				object_init_ex(return_value, php_wxRichTextCtrl_entry);
+				wxRichTextCtrl* ret = wxDynamicCast(_ptrObj0, wxRichTextCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxRichTextCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxCommandProcessor")){
+				object_init_ex(return_value, php_wxCommandProcessor_entry);
+				wxCommandProcessor* ret = wxDynamicCast(_ptrObj0, wxCommandProcessor_php);
+				long id_to_find = zend_list_insert(ret, le_wxCommandProcessor);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxRegion")){
+				object_init_ex(return_value, php_wxRegion_entry);
+				wxRegion* ret = wxDynamicCast(_ptrObj0, wxRegion_php);
+				long id_to_find = zend_list_insert(ret, le_wxRegion);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxRegionBase")){
+				object_init_ex(return_value, php_wxRegionBase_entry);
+				wxRegionBase* ret = wxDynamicCast(_ptrObj0, wxRegionBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxRegionBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxGridTableBase")){
+				object_init_ex(return_value, php_wxGridTableBase_entry);
+				wxGridTableBase* ret = wxDynamicCast(_ptrObj0, wxGridTableBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxGridTableBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxSearchCtrl")){
+				object_init_ex(return_value, php_wxSearchCtrl_entry);
+				wxSearchCtrl* ret = wxDynamicCast(_ptrObj0, wxSearchCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxSearchCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxColourPickerCtrl")){
+				object_init_ex(return_value, php_wxColourPickerCtrl_entry);
+				wxColourPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxColourPickerCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxColourPickerCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxFontPickerCtrl")){
+				object_init_ex(return_value, php_wxFontPickerCtrl_entry);
+				wxFontPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxFontPickerCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxFontPickerCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxFilePickerCtrl")){
+				object_init_ex(return_value, php_wxFilePickerCtrl_entry);
+				wxFilePickerCtrl* ret = wxDynamicCast(_ptrObj0, wxFilePickerCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxFilePickerCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxFileDirPickerCtrlBase")){
+				object_init_ex(return_value, php_wxFileDirPickerCtrlBase_entry);
+				wxFileDirPickerCtrlBase* ret = wxDynamicCast(_ptrObj0, wxFileDirPickerCtrlBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxFileDirPickerCtrlBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxDirPickerCtrl")){
+				object_init_ex(return_value, php_wxDirPickerCtrl_entry);
+				wxDirPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxDirPickerCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxDirPickerCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxDatePickerCtrlBase")){
+				object_init_ex(return_value, php_wxDatePickerCtrlBase_entry);
+				wxDatePickerCtrlBase* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrlBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxDatePickerCtrlBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxDatePickerCtrlGeneric")){
+				object_init_ex(return_value, php_wxDatePickerCtrlGeneric_entry);
+				wxDatePickerCtrlGeneric* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrlGeneric_php);
+				long id_to_find = zend_list_insert(ret, le_wxDatePickerCtrlGeneric);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxDatePickerCtrl")){
+				object_init_ex(return_value, php_wxDatePickerCtrl_entry);
+				wxDatePickerCtrl* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxDatePickerCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxScrollBar")){
+				object_init_ex(return_value, php_wxScrollBar_entry);
+				wxScrollBar* ret = wxDynamicCast(_ptrObj0, wxScrollBar_php);
+				long id_to_find = zend_list_insert(ret, le_wxScrollBar);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxSpinCtrl")){
+				object_init_ex(return_value, php_wxSpinCtrl_entry);
+				wxSpinCtrl* ret = wxDynamicCast(_ptrObj0, wxSpinCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxSpinCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxSpinButton")){
+				object_init_ex(return_value, php_wxSpinButton_entry);
+				wxSpinButton* ret = wxDynamicCast(_ptrObj0, wxSpinButton_php);
+				long id_to_find = zend_list_insert(ret, le_wxSpinButton);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxGenericDirCtrl")){
+				object_init_ex(return_value, php_wxGenericDirCtrl_entry);
+				wxGenericDirCtrl* ret = wxDynamicCast(_ptrObj0, wxGenericDirCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxGenericDirCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxDirFilterListCtrl")){
+				object_init_ex(return_value, php_wxDirFilterListCtrl_entry);
+				wxDirFilterListCtrl* ret = wxDynamicCast(_ptrObj0, wxDirFilterListCtrl_php);
+				long id_to_find = zend_list_insert(ret, le_wxDirFilterListCtrl);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxChoiceBase")){
+				object_init_ex(return_value, php_wxChoiceBase_entry);
+				wxChoiceBase* ret = wxDynamicCast(_ptrObj0, wxChoiceBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxChoiceBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxBitmapButtonBase")){
+				object_init_ex(return_value, php_wxBitmapButtonBase_entry);
+				wxBitmapButtonBase* ret = wxDynamicCast(_ptrObj0, wxBitmapButtonBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxBitmapButtonBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxTextCtrlBase")){
+				object_init_ex(return_value, php_wxTextCtrlBase_entry);
+				wxTextCtrlBase* ret = wxDynamicCast(_ptrObj0, wxTextCtrlBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxTextCtrlBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxBitmapComboBox")){
+				object_init_ex(return_value, php_wxBitmapComboBox_entry);
+				wxBitmapComboBox* ret = wxDynamicCast(_ptrObj0, wxBitmapComboBox_php);
+				long id_to_find = zend_list_insert(ret, le_wxBitmapComboBox);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxCheckBoxBase")){
+				object_init_ex(return_value, php_wxCheckBoxBase_entry);
+				wxCheckBoxBase* ret = wxDynamicCast(_ptrObj0, wxCheckBoxBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxCheckBoxBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxStaticLineBase")){
+				object_init_ex(return_value, php_wxStaticLineBase_entry);
+				wxStaticLineBase* ret = wxDynamicCast(_ptrObj0, wxStaticLineBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxStaticLineBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxStaticLine")){
+				object_init_ex(return_value, php_wxStaticLine_entry);
+				wxStaticLine* ret = wxDynamicCast(_ptrObj0, wxStaticLine_php);
+				long id_to_find = zend_list_insert(ret, le_wxStaticLine);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxSlider")){
+				object_init_ex(return_value, php_wxSlider_entry);
+				wxSlider* ret = wxDynamicCast(_ptrObj0, wxSlider_php);
+				long id_to_find = zend_list_insert(ret, le_wxSlider);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxSliderBase")){
+				object_init_ex(return_value, php_wxSliderBase_entry);
+				wxSliderBase* ret = wxDynamicCast(_ptrObj0, wxSliderBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxSliderBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxScrolledWindow")){
+				object_init_ex(return_value, php_wxScrolledWindow_entry);
+				wxScrolledWindow* ret = wxDynamicCast(_ptrObj0, wxScrolledWindow_php);
+				long id_to_find = zend_list_insert(ret, le_wxScrolledWindow);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxNotebookBase")){
+				object_init_ex(return_value, php_wxNotebookBase_entry);
+				wxNotebookBase* ret = wxDynamicCast(_ptrObj0, wxNotebookBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxNotebookBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxListbook")){
+				object_init_ex(return_value, php_wxListbook_entry);
+				wxListbook* ret = wxDynamicCast(_ptrObj0, wxListbook_php);
+				long id_to_find = zend_list_insert(ret, le_wxListbook);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxGridSizer")){
+				object_init_ex(return_value, php_wxGridSizer_entry);
+				wxGridSizer* ret = wxDynamicCast(_ptrObj0, wxGridSizer_php);
+				long id_to_find = zend_list_insert(ret, le_wxGridSizer);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxGridBagSizer")){
+				object_init_ex(return_value, php_wxGridBagSizer_entry);
+				wxGridBagSizer* ret = wxDynamicCast(_ptrObj0, wxGridBagSizer_php);
+				long id_to_find = zend_list_insert(ret, le_wxGridBagSizer);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxGBSizerItem")){
+				object_init_ex(return_value, php_wxGBSizerItem_entry);
+				wxGBSizerItem* ret = wxDynamicCast(_ptrObj0, wxGBSizerItem_php);
+				long id_to_find = zend_list_insert(ret, le_wxGBSizerItem);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
 		}
 	}
 }
@@ -1398,6 +1810,242 @@ INIT_CLASS_ENTRY(cf, PHP_wxHyperlinkEvent_NAME , php_wxHyperlinkEvent_functions)
 php_wxHyperlinkEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
 le_wxHyperlinkEvent = zend_register_list_destructors_ex(php_wxHyperlinkEvent_destruction_handler, NULL, le_wxHyperlinkEvent_name, module_number);
 
+INIT_CLASS_ENTRY(cf, PHP_wxMenuBarBase_NAME , php_wxMenuBarBase_functions);
+php_wxMenuBarBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxMenuBarBase = zend_register_list_destructors_ex(php_wxMenuBarBase_destruction_handler, NULL, le_wxMenuBarBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxAuiToolBarItem_NAME , php_wxAuiToolBarItem_functions);
+php_wxAuiToolBarItem_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxAuiToolBarItem = zend_register_list_destructors_ex(php_wxAuiToolBarItem_destruction_handler, NULL, le_wxAuiToolBarItem_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxAuiToolBarArt_NAME , php_wxAuiToolBarArt_functions);
+php_wxAuiToolBarArt_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxAuiToolBarArt = zend_register_list_destructors_ex(php_wxAuiToolBarArt_destruction_handler, NULL, le_wxAuiToolBarArt_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxAuiToolBar_NAME , php_wxAuiToolBar_functions);
+php_wxAuiToolBar_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxAuiToolBar = zend_register_list_destructors_ex(php_wxAuiToolBar_destruction_handler, NULL, le_wxAuiToolBar_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxDialogBase_NAME , php_wxDialogBase_functions);
+php_wxDialogBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxDialogBase = zend_register_list_destructors_ex(php_wxDialogBase_destruction_handler, NULL, le_wxDialogBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxStdDialogButtonSizer_NAME , php_wxStdDialogButtonSizer_functions);
+php_wxStdDialogButtonSizer_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxStdDialogButtonSizer = zend_register_list_destructors_ex(php_wxStdDialogButtonSizer_destruction_handler, NULL, le_wxStdDialogButtonSizer_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxHtmlWindow_NAME , php_wxHtmlWindow_functions);
+php_wxHtmlWindow_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxHtmlWindow = zend_register_list_destructors_ex(php_wxHtmlWindow_destruction_handler, NULL, le_wxHtmlWindow_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxHtmlContainerCell_NAME , php_wxHtmlContainerCell_functions);
+php_wxHtmlContainerCell_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxHtmlContainerCell = zend_register_list_destructors_ex(php_wxHtmlContainerCell_destruction_handler, NULL, le_wxHtmlContainerCell_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxHtmlCell_NAME , php_wxHtmlCell_functions);
+php_wxHtmlCell_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxHtmlCell = zend_register_list_destructors_ex(php_wxHtmlCell_destruction_handler, NULL, le_wxHtmlCell_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxHtmlRenderingInfo_NAME , php_wxHtmlRenderingInfo_functions);
+php_wxHtmlRenderingInfo_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxHtmlRenderingInfo = zend_register_list_destructors_ex(php_wxHtmlRenderingInfo_destruction_handler, NULL, le_wxHtmlRenderingInfo_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxHtmlSelection_NAME , php_wxHtmlSelection_functions);
+php_wxHtmlSelection_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxHtmlSelection = zend_register_list_destructors_ex(php_wxHtmlSelection_destruction_handler, NULL, le_wxHtmlSelection_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxHtmlLinkInfo_NAME , php_wxHtmlLinkInfo_functions);
+php_wxHtmlLinkInfo_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxHtmlLinkInfo = zend_register_list_destructors_ex(php_wxHtmlLinkInfo_destruction_handler, NULL, le_wxHtmlLinkInfo_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxRichTextCtrl_NAME , php_wxRichTextCtrl_functions);
+php_wxRichTextCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxRichTextCtrl = zend_register_list_destructors_ex(php_wxRichTextCtrl_destruction_handler, NULL, le_wxRichTextCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxTextAttr_NAME , php_wxTextAttr_functions);
+php_wxTextAttr_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxTextAttr = zend_register_list_destructors_ex(php_wxTextAttr_destruction_handler, NULL, le_wxTextAttr_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxTextAttrEx_NAME , php_wxTextAttrEx_functions);
+php_wxTextAttrEx_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxTextAttrEx = zend_register_list_destructors_ex(php_wxTextAttrEx_destruction_handler, NULL, le_wxTextAttrEx_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxRichTextRange_NAME , php_wxRichTextRange_functions);
+php_wxRichTextRange_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxRichTextRange = zend_register_list_destructors_ex(php_wxRichTextRange_destruction_handler, NULL, le_wxRichTextRange_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxRichTextAttr_NAME , php_wxRichTextAttr_functions);
+php_wxRichTextAttr_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxRichTextAttr = zend_register_list_destructors_ex(php_wxRichTextAttr_destruction_handler, NULL, le_wxRichTextAttr_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxCommandProcessor_NAME , php_wxCommandProcessor_functions);
+php_wxCommandProcessor_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxCommandProcessor = zend_register_list_destructors_ex(php_wxCommandProcessor_destruction_handler, NULL, le_wxCommandProcessor_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxRichTextLine_NAME , php_wxRichTextLine_functions);
+php_wxRichTextLine_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxRichTextLine = zend_register_list_destructors_ex(php_wxRichTextLine_destruction_handler, NULL, le_wxRichTextLine_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellCoords_NAME , php_wxGridCellCoords_functions);
+php_wxGridCellCoords_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellCoords = zend_register_list_destructors_ex(php_wxGridCellCoords_destruction_handler, NULL, le_wxGridCellCoords_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellAttr_NAME , php_wxGridCellAttr_functions);
+php_wxGridCellAttr_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellAttr = zend_register_list_destructors_ex(php_wxGridCellAttr_destruction_handler, NULL, le_wxGridCellAttr_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellRenderer_NAME , php_wxGridCellRenderer_functions);
+php_wxGridCellRenderer_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellRenderer = zend_register_list_destructors_ex(php_wxGridCellRenderer_destruction_handler, NULL, le_wxGridCellRenderer_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellWorker_NAME , php_wxGridCellWorker_functions);
+php_wxGridCellWorker_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellWorker = zend_register_list_destructors_ex(php_wxGridCellWorker_destruction_handler, NULL, le_wxGridCellWorker_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxRegion_NAME , php_wxRegion_functions);
+php_wxRegion_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxRegion = zend_register_list_destructors_ex(php_wxRegion_destruction_handler, NULL, le_wxRegion_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxRegionBase_NAME , php_wxRegionBase_functions);
+php_wxRegionBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxRegionBase = zend_register_list_destructors_ex(php_wxRegionBase_destruction_handler, NULL, le_wxRegionBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellEditor_NAME , php_wxGridCellEditor_functions);
+php_wxGridCellEditor_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellEditor = zend_register_list_destructors_ex(php_wxGridCellEditor_destruction_handler, NULL, le_wxGridCellEditor_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridTableBase_NAME , php_wxGridTableBase_functions);
+php_wxGridTableBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridTableBase = zend_register_list_destructors_ex(php_wxGridTableBase_destruction_handler, NULL, le_wxGridTableBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellAttrProvider_NAME , php_wxGridCellAttrProvider_functions);
+php_wxGridCellAttrProvider_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellAttrProvider = zend_register_list_destructors_ex(php_wxGridCellAttrProvider_destruction_handler, NULL, le_wxGridCellAttrProvider_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxSearchCtrl_NAME , php_wxSearchCtrl_functions);
+php_wxSearchCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxSearchCtrl = zend_register_list_destructors_ex(php_wxSearchCtrl_destruction_handler, NULL, le_wxSearchCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxColourPickerCtrl_NAME , php_wxColourPickerCtrl_functions);
+php_wxColourPickerCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxColourPickerCtrl = zend_register_list_destructors_ex(php_wxColourPickerCtrl_destruction_handler, NULL, le_wxColourPickerCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxFontPickerCtrl_NAME , php_wxFontPickerCtrl_functions);
+php_wxFontPickerCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxFontPickerCtrl = zend_register_list_destructors_ex(php_wxFontPickerCtrl_destruction_handler, NULL, le_wxFontPickerCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxFilePickerCtrl_NAME , php_wxFilePickerCtrl_functions);
+php_wxFilePickerCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxFilePickerCtrl = zend_register_list_destructors_ex(php_wxFilePickerCtrl_destruction_handler, NULL, le_wxFilePickerCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxFileDirPickerCtrlBase_NAME , php_wxFileDirPickerCtrlBase_functions);
+php_wxFileDirPickerCtrlBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxFileDirPickerCtrlBase = zend_register_list_destructors_ex(php_wxFileDirPickerCtrlBase_destruction_handler, NULL, le_wxFileDirPickerCtrlBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxDirPickerCtrl_NAME , php_wxDirPickerCtrl_functions);
+php_wxDirPickerCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxDirPickerCtrl = zend_register_list_destructors_ex(php_wxDirPickerCtrl_destruction_handler, NULL, le_wxDirPickerCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxDatePickerCtrlBase_NAME , php_wxDatePickerCtrlBase_functions);
+php_wxDatePickerCtrlBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxDatePickerCtrlBase = zend_register_list_destructors_ex(php_wxDatePickerCtrlBase_destruction_handler, NULL, le_wxDatePickerCtrlBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxDatePickerCtrlGeneric_NAME , php_wxDatePickerCtrlGeneric_functions);
+php_wxDatePickerCtrlGeneric_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxDatePickerCtrlGeneric = zend_register_list_destructors_ex(php_wxDatePickerCtrlGeneric_destruction_handler, NULL, le_wxDatePickerCtrlGeneric_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxDatePickerCtrl_NAME , php_wxDatePickerCtrl_functions);
+php_wxDatePickerCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxDatePickerCtrl = zend_register_list_destructors_ex(php_wxDatePickerCtrl_destruction_handler, NULL, le_wxDatePickerCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxScrollBar_NAME , php_wxScrollBar_functions);
+php_wxScrollBar_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxScrollBar = zend_register_list_destructors_ex(php_wxScrollBar_destruction_handler, NULL, le_wxScrollBar_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxSpinCtrl_NAME , php_wxSpinCtrl_functions);
+php_wxSpinCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxSpinCtrl = zend_register_list_destructors_ex(php_wxSpinCtrl_destruction_handler, NULL, le_wxSpinCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxSpinButton_NAME , php_wxSpinButton_functions);
+php_wxSpinButton_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxSpinButton = zend_register_list_destructors_ex(php_wxSpinButton_destruction_handler, NULL, le_wxSpinButton_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGenericDirCtrl_NAME , php_wxGenericDirCtrl_functions);
+php_wxGenericDirCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGenericDirCtrl = zend_register_list_destructors_ex(php_wxGenericDirCtrl_destruction_handler, NULL, le_wxGenericDirCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxDirFilterListCtrl_NAME , php_wxDirFilterListCtrl_functions);
+php_wxDirFilterListCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxDirFilterListCtrl = zend_register_list_destructors_ex(php_wxDirFilterListCtrl_destruction_handler, NULL, le_wxDirFilterListCtrl_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxChoiceBase_NAME , php_wxChoiceBase_functions);
+php_wxChoiceBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxChoiceBase = zend_register_list_destructors_ex(php_wxChoiceBase_destruction_handler, NULL, le_wxChoiceBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxBitmapButtonBase_NAME , php_wxBitmapButtonBase_functions);
+php_wxBitmapButtonBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxBitmapButtonBase = zend_register_list_destructors_ex(php_wxBitmapButtonBase_destruction_handler, NULL, le_wxBitmapButtonBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxTextCtrlBase_NAME , php_wxTextCtrlBase_functions);
+php_wxTextCtrlBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxTextCtrlBase = zend_register_list_destructors_ex(php_wxTextCtrlBase_destruction_handler, NULL, le_wxTextCtrlBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxBitmapComboBox_NAME , php_wxBitmapComboBox_functions);
+php_wxBitmapComboBox_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxBitmapComboBox = zend_register_list_destructors_ex(php_wxBitmapComboBox_destruction_handler, NULL, le_wxBitmapComboBox_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxCheckBoxBase_NAME , php_wxCheckBoxBase_functions);
+php_wxCheckBoxBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxCheckBoxBase = zend_register_list_destructors_ex(php_wxCheckBoxBase_destruction_handler, NULL, le_wxCheckBoxBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxRadioBoxBase_NAME , php_wxRadioBoxBase_functions);
+php_wxRadioBoxBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxRadioBoxBase = zend_register_list_destructors_ex(php_wxRadioBoxBase_destruction_handler, NULL, le_wxRadioBoxBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxStaticLineBase_NAME , php_wxStaticLineBase_functions);
+php_wxStaticLineBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxStaticLineBase = zend_register_list_destructors_ex(php_wxStaticLineBase_destruction_handler, NULL, le_wxStaticLineBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxStaticLine_NAME , php_wxStaticLine_functions);
+php_wxStaticLine_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxStaticLine = zend_register_list_destructors_ex(php_wxStaticLine_destruction_handler, NULL, le_wxStaticLine_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxSlider_NAME , php_wxSlider_functions);
+php_wxSlider_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxSlider = zend_register_list_destructors_ex(php_wxSlider_destruction_handler, NULL, le_wxSlider_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxSliderBase_NAME , php_wxSliderBase_functions);
+php_wxSliderBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxSliderBase = zend_register_list_destructors_ex(php_wxSliderBase_destruction_handler, NULL, le_wxSliderBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxScrolledWindow_NAME , php_wxScrolledWindow_functions);
+php_wxScrolledWindow_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxScrolledWindow = zend_register_list_destructors_ex(php_wxScrolledWindow_destruction_handler, NULL, le_wxScrolledWindow_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxScrollHelper_NAME , php_wxScrollHelper_functions);
+php_wxScrollHelper_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxScrollHelper = zend_register_list_destructors_ex(php_wxScrollHelper_destruction_handler, NULL, le_wxScrollHelper_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxNotebookBase_NAME , php_wxNotebookBase_functions);
+php_wxNotebookBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxNotebookBase = zend_register_list_destructors_ex(php_wxNotebookBase_destruction_handler, NULL, le_wxNotebookBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxListbook_NAME , php_wxListbook_functions);
+php_wxListbook_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxListbook = zend_register_list_destructors_ex(php_wxListbook_destruction_handler, NULL, le_wxListbook_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridSizer_NAME , php_wxGridSizer_functions);
+php_wxGridSizer_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridSizer = zend_register_list_destructors_ex(php_wxGridSizer_destruction_handler, NULL, le_wxGridSizer_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridBagSizer_NAME , php_wxGridBagSizer_functions);
+php_wxGridBagSizer_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridBagSizer = zend_register_list_destructors_ex(php_wxGridBagSizer_destruction_handler, NULL, le_wxGridBagSizer_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGBSizerItem_NAME , php_wxGBSizerItem_functions);
+php_wxGBSizerItem_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGBSizerItem = zend_register_list_destructors_ex(php_wxGBSizerItem_destruction_handler, NULL, le_wxGBSizerItem_name, module_number);
+
 
 REGISTER_LONG_CONSTANT("wxFR_REPLACEDIALOG", wxFR_REPLACEDIALOG, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxFR_NOUPDOWN", wxFR_NOUPDOWN, CONST_CS | CONST_PERSISTENT);
@@ -1592,15 +2240,24 @@ REGISTER_LONG_CONSTANT("wxPATH_NORM_ABSOLUTE", wxPATH_NORM_ABSOLUTE, CONST_CS | 
 REGISTER_LONG_CONSTANT("wxPATH_NORM_LONG", wxPATH_NORM_LONG, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPATH_NORM_SHORTCUT", wxPATH_NORM_SHORTCUT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPATH_NORM_ALL", wxPATH_NORM_ALL, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDP_DEFAULT", wxDP_DEFAULT, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDP_SPIN", wxDP_SPIN, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDP_DROPDOWN", wxDP_DROPDOWN, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDP_SHOWCENTURY", wxDP_SHOWCENTURY, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDP_ALLOWNONE", wxDP_ALLOWNONE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxSOCKET_INPUT_FLAG", wxSOCKET_INPUT_FLAG, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxSOCKET_OUTPUT_FLAG", wxSOCKET_OUTPUT_FLAG, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxSOCKET_CONNECTION_FLAG", wxSOCKET_CONNECTION_FLAG, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxSOCKET_LOST_FLAG", wxSOCKET_LOST_FLAG, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxODCB_PAINTING_CONTROL", wxODCB_PAINTING_CONTROL, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxODCB_PAINTING_SELECTED", wxODCB_PAINTING_SELECTED, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxDrag_CopyOnly", wxDrag_CopyOnly, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxDrag_AllowMove", wxDrag_AllowMove, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxDrag_DefaultMove", wxDrag_DefaultMove, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPROCESS_DEFAULT", wxPROCESS_DEFAULT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPROCESS_REDIRECT", wxPROCESS_REDIRECT, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_MF_ON_BUTTON", wxCC_MF_ON_BUTTON, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_MF_ON_CLICK_AREA", wxCC_MF_ON_CLICK_AREA, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxARCH_INVALID", wxARCH_INVALID, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxARCH_32", wxARCH_32, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxARCH_64", wxARCH_64, CONST_CS | CONST_PERSISTENT);
@@ -1641,6 +2298,8 @@ REGISTER_LONG_CONSTANT("wxHTML_URL_OTHER", wxHTML_URL_OTHER, CONST_CS | CONST_PE
 REGISTER_LONG_CONSTANT("wxKEY_NONE", wxKEY_NONE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxKEY_INTEGER", wxKEY_INTEGER, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxKEY_STRING", wxKEY_STRING, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxODCB_DCLICK_CYCLES", wxODCB_DCLICK_CYCLES, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxODCB_STD_CONTROL_PAINT", wxODCB_STD_CONTROL_PAINT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxBORDER_DEFAULT", wxBORDER_DEFAULT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxBORDER_NONE", wxBORDER_NONE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxBORDER_STATIC", wxBORDER_STATIC, CONST_CS | CONST_PERSISTENT);
@@ -1650,6 +2309,9 @@ REGISTER_LONG_CONSTANT("wxBORDER_SUNKEN", wxBORDER_SUNKEN, CONST_CS | CONST_PERS
 REGISTER_LONG_CONSTANT("wxBORDER_DOUBLE", wxBORDER_DOUBLE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxBORDER_THEME", wxBORDER_THEME, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxBORDER_MASK", wxBORDER_MASK, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxHDR_SORT_ICON_NONE", wxHDR_SORT_ICON_NONE, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxHDR_SORT_ICON_UP", wxHDR_SORT_ICON_UP, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxHDR_SORT_ICON_DOWN", wxHDR_SORT_ICON_DOWN, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxCURSOR_NONE", wxCURSOR_NONE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxCURSOR_ARROW", wxCURSOR_ARROW, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxCURSOR_RIGHT_ARROW", wxCURSOR_RIGHT_ARROW, CONST_CS | CONST_PERSISTENT);
@@ -2566,6 +3228,19 @@ REGISTER_LONG_CONSTANT("wxCAL_HITTEST_DAY", wxCAL_HITTEST_DAY, CONST_CS | CONST_
 REGISTER_LONG_CONSTANT("wxCAL_HITTEST_INCMONTH", wxCAL_HITTEST_INCMONTH, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxCAL_HITTEST_DECMONTH", wxCAL_HITTEST_DECMONTH, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxCAL_HITTEST_SURROUNDING_WEEK", wxCAL_HITTEST_SURROUNDING_WEEK, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_BUTTON_OUTSIDE_BORDER", wxCC_BUTTON_OUTSIDE_BORDER, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_POPUP_ON_MOUSE_UP", wxCC_POPUP_ON_MOUSE_UP, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_NO_TEXT_AUTO_SELECT", wxCC_NO_TEXT_AUTO_SELECT, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_BUTTON_STAYS_DOWN", wxCC_BUTTON_STAYS_DOWN, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_FULL_BUTTON", wxCC_FULL_BUTTON, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_BUTTON_COVERS_BORDER", wxCC_BUTTON_COVERS_BORDER, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_IFLAG_CREATED", wxCC_IFLAG_CREATED, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_IFLAG_BUTTON_OUTSIDE", wxCC_IFLAG_BUTTON_OUTSIDE, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_IFLAG_INDENT_SET", wxCC_IFLAG_INDENT_SET, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_IFLAG_PARENT_TAB_TRAVERSAL", wxCC_IFLAG_PARENT_TAB_TRAVERSAL, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_IFLAG_USE_ALT_POPUP", wxCC_IFLAG_USE_ALT_POPUP, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_IFLAG_DISABLE_POPUP_ANIM", wxCC_IFLAG_DISABLE_POPUP_ANIM, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_IFLAG_HAS_NONSTANDARD_BUTTON", wxCC_IFLAG_HAS_NONSTANDARD_BUTTON, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPLATFORM_CURRENT", wxPLATFORM_CURRENT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPLATFORM_UNIX", wxPLATFORM_UNIX, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPLATFORM_WINDOWS", wxPLATFORM_WINDOWS, CONST_CS | CONST_PERSISTENT);
@@ -2610,6 +3285,23 @@ REGISTER_LONG_CONSTANT("wxKILL_BAD_SIGNAL", wxKILL_BAD_SIGNAL, CONST_CS | CONST_
 REGISTER_LONG_CONSTANT("wxKILL_ACCESS_DENIED", wxKILL_ACCESS_DENIED, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxKILL_NO_PROCESS", wxKILL_NO_PROCESS, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxKILL_ERROR", wxKILL_ERROR, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_DISABLED", wxCONTROL_DISABLED, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_FOCUSED", wxCONTROL_FOCUSED, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_PRESSED", wxCONTROL_PRESSED, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_SPECIAL", wxCONTROL_SPECIAL, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_ISDEFAULT", wxCONTROL_ISDEFAULT, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_ISSUBMENU", wxCONTROL_ISSUBMENU, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_EXPANDED", wxCONTROL_EXPANDED, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_SIZEGRIP", wxCONTROL_SIZEGRIP, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_CURRENT", wxCONTROL_CURRENT, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_SELECTED", wxCONTROL_SELECTED, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_CHECKED", wxCONTROL_CHECKED, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_CHECKABLE", wxCONTROL_CHECKABLE, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_UNDETERMINED", wxCONTROL_UNDETERMINED, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_FLAGS_MASK", wxCONTROL_FLAGS_MASK, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCONTROL_DIRTY", wxCONTROL_DIRTY, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_SPECIAL_DCLICK", wxCC_SPECIAL_DCLICK, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCC_STD_BUTTON", wxCC_STD_BUTTON, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPRINTBIN_DEFAULT", wxPRINTBIN_DEFAULT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPRINTBIN_ONLYONE", wxPRINTBIN_ONLYONE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxPRINTBIN_LOWER", wxPRINTBIN_LOWER, CONST_CS | CONST_PERSISTENT);
@@ -2657,6 +3349,7 @@ REGISTER_LONG_CONSTANT("wxAUI_BUTTON_DOWN", wxAUI_BUTTON_DOWN, CONST_CS | CONST_
 REGISTER_LONG_CONSTANT("wxAUI_BUTTON_CUSTOM1", wxAUI_BUTTON_CUSTOM1, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxAUI_BUTTON_CUSTOM2", wxAUI_BUTTON_CUSTOM2, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxAUI_BUTTON_CUSTOM3", wxAUI_BUTTON_CUSTOM3, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxCP_IFLAG_CREATED", wxCP_IFLAG_CREATED, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxMM_TEXT", wxMM_TEXT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxMM_LOMETRIC", wxMM_LOMETRIC, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxMM_HIMETRIC", wxMM_HIMETRIC, CONST_CS | CONST_PERSISTENT);
@@ -2757,6 +3450,11 @@ REGISTER_LONG_CONSTANT("wxHTML_FIND_NEAREST_BEFORE", wxHTML_FIND_NEAREST_BEFORE,
 REGISTER_LONG_CONSTANT("wxHTML_FIND_NEAREST_AFTER", wxHTML_FIND_NEAREST_AFTER, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxCONVERT_STRICT", wxCONVERT_STRICT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxCONVERT_SUBSTITUTE", wxCONVERT_SUBSTITUTE, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDIRCTRL_DIR_ONLY", wxDIRCTRL_DIR_ONLY, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDIRCTRL_SELECT_FIRST", wxDIRCTRL_SELECT_FIRST, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDIRCTRL_SHOW_FILTERS", wxDIRCTRL_SHOW_FILTERS, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDIRCTRL_3D_INTERNAL", wxDIRCTRL_3D_INTERNAL, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDIRCTRL_EDIT_LABELS", wxDIRCTRL_EDIT_LABELS, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxTREE_EXPAND_EXPAND", wxTREE_EXPAND_EXPAND, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxTREE_EXPAND_COLLAPSE", wxTREE_EXPAND_COLLAPSE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxTREE_EXPAND_COLLAPSE_RESET", wxTREE_EXPAND_COLLAPSE_RESET, CONST_CS | CONST_PERSISTENT);
@@ -3180,6 +3878,7 @@ REGISTER_LONG_CONSTANT("wxHL_ALIGN_LEFT", wxHL_ALIGN_LEFT, CONST_CS | CONST_PERS
 REGISTER_LONG_CONSTANT("wxHL_ALIGN_RIGHT", wxHL_ALIGN_RIGHT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxHL_ALIGN_CENTRE", wxHL_ALIGN_CENTRE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxHL_DEFAULT_STYLE", wxHL_DEFAULT_STYLE, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxDEFAULT_DIALOG_STYLE", wxDEFAULT_DIALOG_STYLE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_ACTIVATE", wxEVT_ACTIVATE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_ACTIVATE_APP", wxEVT_ACTIVATE_APP, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_AUI_FIND_MANAGER", wxEVT_AUI_FIND_MANAGER, CONST_CS | CONST_PERSISTENT);
