@@ -268,7 +268,24 @@ $defConsts = array(
 	"wxHL_DEFAULT_STYLE"=>1,
 	"wxDEFAULT_DIALOG_STYLE"=>1,
 	"wxDEFAULT_FRAME_STYLE"=>1,
-	"wxST_SIZEGRIP"=>1
+	"wxST_SIZEGRIP"=>1,
+	"wxFNTP_DEFAULT_STYLE"=>1,
+	"wxFLP_DEFAULT_STYLE"=>1,
+	"wxDIRP_DEFAULT_STYLE"=>1,
+	"wxDP_DEFAULT"=>1,
+	"wxSB_HORIZONTAL"=>1,
+	"wxSB_VERTICAL"=>1,
+	"wxSP_ARROW_KEYS"=>1,
+	"wxSP_WRAP"=>1,
+	"wxSUNKEN_BORDER"=>1,
+	"wxHW_SCROLLBAR_AUTO"=>1,
+	"wxHW_NO_SELECTION"=>1,
+	"wxHW_SCROLLBAR_NEVER"=>1,
+	"wxHW_DEFAULT_STYLE"=>1,
+	"wxBU_AUTODRAW"=>1,
+	"wxRA_SPECIFY_COLS"=>1,
+	"wxLI_HORIZONTAL"=>1,
+	"wxSL_HORIZONTAL"=>1
 );
 
 //Initialize classes definitios

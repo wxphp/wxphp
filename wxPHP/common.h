@@ -76,6 +76,7 @@
 #include <wx/bmpcbox.h>
 #include <wx/statline.h>
 #include <wx/gbsizer.h>
+#include <wx/html/htmlwin.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
