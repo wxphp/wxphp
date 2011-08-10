@@ -285,8 +285,30 @@ static function_entry php_wxToolBar_functions[] = {
         PHP_ME(php_wxToolBarBase, GetToolsCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, Realize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, ClearTools, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, DeleteTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, DeleteToolByPos, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, AddControl, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, EnableTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, FindById, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, FindControl, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetMargins, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolClientData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolEnabled, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolLongHelp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolPacking, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolPos, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolSeparation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolShortHelp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolState, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, InsertControl, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, InsertSeparator, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, InsertTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, RemoveTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, ToggleTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, SetToolPacking, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, SetToolLongHelp, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
@@ -333,6 +355,8 @@ static function_entry php_wxToolBar_functions[] = {
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStatusBar_entry;
@@ -964,7 +988,16 @@ class wxBitmap_php : public wxBitmap{
 	wxBitmap_php():wxBitmap()
 	{
 	}
-	wxBitmap_php(const wxImage& arg0 , int arg1 = -1):wxBitmap(arg0 , arg1)
+	wxBitmap_php(int arg0 , int arg1 , int arg2 = -0x00000000000000001):wxBitmap(arg0 , arg1 , arg2)
+	{
+	}
+	wxBitmap_php(const char* arg0 , int arg1 , int arg2 , int arg3 = 1):wxBitmap(arg0 , arg1 , arg2 , arg3)
+	{
+	}
+	wxBitmap_php(const wxBitmap& arg0):wxBitmap(arg0)
+	{
+	}
+	wxBitmap_php(const wxImage& arg0 , int arg1 = -0x00000000000000001):wxBitmap(arg0 , arg1)
 	{
 	}
 	zval *evnArray;
@@ -983,6 +1016,18 @@ static function_entry php_wxBitmap_functions[] = {
         PHP_ME(php_wxBitmap, GetDepth, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBitmap, CopyFromIcon, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBitmap, ConvertToImage, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, GetPalette, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, GetMask, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, GetSubBitmap, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, LoadFile, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, IsOk, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SaveFile, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetDepth, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetHeight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetMask, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetPalette, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetWidth, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxObject, IsKindOf, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxMenuBase_entry;
@@ -1112,8 +1157,30 @@ static function_entry php_wxToolBarBase_functions[] = {
         PHP_ME(php_wxToolBarBase, GetToolsCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, Realize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, ClearTools, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, DeleteTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, DeleteToolByPos, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, AddControl, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, EnableTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, FindById, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, FindControl, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetMargins, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolClientData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolEnabled, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolLongHelp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolPacking, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolPos, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolSeparation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolShortHelp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, GetToolState, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, InsertControl, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, InsertSeparator, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, InsertTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, RemoveTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, ToggleTool, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, SetToolPacking, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, SetToolLongHelp, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxToolBarToolBase_entry;
@@ -1824,6 +1891,9 @@ class wxIcon_php : public wxIcon{
 	wxIcon_php():wxIcon()
 	{
 	}
+	wxIcon_php(const wxString& arg0 , wxBitmapType arg1 = wxBITMAP_TYPE_XPM , int arg2 = -0x00000000000000001):wxIcon(arg0 , arg1 , arg2)
+	{
+	}
 	zval *evnArray;
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
@@ -1841,6 +1911,18 @@ static function_entry php_wxIcon_functions[] = {
         PHP_ME(php_wxBitmap, GetDepth, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBitmap, CopyFromIcon, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBitmap, ConvertToImage, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, GetPalette, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, GetMask, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, GetSubBitmap, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, LoadFile, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, IsOk, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SaveFile, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetDepth, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetHeight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetMask, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetPalette, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxBitmap, SetWidth, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxObject, IsKindOf, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxTextCtrl_entry;
@@ -9359,5 +9441,74 @@ static function_entry php_wxGBSizerItem_functions[] = {
         PHP_ME(php_wxGBSizerItem, SetPos, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGBSizerItem, GetPos, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGBSizerItem, Intersects, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxMask_entry;
+void php_wxMask_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxMask_NAME "wxMask"
+#define le_wxMask_name  "native wxMask"
+
+class wxMask_php : public wxMask{
+	public:
+	wxMask_php():wxMask()
+	{
+	}
+	wxMask_php(const wxBitmap& arg0 , const wxColour& arg1):wxMask(arg0 , arg1)
+	{
+	}
+	wxMask_php(const wxBitmap& arg0 , int arg1):wxMask(arg0 , arg1)
+	{
+	}
+	wxMask_php(const wxBitmap& arg0):wxMask(arg0)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxMask;
+
+static function_entry php_wxMask_functions[] = {
+        PHP_ME(php_wxMask, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxMask, Create, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxPalette_entry;
+void php_wxPalette_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPalette_NAME "wxPalette"
+#define le_wxPalette_name  "native wxPalette"
+
+class wxPalette_php : public wxPalette{
+	public:
+	wxPalette_php(const wxPalette& arg0):wxPalette(arg0)
+	{
+	}
+	wxPalette_php():wxPalette()
+	{
+	}
+	wxPalette_php(int arg0 , const unsigned char* arg1 , const unsigned char* arg2 , const unsigned char* arg3):wxPalette(arg0 , arg1 , arg2 , arg3)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxPalette;
+
+static function_entry php_wxPalette_functions[] = {
+        PHP_ME(php_wxPalette, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxPalette, IsOk, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPalette, GetRGB, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPalette, GetPixel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPalette, GetColoursCount, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPalette, Create, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };

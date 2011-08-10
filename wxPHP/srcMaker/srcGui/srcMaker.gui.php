@@ -1,5 +1,15 @@
 <?php
 	dl("wxwidgets.so");
+	
+	//Change to correct working directory to be able to execute the script from everywhere
+	if($argv[0] == $_SERVER["SCRIPT_NAME"])
+	{
+		chdir(str_replace("srcMaker.gui.php" , "", $argv[0]));
+	}
+	else
+	{
+		chdir(getcwd() . "/" . str_replace($_SERVER["SCRIPT_NAME"] , "", $_SERVER["PHP_SELF"]));
+	}
 
 	$cls = unserialize(file_get_contents('classes.dump'));
 	ksort($cls);
@@ -285,15 +295,14 @@
 			
 			$this->SetSizer($sz);
 			$tb = $this->CreateToolBar();
-			$tb->AddTool(-1,"Abrir",new wxBitmap("sample.xpm",wxBITMAP_TYPE_XPM),"Abrir documentos");
+			$tb->AddTool(-1,"Abrir",new wxIcon("sample.xpm",wxBITMAP_TYPE_XPM),"Abrir documentos");
 			$tb->AddSeparator();
 			$tb->Realize();
 			
 			$mb = new wxMenuBar();
 			$mn = new wxMenu();
 			
-			$mn->AppendCheckItem(-1,"&Salvar");
-			//$mn->Append(15,"abrir","serve para abrir");
+			$mn->Append(-1,"&Salvar");
 			
 			$mb->Append($mn,"&File");
 			$this->SetMenuBar($mb);
@@ -318,8 +327,6 @@
 		
 		function OnExit()
 		{
-			
-			echo "kg";
 			return 0;
 		}
 	}
