@@ -339,6 +339,10 @@ zend_class_entry *php_wxGridBagSizer_entry;
 int le_wxGridBagSizer;
 zend_class_entry *php_wxGBSizerItem_entry;
 int le_wxGBSizerItem;
+zend_class_entry *php_wxMask_entry;
+int le_wxMask;
+zend_class_entry *php_wxPalette_entry;
+int le_wxPalette;
 
 // <--- entries
 
@@ -354,18 +358,20 @@ PHP_FUNCTION(php_wxInitialize)
 
 PHP_FUNCTION(php_wxInitAllImageHandlers)
 {
-        wxInitAllImageHandlers();
+	wxInitAllImageHandlers();
 	RETVAL_TRUE;
 }
 
 PHP_FUNCTION(php_wxExecute)
 {
-        char* _argStr0;
+	char* _argStr0;
 	int _argStr0_len;
-        if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s", &_argStr0 , &_argStr0_len ) == SUCCESS)
-        {
+    
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
 		long ret0;
-	        ret0 = wxExecute(wxString(_argStr0, wxConvUTF8));
+		ret0 = wxExecute(wxString(_argStr0, wxConvUTF8));
+		
 		RETURN_LONG((long)ret0)
 	}
 }
@@ -374,6 +380,7 @@ PHP_FUNCTION(php_wxEntry)
 {
 	int argc = 1;
 	char *argv[2] = { "embed4", NULL };
+	
 	RETVAL_LONG(wxEntry(argc,argv));
 }
 
@@ -1351,6 +1358,20 @@ PHP_FUNCTION(php_wxDynamicCast){
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
+			else if(!strcmp(_argStr0, "wxMask")){
+				object_init_ex(return_value, php_wxMask_entry);
+				wxMask* ret = wxDynamicCast(_ptrObj0, wxMask_php);
+				long id_to_find = zend_list_insert(ret, le_wxMask);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxPalette")){
+				object_init_ex(return_value, php_wxPalette_entry);
+				wxPalette* ret = wxDynamicCast(_ptrObj0, wxPalette_php);
+				long id_to_find = zend_list_insert(ret, le_wxPalette);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
 		}
 	}
 }
@@ -2045,6 +2066,14 @@ le_wxGridBagSizer = zend_register_list_destructors_ex(php_wxGridBagSizer_destruc
 INIT_CLASS_ENTRY(cf, PHP_wxGBSizerItem_NAME , php_wxGBSizerItem_functions);
 php_wxGBSizerItem_entry = zend_register_internal_class(&cf TSRMLS_CC);
 le_wxGBSizerItem = zend_register_list_destructors_ex(php_wxGBSizerItem_destruction_handler, NULL, le_wxGBSizerItem_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxMask_NAME , php_wxMask_functions);
+php_wxMask_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxMask = zend_register_list_destructors_ex(php_wxMask_destruction_handler, NULL, le_wxMask_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPalette_NAME , php_wxPalette_functions);
+php_wxPalette_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPalette = zend_register_list_destructors_ex(php_wxPalette_destruction_handler, NULL, le_wxPalette_name, module_number);
 
 
 REGISTER_LONG_CONSTANT("wxFR_REPLACEDIALOG", wxFR_REPLACEDIALOG, CONST_CS | CONST_PERSISTENT);
@@ -3896,6 +3925,7 @@ REGISTER_LONG_CONSTANT("wxHW_DEFAULT_STYLE", wxHW_DEFAULT_STYLE, CONST_CS | CONS
 REGISTER_LONG_CONSTANT("wxBU_AUTODRAW", wxBU_AUTODRAW, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxRA_SPECIFY_COLS", wxRA_SPECIFY_COLS, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxLI_HORIZONTAL", wxLI_HORIZONTAL, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxSL_HORIZONTAL", wxSL_HORIZONTAL, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_ACTIVATE", wxEVT_ACTIVATE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_ACTIVATE_APP", wxEVT_ACTIVATE_APP, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_AUI_FIND_MANAGER", wxEVT_AUI_FIND_MANAGER, CONST_CS | CONST_PERSISTENT);
