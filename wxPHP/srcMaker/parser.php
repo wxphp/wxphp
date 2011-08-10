@@ -266,7 +266,9 @@ $defConsts = array(
 	"wxHL_ALIGN_RIGHT"=>1,
 	"wxHL_ALIGN_CENTRE"=>1,
 	"wxHL_DEFAULT_STYLE"=>1,
-	"wxDEFAULT_DIALOG_STYLE"=>1
+	"wxDEFAULT_DIALOG_STYLE"=>1,
+	"wxDEFAULT_FRAME_STYLE"=>1,
+	"wxST_SIZEGRIP"=>1
 );
 
 //Initialize classes definitios
@@ -1180,9 +1182,9 @@ if(isset($argv[1]) && file_exists($argv[1]))
 	$defIni = unserialize(file_get_contents($argv[1]));
 	
 	//blacklist methods
-	unset($defIni['wxSizer']['Show']);
+	unset($defIni['wxSizer']['Show']);/*
 	unset($defIni['wxMenuItem']['wxMenuItem']);
-	unset($defIni['wxDialog']['SetModal']);
+	unset($defIni['wxDialog']['SetModal']);*/
 }
 
 //Load class enums parsed by gccxml

@@ -94,6 +94,10 @@ void php_wxEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxEvent_php : public wxEvent{
 	public:
+	wxEvent_php(int arg0 = 0 , int arg1 = wxEVT_NULL):wxEvent(arg0 , arg1)
+	{
+	}
+		virtual wxEvent* Clone() const;
 	zval *evnArray;
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
@@ -118,6 +122,8 @@ static function_entry php_wxEvent_functions[] = {
         PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxWindow_entry;
@@ -770,6 +776,12 @@ void php_wxMenuItem_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxMenuItem_php : public wxMenuItem{
 	public:
+	wxMenuItem_php(wxMenu* arg0 = 0u , int arg1 = wxID_SEPARATOR , const wxString& arg2 = wxEmptyString , const wxString& arg3 = wxEmptyString , wxItemKind arg4 = wxITEM_NORMAL , wxMenu* arg5 = 0u):wxMenuItem(arg0 , arg1 , arg2 , arg3 , arg4 , arg5)
+	{
+	}
+	wxMenuItem_php(wxMenu* arg0 , int arg1 , const wxString& arg2 , const wxString& arg3 , bool arg4 , wxMenu* arg5 = 0u):wxMenuItem(arg0 , arg1 , arg2 , arg3 , arg4 , arg5)
+	{
+	}
 	zval *evnArray;
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
@@ -786,6 +798,7 @@ static function_entry php_wxMenuItem_functions[] = {
         PHP_ME(php_wxMenuItem, SetBitmap, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuItem, GetBitmap, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuItem, GetItemLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxMenuItem, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
         PHP_ME(php_wxMenuItemBase, SetMenu, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuItemBase, GetMenu, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuItemBase, GetId, NULL,ZEND_ACC_PUBLIC)
@@ -805,6 +818,7 @@ static function_entry php_wxMenuItem_functions[] = {
         PHP_ME(php_wxMenuItemBase, GetName, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuItemBase, GetText, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuItemBase, SetItemLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxMenuItemBase, GetLabelText, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxMenuItemBase_entry;
@@ -847,6 +861,7 @@ static function_entry php_wxMenuItemBase_functions[] = {
         PHP_ME(php_wxMenuItemBase, GetName, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuItemBase, GetText, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuItemBase, SetItemLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxMenuItemBase, GetLabelText, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxMenu_entry;
@@ -1045,6 +1060,7 @@ static function_entry php_wxMenuBar_functions[] = {
         PHP_ME(php_wxMenuBarBase, SetHelpString, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuBarBase, SetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxMenuBarBase, SetMenuLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvtHandler, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxToolBarBase_entry;
@@ -1193,6 +1209,7 @@ static function_entry php_wxCommandEvent_functions[] = {
         PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxPanel_entry;
@@ -1711,6 +1728,7 @@ static function_entry php_wxTreeEvent_functions[] = {
         PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxCommandEvent, GetSelection, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxCommandEvent, SetString, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxCommandEvent, GetString, NULL,ZEND_ACC_PUBLIC)
@@ -2521,6 +2539,7 @@ static function_entry php_wxFileDialog_functions[] = {
         PHP_ME(php_wxFileDialog, GetPaths, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFileDialog, GetFilenames, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, EndModal, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDialog, SetModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, IsModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialogBase, GetAffirmativeId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialogBase, CreateButtonSizer, NULL,ZEND_ACC_PUBLIC)
@@ -2607,6 +2626,7 @@ static function_entry php_wxDialog_functions[] = {
         PHP_ME(php_wxDialog, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, ShowModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, EndModal, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDialog, SetModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, IsModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialogBase, GetAffirmativeId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialogBase, CreateButtonSizer, NULL,ZEND_ACC_PUBLIC)
@@ -2690,6 +2710,7 @@ static function_entry php_wxMessageDialog_functions[] = {
         PHP_ME(php_wxMessageDialog, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
         PHP_ME(php_wxMessageDialog, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, EndModal, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDialog, SetModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, IsModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialogBase, GetAffirmativeId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialogBase, CreateButtonSizer, NULL,ZEND_ACC_PUBLIC)
@@ -3089,6 +3110,7 @@ static function_entry php_wxListEvent_functions[] = {
         PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxCommandEvent, GetSelection, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxCommandEvent, SetString, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxCommandEvent, GetString, NULL,ZEND_ACC_PUBLIC)
@@ -3666,6 +3688,7 @@ static function_entry php_wxCalendarEvent_functions[] = {
         PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxDateEvent_entry;
@@ -3849,6 +3872,7 @@ static function_entry php_wxTimerEvent_functions[] = {
         PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxIPV4address_entry;
@@ -4054,6 +4078,7 @@ static function_entry php_wxDirDialog_functions[] = {
         PHP_ME(php_wxDirDialog, GetPath, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, EndModal, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDialog, SetModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialog, IsModal, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialogBase, GetAffirmativeId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDialogBase, CreateButtonSizer, NULL,ZEND_ACC_PUBLIC)
@@ -5958,6 +5983,7 @@ static function_entry php_wxHyperlinkEvent_functions[] = {
         PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxObject, IsKindOf, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
