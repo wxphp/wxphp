@@ -73,6 +73,7 @@ static function_entry php_wxFrame_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFrameBase, SetMenuBar, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFrameBase, GetToolBar, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFrameBase, GetMenuBar, NULL,ZEND_ACC_PUBLIC)
@@ -196,6 +197,7 @@ static function_entry php_wxWindow_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxPoint_entry;
@@ -257,7 +259,7 @@ class wxToolBar_php : public wxToolBar{
 	wxToolBar_php():wxToolBar()
 	{
 	}
-	wxToolBar_php(wxWindow* arg0 , int arg1 , const wxPoint& arg2 = wxDefaultPosition , const wxSize& arg3 = wxDefaultSize , long int arg4 = 0 , const wxString& arg5 = wxToolBarNameStr):wxToolBar(arg0 , arg1 , arg2 , arg3 , arg4 , arg5)
+	wxToolBar_php(wxWindow* arg0 , int arg1 , const wxPoint& arg2 = wxDefaultPosition , const wxSize& arg3 = wxDefaultSize , long int arg4 = wxTB_HORIZONTAL , const wxString& arg5 = wxToolBarNameStr):wxToolBar(arg0 , arg1 , arg2 , arg3 , arg4 , arg5)
 	{
 	}
 	zval *evnArray;
@@ -270,46 +272,67 @@ class wxToolBar_php : public wxToolBar{
 extern int le_wxToolBar;
 
 static function_entry php_wxToolBar_functions[] = {
-        PHP_ME(php_wxToolBar, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-        PHP_ME(php_wxToolBar, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBar, SetMargins, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBar, SetToolSeparation, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBar, FindToolForPosition, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBar, SetToolNormalBitmap, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBar, SetToolDisabledBitmap, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBar, SetToolShortHelp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBar, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxToolBar, FindToolForPosition, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddCheckTool, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddRadioTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, InsertTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, AddControl, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, InsertControl, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, FindControl, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddSeparator, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, InsertSeparator, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, RemoveTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, DeleteTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, ClearTools, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, Realize, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, EnableTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, ToggleTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolClientData, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolPos, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolState, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolEnabled, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolShortHelp, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolLongHelp, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolLongHelp, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolPacking, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolPacking, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolSeparation, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolBitmapSize, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolBitmapSize, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolSize, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, FindById, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetMargins, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, GetToolsCount, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, Realize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, DeleteToolByPos, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetMargins, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Raise, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Lower, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Enable, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, IsRetained, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetFocus, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Reparent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, WarpPointer, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Update, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, ClearBackground, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetForegroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetCursor, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetFont, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetCharHeight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetCharWidth, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetScrollbar, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetScrollPos, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetScrollThumb, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetScrollRange, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, AddChild, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, RemoveChild, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, GetHandle, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, Refresh, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, IsFrozen, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindow, SetWindowStyleFlag, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvtHandler, Connect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, SetSizer, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetSizer, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, Layout, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, Fit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, SetWindowStyle, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, PopupMenu, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, IsShown, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, IsEnabled, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, FindWindow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, SetMinSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, SetMaxSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStatusBar_entry;
@@ -392,6 +415,7 @@ static function_entry php_wxStatusBar_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxBoxSizer_entry;
@@ -637,6 +661,7 @@ static function_entry php_wxWindowBase_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxSizerFlags_entry;
@@ -1083,40 +1108,10 @@ extern int le_wxToolBarBase;
 static function_entry php_wxToolBarBase_functions[] = {
         PHP_ME(php_wxToolBarBase, AddCheckTool, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddRadioTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, InsertTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, AddControl, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, InsertControl, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, FindControl, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddSeparator, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, InsertSeparator, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, RemoveTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, DeleteTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, ClearTools, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, Realize, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, EnableTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, ToggleTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolClientData, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolPos, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolState, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolEnabled, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolShortHelp, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolShortHelp, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolLongHelp, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolLongHelp, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolPacking, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolPacking, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolSeparation, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolBitmapSize, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolBitmapSize, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetToolSize, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, FindToolForPosition, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, FindById, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, GetMargins, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, GetToolsCount, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxToolBarBase, Realize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxToolBarBase, AddTool, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, DeleteToolByPos, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetMargins, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxToolBarBase, SetToolSeparation, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -1284,6 +1279,7 @@ static function_entry php_wxPanel_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxTopLevelWindowBase_entry;
@@ -1396,6 +1392,7 @@ static function_entry php_wxSplitterWindow_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxTreeCtrl_entry;
@@ -1502,6 +1499,7 @@ static function_entry php_wxTreeCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, AssignImageList, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
@@ -1602,6 +1600,7 @@ static function_entry php_wxCheckListBox_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, GetString, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, GetSelection, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxListBox, IsSelected, NULL,ZEND_ACC_PUBLIC)
@@ -1921,6 +1920,7 @@ static function_entry php_wxTextCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTextCtrlBase, CanCopy, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTextCtrlBase, CanCut, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTextCtrlBase, CanPaste, NULL,ZEND_ACC_PUBLIC)
@@ -2034,6 +2034,7 @@ static function_entry php_wxNotebook_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, AddPage, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, RemovePage, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, DeletePage, NULL,ZEND_ACC_PUBLIC)
@@ -2215,6 +2216,7 @@ static function_entry php_wxStaticText_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxButton_entry;
@@ -2285,6 +2287,7 @@ static function_entry php_wxButton_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -2357,6 +2360,7 @@ static function_entry php_wxStaticBox_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStaticBoxSizer_entry;
@@ -2500,6 +2504,7 @@ static function_entry php_wxListBox_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxFileDialog_entry;
@@ -2596,6 +2601,7 @@ static function_entry php_wxFileDialog_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxDialog_entry;
@@ -2683,6 +2689,7 @@ static function_entry php_wxDialog_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxMessageDialog_entry;
@@ -2767,6 +2774,7 @@ static function_entry php_wxMessageDialog_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStatusBarBase_entry;
@@ -2920,6 +2928,7 @@ static function_entry php_wxListCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxStaticBitmap_entry;
@@ -2993,6 +3002,7 @@ static function_entry php_wxStaticBitmap_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -3074,6 +3084,7 @@ static function_entry php_wxGauge_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxListEvent_entry;
@@ -3219,6 +3230,7 @@ static function_entry php_wxComboBox_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxPrinter_entry;
@@ -3545,6 +3557,7 @@ static function_entry php_wxSplashScreen_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFrameBase, SetMenuBar, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFrameBase, GetToolBar, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFrameBase, GetMenuBar, NULL,ZEND_ACC_PUBLIC)
@@ -3642,6 +3655,7 @@ static function_entry php_wxCalendarCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxCalendarEvent_entry;
@@ -3724,6 +3738,12 @@ class wxDateTime_php : public wxDateTime{
 	wxDateTime_php():wxDateTime()
 	{
 	}
+	wxDateTime_php(long int arg0):wxDateTime(arg0)
+	{
+	}
+	wxDateTime_php(double arg0):wxDateTime(arg0)
+	{
+	}
 	zval *evnArray;
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
@@ -3735,6 +3755,39 @@ extern int le_wxDateTime;
 
 static function_entry php_wxDateTime_functions[] = {
         PHP_ME(php_wxDateTime, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxDateTime, GetCountry, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, ConvertYearToBC, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, GetCentury, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, GetTmNow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, GetTimeNow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, GetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, FormatISOTime, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, FormatISODate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, FormatTime, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, FormatDate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, ParseTime, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, ParseDate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, ParseDateTime, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, IsSameTime, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, IsSameDate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, IsBetween, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, IsStrictlyBetween, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, IsLaterThan, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, IsEarlierThan, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, IsEqualTo, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, GetAsDOS, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, SetFromDOS, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, GetTicks, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, MakeFromUTC, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, FromUTC, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, MakeGMT, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, ToGMT, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, MakeUTC, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, ToUTC, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, SetYear, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, Now, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, UNow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxDateTime, Today, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxCalendarDateAttr_entry;
@@ -4049,6 +4102,7 @@ static function_entry php_wxCheckBox_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxDirDialog_entry;
@@ -4135,6 +4189,7 @@ static function_entry php_wxDirDialog_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxBitmapButton_entry;
@@ -4205,6 +4260,7 @@ static function_entry php_wxBitmapButton_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBitmapButtonBase, GetBitmapDisabled, NULL,ZEND_ACC_PUBLIC)
@@ -4289,6 +4345,7 @@ static function_entry php_wxToggleButton_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxChoice_entry;
@@ -4372,6 +4429,7 @@ static function_entry php_wxChoice_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxChoiceBase, GetColumns, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxChoiceBase, SetColumns, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -4734,6 +4792,7 @@ static function_entry php_wxStyledTextCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxImageList_entry;
@@ -4925,6 +4984,7 @@ static function_entry php_wxRadioBox_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvtHandler, Connect, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxRadioBoxBase, GetColumnCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxRadioBoxBase, GetItemHelpText, NULL,ZEND_ACC_PUBLIC)
@@ -5003,6 +5063,7 @@ static function_entry php_wxRadioButton_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxListItem_entry;
@@ -5398,6 +5459,7 @@ static function_entry php_wxAuiNotebook_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxAuiDefaultDockArt_entry;
@@ -5621,6 +5683,7 @@ static function_entry php_wxChoicebook_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, AddPage, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, RemovePage, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, DeletePage, NULL,ZEND_ACC_PUBLIC)
@@ -5852,6 +5915,7 @@ static function_entry php_wxGrid_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxHyperlinkCtrl_entry;
@@ -5934,6 +5998,7 @@ static function_entry php_wxHyperlinkCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxObject, IsKindOf, NULL,ZEND_ACC_PUBLIC)
@@ -6416,6 +6481,7 @@ static function_entry php_wxHtmlWindow_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxPanel, InitDialog, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxPanel, SetFocusIgnoringChildren, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxScrollHelper, EnableScrolling, NULL,ZEND_ACC_PUBLIC)
@@ -7677,6 +7743,7 @@ static function_entry php_wxSearchCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxColourPickerCtrl_entry;
@@ -7770,6 +7837,7 @@ static function_entry php_wxFontPickerCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxFilePickerCtrl_entry;
@@ -7839,6 +7907,7 @@ static function_entry php_wxFilePickerCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFileDirPickerCtrlBase, GetPath, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFileDirPickerCtrlBase, SetPath, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -7932,6 +8001,7 @@ static function_entry php_wxDirPickerCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFileDirPickerCtrlBase, GetPath, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxFileDirPickerCtrlBase, SetPath, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -8057,6 +8127,7 @@ static function_entry php_wxDatePickerCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxScrollBar_entry;
@@ -8131,6 +8202,7 @@ static function_entry php_wxScrollBar_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxSpinCtrl_entry;
@@ -8206,6 +8278,7 @@ static function_entry php_wxSpinCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxSpinButton_entry;
@@ -8280,6 +8353,7 @@ static function_entry php_wxSpinButton_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxGenericDirCtrl_entry;
@@ -8369,6 +8443,7 @@ static function_entry php_wxGenericDirCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxDirFilterListCtrl_entry;
@@ -8441,6 +8516,7 @@ static function_entry php_wxDirFilterListCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxChoice, GetCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxChoice, Clear, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxChoice, GetSelection, NULL,ZEND_ACC_PUBLIC)
@@ -8657,6 +8733,7 @@ static function_entry php_wxBitmapComboBox_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, SetLabel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxControl, GetLabel, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
@@ -8802,6 +8879,7 @@ static function_entry php_wxStaticLine_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxSlider_entry;
@@ -8884,6 +8962,7 @@ static function_entry php_wxSlider_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxSliderBase, SetTick, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxSliderBase, ClearSel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxSliderBase, ClearTicks, NULL,ZEND_ACC_PUBLIC)
@@ -8985,6 +9064,7 @@ static function_entry php_wxScrolledWindow_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxPanel, InitDialog, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxPanel, SetFocusIgnoringChildren, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxScrollHelper, EnableScrolling, NULL,ZEND_ACC_PUBLIC)
@@ -9127,6 +9207,7 @@ static function_entry php_wxListbook_functions[] = {
         PHP_ME(php_wxWindowBase, SetSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, Centre, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, AddPage, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, RemovePage, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxBookCtrlBase, DeletePage, NULL,ZEND_ACC_PUBLIC)
