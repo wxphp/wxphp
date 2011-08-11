@@ -2749,7 +2749,8 @@ if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$matc
 			"wxLocale","wxItemContainer", "wxAuiDockArt", "wxAuiPaneInfo", "wxAuiDefaultDockArt", "wxAuiTabArt", 
 			"wxAuiToolBarItem", "wxAuiToolBarArt", "wxHtmlRenderingInfo", "wxHtmlSelection", "wxTextAttr", "wxTextAttrEx",
 			"wxRichTextRange", "wxRichTextAttr", "wxRichTextLine", "wxGridCellCoords", "wxGridCellAttr", "wxGridCellRenderer",
-			"wxGridCellWorker","wxGridCellEditor", "wxGridCellAttrProvider", "wxRadioBoxBase", "wxScrollHelper"))
+			"wxGridCellWorker","wxGridCellEditor", "wxGridCellFloatEditor", "wxGridCellBoolEditor", "wxGridCellChoiceEditor", 
+			"wxGridCellNumberEditor", "wxGridCellTextEditor", "wxGridCellAttrProvider", "wxRadioBoxBase", "wxScrollHelper"))
 			)
 				continue;
 

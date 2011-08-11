@@ -343,6 +343,16 @@ zend_class_entry *php_wxMask_entry;
 int le_wxMask;
 zend_class_entry *php_wxPalette_entry;
 int le_wxPalette;
+zend_class_entry *php_wxGridCellFloatEditor_entry;
+int le_wxGridCellFloatEditor;
+zend_class_entry *php_wxGridCellBoolEditor_entry;
+int le_wxGridCellBoolEditor;
+zend_class_entry *php_wxGridCellChoiceEditor_entry;
+int le_wxGridCellChoiceEditor;
+zend_class_entry *php_wxGridCellNumberEditor_entry;
+int le_wxGridCellNumberEditor;
+zend_class_entry *php_wxGridCellTextEditor_entry;
+int le_wxGridCellTextEditor;
 
 // <--- entries
 
@@ -2074,6 +2084,26 @@ le_wxMask = zend_register_list_destructors_ex(php_wxMask_destruction_handler, NU
 INIT_CLASS_ENTRY(cf, PHP_wxPalette_NAME , php_wxPalette_functions);
 php_wxPalette_entry = zend_register_internal_class(&cf TSRMLS_CC);
 le_wxPalette = zend_register_list_destructors_ex(php_wxPalette_destruction_handler, NULL, le_wxPalette_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellFloatEditor_NAME , php_wxGridCellFloatEditor_functions);
+php_wxGridCellFloatEditor_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellFloatEditor = zend_register_list_destructors_ex(php_wxGridCellFloatEditor_destruction_handler, NULL, le_wxGridCellFloatEditor_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellBoolEditor_NAME , php_wxGridCellBoolEditor_functions);
+php_wxGridCellBoolEditor_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellBoolEditor = zend_register_list_destructors_ex(php_wxGridCellBoolEditor_destruction_handler, NULL, le_wxGridCellBoolEditor_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellChoiceEditor_NAME , php_wxGridCellChoiceEditor_functions);
+php_wxGridCellChoiceEditor_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellChoiceEditor = zend_register_list_destructors_ex(php_wxGridCellChoiceEditor_destruction_handler, NULL, le_wxGridCellChoiceEditor_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellNumberEditor_NAME , php_wxGridCellNumberEditor_functions);
+php_wxGridCellNumberEditor_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellNumberEditor = zend_register_list_destructors_ex(php_wxGridCellNumberEditor_destruction_handler, NULL, le_wxGridCellNumberEditor_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridCellTextEditor_NAME , php_wxGridCellTextEditor_functions);
+php_wxGridCellTextEditor_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridCellTextEditor = zend_register_list_destructors_ex(php_wxGridCellTextEditor_destruction_handler, NULL, le_wxGridCellTextEditor_name, module_number);
 
 
 REGISTER_LONG_CONSTANT("wxFR_REPLACEDIALOG", wxFR_REPLACEDIALOG, CONST_CS | CONST_PERSISTENT);

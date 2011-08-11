@@ -68261,7 +68261,7 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 )
+				if (!_ptrObj0 || (rsrc_type != le_wxGridCellFloatEditor && rsrc_type != le_wxGridCellBoolEditor && rsrc_type != le_wxGridCellChoiceEditor && rsrc_type != le_wxGridCellNumberEditor && rsrc_type != le_wxGridCellTextEditor))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -68754,6 +68754,63 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 			{
 				case 3:
 					 ((wxGrid_php*)_this)->SetCellBackgroundColour(*(wxColour *) _ptrObj0 , (int)_argLong0 , (int)_argLong1);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGrid, SetCellEditor)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	long _argLong0;
+	long _argLong1;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "l!l!z!", &_argLong0 , &_argLong1 , &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 || (rsrc_type != le_wxGridCellFloatEditor && rsrc_type != le_wxGridCellBoolEditor && rsrc_type != le_wxGridCellChoiceEditor && rsrc_type != le_wxGridCellNumberEditor && rsrc_type != le_wxGridCellTextEditor))
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					 ((wxGrid_php*)_this)->SetCellEditor((int)_argLong0 , (int)_argLong1 , (wxGridCellEditor*) _ptrObj0);
 					break;
 				default:
 					break;
@@ -98160,7 +98217,7 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 )
+				if (!_ptrObj0 || (rsrc_type != le_wxGridCellFloatEditor && rsrc_type != le_wxGridCellBoolEditor && rsrc_type != le_wxGridCellChoiceEditor && rsrc_type != le_wxGridCellNumberEditor && rsrc_type != le_wxGridCellTextEditor))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -99632,7 +99689,7 @@ PHP_METHOD(php_wxGridCellWorker, __construct)
 			{
 				id_to_find0 = Z_RESVAL_P(*tmp);
 				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-				if (!_ptrObj0 || (rsrc_type != le_wxGridCellRenderer && rsrc_type != le_wxGridCellEditor))
+				if (!_ptrObj0 || (rsrc_type != le_wxGridCellRenderer && rsrc_type != le_wxGridCellEditor && rsrc_type != le_wxGridCellFloatEditor && rsrc_type != le_wxGridCellBoolEditor && rsrc_type != le_wxGridCellChoiceEditor && rsrc_type != le_wxGridCellNumberEditor && rsrc_type != le_wxGridCellTextEditor))
 					valid = 0;
 			}
 			else if(_argObj0->type==IS_LONG)
@@ -101768,6 +101825,42 @@ PHP_METHOD(php_wxGridCellEditor, GetValue)
 					break;
 			}
 			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+}
+PHP_METHOD(php_wxGridCellEditor, GetCellAttr)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxGridCellAttr* ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxGridCellEditor_php*)_this)->GetCellAttr();
+					break;
+				default:
+					break;
+			}
+			object_init_ex(return_value,php_wxGridCellAttr_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ret0, le_wxGridCellAttr));return;			
 		}
 	}
 }
@@ -111435,6 +111528,61 @@ PHP_METHOD(php_wxScrolledWindow, __construct)
 		}
 	}
 }
+PHP_METHOD(php_wxScrolledWindow, PrepareDC)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxScrolledWindow_php*)_this)->PrepareDC(*(wxDC *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
 void php_wxScrollHelper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	}			
@@ -111908,6 +112056,62 @@ PHP_METHOD(php_wxScrollHelper, CalcScrolledPosition)
 			{
 				case 1:
 					ret0 =  ((wxScrollHelper_php*)_this)->CalcScrolledPosition(*(wxPoint *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			void* ptr = safe_emalloc(1,sizeof(wxPoint),0);memcpy(ptr,&ret0,sizeof(wxPoint));object_init_ex(return_value,php_wxPoint_entry);add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxPoint));return;			
+		}
+	}
+}
+PHP_METHOD(php_wxScrollHelper, CalcUnscrolledPosition)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!", &_argObj0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			wxPoint ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxScrollHelper_php*)_this)->CalcUnscrolledPosition(*(wxPoint *) _ptrObj0);
 					break;
 				default:
 					break;
@@ -116236,6 +116440,604 @@ PHP_METHOD(php_wxPalette, Create)
 					break;
 			}
 			RETURN_BOOL(ret0)			
+		}
+	}
+}
+void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxGridCellFloatEditor, __construct)
+{
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					_this = new wxGridCellFloatEditor_php((int)_argLong0 , (int)_argLong1);
+					break;
+				case 1:
+					_this = new wxGridCellFloatEditor_php((int)_argLong0);
+					break;
+				case 0:
+					_this = new wxGridCellFloatEditor_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGridCellFloatEditor);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGridCellFloatEditor_php*) _this)->evnArray);
+			array_init(((wxGridCellFloatEditor_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGridCellFloatEditor_php*) _this)->phpObj);
+			*((wxGridCellFloatEditor_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGridCellFloatEditor_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGridCellFloatEditor_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGridCellFloatEditor_php*)_this)->SetParameters(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxGridCellBoolEditor, __construct)
+{
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxGridCellBoolEditor_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGridCellBoolEditor);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGridCellBoolEditor_php*) _this)->evnArray);
+			array_init(((wxGridCellBoolEditor_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGridCellBoolEditor_php*) _this)->phpObj);
+			*((wxGridCellBoolEditor_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGridCellBoolEditor_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGridCellBoolEditor_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					ret0 =  ((wxGridCellBoolEditor_php*)_this)->IsTrueValue(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	char* _argStr1;
+	int _argStr1_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|s!s!", &_argStr0 , &_argStr0_len , &_argStr1 , &_argStr1_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					 ((wxGridCellBoolEditor_php*)_this)->UseStringValues(wxString(_argStr0, wxConvUTF8) , wxString(_argStr1, wxConvUTF8));
+					break;
+				case 1:
+					 ((wxGridCellBoolEditor_php*)_this)->UseStringValues(wxString(_argStr0, wxConvUTF8));
+					break;
+				case 0:
+					 ((wxGridCellBoolEditor_php*)_this)->UseStringValues();
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGridCellChoiceEditor_php*)_this)->SetParameters(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
+{
+	zval **tmp;
+	int rsrc_type;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	bool _argBool0;
+	long _argLong0;
+	char* _argStr0;
+	int _argStr0_len;
+	void *_ptrObj0 = 0;
+	zval *_argObj0 = 0;
+	int id_to_find0;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "z!|b!", &_argObj0 , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(_argObj0)
+		if (valid) 
+		{
+			if(_argObj0->type==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
+			{
+				id_to_find0 = Z_RESVAL_P(*tmp);
+				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
+				if (!_ptrObj0 )
+					valid = 0;
+			}
+			else if(_argObj0->type==IS_LONG)
+				_ptrObj0= (void *)_argObj0->value.lval;
+			else if(_argObj0->type!=IS_NULL)
+				valid = 0;
+		}
+		else
+			valid = 0;
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					_this = new wxGridCellChoiceEditor_php(*(wxArrayString *) _ptrObj0 , _argBool0);
+					break;
+				case 1:
+					_this = new wxGridCellChoiceEditor_php(*(wxArrayString *) _ptrObj0);
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGridCellChoiceEditor);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGridCellChoiceEditor_php*) _this)->evnArray);
+			array_init(((wxGridCellChoiceEditor_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGridCellChoiceEditor_php*) _this)->phpObj);
+			*((wxGridCellChoiceEditor_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGridCellChoiceEditor_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGridCellChoiceEditor_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|l!s!b!", &_argLong0 , &_argStr0 , &_argStr0_len , &_argBool0 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 3:
+					_this = new wxGridCellChoiceEditor_php((long unsigned int)_argLong0 , &wxString(_argStr0, wxConvUTF8) , _argBool0);
+					break;
+				case 2:
+					_this = new wxGridCellChoiceEditor_php((long unsigned int)_argLong0 , &wxString(_argStr0, wxConvUTF8));
+					break;
+				case 1:
+					_this = new wxGridCellChoiceEditor_php((long unsigned int)_argLong0);
+					break;
+				case 0:
+					_this = new wxGridCellChoiceEditor_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGridCellChoiceEditor);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGridCellChoiceEditor_php*) _this)->evnArray);
+			array_init(((wxGridCellChoiceEditor_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGridCellChoiceEditor_php*) _this)->phpObj);
+			*((wxGridCellChoiceEditor_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGridCellChoiceEditor_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGridCellChoiceEditor_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxGridCellNumberEditor, __construct)
+{
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	long _argLong0;
+	long _argLong1;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "|l!l!", &_argLong0 , &_argLong1 ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 2:
+					_this = new wxGridCellNumberEditor_php((int)_argLong0 , (int)_argLong1);
+					break;
+				case 1:
+					_this = new wxGridCellNumberEditor_php((int)_argLong0);
+					break;
+				case 0:
+					_this = new wxGridCellNumberEditor_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGridCellNumberEditor);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGridCellNumberEditor_php*) _this)->evnArray);
+			array_init(((wxGridCellNumberEditor_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGridCellNumberEditor_php*) _this)->phpObj);
+			*((wxGridCellNumberEditor_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGridCellNumberEditor_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGridCellNumberEditor_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
+		}
+	}
+}
+bool wxGridCellNumberEditor_php::HasRange() const{
+	zval *args[0];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "HasRange", 0);
+	
+	
+	
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 0, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return Z_BVAL(retval);	}
+	}
+PHP_METHOD(php_wxGridCellNumberEditor, HasRange)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			bool ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxGridCellNumberEditor_php*)_this)->HasRange();
+					break;
+				default:
+					break;
+			}
+			RETURN_BOOL(ret0)			
+		}
+	}
+}
+wxString wxGridCellNumberEditor_php::GetString() const{
+	zval *args[0];
+	zval retval, funcname;
+	ZVAL_STRING(&funcname, "GetString", 0);
+	
+	
+	
+		
+	if (call_user_function(NULL, (zval**) &this->phpObj, &funcname, &retval, 0, args TSRMLS_CC) == FAILURE) {
+		wxMessageBox(_T("Failed method Call!\n"));
+	}
+		else{
+		return wxString(Z_STRVAL(retval),wxConvUTF8);	}
+	}
+PHP_METHOD(php_wxGridCellNumberEditor, GetString)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			wxString ret0;
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					ret0 =  ((wxGridCellNumberEditor_php*)_this)->GetString();
+					break;
+				default:
+					break;
+			}
+			char * ro2;ro2 = (char*)malloc(sizeof(wxChar)*(ret0.size()+1));strcpy ( ro2, (const char *) ret0.char_str() );RETURN_STRING( ro2 ,1)			
+		}
+	}
+}
+PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGridCellNumberEditor_php*)_this)->SetParameters(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	}			
+PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
+{
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	
+	if (zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_RESVAL_P(*tmp);
+	_this = zend_list_find(id_to_find, &rsrc_type);
+	
+	char* _argStr0;
+	int _argStr0_len;
+	valid=1;
+	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, "s!", &_argStr0 , &_argStr0_len ) == SUCCESS)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 1:
+					 ((wxGridCellTextEditor_php*)_this)->SetParameters(wxString(_argStr0, wxConvUTF8));
+					break;
+				default:
+					break;
+			}
+			
+		}
+	}
+}
+PHP_METHOD(php_wxGridCellTextEditor, __construct)
+{
+	char _wxResource[] = "wxResource";
+	int valid = 1;
+	void *_this;
+	valid=1;
+	if (ZEND_NUM_ARGS()==0)
+	{
+		
+		if(valid)
+		{
+			int gr = ZEND_NUM_ARGS(); 
+			switch(gr)
+			{
+				case 0:
+					_this = new wxGridCellTextEditor_php();
+					break;
+				default:
+					break;
+			}
+			long id_to_find = zend_list_insert(_this, le_wxGridCellTextEditor);
+			add_property_resource(getThis(), _wxResource, id_to_find);					
+			MAKE_STD_ZVAL(((wxGridCellTextEditor_php*) _this)->evnArray);
+			array_init(((wxGridCellTextEditor_php*) _this)->evnArray);
+			MAKE_STD_ZVAL(((wxGridCellTextEditor_php*) _this)->phpObj);
+			*((wxGridCellTextEditor_php*) _this)->phpObj = *getThis();
+			zval_copy_ctor(((wxGridCellTextEditor_php*) _this)->phpObj);
+			#ifdef ZTS 
+			((wxGridCellTextEditor_php*) _this)->TSRMLS_C = TSRMLS_C;
+			#endif
+			
 		}
 	}
 }

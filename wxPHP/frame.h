@@ -5953,6 +5953,7 @@ static function_entry php_wxGrid_functions[] = {
         PHP_ME(php_wxGrid, SelectRow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGrid, SetCellAlignment, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGrid, SetCellBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGrid, SetCellEditor, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvtHandler, Connect, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
@@ -6519,6 +6520,7 @@ static function_entry php_wxHtmlWindow_functions[] = {
         PHP_ME(php_wxHtmlWindow, ToText, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxHtmlWindow, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
         PHP_ME(php_wxHtmlWindow, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxScrolledWindow, PrepareDC, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Raise, NULL,ZEND_ACC_PUBLIC)
@@ -6575,6 +6577,7 @@ static function_entry php_wxHtmlWindow_functions[] = {
         PHP_ME(php_wxScrollHelper, SetScrollRate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxScrollHelper, SetTargetWindow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxScrollHelper, CalcScrolledPosition, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxScrollHelper, CalcUnscrolledPosition, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxHtmlContainerCell_entry;
@@ -7655,6 +7658,7 @@ static function_entry php_wxGridCellEditor_functions[] = {
         PHP_ME(php_wxGridCellEditor, Destroy, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGridCellEditor, Clone, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGridCellEditor, GetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetCellAttr, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGridCellWorker, DecRef, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGridCellWorker, IncRef, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGridCellWorker, SetParameters, NULL,ZEND_ACC_PUBLIC)
@@ -9101,6 +9105,7 @@ extern int le_wxScrolledWindow;
 
 static function_entry php_wxScrolledWindow_functions[] = {
         PHP_ME(php_wxScrolledWindow, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxScrolledWindow, PrepareDC, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Destroy, NULL,ZEND_ACC_PUBLIC)
@@ -9158,6 +9163,7 @@ static function_entry php_wxScrolledWindow_functions[] = {
         PHP_ME(php_wxScrollHelper, SetScrollRate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxScrollHelper, SetTargetWindow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxScrollHelper, CalcScrolledPosition, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxScrollHelper, CalcUnscrolledPosition, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxScrollHelper_entry;
@@ -9187,6 +9193,7 @@ static function_entry php_wxScrollHelper_functions[] = {
         PHP_ME(php_wxScrollHelper, SetScrollRate, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxScrollHelper, SetTargetWindow, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxScrollHelper, CalcScrolledPosition, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxScrollHelper, CalcUnscrolledPosition, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxNotebookBase_entry;
@@ -9510,5 +9517,224 @@ static function_entry php_wxPalette_functions[] = {
         PHP_ME(php_wxPalette, GetPixel, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxPalette, GetColoursCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxPalette, Create, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxGridCellFloatEditor_entry;
+void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxGridCellFloatEditor_NAME "wxGridCellFloatEditor"
+#define le_wxGridCellFloatEditor_name  "native wxGridCellFloatEditor"
+
+class wxGridCellFloatEditor_php : public wxGridCellFloatEditor{
+	public:
+	wxGridCellFloatEditor_php(int arg0 = -0x00000000000000001 , int arg1 = -0x00000000000000001):wxGridCellFloatEditor(arg0 , arg1)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxGridCellFloatEditor;
+
+static function_entry php_wxGridCellFloatEditor_functions[] = {
+        PHP_ME(php_wxGridCellFloatEditor, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxGridCellFloatEditor, SetParameters, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, IsCreated, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, SetSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Show, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, PaintBackground, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, BeginEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, EndEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Reset, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingKey, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingClick, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, HandleReturn, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Destroy, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetCellAttr, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, DecRef, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, IncRef, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxGridCellBoolEditor_entry;
+void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxGridCellBoolEditor_NAME "wxGridCellBoolEditor"
+#define le_wxGridCellBoolEditor_name  "native wxGridCellBoolEditor"
+
+class wxGridCellBoolEditor_php : public wxGridCellBoolEditor{
+	public:
+	wxGridCellBoolEditor_php():wxGridCellBoolEditor()
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxGridCellBoolEditor;
+
+static function_entry php_wxGridCellBoolEditor_functions[] = {
+        PHP_ME(php_wxGridCellBoolEditor, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxGridCellBoolEditor, IsTrueValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellBoolEditor, UseStringValues, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, IsCreated, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, SetSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Show, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, PaintBackground, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, BeginEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, EndEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Reset, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingKey, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingClick, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, HandleReturn, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Destroy, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetCellAttr, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, DecRef, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, IncRef, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, SetParameters, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxGridCellChoiceEditor_entry;
+void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxGridCellChoiceEditor_NAME "wxGridCellChoiceEditor"
+#define le_wxGridCellChoiceEditor_name  "native wxGridCellChoiceEditor"
+
+class wxGridCellChoiceEditor_php : public wxGridCellChoiceEditor{
+	public:
+	wxGridCellChoiceEditor_php(const wxArrayString& arg0 , bool arg1 = false):wxGridCellChoiceEditor(arg0 , arg1)
+	{
+	}
+	wxGridCellChoiceEditor_php(long unsigned int arg0 = 0 , const wxString* arg1 = 0l , bool arg2 = false):wxGridCellChoiceEditor(arg0 , arg1 , arg2)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxGridCellChoiceEditor;
+
+static function_entry php_wxGridCellChoiceEditor_functions[] = {
+        PHP_ME(php_wxGridCellChoiceEditor, SetParameters, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellChoiceEditor, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxGridCellEditor, IsCreated, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, SetSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Show, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, PaintBackground, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, BeginEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, EndEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Reset, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingKey, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingClick, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, HandleReturn, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Destroy, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetCellAttr, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, DecRef, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, IncRef, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxGridCellNumberEditor_entry;
+void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxGridCellNumberEditor_NAME "wxGridCellNumberEditor"
+#define le_wxGridCellNumberEditor_name  "native wxGridCellNumberEditor"
+
+class wxGridCellNumberEditor_php : public wxGridCellNumberEditor{
+	public:
+	wxGridCellNumberEditor_php(int arg0 = -0x00000000000000001 , int arg1 = -0x00000000000000001):wxGridCellNumberEditor(arg0 , arg1)
+	{
+	}
+		virtual bool HasRange() const;
+		virtual wxString GetString() const;
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxGridCellNumberEditor;
+
+static function_entry php_wxGridCellNumberEditor_functions[] = {
+        PHP_ME(php_wxGridCellNumberEditor, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxGridCellNumberEditor, HasRange, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellNumberEditor, GetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellNumberEditor, SetParameters, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, IsCreated, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, SetSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Show, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, PaintBackground, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, BeginEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, EndEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Reset, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingKey, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingClick, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, HandleReturn, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Destroy, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetCellAttr, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, DecRef, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, IncRef, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxGridCellTextEditor_entry;
+void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxGridCellTextEditor_NAME "wxGridCellTextEditor"
+#define le_wxGridCellTextEditor_name  "native wxGridCellTextEditor"
+
+class wxGridCellTextEditor_php : public wxGridCellTextEditor{
+	public:
+	wxGridCellTextEditor_php():wxGridCellTextEditor()
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxGridCellTextEditor;
+
+static function_entry php_wxGridCellTextEditor_functions[] = {
+        PHP_ME(php_wxGridCellTextEditor, SetParameters, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellTextEditor, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxGridCellEditor, IsCreated, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Create, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, SetSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Show, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, PaintBackground, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, BeginEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, EndEdit, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Reset, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingKey, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, StartingClick, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, HandleReturn, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Destroy, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetValue, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellEditor, GetCellAttr, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, DecRef, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridCellWorker, IncRef, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
