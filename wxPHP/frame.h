@@ -3947,6 +3947,11 @@ static function_entry php_wxTimer_functions[] = {
         PHP_ME(php_wxTimer, Start, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTimer, Stop, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTimer, IsRunning, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTimerBase, GetInterval, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTimerBase, IsOneShot, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTimerBase, Notify, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTimerBase, SetOwner, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvtHandler, Connect, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxEvtHandler_entry;
@@ -9736,5 +9741,493 @@ static function_entry php_wxGridCellTextEditor_functions[] = {
         PHP_ME(php_wxGridCellEditor, GetCellAttr, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGridCellWorker, DecRef, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxGridCellWorker, IncRef, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxHtmlEasyPrinting_entry;
+void php_wxHtmlEasyPrinting_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxHtmlEasyPrinting_NAME "wxHtmlEasyPrinting"
+#define le_wxHtmlEasyPrinting_name  "native wxHtmlEasyPrinting"
+
+class wxHtmlEasyPrinting_php : public wxHtmlEasyPrinting{
+	public:
+	wxHtmlEasyPrinting_php(const wxString& arg0 = wxT("P\000\000\000r\000\000\000i\000\000\000n\000\000\000t\000\000\000i\000\000\000n\000\000\000g\000\000\000\000\000\000") , wxWindow* arg1 = 0l):wxHtmlEasyPrinting(arg0 , arg1)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxHtmlEasyPrinting;
+
+static function_entry php_wxHtmlEasyPrinting_functions[] = {
+        PHP_ME(php_wxHtmlEasyPrinting, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxHtmlEasyPrinting, GetParentWindow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, GetPrintData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, GetPageSetupData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, PreviewFile, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, PreviewText, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, PrintFile, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, PrintText, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, PageSetup, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, SetFonts, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, SetHeader, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, SetFooter, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, SetParentWindow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxHtmlEasyPrinting, SetName, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxPrintData_entry;
+void php_wxPrintData_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPrintData_NAME "wxPrintData"
+#define le_wxPrintData_name  "native wxPrintData"
+
+class wxPrintData_php : public wxPrintData{
+	public:
+	wxPrintData_php():wxPrintData()
+	{
+	}
+	wxPrintData_php(const wxPrintData& arg0):wxPrintData(arg0)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxPrintData;
+
+static function_entry php_wxPrintData_functions[] = {
+        PHP_ME(php_wxPrintData, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxPrintData, GetCollate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, GetBin, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, GetColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, GetDuplex, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, GetNoCopies, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, GetOrientation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, GetPaperId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, GetPrinterName, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, GetQuality, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, IsOk, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetBin, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetCollate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetDuplex, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetNoCopies, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetOrientation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetPaperId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetPrinterName, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPrintData, SetQuality, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxPageSetupDialog_entry;
+void php_wxPageSetupDialog_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPageSetupDialog_NAME "wxPageSetupDialog"
+#define le_wxPageSetupDialog_name  "native wxPageSetupDialog"
+
+class wxPageSetupDialog_php : public wxPageSetupDialog{
+	public:
+	wxPageSetupDialog_php(wxWindow* arg0 , wxPageSetupDialogData* arg1 = 0l):wxPageSetupDialog(arg0 , arg1)
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxPageSetupDialog;
+
+static function_entry php_wxPageSetupDialog_functions[] = {
+        PHP_ME(php_wxPageSetupDialog, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxPageSetupDialog, ShowModal, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialog, GetPageSetupData, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxPageSetupDialogData_entry;
+void php_wxPageSetupDialogData_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPageSetupDialogData_NAME "wxPageSetupDialogData"
+#define le_wxPageSetupDialogData_name  "native wxPageSetupDialogData"
+
+class wxPageSetupDialogData_php : public wxPageSetupDialogData{
+	public:
+	wxPageSetupDialogData_php(const wxPrintData& arg0):wxPageSetupDialogData(arg0)
+	{
+	}
+	wxPageSetupDialogData_php(const wxPageSetupDialogData& arg0):wxPageSetupDialogData(arg0)
+	{
+	}
+	wxPageSetupDialogData_php():wxPageSetupDialogData()
+	{
+	}
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxPageSetupDialogData;
+
+static function_entry php_wxPageSetupDialogData_functions[] = {
+        PHP_ME(php_wxPageSetupDialogData, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+        PHP_ME(php_wxPageSetupDialogData, EnableHelp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, EnableMargins, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, EnableOrientation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, EnablePaper, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, EnablePrinter, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetDefaultMinMargins, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetEnableMargins, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetEnableOrientation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetEnablePaper, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetEnablePrinter, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetEnableHelp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetDefaultInfo, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetMarginTopLeft, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetMinMarginBottomRight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetMinMarginTopLeft, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetMarginBottomRight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetPaperId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetPaperSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, GetPrintData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, IsOk, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetDefaultInfo, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetDefaultMinMargins, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetMarginBottomRight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetMarginTopLeft, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetMinMarginBottomRight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetMinMarginTopLeft, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetPaperId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetPaperSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxPageSetupDialogData, SetPrintData, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxTimerBase_entry;
+void php_wxTimerBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxTimerBase_NAME "wxTimerBase"
+#define le_wxTimerBase_name  "native wxTimerBase"
+
+class wxTimerBase_php : public wxTimerBase{
+	public:
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxTimerBase;
+
+static function_entry php_wxTimerBase_functions[] = {
+        PHP_ME(php_wxTimerBase, GetInterval, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTimerBase, IsOneShot, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTimerBase, Notify, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTimerBase, SetOwner, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxAuiNotebookEvent_entry;
+void php_wxAuiNotebookEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxAuiNotebookEvent_NAME "wxAuiNotebookEvent"
+#define le_wxAuiNotebookEvent_name  "native wxAuiNotebookEvent"
+
+class wxAuiNotebookEvent_php : public wxAuiNotebookEvent{
+	public:
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxAuiNotebookEvent;
+
+static function_entry php_wxAuiNotebookEvent_functions[] = {
+        PHP_ME(php_wxAuiNotebookEvent, SetSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiNotebookEvent, GetSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiNotebookEvent, SetOldSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiNotebookEvent, GetOldSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiNotebookEvent, SetDragSource, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiNotebookEvent, GetDragSource, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Skip, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetSkipped, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, IsCommandEvent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, IsChecked, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, IsSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetExtraLong, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetExtraLong, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetInt, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetInt, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, Allow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, IsAllowed, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, Veto, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxAuiManagerEvent_entry;
+void php_wxAuiManagerEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxAuiManagerEvent_NAME "wxAuiManagerEvent"
+#define le_wxAuiManagerEvent_name  "native wxAuiManagerEvent"
+
+class wxAuiManagerEvent_php : public wxAuiManagerEvent{
+	public:
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxAuiManagerEvent;
+
+static function_entry php_wxAuiManagerEvent_functions[] = {
+        PHP_ME(php_wxAuiManagerEvent, SetManager, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, SetPane, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, SetButton, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, SetDC, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, Veto, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, GetVeto, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, SetCanVeto, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, GetManager, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, GetPane, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, GetButton, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, GetDC, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiManagerEvent, CanVeto, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Skip, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetSkipped, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, IsCommandEvent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxAuiToolBarEvent_entry;
+void php_wxAuiToolBarEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxAuiToolBarEvent_NAME "wxAuiToolBarEvent"
+#define le_wxAuiToolBarEvent_name  "native wxAuiToolBarEvent"
+
+class wxAuiToolBarEvent_php : public wxAuiToolBarEvent{
+	public:
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxAuiToolBarEvent;
+
+static function_entry php_wxAuiToolBarEvent_functions[] = {
+        PHP_ME(php_wxAuiToolBarEvent, GetClickPoint, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiToolBarEvent, GetItemRect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiToolBarEvent, GetToolId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiToolBarEvent, IsDropDownClicked, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiToolBarEvent, SetClickPoint, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiToolBarEvent, SetItemRect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiToolBarEvent, SetDropDownClicked, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxAuiToolBarEvent, SetToolId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, Allow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, IsAllowed, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, Veto, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Skip, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetSkipped, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, IsCommandEvent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, IsChecked, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, IsSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetExtraLong, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetExtraLong, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetInt, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetInt, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxNotifyEvent_entry;
+void php_wxNotifyEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxNotifyEvent_NAME "wxNotifyEvent"
+#define le_wxNotifyEvent_name  "native wxNotifyEvent"
+
+class wxNotifyEvent_php : public wxNotifyEvent{
+	public:
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxNotifyEvent;
+
+static function_entry php_wxNotifyEvent_functions[] = {
+        PHP_ME(php_wxNotifyEvent, Allow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, IsAllowed, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, Veto, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Skip, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetSkipped, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, IsCommandEvent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, IsChecked, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, IsSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetExtraLong, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetExtraLong, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetInt, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetInt, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxGridEvent_entry;
+void php_wxGridEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxGridEvent_NAME "wxGridEvent"
+#define le_wxGridEvent_name  "native wxGridEvent"
+
+class wxGridEvent_php : public wxGridEvent{
+	public:
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxGridEvent;
+
+static function_entry php_wxGridEvent_functions[] = {
+        PHP_ME(php_wxGridEvent, AltDown, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridEvent, ControlDown, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridEvent, GetCol, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridEvent, GetPosition, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridEvent, GetRow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridEvent, MetaDown, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridEvent, Selecting, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxGridEvent, ShiftDown, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, Allow, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, IsAllowed, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxNotifyEvent, Veto, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Skip, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetSkipped, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, IsCommandEvent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetString, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, IsChecked, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, IsSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetExtraLong, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetExtraLong, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, SetInt, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxCommandEvent, GetInt, NULL,ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+extern zend_class_entry *php_wxIdleEvent_entry;
+void php_wxIdleEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxIdleEvent_NAME "wxIdleEvent"
+#define le_wxIdleEvent_name  "native wxIdleEvent"
+
+class wxIdleEvent_php : public wxIdleEvent{
+	public:
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+
+extern int le_wxIdleEvent;
+
+static function_entry php_wxIdleEvent_functions[] = {
+        PHP_ME(php_wxIdleEvent, CanSend, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxIdleEvent, GetMode, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxIdleEvent, RequestMore, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxIdleEvent, MoreRequested, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxIdleEvent, SetMode, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventType, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetEventObject, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetTimestamp, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, SetId, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Skip, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, GetSkipped, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, IsCommandEvent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ShouldPropagate, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, StopPropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, ResumePropagation, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxEvent, Clone, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
