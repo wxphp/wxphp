@@ -353,6 +353,28 @@ zend_class_entry *php_wxGridCellNumberEditor_entry;
 int le_wxGridCellNumberEditor;
 zend_class_entry *php_wxGridCellTextEditor_entry;
 int le_wxGridCellTextEditor;
+zend_class_entry *php_wxHtmlEasyPrinting_entry;
+int le_wxHtmlEasyPrinting;
+zend_class_entry *php_wxPrintData_entry;
+int le_wxPrintData;
+zend_class_entry *php_wxPageSetupDialog_entry;
+int le_wxPageSetupDialog;
+zend_class_entry *php_wxPageSetupDialogData_entry;
+int le_wxPageSetupDialogData;
+zend_class_entry *php_wxTimerBase_entry;
+int le_wxTimerBase;
+zend_class_entry *php_wxAuiNotebookEvent_entry;
+int le_wxAuiNotebookEvent;
+zend_class_entry *php_wxAuiManagerEvent_entry;
+int le_wxAuiManagerEvent;
+zend_class_entry *php_wxAuiToolBarEvent_entry;
+int le_wxAuiToolBarEvent;
+zend_class_entry *php_wxNotifyEvent_entry;
+int le_wxNotifyEvent;
+zend_class_entry *php_wxGridEvent_entry;
+int le_wxGridEvent;
+zend_class_entry *php_wxIdleEvent_entry;
+int le_wxIdleEvent;
 
 // <--- entries
 
@@ -1382,6 +1404,83 @@ PHP_FUNCTION(php_wxDynamicCast){
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
+			else if(!strcmp(_argStr0, "wxHtmlEasyPrinting")){
+				object_init_ex(return_value, php_wxHtmlEasyPrinting_entry);
+				wxHtmlEasyPrinting* ret = wxDynamicCast(_ptrObj0, wxHtmlEasyPrinting_php);
+				long id_to_find = zend_list_insert(ret, le_wxHtmlEasyPrinting);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxPrintData")){
+				object_init_ex(return_value, php_wxPrintData_entry);
+				wxPrintData* ret = wxDynamicCast(_ptrObj0, wxPrintData_php);
+				long id_to_find = zend_list_insert(ret, le_wxPrintData);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxPageSetupDialog")){
+				object_init_ex(return_value, php_wxPageSetupDialog_entry);
+				wxPageSetupDialog* ret = wxDynamicCast(_ptrObj0, wxPageSetupDialog_php);
+				long id_to_find = zend_list_insert(ret, le_wxPageSetupDialog);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxPageSetupDialogData")){
+				object_init_ex(return_value, php_wxPageSetupDialogData_entry);
+				wxPageSetupDialogData* ret = wxDynamicCast(_ptrObj0, wxPageSetupDialogData_php);
+				long id_to_find = zend_list_insert(ret, le_wxPageSetupDialogData);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxTimerBase")){
+				object_init_ex(return_value, php_wxTimerBase_entry);
+				wxTimerBase* ret = wxDynamicCast(_ptrObj0, wxTimerBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxTimerBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxAuiNotebookEvent")){
+				object_init_ex(return_value, php_wxAuiNotebookEvent_entry);
+				wxAuiNotebookEvent* ret = wxDynamicCast(_ptrObj0, wxAuiNotebookEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxAuiNotebookEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxAuiManagerEvent")){
+				object_init_ex(return_value, php_wxAuiManagerEvent_entry);
+				wxAuiManagerEvent* ret = wxDynamicCast(_ptrObj0, wxAuiManagerEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxAuiManagerEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxAuiToolBarEvent")){
+				object_init_ex(return_value, php_wxAuiToolBarEvent_entry);
+				wxAuiToolBarEvent* ret = wxDynamicCast(_ptrObj0, wxAuiToolBarEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxAuiToolBarEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxNotifyEvent")){
+				object_init_ex(return_value, php_wxNotifyEvent_entry);
+				wxNotifyEvent* ret = wxDynamicCast(_ptrObj0, wxNotifyEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxNotifyEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxGridEvent")){
+				object_init_ex(return_value, php_wxGridEvent_entry);
+				wxGridEvent* ret = wxDynamicCast(_ptrObj0, wxGridEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxGridEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			else if(!strcmp(_argStr0, "wxIdleEvent")){
+				object_init_ex(return_value, php_wxIdleEvent_entry);
+				wxIdleEvent* ret = wxDynamicCast(_ptrObj0, wxIdleEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxIdleEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
 		}
 	}
 }
@@ -2104,6 +2203,50 @@ le_wxGridCellNumberEditor = zend_register_list_destructors_ex(php_wxGridCellNumb
 INIT_CLASS_ENTRY(cf, PHP_wxGridCellTextEditor_NAME , php_wxGridCellTextEditor_functions);
 php_wxGridCellTextEditor_entry = zend_register_internal_class(&cf TSRMLS_CC);
 le_wxGridCellTextEditor = zend_register_list_destructors_ex(php_wxGridCellTextEditor_destruction_handler, NULL, le_wxGridCellTextEditor_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxHtmlEasyPrinting_NAME , php_wxHtmlEasyPrinting_functions);
+php_wxHtmlEasyPrinting_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxHtmlEasyPrinting = zend_register_list_destructors_ex(php_wxHtmlEasyPrinting_destruction_handler, NULL, le_wxHtmlEasyPrinting_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPrintData_NAME , php_wxPrintData_functions);
+php_wxPrintData_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPrintData = zend_register_list_destructors_ex(php_wxPrintData_destruction_handler, NULL, le_wxPrintData_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPageSetupDialog_NAME , php_wxPageSetupDialog_functions);
+php_wxPageSetupDialog_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPageSetupDialog = zend_register_list_destructors_ex(php_wxPageSetupDialog_destruction_handler, NULL, le_wxPageSetupDialog_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPageSetupDialogData_NAME , php_wxPageSetupDialogData_functions);
+php_wxPageSetupDialogData_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPageSetupDialogData = zend_register_list_destructors_ex(php_wxPageSetupDialogData_destruction_handler, NULL, le_wxPageSetupDialogData_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxTimerBase_NAME , php_wxTimerBase_functions);
+php_wxTimerBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxTimerBase = zend_register_list_destructors_ex(php_wxTimerBase_destruction_handler, NULL, le_wxTimerBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxAuiNotebookEvent_NAME , php_wxAuiNotebookEvent_functions);
+php_wxAuiNotebookEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxAuiNotebookEvent = zend_register_list_destructors_ex(php_wxAuiNotebookEvent_destruction_handler, NULL, le_wxAuiNotebookEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxAuiManagerEvent_NAME , php_wxAuiManagerEvent_functions);
+php_wxAuiManagerEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxAuiManagerEvent = zend_register_list_destructors_ex(php_wxAuiManagerEvent_destruction_handler, NULL, le_wxAuiManagerEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxAuiToolBarEvent_NAME , php_wxAuiToolBarEvent_functions);
+php_wxAuiToolBarEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxAuiToolBarEvent = zend_register_list_destructors_ex(php_wxAuiToolBarEvent_destruction_handler, NULL, le_wxAuiToolBarEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxNotifyEvent_NAME , php_wxNotifyEvent_functions);
+php_wxNotifyEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxNotifyEvent = zend_register_list_destructors_ex(php_wxNotifyEvent_destruction_handler, NULL, le_wxNotifyEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxGridEvent_NAME , php_wxGridEvent_functions);
+php_wxGridEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxGridEvent = zend_register_list_destructors_ex(php_wxGridEvent_destruction_handler, NULL, le_wxGridEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxIdleEvent_NAME , php_wxIdleEvent_functions);
+php_wxIdleEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxIdleEvent = zend_register_list_destructors_ex(php_wxIdleEvent_destruction_handler, NULL, le_wxIdleEvent_name, module_number);
 
 
 REGISTER_LONG_CONSTANT("wxFR_REPLACEDIALOG", wxFR_REPLACEDIALOG, CONST_CS | CONST_PERSISTENT);
