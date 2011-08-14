@@ -443,1038 +443,1036 @@ PHP_FUNCTION(php_wxDynamicCast){
 		}
 		
 		if(valid){
-			if(0){
-			}
-			else if(!strcmp(_argStr0, "wxFrame")){
+			if(!strcmp(_argStr0, "wxFrame")){
 				object_init_ex(return_value, php_wxFrame_entry);
 				wxFrame* ret = wxDynamicCast(_ptrObj0, wxFrame_php);
 				long id_to_find = zend_list_insert(ret, le_wxFrame);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxEvent")){
+			if(!strcmp(_argStr0, "wxEvent")){
 				object_init_ex(return_value, php_wxEvent_entry);
 				wxEvent* ret = wxDynamicCast(_ptrObj0, wxEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxWindow")){
+			if(!strcmp(_argStr0, "wxWindow")){
 				object_init_ex(return_value, php_wxWindow_entry);
 				wxWindow* ret = wxDynamicCast(_ptrObj0, wxWindow_php);
 				long id_to_find = zend_list_insert(ret, le_wxWindow);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxToolBar")){
+			if(!strcmp(_argStr0, "wxToolBar")){
 				object_init_ex(return_value, php_wxToolBar_entry);
 				wxToolBar* ret = wxDynamicCast(_ptrObj0, wxToolBar_php);
 				long id_to_find = zend_list_insert(ret, le_wxToolBar);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStatusBar")){
+			if(!strcmp(_argStr0, "wxStatusBar")){
 				object_init_ex(return_value, php_wxStatusBar_entry);
 				wxStatusBar* ret = wxDynamicCast(_ptrObj0, wxStatusBar_php);
 				long id_to_find = zend_list_insert(ret, le_wxStatusBar);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxBoxSizer")){
+			if(!strcmp(_argStr0, "wxBoxSizer")){
 				object_init_ex(return_value, php_wxBoxSizer_entry);
 				wxBoxSizer* ret = wxDynamicCast(_ptrObj0, wxBoxSizer_php);
 				long id_to_find = zend_list_insert(ret, le_wxBoxSizer);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSizer")){
+			if(!strcmp(_argStr0, "wxSizer")){
 				object_init_ex(return_value, php_wxSizer_entry);
 				wxSizer* ret = wxDynamicCast(_ptrObj0, wxSizer_php);
 				long id_to_find = zend_list_insert(ret, le_wxSizer);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxColour")){
+			if(!strcmp(_argStr0, "wxColour")){
 				object_init_ex(return_value, php_wxColour_entry);
 				wxColour* ret = wxDynamicCast(_ptrObj0, wxColour_php);
 				long id_to_find = zend_list_insert(ret, le_wxColour);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCursor")){
+			if(!strcmp(_argStr0, "wxCursor")){
 				object_init_ex(return_value, php_wxCursor_entry);
 				wxCursor* ret = wxDynamicCast(_ptrObj0, wxCursor_php);
 				long id_to_find = zend_list_insert(ret, le_wxCursor);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxFont")){
+			if(!strcmp(_argStr0, "wxFont")){
 				object_init_ex(return_value, php_wxFont_entry);
 				wxFont* ret = wxDynamicCast(_ptrObj0, wxFont_php);
 				long id_to_find = zend_list_insert(ret, le_wxFont);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxWindowBase")){
+			if(!strcmp(_argStr0, "wxWindowBase")){
 				object_init_ex(return_value, php_wxWindowBase_entry);
 				wxWindowBase* ret = wxDynamicCast(_ptrObj0, wxWindowBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxWindowBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSizerItem")){
+			if(!strcmp(_argStr0, "wxSizerItem")){
 				object_init_ex(return_value, php_wxSizerItem_entry);
 				wxSizerItem* ret = wxDynamicCast(_ptrObj0, wxSizerItem_php);
 				long id_to_find = zend_list_insert(ret, le_wxSizerItem);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxObject")){
+			if(!strcmp(_argStr0, "wxObject")){
 				object_init_ex(return_value, php_wxObject_entry);
 				wxObject* ret = wxDynamicCast(_ptrObj0, wxObject_php);
 				long id_to_find = zend_list_insert(ret, le_wxObject);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxImage")){
+			if(!strcmp(_argStr0, "wxImage")){
 				object_init_ex(return_value, php_wxImage_entry);
 				wxImage* ret = wxDynamicCast(_ptrObj0, wxImage_php);
 				long id_to_find = zend_list_insert(ret, le_wxImage);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxMenuItem")){
+			if(!strcmp(_argStr0, "wxMenuItem")){
 				object_init_ex(return_value, php_wxMenuItem_entry);
 				wxMenuItem* ret = wxDynamicCast(_ptrObj0, wxMenuItem_php);
 				long id_to_find = zend_list_insert(ret, le_wxMenuItem);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxMenuItemBase")){
+			if(!strcmp(_argStr0, "wxMenuItemBase")){
 				object_init_ex(return_value, php_wxMenuItemBase_entry);
 				wxMenuItemBase* ret = wxDynamicCast(_ptrObj0, wxMenuItemBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxMenuItemBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxMenu")){
+			if(!strcmp(_argStr0, "wxMenu")){
 				object_init_ex(return_value, php_wxMenu_entry);
 				wxMenu* ret = wxDynamicCast(_ptrObj0, wxMenu_php);
 				long id_to_find = zend_list_insert(ret, le_wxMenu);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxBitmap")){
+			if(!strcmp(_argStr0, "wxBitmap")){
 				object_init_ex(return_value, php_wxBitmap_entry);
 				wxBitmap* ret = wxDynamicCast(_ptrObj0, wxBitmap_php);
 				long id_to_find = zend_list_insert(ret, le_wxBitmap);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxMenuBase")){
+			if(!strcmp(_argStr0, "wxMenuBase")){
 				object_init_ex(return_value, php_wxMenuBase_entry);
 				wxMenuBase* ret = wxDynamicCast(_ptrObj0, wxMenuBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxMenuBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxMenuBar")){
+			if(!strcmp(_argStr0, "wxMenuBar")){
 				object_init_ex(return_value, php_wxMenuBar_entry);
 				wxMenuBar* ret = wxDynamicCast(_ptrObj0, wxMenuBar_php);
 				long id_to_find = zend_list_insert(ret, le_wxMenuBar);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxToolBarBase")){
+			if(!strcmp(_argStr0, "wxToolBarBase")){
 				object_init_ex(return_value, php_wxToolBarBase_entry);
 				wxToolBarBase* ret = wxDynamicCast(_ptrObj0, wxToolBarBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxToolBarBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxToolBarToolBase")){
+			if(!strcmp(_argStr0, "wxToolBarToolBase")){
 				object_init_ex(return_value, php_wxToolBarToolBase_entry);
 				wxToolBarToolBase* ret = wxDynamicCast(_ptrObj0, wxToolBarToolBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxToolBarToolBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxControl")){
+			if(!strcmp(_argStr0, "wxControl")){
 				object_init_ex(return_value, php_wxControl_entry);
 				wxControl* ret = wxDynamicCast(_ptrObj0, wxControl_php);
 				long id_to_find = zend_list_insert(ret, le_wxControl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCommandEvent")){
+			if(!strcmp(_argStr0, "wxCommandEvent")){
 				object_init_ex(return_value, php_wxCommandEvent_entry);
 				wxCommandEvent* ret = wxDynamicCast(_ptrObj0, wxCommandEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxCommandEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPanel")){
+			if(!strcmp(_argStr0, "wxPanel")){
 				object_init_ex(return_value, php_wxPanel_entry);
 				wxPanel* ret = wxDynamicCast(_ptrObj0, wxPanel_php);
 				long id_to_find = zend_list_insert(ret, le_wxPanel);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTopLevelWindowBase")){
+			if(!strcmp(_argStr0, "wxTopLevelWindowBase")){
 				object_init_ex(return_value, php_wxTopLevelWindowBase_entry);
 				wxTopLevelWindowBase* ret = wxDynamicCast(_ptrObj0, wxTopLevelWindowBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxTopLevelWindowBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSplitterWindow")){
+			if(!strcmp(_argStr0, "wxSplitterWindow")){
 				object_init_ex(return_value, php_wxSplitterWindow_entry);
 				wxSplitterWindow* ret = wxDynamicCast(_ptrObj0, wxSplitterWindow_php);
 				long id_to_find = zend_list_insert(ret, le_wxSplitterWindow);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTreeCtrl")){
+			if(!strcmp(_argStr0, "wxTreeCtrl")){
 				object_init_ex(return_value, php_wxTreeCtrl_entry);
 				wxTreeCtrl* ret = wxDynamicCast(_ptrObj0, wxTreeCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxTreeCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxValidator")){
+			if(!strcmp(_argStr0, "wxValidator")){
 				object_init_ex(return_value, php_wxValidator_entry);
 				wxValidator* ret = wxDynamicCast(_ptrObj0, wxValidator_php);
 				long id_to_find = zend_list_insert(ret, le_wxValidator);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCheckListBox")){
+			if(!strcmp(_argStr0, "wxCheckListBox")){
 				object_init_ex(return_value, php_wxCheckListBox_entry);
 				wxCheckListBox* ret = wxDynamicCast(_ptrObj0, wxCheckListBox_php);
 				long id_to_find = zend_list_insert(ret, le_wxCheckListBox);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxFrameBase")){
+			if(!strcmp(_argStr0, "wxFrameBase")){
 				object_init_ex(return_value, php_wxFrameBase_entry);
 				wxFrameBase* ret = wxDynamicCast(_ptrObj0, wxFrameBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxFrameBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTreeEvent")){
+			if(!strcmp(_argStr0, "wxTreeEvent")){
 				object_init_ex(return_value, php_wxTreeEvent_entry);
 				wxTreeEvent* ret = wxDynamicCast(_ptrObj0, wxTreeEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxTreeEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCheckListBoxBase")){
+			if(!strcmp(_argStr0, "wxCheckListBoxBase")){
 				object_init_ex(return_value, php_wxCheckListBoxBase_entry);
 				wxCheckListBoxBase* ret = wxDynamicCast(_ptrObj0, wxCheckListBoxBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxCheckListBoxBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxListBoxBase")){
+			if(!strcmp(_argStr0, "wxListBoxBase")){
 				object_init_ex(return_value, php_wxListBoxBase_entry);
 				wxListBoxBase* ret = wxDynamicCast(_ptrObj0, wxListBoxBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxListBoxBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxIcon")){
+			if(!strcmp(_argStr0, "wxIcon")){
 				object_init_ex(return_value, php_wxIcon_entry);
 				wxIcon* ret = wxDynamicCast(_ptrObj0, wxIcon_php);
 				long id_to_find = zend_list_insert(ret, le_wxIcon);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTextCtrl")){
+			if(!strcmp(_argStr0, "wxTextCtrl")){
 				object_init_ex(return_value, php_wxTextCtrl_entry);
 				wxTextCtrl* ret = wxDynamicCast(_ptrObj0, wxTextCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxTextCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxNotebook")){
+			if(!strcmp(_argStr0, "wxNotebook")){
 				object_init_ex(return_value, php_wxNotebook_entry);
 				wxNotebook* ret = wxDynamicCast(_ptrObj0, wxNotebook_php);
 				long id_to_find = zend_list_insert(ret, le_wxNotebook);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxBookCtrlBase")){
+			if(!strcmp(_argStr0, "wxBookCtrlBase")){
 				object_init_ex(return_value, php_wxBookCtrlBase_entry);
 				wxBookCtrlBase* ret = wxDynamicCast(_ptrObj0, wxBookCtrlBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxBookCtrlBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxFlexGridSizer")){
+			if(!strcmp(_argStr0, "wxFlexGridSizer")){
 				object_init_ex(return_value, php_wxFlexGridSizer_entry);
 				wxFlexGridSizer* ret = wxDynamicCast(_ptrObj0, wxFlexGridSizer_php);
 				long id_to_find = zend_list_insert(ret, le_wxFlexGridSizer);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStaticText")){
+			if(!strcmp(_argStr0, "wxStaticText")){
 				object_init_ex(return_value, php_wxStaticText_entry);
 				wxStaticText* ret = wxDynamicCast(_ptrObj0, wxStaticText_php);
 				long id_to_find = zend_list_insert(ret, le_wxStaticText);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxButton")){
+			if(!strcmp(_argStr0, "wxButton")){
 				object_init_ex(return_value, php_wxButton_entry);
 				wxButton* ret = wxDynamicCast(_ptrObj0, wxButton_php);
 				long id_to_find = zend_list_insert(ret, le_wxButton);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStaticBox")){
+			if(!strcmp(_argStr0, "wxStaticBox")){
 				object_init_ex(return_value, php_wxStaticBox_entry);
 				wxStaticBox* ret = wxDynamicCast(_ptrObj0, wxStaticBox_php);
 				long id_to_find = zend_list_insert(ret, le_wxStaticBox);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStaticBoxSizer")){
+			if(!strcmp(_argStr0, "wxStaticBoxSizer")){
 				object_init_ex(return_value, php_wxStaticBoxSizer_entry);
 				wxStaticBoxSizer* ret = wxDynamicCast(_ptrObj0, wxStaticBoxSizer_php);
 				long id_to_find = zend_list_insert(ret, le_wxStaticBoxSizer);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxListBox")){
+			if(!strcmp(_argStr0, "wxListBox")){
 				object_init_ex(return_value, php_wxListBox_entry);
 				wxListBox* ret = wxDynamicCast(_ptrObj0, wxListBox_php);
 				long id_to_find = zend_list_insert(ret, le_wxListBox);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxFileDialog")){
+			if(!strcmp(_argStr0, "wxFileDialog")){
 				object_init_ex(return_value, php_wxFileDialog_entry);
 				wxFileDialog* ret = wxDynamicCast(_ptrObj0, wxFileDialog_php);
 				long id_to_find = zend_list_insert(ret, le_wxFileDialog);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDialog")){
+			if(!strcmp(_argStr0, "wxDialog")){
 				object_init_ex(return_value, php_wxDialog_entry);
 				wxDialog* ret = wxDynamicCast(_ptrObj0, wxDialog_php);
 				long id_to_find = zend_list_insert(ret, le_wxDialog);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxMessageDialog")){
+			if(!strcmp(_argStr0, "wxMessageDialog")){
 				object_init_ex(return_value, php_wxMessageDialog_entry);
 				wxMessageDialog* ret = wxDynamicCast(_ptrObj0, wxMessageDialog_php);
 				long id_to_find = zend_list_insert(ret, le_wxMessageDialog);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStatusBarBase")){
+			if(!strcmp(_argStr0, "wxStatusBarBase")){
 				object_init_ex(return_value, php_wxStatusBarBase_entry);
 				wxStatusBarBase* ret = wxDynamicCast(_ptrObj0, wxStatusBarBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxStatusBarBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxListCtrl")){
+			if(!strcmp(_argStr0, "wxListCtrl")){
 				object_init_ex(return_value, php_wxListCtrl_entry);
 				wxListCtrl* ret = wxDynamicCast(_ptrObj0, wxListCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxListCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStaticBitmap")){
+			if(!strcmp(_argStr0, "wxStaticBitmap")){
 				object_init_ex(return_value, php_wxStaticBitmap_entry);
 				wxStaticBitmap* ret = wxDynamicCast(_ptrObj0, wxStaticBitmap_php);
 				long id_to_find = zend_list_insert(ret, le_wxStaticBitmap);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGauge")){
+			if(!strcmp(_argStr0, "wxGauge")){
 				object_init_ex(return_value, php_wxGauge_entry);
 				wxGauge* ret = wxDynamicCast(_ptrObj0, wxGauge_php);
 				long id_to_find = zend_list_insert(ret, le_wxGauge);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxListEvent")){
+			if(!strcmp(_argStr0, "wxListEvent")){
 				object_init_ex(return_value, php_wxListEvent_entry);
 				wxListEvent* ret = wxDynamicCast(_ptrObj0, wxListEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxListEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxComboBox")){
+			if(!strcmp(_argStr0, "wxComboBox")){
 				object_init_ex(return_value, php_wxComboBox_entry);
 				wxComboBox* ret = wxDynamicCast(_ptrObj0, wxComboBox_php);
 				long id_to_find = zend_list_insert(ret, le_wxComboBox);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPrinter")){
+			if(!strcmp(_argStr0, "wxPrinter")){
 				object_init_ex(return_value, php_wxPrinter_entry);
 				wxPrinter* ret = wxDynamicCast(_ptrObj0, wxPrinter_php);
 				long id_to_find = zend_list_insert(ret, le_wxPrinter);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPrintout")){
+			if(!strcmp(_argStr0, "wxPrintout")){
 				object_init_ex(return_value, php_wxPrintout_entry);
 				wxPrintout* ret = wxDynamicCast(_ptrObj0, wxPrintout_php);
 				long id_to_find = zend_list_insert(ret, le_wxPrintout);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDC")){
+			if(!strcmp(_argStr0, "wxDC")){
 				object_init_ex(return_value, php_wxDC_entry);
 				wxDC* ret = wxDynamicCast(_ptrObj0, wxDC_php);
 				long id_to_find = zend_list_insert(ret, le_wxDC);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDCBase")){
+			if(!strcmp(_argStr0, "wxDCBase")){
 				object_init_ex(return_value, php_wxDCBase_entry);
 				wxDCBase* ret = wxDynamicCast(_ptrObj0, wxDCBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxDCBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPrintDialogData")){
+			if(!strcmp(_argStr0, "wxPrintDialogData")){
 				object_init_ex(return_value, php_wxPrintDialogData_entry);
 				wxPrintDialogData* ret = wxDynamicCast(_ptrObj0, wxPrintDialogData_php);
 				long id_to_find = zend_list_insert(ret, le_wxPrintDialogData);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPen")){
+			if(!strcmp(_argStr0, "wxPen")){
 				object_init_ex(return_value, php_wxPen_entry);
 				wxPen* ret = wxDynamicCast(_ptrObj0, wxPen_php);
 				long id_to_find = zend_list_insert(ret, le_wxPen);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxBrush")){
+			if(!strcmp(_argStr0, "wxBrush")){
 				object_init_ex(return_value, php_wxBrush_entry);
 				wxBrush* ret = wxDynamicCast(_ptrObj0, wxBrush_php);
 				long id_to_find = zend_list_insert(ret, le_wxBrush);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSplashScreen")){
+			if(!strcmp(_argStr0, "wxSplashScreen")){
 				object_init_ex(return_value, php_wxSplashScreen_entry);
 				wxSplashScreen* ret = wxDynamicCast(_ptrObj0, wxSplashScreen_php);
 				long id_to_find = zend_list_insert(ret, le_wxSplashScreen);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCalendarCtrl")){
+			if(!strcmp(_argStr0, "wxCalendarCtrl")){
 				object_init_ex(return_value, php_wxCalendarCtrl_entry);
 				wxCalendarCtrl* ret = wxDynamicCast(_ptrObj0, wxCalendarCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxCalendarCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCalendarEvent")){
+			if(!strcmp(_argStr0, "wxCalendarEvent")){
 				object_init_ex(return_value, php_wxCalendarEvent_entry);
 				wxCalendarEvent* ret = wxDynamicCast(_ptrObj0, wxCalendarEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxCalendarEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDateEvent")){
+			if(!strcmp(_argStr0, "wxDateEvent")){
 				object_init_ex(return_value, php_wxDateEvent_entry);
 				wxDateEvent* ret = wxDynamicCast(_ptrObj0, wxDateEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxDateEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTimer")){
+			if(!strcmp(_argStr0, "wxTimer")){
 				object_init_ex(return_value, php_wxTimer_entry);
 				wxTimer* ret = wxDynamicCast(_ptrObj0, wxTimer_php);
 				long id_to_find = zend_list_insert(ret, le_wxTimer);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxEvtHandler")){
+			if(!strcmp(_argStr0, "wxEvtHandler")){
 				object_init_ex(return_value, php_wxEvtHandler_entry);
 				wxEvtHandler* ret = wxDynamicCast(_ptrObj0, wxEvtHandler_php);
 				long id_to_find = zend_list_insert(ret, le_wxEvtHandler);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTimerEvent")){
+			if(!strcmp(_argStr0, "wxTimerEvent")){
 				object_init_ex(return_value, php_wxTimerEvent_entry);
 				wxTimerEvent* ret = wxDynamicCast(_ptrObj0, wxTimerEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxTimerEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxIPV4address")){
+			if(!strcmp(_argStr0, "wxIPV4address")){
 				object_init_ex(return_value, php_wxIPV4address_entry);
 				wxIPV4address* ret = wxDynamicCast(_ptrObj0, wxIPV4address_php);
 				long id_to_find = zend_list_insert(ret, le_wxIPV4address);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSockAddress")){
+			if(!strcmp(_argStr0, "wxSockAddress")){
 				object_init_ex(return_value, php_wxSockAddress_entry);
 				wxSockAddress* ret = wxDynamicCast(_ptrObj0, wxSockAddress_php);
 				long id_to_find = zend_list_insert(ret, le_wxSockAddress);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSocketClient")){
+			if(!strcmp(_argStr0, "wxSocketClient")){
 				object_init_ex(return_value, php_wxSocketClient_entry);
 				wxSocketClient* ret = wxDynamicCast(_ptrObj0, wxSocketClient_php);
 				long id_to_find = zend_list_insert(ret, le_wxSocketClient);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSocketBase")){
+			if(!strcmp(_argStr0, "wxSocketBase")){
 				object_init_ex(return_value, php_wxSocketBase_entry);
 				wxSocketBase* ret = wxDynamicCast(_ptrObj0, wxSocketBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxSocketBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCheckBox")){
+			if(!strcmp(_argStr0, "wxCheckBox")){
 				object_init_ex(return_value, php_wxCheckBox_entry);
 				wxCheckBox* ret = wxDynamicCast(_ptrObj0, wxCheckBox_php);
 				long id_to_find = zend_list_insert(ret, le_wxCheckBox);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDirDialog")){
+			if(!strcmp(_argStr0, "wxDirDialog")){
 				object_init_ex(return_value, php_wxDirDialog_entry);
 				wxDirDialog* ret = wxDynamicCast(_ptrObj0, wxDirDialog_php);
 				long id_to_find = zend_list_insert(ret, le_wxDirDialog);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxBitmapButton")){
+			if(!strcmp(_argStr0, "wxBitmapButton")){
 				object_init_ex(return_value, php_wxBitmapButton_entry);
 				wxBitmapButton* ret = wxDynamicCast(_ptrObj0, wxBitmapButton_php);
 				long id_to_find = zend_list_insert(ret, le_wxBitmapButton);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxToggleButton")){
+			if(!strcmp(_argStr0, "wxToggleButton")){
 				object_init_ex(return_value, php_wxToggleButton_entry);
 				wxToggleButton* ret = wxDynamicCast(_ptrObj0, wxToggleButton_php);
 				long id_to_find = zend_list_insert(ret, le_wxToggleButton);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxChoice")){
+			if(!strcmp(_argStr0, "wxChoice")){
 				object_init_ex(return_value, php_wxChoice_entry);
 				wxChoice* ret = wxDynamicCast(_ptrObj0, wxChoice_php);
 				long id_to_find = zend_list_insert(ret, le_wxChoice);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStyledTextCtrl")){
+			if(!strcmp(_argStr0, "wxStyledTextCtrl")){
 				object_init_ex(return_value, php_wxStyledTextCtrl_entry);
 				wxStyledTextCtrl* ret = wxDynamicCast(_ptrObj0, wxStyledTextCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxStyledTextCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxImageList")){
+			if(!strcmp(_argStr0, "wxImageList")){
 				object_init_ex(return_value, php_wxImageList_entry);
 				wxImageList* ret = wxDynamicCast(_ptrObj0, wxImageList_php);
 				long id_to_find = zend_list_insert(ret, le_wxImageList);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxXmlResource")){
+			if(!strcmp(_argStr0, "wxXmlResource")){
 				object_init_ex(return_value, php_wxXmlResource_entry);
 				wxXmlResource* ret = wxDynamicCast(_ptrObj0, wxXmlResource_php);
 				long id_to_find = zend_list_insert(ret, le_wxXmlResource);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTreeCtrlBase")){
+			if(!strcmp(_argStr0, "wxTreeCtrlBase")){
 				object_init_ex(return_value, php_wxTreeCtrlBase_entry);
 				wxTreeCtrlBase* ret = wxDynamicCast(_ptrObj0, wxTreeCtrlBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxTreeCtrlBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxRadioBox")){
+			if(!strcmp(_argStr0, "wxRadioBox")){
 				object_init_ex(return_value, php_wxRadioBox_entry);
 				wxRadioBox* ret = wxDynamicCast(_ptrObj0, wxRadioBox_php);
 				long id_to_find = zend_list_insert(ret, le_wxRadioBox);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxRadioButton")){
+			if(!strcmp(_argStr0, "wxRadioButton")){
 				object_init_ex(return_value, php_wxRadioButton_entry);
 				wxRadioButton* ret = wxDynamicCast(_ptrObj0, wxRadioButton_php);
 				long id_to_find = zend_list_insert(ret, le_wxRadioButton);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxListItem")){
+			if(!strcmp(_argStr0, "wxListItem")){
 				object_init_ex(return_value, php_wxListItem_entry);
 				wxListItem* ret = wxDynamicCast(_ptrObj0, wxListItem_php);
 				long id_to_find = zend_list_insert(ret, le_wxListItem);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxHtmlHelpController")){
+			if(!strcmp(_argStr0, "wxHtmlHelpController")){
 				object_init_ex(return_value, php_wxHtmlHelpController_entry);
 				wxHtmlHelpController* ret = wxDynamicCast(_ptrObj0, wxHtmlHelpController_php);
 				long id_to_find = zend_list_insert(ret, le_wxHtmlHelpController);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTaskBarIcon")){
+			if(!strcmp(_argStr0, "wxTaskBarIcon")){
 				object_init_ex(return_value, php_wxTaskBarIcon_entry);
 				wxTaskBarIcon* ret = wxDynamicCast(_ptrObj0, wxTaskBarIcon_php);
 				long id_to_find = zend_list_insert(ret, le_wxTaskBarIcon);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxAuiManager")){
+			if(!strcmp(_argStr0, "wxAuiManager")){
 				object_init_ex(return_value, php_wxAuiManager_entry);
 				wxAuiManager* ret = wxDynamicCast(_ptrObj0, wxAuiManager_php);
 				long id_to_find = zend_list_insert(ret, le_wxAuiManager);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxAuiNotebook")){
+			if(!strcmp(_argStr0, "wxAuiNotebook")){
 				object_init_ex(return_value, php_wxAuiNotebook_entry);
 				wxAuiNotebook* ret = wxDynamicCast(_ptrObj0, wxAuiNotebook_php);
 				long id_to_find = zend_list_insert(ret, le_wxAuiNotebook);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxAuiMDIParentFrame")){
+			if(!strcmp(_argStr0, "wxAuiMDIParentFrame")){
 				object_init_ex(return_value, php_wxAuiMDIParentFrame_entry);
 				wxAuiMDIParentFrame* ret = wxDynamicCast(_ptrObj0, wxAuiMDIParentFrame_php);
 				long id_to_find = zend_list_insert(ret, le_wxAuiMDIParentFrame);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGDIObject")){
+			if(!strcmp(_argStr0, "wxGDIObject")){
 				object_init_ex(return_value, php_wxGDIObject_entry);
 				wxGDIObject* ret = wxDynamicCast(_ptrObj0, wxGDIObject_php);
 				long id_to_find = zend_list_insert(ret, le_wxGDIObject);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxChoicebook")){
+			if(!strcmp(_argStr0, "wxChoicebook")){
 				object_init_ex(return_value, php_wxChoicebook_entry);
 				wxChoicebook* ret = wxDynamicCast(_ptrObj0, wxChoicebook_php);
 				long id_to_find = zend_list_insert(ret, le_wxChoicebook);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGrid")){
+			if(!strcmp(_argStr0, "wxGrid")){
 				object_init_ex(return_value, php_wxGrid_entry);
 				wxGrid* ret = wxDynamicCast(_ptrObj0, wxGrid_php);
 				long id_to_find = zend_list_insert(ret, le_wxGrid);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxHyperlinkCtrl")){
+			if(!strcmp(_argStr0, "wxHyperlinkCtrl")){
 				object_init_ex(return_value, php_wxHyperlinkCtrl_entry);
 				wxHyperlinkCtrl* ret = wxDynamicCast(_ptrObj0, wxHyperlinkCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxHyperlinkCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxHyperlinkEvent")){
+			if(!strcmp(_argStr0, "wxHyperlinkEvent")){
 				object_init_ex(return_value, php_wxHyperlinkEvent_entry);
 				wxHyperlinkEvent* ret = wxDynamicCast(_ptrObj0, wxHyperlinkEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxHyperlinkEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxMenuBarBase")){
+			if(!strcmp(_argStr0, "wxMenuBarBase")){
 				object_init_ex(return_value, php_wxMenuBarBase_entry);
 				wxMenuBarBase* ret = wxDynamicCast(_ptrObj0, wxMenuBarBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxMenuBarBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxAuiToolBar")){
+			if(!strcmp(_argStr0, "wxAuiToolBar")){
 				object_init_ex(return_value, php_wxAuiToolBar_entry);
 				wxAuiToolBar* ret = wxDynamicCast(_ptrObj0, wxAuiToolBar_php);
 				long id_to_find = zend_list_insert(ret, le_wxAuiToolBar);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDialogBase")){
+			if(!strcmp(_argStr0, "wxDialogBase")){
 				object_init_ex(return_value, php_wxDialogBase_entry);
 				wxDialogBase* ret = wxDynamicCast(_ptrObj0, wxDialogBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxDialogBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStdDialogButtonSizer")){
+			if(!strcmp(_argStr0, "wxStdDialogButtonSizer")){
 				object_init_ex(return_value, php_wxStdDialogButtonSizer_entry);
 				wxStdDialogButtonSizer* ret = wxDynamicCast(_ptrObj0, wxStdDialogButtonSizer_php);
 				long id_to_find = zend_list_insert(ret, le_wxStdDialogButtonSizer);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxHtmlWindow")){
+			if(!strcmp(_argStr0, "wxHtmlWindow")){
 				object_init_ex(return_value, php_wxHtmlWindow_entry);
 				wxHtmlWindow* ret = wxDynamicCast(_ptrObj0, wxHtmlWindow_php);
 				long id_to_find = zend_list_insert(ret, le_wxHtmlWindow);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxHtmlContainerCell")){
+			if(!strcmp(_argStr0, "wxHtmlContainerCell")){
 				object_init_ex(return_value, php_wxHtmlContainerCell_entry);
 				wxHtmlContainerCell* ret = wxDynamicCast(_ptrObj0, wxHtmlContainerCell_php);
 				long id_to_find = zend_list_insert(ret, le_wxHtmlContainerCell);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxHtmlCell")){
+			if(!strcmp(_argStr0, "wxHtmlCell")){
 				object_init_ex(return_value, php_wxHtmlCell_entry);
 				wxHtmlCell* ret = wxDynamicCast(_ptrObj0, wxHtmlCell_php);
 				long id_to_find = zend_list_insert(ret, le_wxHtmlCell);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxHtmlLinkInfo")){
+			if(!strcmp(_argStr0, "wxHtmlLinkInfo")){
 				object_init_ex(return_value, php_wxHtmlLinkInfo_entry);
 				wxHtmlLinkInfo* ret = wxDynamicCast(_ptrObj0, wxHtmlLinkInfo_php);
 				long id_to_find = zend_list_insert(ret, le_wxHtmlLinkInfo);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxRichTextCtrl")){
+			if(!strcmp(_argStr0, "wxRichTextCtrl")){
 				object_init_ex(return_value, php_wxRichTextCtrl_entry);
 				wxRichTextCtrl* ret = wxDynamicCast(_ptrObj0, wxRichTextCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxRichTextCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCommandProcessor")){
+			if(!strcmp(_argStr0, "wxCommandProcessor")){
 				object_init_ex(return_value, php_wxCommandProcessor_entry);
 				wxCommandProcessor* ret = wxDynamicCast(_ptrObj0, wxCommandProcessor_php);
 				long id_to_find = zend_list_insert(ret, le_wxCommandProcessor);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxRegion")){
+			if(!strcmp(_argStr0, "wxRegion")){
 				object_init_ex(return_value, php_wxRegion_entry);
 				wxRegion* ret = wxDynamicCast(_ptrObj0, wxRegion_php);
 				long id_to_find = zend_list_insert(ret, le_wxRegion);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxRegionBase")){
+			if(!strcmp(_argStr0, "wxRegionBase")){
 				object_init_ex(return_value, php_wxRegionBase_entry);
 				wxRegionBase* ret = wxDynamicCast(_ptrObj0, wxRegionBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxRegionBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGridTableBase")){
+			if(!strcmp(_argStr0, "wxGridTableBase")){
 				object_init_ex(return_value, php_wxGridTableBase_entry);
 				wxGridTableBase* ret = wxDynamicCast(_ptrObj0, wxGridTableBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxGridTableBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSearchCtrl")){
+			if(!strcmp(_argStr0, "wxSearchCtrl")){
 				object_init_ex(return_value, php_wxSearchCtrl_entry);
 				wxSearchCtrl* ret = wxDynamicCast(_ptrObj0, wxSearchCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxSearchCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxColourPickerCtrl")){
+			if(!strcmp(_argStr0, "wxColourPickerCtrl")){
 				object_init_ex(return_value, php_wxColourPickerCtrl_entry);
 				wxColourPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxColourPickerCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxColourPickerCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxFontPickerCtrl")){
+			if(!strcmp(_argStr0, "wxFontPickerCtrl")){
 				object_init_ex(return_value, php_wxFontPickerCtrl_entry);
 				wxFontPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxFontPickerCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxFontPickerCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxFilePickerCtrl")){
+			if(!strcmp(_argStr0, "wxFilePickerCtrl")){
 				object_init_ex(return_value, php_wxFilePickerCtrl_entry);
 				wxFilePickerCtrl* ret = wxDynamicCast(_ptrObj0, wxFilePickerCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxFilePickerCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxFileDirPickerCtrlBase")){
+			if(!strcmp(_argStr0, "wxFileDirPickerCtrlBase")){
 				object_init_ex(return_value, php_wxFileDirPickerCtrlBase_entry);
 				wxFileDirPickerCtrlBase* ret = wxDynamicCast(_ptrObj0, wxFileDirPickerCtrlBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxFileDirPickerCtrlBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDirPickerCtrl")){
+			if(!strcmp(_argStr0, "wxDirPickerCtrl")){
 				object_init_ex(return_value, php_wxDirPickerCtrl_entry);
 				wxDirPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxDirPickerCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxDirPickerCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDatePickerCtrlBase")){
+			if(!strcmp(_argStr0, "wxDatePickerCtrlBase")){
 				object_init_ex(return_value, php_wxDatePickerCtrlBase_entry);
 				wxDatePickerCtrlBase* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrlBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxDatePickerCtrlBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDatePickerCtrlGeneric")){
+			if(!strcmp(_argStr0, "wxDatePickerCtrlGeneric")){
 				object_init_ex(return_value, php_wxDatePickerCtrlGeneric_entry);
 				wxDatePickerCtrlGeneric* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrlGeneric_php);
 				long id_to_find = zend_list_insert(ret, le_wxDatePickerCtrlGeneric);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDatePickerCtrl")){
+			if(!strcmp(_argStr0, "wxDatePickerCtrl")){
 				object_init_ex(return_value, php_wxDatePickerCtrl_entry);
 				wxDatePickerCtrl* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxDatePickerCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxScrollBar")){
+			if(!strcmp(_argStr0, "wxScrollBar")){
 				object_init_ex(return_value, php_wxScrollBar_entry);
 				wxScrollBar* ret = wxDynamicCast(_ptrObj0, wxScrollBar_php);
 				long id_to_find = zend_list_insert(ret, le_wxScrollBar);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSpinCtrl")){
+			if(!strcmp(_argStr0, "wxSpinCtrl")){
 				object_init_ex(return_value, php_wxSpinCtrl_entry);
 				wxSpinCtrl* ret = wxDynamicCast(_ptrObj0, wxSpinCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxSpinCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSpinButton")){
+			if(!strcmp(_argStr0, "wxSpinButton")){
 				object_init_ex(return_value, php_wxSpinButton_entry);
 				wxSpinButton* ret = wxDynamicCast(_ptrObj0, wxSpinButton_php);
 				long id_to_find = zend_list_insert(ret, le_wxSpinButton);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGenericDirCtrl")){
+			if(!strcmp(_argStr0, "wxGenericDirCtrl")){
 				object_init_ex(return_value, php_wxGenericDirCtrl_entry);
 				wxGenericDirCtrl* ret = wxDynamicCast(_ptrObj0, wxGenericDirCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxGenericDirCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxDirFilterListCtrl")){
+			if(!strcmp(_argStr0, "wxDirFilterListCtrl")){
 				object_init_ex(return_value, php_wxDirFilterListCtrl_entry);
 				wxDirFilterListCtrl* ret = wxDynamicCast(_ptrObj0, wxDirFilterListCtrl_php);
 				long id_to_find = zend_list_insert(ret, le_wxDirFilterListCtrl);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxChoiceBase")){
+			if(!strcmp(_argStr0, "wxChoiceBase")){
 				object_init_ex(return_value, php_wxChoiceBase_entry);
 				wxChoiceBase* ret = wxDynamicCast(_ptrObj0, wxChoiceBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxChoiceBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxBitmapButtonBase")){
+			if(!strcmp(_argStr0, "wxBitmapButtonBase")){
 				object_init_ex(return_value, php_wxBitmapButtonBase_entry);
 				wxBitmapButtonBase* ret = wxDynamicCast(_ptrObj0, wxBitmapButtonBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxBitmapButtonBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTextCtrlBase")){
+			if(!strcmp(_argStr0, "wxTextCtrlBase")){
 				object_init_ex(return_value, php_wxTextCtrlBase_entry);
 				wxTextCtrlBase* ret = wxDynamicCast(_ptrObj0, wxTextCtrlBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxTextCtrlBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxBitmapComboBox")){
+			if(!strcmp(_argStr0, "wxBitmapComboBox")){
 				object_init_ex(return_value, php_wxBitmapComboBox_entry);
 				wxBitmapComboBox* ret = wxDynamicCast(_ptrObj0, wxBitmapComboBox_php);
 				long id_to_find = zend_list_insert(ret, le_wxBitmapComboBox);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxCheckBoxBase")){
+			if(!strcmp(_argStr0, "wxCheckBoxBase")){
 				object_init_ex(return_value, php_wxCheckBoxBase_entry);
 				wxCheckBoxBase* ret = wxDynamicCast(_ptrObj0, wxCheckBoxBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxCheckBoxBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStaticLineBase")){
+			if(!strcmp(_argStr0, "wxStaticLineBase")){
 				object_init_ex(return_value, php_wxStaticLineBase_entry);
 				wxStaticLineBase* ret = wxDynamicCast(_ptrObj0, wxStaticLineBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxStaticLineBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxStaticLine")){
+			if(!strcmp(_argStr0, "wxStaticLine")){
 				object_init_ex(return_value, php_wxStaticLine_entry);
 				wxStaticLine* ret = wxDynamicCast(_ptrObj0, wxStaticLine_php);
 				long id_to_find = zend_list_insert(ret, le_wxStaticLine);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSlider")){
+			if(!strcmp(_argStr0, "wxSlider")){
 				object_init_ex(return_value, php_wxSlider_entry);
 				wxSlider* ret = wxDynamicCast(_ptrObj0, wxSlider_php);
 				long id_to_find = zend_list_insert(ret, le_wxSlider);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxSliderBase")){
+			if(!strcmp(_argStr0, "wxSliderBase")){
 				object_init_ex(return_value, php_wxSliderBase_entry);
 				wxSliderBase* ret = wxDynamicCast(_ptrObj0, wxSliderBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxSliderBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxScrolledWindow")){
+			if(!strcmp(_argStr0, "wxScrolledWindow")){
 				object_init_ex(return_value, php_wxScrolledWindow_entry);
 				wxScrolledWindow* ret = wxDynamicCast(_ptrObj0, wxScrolledWindow_php);
 				long id_to_find = zend_list_insert(ret, le_wxScrolledWindow);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxNotebookBase")){
+			if(!strcmp(_argStr0, "wxNotebookBase")){
 				object_init_ex(return_value, php_wxNotebookBase_entry);
 				wxNotebookBase* ret = wxDynamicCast(_ptrObj0, wxNotebookBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxNotebookBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxListbook")){
+			if(!strcmp(_argStr0, "wxListbook")){
 				object_init_ex(return_value, php_wxListbook_entry);
 				wxListbook* ret = wxDynamicCast(_ptrObj0, wxListbook_php);
 				long id_to_find = zend_list_insert(ret, le_wxListbook);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGridSizer")){
+			if(!strcmp(_argStr0, "wxGridSizer")){
 				object_init_ex(return_value, php_wxGridSizer_entry);
 				wxGridSizer* ret = wxDynamicCast(_ptrObj0, wxGridSizer_php);
 				long id_to_find = zend_list_insert(ret, le_wxGridSizer);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGridBagSizer")){
+			if(!strcmp(_argStr0, "wxGridBagSizer")){
 				object_init_ex(return_value, php_wxGridBagSizer_entry);
 				wxGridBagSizer* ret = wxDynamicCast(_ptrObj0, wxGridBagSizer_php);
 				long id_to_find = zend_list_insert(ret, le_wxGridBagSizer);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGBSizerItem")){
+			if(!strcmp(_argStr0, "wxGBSizerItem")){
 				object_init_ex(return_value, php_wxGBSizerItem_entry);
 				wxGBSizerItem* ret = wxDynamicCast(_ptrObj0, wxGBSizerItem_php);
 				long id_to_find = zend_list_insert(ret, le_wxGBSizerItem);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxMask")){
+			if(!strcmp(_argStr0, "wxMask")){
 				object_init_ex(return_value, php_wxMask_entry);
 				wxMask* ret = wxDynamicCast(_ptrObj0, wxMask_php);
 				long id_to_find = zend_list_insert(ret, le_wxMask);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPalette")){
+			if(!strcmp(_argStr0, "wxPalette")){
 				object_init_ex(return_value, php_wxPalette_entry);
 				wxPalette* ret = wxDynamicCast(_ptrObj0, wxPalette_php);
 				long id_to_find = zend_list_insert(ret, le_wxPalette);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxHtmlEasyPrinting")){
+			if(!strcmp(_argStr0, "wxHtmlEasyPrinting")){
 				object_init_ex(return_value, php_wxHtmlEasyPrinting_entry);
 				wxHtmlEasyPrinting* ret = wxDynamicCast(_ptrObj0, wxHtmlEasyPrinting_php);
 				long id_to_find = zend_list_insert(ret, le_wxHtmlEasyPrinting);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPrintData")){
+			if(!strcmp(_argStr0, "wxPrintData")){
 				object_init_ex(return_value, php_wxPrintData_entry);
 				wxPrintData* ret = wxDynamicCast(_ptrObj0, wxPrintData_php);
 				long id_to_find = zend_list_insert(ret, le_wxPrintData);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPageSetupDialog")){
+			if(!strcmp(_argStr0, "wxPageSetupDialog")){
 				object_init_ex(return_value, php_wxPageSetupDialog_entry);
 				wxPageSetupDialog* ret = wxDynamicCast(_ptrObj0, wxPageSetupDialog_php);
 				long id_to_find = zend_list_insert(ret, le_wxPageSetupDialog);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxPageSetupDialogData")){
+			if(!strcmp(_argStr0, "wxPageSetupDialogData")){
 				object_init_ex(return_value, php_wxPageSetupDialogData_entry);
 				wxPageSetupDialogData* ret = wxDynamicCast(_ptrObj0, wxPageSetupDialogData_php);
 				long id_to_find = zend_list_insert(ret, le_wxPageSetupDialogData);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxTimerBase")){
+			if(!strcmp(_argStr0, "wxTimerBase")){
 				object_init_ex(return_value, php_wxTimerBase_entry);
 				wxTimerBase* ret = wxDynamicCast(_ptrObj0, wxTimerBase_php);
 				long id_to_find = zend_list_insert(ret, le_wxTimerBase);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxAuiNotebookEvent")){
+			if(!strcmp(_argStr0, "wxAuiNotebookEvent")){
 				object_init_ex(return_value, php_wxAuiNotebookEvent_entry);
 				wxAuiNotebookEvent* ret = wxDynamicCast(_ptrObj0, wxAuiNotebookEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxAuiNotebookEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxAuiManagerEvent")){
+			if(!strcmp(_argStr0, "wxAuiManagerEvent")){
 				object_init_ex(return_value, php_wxAuiManagerEvent_entry);
 				wxAuiManagerEvent* ret = wxDynamicCast(_ptrObj0, wxAuiManagerEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxAuiManagerEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxAuiToolBarEvent")){
+			if(!strcmp(_argStr0, "wxAuiToolBarEvent")){
 				object_init_ex(return_value, php_wxAuiToolBarEvent_entry);
 				wxAuiToolBarEvent* ret = wxDynamicCast(_ptrObj0, wxAuiToolBarEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxAuiToolBarEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxNotifyEvent")){
+			if(!strcmp(_argStr0, "wxNotifyEvent")){
 				object_init_ex(return_value, php_wxNotifyEvent_entry);
 				wxNotifyEvent* ret = wxDynamicCast(_ptrObj0, wxNotifyEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxNotifyEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxGridEvent")){
+			if(!strcmp(_argStr0, "wxGridEvent")){
 				object_init_ex(return_value, php_wxGridEvent_entry);
 				wxGridEvent* ret = wxDynamicCast(_ptrObj0, wxGridEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxGridEvent);
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			else if(!strcmp(_argStr0, "wxIdleEvent")){
+			if(!strcmp(_argStr0, "wxIdleEvent")){
 				object_init_ex(return_value, php_wxIdleEvent_entry);
 				wxIdleEvent* ret = wxDynamicCast(_ptrObj0, wxIdleEvent_php);
 				long id_to_find = zend_list_insert(ret, le_wxIdleEvent);

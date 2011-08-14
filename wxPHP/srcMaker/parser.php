@@ -2164,7 +2164,11 @@ PHP_METHOD(php_<?=$className?>, Connect)
 <? //if($retType=="wxString" || $retType=="bool" || $retType=="void" || $retType=="int" || $retType == "wxColour" || $retType == "wxFont") { ?>
 <?=$retType ?> <?=$className?>_php::<?=$methodName?>(<?=$args?>)<?=$const?>
 {
+	<? if(count($argos)<=0){ ?>
+	zval *args[] = {0};
+	<? }else { ?>
 	zval *args[<?=count($argos)?>];
+	<? } ?>
 	zval retval, funcname;
 	ZVAL_STRING(&funcname, "<?=$methodName?>", 0);
 	
@@ -2690,12 +2694,23 @@ $classes .= "\n";
 
 foreach($defEnums[0] as $enumClassName=>$classEnums)
 {
-	foreach($classEnums as $enumName=>$enumList)
+	//Only add enums of enabled classes
+	if(isset($defIni[$enumClassName]))
 	{
-		foreach($enumList as $enumOption=>$enumValue)
+		foreach($classEnums as $enumName=>$enumList)
 		{
-			//$classes .= "REGISTER_NS_LONG_CONSTANT(\"$enumClassName\", \"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
-			$classes .= "zend_declare_class_constant_long(php_{$enumClassName}_entry, \"$enumOption\", " . strlen($enumOption) . ",  $enumClassName::$enumOption TSRMLS_DC);\n";
+			foreach($enumList as $enumOption=>$enumValue)
+			{
+				//To produce constant with namespace like syntax namespace\constant
+				//$classes .= "REGISTER_NS_LONG_CONSTANT(\"$enumClassName\", \"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
+				
+				//To produce constant with class property syntax class::constant
+				//Gives a type 'void' unexpected error when compiling on windows
+				//$classes .= "zend_declare_class_constant_long(php_{$enumClassName}_entry, \"$enumOption\", " . strlen($enumOption) . ",  $enumClassName::$enumOption TSRMLS_DC);\n";
+				
+				//Constant in global scope
+				$classes .= "REGISTER_LONG_CONSTANT(\"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
+			}
 		}
 	}
 }
@@ -2736,8 +2751,6 @@ if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$matc
 					$dynamicCastCode .= "\t\t}\n";
 					$dynamicCastCode .= "\t\t\n";
 					$dynamicCastCode .= "\t\tif(valid){\n";
-						$dynamicCastCode .= "\t\t\tif(0){\n";
-						$dynamicCastCode .= "\t\t\t}\n";
                 
 		foreach($defIni as $className => $classDef)
 		{
@@ -2754,7 +2767,7 @@ if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$matc
 			)
 				continue;
 
-                        $dynamicCastCode .= "\t\t\telse if(!strcmp(_argStr0, \"$className\")){\n";
+                        $dynamicCastCode .= "\t\t\tif(!strcmp(_argStr0, \"$className\")){\n";
                                $dynamicCastCode .= "\t\t\t\tobject_init_ex(return_value, php_{$className}_entry);\n";
                                 $dynamicCastCode .= "\t\t\t\t{$className}* ret = wxDynamicCast(_ptrObj0, {$className}_php);\n";
                                 $dynamicCastCode .= "\t\t\t\tlong id_to_find = zend_list_insert(ret, le_{$className});\n";

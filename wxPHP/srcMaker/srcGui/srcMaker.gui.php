@@ -16,7 +16,20 @@
 	
 	$clo = unserialize(file_get_contents('classes.out'));
 	if(!$clo)
+	{
 		$clo = array();
+	}
+	else
+	{
+		//Clean classes not found on classes.dump
+		foreach($clo as $class_out_name=>$class_out_data)
+		{
+			if(!isset($cls[$class_out_name]))
+			{
+				unset($clo[$class_out_name]);
+			}
+		}
+	}
 		
 	$selClass = null;
 	
