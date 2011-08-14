@@ -958,8 +958,8 @@ PHP_METHOD(php_wxEvent, __construct)
 	}
 }
 wxEvent* wxEvent_php::Clone() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Clone", 0);
 	
 	
@@ -14709,8 +14709,8 @@ PHP_METHOD(php_wxTopLevelWindowBase, SetIcon)
 	}
 }
 void wxTopLevelWindowBase_php::Maximize(bool arg0=true){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Maximize", 0);
 	
 	
@@ -24235,8 +24235,8 @@ PHP_METHOD(php_wxStatusBarBase, SetFieldsCount)
 	}
 }
 void wxStatusBarBase_php::SetMinHeight(int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetMinHeight", 0);
 	
 	
@@ -24596,8 +24596,8 @@ PHP_METHOD(php_wxListCtrl, SetItemCount)
 	}
 }
 wxString wxListCtrl_php::OnGetItemText(long int arg0 , long int arg1) const{
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "OnGetItemText", 0);
 	
 	
@@ -29493,8 +29493,8 @@ PHP_METHOD(php_wxPrintout, SetDC)
 	}
 }
 bool wxPrintout_php::OnPrintPage(int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "OnPrintPage", 0);
 	
 	
@@ -54129,8 +54129,8 @@ PHP_METHOD(php_wxAuiManager, HideHint)
 	}
 }
 bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& arg0 , const wxAuiPaneInfo& arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "ProcessDockResult", 0);
 	
 	
@@ -54799,8 +54799,8 @@ PHP_METHOD(php_wxAuiDockArt, __construct)
 	}
 }
 void wxAuiDockArt_php::SetFont(int arg0 , const wxFont& arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetFont", 0);
 	
 	
@@ -54873,8 +54873,8 @@ PHP_METHOD(php_wxAuiDockArt, SetFont)
 	}
 }
 void wxAuiDockArt_php::SetColour(int arg0 , const wxColour& arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetColour", 0);
 	
 	
@@ -55040,8 +55040,8 @@ PHP_METHOD(php_wxAuiDockArt, SetColor)
 	}
 }
 void wxAuiDockArt_php::DrawBackground(wxDC& arg0 , wxWindow* arg1 , int arg2 , const wxRect& arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawBackground", 0);
 	
 	
@@ -55160,8 +55160,8 @@ PHP_METHOD(php_wxAuiDockArt, DrawBackground)
 	}
 }
 void wxAuiDockArt_php::DrawBorder(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2 , wxAuiPaneInfo& arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawBorder", 0);
 	
 	
@@ -55299,8 +55299,8 @@ PHP_METHOD(php_wxAuiDockArt, DrawBorder)
 	}
 }
 void wxAuiDockArt_php::DrawGripper(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2 , wxAuiPaneInfo& arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawGripper", 0);
 	
 	
@@ -55438,8 +55438,8 @@ PHP_METHOD(php_wxAuiDockArt, DrawGripper)
 	}
 }
 void wxAuiDockArt_php::DrawPaneButton(wxDC& arg0 , wxWindow* arg1 , int arg2 , int arg3 , const wxRect& arg4 , wxAuiPaneInfo& arg5){
-	zval *args[6];
-	zval retval, funcname;
+		zval *args[6];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawPaneButton", 0);
 	
 	
@@ -55585,8 +55585,8 @@ PHP_METHOD(php_wxAuiDockArt, DrawPaneButton)
 	}
 }
 void wxAuiDockArt_php::DrawSash(wxDC& arg0 , wxWindow* arg1 , int arg2 , const wxRect& arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawSash", 0);
 	
 	
@@ -55705,8 +55705,8 @@ PHP_METHOD(php_wxAuiDockArt, DrawSash)
 	}
 }
 int wxAuiDockArt_php::GetMetric(int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetMetric", 0);
 	
 	
@@ -55759,8 +55759,8 @@ PHP_METHOD(php_wxAuiDockArt, GetMetric)
 	}
 }
 void wxAuiDockArt_php::SetMetric(int arg0 , int arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetMetric", 0);
 	
 	
@@ -55814,8 +55814,8 @@ PHP_METHOD(php_wxAuiDockArt, SetMetric)
 	}
 }
 void wxAuiDockArt_php::DrawCaption(wxDC& arg0 , wxWindow* arg1 , const wxString& arg2 , const wxRect& arg3 , wxAuiPaneInfo& arg4){
-	zval *args[5];
-	zval retval, funcname;
+		zval *args[5];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawCaption", 0);
 	
 	
@@ -55958,8 +55958,8 @@ PHP_METHOD(php_wxAuiDockArt, DrawCaption)
 	}
 }
 wxColour wxAuiDockArt_php::GetColour(int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetColour", 0);
 	
 	
@@ -56012,8 +56012,8 @@ PHP_METHOD(php_wxAuiDockArt, GetColour)
 	}
 }
 wxFont wxAuiDockArt_php::GetFont(int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetFont", 0);
 	
 	
@@ -60432,8 +60432,8 @@ PHP_METHOD(php_wxAuiTabArt, __construct)
 	}
 }
 void wxAuiTabArt_php::DrawBackground(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawBackground", 0);
 	
 	
@@ -60548,8 +60548,8 @@ PHP_METHOD(php_wxAuiTabArt, DrawBackground)
 	}
 }
 void wxAuiTabArt_php::DrawButton(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2 , int arg3 , int arg4 , int arg5 , wxRect* arg6){
-	zval *args[7];
-	zval retval, funcname;
+		zval *args[7];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawButton", 0);
 	
 	
@@ -60699,8 +60699,8 @@ PHP_METHOD(php_wxAuiTabArt, DrawButton)
 	}
 }
 void wxAuiTabArt_php::DrawTab(wxDC& arg0 , wxWindow* arg1 , const wxAuiNotebookPage& arg2 , const wxRect& arg3 , int arg4 , wxRect* arg5 , wxRect* arg6 , int* arg7){
-	zval *args[8];
-	zval retval, funcname;
+		zval *args[8];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawTab", 0);
 	
 	
@@ -60911,8 +60911,8 @@ PHP_METHOD(php_wxAuiTabArt, DrawTab)
 	}
 }
 int wxAuiTabArt_php::GetBestTabCtrlSize(wxWindow* arg0 , const wxAuiNotebookPageArray& arg1 , const wxSize& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetBestTabCtrlSize", 0);
 	
 	
@@ -61030,8 +61030,8 @@ PHP_METHOD(php_wxAuiTabArt, GetBestTabCtrlSize)
 	}
 }
 int wxAuiTabArt_php::GetIndentSize(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetIndentSize", 0);
 	
 	
@@ -61080,8 +61080,8 @@ PHP_METHOD(php_wxAuiTabArt, GetIndentSize)
 	}
 }
 wxSize wxAuiTabArt_php::GetTabSize(wxDC& arg0 , wxWindow* arg1 , const wxString& arg2 , const wxBitmap& arg3 , bool arg4 , int arg5 , int* arg6){
-	zval *args[7];
-	zval retval, funcname;
+		zval *args[7];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetTabSize", 0);
 	
 	
@@ -61235,8 +61235,8 @@ PHP_METHOD(php_wxAuiTabArt, GetTabSize)
 	}
 }
 void wxAuiTabArt_php::SetFlags(unsigned int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetFlags", 0);
 	
 	
@@ -61286,8 +61286,8 @@ PHP_METHOD(php_wxAuiTabArt, SetFlags)
 	}
 }
 void wxAuiTabArt_php::SetMeasuringFont(const wxFont& arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetMeasuringFont", 0);
 	
 	
@@ -61356,8 +61356,8 @@ PHP_METHOD(php_wxAuiTabArt, SetMeasuringFont)
 	}
 }
 void wxAuiTabArt_php::SetNormalFont(const wxFont& arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetNormalFont", 0);
 	
 	
@@ -61426,8 +61426,8 @@ PHP_METHOD(php_wxAuiTabArt, SetNormalFont)
 	}
 }
 void wxAuiTabArt_php::SetSelectedFont(const wxFont& arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetSelectedFont", 0);
 	
 	
@@ -61496,8 +61496,8 @@ PHP_METHOD(php_wxAuiTabArt, SetSelectedFont)
 	}
 }
 void wxAuiTabArt_php::SetSizingInfo(const wxSize& arg0 , long unsigned int arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetSizingInfo", 0);
 	
 	
@@ -61570,8 +61570,8 @@ PHP_METHOD(php_wxAuiTabArt, SetSizingInfo)
 	}
 }
 int wxAuiTabArt_php::ShowDropDown(wxWindow* arg0 , const wxAuiNotebookPageArray& arg1 , int arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "ShowDropDown", 0);
 	
 	
@@ -61670,8 +61670,8 @@ PHP_METHOD(php_wxAuiTabArt, ShowDropDown)
 	}
 }
 wxAuiTabArt* wxAuiTabArt_php::Clone(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Clone", 0);
 	
 	
@@ -62388,8 +62388,8 @@ PHP_METHOD(php_wxChoicebook, __construct)
 	}
 }
 void wxChoicebook_php::UpdateSelectedPage(long unsigned int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "UpdateSelectedPage", 0);
 	
 	
@@ -63436,8 +63436,8 @@ PHP_METHOD(php_wxGrid, SetReadOnly)
 	}
 }
 int wxGrid_php::SetOrCalcRowSizes(bool arg0 , bool arg1=true){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetOrCalcRowSizes", 0);
 	
 	
@@ -63497,8 +63497,8 @@ PHP_METHOD(php_wxGrid, SetOrCalcRowSizes)
 	}
 }
 int wxGrid_php::SetOrCalcColumnSizes(bool arg0 , bool arg1=true){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetOrCalcColumnSizes", 0);
 	
 	
@@ -63558,8 +63558,8 @@ PHP_METHOD(php_wxGrid, SetOrCalcColumnSizes)
 	}
 }
 bool wxGrid_php::SetModelValues(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetModelValues", 0);
 	
 	
@@ -64356,8 +64356,8 @@ PHP_METHOD(php_wxGrid, SetDefaultCellAlignment)
 	}
 }
 void wxGrid_php::SetCurrentCell(int arg0 , int arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetCurrentCell", 0);
 	
 	
@@ -64937,8 +64937,8 @@ PHP_METHOD(php_wxGrid, AutoSizeColLabelSize)
 	}
 }
 void wxGrid_php::AutoSizeColOrRow(int arg0 , bool arg1 , bool arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "AutoSizeColOrRow", 0);
 	
 	
@@ -66566,8 +66566,8 @@ PHP_METHOD(php_wxGrid, BlockToDeviceRect)
 	}
 }
 void wxGrid_php::CacheAttr(int arg0 , int arg1 , wxGridCellAttr* arg2) const{
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "CacheAttr", 0);
 	
 	
@@ -66644,8 +66644,8 @@ PHP_METHOD(php_wxGrid, CacheAttr)
 	}
 }
 bool wxGrid_php::CanHaveAttributes(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "CanHaveAttributes", 0);
 	
 	
@@ -67134,8 +67134,8 @@ PHP_METHOD(php_wxGrid, HideCellEditControl)
 	}
 }
 void wxGrid_php::InitColWidths(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "InitColWidths", 0);
 	
 	
@@ -67253,8 +67253,8 @@ PHP_METHOD(php_wxGrid, GetTable)
 	}
 }
 void wxGrid_php::InitRowHeights(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "InitRowHeights", 0);
 	
 	
@@ -70186,8 +70186,8 @@ PHP_METHOD(php_wxMenuBarBase, SetMenuLabel)
 	}
 }
 void wxMenuBarBase_php::SetLabelTop(long unsigned int arg0 , const wxString& arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetLabelTop", 0);
 	
 	
@@ -71800,8 +71800,8 @@ void php_wxAuiToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 {
 	}			
 void wxAuiToolBarArt_php::SetFlags(unsigned int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetFlags", 0);
 	
 	
@@ -71935,8 +71935,8 @@ PHP_METHOD(php_wxAuiToolBarArt, __construct)
 	}
 }
 void wxAuiToolBarArt_php::SetFont(const wxFont& arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetFont", 0);
 	
 	
@@ -72005,8 +72005,8 @@ PHP_METHOD(php_wxAuiToolBarArt, SetFont)
 	}
 }
 void wxAuiToolBarArt_php::SetTextOrientation(int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetTextOrientation", 0);
 	
 	
@@ -72056,8 +72056,8 @@ PHP_METHOD(php_wxAuiToolBarArt, SetTextOrientation)
 	}
 }
 wxAuiToolBarArt* wxAuiToolBarArt_php::Clone(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Clone", 0);
 	
 	
@@ -72106,8 +72106,8 @@ PHP_METHOD(php_wxAuiToolBarArt, Clone)
 	}
 }
 void wxAuiToolBarArt_php::DrawBackground(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawBackground", 0);
 	
 	
@@ -72222,8 +72222,8 @@ PHP_METHOD(php_wxAuiToolBarArt, DrawBackground)
 	}
 }
 void wxAuiToolBarArt_php::DrawButton(wxDC& arg0 , wxWindow* arg1 , const wxAuiToolBarItem& arg2 , const wxRect& arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawButton", 0);
 	
 	
@@ -72361,8 +72361,8 @@ PHP_METHOD(php_wxAuiToolBarArt, DrawButton)
 	}
 }
 void wxAuiToolBarArt_php::DrawControlLabel(wxDC& arg0 , wxWindow* arg1 , const wxAuiToolBarItem& arg2 , const wxRect& arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawControlLabel", 0);
 	
 	
@@ -72500,8 +72500,8 @@ PHP_METHOD(php_wxAuiToolBarArt, DrawControlLabel)
 	}
 }
 void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& arg0 , wxWindow* arg1 , const wxAuiToolBarItem& arg2 , const wxRect& arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawDropDownButton", 0);
 	
 	
@@ -72639,8 +72639,8 @@ PHP_METHOD(php_wxAuiToolBarArt, DrawDropDownButton)
 	}
 }
 void wxAuiToolBarArt_php::DrawGripper(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawGripper", 0);
 	
 	
@@ -72755,8 +72755,8 @@ PHP_METHOD(php_wxAuiToolBarArt, DrawGripper)
 	}
 }
 void wxAuiToolBarArt_php::DrawLabel(wxDC& arg0 , wxWindow* arg1 , const wxAuiToolBarItem& arg2 , const wxRect& arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawLabel", 0);
 	
 	
@@ -72894,8 +72894,8 @@ PHP_METHOD(php_wxAuiToolBarArt, DrawLabel)
 	}
 }
 void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2 , int arg3){
-	zval *args[4];
-	zval retval, funcname;
+		zval *args[4];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawOverflowButton", 0);
 	
 	
@@ -73014,8 +73014,8 @@ PHP_METHOD(php_wxAuiToolBarArt, DrawOverflowButton)
 	}
 }
 void wxAuiToolBarArt_php::DrawSeparator(wxDC& arg0 , wxWindow* arg1 , const wxRect& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DrawSeparator", 0);
 	
 	
@@ -73130,8 +73130,8 @@ PHP_METHOD(php_wxAuiToolBarArt, DrawSeparator)
 	}
 }
 int wxAuiToolBarArt_php::GetElementSize(int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetElementSize", 0);
 	
 	
@@ -73184,8 +73184,8 @@ PHP_METHOD(php_wxAuiToolBarArt, GetElementSize)
 	}
 }
 wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& arg0 , wxWindow* arg1 , const wxAuiToolBarItem& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetLabelSize", 0);
 	
 	
@@ -73303,8 +73303,8 @@ PHP_METHOD(php_wxAuiToolBarArt, GetLabelSize)
 	}
 }
 wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& arg0 , wxWindow* arg1 , const wxAuiToolBarItem& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetToolSize", 0);
 	
 	
@@ -73422,8 +73422,8 @@ PHP_METHOD(php_wxAuiToolBarArt, GetToolSize)
 	}
 }
 void wxAuiToolBarArt_php::SetElementSize(int arg0 , int arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetElementSize", 0);
 	
 	
@@ -73477,8 +73477,8 @@ PHP_METHOD(php_wxAuiToolBarArt, SetElementSize)
 	}
 }
 int wxAuiToolBarArt_php::ShowDropDown(wxWindow* arg0 , const wxAuiToolBarItemArray& arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "ShowDropDown", 0);
 	
 	
@@ -76582,8 +76582,8 @@ PHP_METHOD(php_wxDialogBase, SetAffirmativeId)
 	}
 }
 bool wxDialogBase_php::IsModal() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "IsModal", 0);
 	
 	
@@ -82560,8 +82560,8 @@ PHP_METHOD(php_wxRichTextCtrl, DiscardEdits)
 	}
 }
 wxSize wxRichTextCtrl_php::DoGetBestSize() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DoGetBestSize", 0);
 	
 	
@@ -99183,8 +99183,8 @@ void php_wxGridCellRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 {
 	}			
 void wxGridCellRenderer_php::Draw(wxGrid& arg0 , wxGridCellAttr& arg1 , wxDC& arg2 , const wxRect& arg3 , int arg4 , int arg5 , bool arg6){
-	zval *args[7];
-	zval retval, funcname;
+		zval *args[7];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Draw", 0);
 	
 	
@@ -99334,8 +99334,8 @@ PHP_METHOD(php_wxGridCellRenderer, Draw)
 	}
 }
 wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& arg0 , wxGridCellAttr& arg1 , wxDC& arg2 , int arg3 , int arg4){
-	zval *args[5];
-	zval retval, funcname;
+		zval *args[5];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetBestSize", 0);
 	
 	
@@ -99545,8 +99545,8 @@ PHP_METHOD(php_wxGridCellRenderer, __construct)
 	}
 }
 wxGridCellRenderer* wxGridCellRenderer_php::Clone() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Clone", 0);
 	
 	
@@ -101098,8 +101098,8 @@ PHP_METHOD(php_wxGridCellEditor, IsCreated)
 	}
 }
 void wxGridCellEditor_php::Create(wxWindow* arg0 , int arg1 , wxEvtHandler* arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Create", 0);
 	
 	
@@ -101379,8 +101379,8 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 	}
 }
 void wxGridCellEditor_php::BeginEdit(int arg0 , int arg1 , wxGrid* arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "BeginEdit", 0);
 	
 	
@@ -101457,8 +101457,8 @@ PHP_METHOD(php_wxGridCellEditor, BeginEdit)
 	}
 }
 bool wxGridCellEditor_php::EndEdit(int arg0 , int arg1 , wxGrid* arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "EndEdit", 0);
 	
 	
@@ -101538,8 +101538,8 @@ PHP_METHOD(php_wxGridCellEditor, EndEdit)
 	}
 }
 void wxGridCellEditor_php::Reset(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Reset", 0);
 	
 	
@@ -101765,8 +101765,8 @@ PHP_METHOD(php_wxGridCellEditor, Destroy)
 	}
 }
 wxGridCellEditor* wxGridCellEditor_php::Clone() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Clone", 0);
 	
 	
@@ -101815,8 +101815,8 @@ PHP_METHOD(php_wxGridCellEditor, Clone)
 	}
 }
 wxString wxGridCellEditor_php::GetValue() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetValue", 0);
 	
 	
@@ -101938,8 +101938,8 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 	}
 }
 int wxGridTableBase_php::GetNumberRows(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetNumberRows", 0);
 	
 	
@@ -101988,8 +101988,8 @@ PHP_METHOD(php_wxGridTableBase, GetNumberRows)
 	}
 }
 int wxGridTableBase_php::GetNumberCols(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetNumberCols", 0);
 	
 	
@@ -102038,8 +102038,8 @@ PHP_METHOD(php_wxGridTableBase, GetNumberCols)
 	}
 }
 bool wxGridTableBase_php::IsEmptyCell(int arg0 , int arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "IsEmptyCell", 0);
 	
 	
@@ -102096,8 +102096,8 @@ PHP_METHOD(php_wxGridTableBase, IsEmptyCell)
 	}
 }
 wxString wxGridTableBase_php::GetValue(int arg0 , int arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetValue", 0);
 	
 	
@@ -102154,8 +102154,8 @@ PHP_METHOD(php_wxGridTableBase, GetValue)
 	}
 }
 void wxGridTableBase_php::SetValue(int arg0 , int arg1 , const wxString& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetValue", 0);
 	
 	
@@ -104788,8 +104788,8 @@ void php_wxDatePickerCtrlBase_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 {
 	}			
 void wxDatePickerCtrlBase_php::SetRange(const wxDateTime& arg0 , const wxDateTime& arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetRange", 0);
 	
 	
@@ -104843,8 +104843,8 @@ PHP_METHOD(php_wxDatePickerCtrlBase, SetRange)
 	}
 }
 wxDateTime wxDatePickerCtrlBase_php::GetValue() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetValue", 0);
 	
 	
@@ -104893,8 +104893,8 @@ PHP_METHOD(php_wxDatePickerCtrlBase, GetValue)
 	}
 }
 void wxDatePickerCtrlBase_php::SetValue(const wxDateTime& arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "SetValue", 0);
 	
 	
@@ -104944,8 +104944,8 @@ PHP_METHOD(php_wxDatePickerCtrlBase, SetValue)
 	}
 }
 bool wxDatePickerCtrlBase_php::GetRange(wxDateTime* arg0 , wxDateTime* arg1) const{
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetRange", 0);
 	
 	
@@ -107914,8 +107914,8 @@ PHP_METHOD(php_wxTextCtrlBase, CanPaste)
 	}
 }
 bool wxTextCtrlBase_php::CanRedo() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "CanRedo", 0);
 	
 	
@@ -107964,8 +107964,8 @@ PHP_METHOD(php_wxTextCtrlBase, CanRedo)
 	}
 }
 bool wxTextCtrlBase_php::CanUndo() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "CanUndo", 0);
 	
 	
@@ -108014,8 +108014,8 @@ PHP_METHOD(php_wxTextCtrlBase, CanUndo)
 	}
 }
 void wxTextCtrlBase_php::Clear(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Clear", 0);
 	
 	
@@ -108061,8 +108061,8 @@ PHP_METHOD(php_wxTextCtrlBase, Clear)
 	}
 }
 void wxTextCtrlBase_php::Copy(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Copy", 0);
 	
 	
@@ -108108,8 +108108,8 @@ PHP_METHOD(php_wxTextCtrlBase, Copy)
 	}
 }
 void wxTextCtrlBase_php::Cut(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Cut", 0);
 	
 	
@@ -108155,8 +108155,8 @@ PHP_METHOD(php_wxTextCtrlBase, Cut)
 	}
 }
 void wxTextCtrlBase_php::DiscardEdits(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "DiscardEdits", 0);
 	
 	
@@ -108294,8 +108294,8 @@ PHP_METHOD(php_wxTextCtrlBase, GetDefaultStyle)
 	}
 }
 long int wxTextCtrlBase_php::GetInsertionPoint() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetInsertionPoint", 0);
 	
 	
@@ -108344,8 +108344,8 @@ PHP_METHOD(php_wxTextCtrlBase, GetInsertionPoint)
 	}
 }
 long int wxTextCtrlBase_php::GetLastPosition() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetLastPosition", 0);
 	
 	
@@ -108394,8 +108394,8 @@ PHP_METHOD(php_wxTextCtrlBase, GetLastPosition)
 	}
 }
 int wxTextCtrlBase_php::GetLineLength(long int arg0) const{
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetLineLength", 0);
 	
 	
@@ -108448,8 +108448,8 @@ PHP_METHOD(php_wxTextCtrlBase, GetLineLength)
 	}
 }
 wxString wxTextCtrlBase_php::GetLineText(long int arg0) const{
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetLineText", 0);
 	
 	
@@ -108502,8 +108502,8 @@ PHP_METHOD(php_wxTextCtrlBase, GetLineText)
 	}
 }
 int wxTextCtrlBase_php::GetNumberOfLines() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetNumberOfLines", 0);
 	
 	
@@ -108590,8 +108590,8 @@ PHP_METHOD(php_wxTextCtrlBase, GetRange)
 	}
 }
 void wxTextCtrlBase_php::GetSelection(long int* arg0 , long int* arg1) const{
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetSelection", 0);
 	
 	
@@ -108776,8 +108776,8 @@ PHP_METHOD(php_wxTextCtrlBase, GetStyle)
 	}
 }
 bool wxTextCtrlBase_php::IsEditable() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "IsEditable", 0);
 	
 	
@@ -108862,8 +108862,8 @@ PHP_METHOD(php_wxTextCtrlBase, IsEmpty)
 	}
 }
 bool wxTextCtrlBase_php::IsModified() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "IsModified", 0);
 	
 	
@@ -109026,8 +109026,8 @@ PHP_METHOD(php_wxTextCtrlBase, LoadFile)
 	}
 }
 void wxTextCtrlBase_php::MarkDirty(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "MarkDirty", 0);
 	
 	
@@ -109073,8 +109073,8 @@ PHP_METHOD(php_wxTextCtrlBase, MarkDirty)
 	}
 }
 void wxTextCtrlBase_php::Paste(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Paste", 0);
 	
 	
@@ -109120,8 +109120,8 @@ PHP_METHOD(php_wxTextCtrlBase, Paste)
 	}
 }
 bool wxTextCtrlBase_php::PositionToXY(long int arg0 , long int* arg1 , long int* arg2) const{
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "PositionToXY", 0);
 	
 	
@@ -109220,8 +109220,8 @@ PHP_METHOD(php_wxTextCtrlBase, PositionToXY)
 	}
 }
 void wxTextCtrlBase_php::Redo(){
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Redo", 0);
 	
 	
@@ -109267,8 +109267,8 @@ PHP_METHOD(php_wxTextCtrlBase, Redo)
 	}
 }
 void wxTextCtrlBase_php::Remove(long int arg0 , long int arg1){
-	zval *args[2];
-	zval retval, funcname;
+		zval *args[2];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Remove", 0);
 	
 	
@@ -109322,8 +109322,8 @@ PHP_METHOD(php_wxTextCtrlBase, Remove)
 	}
 }
 void wxTextCtrlBase_php::Replace(long int arg0 , long int arg1 , const wxString& arg2){
-	zval *args[3];
-	zval retval, funcname;
+		zval *args[3];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "Replace", 0);
 	
 	
@@ -112704,8 +112704,8 @@ PHP_METHOD(php_wxListbook, SetSelection)
 	}
 }
 void wxListbook_php::UpdateSelectedPage(long unsigned int arg0){
-	zval *args[1];
-	zval retval, funcname;
+		zval *args[1];
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "UpdateSelectedPage", 0);
 	
 	
@@ -116867,8 +116867,8 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 	}
 }
 bool wxGridCellNumberEditor_php::HasRange() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "HasRange", 0);
 	
 	
@@ -116917,8 +116917,8 @@ PHP_METHOD(php_wxGridCellNumberEditor, HasRange)
 	}
 }
 wxString wxGridCellNumberEditor_php::GetString() const{
-	zval *args[0];
-	zval retval, funcname;
+		zval *args[] = {0};
+		zval retval, funcname;
 	ZVAL_STRING(&funcname, "GetString", 0);
 	
 	
