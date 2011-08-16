@@ -1548,7 +1548,6 @@ static function_entry php_wxTreeCtrl_functions[] = {
         PHP_ME(php_wxTreeCtrlBase, ExpandAll, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, ExpandAllChildren, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetBoundingRect, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrlBase, GetChildrenCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetEditControl, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetFirstVisibleItem, NULL,ZEND_ACC_PUBLIC)
@@ -1568,7 +1567,6 @@ static function_entry php_wxTreeCtrl_functions[] = {
         PHP_ME(php_wxTreeCtrlBase, GetQuickBestSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetRootItem, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetSelection, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrlBase, GetSelections, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetStateImageList, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, IsBold, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, IsEmpty, NULL,ZEND_ACC_PUBLIC)
@@ -5046,7 +5044,6 @@ class wxTreeCtrlBase_php : public wxTreeCtrlBase{
 		virtual void EnsureVisible(const wxTreeItemId& arg0);
 		virtual void Expand(const wxTreeItemId& arg0);
 		virtual bool GetBoundingRect(const wxTreeItemId& arg0 , wxRect& arg1 , bool arg2) const;
-		virtual long unsigned int GetChildrenCount(const wxTreeItemId& arg0 , bool arg1) const;
 		virtual unsigned int GetCount() const;
 		virtual wxTextCtrl* GetEditControl() const;
 		virtual wxTreeItemId GetFirstVisibleItem() const;
@@ -5064,7 +5061,6 @@ class wxTreeCtrlBase_php : public wxTreeCtrlBase{
 		virtual wxTreeItemId GetPrevVisible(const wxTreeItemId& arg0) const;
 		virtual wxTreeItemId GetRootItem() const;
 		virtual wxTreeItemId GetSelection() const;
-		virtual long unsigned int GetSelections(wxArrayTreeItemIds& arg0) const;
 		virtual bool IsBold(const wxTreeItemId& arg0) const;
 		virtual bool IsExpanded(const wxTreeItemId& arg0) const;
 		virtual bool IsSelected(const wxTreeItemId& arg0) const;
@@ -5116,7 +5112,6 @@ static function_entry php_wxTreeCtrlBase_functions[] = {
         PHP_ME(php_wxTreeCtrlBase, ExpandAll, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, ExpandAllChildren, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetBoundingRect, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrlBase, GetChildrenCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetCount, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetEditControl, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetFirstVisibleItem, NULL,ZEND_ACC_PUBLIC)
@@ -5136,7 +5131,6 @@ static function_entry php_wxTreeCtrlBase_functions[] = {
         PHP_ME(php_wxTreeCtrlBase, GetQuickBestSize, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetRootItem, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetSelection, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrlBase, GetSelections, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, GetStateImageList, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, IsBold, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, IsEmpty, NULL,ZEND_ACC_PUBLIC)
@@ -8274,27 +8268,6 @@ static function_entry php_wxDatePickerCtrlBase_functions[] = {
         PHP_ME(php_wxDatePickerCtrlBase, GetRange, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
-extern zend_class_entry *php_wxDatePickerCtrlGeneric_entry;
-void php_wxDatePickerCtrlGeneric_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
-
-#define PHP_wxDatePickerCtrlGeneric_NAME "wxDatePickerCtrlGeneric"
-#define le_wxDatePickerCtrlGeneric_name  "native wxDatePickerCtrlGeneric"
-
-class wxDatePickerCtrlGeneric_php : public wxDatePickerCtrlGeneric{
-	public:
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
-	void ***tsrm_ls;
-	zval* phpObj;
-};
-
-
-extern int le_wxDatePickerCtrlGeneric;
-
-static function_entry php_wxDatePickerCtrlGeneric_functions[] = {
-        PHP_ME(php_wxDatePickerCtrlGeneric, SetFormat, NULL,ZEND_ACC_PUBLIC)
-	{ NULL, NULL, NULL }
-};
 extern zend_class_entry *php_wxDatePickerCtrl_entry;
 void php_wxDatePickerCtrl_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
@@ -8317,7 +8290,6 @@ extern int le_wxDatePickerCtrl;
 
 static function_entry php_wxDatePickerCtrl_functions[] = {
         PHP_ME(php_wxDatePickerCtrl, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-        PHP_ME(php_wxDatePickerCtrlGeneric, SetFormat, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDatePickerCtrlBase, SetRange, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDatePickerCtrlBase, GetValue, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxDatePickerCtrlBase, SetValue, NULL,ZEND_ACC_PUBLIC)
