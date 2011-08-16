@@ -291,8 +291,6 @@ zend_class_entry *php_wxDirPickerCtrl_entry;
 int le_wxDirPickerCtrl;
 zend_class_entry *php_wxDatePickerCtrlBase_entry;
 int le_wxDatePickerCtrlBase;
-zend_class_entry *php_wxDatePickerCtrlGeneric_entry;
-int le_wxDatePickerCtrlGeneric;
 zend_class_entry *php_wxDatePickerCtrl_entry;
 int le_wxDatePickerCtrl;
 zend_class_entry *php_wxScrollBar_entry;
@@ -1234,13 +1232,6 @@ PHP_FUNCTION(php_wxDynamicCast){
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
-			if(!strcmp(_argStr0, "wxDatePickerCtrlGeneric")){
-				object_init_ex(return_value, php_wxDatePickerCtrlGeneric_entry);
-				wxDatePickerCtrlGeneric* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrlGeneric_php);
-				long id_to_find = zend_list_insert(ret, le_wxDatePickerCtrlGeneric);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
 			if(!strcmp(_argStr0, "wxDatePickerCtrl")){
 				object_init_ex(return_value, php_wxDatePickerCtrl_entry);
 				wxDatePickerCtrl* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrl_php);
@@ -2077,10 +2068,6 @@ le_wxDirPickerCtrl = zend_register_list_destructors_ex(php_wxDirPickerCtrl_destr
 INIT_CLASS_ENTRY(cf, PHP_wxDatePickerCtrlBase_NAME , php_wxDatePickerCtrlBase_functions);
 php_wxDatePickerCtrlBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
 le_wxDatePickerCtrlBase = zend_register_list_destructors_ex(php_wxDatePickerCtrlBase_destruction_handler, NULL, le_wxDatePickerCtrlBase_name, module_number);
-
-INIT_CLASS_ENTRY(cf, PHP_wxDatePickerCtrlGeneric_NAME , php_wxDatePickerCtrlGeneric_functions);
-php_wxDatePickerCtrlGeneric_entry = zend_register_internal_class(&cf TSRMLS_CC);
-le_wxDatePickerCtrlGeneric = zend_register_list_destructors_ex(php_wxDatePickerCtrlGeneric_destruction_handler, NULL, le_wxDatePickerCtrlGeneric_name, module_number);
 
 INIT_CLASS_ENTRY(cf, PHP_wxDatePickerCtrl_NAME , php_wxDatePickerCtrl_functions);
 php_wxDatePickerCtrl_entry = zend_register_internal_class(&cf TSRMLS_CC);
@@ -4327,48 +4314,48 @@ REGISTER_LONG_CONSTANT("wxEVT_WIZARD_PAGE_CHANGED", wxEVT_WIZARD_PAGE_CHANGED, C
 REGISTER_LONG_CONSTANT("wxEVT_WIZARD_PAGE_CHANGING", wxEVT_WIZARD_PAGE_CHANGING, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_WIZARD_PAGE_SHOWN", wxEVT_WIZARD_PAGE_SHOWN, CONST_CS | CONST_PERSISTENT);
 
-REGISTER_LONG_CONSTANT("wxGridSelectCells", wxGrid::wxGridSelectCells, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("wxGridSelectRows", wxGrid::wxGridSelectRows, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("wxGridSelectColumns", wxGrid::wxGridSelectColumns, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("wxGRID_CELLCTRL", wxGrid::wxGRID_CELLCTRL, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("wxGRID_TOPCTRL", wxGrid::wxGRID_TOPCTRL, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("wxGRID_TEXTCTRL", wxGrid::wxGRID_TEXTCTRL, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("wxGRID_CHECKBOX", wxGrid::wxGRID_CHECKBOX, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("wxGRID_CHOICE", wxGrid::wxGRID_CHOICE, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("wxGRID_COMBOBOX", wxGrid::wxGRID_COMBOBOX, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionFloating", wxAuiPaneInfo::optionFloating, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionHidden", wxAuiPaneInfo::optionHidden, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionLeftDockable", wxAuiPaneInfo::optionLeftDockable, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionRightDockable", wxAuiPaneInfo::optionRightDockable, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionTopDockable", wxAuiPaneInfo::optionTopDockable, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionBottomDockable", wxAuiPaneInfo::optionBottomDockable, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionFloatable", wxAuiPaneInfo::optionFloatable, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionMovable", wxAuiPaneInfo::optionMovable, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionResizable", wxAuiPaneInfo::optionResizable, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionPaneBorder", wxAuiPaneInfo::optionPaneBorder, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionCaption", wxAuiPaneInfo::optionCaption, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionGripper", wxAuiPaneInfo::optionGripper, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionDestroyOnClose", wxAuiPaneInfo::optionDestroyOnClose, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionToolbar", wxAuiPaneInfo::optionToolbar, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionActive", wxAuiPaneInfo::optionActive, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionGripperTop", wxAuiPaneInfo::optionGripperTop, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionMaximized", wxAuiPaneInfo::optionMaximized, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("optionDockFixed", wxAuiPaneInfo::optionDockFixed, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("buttonClose", wxAuiPaneInfo::buttonClose, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("buttonMaximize", wxAuiPaneInfo::buttonMaximize, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("buttonMinimize", wxAuiPaneInfo::buttonMinimize, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("buttonPin", wxAuiPaneInfo::buttonPin, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("buttonCustom1", wxAuiPaneInfo::buttonCustom1, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("buttonCustom2", wxAuiPaneInfo::buttonCustom2, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("buttonCustom3", wxAuiPaneInfo::buttonCustom3, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("savedHiddenState", wxAuiPaneInfo::savedHiddenState, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("actionPane", wxAuiPaneInfo::actionPane, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("Any", wxGridCellAttr::Any, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("Default", wxGridCellAttr::Default, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("Cell", wxGridCellAttr::Cell, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("Row", wxGridCellAttr::Row, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("Col", wxGridCellAttr::Col, CONST_CS | CONST_PERSISTENT);
-REGISTER_LONG_CONSTANT("Merged", wxGridCellAttr::Merged, CONST_CS | CONST_PERSISTENT);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectCells", 17,  wxGrid::wxGridSelectCells TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectRows", 16,  wxGrid::wxGridSelectRows TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectColumns", 19,  wxGrid::wxGridSelectColumns TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGRID_CELLCTRL", 15,  wxGrid::wxGRID_CELLCTRL TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGRID_TOPCTRL", 14,  wxGrid::wxGRID_TOPCTRL TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGRID_TEXTCTRL", 15,  wxGrid::wxGRID_TEXTCTRL TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGRID_CHECKBOX", 15,  wxGrid::wxGRID_CHECKBOX TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGRID_CHOICE", 13,  wxGrid::wxGRID_CHOICE TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGrid_entry, "wxGRID_COMBOBOX", 15,  wxGrid::wxGRID_COMBOBOX TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionFloating", 14,  wxAuiPaneInfo::optionFloating TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionHidden", 12,  wxAuiPaneInfo::optionHidden TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionLeftDockable", 18,  wxAuiPaneInfo::optionLeftDockable TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionRightDockable", 19,  wxAuiPaneInfo::optionRightDockable TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionTopDockable", 17,  wxAuiPaneInfo::optionTopDockable TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionBottomDockable", 20,  wxAuiPaneInfo::optionBottomDockable TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionFloatable", 15,  wxAuiPaneInfo::optionFloatable TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionMovable", 13,  wxAuiPaneInfo::optionMovable TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionResizable", 15,  wxAuiPaneInfo::optionResizable TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionPaneBorder", 16,  wxAuiPaneInfo::optionPaneBorder TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionCaption", 13,  wxAuiPaneInfo::optionCaption TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionGripper", 13,  wxAuiPaneInfo::optionGripper TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionDestroyOnClose", 20,  wxAuiPaneInfo::optionDestroyOnClose TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionToolbar", 13,  wxAuiPaneInfo::optionToolbar TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionActive", 12,  wxAuiPaneInfo::optionActive TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionGripperTop", 16,  wxAuiPaneInfo::optionGripperTop TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionMaximized", 15,  wxAuiPaneInfo::optionMaximized TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "optionDockFixed", 15,  wxAuiPaneInfo::optionDockFixed TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "buttonClose", 11,  wxAuiPaneInfo::buttonClose TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "buttonMaximize", 14,  wxAuiPaneInfo::buttonMaximize TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "buttonMinimize", 14,  wxAuiPaneInfo::buttonMinimize TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "buttonPin", 9,  wxAuiPaneInfo::buttonPin TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "buttonCustom1", 13,  wxAuiPaneInfo::buttonCustom1 TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "buttonCustom2", 13,  wxAuiPaneInfo::buttonCustom2 TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "buttonCustom3", 13,  wxAuiPaneInfo::buttonCustom3 TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "savedHiddenState", 16,  wxAuiPaneInfo::savedHiddenState TSRMLS_DC);
+zend_declare_class_constant_long(php_wxAuiPaneInfo_entry, "actionPane", 10,  wxAuiPaneInfo::actionPane TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Any", 3,  wxGridCellAttr::Any TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Default", 7,  wxGridCellAttr::Default TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Cell", 4,  wxGridCellAttr::Cell TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Row", 3,  wxGridCellAttr::Row TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Col", 3,  wxGridCellAttr::Col TSRMLS_DC);
+zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Merged", 6,  wxGridCellAttr::Merged TSRMLS_DC);
 
 // <--- classes	
 

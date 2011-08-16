@@ -98,5 +98,6 @@
 #ifndef _GCCXML_
 extern "C" {
 #include "php.h"
+#include <zend_API.h> //Declaration for zend_declare_class_constant_long
 }
 #endif
