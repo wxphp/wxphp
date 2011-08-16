@@ -566,7 +566,7 @@ class wxColour_php : public wxColour{
 	wxColour_php(unsigned char arg0 , unsigned char arg1 , unsigned char arg2 , unsigned char arg3 = wxALPHA_OPAQUE):wxColour(arg0 , arg1 , arg2 , arg3)
 	{
 	}
-	wxColour_php(long unsigned int arg0):wxColour(arg0)
+	wxColour_php(size_t arg0):wxColour(arg0)
 	{
 	}
 	wxColour_php(const wchar_t* arg0):wxColour(arg0)
@@ -1484,43 +1484,6 @@ extern int le_wxTreeCtrl;
 
 static function_entry php_wxTreeCtrl_functions[] = {
         PHP_ME(php_wxTreeCtrl, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-        PHP_ME(php_wxTreeCtrl, AddRoot, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, AppendItem, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetItemText, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, Delete, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, DeleteChildren, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, DeleteAllItems, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, Expand, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, Collapse, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, CollapseAndReset, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, Toggle, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, Unselect, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, UnselectAll, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SelectItem, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, EnsureVisible, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, ScrollTo, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetItemTextColour, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetItemDropHighlight, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetItemBold, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetItemText, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetItemTextColour, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetImageList, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetStateImageList, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, IsExpanded, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, IsSelected, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, IsBold, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetIndent, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetIndent, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetCount, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, SetItemHasChildren, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, IsVisible, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, ItemHasChildren, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetChildrenCount, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetRootItem, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetSelection, NULL,ZEND_ACC_PUBLIC)
-        PHP_ME(php_wxTreeCtrl, GetItemParent, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxEvtHandler, Connect, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Show, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindow, Create, NULL,ZEND_ACC_PUBLIC)
@@ -1568,6 +1531,73 @@ static function_entry php_wxTreeCtrl_functions[] = {
         PHP_ME(php_wxWindowBase, SetSizeHints, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxWindowBase, GetId, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, AssignImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, AppendItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, AddRoot, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, AssignStateImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Collapse, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, CollapseAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, CollapseAllChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, CollapseAndReset, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Delete, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, DeleteAllItems, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, DeleteChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, EditLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, EndEditLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, EnsureVisible, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Expand, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ExpandAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ExpandAllChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetBoundingRect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetChildrenCount, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetCount, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetEditControl, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetFirstVisibleItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetIndent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemFont, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemImage, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemText, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemTextColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetLastChild, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetNextSibling, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetNextVisible, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetPrevSibling, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetPrevVisible, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetQuickBestSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetRootItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetSelections, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetStateImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsBold, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsEmpty, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsExpanded, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsSelected, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsVisible, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ItemHasChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, PrependItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ScrollTo, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SelectItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetIndent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemBold, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemDropHighlight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemFont, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemHasChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemImage, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemText, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemTextColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetQuickBestSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetStateImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SortChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Toggle, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ToggleItemSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Unselect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, UnselectAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, UnselectItem, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxValidator_entry;
@@ -5005,6 +5035,59 @@ void php_wxTreeCtrlBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxTreeCtrlBase_php : public wxTreeCtrlBase{
 	public:
+		virtual wxTreeItemId AddRoot(const wxString& arg0 , int arg1 , int arg2 , wxTreeItemData* arg3);
+		virtual void Collapse(const wxTreeItemId& arg0);
+		virtual void CollapseAndReset(const wxTreeItemId& arg0);
+		virtual void Delete(const wxTreeItemId& arg0);
+		virtual void DeleteAllItems();
+		virtual void DeleteChildren(const wxTreeItemId& arg0);
+		virtual wxTextCtrl* EditLabel(const wxTreeItemId& arg0 , wxClassInfo* arg1);
+		virtual void EndEditLabel(const wxTreeItemId& arg0 , bool arg1);
+		virtual void EnsureVisible(const wxTreeItemId& arg0);
+		virtual void Expand(const wxTreeItemId& arg0);
+		virtual bool GetBoundingRect(const wxTreeItemId& arg0 , wxRect& arg1 , bool arg2) const;
+		virtual long unsigned int GetChildrenCount(const wxTreeItemId& arg0 , bool arg1) const;
+		virtual unsigned int GetCount() const;
+		virtual wxTextCtrl* GetEditControl() const;
+		virtual wxTreeItemId GetFirstVisibleItem() const;
+		virtual unsigned int GetIndent() const;
+		virtual wxColour GetItemBackgroundColour(const wxTreeItemId& arg0) const;
+		virtual wxTreeItemData* GetItemData(const wxTreeItemId& arg0) const;
+		virtual wxFont GetItemFont(const wxTreeItemId& arg0) const;
+		virtual int GetItemImage(const wxTreeItemId& arg0 , wxTreeItemIcon arg1) const;
+		virtual wxString GetItemText(const wxTreeItemId& arg0) const;
+		virtual wxColour GetItemTextColour(const wxTreeItemId& arg0) const;
+		virtual wxTreeItemId GetLastChild(const wxTreeItemId& arg0) const;
+		virtual wxTreeItemId GetNextSibling(const wxTreeItemId& arg0) const;
+		virtual wxTreeItemId GetNextVisible(const wxTreeItemId& arg0) const;
+		virtual wxTreeItemId GetPrevSibling(const wxTreeItemId& arg0) const;
+		virtual wxTreeItemId GetPrevVisible(const wxTreeItemId& arg0) const;
+		virtual wxTreeItemId GetRootItem() const;
+		virtual wxTreeItemId GetSelection() const;
+		virtual long unsigned int GetSelections(wxArrayTreeItemIds& arg0) const;
+		virtual bool IsBold(const wxTreeItemId& arg0) const;
+		virtual bool IsExpanded(const wxTreeItemId& arg0) const;
+		virtual bool IsSelected(const wxTreeItemId& arg0) const;
+		virtual bool IsVisible(const wxTreeItemId& arg0) const;
+		virtual bool ItemHasChildren(const wxTreeItemId& arg0) const;
+		virtual void ScrollTo(const wxTreeItemId& arg0);
+		virtual void SelectItem(const wxTreeItemId& arg0 , bool arg1);
+		virtual void SetImageList(wxImageList* arg0);
+		virtual void SetIndent(unsigned int arg0);
+		virtual void SetItemBackgroundColour(const wxTreeItemId& arg0 , const wxColour& arg1);
+		virtual void SetItemBold(const wxTreeItemId& arg0 , bool arg1);
+		virtual void SetItemData(const wxTreeItemId& arg0 , wxTreeItemData* arg1);
+		virtual void SetItemDropHighlight(const wxTreeItemId& arg0 , bool arg1);
+		virtual void SetItemFont(const wxTreeItemId& arg0 , const wxFont& arg1);
+		virtual void SetItemHasChildren(const wxTreeItemId& arg0 , bool arg1);
+		virtual void SetItemImage(const wxTreeItemId& arg0 , int arg1 , wxTreeItemIcon arg2);
+		virtual void SetItemText(const wxTreeItemId& arg0 , const wxString& arg1);
+		virtual void SetItemTextColour(const wxTreeItemId& arg0 , const wxColour& arg1);
+		virtual void SetStateImageList(wxImageList* arg0);
+		virtual void SortChildren(const wxTreeItemId& arg0);
+		virtual void Toggle(const wxTreeItemId& arg0);
+		virtual void Unselect();
+		virtual void UnselectAll();
 	zval *evnArray;
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
@@ -5017,6 +5100,72 @@ extern int le_wxTreeCtrlBase;
 static function_entry php_wxTreeCtrlBase_functions[] = {
         PHP_ME(php_wxTreeCtrlBase, AssignImageList, NULL,ZEND_ACC_PUBLIC)
         PHP_ME(php_wxTreeCtrlBase, AppendItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, AddRoot, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, AssignStateImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Collapse, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, CollapseAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, CollapseAllChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, CollapseAndReset, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Delete, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, DeleteAllItems, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, DeleteChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, EditLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, EndEditLabel, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, EnsureVisible, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Expand, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ExpandAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ExpandAllChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetBoundingRect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetChildrenCount, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetCount, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetEditControl, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetFirstVisibleItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetIndent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemFont, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemImage, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemText, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetItemTextColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetLastChild, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetNextSibling, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetNextVisible, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetPrevSibling, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetPrevVisible, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetQuickBestSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetRootItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetSelections, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, GetStateImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsBold, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsEmpty, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsExpanded, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsSelected, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, IsVisible, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ItemHasChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, PrependItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ScrollTo, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SelectItem, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetIndent, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemBackgroundColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemBold, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemData, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemDropHighlight, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemFont, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemHasChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemImage, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemText, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetItemTextColour, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetQuickBestSize, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SetStateImageList, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, SortChildren, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Toggle, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, ToggleItemSelection, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, Unselect, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, UnselectAll, NULL,ZEND_ACC_PUBLIC)
+        PHP_ME(php_wxTreeCtrlBase, UnselectItem, NULL,ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 extern zend_class_entry *php_wxRadioBox_entry;
@@ -5634,7 +5783,7 @@ class wxAuiTabArt_php : public wxAuiTabArt{
 		virtual void SetMeasuringFont(const wxFont& arg0);
 		virtual void SetNormalFont(const wxFont& arg0);
 		virtual void SetSelectedFont(const wxFont& arg0);
-		virtual void SetSizingInfo(const wxSize& arg0 , long unsigned int arg1);
+		virtual void SetSizingInfo(const wxSize& arg0 , size_t arg1);
 		virtual int ShowDropDown(wxWindow* arg0 , const wxAuiNotebookPageArray& arg1 , int arg2);
 		virtual wxAuiTabArt* Clone();
 	zval *evnArray;
@@ -5702,7 +5851,7 @@ class wxChoicebook_php : public wxChoicebook{
 	wxChoicebook_php(wxWindow* arg0 , int arg1 , const wxPoint& arg2 = wxDefaultPosition , const wxSize& arg3 = wxDefaultSize , long int arg4 = 0 , const wxString& arg5 = wxEmptyString):wxChoicebook(arg0 , arg1 , arg2 , arg3 , arg4 , arg5)
 	{
 	}
-		virtual void UpdateSelectedPage(long unsigned int arg0);
+		virtual void UpdateSelectedPage(size_t arg0);
 	zval *evnArray;
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
@@ -6148,7 +6297,7 @@ void php_wxMenuBarBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
 
 class wxMenuBarBase_php : public wxMenuBarBase{
 	public:
-		virtual void SetLabelTop(long unsigned int arg0 , const wxString& arg1);
+		virtual void SetLabelTop(size_t arg0 , const wxString& arg1);
 	zval *evnArray;
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
@@ -7564,7 +7713,7 @@ class wxRegion_php : public wxRegion{
 	wxRegion_php(const wxBitmap& arg0 , const wxColour& arg1 , int arg2 = 0):wxRegion(arg0 , arg1 , arg2)
 	{
 	}
-	wxRegion_php(long unsigned int arg0 , const wxPoint* arg1 , int arg2 = wxODDEVEN_RULE):wxRegion(arg0 , arg1 , arg2)
+	wxRegion_php(size_t arg0 , const wxPoint* arg1 , int arg2 = wxODDEVEN_RULE):wxRegion(arg0 , arg1 , arg2)
 	{
 	}
 	wxRegion_php(const wxRegion& arg0):wxRegion(arg0)
@@ -9233,7 +9382,7 @@ class wxListbook_php : public wxListbook{
 	wxListbook_php(wxWindow* arg0 , int arg1 , const wxPoint& arg2 = wxDefaultPosition , const wxSize& arg3 = wxDefaultSize , long int arg4 = 0 , const wxString& arg5 = wxEmptyString):wxListbook(arg0 , arg1 , arg2 , arg3 , arg4 , arg5)
 	{
 	}
-		virtual void UpdateSelectedPage(long unsigned int arg0);
+		virtual void UpdateSelectedPage(size_t arg0);
 	zval *evnArray;
 	void onEvent(wxEvent& evnt);
 	void ***tsrm_ls;
@@ -9621,7 +9770,7 @@ class wxGridCellChoiceEditor_php : public wxGridCellChoiceEditor{
 	wxGridCellChoiceEditor_php(const wxArrayString& arg0 , bool arg1 = false):wxGridCellChoiceEditor(arg0 , arg1)
 	{
 	}
-	wxGridCellChoiceEditor_php(long unsigned int arg0 = 0 , const wxString* arg1 = 0l , bool arg2 = false):wxGridCellChoiceEditor(arg0 , arg1 , arg2)
+	wxGridCellChoiceEditor_php(size_t arg0 = 0 , const wxString* arg1 = 0l , bool arg2 = false):wxGridCellChoiceEditor(arg0 , arg1 , arg2)
 	{
 	}
 	zval *evnArray;

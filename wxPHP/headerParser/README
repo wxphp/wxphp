@@ -11,9 +11,12 @@ string.
 The output of this script, is the input for srcMaker/srcGui scripts.
 
 In linux:
-gccxml ../common.h -fxml=wx.xml -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/include/wx-2.8 -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES -D__WXGTK__ -I/usr/include/php5 -I/usr/include/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/php5/ext -I/usr/include/php5/ext/date/lib
+gccxml ../common.h -fxml=wx.xml -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/include/wx-2.8 -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES -D__WXGTK__ -D_GCCXML_
 
-If having an error that outputs:
+On WIndows
+gccxml ../common.h -fxml=wx.xml -IC:\wxWidgets-2.8.12\lib\vc_lib\msw -IC:\wxWidgets-2.8.12\include -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES -D__WXMSW__ -D_GCCXML_
+
+If having an error on linux that outputs:
 
 /usr/include/bits/fcntl2.h: In function 'int open(const char*, int, ...)':
 /usr/include/bits/fcntl2.h:44: error: '__builtin_va_arg_pack_len' was not declared in this scope

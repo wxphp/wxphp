@@ -2153,6 +2153,10 @@ PHP_METHOD(php_<?=$className?>, Connect)
 				{
 					$defaultValue = $methodArgs[1][1][$k+1];
 					
+					//Restore this type back to size_t in order to be able to compile correctly on 64bits or 32 bits platforms since gccxml does not return original
+					if($v == "long unsigned int")
+						$v = "size_t";
+					
 					if($defaultValue != "")
 						$args[$k] = $v." arg".$k."=".$defaultValue;
 					else
@@ -2566,6 +2570,10 @@ class <?=$className?>_php : public <?=$className?>
 			$argC = array();
 			foreach($args as $k => $v)
 			{
+				//Restore this type back to size_t in order to be able to compile correctly on 64bits or 32 bits platforms since gccxml does not return original
+				if($v == "long unsigned int")
+					$v = "size_t";
+						
 				$args[$k] = $v." arg".$k;
 				$argC[$k] = "arg".$k;
 				
@@ -2608,7 +2616,13 @@ class <?=$className?>_php : public <?=$className?>
 				$retType = $args[0];
 				array_splice($args,0,1);
 				foreach($args as $k => $v)
+				{
+					//Restore this type back to size_t in order to be able to compile correctly on 64bits or 32 bits platforms since gccxml does not return original
+					if($v == "long unsigned int")
+						$v = "size_t";
+						
 					$args[$k] = $v." arg".$k;
+				}
 					
 				$args = join(" , ",$args);
 					?>
