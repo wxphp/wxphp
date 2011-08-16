@@ -95,6 +95,8 @@
 #endif
 
 /* Include PHP Standard Header */
+#ifndef _GCCXML_
 extern "C" {
 #include "php.h"
 }
+#endif
