@@ -8,7 +8,7 @@ $header_html = "";
 
 //Html code for footer
 $footer_html = '<div class="footer">
-	Reference for <a target="_top" href="' . $home_page . '">wxPHP</a> auto-generated with <a href="http://php.net/">PHP</a> scripting language.
+	Reference for <a target="_top" href="' . $home_page . '">wxPHP</a> auto-generated with <a href="http://php.net/">PHP</a> scripting language on <b>' . date("r", time()) .'</b>.
 </div>';
 
 //Get activated classes data
