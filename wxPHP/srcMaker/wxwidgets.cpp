@@ -391,6 +391,24 @@ zend_class_entry *php_wxMoveEvent_entry;
 int le_wxMoveEvent;
 zend_class_entry *php_wxActivateEvent_entry;
 int le_wxActivateEvent;
+zend_class_entry *php_wxMenuEvent_entry;
+int le_wxMenuEvent;
+zend_class_entry *php_wxMouseEvent_entry;
+int le_wxMouseEvent;
+zend_class_entry *php_wxPaintEvent_entry;
+int le_wxPaintEvent;
+zend_class_entry *php_wxPasswordEntryDialog_entry;
+int le_wxPasswordEntryDialog;
+zend_class_entry *php_wxTextEntryDialog_entry;
+int le_wxTextEntryDialog;
+zend_class_entry *php_wxUpdateUIEvent_entry;
+int le_wxUpdateUIEvent;
+zend_class_entry *php_wxWindowCreateEvent_entry;
+int le_wxWindowCreateEvent;
+zend_class_entry *php_wxWindowDestroyEvent_entry;
+int le_wxWindowDestroyEvent;
+zend_class_entry *php_wxPrintDialog_entry;
+int le_wxPrintDialog;
 
 // <--- entries
 
@@ -1544,6 +1562,69 @@ PHP_FUNCTION(php_wxDynamicCast){
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
+			if(!strcmp(_argStr0, "wxMenuEvent")){
+				object_init_ex(return_value, php_wxMenuEvent_entry);
+				wxMenuEvent* ret = wxDynamicCast(_ptrObj0, wxMenuEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxMenuEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxMouseEvent")){
+				object_init_ex(return_value, php_wxMouseEvent_entry);
+				wxMouseEvent* ret = wxDynamicCast(_ptrObj0, wxMouseEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxMouseEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxPaintEvent")){
+				object_init_ex(return_value, php_wxPaintEvent_entry);
+				wxPaintEvent* ret = wxDynamicCast(_ptrObj0, wxPaintEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxPaintEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxPasswordEntryDialog")){
+				object_init_ex(return_value, php_wxPasswordEntryDialog_entry);
+				wxPasswordEntryDialog* ret = wxDynamicCast(_ptrObj0, wxPasswordEntryDialog_php);
+				long id_to_find = zend_list_insert(ret, le_wxPasswordEntryDialog);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxTextEntryDialog")){
+				object_init_ex(return_value, php_wxTextEntryDialog_entry);
+				wxTextEntryDialog* ret = wxDynamicCast(_ptrObj0, wxTextEntryDialog_php);
+				long id_to_find = zend_list_insert(ret, le_wxTextEntryDialog);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxUpdateUIEvent")){
+				object_init_ex(return_value, php_wxUpdateUIEvent_entry);
+				wxUpdateUIEvent* ret = wxDynamicCast(_ptrObj0, wxUpdateUIEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxUpdateUIEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxWindowCreateEvent")){
+				object_init_ex(return_value, php_wxWindowCreateEvent_entry);
+				wxWindowCreateEvent* ret = wxDynamicCast(_ptrObj0, wxWindowCreateEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxWindowCreateEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxWindowDestroyEvent")){
+				object_init_ex(return_value, php_wxWindowDestroyEvent_entry);
+				wxWindowDestroyEvent* ret = wxDynamicCast(_ptrObj0, wxWindowDestroyEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxWindowDestroyEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxPrintDialog")){
+				object_init_ex(return_value, php_wxPrintDialog_entry);
+				wxPrintDialog* ret = wxDynamicCast(_ptrObj0, wxPrintDialog_php);
+				long id_to_find = zend_list_insert(ret, le_wxPrintDialog);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
 		}
 	}
 }
@@ -2342,6 +2423,42 @@ le_wxMoveEvent = zend_register_list_destructors_ex(php_wxMoveEvent_destruction_h
 INIT_CLASS_ENTRY(cf, PHP_wxActivateEvent_NAME , php_wxActivateEvent_functions);
 php_wxActivateEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
 le_wxActivateEvent = zend_register_list_destructors_ex(php_wxActivateEvent_destruction_handler, NULL, le_wxActivateEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxMenuEvent_NAME , php_wxMenuEvent_functions);
+php_wxMenuEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxMenuEvent = zend_register_list_destructors_ex(php_wxMenuEvent_destruction_handler, NULL, le_wxMenuEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxMouseEvent_NAME , php_wxMouseEvent_functions);
+php_wxMouseEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxMouseEvent = zend_register_list_destructors_ex(php_wxMouseEvent_destruction_handler, NULL, le_wxMouseEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPaintEvent_NAME , php_wxPaintEvent_functions);
+php_wxPaintEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPaintEvent = zend_register_list_destructors_ex(php_wxPaintEvent_destruction_handler, NULL, le_wxPaintEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPasswordEntryDialog_NAME , php_wxPasswordEntryDialog_functions);
+php_wxPasswordEntryDialog_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPasswordEntryDialog = zend_register_list_destructors_ex(php_wxPasswordEntryDialog_destruction_handler, NULL, le_wxPasswordEntryDialog_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxTextEntryDialog_NAME , php_wxTextEntryDialog_functions);
+php_wxTextEntryDialog_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxTextEntryDialog = zend_register_list_destructors_ex(php_wxTextEntryDialog_destruction_handler, NULL, le_wxTextEntryDialog_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxUpdateUIEvent_NAME , php_wxUpdateUIEvent_functions);
+php_wxUpdateUIEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxUpdateUIEvent = zend_register_list_destructors_ex(php_wxUpdateUIEvent_destruction_handler, NULL, le_wxUpdateUIEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxWindowCreateEvent_NAME , php_wxWindowCreateEvent_functions);
+php_wxWindowCreateEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxWindowCreateEvent = zend_register_list_destructors_ex(php_wxWindowCreateEvent_destruction_handler, NULL, le_wxWindowCreateEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxWindowDestroyEvent_NAME , php_wxWindowDestroyEvent_functions);
+php_wxWindowDestroyEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxWindowDestroyEvent = zend_register_list_destructors_ex(php_wxWindowDestroyEvent_destruction_handler, NULL, le_wxWindowDestroyEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPrintDialog_NAME , php_wxPrintDialog_functions);
+php_wxPrintDialog_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPrintDialog = zend_register_list_destructors_ex(php_wxPrintDialog_destruction_handler, NULL, le_wxPrintDialog_name, module_number);
 
 
 REGISTER_LONG_CONSTANT("wxFR_REPLACEDIALOG", wxFR_REPLACEDIALOG, CONST_CS | CONST_PERSISTENT);
