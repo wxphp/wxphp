@@ -1706,147 +1706,115 @@ function derivationsOfClass($myType)
 	return $typeVerifier;
 }
 	
-	$evnHandlers = derivationsOfClass('wxEvtHandler');
+$evnHandlers = derivationsOfClass('wxEvtHandler');
+
+/**
+ * Recursive Class to generate a list of class methods for the templates.h
+ *
+ * @param $classN The name of the class to wich generate the methods
+ * @param $ctor boolean value to indicate if constructors should be generated or not
+ * @param $output A reference variable where the output of the function will be stored.
+ */
+function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
+{
+	global $defIni;
+	global $evnHandlers;
+	$class_methods = "";
 	
-	function funcsOfClass($classN,$ctor=0,$ar = array())
+	if(!isset($defIni[$classN]))
+		return array();
+
+	$classDef3 = $classDef = $defIni[$classN];
+
+	foreach($classDef as $funcName => $funcDef)
 	{
-		global $defIni;
-		global $evnHandlers;
-		if(!isset($defIni[$classN]))
-			return array();
-
-		$classDef3 = $classDef = $defIni[$classN];
-
-		foreach($classDef as $funcName => $funcDef)
-                {
-                        if($funcName[0]=="_")
-                                continue;
-                        $funcName2 = $funcName;
-                        if($classN==$funcName)
-                        {
-                                if(!$ctor)
-                                        continue;
-                                $funcName2 = "__construct";
-                        }
-			if(in_array($funcName2,$ar))
-                                continue;
-			$ar[] = $funcName2;
-			
-?>
-        PHP_ME(php_<?=$classN?>, <?=$funcName2?>, NULL,ZEND_ACC_PUBLIC<? if($funcName2 == "__construct" && $ctor){?>|ZEND_ACC_CTOR<?}?>)
-<?
-                }
-
-
-		//becarefull not to mark a subclasse that is derived from another
-		//this should be recursive
-		if(isset($classDef['_implements']))
-		{
-			foreach($classDef['_implements'] as $imp)
-			{
-				$ar = array_merge($ar,funcsOfClass($imp,0,$ar));
-				continue;
+		if($funcName[0]=="_")
+			continue;
 				
-				if(!isset($defIni[$imp]))
+		$funcName2 = $funcName;
+		if($classN==$funcName)
+		{
+			if(!$ctor)
 					continue;
-				$classDef2 = $defIni[$imp];
-				foreach($classDef2 as $funcName2 => $funcDef2)
-				{
-					if($funcName2[0]=="_")//ignore implements and constructors
-						continue;
-					$found=false;
-					$funcNamer = $funcName2;
-					if($funcName2==$imp)
-						$funcNamer = $classN;
-					foreach($classDef3 as $funcName => $funcDef)
-						if($funcNamer==$funcName)
-							$found = true;
-							
-					//if already exists functions with yhe same name, verify if equal args
-					if($found)
-					{
-						for($i=0;$i<count($funcDef2);$i+=2)
-						{
-							$found = false;
-							for($e=0;$e<count($classDef[$funcNamer]);$e+=2)
-								if($funcDef2[$i]==$classDef[$funcNamer][$e])
-									$found = true;
+					
+			$funcName2 = "__construct";
+		}
+		
+		if(in_array($funcName2,$ar))
+			continue;
+			
+		$ar[] = $funcName2;
 
-							if(!$found)//merge overloads
-							{
-								$classDef[$funcNamer][] = $classDef2[$funcName2][$i];
-								$classDef[$funcNamer][] = $classDef2[$funcName2][$i+1];
-							}
+		$class_methods .= "\tPHP_ME(php_{$classN}, {$funcName2}, NULL, ZEND_ACC_PUBLIC";
+		if($funcName2 == "__construct" && $ctor)
+		{
+			$class_methods .= "|ZEND_ACC_CTOR";
+		}
+		$class_methods .= ")\n";
+	}
+	
+	//becarefull not to mark a subclasse that is derived from another
+	//this should be recursive
+	if(isset($classDef['_implements']))
+	{
+		foreach($classDef['_implements'] as $imp)
+		{
+			$ar = array_merge($ar,funcsOfClass($imp, 0, $output, $ar));
+			continue;
+			
+			if(!isset($defIni[$imp]))
+				continue;
+			$classDef2 = $defIni[$imp];
+			foreach($classDef2 as $funcName2 => $funcDef2)
+			{
+				if($funcName2[0]=="_")//ignore implements and constructors
+					continue;
+				$found=false;
+				$funcNamer = $funcName2;
+				if($funcName2==$imp)
+					$funcNamer = $classN;
+				foreach($classDef3 as $funcName => $funcDef)
+					if($funcNamer==$funcName)
+						$found = true;
+						
+				//if already exists functions with the same name, verify if equal args
+				if($found)
+				{
+					for($i=0;$i<count($funcDef2);$i+=2)
+					{
+						$found = false;
+						for($e=0;$e<count($classDef[$funcNamer]);$e+=2)
+							if($funcDef2[$i]==$classDef[$funcNamer][$e])
+								$found = true;
+
+						if(!$found)//merge overloads
+						{
+							$classDef[$funcNamer][] = $classDef2[$funcName2][$i];
+							$classDef[$funcNamer][] = $classDef2[$funcName2][$i+1];
 						}
 					}
-					elseif($funcName2==$imp){// prevent foreign constructors
-						//just skip it
-					}else
-					{
-?>
-	PHP_ME(php_<?=$imp?>, <?=$funcName2?>, NULL,ZEND_ACC_PUBLIC)
-<?
-						//$classDef3[$funcName2]=$funcDef2;
-					}
 				}
-			}
-		}
-		if($classN=="wxFrame"){
-			//var_dump($ar);
-			//var_dump($classDef);
-			//die();
-		}
-
-		return $ar;
-
-		foreach($classDef as $funcName => $funcDef)
-		{
-			if($funcName[0]=="_")
-				continue;
-			$funcName2 = $funcName;
-			if($classN==$funcName)
-			{
-				if(!$ctor)
-					continue;
-				$funcName2 = "__construct";
-			}
-?>
-	PHP_ME(php_<?=$classN?>, <?=$funcName2?>, NULL,ZEND_ACC_PUBLIC<? if($funcName2 == "__construct" && $ctor){?>|ZEND_ACC_CTOR<?}?>)
-<?
-		}
-		
-		
-		if(isset($evnHandlers[$classN])  && $ctor)
-		{
-?>
-	PHP_ME(php_<?=$classN?>, Connect, NULL,ZEND_ACC_PUBLIC)
-<?
-		}
-
-		if(isset($classDef['_implements']))
-		{
-			/*foreach($classDef['_implements'] as $imp)
-			{
-				if(!isset($defIni[$imp]))
-					continue;
-				$classDef = $defIni[$imp];
-				foreach($classDef as $funcName => $funcDef)
+				elseif($funcName2==$imp){// prevent foreign constructors
+					//just skip it
+				}else
 				{
-					if($funcName[0]=="_")
-						continue;
-					$funcName2 = $funcName;
-					if($imp==$funcName)
-						continue;
-?>
-	PHP_ME(php_<?=$imp?>, <?=$funcName2?>, NULL,ZEND_ACC_PUBLIC)
-<?
+					$class_methods .= "\tPHP_ME(php_{$imp}, {$funcName2}, NULL, ZEND_ACC_PUBLIC)\n";
+					//$classDef3[$funcName2]=$funcDef2;
 				}
-			
-			}*/
+			}
 		}
-		else
-			funcsOfClass($classDef['_extends']);
 	}
+	
+	/*if($classN=="wxFrame"){
+		var_dump($ar);
+		var_dump($classDef);
+		die();
+	}*/
+
+	$output .= $class_methods;
+	
+	return $ar;
+}
 
 	ob_start();
 	foreach($defIni as $className => $classDef)
@@ -2033,9 +2001,10 @@ function retWxOb($type,$poi)
 		return "{$type}_php* cret = wxDynamicCast($poi, {$type}_php);object_init_ex(return_value,php_{$type}_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(cret, le_{$type}));MAKE_STD_ZVAL(cret->evnArray);array_init(cret->evnArray);return;";
 }
 	
-//template.c
+//Generate template.cpp and template.h
 foreach($groups as $fileN => $classList)
 {
+	//Start by generating template.cpp
 	ob_start();
 	$references = array("_files"=>array());
 	foreach($classList as $className)
@@ -2844,77 +2813,87 @@ PHP_METHOD(php_<?=$className?>, Connect)
 	$hd = fopen($fileN.".cpp","w");
 	fwrite($hd,$data);
 	fclose($hd);
-	
-	//template.h
-	ob_start();
+?>
+
+<?	
+	//Generate template.h (actually frame.h)
+	echo "Generating template headers...\n";
+
 	foreach($classList as $className)
 		$references[$className] = 1;
+
+	$template_header = "";
+
 	foreach($classList as $className)
 	{
 		if(!isset($defIni[$className]))
 			continue;
+				
 		$classDef = $defIni[$className];
 
 		if($classDef	["_type"]=="abstract")
 			continue;
-		?>
-extern zend_class_entry *php_<?=$className?>_entry;
-void php_<?=$className?>_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+			
+		$template_header .= "extern zend_class_entry *php_{$className}_entry;\n";
+		$template_header .= "void php_{$className}_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);\n\n";
 
-#define PHP_<?=$className?>_NAME "<?=$className?>"
-#define le_<?=$className?>_name  "native <?=$className?>"
+		$template_header .= "#define PHP_{$className}_NAME \"{$className}\"\n";
+		$template_header .= "#define le_{$className}_name  \"native {$className}\"\n\n";
 
-class <?=$className?>_php : public <?=$className?>
-{
-	public:
-<?
-	foreach($classDef as $fcName => $fc)
-	{
-		if($fcName!=$className)
-			continue;
-		for($ol=0;$ol<count($fc);$ol+=2)
+		//Class declaration
+		$template_header .= "class {$className}_php : public {$className}\n";
+		$template_header .= "{\n";
+		$template_header .= "\tpublic:\n\n";
+
+		//Generate Class Constructors
+		foreach($classDef as $fcName => $fc)
 		{
-			$args = $fc[$ol];
-			$argsDefault = $fc[$ol+1];
-			if(is_array($argsDefault[0]))
-				$argsDefault= $argsDefault[1];
-			else
-				$argsDefault = array();
-			
-			
-			array_splice($args,0,1);
-			$argC = array();
-			foreach($args as $k => $v)
-			{
-				//Restore this type back to size_t in order to be able to compile correctly on 64bits or 32 bits platforms since gccxml does not return original
-				if($v == "long unsigned int")
-					$v = "size_t";
-						
-				$args[$k] = $v." arg".$k;
-				$argC[$k] = "arg".$k;
+			if($fcName!=$className)
+				continue;
 				
-				if(!is_null($argsDefault[$k+1]))
+			for($ol=0;$ol<count($fc);$ol+=2)
+			{
+				$args = $fc[$ol];
+				$argsDefault = $fc[$ol+1];
+				if(is_array($argsDefault[0]))
+					$argsDefault= $argsDefault[1];
+				else
+					$argsDefault = array();
+				
+				
+				array_splice($args,0,1);
+				$argC = array();
+				foreach($args as $k => $v)
 				{
-					//escapar do erro
-					if($argsDefault[$k+1][0]=='"')
-						$argsDefault[$k+1]="wxT({$argsDefault[$k+1]})";
-					$args[$k].=" = ".$argsDefault[$k+1];
+					//Restore this type back to size_t in order to be able to compile correctly on 64bits or 32 bits platforms since gccxml does not return original
+					if($v == "long unsigned int")
+						$v = "size_t";
+							
+					$args[$k] = $v." arg".$k;
+					$argC[$k] = "arg".$k;
+					
+					if(!is_null($argsDefault[$k+1]))
+					{
+						//escapar do erro
+						if($argsDefault[$k+1][0]=='"')
+							$argsDefault[$k+1]="wxT({$argsDefault[$k+1]})";
+						$args[$k].=" = ".$argsDefault[$k+1];
+					}
 				}
+				
+				$args = join(" , ",$args);
+				$argC = join(" , ",$argC);
+				
+				//Constructor that calls parent constructor
+				$template_header .= "\t{$className}_php({$args}):{$className}({$argC}){}\n";
 			}
-			
-			$args = join(" , ",$args);
-			$argC = join(" , ",$argC);
-			
+		}
 		
-	?>
-	<?=$className?>_php(<?=$args?>):<?=$className?>(<?=$argC?>)
-	{
-	}
-<?		}
-	}
-	
+		//Generate virtual function declarations
 		if(isset($classDef['_pure_virtual']))
 		{
+			$template_header .= "\n";
+			
 			$evnCnt=0;
 			foreach($classDef['_pure_virtual'] as $fVirtual)
 			{
@@ -2941,38 +2920,35 @@ class <?=$className?>_php : public <?=$className?>
 				}
 					
 				$args = join(" , ",$args);
-					?>
-		virtual <?=$retType ?> <?=$fVirtual?>(<?=$args?>)<?=$const?>;
-<?			}
 
+				$template_header .= "\tvirtual {$retType} {$fVirtual}({$args}) {$const};\n";
+			}
 		}
+		
+		$template_header .= "\n";
 
-?>
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
-	void ***tsrm_ls;
-	zval* phpObj;
-};
+		$template_header .= "\tzval *evnArray;\n";
+		$template_header .= "\tvoid onEvent(wxEvent& evnt);\n";
+		$template_header .= "\tvoid ***tsrm_ls;\n";
+		$template_header .= "\tzval* phpObj;\n";
+		
+		$template_header .= "};\n\n";
 
 
-extern int le_<?=$className?>;
+		$template_header .= "extern int le_{$className};\n\n";
 
-static function_entry php_<?=$className?>_functions[] = {
-<?
-		funcsOfClass($className,1);
-?>
-	{ NULL, NULL, NULL }
-};
-<?
+		//Declare class methods
+		$template_header .= "static function_entry php_{$className}_functions[] = {\n";
+		funcsOfClass($className, 1, $template_header);
+		$template_header .= "\t{ NULL, NULL, NULL }\n";
+		$template_header .= "};\n\n";
 	}
-	$data = ob_get_clean();
-	
-	$hd = fopen($fileN.".h","w");
-	fwrite($hd,$data);
+
+	$hd = fopen($fileN.".h", "w");
+	fwrite($hd,$template_header);
 	fclose($hd);
 	
-	
-}
+} //Ends foreach($groups as $fileN => $classList)
 ?>
 
 <?
