@@ -77,6 +77,7 @@
 #include <wx/statline.h>
 #include <wx/gbsizer.h>
 #include <wx/html/htmlwin.h>
+#include <wx/aboutdlg.h>
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

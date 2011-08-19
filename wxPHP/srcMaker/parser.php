@@ -16,6 +16,7 @@ $defEnums = array();
 
 //Initialize constant definitions
 $defConsts = array(
+	//wxSplitterWindow
 	"wxSP_3D"=>1,
 	"wxSP_3DSASH"=>1,
 	"wxSP_3DBORDER"=>1,
@@ -24,6 +25,8 @@ $defConsts = array(
 	"wxSP_NO_XP_THEME"=>1,
 	"wxSP_PERMIT_UNSPLIT"=>1,
 	"wxSP_LIVE_UPDATE"=>1,
+	
+	//wxSizer, wxStaticText, etc...
 	"wxHORIZONTAL"=>1,
 	"wxVERTICAL"=>1,
 	"wxTOP"=>1,
@@ -44,20 +47,30 @@ $defConsts = array(
 	"wxALIGN_CENTRE_VERTICAL"=>1,
 	"wxALIGN_CENTER_HORIZONTAL"=>1,
 	"wxALIGN_CENTRE_HORIZONTAL"=>1,
+	"wxST_NO_AUTORESIZE"=>1,
+	
+	//wxGauge
 	"wxGA_HORIZONTAL"=>1,
 	"wxGA_VERTICAL"=>1,
+	"wxGA_SMOOTH"=>1,
+	
+	//wxButton
 	"wxBU_LEFT"=>1,
 	"wxBU_TOP"=>1,
 	"wxBU_RIGHT"=>1,
 	"wxBU_BOTTOM"=>1,
 	"wxBU_EXACTFIT"=>1,
 	"wxNO_BORDER"=>1,
+	
+	//Image types
 	"wxBITMAP_TYPE_BMP"=>1,
 	"wxBITMAP_TYPE_BMP_RESOURCE"=>1,
 	"wxBITMAP_TYPE_PICT_RESOURCE"=>1,
 	"wxBITMAP_TYPE_GIF"=>1,
 	"wxBITMAP_TYPE_XBM"=>1,
 	"wxBITMAP_TYPE_XPM"=>1,
+	
+	//wxCalendarCtrl
 	"wxCAL_SUNDAY_FIRST"=>1,
 	"wxCAL_MONDAY_FIRST"=>1,
 	"wxCAL_SHOW_HOLIDAYS"=>1,
@@ -65,9 +78,13 @@ $defConsts = array(
 	"wxCAL_NO_MONTH_CHANGE"=>1,
 	"wxCAL_SHOW_SURROUNDING_WEEKS"=>1,
 	"wxCAL_SEQUENTIAL_MONTH_SELECTION"=>1,
+	
+	//wxCheckBox
 	"wxCHK_2STATE"=>1,
 	"wxCHK_3STATE"=>1,
 	"wxCHK_ALLOW_3RD_STATE_FOR_USER"=>1,
+	
+	//wxToolBar
 	"wxTB_FLAT"=>1,
 	"wxTB_DOCKABLE"=>1,
 	"wxTB_HORIZONTAL"=>1,
@@ -81,6 +98,8 @@ $defConsts = array(
 	"wxTB_NO_TOOLTIPS"=>1,
 	"wxTB_BOTTOM"=>1,
 	"wxTB_RIGHT"=>1,
+	
+	//wxListCtrl
 	"wxLC_LIST"=>1,
 	"wxLC_REPORT"=>1,
 	"wxLC_VIRTUAL"=>1,
@@ -96,69 +115,8 @@ $defConsts = array(
 	"wxLC_SORT_DESCENDING"=>1,
 	"wxLC_HRULES"=>1,
 	"wxLC_VRULES"=>1,
-	"wxEVT_COMMAND_TREE_BEGIN_DRAG"=>1,
-	"wxEVT_COMMAND_TREE_BEGIN_RDRAG"=>1,
-	"wxEVT_COMMAND_TREE_BEGIN_LABEL_EDIT"=>1,
-	"wxEVT_COMMAND_TREE_END_LABEL_EDIT"=>1,
-	"wxEVT_COMMAND_TREE_DELETE_ITEM"=>1,
-	"wxEVT_COMMAND_TREE_GET_INFO"=>1,
-	"wxEVT_COMMAND_TREE_SET_INFO"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_EXPANDED"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_EXPANDING"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_COLLAPSED"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_COLLAPSING"=>1,
-	"wxEVT_COMMAND_TREE_SEL_CHANGED"=>1,
-	"wxEVT_COMMAND_TREE_SEL_CHANGING"=>1,
-	"wxEVT_COMMAND_TREE_KEY_DOWN"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_ACTIVATED"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_RIGHT_CLICK"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_MIDDLE_CLICK"=>1,
-	"wxEVT_COMMAND_TREE_END_DRAG"=>1,
-	"wxEVT_COMMAND_TREE_STATE_IMAGE_CLICK"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_GETTOOLTIP"=>1,
-	"wxEVT_COMMAND_TREE_ITEM_MENU"=>1,
-	"wxEVT_SIZE"=>1,
-	"wxEVT_COMMAND_MENU_SELECTED"=>1,
-	"wxEVT_COMMAND_COMBOBOX_SELECTED" => 1,
-	"wxEVT_COMMAND_TEXT_UPDATED" => 1,
-	"wxEVT_COMMAND_TEXT_ENTER" => 1,
-	"wxEVT_COMMAND_TEXT_UPDATED" => 1,
-	"wxEVT_COMMAND_TEXT_ENTER" => 1,
-	"wxEVT_COMMAND_CHECKLISTBOX_TOGGLED"=>1,
-	"wxEVT_COMMAND_CHOICE_SELECTED" => 1,
-	"wxEVT_COMMAND_CHECKBOX_CLICKED" => 1,
-	"wxEVT_CALENDAR_SEL_CHANGED" => 1,
-	"wxEVT_CALENDAR_DAY_CHANGED" => 1,
-	"wxEVT_CALENDAR_MONTH_CHANGED" => 1,
-	"wxEVT_CALENDAR_YEAR_CHANGED" => 1,
-	"wxEVT_CALENDAR_DOUBLECLICKED" => 1,
-	"wxEVT_CALENDAR_WEEKDAY_CLICKED" => 1,
-	"wxEVT_COMMAND_TOGGLEBUTTON_CLICKED"=>1,
-	"wxEVT_COMMAND_BUTTON_CLICKED"=>1,
-	"wxEVT_COMMAND_LISTBOX_DOUBLECLICKED"=>1,
-	"wxEVT_COMMAND_LIST_BEGIN_DRAG"=>1,
-	"wxEVT_COMMAND_LIST_BEGIN_RDRAG"=>1,
-	"wxEVT_COMMAND_LIST_BEGIN_LABEL_EDIT"=>1,
-	"wxEVT_COMMAND_LIST_END_LABEL_EDIT"=>1,
-	"wxEVT_COMMAND_LIST_DELETE_ITEM"=>1,
-	"wxEVT_COMMAND_LIST_DELETE_ALL_ITEMS"=>1,
-	"wxEVT_COMMAND_LIST_GET_INFO"=>1,
-	"wxEVT_COMMAND_LIST_SET_INFO"=>1,
-	"wxEVT_COMMAND_LIST_ITEM_SELECTED"=>1,
-	"wxEVT_COMMAND_LIST_ITEM_DESELECTED"=>1,
-	"wxEVT_COMMAND_LIST_KEY_DOWN"=>1,
-	"wxEVT_COMMAND_LIST_INSERT_ITEM"=>1,
-	"wxEVT_COMMAND_LIST_COL_CLICK"=>1,
-	"wxEVT_COMMAND_LIST_ITEM_RIGHT_CLICK"=>1,
-	"wxEVT_COMMAND_LIST_ITEM_MIDDLE_CLICK"=>1,
-	"wxEVT_COMMAND_LIST_ITEM_ACTIVATED"=>1,
-	"wxEVT_COMMAND_LIST_CACHE_HINT"=>1,
-	"wxEVT_COMMAND_LIST_COL_RIGHT_CLICK"=>1,
-	"wxEVT_COMMAND_LIST_COL_BEGIN_DRAG"=>1,
-	"wxEVT_COMMAND_LIST_COL_DRAGGING"=>1,
-	"wxEVT_COMMAND_LIST_COL_END_DRAG"=>1,
-	"wxEVT_COMMAND_LIST_ITEM_FOCUSED"=>1,
-	"wxEVT_CLOSE_WINDOW"=>1,
+	
+	//wxNoteBook
 	"wxNB_TOP"=>1,
 	"wxNB_LEFT"=>1,
 	"wxNB_RIGHT"=>1,
@@ -167,8 +125,244 @@ $defConsts = array(
 	"wxNB_MULTILINE"=>1,
 	"wxNB_NOPAGETHEME"=>1,
 	"wxNB_FLAT"=>1,
-	"wxID_OK"=>1,
-	"wxID_CANCEL"=>1,
+	
+	//Id's
+	"wxID_LOWEST"=>1,
+    "wxID_OPEN"=>1,
+    "wxID_CLOSE"=>1,
+    "wxID_NEW"=>1,
+    "wxID_SAVE"=>1,
+    "wxID_SAVEAS"=>1,
+    "wxID_REVERT"=>1,
+    "wxID_EXIT"=>1,
+    "wxID_UNDO"=>1,
+    "wxID_REDO"=>1,
+    "wxID_HELP"=>1,
+    "wxID_PRINT"=>1,
+    "wxID_PRINT_SETUP"=>1,
+    "wxID_PAGE_SETUP"=>1,
+    "wxID_PREVIEW"=>1,
+    "wxID_ABOUT"=>1,
+    "wxID_HELP_CONTENTS"=>1,
+    "wxID_HELP_INDEX"=>1,
+    "wxID_HELP_SEARCH"=>1,
+    "wxID_HELP_COMMANDS"=>1,
+    "wxID_HELP_PROCEDURES"=>1,
+    "wxID_HELP_CONTEXT"=>1,
+    "wxID_CLOSE_ALL"=>1,
+    "wxID_EDIT"=>1,
+    "wxID_CUT"=>1,
+    "wxID_COPY"=>1,
+    "wxID_PASTE"=>1,
+    "wxID_CLEAR"=>1,
+    "wxID_FIND"=>1,
+    "wxID_DUPLICATE"=>1,
+    "wxID_SELECTALL"=>1,
+    "wxID_DELETE"=>1,
+    "wxID_REPLACE"=>1,
+    "wxID_REPLACE_ALL"=>1,
+    "wxID_PROPERTIES"=>1,
+    "wxID_VIEW_DETAILS"=>1,
+    "wxID_VIEW_LARGEICONS"=>1,
+    "wxID_VIEW_SMALLICONS"=>1,
+    "wxID_VIEW_LIST"=>1,
+    "wxID_VIEW_SORTDATE"=>1,
+    "wxID_VIEW_SORTNAME"=>1,
+    "wxID_VIEW_SORTSIZE"=>1,
+    "wxID_VIEW_SORTTYPE"=>1,
+    "wxID_FILE"=>1,
+    "wxID_FILE1"=>1,
+    "wxID_FILE2"=>1,
+    "wxID_FILE3"=>1,
+    "wxID_FILE4"=>1,
+    "wxID_FILE5"=>1,
+    "wxID_FILE6"=>1,
+    "wxID_FILE7"=>1,
+    "wxID_FILE8"=>1,
+    "wxID_FILE9"=>1,
+    // Standard button IDs
+    "wxID_OK"=>1,
+    "wxID_CANCEL"=>1,
+    "wxID_APPLY"=>1,
+    "wxID_YES"=>1,
+    "wxID_NO"=>1,
+    "wxID_STATIC"=>1,
+    "wxID_FORWARD"=>1,
+    "wxID_BACKWARD"=>1,
+    "wxID_DEFAULT"=>1,
+    "wxID_MORE"=>1,
+    "wxID_SETUP"=>1,
+    "wxID_RESET"=>1,
+    "wxID_CONTEXT_HELP"=>1,
+    "wxID_YESTOALL"=>1,
+    "wxID_NOTOALL"=>1,
+    "wxID_ABORT"=>1,
+    "wxID_RETRY"=>1,
+    "wxID_IGNORE"=>1,
+    "wxID_UP"=>1,
+    "wxID_DOWN"=>1,
+    "wxID_HOME"=>1,
+    "wxID_REFRESH"=>1,
+    "wxID_STOP"=>1,
+    "wxID_INDEX"=>1,
+    "wxID_BOLD"=>1,
+    "wxID_ITALIC"=>1,
+    "wxID_JUSTIFY_CENTER"=>1,
+    "wxID_JUSTIFY_FILL"=>1,
+    "wxID_JUSTIFY_RIGHT"=>1,
+    "wxID_JUSTIFY_LEFT"=>1,
+    "wxID_UNDERLINE"=>1,
+    "wxID_INDENT"=>1,
+    "wxID_UNINDENT"=>1,
+    "wxID_ZOOM_100"=>1,
+    "wxID_ZOOM_FIT"=>1,
+    "wxID_ZOOM_IN"=>1,
+    "wxID_ZOOM_OUT"=>1,
+    "wxID_UNDELETE"=>1,
+    "wxID_REVERT_TO_SAVED"=>1,
+    // System menu IDs (used by "wxUniv):
+    "wxID_SYSTEM_MENU"=>1,
+    "wxID_CLOSE_FRAME"=>1,
+    "wxID_MOVE_FRAME"=>1,
+    "wxID_RESIZE_FRAME"=>1,
+    "wxID_MAXIMIZE_FRAME"=>1,
+    "wxID_ICONIZE_FRAME"=>1,
+    "wxID_RESTORE_FRAME"=>1,
+    // IDs used by generic file dialog (13 consecutive starting from this value)
+    "wxID_FILEDLGG"=>1,
+    "wxID_HIGHEST"=>1,
+    
+    //Keycodes
+    "WXK_BACK"=>1,
+    "WXK_TAB"=>1,
+    "WXK_RETURN"=>1,
+    "WXK_ESCAPE"=>1,
+    "WXK_SPACE"=>1,
+    "WXK_DELETE"=>1,
+    // These are by design not compatible with unicode characters.
+    // If you want to get a unicode character from a key event use
+    // "WXKeyEvent::GetUnicodeKey instead.
+    "WXK_START"=>1,
+    "WXK_LBUTTON"=>1,
+    "WXK_RBUTTON"=>1,
+    "WXK_CANCEL"=>1,
+    "WXK_MBUTTON"=>1,
+    "WXK_CLEAR"=>1,
+    "WXK_SHIFT"=>1,
+    "WXK_ALT"=>1,
+    "WXK_CONTROL"=>1,
+    "WXK_MENU"=>1,
+    "WXK_PAUSE"=>1,
+    "WXK_CAPITAL"=>1,
+    "WXK_END"=>1,
+    "WXK_HOME"=>1,
+    "WXK_LEFT"=>1,
+    "WXK_UP"=>1,
+    "WXK_RIGHT"=>1,
+    "WXK_DOWN"=>1,
+    "WXK_SELECT"=>1,
+    "WXK_PRINT"=>1,
+    "WXK_EXECUTE"=>1,
+    "WXK_SNAPSHOT"=>1,
+    "WXK_INSERT"=>1,
+    "WXK_HELP"=>1,
+    "WXK_NUMPAD0"=>1,
+    "WXK_NUMPAD1"=>1,
+    "WXK_NUMPAD2"=>1,
+    "WXK_NUMPAD3"=>1,
+    "WXK_NUMPAD4"=>1,
+    "WXK_NUMPAD5"=>1,
+    "WXK_NUMPAD6"=>1,
+    "WXK_NUMPAD7"=>1,
+    "WXK_NUMPAD8"=>1,
+    "WXK_NUMPAD9"=>1,
+    "WXK_MULTIPLY"=>1,
+    "WXK_ADD"=>1,
+    "WXK_SEPARATOR"=>1,
+    "WXK_SUBTRACT"=>1,
+    "WXK_DECIMAL"=>1,
+    "WXK_DIVIDE"=>1,
+    "WXK_F1"=>1,
+    "WXK_F2"=>1,
+    "WXK_F3"=>1,
+    "WXK_F4"=>1,
+    "WXK_F5"=>1,
+    "WXK_F6"=>1,
+    "WXK_F7"=>1,
+    "WXK_F8"=>1,
+    "WXK_F9"=>1,
+    "WXK_F10"=>1,
+    "WXK_F11"=>1,
+    "WXK_F12"=>1,
+    "WXK_F13"=>1,
+    "WXK_F14"=>1,
+    "WXK_F15"=>1,
+    "WXK_F16"=>1,
+    "WXK_F17"=>1,
+    "WXK_F18"=>1,
+    "WXK_F19"=>1,
+    "WXK_F20"=>1,
+    "WXK_F21"=>1,
+    "WXK_F22"=>1,
+    "WXK_F23"=>1,
+    "WXK_F24"=>1,
+    "WXK_NUMLOCK"=>1,
+    "WXK_SCROLL"=>1,
+    "WXK_PAGEUP"=>1,
+    "WXK_PAGEDOWN"=>1,
+    "WXK_NUMPAD_SPACE"=>1,
+    "WXK_NUMPAD_TAB"=>1,
+    "WXK_NUMPAD_ENTER"=>1,
+    "WXK_NUMPAD_F1"=>1,
+    "WXK_NUMPAD_F2"=>1,
+    "WXK_NUMPAD_F3"=>1,
+    "WXK_NUMPAD_F4"=>1,
+    "WXK_NUMPAD_HOME"=>1,
+    "WXK_NUMPAD_LEFT"=>1,
+    "WXK_NUMPAD_UP"=>1,
+    "WXK_NUMPAD_RIGHT"=>1,
+    "WXK_NUMPAD_DOWN"=>1,
+    "WXK_NUMPAD_PAGEUP"=>1,
+    "WXK_NUMPAD_PAGEDOWN"=>1,
+    "WXK_NUMPAD_END"=>1,
+    "WXK_NUMPAD_BEGIN"=>1,
+    "WXK_NUMPAD_INSERT"=>1,
+    "WXK_NUMPAD_DELETE"=>1,
+    "WXK_NUMPAD_EQUAL"=>1,
+    "WXK_NUMPAD_MULTIPLY"=>1,
+    "WXK_NUMPAD_ADD"=>1,
+    "WXK_NUMPAD_SEPARATOR"=>1,
+    "WXK_NUMPAD_SUBTRACT"=>1,
+    "WXK_NUMPAD_DECIMAL"=>1,
+    "WXK_NUMPAD_DIVIDE"=>1,
+    // the following key codes are only generated under Windows currently
+    "WXK_WINDOWS_LEFT"=>1,
+    "WXK_WINDOWS_RIGHT"=>1,
+    "WXK_WINDOWS_MENU"=>1,
+    "WXK_COMMAND"=>1,
+    // Hardware-specific buttons
+    "WXK_SPECIAL1"=>1,
+    "WXK_SPECIAL2"=>1,
+    "WXK_SPECIAL3"=>1,
+    "WXK_SPECIAL4"=>1,
+    "WXK_SPECIAL5"=>1,
+    "WXK_SPECIAL6"=>1,
+    "WXK_SPECIAL7"=>1,
+    "WXK_SPECIAL8"=>1,
+    "WXK_SPECIAL9"=>1,
+    "WXK_SPECIAL10"=>1,
+    "WXK_SPECIAL11"=>1,
+    "WXK_SPECIAL12"=>1,
+    "WXK_SPECIAL13"=>1,
+    "WXK_SPECIAL14"=>1,
+    "WXK_SPECIAL15"=>1,
+    "WXK_SPECIAL16"=>1,
+    "WXK_SPECIAL17"=>1,
+    "WXK_SPECIAL18"=>1,
+    "WXK_SPECIAL19"=>1,
+    "WXK_SPECIAL20"=>1,
+	
+	//wxTextCtrl, wxRichTexCtrl, wxSearchCtrl etc...
 	"wxTE_MULTILINE"=>1,
 	"wxTE_PASSWORD"=>1,
 	"wxTE_READONLY"=>1,
@@ -178,7 +372,6 @@ $defConsts = array(
 	"wxTE_RICH2"=>1,
 	"wxTE_AUTO_URL"=>1,
 	"wxTE_NOHIDESEL"=>1,
-	"wxHSCROLL"=>1,
 	"wxTE_NO_VSCROLL"=>1,
 	"wxTE_LEFT"=>1,
 	"wxTE_CENTRE"=>1,
@@ -188,6 +381,8 @@ $defConsts = array(
 	"wxTE_WORDWRAP"=>1,
 	"wxTE_BESTWRAP"=>1,
 	"wxTE_CAPITALIZE"=>1,
+	
+	"wxHSCROLL"=>1,
 	"wxOK"=>1,
 	"wxCANCEL"=>1,
 	"wxYES_DEFAULT"=>1,
@@ -215,6 +410,8 @@ $defConsts = array(
 	"wxALWAYS_SHOW_SB"=>1,
 	"wxCLIP_CHILDREN"=>1,
 	"wxFULL_REPAINT_ON_RESIZE"=>1,
+	
+	//wxListBox, wxCheckListBox, etc..
 	"wxLB_SINGLE"=>1,
 	"wxLB_MULTIPLE"=>1,
 	"wxLB_EXTENDED"=>1,
@@ -222,6 +419,8 @@ $defConsts = array(
 	"wxLB_ALWAYS_SB"=>1,
 	"wxLB_NEEDED_SB"=>1,
 	"wxLB_SORT"=>1,
+	
+	//wxSocketBase
 	"wxSOCKET_NOERROR"=>1,
 	"wxSOCKET_INVOP"=>1,
 	"wxSOCKET_IOERR"=>1,
@@ -236,7 +435,8 @@ $defConsts = array(
 	"wxSOCKET_OUTPUT"=>1,
 	"wxSOCKET_CONNECTION"=>1,
 	"wxSOCKET_LOST"=>1,
-	"wxEVT_SOCKET"=>1,
+	
+	//wxFileDialog
 	"wxFD_DEFAULT_STYLE"=>1,
 	"wxFD_OPEN"=>1,
 	"wxFD_SAVE"=>1,
@@ -245,47 +445,163 @@ $defConsts = array(
 	"wxFD_MULTIPLE"=>1,
 	"wxFD_CHANGE_DIR"=>1,
 	"wxFD_PREVIEW"=>1,
+	
+	//wxComboBox
 	"wxCB_SIMPLE"=>1,
 	"wxCB_DROPDOWN"=>1,
 	"wxCB_READONLY"=>1,
 	"wxCB_SORT"=>1,
-	"wxTR_EDIT_LABELS"=>1,
-	"wxTR_NO_BUTTONS"=>1,
-	"wxTR_HAS_BUTTONS"=>1,
-	"wxTR_NO_LINES"=>1,
-	"wxTR_FULL_ROW_HIGHLIGHT"=>1,
-	"wxTR_LINES_AT_ROOT"=>1,
-	"wxTR_HIDE_ROOT"=>1,
-	"wxTR_ROW_LINES"=>1,
-	"wxTR_HAS_VARIABLE_ROW_HEIGHT"=>1,
-	"wxTR_SINGLE"=>1,
-	"wxTR_MULTIPLE"=>1,
+	
+	//wxTreeCtrl
 	"wxTR_DEFAULT_STYLE"=>1,
+	"wxTR_EDIT_LABELS"=>1,
+	"wxTR_EXTENDED"=>1,
+	"wxTR_FULL_ROW_HIGHLIGHT"=>1,
+	"wxTR_HAS_BUTTONS"=>1,
+	"wxTR_HAS_VARIABLE_ROW_HEIGHT"=>1,
+	"wxTR_HIDE_ROOT"=>1,
+	"wxTR_LINES_AT_ROOT"=>1,
+	"wxTR_MULTIPLE"=>1,
+	"wxTR_NO_BUTTONS"=>1,
+	"wxTR_NO_LINES"=>1,
+	"wxTR_ROW_LINES"=>1,
+	"wxTR_SINGLE"=>1,
+	"wxTR_TWIST_BUTTONS"=>1,
+	
+	//wxHyperlinkCtrl
 	"wxHL_CONTEXTMENU"=>1,
 	"wxHL_ALIGN_LEFT"=>1,
 	"wxHL_ALIGN_RIGHT"=>1,
 	"wxHL_ALIGN_CENTRE"=>1,
 	"wxHL_DEFAULT_STYLE"=>1,
+	
+	
 	"wxDEFAULT_DIALOG_STYLE"=>1,
 	"wxDEFAULT_FRAME_STYLE"=>1,
 	"wxST_SIZEGRIP"=>1,
+	
+	//wxFontPickerCtrl
 	"wxFNTP_DEFAULT_STYLE"=>1,
+	"wxFNTP_FONTDESC_AS_LABEL"=>1,
+	"wxFNTP_USEFONT_FOR_LABEL"=>1,
+	"wxFNTP_USE_TEXTCTRL"=>1,
+	
+	//wxFilePickerCtrl
 	"wxFLP_DEFAULT_STYLE"=>1,
+	"wxFLP_CHANGE_DIR"=>1,
+	"wxFLP_FILE_MUST_EXIST"=>1,
+	"wxFLP_OPEN"=>1,
+	"wxFLP_OVERWRITE_PROMPT"=>1,
+	"wxFLP_SAVE"=>1,
+	"wxFLP_USE_TEXTCTRL"=>1,
+	
+	//wxDirPickerCtrl
 	"wxDIRP_DEFAULT_STYLE"=>1,
+	"wxDIRP_CHANGE_DIR"=>1,
+	"wxDIRP_DIR_MUST_EXIST"=>1,
+	"wxDIRP_USE_TEXTCTRL"=>1,
+	
+	//wxDatepickerCtrl
 	"wxDP_DEFAULT"=>1,
+	"wxDP_ALLOWNONE"=>1,
+	"wxDP_DROPDOWN"=>1,
+	"wxDP_SHOWCENTURY"=>1,
+	"wxDP_SPIN"=>1,
+	
+	//wxScrollBar
 	"wxSB_HORIZONTAL"=>1,
 	"wxSB_VERTICAL"=>1,
+	
+	//wxSpinCtrl, wxSpinButton
 	"wxSP_ARROW_KEYS"=>1,
 	"wxSP_WRAP"=>1,
+	"wxSP_VERTICAL"=>1,
+	"wxSP_HORIZONTAL"=>1,
+	
+	//wxGenericDirCtrl
+	"wxDIRCTRL_3D_INTERNAL"=>1,
+	"wxDIRCTRL_DIR_ONLY"=>1,
+	"wxDIRCTRL_EDIT_LABELS"=>1,
+	"wxDIRCTRL_SELECT_FIRST"=>1,
+	"wxDIRCTRL_SHOW_FILTERS"=>1,
+	
 	"wxSUNKEN_BORDER"=>1,
+	
+	//wxHtmlWindow
 	"wxHW_SCROLLBAR_AUTO"=>1,
 	"wxHW_NO_SELECTION"=>1,
 	"wxHW_SCROLLBAR_NEVER"=>1,
 	"wxHW_DEFAULT_STYLE"=>1,
+	
+	//wxBitmapButton
 	"wxBU_AUTODRAW"=>1,
+	"wxBU_BOTTOM"=>1,
+	"wxBU_LEFT"=>1,
+	"wxBU_RIGHT"=>1,
+	"wxBU_TOP"=>1,
+	
+	//wxSlider
+	"wxSL_AUTOTICKS"=>1, 
+	"wxSL_BOTH"=>1, 
+	"wxSL_BOTTOM"=>1, 
+	"wxSL_HORIZONTAL"=>1, 
+	"wxSL_INVERSE"=>1, 
+	"wxSL_LABELS"=>1, 
+	"wxSL_LEFT"=>1, 
+	"wxSL_RIGHT"=>1, 
+	"wxSL_SELRANGE"=>1, 
+	"wxSL_TOP"=>1, 
+	"wxSL_VERTICAL"=>1,
+	
+	//wxRadioButton
+	"wxRB_GROUP"=>1,
+	"wxRB_SINGLE"=>1,
+	"wxRB_USE_CHECKBOX"=>1,
+	
+	//wxRadionBox
 	"wxRA_SPECIFY_COLS"=>1,
+	"wxRA_SPECIFY_ROWS"=>1,
+	"wxRA_USE_CHECKBOX"=>1,
+	
+	//wxStaticLine
 	"wxLI_HORIZONTAL"=>1,
-	"wxSL_HORIZONTAL"=>1
+	"wxLI_VERTICAL"=>1,
+	
+	//wxChoicebook
+	"wxCHB_BOTTOM"=>1,
+	"wxCHB_DEFAULT"=>1,
+	"wxCHB_LEFT"=>1,
+	"wxCHB_RIGHT"=>1,
+	"wxCHB_TOP"=>1,
+	
+	//wxListbook
+	"wxLB_BOTTOM"=>1,
+	"wxLB_DEFAULT"=>1, 
+	"wxLB_LEFT"=>1,
+	"wxLB_RIGHT"=>1,
+	"wxLB_TOP"=>1,
+	
+	//wxAuiNotebook
+	"wxAUI_NB_BOTTOM"=>1, 
+	"wxAUI_NB_CLOSE_BUTTON"=>1, 
+	"wxAUI_NB_CLOSE_ON_ACTIVE_TAB"=>1, 
+	"wxAUI_NB_CLOSE_ON_ALL_TABS"=>1, 
+	"wxAUI_NB_DEFAULT_STYLE"=>1, 
+	"wxAUI_NB_SCROLL_BUTTONS"=>1, 
+	"wxAUI_NB_TAB_EXTERNAL_MOVE"=>1, 
+	"wxAUI_NB_TAB_FIXED_WIDTH"=>1, 
+	"wxAUI_NB_TAB_MOVE"=>1, 
+	"wxAUI_NB_TAB_SPLIT"=>1, 
+	"wxAUI_NB_TOP"=>1, 
+	"wxAUI_NB_WINDOWLIST_BUTTON"=>1,
+	
+	//wxMenuBar
+	"wxMB_DOCKABLE"=>1,
+	
+	//wxToolBar Item Kind
+	"wxITEM_CHECK"=>1,
+	"wxITEM_NORMAL"=>1,
+	"wxITEM_RADIO"=>1
 );
 
 //Initialize classes definitios
@@ -1556,7 +1872,7 @@ function derivationsOfClass($myType)
 			/*if($methodName=="_extends")
 			{
 				if(!isset($defIni[$methodArgs]))
-					$defIni[$methodArgs] = array("_type"=>"abstract");//n„o È implementada
+					$defIni[$methodArgs] = array("_type"=>"abstract");//n√£o √© implementada
 				
 				if(!isset($defIni[$methodArgs]['_baseFor']))
 					$defIni[$methodArgs]['_baseFor'] = array();
@@ -1617,7 +1933,7 @@ foreach($defIni as $className => $classDef)
 						break;
 					}
 					
-				if($found)//j· existe mÈtodo com o mesmo nome
+				if($found)//j√° existe m√©todo com o mesmo nome
 				{
 					$found2 = false;
 					for($i=0;$i<count($defIni[$cl][$meth]);$i+=2)
@@ -2102,8 +2418,8 @@ PHP_METHOD(php_<?=$className?>, Connect)
 							$mtype = $objsArgs[$e/2][$types['o']];
 							$types['o']++;
 							$hasOos = true;
-							//incluir todas as derivaÁoes
-							// Uma classe que n„o tenha mÈtodos n„o tem ficheiro
+							//incluir todas as deriva√ßoes
+							// Uma classe que n√£o tenha m√©todos n√£o tem ficheiro
 							$needrefs = derivationsOfClass($mtype);
 							//if(isset($defIni[$mtype]['_baseFor']))
 							{
@@ -2732,11 +3048,11 @@ foreach($defEnums[0] as $enumClassName=>$classEnums)
 $dynamicCastCode = "";
 
 $old = file_get_contents("wxwidgets.cpp");
-if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^ß]+)/sm",$old,$matches))
+if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^¬ß]+)/sm",$old,$matches))
 {
 	$data = $matches[1]."\n".$entries."\n".$matches[2];
 
-	if($res =preg_match("/(.*?\/\/ cast --->)[^<]+(\/\/ <--- cast[^ß]+)/sm",$data,$matches))
+	if($res =preg_match("/(.*?\/\/ cast --->)[^<]+(\/\/ <--- cast[^¬ß]+)/sm",$data,$matches))
 	{
 		$dynamicCastCode .= "PHP_FUNCTION(php_wxDynamicCast){\n";
 			$dynamicCastCode .=	"\tzval **tmp;\n";
@@ -2777,7 +3093,8 @@ if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^ß]+)/sm",$old,$matc
 			"wxAuiToolBarItem", "wxAuiToolBarArt", "wxHtmlRenderingInfo", "wxHtmlSelection", "wxTextAttr", "wxTextAttrEx",
 			"wxRichTextRange", "wxRichTextAttr", "wxRichTextLine", "wxGridCellCoords", "wxGridCellAttr", "wxGridCellRenderer",
 			"wxGridCellWorker","wxGridCellEditor", "wxGridCellFloatEditor", "wxGridCellBoolEditor", "wxGridCellChoiceEditor", 
-			"wxGridCellNumberEditor", "wxGridCellTextEditor", "wxGridCellAttrProvider", "wxRadioBoxBase", "wxScrollHelper"))
+			"wxGridCellNumberEditor", "wxGridCellTextEditor", "wxGridCellAttrProvider", "wxRadioBoxBase", "wxScrollHelper",
+			"wxAboutDialogInfo"))
 			)
 				continue;
 
@@ -2797,7 +3114,7 @@ if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^ß]+)/sm",$old,$matc
 		$data = $matches[1]."\n".$dynamicCastCode."\n".$matches[2];
 	}
 
-	if($res =preg_match("/(.*?\/\/ classes --->)[^<]+(\/\/ <--- classes[^ß]+)/sm",$data,$matches))
+	if($res =preg_match("/(.*?\/\/ classes --->)[^<]+(\/\/ <--- classes[^¬ß]+)/sm",$data,$matches))
 	{
 		$data = $matches[1]."\n".$classes."\n".$matches[2];
 
@@ -2839,7 +3156,7 @@ foreach($defIni as $className => $classDef)
 
 $old = file_get_contents("php_wxwidgets.h");
 
-if(preg_match("/(.*?\/\/ entries --->)[^<]+(\/\/ <--- entries[^ß]+)/sm", $old, $matches))
+if(preg_match("/(.*?\/\/ entries --->)[^<]+(\/\/ <--- entries[^¬ß]+)/sm", $old, $matches))
 {
 	$output = $matches[1]."\n".$output."\n".$matches[2];
 	
