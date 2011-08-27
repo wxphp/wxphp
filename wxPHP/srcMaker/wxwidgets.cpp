@@ -409,6 +409,26 @@ zend_class_entry *php_wxWindowDestroyEvent_entry;
 int le_wxWindowDestroyEvent;
 zend_class_entry *php_wxPrintDialog_entry;
 int le_wxPrintDialog;
+zend_class_entry *php_wxIconBundle_entry;
+int le_wxIconBundle;
+zend_class_entry *php_wxAcceleratorTable_entry;
+int le_wxAcceleratorTable;
+zend_class_entry *php_wxAcceleratorEntry_entry;
+int le_wxAcceleratorEntry;
+zend_class_entry *php_wxXPMHandler_entry;
+int le_wxXPMHandler;
+zend_class_entry *php_wxCaretBase_entry;
+int le_wxCaretBase;
+zend_class_entry *php_wxCaret_entry;
+int le_wxCaret;
+zend_class_entry *php_wxWindowList_entry;
+int le_wxWindowList;
+zend_class_entry *php_wxDataObject_entry;
+int le_wxDataObject;
+zend_class_entry *php_wxLayoutConstraints_entry;
+int le_wxLayoutConstraints;
+zend_class_entry *php_wxArtProvider_entry;
+int le_wxArtProvider;
 
 // <--- entries
 
@@ -445,9 +465,30 @@ PHP_FUNCTION(php_wxExecute)
 PHP_FUNCTION(php_wxEntry)
 {
 	int argc = 1;
-	char *argv[2] = { "embed4", NULL };
+	char *argv[2] = { "wxPHP", NULL };
 	
 	RETVAL_LONG(wxEntry(argc,argv));
+}
+
+PHP_FUNCTION(php_wxAboutBox)
+{
+    zval **tmp;
+	int id_to_find;
+	wxAboutDialogInfo *property;
+	zval *objvar;
+	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, (char *)"O", &objvar, php_wxAboutDialogInfo_entry) == FAILURE) {
+		RETURN_NULL();
+	}
+	
+	if (zend_hash_find(Z_OBJPROP_P(objvar), (char *)"wxResource", sizeof("wxResource"),  (void **)&tmp) == FAILURE) 
+	{
+		return;
+	}
+	id_to_find = Z_LVAL_PP(tmp);
+	
+	property = (wxAboutDialogInfo*) zend_list_find(id_to_find, &le_wxAboutDialogInfo);
+	
+	wxAboutBox(*property);
 }
 
 
@@ -1625,6 +1666,41 @@ PHP_FUNCTION(php_wxDynamicCast){
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
+			if(!strcmp(_argStr0, "wxAcceleratorTable")){
+				object_init_ex(return_value, php_wxAcceleratorTable_entry);
+				wxAcceleratorTable* ret = wxDynamicCast(_ptrObj0, wxAcceleratorTable_php);
+				long id_to_find = zend_list_insert(ret, le_wxAcceleratorTable);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxXPMHandler")){
+				object_init_ex(return_value, php_wxXPMHandler_entry);
+				wxXPMHandler* ret = wxDynamicCast(_ptrObj0, wxXPMHandler_php);
+				long id_to_find = zend_list_insert(ret, le_wxXPMHandler);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxWindowList")){
+				object_init_ex(return_value, php_wxWindowList_entry);
+				wxWindowList* ret = wxDynamicCast(_ptrObj0, wxWindowList_php);
+				long id_to_find = zend_list_insert(ret, le_wxWindowList);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxLayoutConstraints")){
+				object_init_ex(return_value, php_wxLayoutConstraints_entry);
+				wxLayoutConstraints* ret = wxDynamicCast(_ptrObj0, wxLayoutConstraints_php);
+				long id_to_find = zend_list_insert(ret, le_wxLayoutConstraints);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxArtProvider")){
+				object_init_ex(return_value, php_wxArtProvider_entry);
+				wxArtProvider* ret = wxDynamicCast(_ptrObj0, wxArtProvider_php);
+				long id_to_find = zend_list_insert(ret, le_wxArtProvider);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
 		}
 	}
 }
@@ -1636,6 +1712,7 @@ static function_entry php_wxWidgets_functions[] = {
 	PHP_FALIAS(wxExecute, php_wxExecute, NULL)
 	PHP_FALIAS(wxInitialize, php_wxInitialize, NULL)
 	PHP_FALIAS(wxEntry, php_wxEntry, NULL)
+	PHP_FALIAS(wxAboutBox, php_wxAboutBox, NULL)
 	PHP_FALIAS(wxDynamicCast, php_wxDynamicCast, NULL)
 	{ NULL, NULL, NULL }
 };
@@ -2459,6 +2536,46 @@ le_wxWindowDestroyEvent = zend_register_list_destructors_ex(php_wxWindowDestroyE
 INIT_CLASS_ENTRY(cf, PHP_wxPrintDialog_NAME , php_wxPrintDialog_functions);
 php_wxPrintDialog_entry = zend_register_internal_class(&cf TSRMLS_CC);
 le_wxPrintDialog = zend_register_list_destructors_ex(php_wxPrintDialog_destruction_handler, NULL, le_wxPrintDialog_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxIconBundle_NAME , php_wxIconBundle_functions);
+php_wxIconBundle_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxIconBundle = zend_register_list_destructors_ex(php_wxIconBundle_destruction_handler, NULL, le_wxIconBundle_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxAcceleratorTable_NAME , php_wxAcceleratorTable_functions);
+php_wxAcceleratorTable_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxAcceleratorTable = zend_register_list_destructors_ex(php_wxAcceleratorTable_destruction_handler, NULL, le_wxAcceleratorTable_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxAcceleratorEntry_NAME , php_wxAcceleratorEntry_functions);
+php_wxAcceleratorEntry_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxAcceleratorEntry = zend_register_list_destructors_ex(php_wxAcceleratorEntry_destruction_handler, NULL, le_wxAcceleratorEntry_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxXPMHandler_NAME , php_wxXPMHandler_functions);
+php_wxXPMHandler_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxXPMHandler = zend_register_list_destructors_ex(php_wxXPMHandler_destruction_handler, NULL, le_wxXPMHandler_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxCaretBase_NAME , php_wxCaretBase_functions);
+php_wxCaretBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxCaretBase = zend_register_list_destructors_ex(php_wxCaretBase_destruction_handler, NULL, le_wxCaretBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxCaret_NAME , php_wxCaret_functions);
+php_wxCaret_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxCaret = zend_register_list_destructors_ex(php_wxCaret_destruction_handler, NULL, le_wxCaret_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxWindowList_NAME , php_wxWindowList_functions);
+php_wxWindowList_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxWindowList = zend_register_list_destructors_ex(php_wxWindowList_destruction_handler, NULL, le_wxWindowList_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxDataObject_NAME , php_wxDataObject_functions);
+php_wxDataObject_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxDataObject = zend_register_list_destructors_ex(php_wxDataObject_destruction_handler, NULL, le_wxDataObject_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxLayoutConstraints_NAME , php_wxLayoutConstraints_functions);
+php_wxLayoutConstraints_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxLayoutConstraints = zend_register_list_destructors_ex(php_wxLayoutConstraints_destruction_handler, NULL, le_wxLayoutConstraints_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxArtProvider_NAME , php_wxArtProvider_functions);
+php_wxArtProvider_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxArtProvider = zend_register_list_destructors_ex(php_wxArtProvider_destruction_handler, NULL, le_wxArtProvider_name, module_number);
 
 
 REGISTER_LONG_CONSTANT("wxFR_REPLACEDIALOG", wxFR_REPLACEDIALOG, CONST_CS | CONST_PERSISTENT);
@@ -4419,6 +4536,14 @@ REGISTER_LONG_CONSTANT("wxLB_LEFT", wxLB_LEFT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxLB_RIGHT", wxLB_RIGHT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxLB_TOP", wxLB_TOP, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxMB_DOCKABLE", wxMB_DOCKABLE, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxYES_NO", wxYES_NO, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxYES", wxYES, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxNO", wxNO, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxSPLASH_CENTRE_ON_PARENT", wxSPLASH_CENTRE_ON_PARENT, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxSPLASH_CENTRE_ON_SCREEN", wxSPLASH_CENTRE_ON_SCREEN, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxSPLASH_NO_CENTRE", wxSPLASH_NO_CENTRE, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxSPLASH_TIMEOUT", wxSPLASH_TIMEOUT, CONST_CS | CONST_PERSISTENT);
+REGISTER_LONG_CONSTANT("wxSPLASH_NO_TIMEOUT", wxSPLASH_NO_TIMEOUT, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_ACTIVATE", wxEVT_ACTIVATE, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_ACTIVATE_APP", wxEVT_ACTIVATE_APP, CONST_CS | CONST_PERSISTENT);
 REGISTER_LONG_CONSTANT("wxEVT_AUI_FIND_MANAGER", wxEVT_AUI_FIND_MANAGER, CONST_CS | CONST_PERSISTENT);
