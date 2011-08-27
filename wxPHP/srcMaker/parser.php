@@ -601,7 +601,29 @@ $defConsts = array(
 	//wxToolBar Item Kind
 	"wxITEM_CHECK"=>1,
 	"wxITEM_NORMAL"=>1,
-	"wxITEM_RADIO"=>1
+	"wxITEM_RADIO"=>1,
+	
+	//Dialog buttons
+	"wxOK"=>1,
+	"wxCANCEL"=>1,
+	"wxYES_NO"=>1,
+	"wxYES"=>1,
+	"wxNO"=>1,
+	"wxYES_DEFAULT"=>1,
+	"wxNO_DEFAULT"=>1,
+	"wxICON_EXCLAMATION"=>1,
+	"wxICON_HAND"=>1,
+	"wxICON_ERROR"=>1,
+	"wxICON_QUESTION"=>1,
+	"wxICON_INFORMATION"=>1,
+	"wxSTAY_ON_TOP"=>1,
+	
+	//Splash screen
+	"wxSPLASH_CENTRE_ON_PARENT"=>1,
+	"wxSPLASH_CENTRE_ON_SCREEN"=>1,
+	"wxSPLASH_NO_CENTRE"=>1,
+	"wxSPLASH_TIMEOUT"=>1,
+	"wxSPLASH_NO_TIMEOUT"=>1
 );
 
 //Initialize classes definitios
@@ -2185,6 +2207,13 @@ PHP_METHOD(php_<?=$className?>, Connect)
 						$defIni[$className][$methodName][$e][0] = "wxDateTime";
 						$retVals[$e/2] = "RETURN_LONG((long)ret".($e/2).".GetTicks())";
 						break;
+					case	"wxAuiPaneInfo&":
+						if($className == "wxAuiPaneInfo")
+						{
+							$defIni[$className][$methodName][$e][0] = "wxAuiPaneInfo";
+							$retVals[$e/2] =  "object_init_ex(return_value,php_wxAuiPaneInfo_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(&ret".($e/2).", le_wxAuiPaneInfo));return;";
+						}
+						break;
 					case	"wxSize":
 						$retVals[$e/2] =  "object_init_ex(return_value,php_wxSize_entry);add_property_resource(return_value, \"wxResource\", zend_list_insert(&ret".($e/2).", le_wxSize));return;";
 						break;
@@ -2279,14 +2308,14 @@ PHP_METHOD(php_<?=$className?>, Connect)
 							$callArgs[$e/2][] = "&_argStr".$types['s'];
 							$types['s']++;
 							break;
-                                                case "const wchar_t*":
-                                                        $methodArgs[$e][$i] = "wchar_t *";
-                                                        $argStr[$e/2].="s";
-                                                        $parseArgs[$e/2][] = "&_argStr".$types['s'];
-                                                        $parseArgs[$e/2][] = "&_argStr".$types['s']."_len";
-                                                        $callArgs[$e/2][] = "wxString(_argStr{$types['s']}, wxConvUTF8)";
-                                                        $types['s']++;
-                                                        break;
+						case "const wchar_t*":
+								$methodArgs[$e][$i] = "wchar_t *";
+								$argStr[$e/2].="s";
+								$parseArgs[$e/2][] = "&_argStr".$types['s'];
+								$parseArgs[$e/2][] = "&_argStr".$types['s']."_len";
+								$callArgs[$e/2][] = "wxString(_argStr{$types['s']}, wxConvUTF8)";
+								$types['s']++;
+								break;
 						case "const wxString&":
 							if(!in_array($methodName, $classDef["_pure_virtual"]))
 							{
@@ -2502,8 +2531,7 @@ PHP_METHOD(php_<?=$className?>, Connect)
 		wxMessageBox(_T("Failed method Call!\n"));
 	}
 	<? if($retType!="void"){ ?>
-	else{
-		<?
+	<?
 		if($retType=="wxString")
 			echo "return wxString(Z_STRVAL(retval),wxConvUTF8);";
 		elseif($retType=="bool")
@@ -2512,20 +2540,20 @@ PHP_METHOD(php_<?=$className?>, Connect)
 			echo "return Z_DVAL(retval);";
 		else
 		{
+			echo "void* _retObject = (void *) retval.value.lval;\n";
 			if("" . strstr($retType, "*") . "" == "")
 			{
-				echo "$retType* return_var = ($retType*) zend_object_store_get_object(&retval TSRMLS_CC);";
-				echo "return *return_var;";
+				echo "\t\t$retType* return_var = ($retType*) _retObject;\n";
+				echo "\t\treturn *return_var;\n";
 			}
 			else
 			{
-				echo "return ($retType) zend_object_store_get_object(&retval TSRMLS_CC);";
+				echo "\t\treturn ($retType) _retObject;";
 			}
 			//die("unKnown type: ".$retType);
 		}
 	?>
-	}
-	<? } ?>
+<? } ?>
 }
 <? //} else { file_put_contents("parser.log", "unKnown return type: ".$retType . " on $className::$methodName\n", FILE_APPEND); }?>
 <?				
@@ -2817,7 +2845,7 @@ PHP_METHOD(php_<?=$className?>, Connect)
 
 <?	
 	//Generate template.h (actually frame.h)
-	echo "Generating template headers...\n";
+	echo "Generating template headers...";
 
 	foreach($classList as $className)
 		$references[$className] = 1;
@@ -3070,7 +3098,8 @@ if(preg_match("/(.*?\/\/ entries --->).+?(\/\/ <--- entries[^§]+)/sm",$old,$mat
 			"wxRichTextRange", "wxRichTextAttr", "wxRichTextLine", "wxGridCellCoords", "wxGridCellAttr", "wxGridCellRenderer",
 			"wxGridCellWorker","wxGridCellEditor", "wxGridCellFloatEditor", "wxGridCellBoolEditor", "wxGridCellChoiceEditor", 
 			"wxGridCellNumberEditor", "wxGridCellTextEditor", "wxGridCellAttrProvider", "wxRadioBoxBase", "wxScrollHelper",
-			"wxAboutDialogInfo"))
+			"wxAboutDialogInfo", "wxIconBundle", "wxAcceleratorEntry", "wxCaretBase", "wxCaret", "wxDropTarget", "wxDataObject",
+			"wxDropTargetBase"))
 			)
 				continue;
 

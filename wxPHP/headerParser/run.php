@@ -216,6 +216,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 												,"Argument"	=>array()
 												,"returns"		=>$_types[$entries->item($i)->getAttribute('returns')].$_classes[$entries->item($i)->getAttribute('returns')]['name']
 												,"pure_virtual"	=> $entries->item($i)->getAttribute('pure_virtual') || $entries->item($i)->getAttribute('access')=="protected"
+												,"static" => $entries->item($i)->getAttribute('static')
 												);
 		if($entries->item($i)->getAttribute('const'))
 			$_methods[$entries->item($i)->getAttribute('id')]['const'] = true;
@@ -291,6 +292,13 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 								$ptr['_pure_virtual'] = array($_methods[$meth]['name']);
 							else
 								$ptr['_pure_virtual'][] = $_methods[$meth]['name'];
+						}
+						f($_methods[$meth]['static']==1)
+						{
+							if(!isset($ptr['_static']))
+								$ptr['_static'] = array($_methods[$meth]['name']);
+							else
+								$ptr['_static'][] = $_methods[$meth]['name'];
 						}
 						if($_methods[$meth]['const']==1)
 						{
