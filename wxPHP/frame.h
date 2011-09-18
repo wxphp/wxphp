@@ -4873,9 +4873,14 @@ class wxPrinter_php : public wxPrinter
 extern int le_wxPrinter;
 
 static function_entry php_wxPrinter_functions[] = {
+	PHP_ME(php_wxPrinterBase, GetAbort, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrinterBase, GetLastError, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPrinter, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxPrinter, Print, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPrinter, PrintDialog, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrinter, ReportError, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrinter, GetPrintDialogData, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrinter, Setup, NULL, ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 
@@ -4907,6 +4912,30 @@ static function_entry php_wxPrintout_functions[] = {
 	PHP_ME(php_wxPrintout, SetDC, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPrintout, OnPrintPage, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPrintout, IsPreview, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetPageInfo, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetPageSizeMM, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetPageSizePixels, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetPaperRectPixels, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetPPIPrinter, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetPPIScreen, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetTitle, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, HasPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, FitThisSizeToPaper, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, FitThisSizeToPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, FitThisSizeToPageMargins, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, MapScreenSizeToPaper, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, MapScreenSizeToPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, MapScreenSizeToPageMargins, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetLogicalPageRect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetLogicalPaperRect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, GetLogicalPageMarginsRect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, SetLogicalOrigin, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, OffsetLogicalOrigin, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, OnBeginDocument, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, OnEndDocument, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, OnBeginPrinting, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, OnEndPrinting, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintout, OnPreparePrinting, NULL, ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 
@@ -15368,6 +15397,367 @@ extern int le_wxArtProvider;
 static function_entry php_wxArtProvider_functions[] = {
 	PHP_ME(php_wxArtProvider, GetBitmap, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxArtProvider, GetIcon, NULL, ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxPrintPreview_entry;
+void php_wxPrintPreview_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPrintPreview_NAME "wxPrintPreview"
+#define le_wxPrintPreview_name  "native wxPrintPreview"
+
+class wxPrintPreview_php : public wxPrintPreview
+{
+	public:
+
+	wxPrintPreview_php(wxPrintout* arg0 , wxPrintout* arg1 , wxPrintData* arg2):wxPrintPreview(arg0 , arg1 , arg2){}
+
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+extern int le_wxPrintPreview;
+
+static function_entry php_wxPrintPreview_functions[] = {
+	PHP_ME(php_wxPrintPreviewBase, Print, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreviewBase, DetermineScaling, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxPrintPreview, GetCanvas, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, GetCurrentPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, GetFrame, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, GetMaxPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, GetMinPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, GetPrintout, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, GetPrintoutForPrinting, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, IsOk, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, PaintPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, RenderPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, SetCanvas, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, SetCurrentPage, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, SetFrame, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, SetPrintout, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreview, SetZoom, NULL, ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxPreviewCanvas_entry;
+void php_wxPreviewCanvas_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPreviewCanvas_NAME "wxPreviewCanvas"
+#define le_wxPreviewCanvas_name  "native wxPreviewCanvas"
+
+class wxPreviewCanvas_php : public wxPreviewCanvas
+{
+	public:
+
+	wxPreviewCanvas_php(wxPrintPreviewBase* arg0 , wxWindow* arg1 , const wxPoint& arg2 = wxDefaultPosition , const wxSize& arg3 = wxDefaultSize , long int arg4 = 0 , const wxString& arg5 = wxT("c\000\000\000a\000\000\000n\000\000\000v\000\000\000a\000\000\000s\000\000\000\000\000\000")):wxPreviewCanvas(arg0 , arg1 , arg2 , arg3 , arg4 , arg5){}
+
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+extern int le_wxPreviewCanvas;
+
+static function_entry php_wxPreviewCanvas_functions[] = {
+	PHP_ME(php_wxPreviewCanvas, OnPaint, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPreviewCanvas, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxPreviewFrame_entry;
+void php_wxPreviewFrame_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPreviewFrame_NAME "wxPreviewFrame"
+#define le_wxPreviewFrame_name  "native wxPreviewFrame"
+
+class wxPreviewFrame_php : public wxPreviewFrame
+{
+	public:
+
+	wxPreviewFrame_php(wxPrintPreviewBase* arg0 , wxWindow* arg1 , const wxString& arg2 = wxT("P\000\000\000r\000\000\000i\000\000\000n\000\000\000t\000\000\000 \000\000\000P\000\000\000r\000\000\000e\000\000\000v\000\000\000i\000\000\000e\000\000\000w\000\000\000\000\000\000") , const wxPoint& arg3 = wxDefaultPosition , const wxSize& arg4 = wxDefaultSize , long int arg5 = 541072968 , const wxString& arg6 = wxFrameNameStr):wxPreviewFrame(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6){}
+
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+extern int le_wxPreviewFrame;
+
+static function_entry php_wxPreviewFrame_functions[] = {
+	PHP_ME(php_wxPreviewFrame, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxPreviewFrame, CreateControlBar, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPreviewFrame, CreateCanvas, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPreviewFrame, Initialize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPreviewFrame, OnCloseWindow, NULL, ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxPreviewControlBar_entry;
+void php_wxPreviewControlBar_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPreviewControlBar_NAME "wxPreviewControlBar"
+#define le_wxPreviewControlBar_name  "native wxPreviewControlBar"
+
+class wxPreviewControlBar_php : public wxPreviewControlBar
+{
+	public:
+
+	wxPreviewControlBar_php(wxPrintPreviewBase* arg0 , long int arg1 , wxWindow* arg2 , const wxPoint& arg3 = wxDefaultPosition , const wxSize& arg4 = wxDefaultSize , long int arg5 = 524288 , const wxString& arg6 = wxT("p\000\000\000a\000\000\000n\000\000\000e\000\000\000l\000\000\000\000\000\000")):wxPreviewControlBar(arg0 , arg1 , arg2 , arg3 , arg4 , arg5 , arg6){}
+
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+extern int le_wxPreviewControlBar;
+
+static function_entry php_wxPreviewControlBar_functions[] = {
+	PHP_ME(php_wxPreviewControlBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxPreviewControlBar, GetPrintPreview, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPreviewControlBar, CreateButtons, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPreviewControlBar, GetZoomControl, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPreviewControlBar, SetZoomControl, NULL, ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxPrintPreviewBase_entry;
+void php_wxPrintPreviewBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPrintPreviewBase_NAME "wxPrintPreviewBase"
+#define le_wxPrintPreviewBase_name  "native wxPrintPreviewBase"
+
+class wxPrintPreviewBase_php : public wxPrintPreviewBase
+{
+	public:
+
+	wxPrintPreviewBase_php(wxPrintout* arg0 , wxPrintout* arg1 , wxPrintData* arg2):wxPrintPreviewBase(arg0 , arg1 , arg2){}
+
+	virtual bool Print(bool arg0) ;
+	virtual void DetermineScaling() ;
+
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+extern int le_wxPrintPreviewBase;
+
+static function_entry php_wxPrintPreviewBase_functions[] = {
+	PHP_ME(php_wxPrintPreviewBase, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxPrintPreviewBase, Print, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrintPreviewBase, DetermineScaling, NULL, ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxPrinterBase_entry;
+void php_wxPrinterBase_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxPrinterBase_NAME "wxPrinterBase"
+#define le_wxPrinterBase_name  "native wxPrinterBase"
+
+class wxPrinterBase_php : public wxPrinterBase
+{
+	public:
+
+
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+extern int le_wxPrinterBase;
+
+static function_entry php_wxPrinterBase_functions[] = {
+	PHP_ME(php_wxPrinterBase, GetAbort, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPrinterBase, GetLastError, NULL, ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxTaskBarIconEvent_entry;
+void php_wxTaskBarIconEvent_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxTaskBarIconEvent_NAME "wxTaskBarIconEvent"
+#define le_wxTaskBarIconEvent_name  "native wxTaskBarIconEvent"
+
+class wxTaskBarIconEvent_php : public wxTaskBarIconEvent
+{
+	public:
+
+	wxTaskBarIconEvent_php(const wxTaskBarIconEvent& arg0):wxTaskBarIconEvent(arg0){}
+	wxTaskBarIconEvent_php(int arg0 , wxTaskBarIcon* arg1):wxTaskBarIconEvent(arg0 , arg1){}
+
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+extern int le_wxTaskBarIconEvent;
+
+static function_entry php_wxTaskBarIconEvent_functions[] = {
+	PHP_ME(php_wxEvent, GetId, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, SetEventType, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetEventType, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetEventObject, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, SetEventObject, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetTimestamp, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, SetTimestamp, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, SetId, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, Skip, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, GetSkipped, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, IsCommandEvent, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, ShouldPropagate, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, StopPropagation, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, ResumePropagation, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxEvent, Clone, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxTaskBarIconEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxWizardPageSimple_entry;
+void php_wxWizardPageSimple_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxWizardPageSimple_NAME "wxWizardPageSimple"
+#define le_wxWizardPageSimple_name  "native wxWizardPageSimple"
+
+class wxWizardPageSimple_php : public wxWizardPageSimple
+{
+	public:
+
+	wxWizardPageSimple_php(wxWizard* arg0 , wxWizardPage* arg1 = 0u , wxWizardPage* arg2 = 0u , const wxBitmap& arg3 = wxNullBitmap , const wchar_t* arg4 = 0l):wxWizardPageSimple(arg0 , arg1 , arg2 , arg3 , arg4){}
+
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+};
+
+extern int le_wxWizardPageSimple;
+
+static function_entry php_wxWizardPageSimple_functions[] = {
+	PHP_ME(php_wxEvtHandler, Connect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, SetSizer, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetSizer, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Layout, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Fit, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, SetWindowStyle, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, PopupMenu, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, IsShown, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, IsEnabled, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, IsShownOnScreen, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, UpdateWindowUI, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, FindWindow, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, SetMinSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, SetMaxSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, SetSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Centre, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, SetSizeHints, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetId, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, CacheBestSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, CaptureMouse, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, CentreOnParent, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, ClientToScreen, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, ClientToWindowSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Close, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, ConvertDialogToPixels, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, ConvertPixelsToDialog, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, DestroyChildren, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Disable, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, DoGetBestSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, DoUpdateWindowUI, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, FitInside, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Freeze, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetAcceleratorTable, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetBackgroundStyle, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetClientSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetBestSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetCapture, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetCaret, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetChildren, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetConstraints, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetContainingSizer, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetCursor, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetDefaultAttributes, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetEventHandler, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetExtraStyle, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetFont, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetForegroundColour, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetGrandParent, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetHelpText, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetMaxSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetMinSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetName, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetNextSibling, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetParent, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetPosition, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetPrevSibling, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetRect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetScreenPosition, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetScreenRect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetScrollPos, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetSize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, GetTextExtent, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, Hide, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, IsExposed, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, IsTopLevel, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, LineDown, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, LineUp, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, MakeModal, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, PageDown, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, PageUp, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, PopEventHandler, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, PushEventHandler, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, RefreshRect, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, ReleaseMouse, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindowBase, RemoveEventHandler, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Show, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Destroy, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Raise, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Lower, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Enable, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsRetained, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Reparent, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, WarpPointer, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Update, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, ClearBackground, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetForegroundColour, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetCursor, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetFont, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharHeight, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetCharWidth, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollbar, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetScrollPos, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollThumb, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetScrollRange, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, AddChild, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, RemoveChild, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetHandle, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, Refresh, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, IsFrozen, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetWindowStyleFlag, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, GetLabel, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWindow, SetLabel, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPanel, InitDialog, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPanel, SetFocus, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPanel, SetFocusIgnoringChildren, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxPanel, Create, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWizardPage, GetBitmap, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWizardPageSimple, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxWizardPageSimple, SetPrev, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWizardPageSimple, SetNext, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWizardPageSimple, Chain, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWizardPageSimple, GetNext, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxWizardPageSimple, GetPrev, NULL, ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 
