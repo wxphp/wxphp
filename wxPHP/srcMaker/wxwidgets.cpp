@@ -429,6 +429,22 @@ zend_class_entry *php_wxLayoutConstraints_entry;
 int le_wxLayoutConstraints;
 zend_class_entry *php_wxArtProvider_entry;
 int le_wxArtProvider;
+zend_class_entry *php_wxPrintPreview_entry;
+int le_wxPrintPreview;
+zend_class_entry *php_wxPreviewCanvas_entry;
+int le_wxPreviewCanvas;
+zend_class_entry *php_wxPreviewFrame_entry;
+int le_wxPreviewFrame;
+zend_class_entry *php_wxPreviewControlBar_entry;
+int le_wxPreviewControlBar;
+zend_class_entry *php_wxPrintPreviewBase_entry;
+int le_wxPrintPreviewBase;
+zend_class_entry *php_wxPrinterBase_entry;
+int le_wxPrinterBase;
+zend_class_entry *php_wxTaskBarIconEvent_entry;
+int le_wxTaskBarIconEvent;
+zend_class_entry *php_wxWizardPageSimple_entry;
+int le_wxWizardPageSimple;
 
 // <--- entries
 
@@ -1701,6 +1717,62 @@ PHP_FUNCTION(php_wxDynamicCast){
 				add_property_resource(return_value, _wxResource, id_to_find);
 				return;
 			}
+			if(!strcmp(_argStr0, "wxPrintPreview")){
+				object_init_ex(return_value, php_wxPrintPreview_entry);
+				wxPrintPreview* ret = wxDynamicCast(_ptrObj0, wxPrintPreview_php);
+				long id_to_find = zend_list_insert(ret, le_wxPrintPreview);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxPreviewCanvas")){
+				object_init_ex(return_value, php_wxPreviewCanvas_entry);
+				wxPreviewCanvas* ret = wxDynamicCast(_ptrObj0, wxPreviewCanvas_php);
+				long id_to_find = zend_list_insert(ret, le_wxPreviewCanvas);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxPreviewFrame")){
+				object_init_ex(return_value, php_wxPreviewFrame_entry);
+				wxPreviewFrame* ret = wxDynamicCast(_ptrObj0, wxPreviewFrame_php);
+				long id_to_find = zend_list_insert(ret, le_wxPreviewFrame);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxPreviewControlBar")){
+				object_init_ex(return_value, php_wxPreviewControlBar_entry);
+				wxPreviewControlBar* ret = wxDynamicCast(_ptrObj0, wxPreviewControlBar_php);
+				long id_to_find = zend_list_insert(ret, le_wxPreviewControlBar);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxPrintPreviewBase")){
+				object_init_ex(return_value, php_wxPrintPreviewBase_entry);
+				wxPrintPreviewBase* ret = wxDynamicCast(_ptrObj0, wxPrintPreviewBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxPrintPreviewBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxPrinterBase")){
+				object_init_ex(return_value, php_wxPrinterBase_entry);
+				wxPrinterBase* ret = wxDynamicCast(_ptrObj0, wxPrinterBase_php);
+				long id_to_find = zend_list_insert(ret, le_wxPrinterBase);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxTaskBarIconEvent")){
+				object_init_ex(return_value, php_wxTaskBarIconEvent_entry);
+				wxTaskBarIconEvent* ret = wxDynamicCast(_ptrObj0, wxTaskBarIconEvent_php);
+				long id_to_find = zend_list_insert(ret, le_wxTaskBarIconEvent);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
+			if(!strcmp(_argStr0, "wxWizardPageSimple")){
+				object_init_ex(return_value, php_wxWizardPageSimple_entry);
+				wxWizardPageSimple* ret = wxDynamicCast(_ptrObj0, wxWizardPageSimple_php);
+				long id_to_find = zend_list_insert(ret, le_wxWizardPageSimple);
+				add_property_resource(return_value, _wxResource, id_to_find);
+				return;
+			}
 		}
 	}
 }
@@ -2576,6 +2648,38 @@ le_wxLayoutConstraints = zend_register_list_destructors_ex(php_wxLayoutConstrain
 INIT_CLASS_ENTRY(cf, PHP_wxArtProvider_NAME , php_wxArtProvider_functions);
 php_wxArtProvider_entry = zend_register_internal_class(&cf TSRMLS_CC);
 le_wxArtProvider = zend_register_list_destructors_ex(php_wxArtProvider_destruction_handler, NULL, le_wxArtProvider_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPrintPreview_NAME , php_wxPrintPreview_functions);
+php_wxPrintPreview_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPrintPreview = zend_register_list_destructors_ex(php_wxPrintPreview_destruction_handler, NULL, le_wxPrintPreview_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPreviewCanvas_NAME , php_wxPreviewCanvas_functions);
+php_wxPreviewCanvas_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPreviewCanvas = zend_register_list_destructors_ex(php_wxPreviewCanvas_destruction_handler, NULL, le_wxPreviewCanvas_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPreviewFrame_NAME , php_wxPreviewFrame_functions);
+php_wxPreviewFrame_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPreviewFrame = zend_register_list_destructors_ex(php_wxPreviewFrame_destruction_handler, NULL, le_wxPreviewFrame_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPreviewControlBar_NAME , php_wxPreviewControlBar_functions);
+php_wxPreviewControlBar_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPreviewControlBar = zend_register_list_destructors_ex(php_wxPreviewControlBar_destruction_handler, NULL, le_wxPreviewControlBar_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPrintPreviewBase_NAME , php_wxPrintPreviewBase_functions);
+php_wxPrintPreviewBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPrintPreviewBase = zend_register_list_destructors_ex(php_wxPrintPreviewBase_destruction_handler, NULL, le_wxPrintPreviewBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxPrinterBase_NAME , php_wxPrinterBase_functions);
+php_wxPrinterBase_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxPrinterBase = zend_register_list_destructors_ex(php_wxPrinterBase_destruction_handler, NULL, le_wxPrinterBase_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxTaskBarIconEvent_NAME , php_wxTaskBarIconEvent_functions);
+php_wxTaskBarIconEvent_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxTaskBarIconEvent = zend_register_list_destructors_ex(php_wxTaskBarIconEvent_destruction_handler, NULL, le_wxTaskBarIconEvent_name, module_number);
+
+INIT_CLASS_ENTRY(cf, PHP_wxWizardPageSimple_NAME , php_wxWizardPageSimple_functions);
+php_wxWizardPageSimple_entry = zend_register_internal_class(&cf TSRMLS_CC);
+le_wxWizardPageSimple = zend_register_list_destructors_ex(php_wxWizardPageSimple_destruction_handler, NULL, le_wxWizardPageSimple_name, module_number);
 
 
 REGISTER_LONG_CONSTANT("wxFR_REPLACEDIALOG", wxFR_REPLACEDIALOG, CONST_CS | CONST_PERSISTENT);
