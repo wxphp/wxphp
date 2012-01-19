@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__archive" kind="group">
+    <compoundname>group_class_archive</compoundname>
+    <title>Archive support</title>
+    <innerclass refid="classwx_archive_input_stream" prot="public">wxArchiveInputStream</innerclass>
+    <innerclass refid="classwx_archive_output_stream" prot="public">wxArchiveOutputStream</innerclass>
+    <innerclass refid="classwx_archive_entry" prot="public">wxArchiveEntry</innerclass>
+    <innerclass refid="classwx_archive_class_factory" prot="public">wxArchiveClassFactory</innerclass>
+    <innerclass refid="classwx_archive_notifier" prot="public">wxArchiveNotifier</innerclass>
+    <innerclass refid="classwx_archive_iterator" prot="public">wxArchiveIterator</innerclass>
+    <innerclass refid="classwx_tar_input_stream" prot="public">wxTarInputStream</innerclass>
+    <innerclass refid="classwx_tar_class_factory" prot="public">wxTarClassFactory</innerclass>
+    <innerclass refid="classwx_tar_entry" prot="public">wxTarEntry</innerclass>
+    <innerclass refid="classwx_zip_notifier" prot="public">wxZipNotifier</innerclass>
+    <innerclass refid="classwx_zip_entry" prot="public">wxZipEntry</innerclass>
+    <innerclass refid="classwx_zip_input_stream" prot="public">wxZipInputStream</innerclass>
+    <innerclass refid="classwx_zip_class_factory" prot="public">wxZipClassFactory</innerclass>
+    <innerclass refid="classwx_zip_output_stream" prot="public">wxZipOutputStream</innerclass>
+    <innerclass refid="classwx_zlib_output_stream" prot="public">wxZlibOutputStream</innerclass>
+    <innerclass refid="classwx_zlib_input_stream" prot="public">wxZlibInputStream</innerclass>
+    <briefdescription>
+<para>Classes for managing (eventually compressed) archives. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

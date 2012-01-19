@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structwx_splitter_render_params" kind="struct" prot="public">
+    <compoundname>wxSplitterRenderParams</compoundname>
+    <includes local="no">wx/renderer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwx_splitter_render_params_1aa2944fb5e98af468198dfe5046c825b2" prot="public" static="no" mutable="no">
+        <type>const <ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>const wxCoord wxSplitterRenderParams::border</definition>
+        <argsstring></argsstring>
+        <name>border</name>
+        <briefdescription>
+<para>The width of the border drawn by the splitter inside it, may be 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_splitter_render_params_1a908fbc631c9c14219b6e813e1dca8e50" prot="public" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool wxSplitterRenderParams::isHotSensitive</definition>
+        <argsstring></argsstring>
+        <name>isHotSensitive</name>
+        <briefdescription>
+<para>true if the sash changes appearance when the mouse passes over it, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_splitter_render_params_1af114db29601f512be4b537476be0d68a" prot="public" static="no" mutable="no">
+        <type>const <ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>const wxCoord wxSplitterRenderParams::widthSash</definition>
+        <argsstring></argsstring>
+        <name>widthSash</name>
+        <briefdescription>
+<para>The width of the splitter sash. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="104" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structwx_splitter_render_params_1a4c414f73d747660e97fd458001c46eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSplitterRenderParams::wxSplitterRenderParams</definition>
+        <argsstring>(wxCoord widthSash_, wxCoord border_, bool isSens_)</argsstring>
+        <name>wxSplitterRenderParams</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>widthSash_</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>border_</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isSens_</declname>
+        </param>
+        <briefdescription>
+<para>The only way to initialize this struct is by using this ctor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is just a simple <computeroutput>struct</computeroutput> used as a return value of <ref refid="classwx_renderer_native_1a4c5673f91bfd18792710ca133ca2e3f8" kindref="member">wxRendererNative::GetSplitterParams()</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>It doesn&apos;t have any methods and all of its fields are constant, so they can only be examined but not modified.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="83" bodyend="105"/>
+    <listofallmembers>
+      <member refid="structwx_splitter_render_params_1aa2944fb5e98af468198dfe5046c825b2" prot="public" virt="non-virtual"><scope>wxSplitterRenderParams</scope><name>border</name></member>
+      <member refid="structwx_splitter_render_params_1a908fbc631c9c14219b6e813e1dca8e50" prot="public" virt="non-virtual"><scope>wxSplitterRenderParams</scope><name>isHotSensitive</name></member>
+      <member refid="structwx_splitter_render_params_1af114db29601f512be4b537476be0d68a" prot="public" virt="non-virtual"><scope>wxSplitterRenderParams</scope><name>widthSash</name></member>
+      <member refid="structwx_splitter_render_params_1a4c414f73d747660e97fd458001c46eaf" prot="public" virt="non-virtual"><scope>wxSplitterRenderParams</scope><name>wxSplitterRenderParams</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

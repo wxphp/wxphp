@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="tipdlg_8h" kind="file">
+    <compoundname>tipdlg.h</compoundname>
+    <innerclass refid="classwx_tip_provider" prot="public">wxTipProvider</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga9cc492bddff104d3afceca94ae945f38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_tip_provider" kindref="compound">wxTipProvider</ref> *</type>
+        <definition>wxTipProvider* wxCreateFileTipProvider</definition>
+        <argsstring>(const wxString &amp;filename, size_t currentTip)</argsstring>
+        <name>wxCreateFileTipProvider</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>currentTip</declname>
+        </param>
+        <briefdescription>
+<para>This function creates a <ref refid="classwx_tip_provider" kindref="compound">wxTipProvider</ref> which may be used with <ref refid="group__group__funcmacro__dialog_1ga71723a35f5e98349f5a79d7a025dac07" kindref="member">wxShowTip()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file containing the tips, one per line. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>currentTip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the first tip to show. Normally this index is remembered between the 2 program runs.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="overview__tips" kindref="compound">wxTipProvider Overview</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga71723a35f5e98349f5a79d7a025dac07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxShowTip</definition>
+        <argsstring>(wxWindow *parent, wxTipProvider *tipProvider, bool showAtStartup=true)</argsstring>
+        <name>wxShowTip</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_tip_provider" kindref="compound">wxTipProvider</ref> *</type>
+          <declname>tipProvider</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>showAtStartup</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This function shows a &quot;startup tip&quot; to the user. </para>        </briefdescription>
+        <detaileddescription>
+<para>The return value is the state of the &quot;Show tips at startup&quot; checkbox.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parent window for the modal dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tipProvider</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object which is used to get the text of the tips. It may be created with the <ref refid="group__group__funcmacro__dialog_1ga9cc492bddff104d3afceca94ae945f38" kindref="member">wxCreateFileTipProvider()</ref> function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>showAtStartup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should be true if startup tips are shown, false otherwise. This is used as the initial value for &quot;Show tips at startup&quot; checkbox which is shown in the tips dialog.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="overview__tips" kindref="compound">wxTipProvider Overview</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/tipdlg.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h" line="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tipdlg.h"/>
+  </compounddef>
+</doxygen>

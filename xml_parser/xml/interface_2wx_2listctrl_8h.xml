@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2listctrl_8h" kind="file">
+    <compoundname>listctrl.h</compoundname>
+    <innerclass refid="classwx_list_ctrl" prot="public">wxListCtrl</innerclass>
+    <innerclass refid="classwx_list_event" prot="public">wxListEvent</innerclass>
+    <innerclass refid="classwx_list_item_attr" prot="public">wxListItemAttr</innerclass>
+    <innerclass refid="classwx_list_view" prot="public">wxListView</innerclass>
+    <innerclass refid="classwx_list_item" prot="public">wxListItem</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="interface_2wx_2listctrl_8h_1afddccbb0d7cf18f9b205f00efc5738d0" prot="public" static="no">
+        <name>wxListColumnFormat</name>
+        <enumvalue id="interface_2wx_2listctrl_8h_1afddccbb0d7cf18f9b205f00efc5738d0a53ef6990b28b4ef0b18f06da3f8c630d" prot="public">
+          <name>wxLIST_FORMAT_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1afddccbb0d7cf18f9b205f00efc5738d0a25b8e85c2e021ebcc800c087bc82da95" prot="public">
+          <name>wxLIST_FORMAT_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1afddccbb0d7cf18f9b205f00efc5738d0abf6de1e0cbeaa15669fc82569379532b" prot="public">
+          <name>wxLIST_FORMAT_CENTRE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2listctrl_8h_1afddccbb0d7cf18f9b205f00efc5738d0a697d0acd2fb537c1e620e6281bced99d" prot="public">
+          <name>wxLIST_FORMAT_CENTER</name>
+          <initializer> wxLIST_FORMAT_CENTRE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Column format (MSW only except wxLIST_FORMAT_LEFT). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1371" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="1370" bodyend="1376"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h"/>
+  </compounddef>
+</doxygen>

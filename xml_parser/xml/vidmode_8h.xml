@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="vidmode_8h" kind="file">
+    <compoundname>vidmode.h</compoundname>
+    <innerclass refid="structwx_video_mode" prot="public">wxVideoMode</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="vidmode_8h_1a74100ed513b4a32487b0716a9e20642b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structwx_video_mode" kindref="compound">wxVideoMode</ref></type>
+        <definition>const wxVideoMode wxDefaultVideoMode</definition>
+        <argsstring></argsstring>
+        <name>wxDefaultVideoMode</name>
+        <briefdescription>
+<para>A global <ref refid="structwx_video_mode" kindref="compound">wxVideoMode</ref> instance used by <ref refid="classwx_display" kindref="compound">wxDisplay</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vidmode.h" line="89" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vidmode.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vidmode.h"/>
+  </compounddef>
+</doxygen>

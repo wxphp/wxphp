@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="richtooltip_8h" kind="file">
+    <compoundname>richtooltip.h</compoundname>
+    <innerclass refid="classwx_rich_tool_tip" prot="public">wxRichToolTip</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6" prot="public" static="no">
+        <name>wxTipKind</name>
+        <enumvalue id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6ad4ff3b9c6f49828d470cec9442155c7d" prot="public">
+          <name>wxTipKind_None</name>
+          <briefdescription>
+<para>Don&apos;t show any tip, the tooltip will be (roughly) rectangular. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6a52fcb843ab8e008ae966553d217f928f" prot="public">
+          <name>wxTipKind_TopLeft</name>
+          <briefdescription>
+<para>Show a right triangle tip in the top left corner of the tooltip. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6aba153599d27ecda262d77eabd5eb388c" prot="public">
+          <name>wxTipKind_Top</name>
+          <briefdescription>
+<para>Show an equilateral triangle tip in the middle of the tooltip top side. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6a4597f9a849a832297c8f870b38eb577b" prot="public">
+          <name>wxTipKind_TopRight</name>
+          <briefdescription>
+<para>Show a right triangle tip in the top right corner of the tooltip. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6a37862f5fa769293de4fa9b1392b94871" prot="public">
+          <name>wxTipKind_BottomLeft</name>
+          <briefdescription>
+<para>Show a right triangle tip in the bottom left corner of the tooltip. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6a3ff5515f0c4f0a54f0a725b06ea7c1f2" prot="public">
+          <name>wxTipKind_Bottom</name>
+          <briefdescription>
+<para>Show an equilateral triangle tip in the middle of the tooltip bottom side. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6a6118178820612c8ef40048993ed241f1" prot="public">
+          <name>wxTipKind_BottomRight</name>
+          <briefdescription>
+<para>Show a right triangle tip in the bottom right corner of the tooltip. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtooltip_8h_1a8a5ba062634414b8e1c5432469ec26e6aef5ec0820464f293c7cbd3a19b9ee22b" prot="public">
+          <name>wxTipKind_Auto</name>
+          <briefdescription>
+<para>Choose the appropriate tip shape and position automatically. </para>          </briefdescription>
+          <detaileddescription>
+<para>This is the default and shouldn&apos;t normally need to be changed.</para><para>Notice that currently wxTipKind_Top or wxTipKind_Bottom are used under Mac while one of the other four values is selected for the other platforms. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Support tip kinds for <ref refid="classwx_rich_tool_tip" kindref="compound">wxRichToolTip</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This enum describes the kind of the tip shown which combines both the tip position and appearance because the two are related (when the tip is positioned asymmetrically, a right handed triangle is used but an equilateral one when it&apos;s in the middle of a side).</para><para>Automatic selects the tip appearance best suited for the current platform and the position best suited for the window the tooltip is shown for, i.e. chosen in such a way that the tooltip is always fully on screen.</para><para>Other values describe the position of the tooltip itself, not the window it relates to. E.g. wxTipKind_Top places the tip on the top of the tooltip and so the tooltip itself is located beneath its associated window. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" bodystart="27" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h"/>
+  </compounddef>
+</doxygen>

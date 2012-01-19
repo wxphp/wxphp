@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_image_1_1_r_g_b_value" kind="class" prot="public">
+    <compoundname>wxImage::RGBValue</compoundname>
+    <includes local="no">wx/image.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classwx_image_1_1_r_g_b_value_1a75ed407f2ef98e6a958eedbbfdea787e" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char wxImage::RGBValue::red</definition>
+        <argsstring></argsstring>
+        <name>red</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="462" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_image_1_1_r_g_b_value_1a090b4e2f20b23caef9c169dfd740c203" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char wxImage::RGBValue::green</definition>
+        <argsstring></argsstring>
+        <name>green</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="463" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_image_1_1_r_g_b_value_1a67bc90370335d908363f74f2dc073386" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char wxImage::RGBValue::blue</definition>
+        <argsstring></argsstring>
+        <name>blue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="464" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="464" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_image_1_1_r_g_b_value_1a616d240d06426f78693e2c94cc658a73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxImage::RGBValue::RGBValue</definition>
+        <argsstring>(unsigned char r=0, unsigned char g=0, unsigned char b=0)</argsstring>
+        <name>RGBValue</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>r</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>g</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>b</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for <ref refid="classwx_image_1_1_r_g_b_value" kindref="compound">RGBValue</ref>, an object that contains values for red, green and blue which represent the value of a color. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is used by <ref refid="classwx_image_1aa72cf0a75c1e517f69787e1984717017" kindref="member">wxImage::HSVtoRGB</ref> and <ref refid="classwx_image_1a28041e34c4dccaf9cba3fff358121b83" kindref="member">wxImage::RGBtoHSV</ref>, which convert between HSV color space and RGB color space. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="460"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A simple class which stores red, green and blue values as 8 bit unsigned integers in the range of 0-255. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="451" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="450" bodyend="465"/>
+    <listofallmembers>
+      <member refid="classwx_image_1_1_r_g_b_value_1a67bc90370335d908363f74f2dc073386" prot="public" virt="non-virtual"><scope>wxImage::RGBValue</scope><name>blue</name></member>
+      <member refid="classwx_image_1_1_r_g_b_value_1a090b4e2f20b23caef9c169dfd740c203" prot="public" virt="non-virtual"><scope>wxImage::RGBValue</scope><name>green</name></member>
+      <member refid="classwx_image_1_1_r_g_b_value_1a75ed407f2ef98e6a958eedbbfdea787e" prot="public" virt="non-virtual"><scope>wxImage::RGBValue</scope><name>red</name></member>
+      <member refid="classwx_image_1_1_r_g_b_value_1a616d240d06426f78693e2c94cc658a73" prot="public" virt="non-virtual"><scope>wxImage::RGBValue</scope><name>RGBValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

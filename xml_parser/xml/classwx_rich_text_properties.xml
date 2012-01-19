@@ -1,0 +1,565 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_rich_text_properties" kind="class" prot="public">
+    <compoundname>wxRichTextProperties</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/richtext/richtextbuffer.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classwx_rich_text_properties_1abce9279c320ab74412b22000d97ca456" prot="protected" static="no" mutable="no">
+        <type>wxRichTextVariantArray</type>
+        <definition>wxRichTextVariantArray wxRichTextProperties::m_properties</definition>
+        <argsstring></argsstring>
+        <name>m_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1479" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1479" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_rich_text_properties_1ad23714a5dfe06fc739d0ddff747117c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>wxRichTextProperties::wxRichTextProperties</definition>
+        <argsstring>()</argsstring>
+        <name>wxRichTextProperties</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1346" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1346" bodyend="1346"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1aad4dd8eec22687a8beab7cd4c54bd53f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>wxRichTextProperties::wxRichTextProperties</definition>
+        <argsstring>(const wxRichTextProperties &amp;props)</argsstring>
+        <name>wxRichTextProperties</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_properties" kindref="compound">wxRichTextProperties</ref> &amp;</type>
+          <declname>props</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1351" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1351" bodyend="1351"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a5d13463ff112d23e7ad3a1a682d0ae5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::operator=</definition>
+        <argsstring>(const wxRichTextProperties &amp;props)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_properties" kindref="compound">wxRichTextProperties</ref> &amp;</type>
+          <declname>props</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1356" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1356" bodyend="1356"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a8bce8b91c90e13bdd88db16251b3b918" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextProperties::operator==</definition>
+        <argsstring>(const wxRichTextProperties &amp;props) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_properties" kindref="compound">wxRichTextProperties</ref> &amp;</type>
+          <declname>props</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1361"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a29d0231454654aed178b854ce21e235b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::Copy</definition>
+        <argsstring>(const wxRichTextProperties &amp;props)</argsstring>
+        <name>Copy</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_properties" kindref="compound">wxRichTextProperties</ref> &amp;</type>
+          <declname>props</declname>
+        </param>
+        <briefdescription>
+<para>Copies from <emphasis>props</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1366" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1366" bodyend="1366"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a350ec5072200910b461b79553bab1724" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+        <definition>const wxVariant&amp; wxRichTextProperties::operator[]</definition>
+        <argsstring>(size_t idx) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Returns the variant at the given index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1371" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1371" bodyend="1371"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a651561f5c985a2825dc2d5974168ea74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+        <definition>wxVariant&amp; wxRichTextProperties::operator[]</definition>
+        <argsstring>(size_t idx)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Returns the variant at the given index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1376" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1376" bodyend="1376"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a6991d5010188a4f9c86ffeb5703d3352" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Clears the properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1381" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1381" bodyend="1381"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1af0e1dde13861de572e9e4cb395d99169" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const wxRichTextVariantArray &amp;</type>
+        <definition>const wxRichTextVariantArray&amp; wxRichTextProperties::GetProperties</definition>
+        <argsstring>() const </argsstring>
+        <name>GetProperties</name>
+        <briefdescription>
+<para>Returns the array of variants implementing the properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1386" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1386" bodyend="1386"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a8fa5cec738b7e139c757013d30e72ac3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>wxRichTextVariantArray &amp;</type>
+        <definition>wxRichTextVariantArray&amp; wxRichTextProperties::GetProperties</definition>
+        <argsstring>()</argsstring>
+        <name>GetProperties</name>
+        <briefdescription>
+<para>Returns the array of variants implementing the properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1391" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1391" bodyend="1391"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1afc781ad20c3a15b70adac8e70e5fe94f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::SetProperties</definition>
+        <argsstring>(const wxRichTextVariantArray &amp;props)</argsstring>
+        <name>SetProperties</name>
+        <param>
+          <type>const wxRichTextVariantArray &amp;</type>
+          <declname>props</declname>
+        </param>
+        <briefdescription>
+<para>Sets the array of variants. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1396" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1396" bodyend="1396"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1aaa3ec0bf4c962a695280450952b718f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
+        <definition>wxArrayString wxRichTextProperties::GetPropertyNames</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPropertyNames</name>
+        <briefdescription>
+<para>Returns all the property names. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1401"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1afca0336b53e46c734cb7dd22befc4c49" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxRichTextProperties::GetCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCount</name>
+        <briefdescription>
+<para>Returns a count of the properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1406" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1406" bodyend="1406"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a25f1f9aa1b12616280a6c4b77f46bd1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextProperties::HasProperty</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>HasProperty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given property is found. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1411" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1411" bodyend="1411"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1ab589faf2d8b8bbd7f5d3400bbc0fa48f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxRichTextProperties::Find</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>Find</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Finds the given property. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1416"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a6f32371986f1127442adf2af387e4098" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+        <definition>const wxVariant&amp; wxRichTextProperties::GetProperty</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>GetProperty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Gets the property variant by name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1421"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1ae5a76714975fb98d6597eeb7f3e88a3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> *</type>
+        <definition>wxVariant* wxRichTextProperties::FindOrCreateProperty</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>FindOrCreateProperty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Finds or creates a property with the given name, returning a pointer to the variant. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1426"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a44124f09f3ddca704aa37488018a65a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxRichTextProperties::GetPropertyString</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>GetPropertyString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of the named property as a string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1431"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a2a09a0e7fe611c01136515ef5e55a439" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxRichTextProperties::GetPropertyLong</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>GetPropertyLong</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of the named property as a long integer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1436"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a10f3b9a579f7655cd9356d3e9a142d4b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextProperties::GetPropertyBool</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>GetPropertyBool</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of the named property as a boolean. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1441"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1af4a36f4171f56922e28c30540a3c45cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxRichTextProperties::GetPropertyDouble</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>GetPropertyDouble</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of the named property as a double. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1446"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1acb8374d9dc04aa8eca6b1a2b85788665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::SetProperty</definition>
+        <argsstring>(const wxVariant &amp;variant)</argsstring>
+        <name>SetProperty</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>variant</declname>
+        </param>
+        <briefdescription>
+<para>Sets the property by passing a variant which contains a name and value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1451"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1adc6eca9550cde8bc8574aaa84d596df1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::SetProperty</definition>
+        <argsstring>(const wxString &amp;name, const wxVariant &amp;variant)</argsstring>
+        <name>SetProperty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>variant</declname>
+        </param>
+        <briefdescription>
+<para>Sets a property by name and variant. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1456"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1acf2c47e6321dc166961301bc0acfa2fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::SetProperty</definition>
+        <argsstring>(const wxString &amp;name, const wxString &amp;value)</argsstring>
+        <name>SetProperty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets a property by name and string value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1461"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a337968aee725c8a02adc33c8f04536cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::SetProperty</definition>
+        <argsstring>(const wxString &amp;name, long value)</argsstring>
+        <name>SetProperty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets property by name and long integer value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1466"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1a722b740b2869d42a67d6100f0f6a5ae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::SetProperty</definition>
+        <argsstring>(const wxString &amp;name, double value)</argsstring>
+        <name>SetProperty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets property by name and double value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1471"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_properties_1ac34c33c43b3475c48aacdf6696bdaba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextProperties::SetProperty</definition>
+        <argsstring>(const wxString &amp;name, bool value)</argsstring>
+        <name>SetProperty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets property by name and boolean value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1476"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A simple property class using wxVariants. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is used to give each rich text object the ability to store custom properties that can be used by the application.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9785">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="9784">
+        <label>wxRichTextProperties</label>
+        <link refid="classwx_rich_text_properties"/>
+        <childnode refid="9785" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9787">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9788" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9786">
+        <label>wxRichTextProperties</label>
+        <link refid="classwx_rich_text_properties"/>
+        <childnode refid="9787" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9788">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1339" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1338" bodyend="1480"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextProperties</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_rich_text_properties_1a6991d5010188a4f9c86ffeb5703d3352" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>Clear</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextProperties</scope><name>CloneRefData</name></member>
+      <member refid="classwx_rich_text_properties_1a29d0231454654aed178b854ce21e235b" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>Copy</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRichTextProperties</scope><name>CreateRefData</name></member>
+      <member refid="classwx_rich_text_properties_1ab589faf2d8b8bbd7f5d3400bbc0fa48f" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>Find</name></member>
+      <member refid="classwx_rich_text_properties_1ae5a76714975fb98d6597eeb7f3e88a3c" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>FindOrCreateProperty</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRichTextProperties</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_rich_text_properties_1afca0336b53e46c734cb7dd22befc4c49" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetCount</name></member>
+      <member refid="classwx_rich_text_properties_1af0e1dde13861de572e9e4cb395d99169" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetProperties</name></member>
+      <member refid="classwx_rich_text_properties_1a8fa5cec738b7e139c757013d30e72ac3" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetProperties</name></member>
+      <member refid="classwx_rich_text_properties_1a6f32371986f1127442adf2af387e4098" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetProperty</name></member>
+      <member refid="classwx_rich_text_properties_1a10f3b9a579f7655cd9356d3e9a142d4b" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetPropertyBool</name></member>
+      <member refid="classwx_rich_text_properties_1af4a36f4171f56922e28c30540a3c45cb" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetPropertyDouble</name></member>
+      <member refid="classwx_rich_text_properties_1a2a09a0e7fe611c01136515ef5e55a439" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetPropertyLong</name></member>
+      <member refid="classwx_rich_text_properties_1aaa3ec0bf4c962a695280450952b718f1" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetPropertyNames</name></member>
+      <member refid="classwx_rich_text_properties_1a44124f09f3ddca704aa37488018a65a3" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetPropertyString</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>GetRefData</name></member>
+      <member refid="classwx_rich_text_properties_1a25f1f9aa1b12616280a6c4b77f46bd1e" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>HasProperty</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>IsSameAs</name></member>
+      <member refid="classwx_rich_text_properties_1abce9279c320ab74412b22000d97ca456" prot="protected" virt="non-virtual"><scope>wxRichTextProperties</scope><name>m_properties</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextProperties</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator new</name></member>
+      <member refid="classwx_rich_text_properties_1a5d13463ff112d23e7ad3a1a682d0ae5e" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator=</name></member>
+      <member refid="classwx_rich_text_properties_1a8bce8b91c90e13bdd88db16251b3b918" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator==</name></member>
+      <member refid="classwx_rich_text_properties_1a350ec5072200910b461b79553bab1724" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator[]</name></member>
+      <member refid="classwx_rich_text_properties_1a651561f5c985a2825dc2d5974168ea74" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>operator[]</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>Ref</name></member>
+      <member refid="classwx_rich_text_properties_1afc781ad20c3a15b70adac8e70e5fe94f" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperties</name></member>
+      <member refid="classwx_rich_text_properties_1acb8374d9dc04aa8eca6b1a2b85788665" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperty</name></member>
+      <member refid="classwx_rich_text_properties_1adc6eca9550cde8bc8574aaa84d596df1" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperty</name></member>
+      <member refid="classwx_rich_text_properties_1acf2c47e6321dc166961301bc0acfa2fa" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperty</name></member>
+      <member refid="classwx_rich_text_properties_1a337968aee725c8a02adc33c8f04536cd" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperty</name></member>
+      <member refid="classwx_rich_text_properties_1a722b740b2869d42a67d6100f0f6a5ae8" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperty</name></member>
+      <member refid="classwx_rich_text_properties_1ac34c33c43b3475c48aacdf6696bdaba8" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetProperty</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>wxObject</name></member>
+      <member refid="classwx_rich_text_properties_1ad23714a5dfe06fc739d0ddff747117c8" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>wxRichTextProperties</name></member>
+      <member refid="classwx_rich_text_properties_1aad4dd8eec22687a8beab7cd4c54bd53f" prot="public" virt="non-virtual"><scope>wxRichTextProperties</scope><name>wxRichTextProperties</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxRichTextProperties</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

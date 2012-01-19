@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="stockitem_8h" kind="file">
+    <compoundname>stockitem.h</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="stockitem_8h_1af6371558f353ff89e5a64bc5d61ed694" prot="public" static="no">
+        <name>wxStockLabelQueryFlag</name>
+        <enumvalue id="stockitem_8h_1af6371558f353ff89e5a64bc5d61ed694a324f2ee2709afe272cb561c6b1419987" prot="public">
+          <name>wxSTOCK_NOFLAGS</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Indicates absence of wxSTOCK_WITH_MNEMONIC and wxSTOCK_WITH_ACCELERATOR. </para>          </briefdescription>
+          <detaileddescription>
+<para>Requests just the label (e.g. &quot;Print...&quot;). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stockitem_8h_1af6371558f353ff89e5a64bc5d61ed694a6de9ba5f40896f0daf18e5bbb8086056" prot="public">
+          <name>wxSTOCK_WITH_MNEMONIC</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Request the label with mnemonics character. </para>          </briefdescription>
+          <detaileddescription>
+<para>E.g. &quot;&amp;Print...&quot;. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stockitem_8h_1af6371558f353ff89e5a64bc5d61ed694acc8b957903a3d0a28f7e8b23fda44bb3" prot="public">
+          <name>wxSTOCK_WITH_ACCELERATOR</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Return the label with accelerator following it after TAB. </para>          </briefdescription>
+          <detaileddescription>
+<para>E.g. &quot;Print...\tCtrl-P&quot;. This can be combined with wxSTOCK_WITH_MNEMONIC to get &quot;&amp;Print...\tCtrl-P&quot;. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stockitem_8h_1af6371558f353ff89e5a64bc5d61ed694acad971d36da4df06b19f73386aad8d9c" prot="public">
+          <name>wxSTOCK_WITHOUT_ELLIPSIS</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+<para>Return the label without any ellipsis at the end. </para>          </briefdescription>
+          <detaileddescription>
+<para>By default, stock items text is returned with ellipsis, if appropriate, this flag allows to avoid having it. So using the same example as above, the returned string would be &quot;Print&quot; or &quot;&amp;Print&quot; if wxSTOCK_WITH_MNEMONIC were also used.</para><para>This flag can&apos;t be combined with wxSTOCK_WITH_ACCELERATOR.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stockitem_8h_1af6371558f353ff89e5a64bc5d61ed694ae5c990cdf1165e86f5df0368cb164232" prot="public">
+          <name>wxSTOCK_FOR_BUTTON</name>
+          <initializer> wxSTOCK_WITHOUT_ELLIPSIS | wxSTOCK_WITH_MNEMONIC</initializer>
+          <briefdescription>
+<para>Return the label appropriate for a button and not a menu item. </para>          </briefdescription>
+          <detaileddescription>
+<para>Currently the main difference is that the trailing ellipsis used in some stock labels is never included in the returned label. Also, the mnemonics is included if this flag is used. So the returned value for wxID_PRINT when this flag is used is &quot;&amp;Print&quot;.</para><para>This flag can&apos;t be combined with wxSTOCK_WITH_ACCELERATOR.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible values for flags parameter of <ref refid="group__group__funcmacro__misc_1gafe92f9f590110183182e5b65433ad2a2" kindref="member">wxGetStockLabel()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The elements of this enum are bit masks and may be combined with each other (except when specified otherwise). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stockitem.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stockitem.h" bodystart="15" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gafe92f9f590110183182e5b65433ad2a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetStockLabel</definition>
+        <argsstring>(wxWindowID id, long flags=wxSTOCK_WITH_MNEMONIC)</argsstring>
+        <name>wxGetStockLabel</name>
+        <param>
+          <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>flags</declname>
+          <defval>wxSTOCK_WITH_MNEMONIC</defval>
+        </param>
+        <briefdescription>
+<para>Returns label that should be used for given <emphasis>id</emphasis> element. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Given id of the <ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref>, <ref refid="classwx_button" kindref="compound">wxButton</ref>, <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> tool, etc. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Combination of the elements of wxStockLabelQueryFlag.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Include file: <verbatim>#include &lt;wx/stockitem.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stockitem.h" line="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stockitem.h"/>
+  </compounddef>
+</doxygen>

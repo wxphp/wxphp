@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_sorted_array_string" kind="class" prot="public">
+    <compoundname>wxSortedArrayString</compoundname>
+    <basecompoundref refid="classwx_array_string" prot="public" virt="non-virtual">wxArrayString</basecompoundref>
+    <includes local="no">wx/arrstr.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_sorted_array_string_1abecc9015c35ee342e594c5fa9f76a927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSortedArrayString::Sort</definition>
+        <argsstring>(bool reverseOrder=false)</argsstring>
+        <name>Sort</name>
+        <reimplements refid="classwx_array_string_1af10a5c5c81001638f5a2b6dceaa74810">Sort</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>reverseOrder</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This function should not be used with sorted array because it could break the order of items and, for example, subsequent calls to <ref refid="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" kindref="member">Index()</ref> would then not work! Also, sorting a <ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref> doesn&apos;t make sense because its elements are always already sorted.</para><simplesectsep/><para>In STL mode, Sort is private and simply invokes wxFAIL_MSG. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="328"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sorted_array_string_1a0661fc0625d585d1bca263da7a14f608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSortedArrayString::Sort</definition>
+        <argsstring>(CompareFunction compareFunction)</argsstring>
+        <name>Sort</name>
+        <reimplements refid="classwx_array_string_1a0403ae7f8702fdc5c21b700053e7af0c">Sort</reimplements>
+        <param>
+          <type><ref refid="classwx_array_string_1ab3765f8d31f415ef480c3224c390eda3" kindref="member">CompareFunction</ref></type>
+          <declname>compareFunction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This function should not be used with sorted array because it could break the order of items and, for example, subsequent calls to <ref refid="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" kindref="member">Index()</ref> would then not work! Also, sorting a <ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref> doesn&apos;t make sense because its elements are always already sorted.</para><simplesectsep/><para>In STL mode, Sort is private and simply invokes wxFAIL_MSG. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="329"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_sorted_array_string_1a749e5ba32eca259199472427eb29199f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSortedArrayString::wxSortedArrayString</definition>
+        <argsstring>(const wxArrayString &amp;array)</argsstring>
+        <name>wxSortedArrayString</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+<para>Conversion constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Constructs a sorted array with the same contents as the (possibly unsorted) &quot;array&quot; argument. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="287"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sorted_array_string_1ae23142317aff290ee6363f02d67ca2cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxSortedArrayString::Add</definition>
+        <argsstring>(const wxString &amp;str, size_t copies=1)</argsstring>
+        <name>Add</name>
+        <reimplements refid="classwx_array_string_1af06b61455118d83a24183c3a9f6854b1">Add</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>copies</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="wxArrayString::Add()"><para>Appends the given number of <emphasis>copies</emphasis> of the new item <emphasis>str</emphasis> to the array and returns the index of the first new item in the array. </para><para><simplesect kind="see"><para><ref refid="classwx_array_string_1a9913831038ad76b0c4386cbd095b8e0d" kindref="member">Insert()</ref> </para></simplesect>
+</para></copydoc>
+</para><para><simplesect kind="warning"><para>For sorted arrays, the index of the inserted item will not be, in general, equal to <ref refid="classwx_array_string_1ad2a491f799c8d6539dc64d06f2c37ac6" kindref="member">GetCount()</ref> - 1 because the item is inserted at the correct position to keep the array sorted and not appended. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxSortedArrayString::Index</definition>
+        <argsstring>(const wxString &amp;sz, bool bCase=true, bool bFromEnd=false) const </argsstring>
+        <name>Index</name>
+        <reimplements refid="classwx_array_string_1a87d29ec37fca50c5b289c242fbaad2f5">Index</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bCase</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bFromEnd</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><copydoc link="wxArrayString::Index()"><para>Search the element in the array, starting from the beginning if <emphasis>bFromEnd</emphasis> is false or from end otherwise. </para><para>If <emphasis>bCase</emphasis>, comparison is case sensitive (default), otherwise the case is ignored.</para><para>This function uses linear search for <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>. Returns index of the first item matched or <computeroutput>wxNOT_FOUND</computeroutput> if there is no match. </para></copydoc>
+</para><para>This function uses binary search for <ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref>, but it ignores the <emphasis>bCase</emphasis> and <emphasis>bFromEnd</emphasis> parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sorted_array_string_1ab9d85c1a7d21952209d6fc87dbb5be32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSortedArrayString::Insert</definition>
+        <argsstring>(const wxString &amp;str, size_t nIndex, size_t copies=1)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nIndex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>copies</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This function should not be used with sorted arrays because it could break the order of items and, for example, subsequent calls to <ref refid="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" kindref="member">Index()</ref> would then not work!</para><simplesectsep/><para>In STL mode, Insert is private and simply invokes wxFAIL_MSG. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="317"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref> is an efficient container for storing <ref refid="classwx_string" kindref="compound">wxString</ref> objects which always keeps the string in alphabetical order. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref> uses binary search in its <ref refid="classwx_array_string_1a87d29ec37fca50c5b289c242fbaad2f5" kindref="member">wxArrayString::Index()</ref> function (instead of linear search for <ref refid="classwx_array_string_1a87d29ec37fca50c5b289c242fbaad2f5" kindref="member">wxArrayString::Index()</ref>) which makes it much more efficient if you add strings to the array rarely (because, of course, you have to pay for <ref refid="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" kindref="member">Index()</ref> efficiency by having <ref refid="classwx_sorted_array_string_1ae23142317aff290ee6363f02d67ca2cc" kindref="member">Add()</ref> be slower) but search for them often. Several methods should not be used with sorted array (basically, all those which break the order of items) which is mentioned in their description.</para><para><xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>what about STL? who does it integrates?</para></xrefdescription></xrefsect><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para>wxArray, <ref refid="classwx_string" kindref="compound">wxString</ref>, <ref refid="overview__string" kindref="compound">wxString Overview</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10268">
+        <label>wxSortedArrayString</label>
+        <link refid="classwx_sorted_array_string"/>
+        <childnode refid="10269" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10269">
+        <label>wxArrayString</label>
+        <link refid="classwx_array_string"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10270">
+        <label>wxSortedArrayString</label>
+        <link refid="classwx_sorted_array_string"/>
+        <childnode refid="10271" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10271">
+        <label>wxArrayString</label>
+        <link refid="classwx_array_string"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="278" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" bodystart="277" bodyend="331"/>
+    <listofallmembers>
+      <member refid="classwx_sorted_array_string_1ae23142317aff290ee6363f02d67ca2cc" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Add</name></member>
+      <member refid="classwx_array_string_1a7d399eb79ba4f7ad165af03909889894" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Alloc</name></member>
+      <member refid="classwx_array_string_1aad1c8fe1dd445b359a633cdd6c5940ce" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Clear</name></member>
+      <member refid="classwx_array_string_1ab3765f8d31f415ef480c3224c390eda3" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>CompareFunction</name></member>
+      <member refid="classwx_array_string_1ac23ff4a9b6a0f014c2c803361eee52f5" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Empty</name></member>
+      <member refid="classwx_array_string_1ad2a491f799c8d6539dc64d06f2c37ac6" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>GetCount</name></member>
+      <member refid="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Index</name></member>
+      <member refid="classwx_sorted_array_string_1ab9d85c1a7d21952209d6fc87dbb5be32" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Insert</name></member>
+      <member refid="classwx_array_string_1a9913831038ad76b0c4386cbd095b8e0d" prot="public" virt="non-virtual" ambiguityscope="wxArrayString::"><scope>wxSortedArrayString</scope><name>Insert</name></member>
+      <member refid="classwx_array_string_1a1eb4f967685188b1c14407026e9ec53c" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>IsEmpty</name></member>
+      <member refid="classwx_array_string_1a461830aff857f321e7b0def8e84cb87f" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Item</name></member>
+      <member refid="classwx_array_string_1adbae6537d9624510d4e9c1d7b2e2b163" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Last</name></member>
+      <member refid="classwx_array_string_1a3796e3297a21ff4f1dce9f1eecc7f8f7" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>operator!=</name></member>
+      <member refid="classwx_array_string_1a87f49b6cea7e371f45a4fc40b0f01548" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>operator=</name></member>
+      <member refid="classwx_array_string_1a4ccc608a22d5a805ee1374b3446b09ff" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>operator==</name></member>
+      <member refid="classwx_array_string_1af0a959d8f8e8031e1442bc0e977b6a4f" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>operator[]</name></member>
+      <member refid="classwx_array_string_1ae24a86de01c53488e84ce3c39582fbc1" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Remove</name></member>
+      <member refid="classwx_array_string_1a1374163a35ccb75adac977acfe8add96" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>RemoveAt</name></member>
+      <member refid="classwx_array_string_1a598a1eba111e3c25ef760dcdcc0c7678" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Shrink</name></member>
+      <member refid="classwx_sorted_array_string_1abecc9015c35ee342e594c5fa9f76a927" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Sort</name></member>
+      <member refid="classwx_sorted_array_string_1a0661fc0625d585d1bca263da7a14f608" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Sort</name></member>
+      <member refid="classwx_array_string_1a35fe0f0ee8452506f1ca39d3fd48c14e" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>wxArrayString</name></member>
+      <member refid="classwx_array_string_1a217ff3d3246ea5079bac9295ff36a237" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>wxArrayString</name></member>
+      <member refid="classwx_array_string_1a4df6e48276a8f2f12d018281eda1a618" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>wxArrayString</name></member>
+      <member refid="classwx_array_string_1a71f569b4bbe2a77a6f222a743dc9e44b" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>wxArrayString</name></member>
+      <member refid="classwx_array_string_1aeb9c9e5cb3550098735f54a47c3d29b4" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>wxArrayString</name></member>
+      <member refid="classwx_sorted_array_string_1a749e5ba32eca259199472427eb29199f" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>wxSortedArrayString</name></member>
+      <member refid="classwx_array_string_1a62c4453faf577c0196eac0b38701d710" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>~wxArrayString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

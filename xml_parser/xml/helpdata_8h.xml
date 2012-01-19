@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="helpdata_8h" kind="file">
+    <compoundname>helpdata.h</compoundname>
+    <innerclass refid="classwx_html_help_data" prot="public">wxHtmlHelpData</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h"/>
+  </compounddef>
+</doxygen>

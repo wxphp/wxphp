@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_log_buffer" kind="class" prot="public">
+    <compoundname>wxLogBuffer</compoundname>
+    <basecompoundref refid="classwx_log" prot="public" virt="non-virtual">wxLog</basecompoundref>
+    <includes local="no">wx/log.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_log_buffer_1a861078060fe8059f5dab248517b15998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxLogBuffer::wxLogBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>wxLogBuffer</name>
+        <briefdescription>
+<para>The default ctor does nothing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="515"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_log_buffer_1af1e67e3ce1ef590448506419c046932c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxLogBuffer::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <reimplements refid="classwx_log_1a21f8a2a7d83bd17a0e89bbe7dd7e6feb">Flush</reimplements>
+        <briefdescription>
+<para>Shows all the messages collected so far to the user (using a message box in the GUI applications or by printing them out to the console in text mode) and clears the internal buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="522"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_log_buffer_1a51d7b829b081cba1ce99301f38294b6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxLogBuffer::GetBuffer</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBuffer</name>
+        <briefdescription>
+<para>Returns the current buffer contains. </para>        </briefdescription>
+        <detaileddescription>
+<para>Messages from different log function calls are separated with the new lines in the buffer. The buffer can be cleared by <ref refid="classwx_log_buffer_1af1e67e3ce1ef590448506419c046932c" kindref="member">Flush()</ref> which will also show the current contents to the user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="530"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_log_buffer" kindref="compound">wxLogBuffer</ref> is a very simple implementation of log sink which simply collects all the logged messages in a string (except the debug messages which are output in the usual way immediately as we&apos;re presumably not interested in collecting them for later). </para>    </briefdescription>
+    <detaileddescription>
+<para>The messages from different log function calls are separated by the new lines.</para><para>All the messages collected so far can be shown to the user (and the current buffer cleared) by calling the overloaded <ref refid="classwx_log_buffer_1af1e67e3ce1ef590448506419c046932c" kindref="member">wxLogBuffer::Flush</ref> method.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7496">
+        <label>wxLogBuffer</label>
+        <link refid="classwx_log_buffer"/>
+        <childnode refid="7497" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7497">
+        <label>wxLog</label>
+        <link refid="classwx_log"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7498">
+        <label>wxLogBuffer</label>
+        <link refid="classwx_log_buffer"/>
+        <childnode refid="7499" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7499">
+        <label>wxLog</label>
+        <link refid="classwx_log"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="510" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="509" bodyend="531"/>
+    <listofallmembers>
+      <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>AddTraceMask</name></member>
+      <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>ClearTraceMasks</name></member>
+      <member refid="classwx_log_1a9df108f087542c81daf3a00bbeab0aa5" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>DisableTimestamp</name></member>
+      <member refid="classwx_log_1aede0ff7812690d487de845b7f3095dfd" prot="protected" virt="virtual"><scope>wxLogBuffer</scope><name>DoLogRecord</name></member>
+      <member refid="classwx_log_1a18c877e0038afe284757512b866b0aac" prot="protected" virt="virtual"><scope>wxLogBuffer</scope><name>DoLogText</name></member>
+      <member refid="classwx_log_1a3fafbd3b87ff2d08dfdd1378d35013bb" prot="protected" virt="virtual"><scope>wxLogBuffer</scope><name>DoLogTextAtLevel</name></member>
+      <member refid="classwx_log_1af51afebbfa375827936ba3c93c78857a" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>DontCreateOnDemand</name></member>
+      <member refid="classwx_log_1a58bbfc0831eb47f0d88c9350d1f6e02d" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>EnableLogging</name></member>
+      <member refid="classwx_log_buffer_1af1e67e3ce1ef590448506419c046932c" prot="public" virt="virtual"><scope>wxLogBuffer</scope><name>Flush</name></member>
+      <member refid="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>FlushActive</name></member>
+      <member refid="classwx_log_1aabbef40bf3aa7ba2c71b33932d4854ec" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>GetActiveTarget</name></member>
+      <member refid="classwx_log_buffer_1a51d7b829b081cba1ce99301f38294b6f" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>GetBuffer</name></member>
+      <member refid="classwx_log_1a474ba0555bce38b182d7bc8e152d128a" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>GetLogLevel</name></member>
+      <member refid="classwx_log_1add8fb43f08799998e68251e9b77020d7" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>GetRepetitionCounting</name></member>
+      <member refid="classwx_log_1a872a55302394dfc42d0035e987156622" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>GetTimestamp</name></member>
+      <member refid="classwx_log_1a899ccb4d60fe3d096e4c8c713774ba5c" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>GetTraceMasks</name></member>
+      <member refid="classwx_log_1ae67871e92f85fcf92a0eb885d0684777" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>GetVerbose</name></member>
+      <member refid="classwx_log_1a28fece055f6d4eb97455b216bc042ee4" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>IsAllowedTraceMask</name></member>
+      <member refid="classwx_log_1a386ce41902b74521a31f4b0de7e1007f" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>IsEnabled</name></member>
+      <member refid="classwx_log_1a9376ab96ed687a54068ed7f0d7639c16" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>IsLevelEnabled</name></member>
+      <member refid="classwx_log_1a99bd499a7375bb627ecbc22ff057ec04" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>LogRecord</name></member>
+      <member refid="classwx_log_1ab2d378dce2d927e36b7e09618c61fa05" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>RemoveTraceMask</name></member>
+      <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>Resume</name></member>
+      <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetActiveTarget</name></member>
+      <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetLogLevel</name></member>
+      <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetRepetitionCounting</name></member>
+      <member refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetThreadActiveTarget</name></member>
+      <member refid="classwx_log_1a9d0193f89e127de5cc996a32d75cf5c0" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetTimestamp</name></member>
+      <member refid="classwx_log_1a854c6f60a72ef046b4f54953287534e6" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>SetVerbose</name></member>
+      <member refid="classwx_log_1ac563b1d13ec717fb7d5ccf4590e35308" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>Suspend</name></member>
+      <member refid="classwx_log_buffer_1a861078060fe8059f5dab248517b15998" prot="public" virt="non-virtual"><scope>wxLogBuffer</scope><name>wxLogBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

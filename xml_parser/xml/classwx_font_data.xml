@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_font_data" kind="class" prot="public">
+    <compoundname>wxFontData</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/fontdata.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_font_data_1a7475bad933f864387b91f41ec26efd44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFontData::wxFontData</definition>
+        <argsstring>()</argsstring>
+        <name>wxFontData</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initializes <emphasis>fontColour</emphasis> to black, <emphasis>showHelp</emphasis> to false, <emphasis>allowSymbols</emphasis> to true, <emphasis>enableEffects</emphasis> to true, <emphasis>minSize</emphasis> to 0 and <emphasis>maxSize</emphasis> to 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a5d2430c6959bea4a023a87c0e606c31a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFontData::EnableEffects</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>EnableEffects</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables &quot;effects&quot; under Windows or generic only. </para>        </briefdescription>
+        <detaileddescription>
+<para>This refers to the controls for manipulating colour, strikeout and underline properties.</para><para>The default value is true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a8fca3521d67ac8a5843ff8d372a60b8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFontData::GetAllowSymbols</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAllowSymbols</name>
+        <briefdescription>
+<para>Under Windows, returns a flag determining whether symbol fonts can be selected. </para>        </briefdescription>
+        <detaileddescription>
+<para>Has no effect on other platforms.</para><para>The default value is true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a5ecc1a48c1a783fef87c26f7ea825c0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFontData::GetChosenFont</definition>
+        <argsstring>() const </argsstring>
+        <name>GetChosenFont</name>
+        <briefdescription>
+<para>Gets the font chosen by the user if the user pressed OK (<ref refid="classwx_font_dialog_1a26f48c5b589f8bc45ec542599546f69a" kindref="member">wxFontDialog::ShowModal()</ref> returned wxID_OK). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1abb0099f48190807679d721639e9ab6e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+        <definition>const wxColour&amp; wxFontData::GetColour</definition>
+        <argsstring>() const </argsstring>
+        <name>GetColour</name>
+        <briefdescription>
+<para>Gets the colour associated with the font dialog. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default value is black. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a814d62588997cd69f69e45bbf4c472e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFontData::GetEnableEffects</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEnableEffects</name>
+        <briefdescription>
+<para>Determines whether &quot;effects&quot; are enabled under Windows. </para>        </briefdescription>
+        <detaileddescription>
+<para>This refers to the controls for manipulating colour, strikeout and underline properties.</para><para>The default value is true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1acb38460d543044b92b99c749cef6b4af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFontData::GetInitialFont</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInitialFont</name>
+        <briefdescription>
+<para>Gets the font that will be initially used by the font dialog. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should have previously been set by the application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1ad2d994c34a5e221ff4b5485362a3f18e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFontData::GetShowHelp</definition>
+        <argsstring>() const </argsstring>
+        <name>GetShowHelp</name>
+        <briefdescription>
+<para>Returns true if the Help button will be shown (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+<para>The default value is false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a0bd2d264044fcf568c1d731e9d19c32c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFontData::SetAllowSymbols</definition>
+        <argsstring>(bool allowSymbols)</argsstring>
+        <name>SetAllowSymbols</name>
+        <param>
+          <type>bool</type>
+          <declname>allowSymbols</declname>
+        </param>
+        <briefdescription>
+<para>Under Windows, determines whether symbol fonts can be selected. </para>        </briefdescription>
+        <detaileddescription>
+<para>Has no effect on other platforms.</para><para>The default value is true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a316d4574ef7100e4e5f3e12bff7d98dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFontData::SetChosenFont</definition>
+        <argsstring>(const wxFont &amp;font)</argsstring>
+        <name>SetChosenFont</name>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font that will be returned to the user (for internal use only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a52e4308bf17d933b5b2948f6eb469608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFontData::SetColour</definition>
+        <argsstring>(const wxColour &amp;colour)</argsstring>
+        <name>SetColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Sets the colour that will be used for the font foreground colour. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default colour is black. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a24fd79c0a3eb6764cc7d525acba9aaeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFontData::SetInitialFont</definition>
+        <argsstring>(const wxFont &amp;font)</argsstring>
+        <name>SetInitialFont</name>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font that will be initially used by the font dialog. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1ac3d2f78a59cd50d5e3a045775a83fff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFontData::SetRange</definition>
+        <argsstring>(int min, int max)</argsstring>
+        <name>SetRange</name>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Sets the valid range for the font point size (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+<para>The default is 0, 0 (unrestricted range). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1ad203acb97b8278907994f254f96f63ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFontData::SetShowHelp</definition>
+        <argsstring>(bool showHelp)</argsstring>
+        <name>SetShowHelp</name>
+        <param>
+          <type>bool</type>
+          <declname>showHelp</declname>
+        </param>
+        <briefdescription>
+<para>Determines whether the Help button will be displayed in the font dialog (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+<para>The default value is false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_data_1a3275ef185524b42964391b1b89ffc9b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font_data" kindref="compound">wxFontData</ref> &amp;</type>
+        <definition>wxFontData&amp; wxFontData::operator=</definition>
+        <argsstring>(const wxFontData &amp;data)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_font_data" kindref="compound">wxFontData</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator for the font data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="125"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class holds a variety of information related to font dialogs. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview__cmndlg_1overview_cmndlg_font" kindref="member">wxFontDialog Overview</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6367">
+        <label>wxFontData</label>
+        <link refid="classwx_font_data"/>
+        <childnode refid="6368" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6368">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6369">
+        <label>wxFontData</label>
+        <link refid="classwx_font_data"/>
+        <childnode refid="6370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6370">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6371" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6371">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdata.h" bodystart="19" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFontData</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFontData</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFontData</scope><name>CreateRefData</name></member>
+      <member refid="classwx_font_data_1a5d2430c6959bea4a023a87c0e606c31a" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>EnableEffects</name></member>
+      <member refid="classwx_font_data_1a8fca3521d67ac8a5843ff8d372a60b8d" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>GetAllowSymbols</name></member>
+      <member refid="classwx_font_data_1a5ecc1a48c1a783fef87c26f7ea825c0d" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>GetChosenFont</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxFontData</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_font_data_1abb0099f48190807679d721639e9ab6e9" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>GetColour</name></member>
+      <member refid="classwx_font_data_1a814d62588997cd69f69e45bbf4c472e5" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>GetEnableEffects</name></member>
+      <member refid="classwx_font_data_1acb38460d543044b92b99c749cef6b4af" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>GetInitialFont</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>GetRefData</name></member>
+      <member refid="classwx_font_data_1ad2d994c34a5e221ff4b5485362a3f18e" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>GetShowHelp</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFontData</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>operator new</name></member>
+      <member refid="classwx_font_data_1a3275ef185524b42964391b1b89ffc9b6" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>operator=</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>Ref</name></member>
+      <member refid="classwx_font_data_1a0bd2d264044fcf568c1d731e9d19c32c" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>SetAllowSymbols</name></member>
+      <member refid="classwx_font_data_1a316d4574ef7100e4e5f3e12bff7d98dc" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>SetChosenFont</name></member>
+      <member refid="classwx_font_data_1a52e4308bf17d933b5b2948f6eb469608" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>SetColour</name></member>
+      <member refid="classwx_font_data_1a24fd79c0a3eb6764cc7d525acba9aaeb" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>SetInitialFont</name></member>
+      <member refid="classwx_font_data_1ac3d2f78a59cd50d5e3a045775a83fff5" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>SetRange</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>SetRefData</name></member>
+      <member refid="classwx_font_data_1ad203acb97b8278907994f254f96f63ce" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>SetShowHelp</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>UnShare</name></member>
+      <member refid="classwx_font_data_1a7475bad933f864387b91f41ec26efd44" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>wxFontData</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFontData</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxFontData</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="msgdlg_8h" kind="file">
+    <compoundname>msgdlg.h</compoundname>
+    <innerclass refid="classwx_message_dialog" prot="public">wxMessageDialog</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxMessageBox</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption=&quot;Message&quot;, int style=wxOK, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord)</argsstring>
+        <name>wxMessageBox</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+          <defval>&quot;Message&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>style</declname>
+          <defval>wxOK</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
+        </param>
+        <briefdescription>
+<para>Show a general purpose message dialog. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a convenient function which is usually used instead of using <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref> directly. Notice however that some of the features, such as extended text and custom labels for the message box buttons, are not provided by this function but only by <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref>.</para><para>The return value is one of: <computeroutput>wxYES</computeroutput>, <computeroutput>wxNO</computeroutput>, <computeroutput>wxCANCEL</computeroutput>, <computeroutput>wxOK</computeroutput> or <computeroutput>wxHELP</computeroutput> (notice that this return value is <bold>different</bold> from the return value of <ref refid="classwx_message_dialog_1a28e6cea6fb3857df6cc9b103e06dbadf" kindref="member">wxMessageDialog::ShowModal()</ref>).</para><para>For example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>answer<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(</highlight><highlight class="stringliteral">&quot;Quit<sp/>program?&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Confirm&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="defs_8h_1a5ba00a09cea0417a2ef7c4a4c2b0012c" kindref="member">wxYES_NO</ref><sp/>|<sp/><ref refid="defs_8h_1a5580412e224117ac127aacaafd49dc2e" kindref="member">wxCANCEL</ref>,<sp/>main_frame);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(answer<sp/>==<sp/><ref refid="defs_8h_1ab38ccd9aa8aa47f9df32a75c96bb3000" kindref="member">wxYES</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>main_frame-&gt;Close();</highlight></codeline>
+</programlisting></para><para><emphasis>message</emphasis> may contain newline characters, in which case the message will be split into separate lines, to cater for large messages.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to show in the dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caption</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dialog title. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parent window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Combination of style flags described in <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref> documentation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Horizontal dialog position (ignored under MSW). Use <ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref> for <emphasis>x</emphasis> and <emphasis>y</emphasis> to let the system position the window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertical dialog position (ignored under MSW). Include file: <verbatim>#include &lt;wx/msgdlg.h&gt; </verbatim> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h" line="287"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgdlg.h"/>
+  </compounddef>
+</doxygen>

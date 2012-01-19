@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__funcmacro__networkuseros" kind="group">
+    <compoundname>group_funcmacro_networkuseros</compoundname>
+    <title>Network, User and OS</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetEmailAddress</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetEmailAddress</name>
+        <briefdescription>
+<para>Copies the user&apos;s email address into the supplied buffer, by concatenating the values returned by <ref refid="group__group__funcmacro__networkuseros_1ga8e3277f772d143953b4e7eca3312dea0" kindref="member">wxGetFullHostName()</ref> and <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="557"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga9df97118e6514b933b0aa755ff62964d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetEmailAddress</definition>
+        <argsstring>(char *buf, int sz)</argsstring>
+        <name>wxGetEmailAddress</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000063"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" kindref="member">wxGetEmailAddress()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the email address in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="569"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga295ff6a2681c806195447a920f681499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wxMemorySize</type>
+        <definition>wxMemorySize wxGetFreeMemory</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetFreeMemory</name>
+        <briefdescription>
+<para>Returns the amount of free memory in bytes under environments which support it, and -1 if not supported or failed to perform measurement. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="577"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetHomeDir</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetHomeDir</name>
+        <briefdescription>
+<para>Return the (current) user&apos;s home directory. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga18db911e93361ebd5bbfb0d5136ddf5b" kindref="member">wxGetUserHome()</ref>, <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="586"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetHostName</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetHostName</name>
+        <briefdescription>
+<para>Copies the current host machine&apos;s name into the supplied buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please note that the returned name is <emphasis>not</emphasis> fully qualified, i.e. it does not include the domain name.</para><para>Under Windows or NT, this function first looks in the environment variable SYSTEM_NAME; if this is not found, the entry <bold>HostName</bold> in the wxWidgets section of the WIN.INI file is tried.</para><para><simplesect kind="return"><para>The hostname if successful or an empty string otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga8e3277f772d143953b4e7eca3312dea0" kindref="member">wxGetFullHostName()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="603"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga6f8c550ed86ea82ac363e925db7026f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetHostName</definition>
+        <argsstring>(char *buf, int sz)</argsstring>
+        <name>wxGetHostName</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000064"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" kindref="member">wxGetHostName()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the host name in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="615"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga8e3277f772d143953b4e7eca3312dea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetFullHostName</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetFullHostName</name>
+        <briefdescription>
+<para>Returns the FQDN (fully qualified domain host name) or an empty string on error. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" kindref="member">wxGetHostName()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="625"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga18db911e93361ebd5bbfb0d5136ddf5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetUserHome</definition>
+        <argsstring>(const wxString &amp;user=wxEmptyString)</argsstring>
+        <name>wxGetUserHome</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>user</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Returns the home directory for the given user. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the <emphasis>user</emphasis> is empty (default value), this function behaves like <ref refid="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" kindref="member">wxGetHomeDir()</ref> (i.e. returns the current user home directory).</para><para>If the home directory couldn&apos;t be determined, an empty string is returned.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="636"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetUserId</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUserId</name>
+        <briefdescription>
+<para>This function returns the &quot;user id&quot; also known as &quot;login name&quot; under Unix (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>something like &quot;jsmith&quot;). It uniquely identifies the current user (on this system). Under Windows or NT, this function first looks in the environment variables USER and LOGNAME; if neither of these is found, the entry <bold>UserId</bold> in the <bold>wxWidgets</bold> section of the WIN.INI file is tried.</para><para><simplesect kind="return"><para>The login name if successful or an empty string otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" kindref="member">wxGetUserName()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="651"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gac27162ecb34dab557506f6a612df6211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetUserId</definition>
+        <argsstring>(char *buf, int sz)</argsstring>
+        <name>wxGetUserId</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000065"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the login name in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="663"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetUserName</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUserName</name>
+        <briefdescription>
+<para>This function returns the full user name (something like &quot;Mr. John Smith&quot;). </para>        </briefdescription>
+        <detaileddescription>
+<para>Under Windows or NT, this function looks for the entry UserName in the wxWidgets section of the WIN.INI file. If PenWindows is running, the entry Current in the section User of the PENWIN.INI file is used.</para><para><simplesect kind="return"><para>The full user name if successful or an empty string otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="678"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gaae7f8332d69c28360110242de6f3d3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetUserName</definition>
+        <argsstring>(char *buf, int sz)</argsstring>
+        <name>wxGetUserName</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000066"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" kindref="member">wxGetUserName()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the full user name in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="690"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga2404d9ca32701ddb2a34af00e81446b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetOsDescription</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetOsDescription</name>
+        <briefdescription>
+<para>Returns the string containing the description of the current platform in a user-readable form. </para>        </briefdescription>
+        <detaileddescription>
+<para>For example, this function may return strings like &quot;Windows NT Version 4.0&quot; or &quot;Linux 2.2.2 i386&quot;.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="701"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
+        <definition>wxOperatingSystemId wxGetOsVersion</definition>
+        <argsstring>(int *major=NULL, int *minor=NULL)</argsstring>
+        <name>wxGetOsVersion</name>
+        <param>
+          <type>int *</type>
+          <declname>major</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>minor</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Gets the version and the operating system ID for currently running OS. </para>        </briefdescription>
+        <detaileddescription>
+<para>The returned wxOperatingSystemId value can be used for a basic categorization of the OS family; the major and minor version numbers allows to detect a specific system.</para><para>For Unix-like systems (<computeroutput>wxOS_UNIX</computeroutput>) the major and minor version integers will contain the kernel major and minor version numbers (as returned by the &apos;uname -r&apos; command); e.g. &quot;2&quot; and &quot;6&quot; if the machine is using kernel 2.6.19.</para><para>For Mac OS X systems (<computeroutput>wxOS_MAC</computeroutput>) the major and minor version integers are the natural version numbers associated with the OS; e.g. &quot;10&quot; and &quot;6&quot; if the machine is using Mac OS X Snow Leopard.</para><para>For Windows-like systems (<computeroutput>wxOS_WINDOWS</computeroutput>) the major and minor version integers will contain the following values: <table rows="9" cols="3"><row>
+<entry thead="no"><para><bold>Windows OS name</bold> </para></entry><entry thead="no"><para><bold>Major version</bold> </para></entry><entry thead="no"><para><bold>Minor version</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>Windows 7 </para></entry><entry thead="no"><para>6 </para></entry><entry thead="no"><para>1 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Server 2008 R2 </para></entry><entry thead="no"><para>6 </para></entry><entry thead="no"><para>1 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Server 2008 </para></entry><entry thead="no"><para>6 </para></entry><entry thead="no"><para>0 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Vista </para></entry><entry thead="no"><para>6 </para></entry><entry thead="no"><para>0 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Server 2003 R2 </para></entry><entry thead="no"><para>5 </para></entry><entry thead="no"><para>2 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Server 2003 </para></entry><entry thead="no"><para>5 </para></entry><entry thead="no"><para>2 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows XP </para></entry><entry thead="no"><para>5 </para></entry><entry thead="no"><para>1 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows 2000 </para></entry><entry thead="no"><para>5 </para></entry><entry thead="no"><para>0 </para></entry></row>
+</table>
+See the <ulink url="http://msdn.microsoft.com/en-us/library/ms724832(VS.85).aspx">MSDN</ulink> for more info about the values above.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2404d9ca32701ddb2a34af00e81446b4" kindref="member">wxGetOsDescription()</ref>, <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="737"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga56083f0f3875e40b13aa6094e283584e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsPlatform64Bit</definition>
+        <argsstring>()</argsstring>
+        <name>wxIsPlatform64Bit</name>
+        <briefdescription>
+<para>Returns true if the operating system the program is running under is 64 bit. </para>        </briefdescription>
+        <detaileddescription>
+<para>The check is performed at run-time and may differ from the value available at compile-time (at compile-time you can just check if <computeroutput>sizeof(void*) == 8</computeroutput>) since the program could be running in emulation mode or in a mixed 32/64 bit system (bi-architecture operating system).</para><para><simplesect kind="note"><para>This function is not 100% reliable on some systems given the fact that there isn&apos;t always a standard way to do a reliable check on the OS architecture.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="753"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gaccf71bf91abcb6469e6b812acf40bd38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsPlatformLittleEndian</definition>
+        <argsstring>()</argsstring>
+        <name>wxIsPlatformLittleEndian</name>
+        <briefdescription>
+<para>Returns true if the current platform is little endian (instead of big endian). </para>        </briefdescription>
+        <detaileddescription>
+<para>The check is performed at run-time.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__byteorder" kindref="compound">Byte Order Functions and Macros</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="763"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga06f6fb212c396bd20865ee4e2f69aa1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref></type>
+        <definition>wxLinuxDistributionInfo wxGetLinuxDistributionInfo</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetLinuxDistributionInfo</name>
+        <briefdescription>
+<para>Returns a structure containing informations about the currently running Linux distribution. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function uses the <computeroutput>lsb_release</computeroutput> utility which is part of the <computeroutput>Linux Standard Base Core</computeroutput> specification (see <ulink url="http://refspecs.linux-foundation.org/lsb.shtml">http://refspecs.linux-foundation.org/lsb.shtml</ulink>) since the very first LSB release 1.0 (released in 2001). The <computeroutput>lsb_release</computeroutput> utility is very common on modern Linux distributions but in case it&apos;s not available, then this function will return a <ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref> structure containing empty strings.</para><para>This function is Linux-specific and is only available when the <computeroutput>__LINUX__</computeroutput> symbol is defined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="780"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The functions in this section are used to retrieve information about the current computer and/or user characteristics. </para>    </briefdescription>
+    <detaileddescription>
+<para>Related class group: <ref refid="group__group__class__net" kindref="compound">Networking</ref>, <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref>. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

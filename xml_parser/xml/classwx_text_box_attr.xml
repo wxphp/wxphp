@@ -1,0 +1,1494 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_text_box_attr" kind="class" prot="public">
+    <compoundname>wxTextBoxAttr</compoundname>
+    <includes local="no">wx/richtext/richtextbuffer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classwx_text_box_attr_1a66bcd5fc5cb3a40286c1b0d7fa946451" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxTextBoxAttr::m_flags</definition>
+        <argsstring></argsstring>
+        <name>m_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1222" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1aeaca44501dc3dfdb0f41df877df73e61" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref></type>
+        <definition>wxTextAttrDimensions wxTextBoxAttr::m_margins</definition>
+        <argsstring></argsstring>
+        <name>m_margins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1224" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1a6d92747880a71ce88f2ce85b540bd2c7" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref></type>
+        <definition>wxTextAttrDimensions wxTextBoxAttr::m_padding</definition>
+        <argsstring></argsstring>
+        <name>m_padding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1225" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1a44c902d2832d3b542004db47a7b0b10a" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref></type>
+        <definition>wxTextAttrDimensions wxTextBoxAttr::m_position</definition>
+        <argsstring></argsstring>
+        <name>m_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1226" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1a391f489ecf631db22e64adff961c550a" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref></type>
+        <definition>wxTextAttrSize wxTextBoxAttr::m_size</definition>
+        <argsstring></argsstring>
+        <name>m_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1228" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1a9845192fd158edff9fc5735b9f7df2ac" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_text_attr_borders" kindref="compound">wxTextAttrBorders</ref></type>
+        <definition>wxTextAttrBorders wxTextBoxAttr::m_border</definition>
+        <argsstring></argsstring>
+        <name>m_border</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1230" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1ab65195312e9dde98f3623b85d0cca425" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_text_attr_borders" kindref="compound">wxTextAttrBorders</ref></type>
+        <definition>wxTextAttrBorders wxTextBoxAttr::m_outline</definition>
+        <argsstring></argsstring>
+        <name>m_outline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1231" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1a2155a560ace148b73f5c630ef5486474" prot="public" static="no" mutable="no">
+        <type><ref refid="richtextbuffer_8h_1a116ee323e2700a60bc2b603001958526" kindref="member">wxTextBoxAttrFloatStyle</ref></type>
+        <definition>wxTextBoxAttrFloatStyle wxTextBoxAttr::m_floatMode</definition>
+        <argsstring></argsstring>
+        <name>m_floatMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1233" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1a20f8a5d8e67de1999a46f35595965805" prot="public" static="no" mutable="no">
+        <type><ref refid="richtextbuffer_8h_1afeeea46d367fb5787136dbae234f6b6f" kindref="member">wxTextBoxAttrClearStyle</ref></type>
+        <definition>wxTextBoxAttrClearStyle wxTextBoxAttr::m_clearMode</definition>
+        <argsstring></argsstring>
+        <name>m_clearMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1234" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1ac8be9f1ac1e288758b242c704f11ca0b" prot="public" static="no" mutable="no">
+        <type><ref refid="richtextbuffer_8h_1aaf8dcfe6b26c819ebdf51753d575a014" kindref="member">wxTextBoxAttrCollapseMode</ref></type>
+        <definition>wxTextBoxAttrCollapseMode wxTextBoxAttr::m_collapseMode</definition>
+        <argsstring></argsstring>
+        <name>m_collapseMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1235" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_box_attr_1a9b4d3938c5cbe6e68658d0df9392253d" prot="public" static="no" mutable="no">
+        <type><ref refid="richtextbuffer_8h_1adde8b611f7482b2915ae143b9658a5f1" kindref="member">wxTextBoxAttrVerticalAlignment</ref></type>
+        <definition>wxTextBoxAttrVerticalAlignment wxTextBoxAttr::m_verticalAlignment</definition>
+        <argsstring></argsstring>
+        <name>m_verticalAlignment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1236" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1236" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_text_box_attr_1a097557f857d13ad87852950027407d37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>wxTextBoxAttr::wxTextBoxAttr</definition>
+        <argsstring>()</argsstring>
+        <name>wxTextBoxAttr</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="900" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="900" bodyend="900"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a38a8da4f95e2d736fcbac2b6f775dc36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>wxTextBoxAttr::wxTextBoxAttr</definition>
+        <argsstring>(const wxTextBoxAttr &amp;attr)</argsstring>
+        <name>wxTextBoxAttr</name>
+        <param>
+          <type>const <ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="905" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="905" bodyend="905"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a3a6c836fb65e3c636e6acb24597640ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Initialises this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="910" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="910" bodyend="910"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ac8459c0fc6ef9a6f9ec82d34671af8b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+<para>Resets this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="915"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a0aded760cf63759cc2a207aed2084913" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::operator==</definition>
+        <argsstring>(const wxTextBoxAttr &amp;attr) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+<para>Equality test. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="926"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a18fe87f5461d0343de9620cfffe71c69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::EqPartial</definition>
+        <argsstring>(const wxTextBoxAttr &amp;attr) const </argsstring>
+        <name>EqPartial</name>
+        <param>
+          <type>const <ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+<para>Partial equality test, ignoring unset attributes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="932"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ab2e560afaea95e3c0e62eea682bcc6d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::Apply</definition>
+        <argsstring>(const wxTextBoxAttr &amp;style, const wxTextBoxAttr *compareWith=NULL)</argsstring>
+        <name>Apply</name>
+        <param>
+          <type>const <ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> &amp;</type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> *</type>
+          <declname>compareWith</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Merges the given attributes. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>compareWith</emphasis> is non-NULL, then it will be used to mask out those attributes that are the same in style and <emphasis>compareWith</emphasis>, for situations where we don&apos;t want to explicitly set inherited attributes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="939"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a0f748e0ef2d553379243f270782853a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::CollectCommonAttributes</definition>
+        <argsstring>(const wxTextBoxAttr &amp;attr, wxTextBoxAttr &amp;clashingAttr, wxTextBoxAttr &amp;absentAttr)</argsstring>
+        <name>CollectCommonAttributes</name>
+        <param>
+          <type>const <ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> &amp;</type>
+          <declname>clashingAttr</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> &amp;</type>
+          <declname>absentAttr</declname>
+        </param>
+        <briefdescription>
+<para>Collects the attributes that are common to a range of content, building up a note of which attributes are absent in some objects and which clash in some objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="945"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a9e8519bc5846d94d8ff4c37425e29494" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::RemoveStyle</definition>
+        <argsstring>(const wxTextBoxAttr &amp;attr)</argsstring>
+        <name>RemoveStyle</name>
+        <param>
+          <type>const <ref refid="classwx_text_box_attr" kindref="compound">wxTextBoxAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+<para>Removes the specified attributes from this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="950"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a7d03d3a0f6dee8f6818cbc86f34947ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::SetFlags</definition>
+        <argsstring>(int flags)</argsstring>
+        <name>SetFlags</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Sets the flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="955" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="955" bodyend="955"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a71feebf7db18fb07b3899f147f826d5a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTextBoxAttr::GetFlags</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFlags</name>
+        <briefdescription>
+<para>Returns the flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="960" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="960" bodyend="960"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1aba9cbbc50376a00303282700fe628e9a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::HasFlag</definition>
+        <argsstring>(wxTextBoxAttrFlags flag) const </argsstring>
+        <name>HasFlag</name>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1adaea42d0595ccb41682477db8f57d927" kindref="member">wxTextBoxAttrFlags</ref></type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Is this flag present? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="965" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="965" bodyend="965"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a3a8e398ea429dc6cf346b18ef93ad4a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::RemoveFlag</definition>
+        <argsstring>(wxTextBoxAttrFlags flag)</argsstring>
+        <name>RemoveFlag</name>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1adaea42d0595ccb41682477db8f57d927" kindref="member">wxTextBoxAttrFlags</ref></type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Removes this flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="970" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="970" bodyend="970"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ae3cd6938e445fc520ad8842e07f865a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::AddFlag</definition>
+        <argsstring>(wxTextBoxAttrFlags flag)</argsstring>
+        <name>AddFlag</name>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1adaea42d0595ccb41682477db8f57d927" kindref="member">wxTextBoxAttrFlags</ref></type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Adds this flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="975" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="975" bodyend="975"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a9e1f530fd07971d6e201d04c4d39da62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::IsDefault</definition>
+        <argsstring>() const </argsstring>
+        <name>IsDefault</name>
+        <briefdescription>
+<para>Returns true if no attributes are set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="980"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a2ad69afe8d6037fee5742cb282564a15" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="richtextbuffer_8h_1a116ee323e2700a60bc2b603001958526" kindref="member">wxTextBoxAttrFloatStyle</ref></type>
+        <definition>wxTextBoxAttrFloatStyle wxTextBoxAttr::GetFloatMode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFloatMode</name>
+        <briefdescription>
+<para>Returns the float mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="985" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="985" bodyend="985"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1aec950602495299cb96759a3d29f3a1a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::SetFloatMode</definition>
+        <argsstring>(wxTextBoxAttrFloatStyle mode)</argsstring>
+        <name>SetFloatMode</name>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1a116ee323e2700a60bc2b603001958526" kindref="member">wxTextBoxAttrFloatStyle</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Sets the float mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="990" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="990" bodyend="990"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ade1587037ef8c0c6d9eaffb77e518667" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::HasFloatMode</definition>
+        <argsstring>() const </argsstring>
+        <name>HasFloatMode</name>
+        <briefdescription>
+<para>Returns true if float mode is active. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="995" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="995" bodyend="995"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ad9be3f5554297b8b6fb2288b6dd2c218" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::IsFloating</definition>
+        <argsstring>() const </argsstring>
+        <name>IsFloating</name>
+        <briefdescription>
+<para>Returns true if this object is floating. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1000" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1000" bodyend="1000"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a55bf4c50787dfe80b686d601c43d6fbc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="richtextbuffer_8h_1afeeea46d367fb5787136dbae234f6b6f" kindref="member">wxTextBoxAttrClearStyle</ref></type>
+        <definition>wxTextBoxAttrClearStyle wxTextBoxAttr::GetClearMode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetClearMode</name>
+        <briefdescription>
+<para>Returns the clear mode - whether to wrap text after object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently unimplemented. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1005" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1005" bodyend="1005"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a30f044f1360a76364acbdd1f5b107074" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::SetClearMode</definition>
+        <argsstring>(wxTextBoxAttrClearStyle mode)</argsstring>
+        <name>SetClearMode</name>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1afeeea46d367fb5787136dbae234f6b6f" kindref="member">wxTextBoxAttrClearStyle</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Set the clear mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently unimplemented. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1010" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1010" bodyend="1010"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1acebf9fee52483f0dac2a78319e11e636" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::HasClearMode</definition>
+        <argsstring>() const </argsstring>
+        <name>HasClearMode</name>
+        <briefdescription>
+<para>Returns true if we have a clear flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1015" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1015" bodyend="1015"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a85823b35c061b26eab7afd4d0fdf51cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="richtextbuffer_8h_1aaf8dcfe6b26c819ebdf51753d575a014" kindref="member">wxTextBoxAttrCollapseMode</ref></type>
+        <definition>wxTextBoxAttrCollapseMode wxTextBoxAttr::GetCollapseBorders</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCollapseBorders</name>
+        <briefdescription>
+<para>Returns the collapse mode - whether to collapse borders. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently unimplemented. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1020" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1020" bodyend="1020"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a44d5560eb5b172d70ede42da0fca6260" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::SetCollapseBorders</definition>
+        <argsstring>(wxTextBoxAttrCollapseMode collapse)</argsstring>
+        <name>SetCollapseBorders</name>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1aaf8dcfe6b26c819ebdf51753d575a014" kindref="member">wxTextBoxAttrCollapseMode</ref></type>
+          <declname>collapse</declname>
+        </param>
+        <briefdescription>
+<para>Sets the collapse mode - whether to collapse borders. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently unimplemented. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1025" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1025" bodyend="1025"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a7d24ca0ca44e7e8ed63c0a497fa38393" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::HasCollapseBorders</definition>
+        <argsstring>() const </argsstring>
+        <name>HasCollapseBorders</name>
+        <briefdescription>
+<para>Returns true if the collapse borders flag is present. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1030" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1030" bodyend="1030"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a366f20960fbb9e42db35d2193adbed60" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="richtextbuffer_8h_1adde8b611f7482b2915ae143b9658a5f1" kindref="member">wxTextBoxAttrVerticalAlignment</ref></type>
+        <definition>wxTextBoxAttrVerticalAlignment wxTextBoxAttr::GetVerticalAlignment</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVerticalAlignment</name>
+        <briefdescription>
+<para>Returns the vertical alignment. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1035" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1035" bodyend="1035"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ae19a6a740a8be8ad9ae08fc7090d4f0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::SetVerticalAlignment</definition>
+        <argsstring>(wxTextBoxAttrVerticalAlignment verticalAlignment)</argsstring>
+        <name>SetVerticalAlignment</name>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1adde8b611f7482b2915ae143b9658a5f1" kindref="member">wxTextBoxAttrVerticalAlignment</ref></type>
+          <declname>verticalAlignment</declname>
+        </param>
+        <briefdescription>
+<para>Sets the vertical alignment. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1040" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1040" bodyend="1040"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a81f40e990008607096d91493ad9193f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextBoxAttr::HasVerticalAlignment</definition>
+        <argsstring>() const </argsstring>
+        <name>HasVerticalAlignment</name>
+        <briefdescription>
+<para>Returns true if a vertical alignment flag is present. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1045" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1045" bodyend="1045"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1aaa19f464643d33499b442fcd1f91cda7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref> &amp;</type>
+        <definition>wxTextAttrDimensions&amp; wxTextBoxAttr::GetMargins</definition>
+        <argsstring>()</argsstring>
+        <name>GetMargins</name>
+        <briefdescription>
+<para>Returns the margin values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1050" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1050" bodyend="1050"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a207355c3bf449b508643986ca3b03342" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref> &amp;</type>
+        <definition>const wxTextAttrDimensions&amp; wxTextBoxAttr::GetMargins</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMargins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1051" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1051" bodyend="1051"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a185d98b9378195b156f8bb111d8ee6dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetLeftMargin</definition>
+        <argsstring>()</argsstring>
+        <name>GetLeftMargin</name>
+        <briefdescription>
+<para>Returns the left margin. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1056" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1056" bodyend="1056"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a3e85048852c03db9012e7c7d210de85d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetLeftMargin</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLeftMargin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1057" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1057" bodyend="1057"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1aa4cc0a9e39956a7e27201c8df428f3c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetRightMargin</definition>
+        <argsstring>()</argsstring>
+        <name>GetRightMargin</name>
+        <briefdescription>
+<para>Returns the right margin. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1062" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1062" bodyend="1062"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a03321cbda0a05b4162178fbf0f9e47f1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetRightMargin</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRightMargin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1063" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1063" bodyend="1063"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a4773e8d0c7390c27b0f98a1d8c20ece3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetTopMargin</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopMargin</name>
+        <briefdescription>
+<para>Returns the top margin. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1068" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1068" bodyend="1068"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a090fc1d2542ebcd32e7cb9f9aede7340" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetTopMargin</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTopMargin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1069" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1069" bodyend="1069"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a989ab1b44827d8327555b727802d5982" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetBottomMargin</definition>
+        <argsstring>()</argsstring>
+        <name>GetBottomMargin</name>
+        <briefdescription>
+<para>Returns the bottom margin. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1074" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1074" bodyend="1074"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ae2e7aab36c3bf47955a444326c50b555" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetBottomMargin</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBottomMargin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1075" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1075" bodyend="1075"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a6bda5852cc6780aa44c2210bb04cfc4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref> &amp;</type>
+        <definition>wxTextAttrDimensions&amp; wxTextBoxAttr::GetPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetPosition</name>
+        <briefdescription>
+<para>Returns the position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1080" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1080" bodyend="1080"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a8a37bafea9909f206e0649b068c00a0d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref> &amp;</type>
+        <definition>const wxTextAttrDimensions&amp; wxTextBoxAttr::GetPosition</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1081" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1081" bodyend="1081"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ae386af0ea8ba7572e56b9a8908e8978b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetLeft</definition>
+        <argsstring>()</argsstring>
+        <name>GetLeft</name>
+        <briefdescription>
+<para>Returns the left position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1086" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1086" bodyend="1086"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a7c44722cdd9436380c59b2da1b38d273" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetLeft</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1087" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1087" bodyend="1087"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a90c721b62ef19dfec4705e075b7d404f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetRight</definition>
+        <argsstring>()</argsstring>
+        <name>GetRight</name>
+        <briefdescription>
+<para>Returns the right position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1092" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1092" bodyend="1092"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1af2adbd6bcd12b5ee59eb137622025f64" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetRight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1093" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1093" bodyend="1093"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a634258f5efe4e31fbf5f8053c456ffb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetTop</definition>
+        <argsstring>()</argsstring>
+        <name>GetTop</name>
+        <briefdescription>
+<para>Returns the top position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1098" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1098" bodyend="1098"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ac15a425c52a5ad32de3afc3695d99b22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetTop</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1099" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1099" bodyend="1099"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a4ac7eb913c79ee937a83c7ee2b7e40b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetBottom</definition>
+        <argsstring>()</argsstring>
+        <name>GetBottom</name>
+        <briefdescription>
+<para>Returns the bottom position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1104" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1104" bodyend="1104"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a7ba9e7d8a782d892a06bf84b9f8ca5ed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetBottom</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBottom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1105" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1105" bodyend="1105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a19277fa131bf5522c6ce559e4210466d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref> &amp;</type>
+        <definition>wxTextAttrDimensions&amp; wxTextBoxAttr::GetPadding</definition>
+        <argsstring>()</argsstring>
+        <name>GetPadding</name>
+        <briefdescription>
+<para>Returns the padding values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1110" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1110" bodyend="1110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a6c77038b487cdc93370a3d68b19d87f1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimensions" kindref="compound">wxTextAttrDimensions</ref> &amp;</type>
+        <definition>const wxTextAttrDimensions&amp; wxTextBoxAttr::GetPadding</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPadding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1111" bodyend="1111"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a04d3002a74112562208e32f6ea645e1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetLeftPadding</definition>
+        <argsstring>()</argsstring>
+        <name>GetLeftPadding</name>
+        <briefdescription>
+<para>Returns the left padding value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1116" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1116" bodyend="1116"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a4f896eb05836c0e24da20d8ddcf2b4d0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetLeftPadding</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLeftPadding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1117" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1117" bodyend="1117"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a64e5a2af2518afc2285198f9ef3b2585" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetRightPadding</definition>
+        <argsstring>()</argsstring>
+        <name>GetRightPadding</name>
+        <briefdescription>
+<para>Returns the right padding value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1122" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1122" bodyend="1122"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a28ccbfd69178bc73d25874b289a693f9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetRightPadding</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRightPadding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1123" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1123" bodyend="1123"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a2bbe7203ebf316248e7f08526f314403" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetTopPadding</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopPadding</name>
+        <briefdescription>
+<para>Returns the top padding value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1128" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1128" bodyend="1128"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ac5d3ffcf49378f005ce46ef371ffde93" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetTopPadding</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTopPadding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1129" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1129" bodyend="1129"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a2b8690383f367da6b52680970a93523c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetBottomPadding</definition>
+        <argsstring>()</argsstring>
+        <name>GetBottomPadding</name>
+        <briefdescription>
+<para>Returns the bottom padding value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1134" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1134" bodyend="1134"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a7f7b0cec84ac3401c8636307a2e771b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetBottomPadding</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBottomPadding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1135" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1135" bodyend="1135"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a64b162f4aed173c3e13df411af605860" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_borders" kindref="compound">wxTextAttrBorders</ref> &amp;</type>
+        <definition>wxTextAttrBorders&amp; wxTextBoxAttr::GetBorder</definition>
+        <argsstring>()</argsstring>
+        <name>GetBorder</name>
+        <briefdescription>
+<para>Returns the borders. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1140" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1140" bodyend="1140"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1abb6e0983a772d0845a0e5ec473bf9d5a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_borders" kindref="compound">wxTextAttrBorders</ref> &amp;</type>
+        <definition>const wxTextAttrBorders&amp; wxTextBoxAttr::GetBorder</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1141" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1141" bodyend="1141"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a105840c7c12eeb67d1e3b8394c978232" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>wxTextAttrBorder&amp; wxTextBoxAttr::GetLeftBorder</definition>
+        <argsstring>()</argsstring>
+        <name>GetLeftBorder</name>
+        <briefdescription>
+<para>Returns the left border. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1146" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1146" bodyend="1146"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1acb2bf19b84aace5685ae717a9d13846e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>const wxTextAttrBorder&amp; wxTextBoxAttr::GetLeftBorder</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLeftBorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1147" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1147" bodyend="1147"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a921b6194c3b343a11e2f98e55dd038d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>wxTextAttrBorder&amp; wxTextBoxAttr::GetTopBorder</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopBorder</name>
+        <briefdescription>
+<para>Returns the top border. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1152" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1152" bodyend="1152"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ac1b766044f8f79f303cde2c74b985ea8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>const wxTextAttrBorder&amp; wxTextBoxAttr::GetTopBorder</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTopBorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1153" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1153" bodyend="1153"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a0f163066c7ad948d39e12cc750f569c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>wxTextAttrBorder&amp; wxTextBoxAttr::GetRightBorder</definition>
+        <argsstring>()</argsstring>
+        <name>GetRightBorder</name>
+        <briefdescription>
+<para>Returns the right border. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1158" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1158" bodyend="1158"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a673bb94655fff400c9c7e12f7cd79573" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>const wxTextAttrBorder&amp; wxTextBoxAttr::GetRightBorder</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRightBorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1159" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1159" bodyend="1159"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1aee1c5467e6db5a00506981b95aacdbd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>wxTextAttrBorder&amp; wxTextBoxAttr::GetBottomBorder</definition>
+        <argsstring>()</argsstring>
+        <name>GetBottomBorder</name>
+        <briefdescription>
+<para>Returns the bottom border. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1164" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1164" bodyend="1164"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a29390919127a0d3990d34a0482b6e08a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>const wxTextAttrBorder&amp; wxTextBoxAttr::GetBottomBorder</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBottomBorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1165" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1165" bodyend="1165"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a3c1c8e59161a9cebca80f430f96e3e66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_borders" kindref="compound">wxTextAttrBorders</ref> &amp;</type>
+        <definition>wxTextAttrBorders&amp; wxTextBoxAttr::GetOutline</definition>
+        <argsstring>()</argsstring>
+        <name>GetOutline</name>
+        <briefdescription>
+<para>Returns the outline. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1170" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1170" bodyend="1170"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a584b9a4d8d3d8d0002ed817a290ac9d0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_borders" kindref="compound">wxTextAttrBorders</ref> &amp;</type>
+        <definition>const wxTextAttrBorders&amp; wxTextBoxAttr::GetOutline</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOutline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1171" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1171" bodyend="1171"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a08a493a344f920bb27608aa9f4067f5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>wxTextAttrBorder&amp; wxTextBoxAttr::GetLeftOutline</definition>
+        <argsstring>()</argsstring>
+        <name>GetLeftOutline</name>
+        <briefdescription>
+<para>Returns the left outline. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1176" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1176" bodyend="1176"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a48587cbd0fb4f539489165edd1ca6ef2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>const wxTextAttrBorder&amp; wxTextBoxAttr::GetLeftOutline</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLeftOutline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1177" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1177" bodyend="1177"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a1f2d63ac7fd59755fd44c0ef0b62c1e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>wxTextAttrBorder&amp; wxTextBoxAttr::GetTopOutline</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopOutline</name>
+        <briefdescription>
+<para>Returns the top outline. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1182" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1182" bodyend="1182"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a6fcc3bf189d04b14f45f4d20013b6fe1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>const wxTextAttrBorder&amp; wxTextBoxAttr::GetTopOutline</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTopOutline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1183" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1183" bodyend="1183"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1afd9db26097d08385faa94fef988959e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>wxTextAttrBorder&amp; wxTextBoxAttr::GetRightOutline</definition>
+        <argsstring>()</argsstring>
+        <name>GetRightOutline</name>
+        <briefdescription>
+<para>Returns the right outline. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1188" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1188" bodyend="1188"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a6eb2b7abfe1ae5b5220877b35705f627" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>const wxTextAttrBorder&amp; wxTextBoxAttr::GetRightOutline</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRightOutline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1189" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1189" bodyend="1189"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a36d97e6813b5af3bf0f29f0f774175a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>wxTextAttrBorder&amp; wxTextBoxAttr::GetBottomOutline</definition>
+        <argsstring>()</argsstring>
+        <name>GetBottomOutline</name>
+        <briefdescription>
+<para>Returns the bottom outline. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1194" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1194" bodyend="1194"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ae1b852f00390d00599f0aa6344b7d61f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref> &amp;</type>
+        <definition>const wxTextAttrBorder&amp; wxTextBoxAttr::GetBottomOutline</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBottomOutline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1195" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1195" bodyend="1195"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ae61d9517503f91167da6f1908a491e9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+        <definition>wxTextAttrSize&amp; wxTextBoxAttr::GetSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+<para>Returns the object size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1200" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1200" bodyend="1200"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1aef4f0bf35e6073fbea689975bed7d55b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+        <definition>const wxTextAttrSize&amp; wxTextBoxAttr::GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1201" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1201" bodyend="1201"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1ae092d9f10edf4619fef5389dafc3dce6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextBoxAttr::SetSize</definition>
+        <argsstring>(const wxTextAttrSize &amp;sz)</argsstring>
+        <name>SetSize</name>
+        <param>
+          <type>const <ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+<para>Sets the object size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1206" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1206" bodyend="1206"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a8c40e0e68c0e5e4f6953627413abc1e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetWidth</definition>
+        <argsstring>()</argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Returns the object width. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1211" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1211" bodyend="1211"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a35c954c29b6761f9c13a307586f47f6c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1212" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1212" bodyend="1212"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a3a1853f0dd39f0b6e8d1a6269ba46dce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextBoxAttr::GetHeight</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+<para>Returns the object height. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1217" bodyend="1217"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_box_attr_1a59a7ad6a39e691e55a92b0910423e746" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextBoxAttr::GetHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1218" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1218" bodyend="1218"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class representing the box attributes of a rich text object. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="10706">
+        <label>wxTextAttrBorder</label>
+        <link refid="classwx_text_attr_border"/>
+        <childnode refid="10703" relation="usage">
+          <edgelabel>m_borderWidth</edgelabel>
+        </childnode>
+      </node>
+      <node id="10701">
+        <label>wxTextBoxAttr</label>
+        <link refid="classwx_text_box_attr"/>
+        <childnode refid="10702" relation="usage">
+          <edgelabel>m_size</edgelabel>
+        </childnode>
+        <childnode refid="10704" relation="usage">
+          <edgelabel>m_margins</edgelabel>
+          <edgelabel>m_padding</edgelabel>
+          <edgelabel>m_position</edgelabel>
+        </childnode>
+        <childnode refid="10705" relation="usage">
+          <edgelabel>m_border</edgelabel>
+          <edgelabel>m_outline</edgelabel>
+        </childnode>
+      </node>
+      <node id="10704">
+        <label>wxTextAttrDimensions</label>
+        <link refid="classwx_text_attr_dimensions"/>
+        <childnode refid="10703" relation="usage">
+          <edgelabel>m_left</edgelabel>
+          <edgelabel>m_bottom</edgelabel>
+          <edgelabel>m_top</edgelabel>
+          <edgelabel>m_right</edgelabel>
+        </childnode>
+      </node>
+      <node id="10702">
+        <label>wxTextAttrSize</label>
+        <link refid="classwx_text_attr_size"/>
+        <childnode refid="10703" relation="usage">
+          <edgelabel>m_width</edgelabel>
+          <edgelabel>m_height</edgelabel>
+        </childnode>
+      </node>
+      <node id="10703">
+        <label>wxTextAttrDimension</label>
+        <link refid="classwx_text_attr_dimension"/>
+      </node>
+      <node id="10705">
+        <label>wxTextAttrBorders</label>
+        <link refid="classwx_text_attr_borders"/>
+        <childnode refid="10706" relation="usage">
+          <edgelabel>m_left</edgelabel>
+          <edgelabel>m_bottom</edgelabel>
+          <edgelabel>m_top</edgelabel>
+          <edgelabel>m_right</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="895" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="894" bodyend="1237"/>
+    <listofallmembers>
+      <member refid="classwx_text_box_attr_1ae3cd6938e445fc520ad8842e07f865a4" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>AddFlag</name></member>
+      <member refid="classwx_text_box_attr_1ab2e560afaea95e3c0e62eea682bcc6d5" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>Apply</name></member>
+      <member refid="classwx_text_box_attr_1a0f748e0ef2d553379243f270782853a4" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>CollectCommonAttributes</name></member>
+      <member refid="classwx_text_box_attr_1a18fe87f5461d0343de9620cfffe71c69" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>EqPartial</name></member>
+      <member refid="classwx_text_box_attr_1a64b162f4aed173c3e13df411af605860" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBorder</name></member>
+      <member refid="classwx_text_box_attr_1abb6e0983a772d0845a0e5ec473bf9d5a" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBorder</name></member>
+      <member refid="classwx_text_box_attr_1a4ac7eb913c79ee937a83c7ee2b7e40b9" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottom</name></member>
+      <member refid="classwx_text_box_attr_1a7ba9e7d8a782d892a06bf84b9f8ca5ed" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottom</name></member>
+      <member refid="classwx_text_box_attr_1aee1c5467e6db5a00506981b95aacdbd7" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottomBorder</name></member>
+      <member refid="classwx_text_box_attr_1a29390919127a0d3990d34a0482b6e08a" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottomBorder</name></member>
+      <member refid="classwx_text_box_attr_1a989ab1b44827d8327555b727802d5982" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottomMargin</name></member>
+      <member refid="classwx_text_box_attr_1ae2e7aab36c3bf47955a444326c50b555" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottomMargin</name></member>
+      <member refid="classwx_text_box_attr_1a36d97e6813b5af3bf0f29f0f774175a0" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottomOutline</name></member>
+      <member refid="classwx_text_box_attr_1ae1b852f00390d00599f0aa6344b7d61f" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottomOutline</name></member>
+      <member refid="classwx_text_box_attr_1a2b8690383f367da6b52680970a93523c" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottomPadding</name></member>
+      <member refid="classwx_text_box_attr_1a7f7b0cec84ac3401c8636307a2e771b3" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetBottomPadding</name></member>
+      <member refid="classwx_text_box_attr_1a55bf4c50787dfe80b686d601c43d6fbc" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetClearMode</name></member>
+      <member refid="classwx_text_box_attr_1a85823b35c061b26eab7afd4d0fdf51cb" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetCollapseBorders</name></member>
+      <member refid="classwx_text_box_attr_1a71feebf7db18fb07b3899f147f826d5a" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetFlags</name></member>
+      <member refid="classwx_text_box_attr_1a2ad69afe8d6037fee5742cb282564a15" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetFloatMode</name></member>
+      <member refid="classwx_text_box_attr_1a3a1853f0dd39f0b6e8d1a6269ba46dce" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetHeight</name></member>
+      <member refid="classwx_text_box_attr_1a59a7ad6a39e691e55a92b0910423e746" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetHeight</name></member>
+      <member refid="classwx_text_box_attr_1ae386af0ea8ba7572e56b9a8908e8978b" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeft</name></member>
+      <member refid="classwx_text_box_attr_1a7c44722cdd9436380c59b2da1b38d273" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeft</name></member>
+      <member refid="classwx_text_box_attr_1a105840c7c12eeb67d1e3b8394c978232" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeftBorder</name></member>
+      <member refid="classwx_text_box_attr_1acb2bf19b84aace5685ae717a9d13846e" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeftBorder</name></member>
+      <member refid="classwx_text_box_attr_1a185d98b9378195b156f8bb111d8ee6dd" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeftMargin</name></member>
+      <member refid="classwx_text_box_attr_1a3e85048852c03db9012e7c7d210de85d" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeftMargin</name></member>
+      <member refid="classwx_text_box_attr_1a08a493a344f920bb27608aa9f4067f5a" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeftOutline</name></member>
+      <member refid="classwx_text_box_attr_1a48587cbd0fb4f539489165edd1ca6ef2" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeftOutline</name></member>
+      <member refid="classwx_text_box_attr_1a04d3002a74112562208e32f6ea645e1c" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeftPadding</name></member>
+      <member refid="classwx_text_box_attr_1a4f896eb05836c0e24da20d8ddcf2b4d0" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetLeftPadding</name></member>
+      <member refid="classwx_text_box_attr_1aaa19f464643d33499b442fcd1f91cda7" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetMargins</name></member>
+      <member refid="classwx_text_box_attr_1a207355c3bf449b508643986ca3b03342" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetMargins</name></member>
+      <member refid="classwx_text_box_attr_1a3c1c8e59161a9cebca80f430f96e3e66" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetOutline</name></member>
+      <member refid="classwx_text_box_attr_1a584b9a4d8d3d8d0002ed817a290ac9d0" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetOutline</name></member>
+      <member refid="classwx_text_box_attr_1a19277fa131bf5522c6ce559e4210466d" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetPadding</name></member>
+      <member refid="classwx_text_box_attr_1a6c77038b487cdc93370a3d68b19d87f1" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetPadding</name></member>
+      <member refid="classwx_text_box_attr_1a6bda5852cc6780aa44c2210bb04cfc4a" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetPosition</name></member>
+      <member refid="classwx_text_box_attr_1a8a37bafea9909f206e0649b068c00a0d" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetPosition</name></member>
+      <member refid="classwx_text_box_attr_1a90c721b62ef19dfec4705e075b7d404f" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRight</name></member>
+      <member refid="classwx_text_box_attr_1af2adbd6bcd12b5ee59eb137622025f64" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRight</name></member>
+      <member refid="classwx_text_box_attr_1a0f163066c7ad948d39e12cc750f569c1" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRightBorder</name></member>
+      <member refid="classwx_text_box_attr_1a673bb94655fff400c9c7e12f7cd79573" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRightBorder</name></member>
+      <member refid="classwx_text_box_attr_1aa4cc0a9e39956a7e27201c8df428f3c6" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRightMargin</name></member>
+      <member refid="classwx_text_box_attr_1a03321cbda0a05b4162178fbf0f9e47f1" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRightMargin</name></member>
+      <member refid="classwx_text_box_attr_1afd9db26097d08385faa94fef988959e0" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRightOutline</name></member>
+      <member refid="classwx_text_box_attr_1a6eb2b7abfe1ae5b5220877b35705f627" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRightOutline</name></member>
+      <member refid="classwx_text_box_attr_1a64e5a2af2518afc2285198f9ef3b2585" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRightPadding</name></member>
+      <member refid="classwx_text_box_attr_1a28ccbfd69178bc73d25874b289a693f9" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetRightPadding</name></member>
+      <member refid="classwx_text_box_attr_1ae61d9517503f91167da6f1908a491e9f" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetSize</name></member>
+      <member refid="classwx_text_box_attr_1aef4f0bf35e6073fbea689975bed7d55b" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetSize</name></member>
+      <member refid="classwx_text_box_attr_1a634258f5efe4e31fbf5f8053c456ffb4" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTop</name></member>
+      <member refid="classwx_text_box_attr_1ac15a425c52a5ad32de3afc3695d99b22" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTop</name></member>
+      <member refid="classwx_text_box_attr_1a921b6194c3b343a11e2f98e55dd038d8" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTopBorder</name></member>
+      <member refid="classwx_text_box_attr_1ac1b766044f8f79f303cde2c74b985ea8" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTopBorder</name></member>
+      <member refid="classwx_text_box_attr_1a4773e8d0c7390c27b0f98a1d8c20ece3" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTopMargin</name></member>
+      <member refid="classwx_text_box_attr_1a090fc1d2542ebcd32e7cb9f9aede7340" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTopMargin</name></member>
+      <member refid="classwx_text_box_attr_1a1f2d63ac7fd59755fd44c0ef0b62c1e2" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTopOutline</name></member>
+      <member refid="classwx_text_box_attr_1a6fcc3bf189d04b14f45f4d20013b6fe1" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTopOutline</name></member>
+      <member refid="classwx_text_box_attr_1a2bbe7203ebf316248e7f08526f314403" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTopPadding</name></member>
+      <member refid="classwx_text_box_attr_1ac5d3ffcf49378f005ce46ef371ffde93" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetTopPadding</name></member>
+      <member refid="classwx_text_box_attr_1a366f20960fbb9e42db35d2193adbed60" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetVerticalAlignment</name></member>
+      <member refid="classwx_text_box_attr_1a8c40e0e68c0e5e4f6953627413abc1e6" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetWidth</name></member>
+      <member refid="classwx_text_box_attr_1a35c954c29b6761f9c13a307586f47f6c" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>GetWidth</name></member>
+      <member refid="classwx_text_box_attr_1acebf9fee52483f0dac2a78319e11e636" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>HasClearMode</name></member>
+      <member refid="classwx_text_box_attr_1a7d24ca0ca44e7e8ed63c0a497fa38393" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>HasCollapseBorders</name></member>
+      <member refid="classwx_text_box_attr_1aba9cbbc50376a00303282700fe628e9a" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>HasFlag</name></member>
+      <member refid="classwx_text_box_attr_1ade1587037ef8c0c6d9eaffb77e518667" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>HasFloatMode</name></member>
+      <member refid="classwx_text_box_attr_1a81f40e990008607096d91493ad9193f6" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>HasVerticalAlignment</name></member>
+      <member refid="classwx_text_box_attr_1a3a6c836fb65e3c636e6acb24597640ec" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>Init</name></member>
+      <member refid="classwx_text_box_attr_1a9e1f530fd07971d6e201d04c4d39da62" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>IsDefault</name></member>
+      <member refid="classwx_text_box_attr_1ad9be3f5554297b8b6fb2288b6dd2c218" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>IsFloating</name></member>
+      <member refid="classwx_text_box_attr_1a9845192fd158edff9fc5735b9f7df2ac" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_border</name></member>
+      <member refid="classwx_text_box_attr_1a20f8a5d8e67de1999a46f35595965805" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_clearMode</name></member>
+      <member refid="classwx_text_box_attr_1ac8be9f1ac1e288758b242c704f11ca0b" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_collapseMode</name></member>
+      <member refid="classwx_text_box_attr_1a66bcd5fc5cb3a40286c1b0d7fa946451" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_flags</name></member>
+      <member refid="classwx_text_box_attr_1a2155a560ace148b73f5c630ef5486474" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_floatMode</name></member>
+      <member refid="classwx_text_box_attr_1aeaca44501dc3dfdb0f41df877df73e61" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_margins</name></member>
+      <member refid="classwx_text_box_attr_1ab65195312e9dde98f3623b85d0cca425" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_outline</name></member>
+      <member refid="classwx_text_box_attr_1a6d92747880a71ce88f2ce85b540bd2c7" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_padding</name></member>
+      <member refid="classwx_text_box_attr_1a44c902d2832d3b542004db47a7b0b10a" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_position</name></member>
+      <member refid="classwx_text_box_attr_1a391f489ecf631db22e64adff961c550a" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_size</name></member>
+      <member refid="classwx_text_box_attr_1a9b4d3938c5cbe6e68658d0df9392253d" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>m_verticalAlignment</name></member>
+      <member refid="classwx_text_box_attr_1a0aded760cf63759cc2a207aed2084913" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>operator==</name></member>
+      <member refid="classwx_text_box_attr_1a3a8e398ea429dc6cf346b18ef93ad4a9" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>RemoveFlag</name></member>
+      <member refid="classwx_text_box_attr_1a9e8519bc5846d94d8ff4c37425e29494" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>RemoveStyle</name></member>
+      <member refid="classwx_text_box_attr_1ac8459c0fc6ef9a6f9ec82d34671af8b5" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>Reset</name></member>
+      <member refid="classwx_text_box_attr_1a30f044f1360a76364acbdd1f5b107074" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>SetClearMode</name></member>
+      <member refid="classwx_text_box_attr_1a44d5560eb5b172d70ede42da0fca6260" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>SetCollapseBorders</name></member>
+      <member refid="classwx_text_box_attr_1a7d03d3a0f6dee8f6818cbc86f34947ec" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>SetFlags</name></member>
+      <member refid="classwx_text_box_attr_1aec950602495299cb96759a3d29f3a1a3" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>SetFloatMode</name></member>
+      <member refid="classwx_text_box_attr_1ae092d9f10edf4619fef5389dafc3dce6" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>SetSize</name></member>
+      <member refid="classwx_text_box_attr_1ae19a6a740a8be8ad9ae08fc7090d4f0e" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>SetVerticalAlignment</name></member>
+      <member refid="classwx_text_box_attr_1a097557f857d13ad87852950027407d37" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>wxTextBoxAttr</name></member>
+      <member refid="classwx_text_box_attr_1a38a8da4f95e2d736fcbac2b6f775dc36" prot="public" virt="non-virtual"><scope>wxTextBoxAttr</scope><name>wxTextBoxAttr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

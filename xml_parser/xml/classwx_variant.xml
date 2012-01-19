@@ -1,0 +1,2056 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_variant" kind="class" prot="public">
+    <compoundname>wxVariant</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/variant.h</includes>
+      <sectiondef kind="user-defined">
+      <header>List Functionality</header>
+      <description><para><anchor id="_1amgrpf42ad0940945a084280de2e178957780"/> </para></description>
+      <memberdef kind="function" id="classwx_variant_1a59c3a9127a5dd1d4d1172f130395f3e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
+        <definition>wxVariant wxVariant::operator[]</definition>
+        <argsstring>(size_t idx) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value at <emphasis>idx</emphasis> (zero-based). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1afcdfcdf494f5751dd46d165773fc0efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+        <definition>wxVariant&amp; wxVariant::operator[]</definition>
+        <argsstring>(size_t idx)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Returns a reference to the value at <emphasis>idx</emphasis> (zero-based). </para>        </briefdescription>
+        <detaileddescription>
+<para>This can be used to change the value at this index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aee18e84b818827d3c40308bfadc7634b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::Append</definition>
+        <argsstring>(const wxVariant &amp;value)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Appends a value to the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a7edd81c06681863498e63c29e22a8837" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Makes the variant null by deleting the internal data and set the name to wxEmptyString. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ac7399aa8b12e52d219cb25e3df87d259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::ClearList</definition>
+        <argsstring>()</argsstring>
+        <name>ClearList</name>
+        <briefdescription>
+<para>Deletes the contents of the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a29c34a65720f05a231bad8c2367ffdb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Delete</definition>
+        <argsstring>(size_t item)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type>size_t</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Deletes the zero-based <emphasis>item</emphasis> from the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a05ff19ccd483ca93e0dc432d99bc85e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxVariant::GetCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCount</name>
+        <briefdescription>
+<para>Returns the number of elements in the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="301"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a92eb52a1218bbafae28acdb3d5ec9cf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>wxVariantList &amp;</type>
+        <definition>wxVariantList&amp; wxVariant::GetList</definition>
+        <argsstring>() const </argsstring>
+        <name>GetList</name>
+        <briefdescription>
+<para>Returns a reference to the wxVariantList class used by <ref refid="classwx_variant" kindref="compound">wxVariant</ref> if this <ref refid="classwx_variant" kindref="compound">wxVariant</ref> is currently a list of variants. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a9d503bb4a843eb149d79f9f3dcec1e3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::Insert</definition>
+        <argsstring>(const wxVariant &amp;value)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a value at the front of the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aa3e04b503d2b550d38a0e0314c8128a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::NullList</definition>
+        <argsstring>()</argsstring>
+        <name>NullList</name>
+        <briefdescription>
+<para>Makes an empty list. </para>        </briefdescription>
+        <detaileddescription>
+<para>This differs from a null variant which has no data; a null list is of type list, but the number of elements in the list is zero. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="319"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_variant_1a194d1f7f077bb7c72e956038dc6a3795" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Convert</definition>
+        <argsstring>(long *value) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>long *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves and converts the value of this variant to the type that <emphasis>value</emphasis> is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a321c33f17f091a11d23d0be83a84737c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Convert</definition>
+        <argsstring>(bool *value) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>bool *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves and converts the value of this variant to the type that <emphasis>value</emphasis> is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aad2c3bdfe0e1800fcf9f1c3c30530df8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Convert</definition>
+        <argsstring>(double *value) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>double *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves and converts the value of this variant to the type that <emphasis>value</emphasis> is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ab0a8d43d65a754366083b3e8cd9cfd29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Convert</definition>
+        <argsstring>(wxString *value) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves and converts the value of this variant to the type that <emphasis>value</emphasis> is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a139a60ef6d6955207907896e4efdda2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Convert</definition>
+        <argsstring>(wxChar *value) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves and converts the value of this variant to the type that <emphasis>value</emphasis> is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="333"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a117ab82459602eb4f258213ee465e240" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Convert</definition>
+        <argsstring>(wxLongLong *value) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves and converts the value of this variant to the type that <emphasis>value</emphasis> is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ab49b307a597a2fef536e2ece81281303" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Convert</definition>
+        <argsstring>(wxULongLong *value) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves and converts the value of this variant to the type that <emphasis>value</emphasis> is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a1950ce22490a1b49f8240010e36cf46e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Convert</definition>
+        <argsstring>(wxDateTime *value) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves and converts the value of this variant to the type that <emphasis>value</emphasis> is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="336"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_variant_1a1d1ab31c00cd2974b6df6cbccf2575c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(const wxVariant &amp;value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="486"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a1e460479c4ca73f41a8ecf1a8f725b34" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(const wxString &amp;value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="487"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a6a9ae72a73e722d3cc13054437cd9d3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(const wxChar *value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="488"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a2ad7fe22d2c406bc6ea604cdd9a08491" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(wxChar value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="489"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1abec79e4427dc32173cd90953f5bc769d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(long value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="490"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a8bc81f33a97e8362904e0cbf70b3906e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(bool value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="491"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a2115b91be8551114ba969ef06911a21d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(double value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="492"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aa6b6c0e582827523ee058f148ea81520" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(wxLongLong value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="493"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a3bcd20264bbb350128805d43df6cd7fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(wxULongLong value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="494"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a4fc8505a3374a36a70fe4104361d1a3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(void *value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="495"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ad2d5da867b8772d409a0a7a04a247a95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(wxObject *value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="496"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a440f8513f48afc120e3e0458c5c87728" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(const wxVariantList &amp;value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const wxVariantList &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="497"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a05d775d7d879443c5183b918e68b11fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(const wxArrayString &amp;value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="498"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ab31cec4b27208a1c33525263081d8dda" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator!=</definition>
+        <argsstring>(const wxDateTime &amp;value) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inequality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="499"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_variant_1ac491fed52a8b0ee15e7142867bf359ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(const wxVariant &amp;value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="507"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a352aa0714d6a5a588e6d92368ec5706a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(wxVariantData *value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="508"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aa1bfecd4bef25ee181a5ab80c53c9acf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(const wxString &amp;value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="509"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a52af8de8154b85e5902e187befe608fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(const wxChar *value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="510"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a04862a2cbf9c28c93fa2ba6d7eacf6c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(wxChar value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="511"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aa6f0109357daf1099453922a58a5dca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(long value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="512"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a97508fe2ddfe4d32bc9d9d28a6ab48f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="513"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a6ea55ffa1a509ffcd97761e4c83dabaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(double value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="514"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ade9d0216cc9b16c895f8c9a53e717e17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator=</definition>
+        <argsstring>(wxLongLong value) const </argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="515"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a7e5649a39774c6ef10629edd09b91418" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator=</definition>
+        <argsstring>(wxULongLong value) const </argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="516"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a16ca9d55e5bd0a09d7e203ba53ad11ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(void *value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="517"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a1df87ada8ae973b24a2aa2d83259ed93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(wxObject *value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="518"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aeb22e27761b1979b6d616322459724b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(const wxVariantList &amp;value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const wxVariantList &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="519"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a1f76769caeb0be9668bf00b25b9ddf7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(const wxDateTime &amp;value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="520"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1adcf63057c97e796270ca2f31e284362a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::operator=</definition>
+        <argsstring>(const wxArrayString &amp;value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="521"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_variant_1af926a9aae2c3cc057710492b0ba816dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(const wxVariant &amp;value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="528"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a6f6c0a094c02a07ae8fa0418ee464904" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(const wxString &amp;value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="529"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a16ae3f2bbe886cd35de3e00e3215a6db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(const wxChar *value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="530"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ac1b0df2e9bd04ac55517a2e48c2ce3de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(wxChar value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="531"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1af609de22387b7928ef5dd1a3d4d2427e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(long value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="532"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a000cb251633827e6ea73879fbe721ad4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(bool value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="533"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a30c647e74e5ac198a491ec83349a4dad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(double value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="534"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a75b36034a35c1f47b5eb144699cf4a35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(wxLongLong value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="535"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a99deba4f2d8f2b7c9bf8fc093d92a178" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(wxULongLong value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="536"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ab82c1f43299cc96357263e5a684918c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(void *value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="537"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1af6d1ad46effb9d3e9d79464fcf555b91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(wxObject *value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="538"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a5eb73d91d84df99a9bff527668c40826" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(const wxVariantList &amp;value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const wxVariantList &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="539"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a10c5e3b296425eb75820822cc19d7fd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(const wxArrayString &amp;value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="540"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a6276bfd57a83aa973350f178977fcf2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::operator==</definition>
+        <argsstring>(const wxDateTime &amp;value) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Equality test operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="541"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_variant_1a5dad9f6c1a45c43dd09713aed9bd2c6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxVariant::operator double</definition>
+        <argsstring>() const </argsstring>
+        <name>operator double</name>
+        <briefdescription>
+<para>Operators for implicit conversion, using appropriate getter member function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="549"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aed0cb7db3e14db9a7a321ddb44bb835c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxVariant::operator long</definition>
+        <argsstring>() const </argsstring>
+        <name>operator long</name>
+        <briefdescription>
+<para>Operators for implicit conversion, using appropriate getter member function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="550"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a08d632cd0c255109e2bcad6ff1e4cf07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxVariant::operator wxLongLong</definition>
+        <argsstring>() const </argsstring>
+        <name>operator wxLongLong</name>
+        <briefdescription>
+<para>Operators for implicit conversion, using appropriate getter member function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="551"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ac292a49388189d00a8ddee8bd731a9b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
+        <definition>wxULongLong wxVariant::operator wxULongLong</definition>
+        <argsstring>() const </argsstring>
+        <name>operator wxULongLong</name>
+        <briefdescription>
+<para>Operators for implicit conversion, using appropriate getter member function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="552"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_variant_1a3954cd1b01e933745412d07146d4057c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>()</argsstring>
+        <name>wxVariant</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a6eaf045a214c9b1bb3263d93191b48bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(wxVariantData *data, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant directly with a <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_variant" kindref="compound">wxVariant</ref> will take ownership of the <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> and will not increase its reference count. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ae25669a56d8fe5459307e2fc1e3afe85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(const wxVariant &amp;variant)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>variant</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from another variant by increasing the reference count. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ad40b5e70a52ff37abbc0f0d4f46c5b78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(const wxAny &amp;any)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>const <ref refid="classwx_any" kindref="compound">wxAny</ref> &amp;</type>
+          <declname>any</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a variant by converting it from <ref refid="classwx_any" kindref="compound">wxAny</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a91a257f88e70b005bbf26b03db161d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(const wxChar *value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a wide string literal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a1c982a17378afbfcb61c164fb0c980cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(const wxString &amp;value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ab949925b14806fe41cb5d505f68f1df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(wxChar value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a wide char. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aec7d26c6cb4820736e0b7d3aea104bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(long value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a long. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aced3af54318f3868346e2698ffec63c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(bool value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a bool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1acf020eba160a834eb3b5d7c9b5810872" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(double value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a double. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a163e302c287ede9d4d5a40b26a899495" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(wxLongLong value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1acbe6bb4228639473256673079188c2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(wxULongLong value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a53f93a36cde0dfb057c78dd76b6baad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(const wxVariantList &amp;value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>const wxVariantList &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a list of variants. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1adb07bd315f16345db875c0e7e7f9534f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(void *value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a void pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ae89736ab7dc6ae6d7356946b1df9a3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(wxObject *value, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a pointer to an <ref refid="classwx_object" kindref="compound">wxObject</ref> derived class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a7246be0b9ceedaaeff4a54d98b1812de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(const wxDateTime &amp;val, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ab2527fd5571ad1d8a00cda438572ad79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxVariant::wxVariant</definition>
+        <argsstring>(const wxArrayString &amp;val, const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxVariant</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a variant from a <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a6acf52ce788f9fc15067be48418d15a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxVariant::~wxVariant</definition>
+        <argsstring>()</argsstring>
+        <name>~wxVariant</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>wxVariantData&apos;s destructor is protected, so <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> cannot usually be deleted. Instead, <ref refid="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" kindref="member">wxVariantData::DecRef()</ref> should be called. See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ad324e3fcff9b9255e08e06bffd0b1fd6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_any" kindref="compound">wxAny</ref></type>
+        <definition>wxAny wxVariant::GetAny</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAny</name>
+        <briefdescription>
+<para>Converts <ref refid="classwx_variant" kindref="compound">wxVariant</ref> into <ref refid="classwx_any" kindref="compound">wxAny</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="342"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1adff9c50c5b888c5aa1b3d7bf85ecbf4b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
+        <definition>wxArrayString wxVariant::GetArrayString</definition>
+        <argsstring>() const </argsstring>
+        <name>GetArrayString</name>
+        <briefdescription>
+<para>Returns the string array value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a5104c06c11cc78894d1cbb760b8d4433" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::GetBool</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBool</name>
+        <briefdescription>
+<para>Returns the boolean value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a08a8bc78ee3bbd6f4736640a53d7d239" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
+        <definition>wxUniChar wxVariant::GetChar</definition>
+        <argsstring>() const </argsstring>
+        <name>GetChar</name>
+        <briefdescription>
+<para>Returns the character value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ab19d60e906ce83fe9d800faab619dfc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> *</type>
+        <definition>wxVariantData* wxVariant::GetData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetData</name>
+        <briefdescription>
+<para>Returns a pointer to the internal variant data. </para>        </briefdescription>
+        <detaileddescription>
+<para>To take ownership of this data, you must call its <ref refid="classwx_variant_data_1ae25c62e3451463ed287367a7b709e51d" kindref="member">wxVariantData::IncRef()</ref> method. When you stop using it, <ref refid="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" kindref="member">wxVariantData::DecRef()</ref> must be called as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a6ae1f08e07e367e398545ecf360eeaa9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
+        <definition>wxDateTime wxVariant::GetDateTime</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDateTime</name>
+        <briefdescription>
+<para>Returns the date value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a32c047eeefe5fb56a2a343e73e70dbab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxVariant::GetDouble</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDouble</name>
+        <briefdescription>
+<para>Returns the floating point value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ab8a21610ac6295f3f12a5a38581f93a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxVariant::GetLong</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLong</name>
+        <briefdescription>
+<para>Returns the integer value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a33dcbb01cb7cf912a3516711ac6932ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxVariant::GetLongLong</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLongLong</name>
+        <briefdescription>
+<para>Returns the signed 64-bit integer value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a764f238aa659aa871f20f74dff3e4826" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxVariant::GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+<para>Returns a constant reference to the variant name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1adb41f1bdb7d1023ab5e51453c8fb21ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxVariant::GetString</definition>
+        <argsstring>() const </argsstring>
+        <name>GetString</name>
+        <briefdescription>
+<para>Gets the string value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a585b00398c7800fe3d83d4067a323aa9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxVariant::GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <briefdescription>
+<para>Returns the value type as a string. </para>        </briefdescription>
+        <detaileddescription>
+<para>The built-in types are:<itemizedlist>
+<listitem><para>&quot;bool&quot;</para></listitem><listitem><para>&quot;char&quot;</para></listitem><listitem><para>&quot;datetime&quot;</para></listitem><listitem><para>&quot;double&quot;</para></listitem><listitem><para>&quot;list&quot;</para></listitem><listitem><para>&quot;long&quot;</para></listitem><listitem><para>&quot;longlong&quot;</para></listitem><listitem><para>&quot;string&quot;</para></listitem><listitem><para>&quot;ulonglong&quot;</para></listitem><listitem><para>&quot;arrstring&quot;</para></listitem><listitem><para>&quot;void*&quot;</para></listitem></itemizedlist>
+</para><para>If the variant is null, the value type returned is the string &quot;null&quot; (not the empty string). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ac811393f688e5f3d9a4dda92b5ca3cf0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
+        <definition>wxULongLong wxVariant::GetULongLong</definition>
+        <argsstring>() const </argsstring>
+        <name>GetULongLong</name>
+        <briefdescription>
+<para>Returns the unsigned 64-bit integer value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="420"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ad4f911603b4b265b7aaf330b48ea027d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* wxVariant::GetVoidPtr</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVoidPtr</name>
+        <briefdescription>
+<para>Gets the void pointer value. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that this method can be used for null objects (i.e. those for which <ref refid="classwx_variant_1a60ce75cca3c61a25f3218d35a438f799" kindref="member">IsNull()</ref> returns true) and will return NULL for them. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="428"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1aec88e406d8c839f6ddbddeb8f60000b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>wxObject* wxVariant::GetWxObjectPtr</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWxObjectPtr</name>
+        <briefdescription>
+<para>Gets the <ref refid="classwx_object" kindref="compound">wxObject</ref> pointer value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="433"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a60ce75cca3c61a25f3218d35a438f799" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::IsNull</definition>
+        <argsstring>() const </argsstring>
+        <name>IsNull</name>
+        <briefdescription>
+<para>Returns true if there is no data associated with this variant, false if there is data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="439"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a0afc31d5ac845edfdfe648801a86d0a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::IsType</definition>
+        <argsstring>(const wxString &amp;type) const </argsstring>
+        <name>IsType</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if <emphasis>type</emphasis> matches the type of the variant, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="445"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a0722c6e192220202584211deaddc55bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::IsValueKindOf</definition>
+        <argsstring>(const wxClassInfo *type) const </argsstring>
+        <name>IsValueKindOf</name>
+        <param>
+          <type>const <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the data is derived from the class described by <emphasis>type</emphasis>, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="451"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ae626ad693c64badb2cfc5e8fe7a7edd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::MakeNull</definition>
+        <argsstring>()</argsstring>
+        <name>MakeNull</name>
+        <briefdescription>
+<para>Makes the variant null by deleting the internal data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="456"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ad6843bd4389d5140f40c39d0b12f35d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxVariant::MakeString</definition>
+        <argsstring>() const </argsstring>
+        <name>MakeString</name>
+        <briefdescription>
+<para>Makes a string representation of the variant value (for any type). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="461"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1ac28c74227400cd94366d081eaf4fc3dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Member</definition>
+        <argsstring>(const wxVariant &amp;value) const </argsstring>
+        <name>Member</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if <emphasis>value</emphasis> matches an element in the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="466"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a1ff85149312b1f6e278f136c4b4af861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxVariant::SetData</definition>
+        <argsstring>(wxVariantData *data)</argsstring>
+        <name>SetData</name>
+        <param>
+          <type><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Sets the internal variant data, deleting the existing data if there is any. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="472"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1af5021c0a8bfb8ce1b987764ab662b132" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxVariant::Unshare</definition>
+        <argsstring>()</argsstring>
+        <name>Unshare</name>
+        <briefdescription>
+<para>Makes sure that any data associated with this variant is not shared with other variants. </para>        </briefdescription>
+        <detaileddescription>
+<para>For this to work, <ref refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" kindref="member">wxVariantData::Clone()</ref> must be implemented for the data types you are working with. <ref refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" kindref="member">wxVariantData::Clone()</ref> is implemented for all the default data types. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="480"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a868dfef679c301987451736079649efc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* wxVariant::operator void *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator void *</name>
+        <briefdescription>
+<para>Operator for implicit conversion to a pointer to a void, using <ref refid="classwx_variant_1ad4f911603b4b265b7aaf330b48ea027d" kindref="member">GetVoidPtr()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="559"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a7de87946dd8c1e47f5805b9c517d8f72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char wxVariant::operator wxChar</definition>
+        <argsstring>() const </argsstring>
+        <name>operator wxChar</name>
+        <briefdescription>
+<para>Operator for implicit conversion to a wxChar, using <ref refid="classwx_variant_1a08a8bc78ee3bbd6f4736640a53d7d239" kindref="member">GetChar()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="564"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a342b8c3667306dc2dd5588b9953c50e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* wxVariant::operator wxDateTime</definition>
+        <argsstring>() const </argsstring>
+        <name>operator wxDateTime</name>
+        <briefdescription>
+<para>Operator for implicit conversion to a pointer to a <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref>, using <ref refid="classwx_variant_1a6ae1f08e07e367e398545ecf360eeaa9" kindref="member">GetDateTime()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="570"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_variant_1a335640fb09ecc7dd826f7ad7bb48893b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxVariant::operator wxString</definition>
+        <argsstring>() const </argsstring>
+        <name>operator wxString</name>
+        <briefdescription>
+<para>Operator for implicit conversion to a string, using <ref refid="classwx_variant_1ad6843bd4389d5140f40c39d0b12f35d9" kindref="member">MakeString()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="575"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classwx_variant" kindref="compound">wxVariant</ref> class represents a container for any type. </para>    </briefdescription>
+    <detaileddescription>
+<para>A variant&apos;s value can be changed at run time, possibly to a different type of value.</para><para><simplesect kind="note"><para>As of wxWidgets 2.9.1, <ref refid="classwx_any" kindref="compound">wxAny</ref> has become the preferred variant class. While most controls still use <ref refid="classwx_variant" kindref="compound">wxVariant</ref> in their interface, you can start using <ref refid="classwx_any" kindref="compound">wxAny</ref> in your code because of an implicit conversion layer. See below for more information.</para></simplesect>
+As standard, <ref refid="classwx_variant" kindref="compound">wxVariant</ref> can store values of type bool, wxChar, double, long, string, string list, time, date, void pointer, list of strings, and list of variants. However, an application can extend wxVariant&apos;s capabilities by deriving from the class <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> and using the <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> form of the <ref refid="classwx_variant" kindref="compound">wxVariant</ref> constructor or assignment operator to assign this data to a variant. Actual values for user-defined types will need to be accessed via the <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> object, unlike the case for basic data types where convenience functions such as <ref refid="classwx_variant_1ab8a21610ac6295f3f12a5a38581f93a3" kindref="member">GetLong()</ref> can be used.</para><para>Pointers to any <ref refid="classwx_object" kindref="compound">wxObject</ref> derived class can also easily be stored in a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. <ref refid="classwx_variant" kindref="compound">wxVariant</ref> will then use wxWidgets&apos; built-in RTTI system to set the type name (returned by <ref refid="classwx_variant_1a585b00398c7800fe3d83d4067a323aa9" kindref="member">GetType()</ref>) and to perform type-safety checks at runtime.</para><para>This class is useful for reducing the programming for certain tasks, such as an editor for different data types, or a remote procedure call protocol.</para><para>An optional name member is associated with a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. This might be used, for example, in CORBA or OLE automation classes, where named parameters are required.</para><para>Note that as of wxWidgets 2.7.1, <ref refid="classwx_variant" kindref="compound">wxVariant</ref> is <ref refid="overview__refcount" kindref="compound">reference counted</ref>. Additionally, the convenience macros DECLARE_VARIANT_OBJECT() and IMPLEMENT_VARIANT_OBJECT() were added so that adding (limited) support for conversion to and from <ref refid="classwx_variant" kindref="compound">wxVariant</ref> can be very easily implemented without modifying either <ref refid="classwx_variant" kindref="compound">wxVariant</ref> or the class to be stored by <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. Since assignment operators cannot be declared outside the class, the shift left operators are used like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>header<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_VARIANT_OBJECT(MyClass)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>implementation<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(MyClass)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>user<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_variant" kindref="compound" tooltip="The wxVariant class represents a container for any type.">wxVariant</ref><sp/>variant;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MyClass<sp/>value;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>variant<sp/>&lt;&lt;<sp/>value;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>&lt;&lt;<sp/>variant;</highlight></codeline>
+</programlisting></para><para>For this to work, MyClass must derive from <ref refid="classwx_object" kindref="compound">wxObject</ref>, implement the <ref refid="overview__rtti" kindref="compound">wxWidgets RTTI system</ref> and support the assignment operator and equality operator for itself. Ideally, it should also be reference counted to make copying operations cheap and fast. This can be most easily implemented using the reference counting support offered by <ref refid="classwx_object" kindref="compound">wxObject</ref> itself. By default, wxWidgets already implements the shift operator conversion for a few of its drawing related classes:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_colour" kindref="compound" tooltip="A colour is an object representing a combination of Red, Green, and Blue (RGB) intensity...">wxColour</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_image" kindref="compound" tooltip="This class encapsulates a platform-independent image.">wxImage</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_icon" kindref="compound" tooltip="An icon is a small rectangular bitmap usually used for denoting a minimized application...">wxIcon</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_VARIANT_OBJECT(<ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref>)</highlight></codeline>
+</programlisting></para><para>Note that as of wxWidgets 2.9.0, <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> no longer inherits from <ref refid="classwx_object" kindref="compound">wxObject</ref> and <ref refid="classwx_variant" kindref="compound">wxVariant</ref> no longer uses the type-unsafe wxList class for list operations but the type-safe wxVariantList class. Also, <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> now supports the <ref refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" kindref="member">wxVariantData::Clone()</ref> function for implementing the <ref refid="classwx_variant_1af5021c0a8bfb8ce1b987764ab662b132" kindref="member">Unshare()</ref> function. <ref refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" kindref="member">wxVariantData::Clone()</ref> is implemented automatically by IMPLEMENT_VARIANT_OBJECT().</para><para>Since <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> no longer derives from <ref refid="classwx_object" kindref="compound">wxObject</ref>, any code that tests the type of the data using <ref refid="group__group__funcmacro__rtti_1ga2606f92f8d5f8e22f4afb44a6df3c38a" kindref="member">wxDynamicCast()</ref> will require adjustment. You can use the macro wxDynamicCastVariantData() with the same arguments as <ref refid="group__group__funcmacro__rtti_1ga2606f92f8d5f8e22f4afb44a6df3c38a" kindref="member">wxDynamicCast()</ref>, to use C++ RTTI type information instead of wxWidgets RTTI.</para><sect1 id="classwx_variant_1variant_wxanyconversion">
+<title>wxVariant to wxAny Conversion Layer</title>
+<para><ref refid="classwx_any" kindref="compound">wxAny</ref> is a more modern, template-based variant class. It is not directly compatible with <ref refid="classwx_variant" kindref="compound">wxVariant</ref>, but there is a transparent conversion layer.</para><para>Following is an example how to use these conversions with wxPropertyGrid&apos;s property class <ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> (which currently uses wxVariants both internally and in the public API):</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>property<sp/>value<sp/>as<sp/>wxAny<sp/>instead<sp/>of<sp/>wxVariant</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_any" kindref="compound" tooltip="The wxAny class represents a container for any type.">wxAny</ref><sp/>value<sp/>=<sp/></highlight><highlight class="keyword">property</highlight><highlight class="normal">-&gt;GetValue();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>something<sp/>with<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DoSomethingWithString(value.<ref refid="classwx_any_1ad5958253489be22f0e414cd1dd7a38f6" kindref="member" tooltip="This template function converts wxAny into given type.">As</ref>&lt;<ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&gt;());</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>back<sp/>new<sp/>value<sp/>to<sp/>property</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;New<sp/>Value&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">property</highlight><highlight class="normal">-&gt;SetValue(value);</highlight></codeline>
+</programlisting></para><para>Some caveats: <itemizedlist>
+<listitem><para>In <ref refid="classwx_any" kindref="compound">wxAny</ref>, there are no separate types for handling integers of different sizes, so converting <ref refid="classwx_any" kindref="compound">wxAny</ref> with &apos;long long&apos; value will yield <ref refid="classwx_variant" kindref="compound">wxVariant</ref> of &quot;long&quot; type when the value is small enough to fit in without overflow. Otherwise, variant type &quot;longlong&quot; is used. Also note that <ref refid="classwx_any" kindref="compound">wxAny</ref> holding unsigned integer will always be converted to &quot;ulonglong&quot; <ref refid="classwx_variant" kindref="compound">wxVariant</ref> type.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para>Unlike <ref refid="classwx_variant" kindref="compound">wxVariant</ref>, <ref refid="classwx_any" kindref="compound">wxAny</ref> does not store a (rarely needed) name string.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para>Because of implicit conversion of <ref refid="classwx_variant" kindref="compound">wxVariant</ref> to <ref refid="classwx_any" kindref="compound">wxAny</ref>, <ref refid="classwx_any" kindref="compound">wxAny</ref> cannot usually contain value of type <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. In other words, any.CheckType&lt;wxVariant&gt;() can never return true.</para></listitem>
+</itemizedlist>
+Supplied conversion functions will automatically work with all built-in <ref refid="classwx_variant" kindref="compound">wxVariant</ref> types, and also with all user-specified types generated using IMPLEMENT_VARIANT_OBJECT(). For hand-built <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> classes, you will need to use supplied macros in a following manner:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Declare<sp/>wxVariantData<sp/>for<sp/>data<sp/>type<sp/>Foo</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">wxVariantDataFoo:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_variant_data" kindref="compound" tooltip="The wxVariantData class is used to implement a new type for wxVariant.">wxVariantData</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DECLARE_WXANY_CONVERSION()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>protected:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>data<sp/>storage<sp/>etc</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IMPLEMENT_TRIVIAL_WXANY_CONVERSION(Foo,<sp/>wxVariantDataFoo)</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref>, <ref refid="classwx_any" kindref="compound">wxAny</ref> </para></simplesect>
+</para></sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11254">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="11253">
+        <label>wxVariant</label>
+        <link refid="classwx_variant"/>
+        <childnode refid="11254" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11256">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="11257" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11255">
+        <label>wxVariant</label>
+        <link refid="classwx_variant"/>
+        <childnode refid="11256" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11257">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="160" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" bodystart="159" bodyend="576"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxVariant</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_variant_1aee18e84b818827d3c40308bfadc7634b" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Append</name></member>
+      <member refid="classwx_variant_1a7edd81c06681863498e63c29e22a8837" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Clear</name></member>
+      <member refid="classwx_variant_1ac7399aa8b12e52d219cb25e3df87d259" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>ClearList</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxVariant</scope><name>CloneRefData</name></member>
+      <member refid="classwx_variant_1a194d1f7f077bb7c72e956038dc6a3795" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Convert</name></member>
+      <member refid="classwx_variant_1a321c33f17f091a11d23d0be83a84737c" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Convert</name></member>
+      <member refid="classwx_variant_1aad2c3bdfe0e1800fcf9f1c3c30530df8" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Convert</name></member>
+      <member refid="classwx_variant_1ab0a8d43d65a754366083b3e8cd9cfd29" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Convert</name></member>
+      <member refid="classwx_variant_1a139a60ef6d6955207907896e4efdda2f" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Convert</name></member>
+      <member refid="classwx_variant_1a117ab82459602eb4f258213ee465e240" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Convert</name></member>
+      <member refid="classwx_variant_1ab49b307a597a2fef536e2ece81281303" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Convert</name></member>
+      <member refid="classwx_variant_1a1950ce22490a1b49f8240010e36cf46e" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Convert</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxVariant</scope><name>CreateRefData</name></member>
+      <member refid="classwx_variant_1a29c34a65720f05a231bad8c2367ffdb2" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Delete</name></member>
+      <member refid="classwx_variant_1ad324e3fcff9b9255e08e06bffd0b1fd6" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetAny</name></member>
+      <member refid="classwx_variant_1adff9c50c5b888c5aa1b3d7bf85ecbf4b" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetArrayString</name></member>
+      <member refid="classwx_variant_1a5104c06c11cc78894d1cbb760b8d4433" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetBool</name></member>
+      <member refid="classwx_variant_1a08a8bc78ee3bbd6f4736640a53d7d239" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetChar</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxVariant</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_variant_1a05ff19ccd483ca93e0dc432d99bc85e0" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetCount</name></member>
+      <member refid="classwx_variant_1ab19d60e906ce83fe9d800faab619dfc5" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetData</name></member>
+      <member refid="classwx_variant_1a6ae1f08e07e367e398545ecf360eeaa9" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetDateTime</name></member>
+      <member refid="classwx_variant_1a32c047eeefe5fb56a2a343e73e70dbab" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetDouble</name></member>
+      <member refid="classwx_variant_1a92eb52a1218bbafae28acdb3d5ec9cf1" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetList</name></member>
+      <member refid="classwx_variant_1ab8a21610ac6295f3f12a5a38581f93a3" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetLong</name></member>
+      <member refid="classwx_variant_1a33dcbb01cb7cf912a3516711ac6932ed" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetLongLong</name></member>
+      <member refid="classwx_variant_1a764f238aa659aa871f20f74dff3e4826" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetName</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetRefData</name></member>
+      <member refid="classwx_variant_1adb41f1bdb7d1023ab5e51453c8fb21ba" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetString</name></member>
+      <member refid="classwx_variant_1a585b00398c7800fe3d83d4067a323aa9" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetType</name></member>
+      <member refid="classwx_variant_1ac811393f688e5f3d9a4dda92b5ca3cf0" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetULongLong</name></member>
+      <member refid="classwx_variant_1ad4f911603b4b265b7aaf330b48ea027d" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetVoidPtr</name></member>
+      <member refid="classwx_variant_1aec88e406d8c839f6ddbddeb8f60000b2" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>GetWxObjectPtr</name></member>
+      <member refid="classwx_variant_1a9d503bb4a843eb149d79f9f3dcec1e3c" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Insert</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>IsKindOf</name></member>
+      <member refid="classwx_variant_1a60ce75cca3c61a25f3218d35a438f799" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>IsNull</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>IsSameAs</name></member>
+      <member refid="classwx_variant_1a0afc31d5ac845edfdfe648801a86d0a8" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>IsType</name></member>
+      <member refid="classwx_variant_1a0722c6e192220202584211deaddc55bb" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>IsValueKindOf</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxVariant</scope><name>m_refData</name></member>
+      <member refid="classwx_variant_1ae626ad693c64badb2cfc5e8fe7a7edd1" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>MakeNull</name></member>
+      <member refid="classwx_variant_1ad6843bd4389d5140f40c39d0b12f35d9" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>MakeString</name></member>
+      <member refid="classwx_variant_1ac28c74227400cd94366d081eaf4fc3dc" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Member</name></member>
+      <member refid="classwx_variant_1aa3e04b503d2b550d38a0e0314c8128a2" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>NullList</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator delete</name></member>
+      <member refid="classwx_variant_1a5dad9f6c1a45c43dd09713aed9bd2c6c" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator double</name></member>
+      <member refid="classwx_variant_1aed0cb7db3e14db9a7a321ddb44bb835c" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator long</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator new</name></member>
+      <member refid="classwx_variant_1a868dfef679c301987451736079649efc" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator void *</name></member>
+      <member refid="classwx_variant_1a7de87946dd8c1e47f5805b9c517d8f72" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator wxChar</name></member>
+      <member refid="classwx_variant_1a342b8c3667306dc2dd5588b9953c50e8" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator wxDateTime</name></member>
+      <member refid="classwx_variant_1a08d632cd0c255109e2bcad6ff1e4cf07" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator wxLongLong</name></member>
+      <member refid="classwx_variant_1a335640fb09ecc7dd826f7ad7bb48893b" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator wxString</name></member>
+      <member refid="classwx_variant_1ac292a49388189d00a8ddee8bd731a9b2" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator wxULongLong</name></member>
+      <member refid="classwx_variant_1a1d1ab31c00cd2974b6df6cbccf2575c9" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a1e460479c4ca73f41a8ecf1a8f725b34" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a6a9ae72a73e722d3cc13054437cd9d3e" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a2ad7fe22d2c406bc6ea604cdd9a08491" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1abec79e4427dc32173cd90953f5bc769d" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a8bc81f33a97e8362904e0cbf70b3906e" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a2115b91be8551114ba969ef06911a21d" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1aa6b6c0e582827523ee058f148ea81520" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a3bcd20264bbb350128805d43df6cd7fe" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a4fc8505a3374a36a70fe4104361d1a3e" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1ad2d5da867b8772d409a0a7a04a247a95" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a440f8513f48afc120e3e0458c5c87728" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1a05d775d7d879443c5183b918e68b11fb" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1ab31cec4b27208a1c33525263081d8dda" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator!=</name></member>
+      <member refid="classwx_variant_1ac491fed52a8b0ee15e7142867bf359ea" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a352aa0714d6a5a588e6d92368ec5706a" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1aa1bfecd4bef25ee181a5ab80c53c9acf" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a52af8de8154b85e5902e187befe608fa" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a04862a2cbf9c28c93fa2ba6d7eacf6c3" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1aa6f0109357daf1099453922a58a5dca5" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a97508fe2ddfe4d32bc9d9d28a6ab48f4" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a6ea55ffa1a509ffcd97761e4c83dabaf" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1ade9d0216cc9b16c895f8c9a53e717e17" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a7e5649a39774c6ef10629edd09b91418" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a16ca9d55e5bd0a09d7e203ba53ad11ff" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a1df87ada8ae973b24a2aa2d83259ed93" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1aeb22e27761b1979b6d616322459724b6" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1a1f76769caeb0be9668bf00b25b9ddf7c" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1adcf63057c97e796270ca2f31e284362a" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator=</name></member>
+      <member refid="classwx_variant_1af926a9aae2c3cc057710492b0ba816dc" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a6f6c0a094c02a07ae8fa0418ee464904" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a16ae3f2bbe886cd35de3e00e3215a6db" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1ac1b0df2e9bd04ac55517a2e48c2ce3de" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1af609de22387b7928ef5dd1a3d4d2427e" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a000cb251633827e6ea73879fbe721ad4" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a30c647e74e5ac198a491ec83349a4dad" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a75b36034a35c1f47b5eb144699cf4a35" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a99deba4f2d8f2b7c9bf8fc093d92a178" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1ab82c1f43299cc96357263e5a684918c6" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1af6d1ad46effb9d3e9d79464fcf555b91" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a5eb73d91d84df99a9bff527668c40826" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a10c5e3b296425eb75820822cc19d7fd1" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a6276bfd57a83aa973350f178977fcf2d" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator==</name></member>
+      <member refid="classwx_variant_1a59c3a9127a5dd1d4d1172f130395f3e6" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator[]</name></member>
+      <member refid="classwx_variant_1afcdfcdf494f5751dd46d165773fc0efe" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>operator[]</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Ref</name></member>
+      <member refid="classwx_variant_1a1ff85149312b1f6e278f136c4b4af861" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>SetData</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>UnShare</name></member>
+      <member refid="classwx_variant_1af5021c0a8bfb8ce1b987764ab662b132" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Unshare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxObject</name></member>
+      <member refid="classwx_variant_1a3954cd1b01e933745412d07146d4057c" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1a6eaf045a214c9b1bb3263d93191b48bf" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1ae25669a56d8fe5459307e2fc1e3afe85" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1ad40b5e70a52ff37abbc0f0d4f46c5b78" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1a91a257f88e70b005bbf26b03db161d86" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1a1c982a17378afbfcb61c164fb0c980cf" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1ab949925b14806fe41cb5d505f68f1df2" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1aec7d26c6cb4820736e0b7d3aea104bae" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1aced3af54318f3868346e2698ffec63c1" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1acf020eba160a834eb3b5d7c9b5810872" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1a163e302c287ede9d4d5a40b26a899495" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1acbe6bb4228639473256673079188c2d5" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1a53f93a36cde0dfb057c78dd76b6baad4" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1adb07bd315f16345db875c0e7e7f9534f" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1ae89736ab7dc6ae6d7356946b1df9a3f2" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1a7246be0b9ceedaaeff4a54d98b1812de" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_variant_1ab2527fd5571ad1d8a00cda438572ad79" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>wxVariant</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxVariant</scope><name>~wxObject</name></member>
+      <member refid="classwx_variant_1a6acf52ce788f9fc15067be48418d15a6" prot="public" virt="virtual"><scope>wxVariant</scope><name>~wxVariant</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

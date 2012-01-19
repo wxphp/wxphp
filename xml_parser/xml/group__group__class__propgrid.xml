@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__propgrid" kind="group">
+    <compoundname>group_class_propgrid</compoundname>
+    <title>wxPropertyGrid</title>
+    <innerclass refid="classwx_property_grid_iterator" prot="public">wxPropertyGridIterator</innerclass>
+    <innerclass refid="classwx_p_g_editor" prot="public">wxPGEditor</innerclass>
+    <innerclass refid="classwx_p_g_multi_button" prot="public">wxPGMultiButton</innerclass>
+    <innerclass refid="classwx_property_grid_page" prot="public">wxPropertyGridPage</innerclass>
+    <innerclass refid="classwx_property_grid_manager" prot="public">wxPropertyGridManager</innerclass>
+    <innerclass refid="classwx_p_g_property" prot="public">wxPGProperty</innerclass>
+    <innerclass refid="classwx_p_g_cell" prot="public">wxPGCell</innerclass>
+    <innerclass refid="classwx_p_g_choices" prot="public">wxPGChoices</innerclass>
+    <innerclass refid="classwx_property_grid" prot="public">wxPropertyGrid</innerclass>
+    <innerclass refid="classwx_property_grid_event" prot="public">wxPropertyGridEvent</innerclass>
+    <innerclass refid="classwx_property_grid_interface" prot="public">wxPropertyGridInterface</innerclass>
+    <briefdescription>
+<para><ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> is a specialized grid for editing properties (that is, name=value pairs). </para>    </briefdescription>
+    <detaileddescription>
+<para>This style of control has also been known as property sheet or object grid.</para><para>Related Overviews: <ref refid="overview__propgrid" kindref="compound">wxPropertyGrid Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

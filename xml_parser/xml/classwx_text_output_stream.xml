@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_text_output_stream" kind="class" prot="public">
+    <compoundname>wxTextOutputStream</compoundname>
+    <includes local="no">wx/txtstrm.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_text_output_stream_1a6d82156c87886aab87b495cd1f74f2cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTextOutputStream::wxTextOutputStream</definition>
+        <argsstring>(wxOutputStream &amp;stream, wxEOL mode=wxEOL_NATIVE, const wxMBConv &amp;conv=wxConvAuto())</argsstring>
+        <name>wxTextOutputStream</name>
+        <param>
+          <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70" kindref="member">wxEOL</ref></type>
+          <declname>mode</declname>
+          <defval>wxEOL_NATIVE</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> &amp;</type>
+          <declname>conv</declname>
+          <defval><ref refid="classwx_conv_auto" kindref="compound">wxConvAuto</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a text stream object associated to the given output stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end-of-line mode. One of <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70ab0ad899b012b96a86d6b2a37033ad553" kindref="member">wxEOL_NATIVE</ref>, <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a90c71ea90577fc20fb32033a9637474f" kindref="member">wxEOL_DOS</ref>, <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a3710a5db890bb3be61c35987748a6c9a" kindref="member">wxEOL_MAC</ref> and <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a8419d6a4ff26571c6e2a935482a1f4ec" kindref="member">wxEOL_UNIX</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>In Unicode build only:</bold> The object used to convert Unicode text into ASCII characters written to the output stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1aaceb51d3e3089494fe97531167a6f5d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxTextOutputStream::~wxTextOutputStream</definition>
+        <argsstring>()</argsstring>
+        <name>~wxTextOutputStream</name>
+        <briefdescription>
+<para>Destroys the <ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Also calls <ref refid="classwx_text_output_stream_1a67d9ed4f8cecc757be163a9ca9005442" kindref="member">Flush()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1a67d9ed4f8cecc757be163a9ca9005442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextOutputStream::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <briefdescription>
+<para>Flushes the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method should be called when using stateful encodings (currently the only example of such encoding in wxWidgets is <ref refid="classwx_m_b_conv_u_t_f7" kindref="compound">wxMBConvUTF7</ref>) to write the end of the encoded data to the stream.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1ab1585b7951a614ba2b477adec0e99661" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
+        <definition>const wxOutputStream&amp; wxTextOutputStream::GetOutputStream</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOutputStream</name>
+        <briefdescription>
+<para>Returns a pointer to the underlying output stream object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1ae035d94387762083c8e20cd4a770a226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70" kindref="member">wxEOL</ref></type>
+        <definition>wxEOL wxTextOutputStream::GetMode</definition>
+        <argsstring>()</argsstring>
+        <name>GetMode</name>
+        <briefdescription>
+<para>Returns the end-of-line mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>One of <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a90c71ea90577fc20fb32033a9637474f" kindref="member">wxEOL_DOS</ref>, <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a3710a5db890bb3be61c35987748a6c9a" kindref="member">wxEOL_MAC</ref> and <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a8419d6a4ff26571c6e2a935482a1f4ec" kindref="member">wxEOL_UNIX</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1ac0cfb1efa2bfe3628ec7d2df598347fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> &amp;</type>
+        <definition>wxTextOutputStream&amp; wxTextOutputStream::PutChar</definition>
+        <argsstring>(wxChar c)</argsstring>
+        <name>PutChar</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Writes a character to the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1a558ee7a0478a8c5c1b0adc8bfeb1d17e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextOutputStream::SetMode</definition>
+        <argsstring>(wxEOL mode=wxEOL_NATIVE)</argsstring>
+        <name>SetMode</name>
+        <param>
+          <type><ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70" kindref="member">wxEOL</ref></type>
+          <declname>mode</declname>
+          <defval>wxEOL_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Set the end-of-line mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>One of <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70ab0ad899b012b96a86d6b2a37033ad553" kindref="member">wxEOL_NATIVE</ref>, <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a90c71ea90577fc20fb32033a9637474f" kindref="member">wxEOL_DOS</ref>, <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a3710a5db890bb3be61c35987748a6c9a" kindref="member">wxEOL_MAC</ref> and <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a8419d6a4ff26571c6e2a935482a1f4ec" kindref="member">wxEOL_UNIX</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1a58e528e46c6eff319a936af22ae0f133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextOutputStream::Write16</definition>
+        <argsstring>(wxUint16 i16)</argsstring>
+        <name>Write16</name>
+        <param>
+          <type><ref refid="defs_8h_1a8e9363c460a79dd550df544fab96e16d" kindref="member">wxUint16</ref></type>
+          <declname>i16</declname>
+        </param>
+        <briefdescription>
+<para>Writes the 16 bit integer <emphasis>i16</emphasis> to the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1a9296389e098c81cb163da7e56f35fef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextOutputStream::Write32</definition>
+        <argsstring>(wxUint32 i32)</argsstring>
+        <name>Write32</name>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>i32</declname>
+        </param>
+        <briefdescription>
+<para>Writes the 32 bit integer <emphasis>i32</emphasis> to the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1a7923a55ebd59f03204a545b22afa3aac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextOutputStream::Write8</definition>
+        <argsstring>(wxUint8 i8)</argsstring>
+        <name>Write8</name>
+        <param>
+          <type><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member">wxUint8</ref></type>
+          <declname>i8</declname>
+        </param>
+        <briefdescription>
+<para>Writes the single byte <emphasis>i8</emphasis> to the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1ae19318be6f470c786a298027ce3130e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxTextOutputStream::WriteDouble</definition>
+        <argsstring>(double f)</argsstring>
+        <name>WriteDouble</name>
+        <param>
+          <type>double</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Writes the double <emphasis>f</emphasis> to the stream using the IEEE format. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_output_stream_1a6c7d5465556db40c357ddaa5f2bac996" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxTextOutputStream::WriteString</definition>
+        <argsstring>(const wxString &amp;string)</argsstring>
+        <name>WriteString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Writes <emphasis>string</emphasis> as a line. </para>        </briefdescription>
+        <detaileddescription>
+<para>Depending on the end-of-line mode the end of line (&apos;\n&apos;) characters in the string are converted to the correct line ending terminator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="311"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class provides functions that write text data using an output stream, allowing you to write text, floats, and integers. </para>    </briefdescription>
+    <detaileddescription>
+<para>You can also simulate the C++ <computeroutput>std::cout</computeroutput> class:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_f_file_output_stream" kindref="compound" tooltip="This class represents data written to a file.">wxFFileOutputStream</ref><sp/>output(<sp/>stderr<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_text_output_stream" kindref="compound" tooltip="This class provides functions that write text data using an output stream, allowing...">wxTextOutputStream</ref><sp/>cout(<sp/>output<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>a<sp/>text<sp/>line&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>1234;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>1.23456;</highlight></codeline>
+</programlisting></para><para>The <ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> writes text files (or streams) on DOS, Macintosh and Unix in their native formats (concerning the line ending).</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="226" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" bodystart="225" bodyend="312"/>
+    <listofallmembers>
+      <member refid="classwx_text_output_stream_1a67d9ed4f8cecc757be163a9ca9005442" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>Flush</name></member>
+      <member refid="classwx_text_output_stream_1ae035d94387762083c8e20cd4a770a226" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>GetMode</name></member>
+      <member refid="classwx_text_output_stream_1ab1585b7951a614ba2b477adec0e99661" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>GetOutputStream</name></member>
+      <member refid="classwx_text_output_stream_1ac0cfb1efa2bfe3628ec7d2df598347fb" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>PutChar</name></member>
+      <member refid="classwx_text_output_stream_1a558ee7a0478a8c5c1b0adc8bfeb1d17e" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>SetMode</name></member>
+      <member refid="classwx_text_output_stream_1a58e528e46c6eff319a936af22ae0f133" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>Write16</name></member>
+      <member refid="classwx_text_output_stream_1a9296389e098c81cb163da7e56f35fef0" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>Write32</name></member>
+      <member refid="classwx_text_output_stream_1a7923a55ebd59f03204a545b22afa3aac" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>Write8</name></member>
+      <member refid="classwx_text_output_stream_1ae19318be6f470c786a298027ce3130e8" prot="public" virt="virtual"><scope>wxTextOutputStream</scope><name>WriteDouble</name></member>
+      <member refid="classwx_text_output_stream_1a6c7d5465556db40c357ddaa5f2bac996" prot="public" virt="virtual"><scope>wxTextOutputStream</scope><name>WriteString</name></member>
+      <member refid="classwx_text_output_stream_1a6d82156c87886aab87b495cd1f74f2cd" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>wxTextOutputStream</name></member>
+      <member refid="classwx_text_output_stream_1aaceb51d3e3089494fe97531167a6f5d3" prot="public" virt="virtual"><scope>wxTextOutputStream</scope><name>~wxTextOutputStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

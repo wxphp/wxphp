@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_html_easy_printing" kind="class" prot="public">
+    <compoundname>wxHtmlEasyPrinting</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/html/htmprint.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_html_easy_printing_1a00cc8a01334ac60f0f36fb0833bf1d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHtmlEasyPrinting::wxHtmlEasyPrinting</definition>
+        <argsstring>(const wxString &amp;name=&quot;Printing&quot;, wxWindow *parentWindow=NULL)</argsstring>
+        <name>wxHtmlEasyPrinting</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval>&quot;Printing&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parentWindow</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the printing object. Used by preview frames and setup dialogs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parentWindow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the window that will own the preview frame and setup dialogs. May be NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a0fb229c0c7b3a8f97da34a9fd98ed1d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxHtmlEasyPrinting::GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+<para>Returns the current name being used for preview frames and setup dialogs. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.8.11 / 2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a2768d48d2843bf679afafd88f52ce14e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> *</type>
+        <definition>wxPageSetupDialogData* wxHtmlEasyPrinting::GetPageSetupData</definition>
+        <argsstring>()</argsstring>
+        <name>GetPageSetupData</name>
+        <briefdescription>
+<para>Returns a pointer to <ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> instance used by this class. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can set its parameters (via SetXXXX methods). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a9a6989264e4e5cd81fd0c4cd5547fcb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+        <definition>wxWindow* wxHtmlEasyPrinting::GetParentWindow</definition>
+        <argsstring>() const </argsstring>
+        <name>GetParentWindow</name>
+        <briefdescription>
+<para>Gets the parent window for dialogs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a00233ff9e1fde0c9094e1d5213979170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> *</type>
+        <definition>wxPrintData* wxHtmlEasyPrinting::GetPrintData</definition>
+        <argsstring>()</argsstring>
+        <name>GetPrintData</name>
+        <briefdescription>
+<para>Returns pointer to <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> instance used by this class. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can set its parameters (via SetXXXX methods). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1ab18d043bee2862b9d98ebbe21c9b0cdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlEasyPrinting::PageSetup</definition>
+        <argsstring>()</argsstring>
+        <name>PageSetup</name>
+        <briefdescription>
+<para>Display page setup dialog and allows the user to modify settings. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1ab96c0fe063a0ffce10786c7e9838de31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlEasyPrinting::PreviewFile</definition>
+        <argsstring>(const wxString &amp;htmlfile)</argsstring>
+        <name>PreviewFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>htmlfile</declname>
+        </param>
+        <briefdescription>
+<para>Preview HTML file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false in case of error -- call <ref refid="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" kindref="member">wxPrinter::GetLastError</ref> to get detailed information about the kind of the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1af6f4da4b9e104e42883994a237a9f3fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlEasyPrinting::PreviewText</definition>
+        <argsstring>(const wxString &amp;htmltext, const wxString &amp;basepath=wxEmptyString)</argsstring>
+        <name>PreviewText</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>htmltext</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>basepath</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Preview HTML text (not file!). </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false in case of error -- call <ref refid="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" kindref="member">wxPrinter::GetLastError</ref> to get detailed information about the kind of the error.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>htmltext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML text. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base directory (html string would be stored there if it was in file). It is used to determine path for loading images, for example. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a92b6832eb9c9e939b236090340dac6f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlEasyPrinting::PrintFile</definition>
+        <argsstring>(const wxString &amp;htmlfile)</argsstring>
+        <name>PrintFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>htmlfile</declname>
+        </param>
+        <briefdescription>
+<para>Print HTML file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false in case of error -- call <ref refid="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" kindref="member">wxPrinter::GetLastError</ref> to get detailed information about the kind of the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a55a26cc29673c5c3aa0dc385e8bd26fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlEasyPrinting::PrintText</definition>
+        <argsstring>(const wxString &amp;htmltext, const wxString &amp;basepath=wxEmptyString)</argsstring>
+        <name>PrintText</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>htmltext</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>basepath</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Print HTML text (not file!). </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false in case of error -- call <ref refid="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" kindref="member">wxPrinter::GetLastError</ref> to get detailed information about the kind of the error.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>htmltext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML text. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base directory (html string would be stored there if it was in file). It is used to determine path for loading images, for example. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a97c87a4d821277bde06b805e6c991fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlEasyPrinting::SetFonts</definition>
+        <argsstring>(const wxString &amp;normal_face, const wxString &amp;fixed_face, const int *sizes=NULL)</argsstring>
+        <name>SetFonts</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>normal_face</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fixed_face</declname>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>sizes</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Sets fonts. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_html_d_c_renderer_1a70cfd1cd9f25f91afe40694466b70f7a" kindref="member">wxHtmlDCRenderer::SetFonts</ref> for detailed description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a4d738f1511b6da10882719cba8324762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlEasyPrinting::SetName</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>SetName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Sets the name used for preview frames and setup dialogs. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.8.11 / 2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a663a594acc27f7479edbe2225375886b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlEasyPrinting::SetStandardFonts</definition>
+        <argsstring>(int size=-1, const wxString &amp;normal_face=wxEmptyString, const wxString &amp;fixed_face=wxEmptyString)</argsstring>
+        <name>SetStandardFonts</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>normal_face</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fixed_face</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Sets default font sizes and/or default font size. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_html_d_c_renderer_1a277ee219b82244b3eecef42f4e67f14c" kindref="member">wxHtmlDCRenderer::SetStandardFonts</ref> for detailed description. <simplesect kind="see"><para><ref refid="classwx_html_easy_printing_1a97c87a4d821277bde06b805e6c991fd6" kindref="member">SetFonts()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1a257994099a541c9043cf92a42b4f396f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlEasyPrinting::SetFooter</definition>
+        <argsstring>(const wxString &amp;footer, int pg=wxPAGE_ALL)</argsstring>
+        <name>SetFooter</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>footer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pg</declname>
+          <defval>wxPAGE_ALL</defval>
+        </param>
+        <briefdescription>
+<para>Set page footer. </para>        </briefdescription>
+        <detaileddescription>
+<para>The following macros can be used inside it: @DATE@ is replaced by the current date in default format @PAGENUM@ is replaced by page number @PAGESCNT@ is replaced by total number of pages @TIME@ is replaced by the current time in default format @TITLE@ is replaced with the title of the document</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>footer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML text to be used as footer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of wxPAGE_ODD, wxPAGE_EVEN and wxPAGE_ALL constants. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1acc8ff19a98718b22d73a6224537b02f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlEasyPrinting::SetHeader</definition>
+        <argsstring>(const wxString &amp;header, int pg=wxPAGE_ALL)</argsstring>
+        <name>SetHeader</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pg</declname>
+          <defval>wxPAGE_ALL</defval>
+        </param>
+        <briefdescription>
+<para>Set page header. </para>        </briefdescription>
+        <detaileddescription>
+<para>The following macros can be used inside it:<itemizedlist>
+<listitem><para>@DATE@ is replaced by the current date in default format</para></listitem><listitem><para>@PAGENUM@ is replaced by page number</para></listitem><listitem><para>@PAGESCNT@ is replaced by total number of pages</para></listitem><listitem><para>@TIME@ is replaced by the current time in default format</para></listitem><listitem><para>@TITLE@ is replaced with the title of the document</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML text to be used as header. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of wxPAGE_ODD, wxPAGE_EVEN and wxPAGE_ALL constants. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_easy_printing_1af788066cba7ec33fe89bb66475729500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlEasyPrinting::SetParentWindow</definition>
+        <argsstring>(wxWindow *window)</argsstring>
+        <name>SetParentWindow</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Sets the parent window for dialogs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="324"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classwx_html_easy_printing_1a61a80a7e27e90cbd59f99d706a4d4021" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxHtmlEasyPrinting::CheckFit</definition>
+        <argsstring>(const wxSize &amp;pageArea, const wxSize &amp;docArea) const </argsstring>
+        <name>CheckFit</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>pageArea</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>docArea</declname>
+        </param>
+        <briefdescription>
+<para>Check whether the document fits into the page area. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called by the base class OnPreparePrinting() implementation and by default checks whether the document fits into <emphasis>pageArea</emphasis> horizontally and warns the user if it does not, giving him the possibility to cancel printing in this case (presumably in order to change some layout options and retry it again).</para><para>You may override it to either suppress this check if truncation of the HTML being printed is acceptable or, on the contrary, add more checks to it, e.g. for the fit in the vertical direction if the document should always appear on a single page.</para><para><simplesect kind="return"><para>true if <ref refid="classwx_html_printout" kindref="compound">wxHtmlPrintout</ref> should continue or false to cancel printing.</para></simplesect>
+<simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="347"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class provides very simple interface to printing architecture. </para>    </briefdescription>
+    <detaileddescription>
+<para>It allows you to print HTML documents using only a few commands.</para><para><simplesect kind="note"><para>Do not create this class on the stack only. You should create an instance on app startup and use this instance for all printing operations. The reason is that this class stores various settings in it.</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref>, <ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6998">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6997">
+        <label>wxHtmlEasyPrinting</label>
+        <link refid="classwx_html_easy_printing"/>
+        <childnode refid="6998" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7000">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7001" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6999">
+        <label>wxHtmlEasyPrinting</label>
+        <link refid="classwx_html_easy_printing"/>
+        <childnode refid="7000" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7001">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="179" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" bodystart="178" bodyend="348"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_html_easy_printing_1a61a80a7e27e90cbd59f99d706a4d4021" prot="private" virt="virtual"><scope>wxHtmlEasyPrinting</scope><name>CheckFit</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlEasyPrinting</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHtmlEasyPrinting</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxHtmlEasyPrinting</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_html_easy_printing_1a0fb229c0c7b3a8f97da34a9fd98ed1d0" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>GetName</name></member>
+      <member refid="classwx_html_easy_printing_1a2768d48d2843bf679afafd88f52ce14e" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>GetPageSetupData</name></member>
+      <member refid="classwx_html_easy_printing_1a9a6989264e4e5cd81fd0c4cd5547fcb3" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>GetParentWindow</name></member>
+      <member refid="classwx_html_easy_printing_1a00233ff9e1fde0c9094e1d5213979170" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>GetPrintData</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>operator new</name></member>
+      <member refid="classwx_html_easy_printing_1ab18d043bee2862b9d98ebbe21c9b0cdd" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>PageSetup</name></member>
+      <member refid="classwx_html_easy_printing_1ab96c0fe063a0ffce10786c7e9838de31" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>PreviewFile</name></member>
+      <member refid="classwx_html_easy_printing_1af6f4da4b9e104e42883994a237a9f3fb" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>PreviewText</name></member>
+      <member refid="classwx_html_easy_printing_1a92b6832eb9c9e939b236090340dac6f1" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>PrintFile</name></member>
+      <member refid="classwx_html_easy_printing_1a55a26cc29673c5c3aa0dc385e8bd26fe" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>PrintText</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>Ref</name></member>
+      <member refid="classwx_html_easy_printing_1a97c87a4d821277bde06b805e6c991fd6" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>SetFonts</name></member>
+      <member refid="classwx_html_easy_printing_1a257994099a541c9043cf92a42b4f396f" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>SetFooter</name></member>
+      <member refid="classwx_html_easy_printing_1acc8ff19a98718b22d73a6224537b02f6" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>SetHeader</name></member>
+      <member refid="classwx_html_easy_printing_1a4d738f1511b6da10882719cba8324762" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>SetName</name></member>
+      <member refid="classwx_html_easy_printing_1af788066cba7ec33fe89bb66475729500" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>SetParentWindow</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>SetRefData</name></member>
+      <member refid="classwx_html_easy_printing_1a663a594acc27f7479edbe2225375886b" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>SetStandardFonts</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>UnShare</name></member>
+      <member refid="classwx_html_easy_printing_1a00cc8a01334ac60f0f36fb0833bf1d54" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>wxHtmlEasyPrinting</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxHtmlEasyPrinting</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_input_stream" kind="class" prot="public">
+    <compoundname>wxInputStream</compoundname>
+    <basecompoundref refid="classwx_stream_base" prot="public" virt="non-virtual">wxStreamBase</basecompoundref>
+    <derivedcompoundref refid="classwx_f_file_input_stream" prot="public" virt="non-virtual">wxFFileInputStream</derivedcompoundref>
+    <derivedcompoundref refid="classwx_file_input_stream" prot="public" virt="non-virtual">wxFileInputStream</derivedcompoundref>
+    <derivedcompoundref refid="classwx_filter_input_stream" prot="public" virt="non-virtual">wxFilterInputStream</derivedcompoundref>
+    <derivedcompoundref refid="classwx_memory_input_stream" prot="public" virt="non-virtual">wxMemoryInputStream</derivedcompoundref>
+    <derivedcompoundref refid="classwx_socket_input_stream" prot="public" virt="non-virtual">wxSocketInputStream</derivedcompoundref>
+    <derivedcompoundref refid="classwx_string_input_stream" prot="public" virt="non-virtual">wxStringInputStream</derivedcompoundref>
+    <includes local="no">wx/stream.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_input_stream_1aeb3e1146260cabcfbe631ff3493ee851" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxInputStream::wxInputStream</definition>
+        <argsstring>()</argsstring>
+        <name>wxInputStream</name>
+        <briefdescription>
+<para>Creates a dummy input stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a30fea51e11bbf042f29bdf82bc052ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxInputStream::~wxInputStream</definition>
+        <argsstring>()</argsstring>
+        <name>~wxInputStream</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="570"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxInputStream::CanRead</definition>
+        <argsstring>() const </argsstring>
+        <name>CanRead</name>
+        <briefdescription>
+<para>Returns true if some data is available in the stream right now, so that calling <ref refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" kindref="member">Read()</ref> wouldn&apos;t block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="576"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxInputStream::Eof</definition>
+        <argsstring>() const </argsstring>
+        <name>Eof</name>
+        <briefdescription>
+<para>Returns true after an attempt has been made to read past the end of the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="582"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a98462fa7198b5c9dca1c71acf6148e0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxInputStream::GetC</definition>
+        <argsstring>()</argsstring>
+        <name>GetC</name>
+        <briefdescription>
+<para>Returns the first character in the input queue and removes it, blocking until it appears if necessary. </para>        </briefdescription>
+        <detaileddescription>
+<para>On success returns a value between 0 - 255; on end of file returns <computeroutput>wxEOF</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="590"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t wxInputStream::LastRead</definition>
+        <argsstring>() const </argsstring>
+        <name>LastRead</name>
+        <briefdescription>
+<para>Returns the last number of bytes read. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="595"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a42dc4394276b726b9877faf2c71ae408" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>char</type>
+        <definition>virtual char wxInputStream::Peek</definition>
+        <argsstring>()</argsstring>
+        <name>Peek</name>
+        <briefdescription>
+<para>Returns the first character in the input queue without removing it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="600"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+        <definition>virtual wxInputStream&amp; wxInputStream::Read</definition>
+        <argsstring>(void *buffer, size_t size)</argsstring>
+        <name>Read</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Reads the specified amount of bytes and stores the data in buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>To check if the call was successful you must use <ref refid="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" kindref="member">LastRead()</ref> to check if this call did actually read <emphasis>size</emphasis> bytes (if it didn&apos;t, <ref refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" kindref="member">GetLastError()</ref> should return a meaningful value).</para><para><simplesect kind="warning"><para>The buffer absolutely needs to have at least the specified size.</para></simplesect>
+<simplesect kind="return"><para>This function returns a reference on the current object, so the user can test any states of the stream right away. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="614"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a05cc7b25c9df86f00157a34ee9809bd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+        <definition>wxInputStream&amp; wxInputStream::Read</definition>
+        <argsstring>(wxOutputStream &amp;stream_out)</argsstring>
+        <name>Read</name>
+        <param>
+          <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
+          <declname>stream_out</declname>
+        </param>
+        <briefdescription>
+<para>Reads data from the input queue and stores it in the specified output stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>The data is read until an error is raised by one of the two streams.</para><para><simplesect kind="return"><para>This function returns a reference on the current object, so the user can test any states of the stream right away. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="623"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+        <definition>virtual wxFileOffset wxInputStream::SeekI</definition>
+        <argsstring>(wxFileOffset pos, wxSeekMode mode=wxFromStart)</argsstring>
+        <name>SeekI</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="ffile_8h_1ae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxFromStart</defval>
+        </param>
+        <briefdescription>
+<para>Changes the stream current position. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operation in general is possible only for seekable streams (see <ref refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" kindref="member">wxStreamBase::IsSeekable()</ref>); non-seekable streams support only seeking positive amounts in mode <computeroutput>wxFromCurrent</computeroutput> (this is implemented by reading data and simply discarding it).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to seek to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of wxFromStart, wxFromEnd, wxFromCurrent.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new stream position or <ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref> on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="640"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1aece5e9ece88100f15fa91802b005ef4b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+        <definition>virtual wxFileOffset wxInputStream::TellI</definition>
+        <argsstring>() const </argsstring>
+        <name>TellI</name>
+        <briefdescription>
+<para>Returns the current stream position or <ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref> if it&apos;s not available (e.g. </para>        </briefdescription>
+        <detaileddescription>
+<para>socket streams do not have a size nor a current stream position). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="647"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a503ff01720f51c4fb170aa78a296be9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxInputStream::Ungetch</definition>
+        <argsstring>(const void *buffer, size_t size)</argsstring>
+        <name>Ungetch</name>
+        <param>
+          <type>const void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>This function is only useful in read mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is the manager of the &quot;Write-Back&quot; buffer. This buffer acts like a temporary buffer where data which has to be read during the next read IO call are put. This is useful when you get a big block of data which you didn&apos;t want to read: you can replace them at the top of the input queue by this way.</para><para>Be very careful about this call in connection with calling <ref refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" kindref="member">SeekI()</ref> on the same stream. Any call to <ref refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" kindref="member">SeekI()</ref> will invalidate any previous call to this method (otherwise you could <ref refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" kindref="member">SeekI()</ref> to one position, &quot;unread&quot; a few bytes there, <ref refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" kindref="member">SeekI()</ref> to another position and data would be either lost or corrupted).</para><para><simplesect kind="return"><para>Returns the amount of bytes saved in the Write-Back buffer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="665"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_input_stream_1a7fe847c79f8d2e1b98bb129c23e549c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxInputStream::Ungetch</definition>
+        <argsstring>(char c)</argsstring>
+        <name>Ungetch</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>This function acts like the previous one except that it takes only one character: it is sometimes shorter to use than the generic function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="671"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_input_stream_1a8ebacd18964a4b169a62ad9190cab4d5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>size_t wxInputStream::OnSysRead</definition>
+        <argsstring>(void *buffer, size_t bufsize)=0</argsstring>
+        <name>OnSysRead</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bufsize</declname>
+        </param>
+        <briefdescription>
+<para>Internal function. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is called when the stream wants to read data of the specified size <emphasis>bufsize</emphasis> and wants it to be placed inside <emphasis>buffer</emphasis>.</para><para>It should return the size that was actually read or zero if EOF has been reached or an error occurred (in this last case the internal <computeroutput>m_lasterror</computeroutput> variable should be set accordingly as well). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="683"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> is an abstract base class which may not be used directly. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is the base class of all streams which provide a <ref refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" kindref="member">Read()</ref> function, i.e. which can be used to read data from a source (e.g. a file, a socket, etc).</para><para>If you want to create your own input stream, you&apos;ll need to derive from this class and implement the protected <ref refid="classwx_input_stream_1a8ebacd18964a4b169a62ad9190cab4d5" kindref="member">OnSysRead()</ref> function only.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7282">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="7283" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7293">
+        <label>wxZlibInputStream</label>
+        <link refid="classwx_zlib_input_stream"/>
+        <childnode refid="7288" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7287">
+        <label>wxFileStream</label>
+        <link refid="classwx_file_stream"/>
+        <childnode refid="7286" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7294">
+        <label>wxMemoryInputStream</label>
+        <link refid="classwx_memory_input_stream"/>
+        <childnode refid="7282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7296">
+        <label>wxStringInputStream</label>
+        <link refid="classwx_string_input_stream"/>
+        <childnode refid="7282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7295">
+        <label>wxSocketInputStream</label>
+        <link refid="classwx_socket_input_stream"/>
+        <childnode refid="7282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7286">
+        <label>wxFileInputStream</label>
+        <link refid="classwx_file_input_stream"/>
+        <childnode refid="7282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7289">
+        <label>wxArchiveInputStream</label>
+        <link refid="classwx_archive_input_stream"/>
+        <childnode refid="7288" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7283">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="7288">
+        <label>wxFilterInputStream</label>
+        <link refid="classwx_filter_input_stream"/>
+        <childnode refid="7282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7290">
+        <label>wxTarInputStream</label>
+        <link refid="classwx_tar_input_stream"/>
+        <childnode refid="7289" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7292">
+        <label>wxBufferedInputStream</label>
+        <link refid="classwx_buffered_input_stream"/>
+        <childnode refid="7288" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7285">
+        <label>wxFFileStream</label>
+        <link refid="classwx_f_file_stream"/>
+        <childnode refid="7284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7284">
+        <label>wxFFileInputStream</label>
+        <link refid="classwx_f_file_input_stream"/>
+        <childnode refid="7282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7291">
+        <label>wxZipInputStream</label>
+        <link refid="classwx_zip_input_stream"/>
+        <childnode refid="7289" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7297">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="7298" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7298">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="560" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="559" bodyend="684"/>
+    <listofallmembers>
+      <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxInputStream</scope><name>CanRead</name></member>
+      <member refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" virt="virtual"><scope>wxInputStream</scope><name>Eof</name></member>
+      <member refid="classwx_input_stream_1a98462fa7198b5c9dca1c71acf6148e0b" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>GetC</name></member>
+      <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>GetLastError</name></member>
+      <member refid="classwx_stream_base_1a0d2d992fd98835aabf2b9b656a1e6ccd" prot="public" virt="virtual"><scope>wxInputStream</scope><name>GetLength</name></member>
+      <member refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" prot="public" virt="virtual"><scope>wxInputStream</scope><name>GetSize</name></member>
+      <member refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b" prot="public" virt="virtual"><scope>wxInputStream</scope><name>IsOk</name></member>
+      <member refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" prot="public" virt="virtual"><scope>wxInputStream</scope><name>IsSeekable</name></member>
+      <member refid="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" prot="public" virt="virtual"><scope>wxInputStream</scope><name>LastRead</name></member>
+      <member refid="classwx_input_stream_1a8ebacd18964a4b169a62ad9190cab4d5" prot="protected" virt="pure-virtual"><scope>wxInputStream</scope><name>OnSysRead</name></member>
+      <member refid="classwx_stream_base_1ae38e82c374f82d39993909f0a5d3017e" prot="protected" virt="virtual"><scope>wxInputStream</scope><name>OnSysSeek</name></member>
+      <member refid="classwx_stream_base_1a7bb3b0b470e960d1165a28e83d576c1b" prot="protected" virt="virtual"><scope>wxInputStream</scope><name>OnSysTell</name></member>
+      <member refid="classwx_stream_base_1aaee699fe59f603eaae1550ee55ac579f" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>operator!</name></member>
+      <member refid="classwx_input_stream_1a42dc4394276b726b9877faf2c71ae408" prot="public" virt="virtual"><scope>wxInputStream</scope><name>Peek</name></member>
+      <member refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" prot="public" virt="virtual"><scope>wxInputStream</scope><name>Read</name></member>
+      <member refid="classwx_input_stream_1a05cc7b25c9df86f00157a34ee9809bd5" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>Read</name></member>
+      <member refid="classwx_stream_base_1a52353ac42f72538b2022a84f416e5fe2" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>Reset</name></member>
+      <member refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" prot="public" virt="virtual"><scope>wxInputStream</scope><name>SeekI</name></member>
+      <member refid="classwx_input_stream_1aece5e9ece88100f15fa91802b005ef4b" prot="public" virt="virtual"><scope>wxInputStream</scope><name>TellI</name></member>
+      <member refid="classwx_input_stream_1a503ff01720f51c4fb170aa78a296be9d" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_input_stream_1a7fe847c79f8d2e1b98bb129c23e549c7" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_input_stream_1aeb3e1146260cabcfbe631ff3493ee851" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>wxInputStream</name></member>
+      <member refid="classwx_stream_base_1a2bdb01f1ccd34d551d3cfc848054bf1e" prot="public" virt="non-virtual"><scope>wxInputStream</scope><name>wxStreamBase</name></member>
+      <member refid="classwx_input_stream_1a30fea51e11bbf042f29bdf82bc052ab2" prot="public" virt="virtual"><scope>wxInputStream</scope><name>~wxInputStream</name></member>
+      <member refid="classwx_stream_base_1aebba32b4da79c60933fa997735a8bfe5" prot="public" virt="virtual"><scope>wxInputStream</scope><name>~wxStreamBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

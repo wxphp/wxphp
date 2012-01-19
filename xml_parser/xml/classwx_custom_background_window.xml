@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_custom_background_window" kind="class" prot="public">
+    <compoundname>wxCustomBackgroundWindow</compoundname>
+    <includes local="no">wx/custombgwin.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class W</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_custom_background_window_1a1b029ca4e510fc40a891a4e353ddef0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCustomBackgroundWindow&lt; W &gt;::wxCustomBackgroundWindow</definition>
+        <argsstring>()</argsstring>
+        <name>wxCustomBackgroundWindow</name>
+        <briefdescription>
+<para>Trivial default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/custombgwin.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_custom_background_window_1ab9680949c59eeb400b34b298eb8bbd53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxCustomBackgroundWindow&lt; W &gt;::SetBackgroundBitmap</definition>
+        <argsstring>(const wxBitmap &amp;bmp)</argsstring>
+        <name>SetBackgroundBitmap</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmp</declname>
+        </param>
+        <briefdescription>
+<para>Set the background bitmap for this window. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>bmp</emphasis> is a valid bitmap, this bitmap will be tiled over the panel background and show through any of its transparent children. Passing an invalid bitmap reverts to the default background appearance.</para><para>Notice that you must not prevent the base class EVT_ERASE_BACKGROUND handler from running (i.e. not to handle this event yourself) for this to work. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/custombgwin.h" line="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A helper class making it possible to use custom background for any window. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classwx_window" kindref="compound">wxWindow</ref> itself only provides SetBackgroundColour() method taking a (solid) <ref refid="classwx_colour" kindref="compound">wxColour</ref>. This class extends it by allowing to use custom bitmap backgrounds with any window, provided that you inherit from it. Notice that the usual rule of not interfering with event handling or painting of native controls still applies, so you shouldn&apos;t try to use custom backgrounds with classes such as <ref refid="classwx_button" kindref="compound">wxButton</ref> (even if this might work on some platforms, it&apos;s not guaranteed to work in general). But you can use this class in conjunction with <ref refid="classwx_window" kindref="compound">wxWindow</ref>, <ref refid="classwx_panel" kindref="compound">wxPanel</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref> and other similar classes, e.g. the erase sample shows how to use it with wxScrolledWindow:</para><para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="custombgwin_8h" kindref="compound">wx/custombgwin.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyCanvas<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_custom_background_window" kindref="compound" tooltip="A helper class making it possible to use custom background for any window.">wxCustomBackgroundWindow</ref>&lt;wxScrolledWindow&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyCanvas(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref>*<sp/>parent)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Notice<sp/>that<sp/>we<sp/>must<sp/>explicitly<sp/>call<sp/>base<sp/>class<sp/>Create()</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>instead<sp/>of<sp/>using<sp/>its<sp/>ctor<sp/>as<sp/>wxCustomBackgroundWindow</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>doesn&apos;t<sp/>define<sp/>any<sp/>non-default<sp/>ctors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Create(parent,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_custom_background_window_1ab9680949c59eeb400b34b298eb8bbd53" kindref="member" tooltip="Set the background bitmap for this window.">SetBackgroundBitmap</ref>(bitmap);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/custombgwin.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/custombgwin.h" bodystart="49" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classwx_custom_background_window_1ab9680949c59eeb400b34b298eb8bbd53" prot="public" virt="non-virtual"><scope>wxCustomBackgroundWindow</scope><name>SetBackgroundBitmap</name></member>
+      <member refid="classwx_custom_background_window_1a1b029ca4e510fc40a891a4e353ddef0a" prot="public" virt="non-virtual"><scope>wxCustomBackgroundWindow</scope><name>wxCustomBackgroundWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

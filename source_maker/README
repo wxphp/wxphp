@@ -1,0 +1,107 @@
+Table of Contents:
+------------------------
+1. Code Generator
+2. Using the source maker
+3. Dumps
+4. Source Templates
+5. Templates
+6. Class Selector
+	
+
+Code generator
+------------------------
+File: parser.php:
+
+This script reads the files on the dumps directory and 
+generates the source code that wraps the wxWidgets classes.
+
+It uses a semi-template based system to facilitate editing the desired
+generated code.
+
+
+Using the source maker:
+------------------------
+cd source_maker	
+php parser.php
+
+This will produce 5 files:
+	classes.h
+	clases.cpp
+	php_wxwidgets.h
+	wxwidgets.cpp
+	common.h
+	
+It also generates a file named discarded.log that stores all methods
+and functions that were removed from the source code generation for
+various reasons.
+
+The generated source files are meant to replace the ones in the module 
+source root.
+
+To make the process simpler you can use the utility go.sh/go.bat 
+to automatically update the source files.
+
+
+Dumps
+------------------------
+The dumps directory holds the json text files, result of parsing the 
+wxWidgets documentation with the xml_parser script. The files are pretty 
+printed to make manual edition possible as easier integration of patches.
+Previously standard php serialize functions were used making impossible 
+to edit them. We thought about using the xml format but the most easier 
+format to convert php arrays to human editable files was json.
+
+Files on the directory:
+
+	classes.json:
+		Classes and it's methods with detailed information.
+		
+	classes_variables.json
+		Store the member variables of classes (not implemnted yet)
+		
+	consts.json 
+		#define macro names and the values.
+		
+	enums.json
+		Class enumerations and global enumerations.
+		
+	functions.json
+		wxWidgets global functions with detailed information.
+		
+	global_variables.json
+		Various global variables found while parsing like wx_NORMAL_FONT
+		
+	includes.json
+		The include files of the parsed files (this include files are
+		added to common.h for correct compilation)
+		
+	typedef.json
+		Name of variables declared as typedef with 
+		the original type value.
+		
+		
+Source Templates
+------------------------
+The source_templates directory has the files that serve as the skeleton
+of the wxWidgets php extension. These files have some comment tags or 
+php variables inserted that the code generator uses to insert the 
+neccesary source code to declare classes, constants and functions.
+
+		
+Templates
+------------------------
+The templates directory holds files with parts of the skeleton that are 
+goind to be inserted by the code generator on the classes.cpp and classes.h
+files. The templates files are used in combination of some functions 
+declared on the include directory. The idea is to make edition of output
+code much easier.
+
+
+Class Selector
+------------------------
+The directory class_selector has the GUI utility (written with wxPHP
+itself) used to inspect and enable/disable bindings.
+
+To use this utility you need to have a working library of wxPHP and run:
+
+php /path/to/source_maker/class_selector/selector.php

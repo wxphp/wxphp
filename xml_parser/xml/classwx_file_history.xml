@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_file_history" kind="class" prot="public">
+    <compoundname>wxFileHistory</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/filehistory.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_file_history_1a30e3a3a1f92fc253cc0fc69eb6f27fd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileHistory::wxFileHistory</definition>
+        <argsstring>(size_t maxFiles=9, wxWindowID idBase=wxID_FILE1)</argsstring>
+        <name>wxFileHistory</name>
+        <param>
+          <type>size_t</type>
+          <declname>maxFiles</declname>
+          <defval>9</defval>
+        </param>
+        <param>
+          <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
+          <declname>idBase</declname>
+          <defval>wxID_FILE1</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Pass the maximum number of files that should be stored and displayed.</para><para><emphasis>idBase</emphasis> defaults to wxID_FILE1 and represents the id given to the first history menu item. Since menu items can&apos;t share the same ID you should change <emphasis>idBase</emphasis> (to one of your own defined IDs) when using more than one <ref refid="classwx_file_history" kindref="compound">wxFileHistory</ref> in your application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1a9c5eda47b6fce4c195f7acb350789591" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxFileHistory::~wxFileHistory</definition>
+        <argsstring>()</argsstring>
+        <name>~wxFileHistory</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1a835839c473dfa42feecc78bb4798c79d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFileHistory::AddFileToHistory</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>AddFileToHistory</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Adds a file to the file history list, if the object has a pointer to an appropriate file menu. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1a8c77c1d51e18be0b54639953745481a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFileHistory::AddFilesToMenu</definition>
+        <argsstring>()</argsstring>
+        <name>AddFilesToMenu</name>
+        <briefdescription>
+<para>Appends the files in the history list, to all menus managed by the file history object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1a285f936b4c746f5214059a69357d049f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFileHistory::AddFilesToMenu</definition>
+        <argsstring>(wxMenu *menu)</argsstring>
+        <name>AddFilesToMenu</name>
+        <param>
+          <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+          <declname>menu</declname>
+        </param>
+        <briefdescription>
+<para>Appends the files in the history list, to the given menu only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1acec972bfcc45bb158446352c3ecb865f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
+        <definition>wxWindowID wxFileHistory::GetBaseId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBaseId</name>
+        <briefdescription>
+<para>Returns the base identifier for the range used for appending items. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1af96d6c2a618d92579b3acd7c934a4bb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t wxFileHistory::GetCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCount</name>
+        <briefdescription>
+<para>Returns the number of files currently stored in the file history. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1a99b1afe07ed22bf6f5587a7bf662f72d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxFileHistory::GetHistoryFile</definition>
+        <argsstring>(size_t index) const </argsstring>
+        <name>GetHistoryFile</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the file at this index (zero-based). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1aba1b342c7005b38025c4d3f83d323570" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxFileHistory::GetMaxFiles</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMaxFiles</name>
+        <briefdescription>
+<para>Returns the maximum number of files that can be stored. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1ac419990f16e65b02389c3f66b0e7e74e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const wxList &amp;</type>
+        <definition>const wxList&amp; wxFileHistory::GetMenus</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMenus</name>
+        <briefdescription>
+<para>Returns the list of menus that are managed by this file history object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_history_1ad73800aba67b30fc9d0dc94f17c4cc09" kindref="member">UseMenu()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1a2537201495686a3a6a26701e158ecfb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFileHistory::Load</definition>
+        <argsstring>(const wxConfigBase &amp;config)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>const <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Loads the file history from the given config object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function should be called explicitly by the application.</para><para><simplesect kind="see"><para><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1ad9e2db9f45b538c19a240c55ccd60448" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFileHistory::RemoveFileFromHistory</definition>
+        <argsstring>(size_t i)</argsstring>
+        <name>RemoveFileFromHistory</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Removes the specified file from the history. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1a5ed5eb530eb2fce7207ff8688535423c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFileHistory::RemoveMenu</definition>
+        <argsstring>(wxMenu *menu)</argsstring>
+        <name>RemoveMenu</name>
+        <param>
+          <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+          <declname>menu</declname>
+        </param>
+        <briefdescription>
+<para>Removes this menu from the list of those managed by this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1a0552296e381e7a3500e0813d2263930e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFileHistory::Save</definition>
+        <argsstring>(wxConfigBase &amp;config)</argsstring>
+        <name>Save</name>
+        <param>
+          <type><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Saves the file history into the given config object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This must be called explicitly by the application.</para><para><simplesect kind="see"><para><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1ae778a6e4ade91d08b048082c3ec3566f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileHistory::SetBaseId</definition>
+        <argsstring>(wxWindowID baseId)</argsstring>
+        <name>SetBaseId</name>
+        <param>
+          <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
+          <declname>baseId</declname>
+        </param>
+        <briefdescription>
+<para>Sets the base identifier for the range used for appending items. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_history_1ad73800aba67b30fc9d0dc94f17c4cc09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFileHistory::UseMenu</definition>
+        <argsstring>(wxMenu *menu)</argsstring>
+        <name>UseMenu</name>
+        <param>
+          <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+          <declname>menu</declname>
+        </param>
+        <briefdescription>
+<para>Adds this menu to the list of those menus that are managed by this file history object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Also see <ref refid="classwx_file_history_1a8c77c1d51e18be0b54639953745481a6" kindref="member">AddFilesToMenu()</ref> for initializing the menu with filenames that are already in the history when this function is called, as this is not done automatically. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classwx_file_history" kindref="compound">wxFileHistory</ref> encapsulates a user interface convenience, the list of most recently visited files as shown on a menu (usually the File menu). </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classwx_file_history" kindref="compound">wxFileHistory</ref> can manage one or more file menus. More than one menu may be required in an MDI application, where the file history should appear on each MDI child menu as well as the MDI parent frame.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview__docview" kindref="compound">Document/View Framework</ref>, <ref refid="classwx_doc_manager" kindref="compound">wxDocManager</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6199">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6198">
+        <label>wxFileHistory</label>
+        <link refid="classwx_file_history"/>
+        <childnode refid="6199" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6201">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6202" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6200">
+        <label>wxFileHistory</label>
+        <link refid="classwx_file_history"/>
+        <childnode refid="6201" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6202">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" bodystart="24" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classwx_file_history_1a8c77c1d51e18be0b54639953745481a6" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>AddFilesToMenu</name></member>
+      <member refid="classwx_file_history_1a285f936b4c746f5214059a69357d049f" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>AddFilesToMenu</name></member>
+      <member refid="classwx_file_history_1a835839c473dfa42feecc78bb4798c79d" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>AddFileToHistory</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFileHistory</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFileHistory</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFileHistory</scope><name>CreateRefData</name></member>
+      <member refid="classwx_file_history_1acec972bfcc45bb158446352c3ecb865f" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>GetBaseId</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_file_history_1af96d6c2a618d92579b3acd7c934a4bb2" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>GetCount</name></member>
+      <member refid="classwx_file_history_1a99b1afe07ed22bf6f5587a7bf662f72d" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>GetHistoryFile</name></member>
+      <member refid="classwx_file_history_1aba1b342c7005b38025c4d3f83d323570" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>GetMaxFiles</name></member>
+      <member refid="classwx_file_history_1ac419990f16e65b02389c3f66b0e7e74e" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>GetMenus</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>IsSameAs</name></member>
+      <member refid="classwx_file_history_1a2537201495686a3a6a26701e158ecfb3" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>Load</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFileHistory</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>Ref</name></member>
+      <member refid="classwx_file_history_1ad9e2db9f45b538c19a240c55ccd60448" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>RemoveFileFromHistory</name></member>
+      <member refid="classwx_file_history_1a5ed5eb530eb2fce7207ff8688535423c" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>RemoveMenu</name></member>
+      <member refid="classwx_file_history_1a0552296e381e7a3500e0813d2263930e" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>Save</name></member>
+      <member refid="classwx_file_history_1ae778a6e4ade91d08b048082c3ec3566f" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>SetBaseId</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>UnShare</name></member>
+      <member refid="classwx_file_history_1ad73800aba67b30fc9d0dc94f17c4cc09" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>UseMenu</name></member>
+      <member refid="classwx_file_history_1a30e3a3a1f92fc253cc0fc69eb6f27fd8" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>wxFileHistory</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFileHistory</scope><name>wxObject</name></member>
+      <member refid="classwx_file_history_1a9c5eda47b6fce4c195f7acb350789591" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>~wxFileHistory</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

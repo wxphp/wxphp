@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_file_system_watcher" kind="class" prot="public">
+    <compoundname>wxFileSystemWatcher</compoundname>
+    <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
+    <includes local="no">wx/fswatcher.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_file_system_watcher_1a70cc2f73889a3332204d890aa4926f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileSystemWatcher::wxFileSystemWatcher</definition>
+        <argsstring>()</argsstring>
+        <name>wxFileSystemWatcher</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1a90eb1bc053fa5ca2af326970450ff423" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxFileSystemWatcher::~wxFileSystemWatcher</definition>
+        <argsstring>()</argsstring>
+        <name>~wxFileSystemWatcher</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Stops all paths from being watched and frees any system resources used by this file system watcher object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1af45bbabc22808e5f4a2dc560e1e30aa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFileSystemWatcher::Add</definition>
+        <argsstring>(const wxFileName &amp;path, int events=wxFSW_EVENT_ALL)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>events</declname>
+          <defval>wxFSW_EVENT_ALL</defval>
+        </param>
+        <briefdescription>
+<para>Adds <emphasis>path</emphasis> to currently watched files. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>path</emphasis> argument can currently only be a directory and any changes to this directory itself or its immediate children will generate the events. Use <ref refid="classwx_file_system_watcher_1a88b7b3586065126dca5d5d57b080fa94" kindref="member">AddTree()</ref> to monitor the directory recursively.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the path to watch. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>events</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional filter to receive only events of particular types. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1a88b7b3586065126dca5d5d57b080fa94" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFileSystemWatcher::AddTree</definition>
+        <argsstring>(const wxFileName &amp;path, int events=wxFSW_EVENT_ALL, const wxString &amp;filter=wxEmptyString)</argsstring>
+        <name>AddTree</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>events</declname>
+          <defval>wxFSW_EVENT_ALL</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filter</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>This is the same as <ref refid="classwx_file_system_watcher_1af45bbabc22808e5f4a2dc560e1e30aa9" kindref="member">Add()</ref>, but recursively adds every file/directory in the tree rooted at <emphasis>path</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Additionally a file mask can be specified to include only files matching that particular mask.</para><para>This method is implemented efficiently under MSW but shouldn&apos;t be used for the directories with a lot of children (such as e.g. the root directory) under the other platforms as it calls <ref refid="classwx_file_system_watcher_1af45bbabc22808e5f4a2dc560e1e30aa9" kindref="member">Add()</ref> there for each subdirectory potentially creating a lot of watches and taking a long time to execute. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1a7fce329a25de2af0b57b23a4e3d91f44" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFileSystemWatcher::Remove</definition>
+        <argsstring>(const wxFileName &amp;path)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Removes <emphasis>path</emphasis> from the list of watched paths. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1a6e1b8758b87aaae7dfa7ec146a929b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFileSystemWatcher::RemoveTree</definition>
+        <argsstring>(const wxFileName &amp;path)</argsstring>
+        <name>RemoveTree</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Same as <ref refid="classwx_file_system_watcher_1a7fce329a25de2af0b57b23a4e3d91f44" kindref="member">Remove()</ref>, but also removes every file/directory belonging to the tree rooted at <emphasis>path</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1ae5d3fd2f1b71de00d1503da1b39ea846" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFileSystemWatcher::RemoveAll</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveAll</name>
+        <briefdescription>
+<para>Clears the list of currently watched paths. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1a748ed8eff345f5f4bb719f5a0ab3b888" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxFileSystemWatcher::GetWatchedPathsCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWatchedPathsCount</name>
+        <briefdescription>
+<para>Returns the number of currently watched paths. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_system_watcher_1a581b6680b149231bf7636d8eca97440c" kindref="member">GetWatchedPaths()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1a581b6680b149231bf7636d8eca97440c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxFileSystemWatcher::GetWatchedPaths</definition>
+        <argsstring>(wxArrayString *paths) const </argsstring>
+        <name>GetWatchedPaths</name>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> *</type>
+          <declname>paths</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves all watched paths and places them in <emphasis>paths</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of watched paths, which is also the number of entries added to <emphasis>paths</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_system_watcher_1a70156ba21bd8b6ee2753d2ee437dcbfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileSystemWatcher::SetOwner</definition>
+        <argsstring>(wxEvtHandler *handler)</argsstring>
+        <name>SetOwner</name>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Associates the file system watcher with the given <emphasis>handler</emphasis> object. </para>        </briefdescription>
+        <detaileddescription>
+<para>All the events generated by this object will be passed to the specified owner. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="122"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classwx_file_system_watcher" kindref="compound">wxFileSystemWatcher</ref> class allows to receive notifications of file system changes. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Implementation limitations: this class is currently implemented for MSW, OS X and GTK ports but doesn&apos;t detect all changes correctly everywhere: under MSW accessing the file is not detected (only modifying it is) and under OS X neither accessing nor modifying is detected (only creating and deleting files is). Moreover, OS X version doesn&apos;t currently collapse pairs of create/delete events in a rename event, unlike the other ones.</para></simplesect>
+For the full list of change types that are reported see wxFSWFlags.</para><para>This class notifies the application about the file system changes by sending events of <ref refid="classwx_file_system_watcher_event" kindref="compound">wxFileSystemWatcherEvent</ref> class. By default these events are sent to the <ref refid="classwx_file_system_watcher" kindref="compound">wxFileSystemWatcher</ref> object itself so you can derive from it and use the event table <computeroutput>EVT_FSWATCHER</computeroutput> macro to handle these events in a derived class method. Alternatively, you can use <ref refid="classwx_file_system_watcher_1a70156ba21bd8b6ee2753d2ee437dcbfe" kindref="member">wxFileSystemWatcher::SetOwner()</ref> to send the events to another object. Or you could use <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">wxEvtHandler::Connect()</ref> with <computeroutput>wxEVT_FSWATCHER</computeroutput> to handle these events in any other object. See the fswatcher sample for an example of the latter approach.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6257">
+        <label>wxFileSystemWatcher</label>
+        <link refid="classwx_file_system_watcher"/>
+        <childnode refid="6258" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6259">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6258">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6259" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6260" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6260">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6261">
+        <label>wxFileSystemWatcher</label>
+        <link refid="classwx_file_system_watcher"/>
+        <childnode refid="6262" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6263">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6264" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6262">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6263" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6265">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6264">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" bodystart="42" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classwx_file_system_watcher_1af45bbabc22808e5f4a2dc560e1e30aa9" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>Add</name></member>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>AddFilter</name></member>
+      <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_file_system_watcher_1a88b7b3586065126dca5d5d57b080fa94" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>AddTree</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Bind</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFileSystemWatcher</scope><name>CloneRefData</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Connect</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFileSystemWatcher</scope><name>CreateRefData</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Disconnect</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>GetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>GetRefData</name></member>
+      <member refid="classwx_file_system_watcher_1a581b6680b149231bf7636d8eca97440c" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>GetWatchedPaths</name></member>
+      <member refid="classwx_file_system_watcher_1a748ed8eff345f5f4bb719f5a0ab3b888" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>GetWatchedPathsCount</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>IsSameAs</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>operator new</name></member>
+      <member refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_evt_handler_1a6f643dbdcf8e914ae1c8b70dd305e6f2" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>QueueEvent</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Ref</name></member>
+      <member refid="classwx_file_system_watcher_1a7fce329a25de2af0b57b23a4e3d91f44" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>Remove</name></member>
+      <member refid="classwx_file_system_watcher_1ae5d3fd2f1b71de00d1503da1b39ea846" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>RemoveAll</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_file_system_watcher_1a6e1b8758b87aaae7dfa7ec146a929b8e" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>RemoveTree</name></member>
+      <member refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>SetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_file_system_watcher_1a70156ba21bd8b6ee2753d2ee437dcbfe" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>SetOwner</name></member>
+      <member refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>SetRefData</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxFileSystemWatcher</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxFileSystemWatcher</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>UnShare</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_file_system_watcher_1a70cc2f73889a3332204d890aa4926f68" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>wxFileSystemWatcher</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFileSystemWatcher</scope><name>wxObject</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_file_system_watcher_1a90eb1bc053fa5ca2af326970450ff423" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>~wxFileSystemWatcher</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxFileSystemWatcher</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_notification_message" kind="class" prot="public">
+    <compoundname>wxNotificationMessage</compoundname>
+    <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
+    <includes local="no">wx/notifmsg.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_notification_message_1a7799f9358f0d90f8d9ebc675c2da4782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxNotificationMessage::wxNotificationMessage</definition>
+        <argsstring>()</argsstring>
+        <name>wxNotificationMessage</name>
+        <briefdescription>
+<para>Default constructor, use <ref refid="classwx_notification_message_1a5b966d65b4c90b36c86fc80782cf8459" kindref="member">SetParent()</ref>, <ref refid="classwx_notification_message_1a7654f8e0764ac66c5dcf58b057453045" kindref="member">SetTitle()</ref> and <ref refid="classwx_notification_message_1acdc0e245b4391be704cced4c790e9e35" kindref="member">SetMessage()</ref> to initialize the object before showing it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notification_message_1ad7702e56ced878ea5b0b0e3f9a6a727c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxNotificationMessage::wxNotificationMessage</definition>
+        <argsstring>(const wxString &amp;title, const wxString &amp;message=wxEmptyString, wxWindow *parent=NULL, int flags=wxICON_INFORMATION)</argsstring>
+        <name>wxNotificationMessage</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxICON_INFORMATION</defval>
+        </param>
+        <briefdescription>
+<para>Create a notification object with the given attributes. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_notification_message_1a7654f8e0764ac66c5dcf58b057453045" kindref="member">SetTitle()</ref>, <ref refid="classwx_notification_message_1acdc0e245b4391be704cced4c790e9e35" kindref="member">SetMessage()</ref>, <ref refid="classwx_notification_message_1a5b966d65b4c90b36c86fc80782cf8459" kindref="member">SetParent()</ref> and <ref refid="classwx_notification_message_1af55f3983bfd60ae746411dafed65257a" kindref="member">SetFlags()</ref> for the description of the corresponding parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notification_message_1a31b6df34e4c1c09531848cc0f30eccb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxNotificationMessage::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+<para>Hides the notification. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if it was hidden or false if it couldn&apos;t be done (e.g. on some systems automatically hidden notifications can&apos;t be hidden manually). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notification_message_1af55f3983bfd60ae746411dafed65257a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxNotificationMessage::SetFlags</definition>
+        <argsstring>(int flags)</argsstring>
+        <name>SetFlags</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This parameter can be currently used to specify the icon to show in the notification. </para>        </briefdescription>
+        <detaileddescription>
+<para>Valid values are <computeroutput>wxICON_INFORMATION</computeroutput>, <computeroutput>wxICON_WARNING</computeroutput> and <computeroutput>wxICON_ERROR</computeroutput> (notice that <computeroutput>wxICON_QUESTION</computeroutput> is not allowed here). Some implementations of this class may not support the icons. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notification_message_1acdc0e245b4391be704cced4c790e9e35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxNotificationMessage::SetMessage</definition>
+        <argsstring>(const wxString &amp;message)</argsstring>
+        <name>SetMessage</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Set the main text of the notification. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should be a more detailed description than the title but still limited to reasonable length (not more than 256 characters). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notification_message_1a5b966d65b4c90b36c86fc80782cf8459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxNotificationMessage::SetParent</definition>
+        <argsstring>(wxWindow *parent)</argsstring>
+        <name>SetParent</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Set the parent for this notification: the notification will be associated with the top level parent of this window or, if this method is not called, with the main application window by default. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notification_message_1a7654f8e0764ac66c5dcf58b057453045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxNotificationMessage::SetTitle</definition>
+        <argsstring>(const wxString &amp;title)</argsstring>
+        <name>SetTitle</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Set the title, it must be a concise string (not more than 64 characters), use <ref refid="classwx_notification_message_1acdc0e245b4391be704cced4c790e9e35" kindref="member">SetMessage()</ref> to give the user more details. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notification_message_1ac08556aaa081b3c39281dc261449a4bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxNotificationMessage::Show</definition>
+        <argsstring>(int timeout=Timeout_Auto)</argsstring>
+        <name>Show</name>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+          <defval>Timeout_Auto</defval>
+        </param>
+        <briefdescription>
+<para>Show the notification to the user and hides it after <emphasis>timeout</emphasis> seconds are elapsed. </para>        </briefdescription>
+        <detaileddescription>
+<para>Special values <computeroutput>Timeout_Auto</computeroutput> and <computeroutput>Timeout_Never</computeroutput> can be used here, notice that you shouldn&apos;t rely on <emphasis>timeout</emphasis> being exactly respected because the current platform may only support default timeout value and also because the user may be able to close the notification.</para><para><simplesect kind="return"><para>false if an error occurred. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class allows to show the user a message non intrusively. </para>    </briefdescription>
+    <detaileddescription>
+<para>Currently it is implemented natively only for the Maemo platform and uses (non-modal) dialogs for the display of the notifications under the other platforms but it will be extended to use the platform-specific notifications in the other ports in the future.</para><para>Notice that this class is not a window and so doesn&apos;t derive from <ref refid="classwx_window" kindref="compound">wxWindow</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7965">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7964">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7965" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7966">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7963">
+        <label>wxNotificationMessage</label>
+        <link refid="classwx_notification_message"/>
+        <childnode refid="7964" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7969">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7970" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7968">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7969" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7971" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7971">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7967">
+        <label>wxNotificationMessage</label>
+        <link refid="classwx_notification_message"/>
+        <childnode refid="7968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7970">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notifmsg.h" bodystart="24" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>AddFilter</name></member>
+      <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxNotificationMessage</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Bind</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxNotificationMessage</scope><name>CloneRefData</name></member>
+      <member refid="classwx_notification_message_1a31b6df34e4c1c09531848cc0f30eccb1" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>Close</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Connect</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxNotificationMessage</scope><name>CreateRefData</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Disconnect</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>GetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>IsSameAs</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxNotificationMessage</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>operator new</name></member>
+      <member refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_evt_handler_1a6f643dbdcf8e914ae1c8b70dd305e6f2" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>QueueEvent</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Ref</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_notification_message_1af55f3983bfd60ae746411dafed65257a" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetFlags</name></member>
+      <member refid="classwx_notification_message_1acdc0e245b4391be704cced4c790e9e35" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetMessage</name></member>
+      <member refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_notification_message_1a5b966d65b4c90b36c86fc80782cf8459" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetParent</name></member>
+      <member refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetRefData</name></member>
+      <member refid="classwx_notification_message_1a7654f8e0764ac66c5dcf58b057453045" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>SetTitle</name></member>
+      <member refid="classwx_notification_message_1ac08556aaa081b3c39281dc261449a4bc" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>Show</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxNotificationMessage</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxNotificationMessage</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxNotificationMessage</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>UnShare</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_notification_message_1a7799f9358f0d90f8d9ebc675c2da4782" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>wxNotificationMessage</name></member>
+      <member refid="classwx_notification_message_1ad7702e56ced878ea5b0b0e3f9a6a727c" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>wxNotificationMessage</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxNotificationMessage</scope><name>wxObject</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxNotificationMessage</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

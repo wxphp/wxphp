@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="valnum_8h" kind="file">
+    <compoundname>valnum.h</compoundname>
+    <innerclass refid="classwx_num_validator" prot="public">wxNumValidator</innerclass>
+    <innerclass refid="classwx_integer_validator" prot="public">wxIntegerValidator</innerclass>
+    <innerclass refid="classwx_floating_point_validator" prot="public">wxFloatingPointValidator</innerclass>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="valnum_8h_1aeee397843c4f2e53abd67ca3ec1589f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref>&lt; T &gt;</type>
+        <definition>wxFloatingPointValidator&lt;T&gt; wxMakeFloatingPointValidator</definition>
+        <argsstring>(T *value, int style=wxNUM_VAL_DEFAULT)</argsstring>
+        <name>wxMakeFloatingPointValidator</name>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>style</declname>
+          <defval>wxNUM_VAL_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Creates a <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> object with automatic type deduction. </para>        </briefdescription>
+        <detaileddescription>
+<para>Similarly to <ref refid="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" kindref="member">wxMakeIntegerValidator()</ref>, this function allows to avoid explicitly specifying the validator type.</para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="352"/>
+      </memberdef>
+      <memberdef kind="function" id="valnum_8h_1a4f86eb1c74de9461226a87d743c44e33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref>&lt; T &gt;</type>
+        <definition>wxFloatingPointValidator&lt;T&gt; wxMakeFloatingPointValidator</definition>
+        <argsstring>(int precision, T *value, int style=wxNUM_VAL_DEFAULT)</argsstring>
+        <name>wxMakeFloatingPointValidator</name>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>style</declname>
+          <defval>wxNUM_VAL_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Creates a <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> object with automatic type deduction. </para>        </briefdescription>
+        <detaileddescription>
+<para>Similarly to <ref refid="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" kindref="member">wxMakeIntegerValidator()</ref>, this function allows to avoid explicitly specifying the validator type.</para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="357"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__group__class__validator_1ga2bfb287a2b59965b28905c72225f1782" prot="public" static="no">
+        <name>wxNumValidatorStyle</name>
+        <enumvalue id="group__group__class__validator_1gga2bfb287a2b59965b28905c72225f1782a8561e61d7ca64d67855d06d70b250e2d" prot="public">
+          <name>wxNUM_VAL_DEFAULT</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Indicates absence of any other flags. </para>          </briefdescription>
+          <detaileddescription>
+<para>This value corresponds to the default behaviour. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__class__validator_1gga2bfb287a2b59965b28905c72225f1782ae5d44ad906f41079c4b8c6c17d7cf41f" prot="public">
+          <name>wxNUM_VAL_THOUSANDS_SEPARATOR</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Use thousands separators in the numbers. </para>          </briefdescription>
+          <detaileddescription>
+<para>When this style is used, numbers are formatted using the thousands separators after validating the user entry (if the current locale uses the thousands separators character). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__class__validator_1gga2bfb287a2b59965b28905c72225f1782a12a8fcf6c7e30edeeeaec5f2298113d2" prot="public">
+          <name>wxNUM_VAL_ZERO_AS_BLANK</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Show a value of zero as an empty string. </para>          </briefdescription>
+          <detaileddescription>
+<para>With this style a value of zero in the associated variable is translated to an empty string and an empty value of the control is translated to a value of zero. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__class__validator_1gga2bfb287a2b59965b28905c72225f1782a10bd9dfabfa8911a3fe5f79ab48085b1" prot="public">
+          <name>wxNUM_VAL_NO_TRAILING_ZEROES</name>
+          <briefdescription>
+<para>Remove trailing zeroes from the fractional part of the number. </para>          </briefdescription>
+          <detaileddescription>
+<para>This style can only be used with <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> and indicates that trailing zeroes should be removed from the control text when it is validated. By default, as many zeroes as needed to satisfy the precision used when creating the validator will be appended.</para><para>For example, without this style a <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> with a precision 3 will show the value of 1.5 as &quot;1.500&quot; after validation. With this style, the value will be shown as just &quot;1.5&quot; (while a value of e.g. 1.567 will still be shown with all the three significant digits, of course). </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Bit masks used for numeric validator styles. </para>        </briefdescription>
+        <detaileddescription>
+<para>A combination of these flags can be used when creating <ref refid="classwx_integer_validator" kindref="compound">wxIntegerValidator</ref> and <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> objects and with their SetStyle() methods.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
+Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="20" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classwx_integer_validator" kindref="compound">wxIntegerValidator</ref>&lt; T &gt;</type>
+        <definition>wxIntegerValidator&lt;T&gt; wxMakeIntegerValidator</definition>
+        <argsstring>(T *value, int style=wxNUM_VAL_DEFAULT)</argsstring>
+        <name>wxMakeIntegerValidator</name>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>style</declname>
+          <defval>wxNUM_VAL_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Creates a <ref refid="classwx_integer_validator" kindref="compound">wxIntegerValidator</ref> object with automatic type deduction. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function can be used to create <ref refid="classwx_integer_validator" kindref="compound">wxIntegerValidator</ref> object without explicitly specifying its type, e.g. write just: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref>(...,<sp/><ref refid="valnum_8h_1a9d2ba1b6ccfcfa65586cb54cd517e9fb" kindref="member" tooltip="Creates a wxIntegerValidator object with automatic type deduction.">wxMakeIntegerValidator</ref>(&amp;m_var));</highlight></codeline>
+</programlisting> instead of more verbose <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref>(...,<sp/><ref refid="classwx_integer_validator" kindref="compound" tooltip="Validator for text entries used for integer entry.">wxIntegerValidator&lt;unsigned long&gt;</ref>(&amp;m_var));</highlight></codeline>
+</programlisting></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h"/>
+  </compounddef>
+</doxygen>

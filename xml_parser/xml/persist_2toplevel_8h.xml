@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="persist_2toplevel_8h" kind="file">
+    <compoundname>toplevel.h</compoundname>
+    <innerclass refid="classwx_persistent_t_l_w" prot="public">wxPersistentTLW</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="persist_2toplevel_8h_1a2822c62d48a97866661be3cccc7561c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_persistent_object" kindref="compound">wxPersistentObject</ref> *</type>
+        <definition>wxPersistentObject* wxCreatePersistentObject</definition>
+        <argsstring>(wxTopLevelWindow *book)</argsstring>
+        <name>wxCreatePersistentObject</name>
+        <param>
+          <type><ref refid="classwx_top_level_window" kindref="compound">wxTopLevelWindow</ref> *</type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+<para>Overload allowing persistence adapter creation for wxTopLevelWindow-derived objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h"/>
+  </compounddef>
+</doxygen>

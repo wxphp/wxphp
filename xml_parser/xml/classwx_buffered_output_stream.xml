@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_buffered_output_stream" kind="class" prot="public">
+    <compoundname>wxBufferedOutputStream</compoundname>
+    <basecompoundref refid="classwx_filter_output_stream" prot="public" virt="non-virtual">wxFilterOutputStream</basecompoundref>
+    <includes local="no">wx/stream.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_buffered_output_stream_1a2c0ab031189e3c5976bab358922af802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBufferedOutputStream::wxBufferedOutputStream</definition>
+        <argsstring>(wxOutputStream &amp;stream, wxStreamBuffer *buffer=NULL)</argsstring>
+        <name>wxBufferedOutputStream</name>
+        <param>
+          <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> *</type>
+          <declname>buffer</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor using the provided buffer or default. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The associated low-level stream. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to use if non-NULL. Notice that the ownership of this buffer is taken by the stream, i.e. it will delete it. If this parameter is NULL a default 1KB buffer is used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1027"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_buffered_output_stream_1a4ec5d6b5802ab2531e23496818ffaa20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBufferedOutputStream::wxBufferedOutputStream</definition>
+        <argsstring>(wxOutputStream &amp;stream, size_t bufsize)</argsstring>
+        <name>wxBufferedOutputStream</name>
+        <param>
+          <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bufsize</declname>
+        </param>
+        <briefdescription>
+<para>Constructor allowing to specify the size of the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is just a more convenient alternative to creating a <ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> of the given size and using the other overloaded constructor of this class.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The associated low-level stream. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bufsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer, in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1043"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_buffered_output_stream_1aee1ad4e94be06b2a76082806d645958d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxBufferedOutputStream::~wxBufferedOutputStream</definition>
+        <argsstring>()</argsstring>
+        <name>~wxBufferedOutputStream</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="classwx_buffered_output_stream_1ace40e297c6342271be974bdf95d2d139" kindref="member">Sync()</ref> and destroys the internal buffer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1048"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_buffered_output_stream_1a309319db903fbd2476dd5d7a6b800051" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+        <definition>virtual wxFileOffset wxBufferedOutputStream::SeekO</definition>
+        <argsstring>(wxFileOffset pos, wxSeekMode mode=wxFromStart)</argsstring>
+        <name>SeekO</name>
+        <reimplements refid="classwx_output_stream_1ac898dd36e44e5f4785a6658f470e9752">SeekO</reimplements>
+        <param>
+          <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="ffile_8h_1ae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxFromStart</defval>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_buffered_output_stream_1ace40e297c6342271be974bdf95d2d139" kindref="member">Sync()</ref> and changes the stream position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1053"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_buffered_output_stream_1ace40e297c6342271be974bdf95d2d139" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBufferedOutputStream::Sync</definition>
+        <argsstring>()</argsstring>
+        <name>Sync</name>
+        <briefdescription>
+<para>Flushes the buffer and calls <ref refid="classwx_buffered_output_stream_1ace40e297c6342271be974bdf95d2d139" kindref="member">Sync()</ref> on the parent stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1058"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This stream acts as a cache. </para>    </briefdescription>
+    <detaileddescription>
+<para>It caches the bytes to be written to the specified output stream (See <ref refid="classwx_filter_output_stream" kindref="compound">wxFilterOutputStream</ref>). The data is only written when the cache is full, when the buffered stream is destroyed or when calling <ref refid="classwx_buffered_output_stream_1a309319db903fbd2476dd5d7a6b800051" kindref="member">SeekO()</ref>.</para><para>This class may not be used without some other stream to write the data to (such as a file stream or a memory stream).</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4610">
+        <label>wxBufferedOutputStream</label>
+        <link refid="classwx_buffered_output_stream"/>
+        <childnode refid="4611" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4613">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="4611">
+        <label>wxFilterOutputStream</label>
+        <link refid="classwx_filter_output_stream"/>
+        <childnode refid="4612" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4612">
+        <label>wxOutputStream</label>
+        <link refid="classwx_output_stream"/>
+        <childnode refid="4613" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4614">
+        <label>wxBufferedOutputStream</label>
+        <link refid="classwx_buffered_output_stream"/>
+        <childnode refid="4615" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4617">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="4615">
+        <label>wxFilterOutputStream</label>
+        <link refid="classwx_filter_output_stream"/>
+        <childnode refid="4616" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4616">
+        <label>wxOutputStream</label>
+        <link refid="classwx_output_stream"/>
+        <childnode refid="4617" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="1014" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="1013" bodyend="1059"/>
+    <listofallmembers>
+      <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>Close</name></member>
+      <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>GetLastError</name></member>
+      <member refid="classwx_stream_base_1a0d2d992fd98835aabf2b9b656a1e6ccd" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>GetLength</name></member>
+      <member refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>GetSize</name></member>
+      <member refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>IsOk</name></member>
+      <member refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>IsSeekable</name></member>
+      <member refid="classwx_output_stream_1a5bc5c04b8f46ed18f406d7e59484a546" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>LastWrite</name></member>
+      <member refid="classwx_stream_base_1ae38e82c374f82d39993909f0a5d3017e" prot="protected" virt="virtual"><scope>wxBufferedOutputStream</scope><name>OnSysSeek</name></member>
+      <member refid="classwx_stream_base_1a7bb3b0b470e960d1165a28e83d576c1b" prot="protected" virt="virtual"><scope>wxBufferedOutputStream</scope><name>OnSysTell</name></member>
+      <member refid="classwx_output_stream_1a41773bceb97b1981cbc3d69c596df929" prot="protected" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>OnSysWrite</name></member>
+      <member refid="classwx_stream_base_1aaee699fe59f603eaae1550ee55ac579f" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>operator!</name></member>
+      <member refid="classwx_output_stream_1a526dbd35592b0280659cf96c0a77e804" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>PutC</name></member>
+      <member refid="classwx_stream_base_1a52353ac42f72538b2022a84f416e5fe2" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>Reset</name></member>
+      <member refid="classwx_buffered_output_stream_1a309319db903fbd2476dd5d7a6b800051" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>SeekO</name></member>
+      <member refid="classwx_buffered_output_stream_1ace40e297c6342271be974bdf95d2d139" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>Sync</name></member>
+      <member refid="classwx_output_stream_1acb127540592e6b5a3e8787329eb696a4" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>TellO</name></member>
+      <member refid="classwx_output_stream_1a22154f02408431ffe8b1590407c3b011" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>Write</name></member>
+      <member refid="classwx_output_stream_1aacced095d3e9b19b4f6264d94c85cf8f" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>Write</name></member>
+      <member refid="classwx_buffered_output_stream_1a2c0ab031189e3c5976bab358922af802" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>wxBufferedOutputStream</name></member>
+      <member refid="classwx_buffered_output_stream_1a4ec5d6b5802ab2531e23496818ffaa20" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>wxBufferedOutputStream</name></member>
+      <member refid="classwx_filter_output_stream_1af602ad1b7673a587430733f4cfb493d0" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>wxFilterOutputStream</name></member>
+      <member refid="classwx_filter_output_stream_1a0358028d12b8dde1ef969efd1703908e" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>wxFilterOutputStream</name></member>
+      <member refid="classwx_output_stream_1ab2391df744df6ec2d4e4e3f561c51118" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>wxOutputStream</name></member>
+      <member refid="classwx_stream_base_1a2bdb01f1ccd34d551d3cfc848054bf1e" prot="public" virt="non-virtual"><scope>wxBufferedOutputStream</scope><name>wxStreamBase</name></member>
+      <member refid="classwx_buffered_output_stream_1aee1ad4e94be06b2a76082806d645958d" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>~wxBufferedOutputStream</name></member>
+      <member refid="classwx_output_stream_1aadf4d69a6ab7430e99ecb8d02feecfd3" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>~wxOutputStream</name></member>
+      <member refid="classwx_stream_base_1aebba32b4da79c60933fa997735a8bfe5" prot="public" virt="virtual"><scope>wxBufferedOutputStream</scope><name>~wxStreamBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

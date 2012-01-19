@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_rich_text_printout" kind="class" prot="public">
+    <compoundname>wxRichTextPrintout</compoundname>
+    <basecompoundref refid="classwx_printout" prot="public" virt="non-virtual">wxPrintout</basecompoundref>
+    <includes local="no">wx/richtext/richtextprint.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_rich_text_printout_1acf0fe7092a6ada6f4ecf248c734935e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRichTextPrintout::wxRichTextPrintout</definition>
+        <argsstring>(const wxString &amp;title=&quot;Printout&quot;)</argsstring>
+        <name>wxRichTextPrintout</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+          <defval>&quot;Printout&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1a167d107b749072fc1a13cb9e2d60cb30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextPrintout::CalculateScaling</definition>
+        <argsstring>(wxDC *dc, wxRect &amp;textRect, wxRect &amp;headerRect, wxRect &amp;footerRect)</argsstring>
+        <name>CalculateScaling</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> *</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>textRect</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>headerRect</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>footerRect</declname>
+        </param>
+        <briefdescription>
+<para>Calculates scaling and text, header and footer rectangles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1a4ab62e7bd1e3bfd49a4856b2047f2494" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_rich_text_header_footer_data" kindref="compound">wxRichTextHeaderFooterData</ref> &amp;</type>
+        <definition>const wxRichTextHeaderFooterData&amp; wxRichTextPrintout::GetHeaderFooterData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeaderFooterData</name>
+        <briefdescription>
+<para>Returns the header and footer data associated with the printout. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1a1058a238c1d19d89d903c371402ac1db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRichTextPrintout::GetPageInfo</definition>
+        <argsstring>(int *minPage, int *maxPage, int *selPageFrom, int *selPageTo)</argsstring>
+        <name>GetPageInfo</name>
+        <reimplements refid="classwx_printout_1a3fead3e929153c58b07f3c3521b9fdac">GetPageInfo</reimplements>
+        <param>
+          <type>int *</type>
+          <declname>minPage</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>maxPage</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>selPageFrom</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>selPageTo</declname>
+        </param>
+        <briefdescription>
+<para>Gets the page information. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1a92d453477faae22ba019116497840672" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref> *</type>
+        <definition>wxRichTextBuffer* wxRichTextPrintout::GetRichTextBuffer</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRichTextBuffer</name>
+        <briefdescription>
+<para>Returns a pointer to the buffer being rendered. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1a4dc45ae39a6d0cf056ef852397489cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRichTextPrintout::HasPage</definition>
+        <argsstring>(int page)</argsstring>
+        <name>HasPage</name>
+        <reimplements refid="classwx_printout_1a7829a7066a496a14d677d4958e28079f">HasPage</reimplements>
+        <param>
+          <type>int</type>
+          <declname>page</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given page exists in the printout. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1ac27db7ab1955168fa17c486385b7bb3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRichTextPrintout::OnPreparePrinting</definition>
+        <argsstring>()</argsstring>
+        <name>OnPreparePrinting</name>
+        <reimplements refid="classwx_printout_1a68c588cbf1b17a85a88db4738260e01b">OnPreparePrinting</reimplements>
+        <briefdescription>
+<para>Prepares for printing, laying out the buffer and calculating pagination. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1a58d8c06003ff25a63a62ef99bbcd548b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRichTextPrintout::OnPrintPage</definition>
+        <argsstring>(int page)</argsstring>
+        <name>OnPrintPage</name>
+        <reimplements refid="classwx_printout_1abac930e68b063cd609059fa9d96e7831">OnPrintPage</reimplements>
+        <param>
+          <type>int</type>
+          <declname>page</declname>
+        </param>
+        <briefdescription>
+<para>Does the actual printing for this page. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1aea9970ac1c767d320461895b21e77ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextPrintout::SetHeaderFooterData</definition>
+        <argsstring>(const wxRichTextHeaderFooterData &amp;data)</argsstring>
+        <name>SetHeaderFooterData</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_header_footer_data" kindref="compound">wxRichTextHeaderFooterData</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Sets the header and footer data associated with the printout. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1a9d803dd9b14f06c179e095f4791ad804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextPrintout::SetMargins</definition>
+        <argsstring>(int top=254, int bottom=254, int left=254, int right=254)</argsstring>
+        <name>SetMargins</name>
+        <param>
+          <type>int</type>
+          <declname>top</declname>
+          <defval>254</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bottom</declname>
+          <defval>254</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>left</declname>
+          <defval>254</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>right</declname>
+          <defval>254</defval>
+        </param>
+        <briefdescription>
+<para>Sets margins in 10ths of millimetre. </para>        </briefdescription>
+        <detaileddescription>
+<para>Defaults to 1 inch for margins. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_printout_1ac3d007e6e9c0b0222774f60ecf97b79f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextPrintout::SetRichTextBuffer</definition>
+        <argsstring>(wxRichTextBuffer *buffer)</argsstring>
+        <name>SetRichTextBuffer</name>
+        <param>
+          <type><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Sets the buffer to print. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_rich_text_printout" kindref="compound">wxRichTextPrintout</ref> does not manage this pointer; it should be managed by the calling code, such as <ref refid="classwx_rich_text_printing" kindref="compound">wxRichTextPrinting</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="252"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class implements print layout for <ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>Instead of using it directly, you should normally use the <ref refid="classwx_rich_text_printing" kindref="compound">wxRichTextPrinting</ref> class.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9779">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="9778">
+        <label>wxPrintout</label>
+        <link refid="classwx_printout"/>
+        <childnode refid="9779" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9777">
+        <label>wxRichTextPrintout</label>
+        <link refid="classwx_rich_text_printout"/>
+        <childnode refid="9778" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9782">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9783" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9781">
+        <label>wxPrintout</label>
+        <link refid="classwx_printout"/>
+        <childnode refid="9782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9780">
+        <label>wxRichTextPrintout</label>
+        <link refid="classwx_rich_text_printout"/>
+        <childnode refid="9781" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9783">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="192" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" bodystart="191" bodyend="253"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_rich_text_printout_1a167d107b749072fc1a13cb9e2d60cb30" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>CalculateScaling</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextPrintout</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRichTextPrintout</scope><name>CreateRefData</name></member>
+      <member refid="classwx_printout_1a19fa2e3cb6e4e9563a8d3da9551dad84" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>FitThisSizeToPage</name></member>
+      <member refid="classwx_printout_1a440ddf4f34d82578b8307296e44ec456" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>FitThisSizeToPageMargins</name></member>
+      <member refid="classwx_printout_1a94b4ce43d8a18bfe89a9c1abecb3fd64" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>FitThisSizeToPaper</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_printout_1a0d7807fc425779ab74953d51d6df8652" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetDC</name></member>
+      <member refid="classwx_rich_text_printout_1a4ab62e7bd1e3bfd49a4856b2047f2494" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetHeaderFooterData</name></member>
+      <member refid="classwx_printout_1a4a6c585035339f54eb442b67e81af6fb" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetLogicalPageMarginsRect</name></member>
+      <member refid="classwx_printout_1affa9d2b903b2b97471967cba1acd9017" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetLogicalPageRect</name></member>
+      <member refid="classwx_printout_1aaa3752179bf80207f5cc117b4ab3b258" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetLogicalPaperRect</name></member>
+      <member refid="classwx_rich_text_printout_1a1058a238c1d19d89d903c371402ac1db" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>GetPageInfo</name></member>
+      <member refid="classwx_printout_1a4e3fac8f10527e6a964d8d0b7c7b748d" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetPageSizeMM</name></member>
+      <member refid="classwx_printout_1a6c8c759e3b617d842675fdd6e5bdc33c" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetPageSizePixels</name></member>
+      <member refid="classwx_printout_1a8da1832a8fd8570c88a65d3f2ccb7928" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetPaperRectPixels</name></member>
+      <member refid="classwx_printout_1aab85573418897ab2f0b5933f0cbf7905" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetPPIPrinter</name></member>
+      <member refid="classwx_printout_1ac743cd3e671020ee1d60296ad3425afc" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetPPIScreen</name></member>
+      <member refid="classwx_printout_1a270ebf6776a2d7c93e66fdae6116065d" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetPreview</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetRefData</name></member>
+      <member refid="classwx_rich_text_printout_1a92d453477faae22ba019116497840672" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>GetRichTextBuffer</name></member>
+      <member refid="classwx_printout_1a91b233541df8475aa69704bd3dbf7744" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>GetTitle</name></member>
+      <member refid="classwx_rich_text_printout_1a4dc45ae39a6d0cf056ef852397489cd5" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>HasPage</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>IsKindOf</name></member>
+      <member refid="classwx_printout_1abcc8c9b2bb3dd63b1eff6a7b8327d291" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>IsPreview</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>m_refData</name></member>
+      <member refid="classwx_printout_1a3fa364935e551748a70a7126d22df728" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>MapScreenSizeToDevice</name></member>
+      <member refid="classwx_printout_1acb6a81daabfcfcf601a877bdc69fa46b" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>MapScreenSizeToPage</name></member>
+      <member refid="classwx_printout_1aa38f61997d6764e51468fd76078b241e" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>MapScreenSizeToPageMargins</name></member>
+      <member refid="classwx_printout_1a434261996b9cec78ee5cbc61bac9caf7" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>MapScreenSizeToPaper</name></member>
+      <member refid="classwx_printout_1a3d62cbdec3ac1675f46f9723327736b1" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>OffsetLogicalOrigin</name></member>
+      <member refid="classwx_printout_1ad278a98bfc9aa0a9a86a6e496c0f2432" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>OnBeginDocument</name></member>
+      <member refid="classwx_printout_1a1540fb73d528065729d438aa12c34851" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>OnBeginPrinting</name></member>
+      <member refid="classwx_printout_1a68a80cfbdc82c5239549c8eb6a6ce570" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>OnEndDocument</name></member>
+      <member refid="classwx_printout_1ab8a9b5306101a4fbfb25c6252756f6b8" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>OnEndPrinting</name></member>
+      <member refid="classwx_rich_text_printout_1ac27db7ab1955168fa17c486385b7bb3c" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>OnPreparePrinting</name></member>
+      <member refid="classwx_rich_text_printout_1a58d8c06003ff25a63a62ef99bbcd548b" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>OnPrintPage</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>Ref</name></member>
+      <member refid="classwx_rich_text_printout_1aea9970ac1c767d320461895b21e77ac8" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>SetHeaderFooterData</name></member>
+      <member refid="classwx_printout_1a35af267f145372f666f930680ebd4fcf" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>SetLogicalOrigin</name></member>
+      <member refid="classwx_rich_text_printout_1a9d803dd9b14f06c179e095f4791ad804" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>SetMargins</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>SetRefData</name></member>
+      <member refid="classwx_rich_text_printout_1ac3d007e6e9c0b0222774f60ecf97b79f" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>SetRichTextBuffer</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>wxObject</name></member>
+      <member refid="classwx_printout_1a6e159637157497fb10aff6e368bd2817" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>wxPrintout</name></member>
+      <member refid="classwx_rich_text_printout_1acf0fe7092a6ada6f4ecf248c734935e5" prot="public" virt="non-virtual"><scope>wxRichTextPrintout</scope><name>wxRichTextPrintout</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>~wxObject</name></member>
+      <member refid="classwx_printout_1a2caf681beebfcfb9df6f3f62bdce626b" prot="public" virt="virtual"><scope>wxRichTextPrintout</scope><name>~wxPrintout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

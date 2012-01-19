@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__menus" kind="group">
+    <compoundname>group_class_menus</compoundname>
+    <title>Menus</title>
+    <innerclass refid="classwx_menu_bar" prot="public">wxMenuBar</innerclass>
+    <innerclass refid="classwx_menu" prot="public">wxMenu</innerclass>
+    <innerclass refid="classwx_menu_item" prot="public">wxMenuItem</innerclass>
+    <briefdescription>
+<para>Group of classes for handling menu bars and items. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

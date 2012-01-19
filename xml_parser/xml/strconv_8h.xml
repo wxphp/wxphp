@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="strconv_8h" kind="file">
+    <compoundname>strconv.h</compoundname>
+    <innerclass refid="classwx_m_b_conv" prot="public">wxMBConv</innerclass>
+    <innerclass refid="classwx_m_b_conv_u_t_f7" prot="public">wxMBConvUTF7</innerclass>
+    <innerclass refid="classwx_m_b_conv_u_t_f8" prot="public">wxMBConvUTF8</innerclass>
+    <innerclass refid="classwx_m_b_conv_u_t_f16" prot="public">wxMBConvUTF16</innerclass>
+    <innerclass refid="classwx_m_b_conv_u_t_f32" prot="public">wxMBConvUTF32</innerclass>
+    <innerclass refid="classwx_c_s_conv" prot="public">wxCSConv</innerclass>
+    <innerclass refid="classwx_m_b_conv_file" prot="public">wxMBConvFile</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h"/>
+  </compounddef>
+</doxygen>

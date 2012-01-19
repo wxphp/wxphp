@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_translations" kind="class" prot="public">
+    <compoundname>wxTranslations</compoundname>
+    <includes local="no">wx/translation.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_translations_1a0ff17f13b973eb8a5b8a10403b9c4e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTranslations::wxTranslations</definition>
+        <argsstring>()</argsstring>
+        <name>wxTranslations</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a45c81bf49c3645eebb2032a18fe37056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTranslations::SetLoader</definition>
+        <argsstring>(wxTranslationsLoader *loader)</argsstring>
+        <name>SetLoader</name>
+        <param>
+          <type><ref refid="classwx_translations_loader" kindref="compound">wxTranslationsLoader</ref> *</type>
+          <declname>loader</declname>
+        </param>
+        <briefdescription>
+<para>Changes loader use to read catalogs to a non-default one. </para>        </briefdescription>
+        <detaileddescription>
+<para>Deletes previous loader and takes ownership of <emphasis>loader</emphasis>.</para><para><simplesect kind="see"><para><ref refid="classwx_translations_loader" kindref="compound">wxTranslationsLoader</ref>, <ref refid="classwx_file_translations_loader" kindref="compound">wxFileTranslationsLoader</ref>, <ref refid="classwx_resource_translations_loader" kindref="compound">wxResourceTranslationsLoader</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a098d9f1c908b8c756866c99720c35787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTranslations::SetLanguage</definition>
+        <argsstring>(wxLanguage lang)</argsstring>
+        <name>SetLanguage</name>
+        <param>
+          <type><ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref></type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+<para>Sets translations language to use. </para>        </briefdescription>
+        <detaileddescription>
+<para>wxLANGUAGE_DEFAULT has special meaning: best suitable translation, given user&apos;s preference and available translations, will be used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a3f69c37cb245569da0cbae9577a606f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTranslations::SetLanguage</definition>
+        <argsstring>(const wxString &amp;lang)</argsstring>
+        <name>SetLanguage</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+<para>Sets translations language to use. </para>        </briefdescription>
+        <detaileddescription>
+<para>Empty <emphasis>lang</emphasis> string has the same meaning as wxLANGUAGE_DEFAULT in <ref refid="classwx_translations_1a098d9f1c908b8c756866c99720c35787" kindref="member">SetLanguage(wxLanguage)</ref>: best suitable translation, given user&apos;s preference and available translations, will be used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a2f88b45d68673e72324713142be95557" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
+        <definition>wxArrayString wxTranslations::GetAvailableTranslations</definition>
+        <argsstring>(const wxString &amp;domain) const </argsstring>
+        <name>GetAvailableTranslations</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Returns list of all translations of <emphasis>domain</emphasis> that were found. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be used e.g. to populate list of application&apos;s translations offered to the user. To do this, pass the app&apos;s main catalog as <emphasis>domain</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1ab76302f702b7559c8a7274e2969f4df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTranslations::AddStdCatalog</definition>
+        <argsstring>()</argsstring>
+        <name>AddStdCatalog</name>
+        <briefdescription>
+<para>Add standard wxWidgets catalogs (&quot;wxstd&quot; and possible port-specific catalogs). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if a suitable catalog was found, false otherwise</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" kindref="member">AddCatalog()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTranslations::AddCatalog</definition>
+        <argsstring>(const wxString &amp;domain)</argsstring>
+        <name>AddCatalog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Add a catalog for use with the current locale. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, it is searched for in standard places (see <ref refid="classwx_file_translations_loader" kindref="compound">wxFileTranslationsLoader</ref>), but you may also prepend additional directories to the search path with <ref refid="classwx_file_translations_loader_1aef1c18a8e931eaff259e0d1b84e4bd94" kindref="member">wxFileTranslationsLoader::AddCatalogLookupPathPrefix()</ref>.</para><para>All loaded catalogs will be used for message lookup by <ref refid="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" kindref="member">GetString()</ref> for the current locale.</para><para>In this overload, <computeroutput>msgid</computeroutput> strings are assumed to be in English and written only using 7-bit ASCII characters. If you have to deal with non-English strings or 8-bit characters in the source code, see the instructions in <ref refid="overview__nonenglish" kindref="compound">Writing Non-English Applications</ref>.</para><para><simplesect kind="return"><para>true if catalog was successfully loaded, false otherwise (which might mean that the catalog is not found or that it isn&apos;t in the correct format). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a8b0bc47ae1b33f14ae294dbe55da76bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTranslations::AddCatalog</definition>
+        <argsstring>(const wxString &amp;domain, wxLanguage msgIdLanguage)</argsstring>
+        <name>AddCatalog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type><ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref></type>
+          <declname>msgIdLanguage</declname>
+        </param>
+        <briefdescription>
+<para>Same as <ref refid="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" kindref="member">AddCatalog(const wxString&amp;)</ref>, but takes an additional argument, <emphasis>msgIdLanguage</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The catalog domain to add.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msgIdLanguage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the language of &quot;msgid&quot; strings in source code (i.e. arguments to <ref refid="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" kindref="member">GetString()</ref>, <ref refid="group__group__funcmacro__string_1ga223e9aea5b1a2252c7e632613c7b9a74" kindref="member">wxGetTranslation()</ref> and the <ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member">_()</ref> macro). It is used if <ref refid="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" kindref="member">AddCatalog()</ref> cannot find any catalog for current language: if the language is same as source code language, then strings from source code are used instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if catalog was successfully loaded, false otherwise (which might mean that the catalog is not found or that it isn&apos;t in the correct format). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a7e049aa6b090972e7924392c6f5d6a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTranslations::AddCatalog</definition>
+        <argsstring>(const wxString &amp;domain, wxLanguage msgIdLanguage, const wxString &amp;msgIdCharset)</argsstring>
+        <name>AddCatalog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type><ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref></type>
+          <declname>msgIdLanguage</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>msgIdCharset</declname>
+        </param>
+        <briefdescription>
+<para>Same as <ref refid="classwx_translations_1a8b0bc47ae1b33f14ae294dbe55da76bd" kindref="member">AddCatalog(const wxString&amp;, wxLanguage)</ref>, but takes two additional arguments, <emphasis>msgIdLanguage</emphasis> and <emphasis>msgIdCharset</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This overload is only available in non-Unicode build.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The catalog domain to add.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msgIdLanguage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the language of &quot;msgid&quot; strings in source code (i.e. arguments to <ref refid="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" kindref="member">GetString()</ref>, <ref refid="group__group__funcmacro__string_1ga223e9aea5b1a2252c7e632613c7b9a74" kindref="member">wxGetTranslation()</ref> and the <ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member">_()</ref> macro). It is used if <ref refid="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" kindref="member">AddCatalog()</ref> cannot find any catalog for current language: if the language is same as source code language, then strings from source code are used instead.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msgIdCharset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lets you specify the charset used for msgids in sources in case they use 8-bit characters (e.g. German or French strings).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if catalog was successfully loaded, false otherwise (which might mean that the catalog is not found or that it isn&apos;t in the correct format). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a1baf790dc4226869a727e03a59ff5b25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTranslations::IsLoaded</definition>
+        <argsstring>(const wxString &amp;domain) const </argsstring>
+        <name>IsLoaded</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Check if the given catalog is loaded, and returns true if it is. </para>        </briefdescription>
+        <detaileddescription>
+<para>According to GNU gettext tradition, each catalog normally corresponds to &apos;domain&apos; which is more or less the application name.</para><para><simplesect kind="see"><para><ref refid="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" kindref="member">AddCatalog()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxTranslations::GetString</definition>
+        <argsstring>(const wxString &amp;origString, const wxString &amp;domain=wxEmptyString) const </argsstring>
+        <name>GetString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>origString</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Retrieves the translation for a string in all loaded domains unless the <emphasis>domain</emphasis> parameter is specified (and then only this catalog/domain is searched). </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns original string if translation is not available (in this case an error message is generated the first time a string is not found; use <ref refid="classwx_log_null" kindref="compound">wxLogNull</ref> to suppress it).</para><para><simplesect kind="remark"><para>Domains are searched in the last to first order, i.e. catalogs added later override those added before. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a7480771c24a53e0ccf1170a3a70b2ba4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxTranslations::GetString</definition>
+        <argsstring>(const wxString &amp;origString, const wxString &amp;origString2, unsigned n, const wxString &amp;domain=wxEmptyString) const </argsstring>
+        <name>GetString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>origString</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>origString2</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Retrieves the translation for a string in all loaded domains unless the <emphasis>domain</emphasis> parameter is specified (and then only this catalog/domain is searched). </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns original string if translation is not available (in this case an error message is generated the first time a string is not found; use <ref refid="classwx_log_null" kindref="compound">wxLogNull</ref> to suppress it).</para><para>This form is used when retrieving translation of string that has different singular and plural form in English or different plural forms in some other language. It takes two extra arguments: <emphasis>origString</emphasis> parameter must contain the singular form of the string to be converted.</para><para>It is also used as the key for the search in the catalog. The <emphasis>origString2</emphasis> parameter is the plural form (in English).</para><para>The parameter <emphasis>n</emphasis> is used to determine the plural form. If no message catalog is found <emphasis>origString</emphasis> is returned if &apos;n == 1&apos;, otherwise <emphasis>origString2</emphasis>.</para><para>See GNU gettext manual for additional information on plural forms handling. This method is called by the <ref refid="group__group__funcmacro__string_1ga223e9aea5b1a2252c7e632613c7b9a74" kindref="member">wxGetTranslation()</ref> function and <ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member">_()</ref> macro.</para><para><simplesect kind="remark"><para>Domains are searched in the last to first order, i.e. catalogs added later override those added before. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a49b9c3ec1e9487a4473f09259284c61a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxTranslations::GetHeaderValue</definition>
+        <argsstring>(const wxString &amp;header, const wxString &amp;domain=wxEmptyString) const </argsstring>
+        <name>GetHeaderValue</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Returns the header value for header <emphasis>header</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The search for <emphasis>header</emphasis> is case sensitive. If an <emphasis>domain</emphasis> is passed, this domain is searched. Else all domains will be searched until a header has been found.</para><para>The return value is the value of the header if found. Else this will be empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="236"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_translations_1ab384ea68c44e74cfd2cd59e782529540" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_translations" kindref="compound">wxTranslations</ref> *</type>
+        <definition>static wxTranslations* wxTranslations::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <briefdescription>
+<para>Returns current translations object, may return NULL. </para>        </briefdescription>
+        <detaileddescription>
+<para>You must either call this early in app initialization code, or let <ref refid="classwx_locale" kindref="compound">wxLocale</ref> do it for you. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_1a7e919eb4e20865fb0f5f75d67791351d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxTranslations::Set</definition>
+        <argsstring>(wxTranslations *t)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="classwx_translations" kindref="compound">wxTranslations</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Sets current translations object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Deletes previous translation object and takes ownership of <emphasis>t</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class allows to get translations for strings. </para>    </briefdescription>
+    <detaileddescription>
+<para>In wxWidgets this class manages message catalogs which contain the translations of the strings used to the current language. Unlike <ref refid="classwx_locale" kindref="compound">wxLocale</ref>, it isn&apos;t bound to locale. It can be used either independently of, or in conjunction with <ref refid="classwx_locale" kindref="compound">wxLocale</ref>. In the latter case, you should initialize <ref refid="classwx_locale" kindref="compound">wxLocale</ref> (which creates <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> instance) first; in the former, you need to create a <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> object and <ref refid="classwx_translations_1a7e919eb4e20865fb0f5f75d67791351d" kindref="member">Set()</ref> it manually.</para><para>Only one <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> instance is active at a time; it is set with the <ref refid="classwx_translations_1a7e919eb4e20865fb0f5f75d67791351d" kindref="member">Set()</ref> method and obtained using <ref refid="classwx_translations_1ab384ea68c44e74cfd2cd59e782529540" kindref="member">Get()</ref>.</para><para>Unlike <ref refid="classwx_locale" kindref="compound">wxLocale</ref>, wxTranslations&apos; primary mean of identifying language is by its &quot;canonical name&quot;, i.e. ISO 639 code, possibly combined with ISO 3166 country code and additional modifiers (examples include &quot;fr&quot;, &quot;en_GB&quot; or &quot;ca@valencia&quot;; see <ref refid="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" kindref="member">wxLocale::GetCanonicalName()</ref> for more information). This allows apps using <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> API to use even languages not recognized by the operating system or not listed in wxLanguage enum.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_locale" kindref="compound">wxLocale</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" bodystart="35" bodyend="237"/>
+    <listofallmembers>
+      <member refid="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>AddCatalog</name></member>
+      <member refid="classwx_translations_1a8b0bc47ae1b33f14ae294dbe55da76bd" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>AddCatalog</name></member>
+      <member refid="classwx_translations_1a7e049aa6b090972e7924392c6f5d6a99" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>AddCatalog</name></member>
+      <member refid="classwx_translations_1ab76302f702b7559c8a7274e2969f4df2" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>AddStdCatalog</name></member>
+      <member refid="classwx_translations_1ab384ea68c44e74cfd2cd59e782529540" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>Get</name></member>
+      <member refid="classwx_translations_1a2f88b45d68673e72324713142be95557" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>GetAvailableTranslations</name></member>
+      <member refid="classwx_translations_1a49b9c3ec1e9487a4473f09259284c61a" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>GetHeaderValue</name></member>
+      <member refid="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>GetString</name></member>
+      <member refid="classwx_translations_1a7480771c24a53e0ccf1170a3a70b2ba4" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>GetString</name></member>
+      <member refid="classwx_translations_1a1baf790dc4226869a727e03a59ff5b25" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>IsLoaded</name></member>
+      <member refid="classwx_translations_1a7e919eb4e20865fb0f5f75d67791351d" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>Set</name></member>
+      <member refid="classwx_translations_1a098d9f1c908b8c756866c99720c35787" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>SetLanguage</name></member>
+      <member refid="classwx_translations_1a3f69c37cb245569da0cbae9577a606f5" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>SetLanguage</name></member>
+      <member refid="classwx_translations_1a45c81bf49c3645eebb2032a18fe37056" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>SetLoader</name></member>
+      <member refid="classwx_translations_1a0ff17f13b973eb8a5b8a10403b9c4e27" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>wxTranslations</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

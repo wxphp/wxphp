@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="textfile_8h" kind="file">
+    <compoundname>textfile.h</compoundname>
+    <innerclass refid="classwx_text_file" prot="public">wxTextFile</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="textfile_8h_1a6a6d37c2bb834f5ffba195db0eb6e023" prot="public" static="no">
+        <name>wxTextFileType</name>
+        <enumvalue id="textfile_8h_1a6a6d37c2bb834f5ffba195db0eb6e023ac7fe3e85c3a682477d30495c5186d653" prot="public">
+          <name>wxTextFileType_None</name>
+          <briefdescription>
+<para>incomplete (the last line of the file only) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="textfile_8h_1a6a6d37c2bb834f5ffba195db0eb6e023a82a3cf3bd3b65276b3d093b1864a1b10" prot="public">
+          <name>wxTextFileType_Unix</name>
+          <briefdescription>
+<para>line is terminated with &apos;LF&apos; = 0xA = 10 = &apos;\n&apos; </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="textfile_8h_1a6a6d37c2bb834f5ffba195db0eb6e023a1481ee299d1d8852db4cdb8d938b343f" prot="public">
+          <name>wxTextFileType_Dos</name>
+          <briefdescription>
+<para>line is terminated with &apos;CR&apos; &apos;LF&apos; </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="textfile_8h_1a6a6d37c2bb834f5ffba195db0eb6e023a34cd151c9d41526992351ad2dfa2d9f8" prot="public">
+          <name>wxTextFileType_Mac</name>
+          <briefdescription>
+<para>line is terminated with &apos;CR&apos; = 0xD = 13 = &apos;\r&apos; </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="textfile_8h_1a6a6d37c2bb834f5ffba195db0eb6e023a0e062af4331eb7bff9422e903ed7ff9c" prot="public">
+          <name>wxTextFileType_Os2</name>
+          <briefdescription>
+<para>line is terminated with &apos;CR&apos; &apos;LF&apos; </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The line termination type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textfile.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textfile.h" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textfile.h"/>
+  </compounddef>
+</doxygen>

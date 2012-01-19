@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="fswatcher_8h" kind="file">
+    <compoundname>fswatcher.h</compoundname>
+    <innerclass refid="classwx_file_system_watcher" prot="public">wxFileSystemWatcher</innerclass>
+    <innerclass refid="classwx_file_system_watcher_event" prot="public">wxFileSystemWatcherEvent</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9" prot="public" static="no">
+        <name>wxFSWFlags</name>
+        <enumvalue id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9ab212f3498f33764219ec90b48590bbe1" prot="public">
+          <name>wxFSW_EVENT_CREATE</name>
+          <initializer> 0x01</initializer>
+          <briefdescription>
+<para>File or directory was created. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9a2216ab7a155dbd9d711a82c7eaa2dc51" prot="public">
+          <name>wxFSW_EVENT_DELETE</name>
+          <initializer> 0x02</initializer>
+          <briefdescription>
+<para>File or directory was deleted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9a5b29da9d412d125f511cb1620f078c19" prot="public">
+          <name>wxFSW_EVENT_RENAME</name>
+          <initializer> 0x04</initializer>
+          <briefdescription>
+<para>File or directory was renamed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9ab752d1b54c3e1f358ad11675fc47dcb5" prot="public">
+          <name>wxFSW_EVENT_MODIFY</name>
+          <initializer> 0x08</initializer>
+          <briefdescription>
+<para>File or directory was modified. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9a9ef08877ce6256aedccc58ec69f6a463" prot="public">
+          <name>wxFSW_EVENT_ACCESS</name>
+          <initializer> 0x10</initializer>
+          <briefdescription>
+<para>File or directory was accessed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9a8fb8524d1c624adef02f491bb9629fe6" prot="public">
+          <name>wxFSW_EVENT_WARNING</name>
+          <initializer> 0x20</initializer>
+          <briefdescription>
+<para>A warning condition arose. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9a7a8adcd329218e5e9d5b5031d00f9f87" prot="public">
+          <name>wxFSW_EVENT_ERROR</name>
+          <initializer> 0x40</initializer>
+          <briefdescription>
+<para>An error condition arose. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fswatcher_8h_1a4fe91d0a725cc933b1a59d03e116acd9a30f351a994dcdee859b50da8014212a0" prot="public">
+          <name>wxFSW_EVENT_ALL</name>
+          <initializer> wxFSW_EVENT_CREATE | wxFSW_EVENT_DELETE |
+                         wxFSW_EVENT_RENAME | wxFSW_EVENT_MODIFY |
+                         wxFSW_EVENT_ACCESS |
+                         wxFSW_EVENT_WARNING | wxFSW_EVENT_ERROR</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>These are the possible types of file system change events. </para>        </briefdescription>
+        <detaileddescription>
+<para>All of these events are reported on all supported platforms.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="193" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" bodystart="192" bodyend="207"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h"/>
+  </compounddef>
+</doxygen>

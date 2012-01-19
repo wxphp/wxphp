@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_web_view_history_item" kind="class" prot="public">
+    <compoundname>wxWebViewHistoryItem</compoundname>
+    <includes local="no">wx/webview.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_web_view_history_item_1a57917ec8f85d4f5c6ebf68e979d81dd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWebViewHistoryItem::wxWebViewHistoryItem</definition>
+        <argsstring>(const wxString &amp;url, const wxString &amp;title)</argsstring>
+        <name>wxWebViewHistoryItem</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Construtor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_web_view_history_item_1aa57af8861cbf30dcaa106b7d1a029dec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxWebViewHistoryItem::GetUrl</definition>
+        <argsstring>()</argsstring>
+        <name>GetUrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The url of the page. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_web_view_history_item_1a72c6b80c3b356d9ddca876a08a9bc86e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxWebViewHistoryItem::GetTitle</definition>
+        <argsstring>()</argsstring>
+        <name>GetTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The title of the page. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A simple class that contains the URL and title of an element of the history of a <ref refid="classwx_web_view" kindref="compound">wxWebView</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
+</para></simplesect>
+Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="101" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classwx_web_view_history_item_1a72c6b80c3b356d9ddca876a08a9bc86e" prot="public" virt="non-virtual"><scope>wxWebViewHistoryItem</scope><name>GetTitle</name></member>
+      <member refid="classwx_web_view_history_item_1aa57af8861cbf30dcaa106b7d1a029dec" prot="public" virt="non-virtual"><scope>wxWebViewHistoryItem</scope><name>GetUrl</name></member>
+      <member refid="classwx_web_view_history_item_1a57917ec8f85d4f5c6ebf68e979d81dd8" prot="public" virt="non-virtual"><scope>wxWebViewHistoryItem</scope><name>wxWebViewHistoryItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

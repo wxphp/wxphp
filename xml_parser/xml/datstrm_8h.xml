@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="datstrm_8h" kind="file">
+    <compoundname>datstrm.h</compoundname>
+    <innerclass refid="classwx_data_output_stream" prot="public">wxDataOutputStream</innerclass>
+    <innerclass refid="classwx_data_input_stream" prot="public">wxDataInputStream</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h"/>
+  </compounddef>
+</doxygen>

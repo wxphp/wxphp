@@ -1,0 +1,2603 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_file_name" kind="class" prot="public">
+    <compoundname>wxFileName</compoundname>
+    <includes local="no">wx/filename.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_file_name_1abc3e8d14a555ac691d56b6edc506f351" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetHumanReadableSize</definition>
+        <argsstring>(const wxString &amp;failmsg=_(&quot;Not available&quot;), int precision=1, wxSizeConvention conv=wxSIZE_CONV_TRADITIONAL) const </argsstring>
+        <name>GetHumanReadableSize</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>failmsg</declname>
+          <defval>_(&quot;Not available&quot;)</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a75d2cf906e06263544e2ec219c91388e" kindref="member">wxSizeConvention</ref></type>
+          <declname>conv</declname>
+          <defval>wxSIZE_CONV_TRADITIONAL</defval>
+        </param>
+        <briefdescription>
+<para>Returns the representation of the file size in a human-readable form. </para>        </briefdescription>
+        <detaileddescription>
+<para>In the first version, the size of this file is used. In the second one, the specified size <emphasis>bytes</emphasis> is used.</para><para>If the file size could not be retrieved or <emphasis>bytes</emphasis> is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref> or zero, the <computeroutput>failmsg</computeroutput> string is returned.</para><para>Otherwise the returned string is a floating-point number with <computeroutput>precision</computeroutput> decimal digits followed by the abbreviation of the unit used. By default the traditional, although incorrect, convention of using SI units for multiples of 1024 is used, i.e. returned string will use suffixes of B, KB, MB, GB, TB for bytes, kilobytes, megabytes, gigabytes and terabytes respectively. With the IEC convention the names of the units are changed to B, KiB, MiB, GiB and TiB for bytes, kibibytes, mebibytes, gibibytes and tebibytes. Finally, with SI convention the same B, KB, MB, GB and TB suffixes are used but in their correct SI meaning, i.e. as multiples of 1000 and not 1024.</para><para>Support for the different size conventions is new in wxWidgets 2.9.1, in previous versions only the traditional convention was implemented. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a91caf872b17d6d775cdcd36161b5c470" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetHumanReadableSize</definition>
+        <argsstring>(const wxULongLong &amp;bytes, const wxString &amp;nullsize=_(&quot;Not available&quot;), int precision=1, wxSizeConvention conv=wxSIZE_CONV_TRADITIONAL)</argsstring>
+        <name>GetHumanReadableSize</name>
+        <param>
+          <type>const <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref> &amp;</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>nullsize</declname>
+          <defval>_(&quot;Not available&quot;)</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a75d2cf906e06263544e2ec219c91388e" kindref="member">wxSizeConvention</ref></type>
+          <declname>conv</declname>
+          <defval>wxSIZE_CONV_TRADITIONAL</defval>
+        </param>
+        <briefdescription>
+<para>Returns the representation of the file size in a human-readable form. </para>        </briefdescription>
+        <detaileddescription>
+<para>In the first version, the size of this file is used. In the second one, the specified size <emphasis>bytes</emphasis> is used.</para><para>If the file size could not be retrieved or <emphasis>bytes</emphasis> is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref> or zero, the <computeroutput>failmsg</computeroutput> string is returned.</para><para>Otherwise the returned string is a floating-point number with <computeroutput>precision</computeroutput> decimal digits followed by the abbreviation of the unit used. By default the traditional, although incorrect, convention of using SI units for multiples of 1024 is used, i.e. returned string will use suffixes of B, KB, MB, GB, TB for bytes, kilobytes, megabytes, gigabytes and terabytes respectively. With the IEC convention the names of the units are changed to B, KiB, MiB, GiB and TiB for bytes, kibibytes, mebibytes, gibibytes and tebibytes. Finally, with SI convention the same B, KB, MB, GB and TB suffixes are used but in their correct SI meaning, i.e. as multiples of 1000 and not 1024.</para><para>Support for the different size conventions is new in wxWidgets 2.9.1, in previous versions only the traditional convention was implemented. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="577"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::CreateTempFileName</definition>
+        <argsstring>(const wxString &amp;prefix, wxFile *fileTemp=NULL)</argsstring>
+        <name>CreateTempFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_file" kindref="compound">wxFile</ref> *</type>
+          <declname>fileTemp</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Returns a temporary file name starting with the given <emphasis>prefix</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the <emphasis>prefix</emphasis> is an absolute path, the temporary file is created in this directory, otherwise it is created in the default system directory for the temporary files or in the current directory.</para><para>If the function succeeds, the temporary file is actually created. If <emphasis>fileTemp</emphasis> is not NULL, this file will be opened using the name of the temporary file. When possible, this is done in an atomic way ensuring that no race condition occurs between the temporary file name generation and opening it which could often lead to security compromise on the multiuser systems. If <emphasis>fileTemp</emphasis> is NULL, the file is only created, but not opened. Under Unix, the temporary file will have read and write permissions for the owner only to minimize the security problems.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prefix to use for the temporary file name construction </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileTemp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to open or NULL to just get the name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The full temporary file name or an empty string on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="448"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a5a03fe160df4807b4de1c3bd0696d2ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::CreateTempFileName</definition>
+        <argsstring>(const wxString &amp;prefix, wxFFile *fileTemp=NULL)</argsstring>
+        <name>CreateTempFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_f_file" kindref="compound">wxFFile</ref> *</type>
+          <declname>fileTemp</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Returns a temporary file name starting with the given <emphasis>prefix</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the <emphasis>prefix</emphasis> is an absolute path, the temporary file is created in this directory, otherwise it is created in the default system directory for the temporary files or in the current directory.</para><para>If the function succeeds, the temporary file is actually created. If <emphasis>fileTemp</emphasis> is not NULL, this file will be opened using the name of the temporary file. When possible, this is done in an atomic way ensuring that no race condition occurs between the temporary file name generation and opening it which could often lead to security compromise on the multiuser systems. If <emphasis>fileTemp</emphasis> is NULL, the file is only created, but not opened. Under Unix, the temporary file will have read and write permissions for the owner only to minimize the security problems.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prefix to use for the temporary file name construction </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileTemp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to open or NULL to just get the name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The full temporary file name or an empty string on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="450"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxFileName::SplitPath</definition>
+        <argsstring>(const wxString &amp;fullpath, wxString *volume, wxString *path, wxString *name, wxString *ext, bool *hasExt=NULL, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>SplitPath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullpath</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>hasExt</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>This function splits a full file name into components: the volume (with the first version) path (including the volume in the second version), the base name and the extension. </para>        </briefdescription>
+        <detaileddescription>
+<para>Any of the output parameters (<emphasis>volume</emphasis>, <emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component. Also, <emphasis>fullpath</emphasis> may be empty on entry. On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <emphasis>ext</emphasis> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Note that for a filename &quot;foo.&quot; the extension is present, as indicated by the trailing dot, but empty. If you need to cope with such cases, you should use <emphasis>hasExt</emphasis> instead of relying on testing whether <emphasis>ext</emphasis> is empty or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1188"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ac822c21f143650264c9d433993909820" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxFileName::SplitPath</definition>
+        <argsstring>(const wxString &amp;fullpath, wxString *volume, wxString *path, wxString *name, wxString *ext, wxPathFormat format)</argsstring>
+        <name>SplitPath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullpath</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>This function splits a full file name into components: the volume (with the first version) path (including the volume in the second version), the base name and the extension. </para>        </briefdescription>
+        <detaileddescription>
+<para>Any of the output parameters (<emphasis>volume</emphasis>, <emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component. Also, <emphasis>fullpath</emphasis> may be empty on entry. On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <emphasis>ext</emphasis> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Note that for a filename &quot;foo.&quot; the extension is present, as indicated by the trailing dot, but empty. If you need to cope with such cases, you should use <emphasis>hasExt</emphasis> instead of relying on testing whether <emphasis>ext</emphasis> is empty or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1194"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1ee5834893e50987dc2e03b9cbfbaea6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxFileName::SplitPath</definition>
+        <argsstring>(const wxString &amp;fullpath, wxString *path, wxString *name, wxString *ext, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>SplitPath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullpath</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>This function splits a full file name into components: the volume (with the first version) path (including the volume in the second version), the base name and the extension. </para>        </briefdescription>
+        <detaileddescription>
+<para>Any of the output parameters (<emphasis>volume</emphasis>, <emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component. Also, <emphasis>fullpath</emphasis> may be empty on entry. On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <emphasis>ext</emphasis> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Note that for a filename &quot;foo.&quot; the extension is present, as indicated by the trailing dot, but empty. If you need to cope with such cases, you should use <emphasis>hasExt</emphasis> instead of relying on testing whether <emphasis>ext</emphasis> is empty or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1199"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_file_name_1a2e54bc95c94eb773841c7cb1d7732e35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileName::wxFileName</definition>
+        <argsstring>()</argsstring>
+        <name>wxFileName</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1abc232361df39f16a802da8391692e2f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileName::wxFileName</definition>
+        <argsstring>(const wxFileName &amp;filename)</argsstring>
+        <name>wxFileName</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1aac2508cfd52826e17fb048eeab27f87a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileName::wxFileName</definition>
+        <argsstring>(const wxString &amp;fullpath, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>wxFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullpath</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Constructor taking a full filename. </para>        </briefdescription>
+        <detaileddescription>
+<para>If it terminates with a &apos;/&apos;, a directory path is constructed (the name will be empty), otherwise a file name and extension are extracted from it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a9f48ff32f106456d46b00c8db1f46535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileName::wxFileName</definition>
+        <argsstring>(const wxString &amp;path, const wxString &amp;name, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>wxFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Constructor a directory name and file name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a7a885de7891214b03e64aac070b63e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileName::wxFileName</definition>
+        <argsstring>(const wxString &amp;path, const wxString &amp;name, const wxString &amp;ext, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>wxFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Constructor from a directory name, base file name and extension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1acc6848de75dd154c572db65cf72a90b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileName::wxFileName</definition>
+        <argsstring>(const wxString &amp;volume, const wxString &amp;path, const wxString &amp;name, const wxString &amp;ext, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>wxFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Constructor from a volume name, a directory name, base file name and extension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ae27fceb052e076466179cabd599bd878" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::AppendDir</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>AppendDir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Appends a directory component to the path. </para>        </briefdescription>
+        <detaileddescription>
+<para>This component should contain a single directory name level, i.e. not contain any path or volume separators nor should it be empty, otherwise the function does nothing (and generates an assert failure in debug build). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ab75d82f4024c6f15cc4247c8835da557" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::Assign</definition>
+        <argsstring>(const wxFileName &amp;filepath)</argsstring>
+        <name>Assign</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+<para>Creates the file name from another filename object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1abaa2f7fb89227ba59f10c5908fb6072c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::Assign</definition>
+        <argsstring>(const wxString &amp;fullpath, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>Assign</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullpath</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Creates the file name from a full file name with a path. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a22b20107fe66d412c43663517d9f6cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::Assign</definition>
+        <argsstring>(const wxString &amp;volume, const wxString &amp;path, const wxString &amp;name, const wxString &amp;ext, bool hasExt, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>Assign</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasExt</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Creates the file name from volume, path, name and extension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a0c5ce686dc39e118800c08a278c92f21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::Assign</definition>
+        <argsstring>(const wxString &amp;volume, const wxString &amp;path, const wxString &amp;name, const wxString &amp;ext, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>Assign</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Creates the file name from volume, path, name and extension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1a13a96c6f8dc3baabb41afba0d4af10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::Assign</definition>
+        <argsstring>(const wxString &amp;path, const wxString &amp;name, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>Assign</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Creates the file name from file path and file name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="355"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a9963f1d2f16ca1979df06fbb28a8da9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::Assign</definition>
+        <argsstring>(const wxString &amp;path, const wxString &amp;name, const wxString &amp;ext, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>Assign</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Creates the file name from path, name and extension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1cf7a6e3a6ac0f34260ea79f48663cc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::AssignCwd</definition>
+        <argsstring>(const wxString &amp;volume=wxEmptyString)</argsstring>
+        <name>AssignCwd</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>volume</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Makes this object refer to the current working directory on the specified volume (or current volume if <emphasis>volume</emphasis> is empty). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1af697f1c0f7864fc35ac0e8198eacc84d" kindref="member">GetCwd()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a7aabf113d3d420ba65f2a3a11ef1d087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::AssignDir</definition>
+        <argsstring>(const wxString &amp;dir, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>AssignDir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Sets this file name object to the given directory name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The name and extension will be empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a021419b87e867a31ff4af5b6e84911cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::AssignHomeDir</definition>
+        <argsstring>()</argsstring>
+        <name>AssignHomeDir</name>
+        <briefdescription>
+<para>Sets this file name object to the home directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a6c56af101aea8c3d98c693811a44db69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::AssignTempFileName</definition>
+        <argsstring>(const wxString &amp;prefix)</argsstring>
+        <name>AssignTempFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+<para>The function calls <ref refid="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" kindref="member">CreateTempFileName()</ref> to create a temporary file and sets this object to the name of the file. </para>        </briefdescription>
+        <detaileddescription>
+<para>If a temporary file couldn&apos;t be created, the object is put into an invalid state (see <ref refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" kindref="member">IsOk()</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1acf47b12b1de8c47fc5cbc2ec7b5fe628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::AssignTempFileName</definition>
+        <argsstring>(const wxString &amp;prefix, wxFile *fileTemp)</argsstring>
+        <name>AssignTempFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_file" kindref="compound">wxFile</ref> *</type>
+          <declname>fileTemp</declname>
+        </param>
+        <briefdescription>
+<para>The function calls <ref refid="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" kindref="member">CreateTempFileName()</ref> to create a temporary file name and open <emphasis>fileTemp</emphasis> with it. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the file couldn&apos;t be opened, the object is put into an invalid state (see <ref refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" kindref="member">IsOk()</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="400"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a0807cf78dcddc42d2467ee45cc108d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::AssignTempFileName</definition>
+        <argsstring>(const wxString &amp;prefix, wxFFile *fileTemp)</argsstring>
+        <name>AssignTempFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_f_file" kindref="compound">wxFFile</ref> *</type>
+          <declname>fileTemp</declname>
+        </param>
+        <briefdescription>
+<para>The function calls <ref refid="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" kindref="member">CreateTempFileName()</ref> to create a temporary file name and open <emphasis>fileTemp</emphasis> with it. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the file couldn&apos;t be opened, the object is put into an invalid state (see <ref refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" kindref="member">IsOk()</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1aa4fbb922dd41ee6012f15c6d162fb0b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Reset all components to default, uninitialized state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="414"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a03a2f73191dbf2392b9f1c8e850b407a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::ClearExt</definition>
+        <argsstring>()</argsstring>
+        <name>ClearExt</name>
+        <briefdescription>
+<para>Removes the extension from the file name resulting in a file name with no trailing dot. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a65c37fa5017b400d41009bbab56f2774" kindref="member">SetExt()</ref>, <ref refid="classwx_file_name_1a2d5df1c71c011b0f8897dc51fe8d91ce" kindref="member">SetEmptyExt()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="422"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::DirExists</definition>
+        <argsstring>() const </argsstring>
+        <name>DirExists</name>
+        <briefdescription>
+<para>Returns true if the directory with this name exists. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="456"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::FileExists</definition>
+        <argsstring>() const </argsstring>
+        <name>FileExists</name>
+        <briefdescription>
+<para>Returns true if the file with this name exists. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="475"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ae3196f7d5e004ce9690e1e050b35021d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxFileName::GetDirCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDirCount</name>
+        <briefdescription>
+<para>Returns the number of directories in the file name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="506"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a8a1c3fbe46ecfb57ea6c4fcd53b20ed1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+        <definition>const wxArrayString&amp; wxFileName::GetDirs</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDirs</name>
+        <briefdescription>
+<para>Returns the directories in string array form. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="511"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a6703bfd4f587b35926d5c2949bc11918" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetExt</definition>
+        <argsstring>() const </argsstring>
+        <name>GetExt</name>
+        <briefdescription>
+<para>Returns the file name extension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="516"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1af1a43f651750f2b8a44adf08bb5db7a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetFullName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFullName</name>
+        <briefdescription>
+<para>Returns the full name (including extension but excluding directories). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="532"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a8fc8100ba99859a40558c068a841b586" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetFullPath</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE) const </argsstring>
+        <name>GetFullPath</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the full path with name and extension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="537"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1adfa5d06438fb9a7fcaa7d6efbc0b2cb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetLongPath</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLongPath</name>
+        <briefdescription>
+<para>Return the long form of the path (returns identity on non-Windows platforms). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="583"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a6a1908a872b80060af5ef46cdda6c0c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
+        <definition>wxDateTime wxFileName::GetModificationTime</definition>
+        <argsstring>() const </argsstring>
+        <name>GetModificationTime</name>
+        <briefdescription>
+<para>Returns the last time the file was last modified. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="588"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ac6475b655ac68c02a094723f653270e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+<para>Returns the name part of the filename (without extension). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1af1a43f651750f2b8a44adf08bb5db7a3" kindref="member">GetFullName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="595"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetPath</definition>
+        <argsstring>(int flags=wxPATH_GET_VOLUME, wxPathFormat format=wxPATH_NATIVE) const </argsstring>
+        <name>GetPath</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxPATH_GET_VOLUME</defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the path part of the filename (without the name or extension). </para>        </briefdescription>
+        <detaileddescription>
+<para>The possible flags values are:</para><para><itemizedlist>
+<listitem><para><bold>wxPATH_GET_VOLUME:</bold> Return the path with the volume (does nothing for the filename formats without volumes), otherwise the path without volume part is returned.</para></listitem></itemizedlist>
+</para><para><itemizedlist>
+<listitem><para><bold>wxPATH_GET_SEPARATOR:</bold> Return the path with the trailing separator, if this flag is not given there will be no separator at the end of the path.</para></listitem></itemizedlist>
+</para><para><itemizedlist>
+<listitem><para><bold>wxPATH_NO_SEPARATOR:</bold> Don&apos;t include the trailing separator in the returned string. This is the default (the value of this flag is 0) and exists only for symmetry with wxPATH_GET_SEPARATOR.</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>If the path is a toplevel one (e.g. <computeroutput>&quot;/&quot;</computeroutput> on Unix or <computeroutput>&quot;C:\&quot;</computeroutput> on Windows), then the returned path will contain trailing separator even with <computeroutput>wxPATH_NO_SEPARATOR</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="620"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1aa9aeef951525bf6a1513c0b570b70bdb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetPathWithSep</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE) const </argsstring>
+        <name>GetPathWithSep</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the path with the trailing separator, useful for appending the name to the given path. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the same as calling <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member" tooltip="Returns the path part of the filename (without the name or extension).">GetPath</ref>(wxPATH_GET_VOLUME<sp/>|<sp/>wxPATH_GET_SEPARATOR,<sp/>format)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="657"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a145939346b79fd1d0da3637d7eb68f11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetShortPath</definition>
+        <argsstring>() const </argsstring>
+        <name>GetShortPath</name>
+        <briefdescription>
+<para>Return the short form of the path (returns identity on non-Windows platforms). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="662"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ab4b3191fe205f39c5bc09d4aa047b0ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
+        <definition>wxULongLong wxFileName::GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+<para>Returns the size of the file If the file does not exist or its size could not be read (because e.g. </para>        </briefdescription>
+        <detaileddescription>
+<para>the file is locked by another process) the returned value is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="669"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a835d9778ce835b803893f8557cb2c3e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::GetTimes</definition>
+        <argsstring>(wxDateTime *dtAccess, wxDateTime *dtMod, wxDateTime *dtCreate) const </argsstring>
+        <name>GetTimes</name>
+        <param>
+          <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> *</type>
+          <declname>dtAccess</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> *</type>
+          <declname>dtMod</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> *</type>
+          <declname>dtCreate</declname>
+        </param>
+        <briefdescription>
+<para>Returns the last access, last modification and creation times. </para>        </briefdescription>
+        <detaileddescription>
+<para>The last access time is updated whenever the file is read or written (or executed in the case of Windows), last modification time is only changed when the file is written to. Finally, the creation time is indeed the time when the file was created under Windows and the inode change time under Unix (as it is impossible to retrieve the real file creation time there anyhow) which can also be changed by many operations after the file creation.</para><para>If no filename or extension is specified in this instance of <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> (and therefore <ref refid="classwx_file_name_1a991fccb3fddb7e0281b5314970b14e20" kindref="member">IsDir()</ref> returns true) then this function will return the directory times of the path specified by <ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member">GetPath()</ref>, otherwise the file times of the file specified by <ref refid="classwx_file_name_1a8fc8100ba99859a40558c068a841b586" kindref="member">GetFullPath()</ref>. Any of the pointers may be NULL if the corresponding time is not needed.</para><para><simplesect kind="return"><para>true on success, false if we failed to retrieve the times. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="702"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1af637b341e2119b1cac72a0f5ab52f768" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileName::GetVolume</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVolume</name>
+        <briefdescription>
+<para>Returns the string containing the volume for this file name, empty if it doesn&apos;t have one or if the file system doesn&apos;t support volumes at all (for example, Unix). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="709"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a37e3b818118007fdabf08dca07fe4491" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::HasExt</definition>
+        <argsstring>() const </argsstring>
+        <name>HasExt</name>
+        <briefdescription>
+<para>Returns true if an extension is present. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="738"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1aa2096cc591692bc7aa971ae8e7924aba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::HasName</definition>
+        <argsstring>() const </argsstring>
+        <name>HasName</name>
+        <briefdescription>
+<para>Returns true if a name is present. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="743"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a6f1384657bde27dd9393359041657fd4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::HasVolume</definition>
+        <argsstring>() const </argsstring>
+        <name>HasVolume</name>
+        <briefdescription>
+<para>Returns true if a volume specifier is present. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="748"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a8661306053b75a514942ee58bf119790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::InsertDir</definition>
+        <argsstring>(size_t before, const wxString &amp;dir)</argsstring>
+        <name>InsertDir</name>
+        <param>
+          <type>size_t</type>
+          <declname>before</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a directory component before the zero-based position in the directory list. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please see <ref refid="classwx_file_name_1ae27fceb052e076466179cabd599bd878" kindref="member">AppendDir()</ref> for important notes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="754"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a0c0818ef96f533fe0c3f087394bdbca6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsAbsolute</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE) const </argsstring>
+        <name>IsAbsolute</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns true if this filename is absolute. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="759"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a991fccb3fddb7e0281b5314970b14e20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsDir</definition>
+        <argsstring>() const </argsstring>
+        <name>IsDir</name>
+        <briefdescription>
+<para>Returns true if this object represents a directory, false otherwise (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>if it is a file).</para><para>Note that this method doesn&apos;t test whether the directory or file really exists, you should use <ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref> or <ref refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" kindref="member">FileExists()</ref> for this. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="773"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ad1fccfcfdc93381216fdfc0ebfc44ec0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsDirReadable</definition>
+        <argsstring>() const </argsstring>
+        <name>IsDirReadable</name>
+        <briefdescription>
+<para>Returns true if the directory component of this instance is an existing directory and this process has read permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read permissions on a directory mean that you can list the directory contents but it doesn&apos;t imply that you have read permissions on the files contained. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="781"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a0ce0656507dbb99a8da44f0c64bd9bd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsDirWritable</definition>
+        <argsstring>() const </argsstring>
+        <name>IsDirWritable</name>
+        <briefdescription>
+<para>Returns true if the directory component of this instance is an existing directory and this process has write permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+<para>Write permissions on a directory mean that you can create new files in the directory. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="797"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1abe00f9d78a0dcc0d099af846b8df52eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsFileExecutable</definition>
+        <argsstring>() const </argsstring>
+        <name>IsFileExecutable</name>
+        <briefdescription>
+<para>Returns true if a file with this name exists and if this process has execute permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="811"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a13effc5ad97b5232390bee8348237bf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsFileReadable</definition>
+        <argsstring>() const </argsstring>
+        <name>IsFileReadable</name>
+        <briefdescription>
+<para>Returns true if a file with this name exists and if this process has read permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="823"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a4d4be1373bcb6fc4abb79f37c0c0a181" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsFileWritable</definition>
+        <argsstring>() const </argsstring>
+        <name>IsFileWritable</name>
+        <briefdescription>
+<para>Returns true if a file with this name exists and if this process has write permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="835"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the filename is valid, false if it is not initialized yet. </para>        </briefdescription>
+        <detaileddescription>
+<para>The assignment functions and <ref refid="classwx_file_name_1aa4fbb922dd41ee6012f15c6d162fb0b3" kindref="member">Clear()</ref> may reset the object to the uninitialized, invalid state (the former only do it on failure). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="848"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a0351b84987f8b58e1df6152347e937b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::IsRelative</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE) const </argsstring>
+        <name>IsRelative</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns true if this filename is not absolute. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="877"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a7affe5717d2ad6f9036aadbdd21edf53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::MacSetDefaultTypeAndCreator</definition>
+        <argsstring>()</argsstring>
+        <name>MacSetDefaultTypeAndCreator</name>
+        <briefdescription>
+<para>On Mac OS, looks up the appropriate type and creator from the registration and then sets it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="898"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1af947660cf109c3a39c4997f18a8670b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::MakeAbsolute</definition>
+        <argsstring>(const wxString &amp;cwd=wxEmptyString, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>MakeAbsolute</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>cwd</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Make the file name absolute. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a shortcut for <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" kindref="member" tooltip="Normalize the path.">wxFileName::Normalize</ref>(<ref refid="filename_8h_1a18dd81e40b3fad4a089077e28e5dce22a6bffe1a3462787d537fcd92bb049a864" kindref="member" tooltip="Squeeze all &amp;quot;..&amp;quot; and &amp;quot;.&amp;quot;.">wxPATH_NORM_DOTS</ref><sp/>|<sp/><ref refid="filename_8h_1a18dd81e40b3fad4a089077e28e5dce22a2c0029fffea115ef1506b1dd7522e06c" kindref="member" tooltip="Make the path absolute.">wxPATH_NORM_ABSOLUTE</ref><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="filename_8h_1a18dd81e40b3fad4a089077e28e5dce22aecd07046a3594acac74acc9ac650a02a" kindref="member" tooltip="Replace &amp;quot;~&amp;quot; and &amp;quot;~user&amp;quot; (Unix only).">wxPATH_NORM_TILDE</ref>,<sp/>cwd,<sp/>format)</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_file_name_1ab7ac6ac2f4f0d7dca3fd9c9764ec818d" kindref="member">MakeRelativeTo()</ref>, <ref refid="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" kindref="member">Normalize()</ref>, <ref refid="classwx_file_name_1a0c0818ef96f533fe0c3f087394bdbca6" kindref="member">IsAbsolute()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="911"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ab7ac6ac2f4f0d7dca3fd9c9764ec818d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::MakeRelativeTo</definition>
+        <argsstring>(const wxString &amp;pathBase=wxEmptyString, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>MakeRelativeTo</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>pathBase</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>This function tries to put this file name in a form relative to <emphasis>pathBase</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>In other words, it returns the file name which should be used to access this file if the current directory were pathBase.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pathBase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory to use as root, current directory is used by default </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file name format, native by default</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the file name has been changed, false if we failed to do anything with it (currently this only happens if the file name is on a volume different from the volume specified by <emphasis>pathBase</emphasis>).</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" kindref="member">Normalize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="931"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a852d4f699225e767242d54df53d6f3be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::Mkdir</definition>
+        <argsstring>(int perm=wxS_DIR_DEFAULT, int flags=0) const </argsstring>
+        <name>Mkdir</name>
+        <param>
+          <type>int</type>
+          <declname>perm</declname>
+          <defval>wxS_DIR_DEFAULT</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Creates a directory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>perm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The permissions for the newly created directory. See the <ref refid="group__group__funcmacro__file_1ga64460401fb35c137c9df28f3c019694d" kindref="member">wxPosixPermissions</ref> enumeration for more info. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the flags contain <computeroutput>wxPATH_MKDIR_FULL</computeroutput> flag, try to create each directory in the path and also don&apos;t return an error if the target directory already exists.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the directory was successfully created, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="947"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::Normalize</definition>
+        <argsstring>(int flags=wxPATH_NORM_ALL, const wxString &amp;cwd=wxEmptyString, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>Normalize</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxPATH_NORM_ALL</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>cwd</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Normalize the path. </para>        </briefdescription>
+        <detaileddescription>
+<para>With the default flags value, the path will be made absolute, without any &quot;..&quot; and &quot;.&quot; and all environment variables will be expanded in it.</para><para>Notice that in some rare cases normalizing a valid path may result in an invalid <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> object. E.g. normalizing &quot;./&quot; path using wxPATH_NORM_DOTS but not wxPATH_NORM_ABSOLUTE will result in a completely empty and thus invalid object. As long as there is a non empty file name the result of normalization will be valid however.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The kind of normalization to do with the file name. It can be any or-combination of the <ref refid="filename_8h_1a18dd81e40b3fad4a089077e28e5dce22" kindref="member">wxPathNormalize</ref> enumeration values. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If not empty, this directory will be used instead of current working directory in normalization (see <computeroutput>wxPATH_NORM_ABSOLUTE</computeroutput>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file name format to use when processing the paths, native by default.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if normalization was successfully or false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="993"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a577475123161b94cb8f8a597cefe64d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::PrependDir</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>PrependDir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Prepends a directory to the file path. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please see <ref refid="classwx_file_name_1ae27fceb052e076466179cabd599bd878" kindref="member">AppendDir()</ref> for important notes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="999"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ad2b8491684c5bf97395ab9aa2f3d398b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::RemoveDir</definition>
+        <argsstring>(size_t pos)</argsstring>
+        <name>RemoveDir</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Removes the specified directory component from the path. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1ae3196f7d5e004ce9690e1e050b35021d" kindref="member">GetDirCount()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1006"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ab1336b56add13e0f2830197a3680da94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::RemoveLastDir</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveLastDir</name>
+        <briefdescription>
+<para>Removes last directory component from the path. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1011"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a945be5e2b6211800cc2f1c8f9072b071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::ReplaceEnvVariable</definition>
+        <argsstring>(const wxString &amp;envname, const wxString &amp;replacementFmtString=&quot;$%s&quot;, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>ReplaceEnvVariable</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>envname</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>replacementFmtString</declname>
+          <defval>&quot;$%s&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>If the path contains the value of the environment variable named <emphasis>envname</emphasis> then this function replaces it with the string obtained from wxString::Format(replacementFmtString, value_of_envname_variable). </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is useful to make the path shorter or to make it dependent from a certain environment variable. <ref refid="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" kindref="member">Normalize()</ref> with <computeroutput>wxPATH_NORM_ENV_VARS</computeroutput> can perform the opposite of this function (depending on the value of <emphasis>replacementFmtString</emphasis>).</para><para>The name and extension of this filename are not modified.</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref><sp/>fn(</highlight><highlight class="stringliteral">&quot;/usr/openwin/lib/someFile&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fn.ReplaceEnvVariable(</highlight><highlight class="stringliteral">&quot;OPENWINHOME&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>fn.GetFullPath()<sp/>==<sp/>&quot;$OPENWINHOME/lib/someFile&quot;</highlight></codeline>
+</programlisting></para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="return"><para>true if the operation was successful (which doesn&apos;t mean that something was actually replaced, just that <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv</ref> didn&apos;t fail). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1040"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1b19e2d1d986291ab6cee414028070df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::ReplaceHomeDir</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>ReplaceHomeDir</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Replaces, if present in the path, the home directory for the given user (see <ref refid="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" kindref="member">wxGetHomeDir</ref>) with a tilde (~). </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" kindref="member">Normalize()</ref> with <computeroutput>wxPATH_NORM_TILDE</computeroutput> performs the opposite of this function.</para><para>The name and extension of this filename are not modified.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="return"><para>true if the operation was successful (which doesn&apos;t mean that something was actually replaced, just that <ref refid="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" kindref="member">wxGetHomeDir</ref> didn&apos;t fail). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1057"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1aa718276c012c7e64a1e2c28b47a1056b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::Rmdir</definition>
+        <argsstring>(int flags=0) const </argsstring>
+        <name>Rmdir</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Deletes the specified directory from the file system. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can contain one of wxPATH_RMDIR_FULL or wxPATH_RMDIR_RECURSIVE. By default contains neither so the directory will not be removed unless it is empty.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the directory was successfully deleted, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1071"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a46da7e5ecc480fe0dd40f28790c979c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::SameAs</definition>
+        <argsstring>(const wxFileName &amp;filepath, wxPathFormat format=wxPATH_NATIVE) const </argsstring>
+        <name>SameAs</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Compares the filename using the rules of this platform. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1092"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1acf954a5fb0ec5c9433fd7b49bfd781a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::SetCwd</definition>
+        <argsstring>() const </argsstring>
+        <name>SetCwd</name>
+        <briefdescription>
+<para>Changes the current working directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1097"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a2d5df1c71c011b0f8897dc51fe8d91ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::SetEmptyExt</definition>
+        <argsstring>()</argsstring>
+        <name>SetEmptyExt</name>
+        <briefdescription>
+<para>Sets the extension of the file name to be an empty extension. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is different from having no extension at all as the file name will have a trailing dot after a call to this method.</para><para><simplesect kind="see"><para><ref refid="classwx_file_name_1a65c37fa5017b400d41009bbab56f2774" kindref="member">SetExt()</ref>, <ref refid="classwx_file_name_1a03a2f73191dbf2392b9f1c8e850b407a" kindref="member">ClearExt()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1111"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a65c37fa5017b400d41009bbab56f2774" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::SetExt</definition>
+        <argsstring>(const wxString &amp;ext)</argsstring>
+        <name>SetExt</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <briefdescription>
+<para>Sets the extension of the file name. </para>        </briefdescription>
+        <detaileddescription>
+<para>Setting an empty string as the extension will remove the extension resulting in a file name without a trailing dot, unlike a call to <ref refid="classwx_file_name_1a2d5df1c71c011b0f8897dc51fe8d91ce" kindref="member">SetEmptyExt()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_file_name_1a2d5df1c71c011b0f8897dc51fe8d91ce" kindref="member">SetEmptyExt()</ref>, <ref refid="classwx_file_name_1a03a2f73191dbf2392b9f1c8e850b407a" kindref="member">ClearExt()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1122"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a2490c8f2cc92fb88196adc33809a36c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::SetFullName</definition>
+        <argsstring>(const wxString &amp;fullname)</argsstring>
+        <name>SetFullName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullname</declname>
+        </param>
+        <briefdescription>
+<para>The full name is the file name and extension (but without the path). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1127"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1bf12dfe55c3a2a56982a7a731fa1230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::SetName</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>SetName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Sets the name part (without extension). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a2490c8f2cc92fb88196adc33809a36c0" kindref="member">SetFullName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1134"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a3a1269b6810aa55375da45d56f2ac3b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::SetPath</definition>
+        <argsstring>(const wxString &amp;path, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>SetPath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Sets the path. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>path</emphasis> argument includes both the path and the volume, if supported by <emphasis>format</emphasis>.</para><para>Calling this function doesn&apos;t affect the name and extension components, to change them as well you can use <ref refid="classwx_file_name_1ab75d82f4024c6f15cc4247c8835da557" kindref="member">Assign()</ref> or just an assignment operator.</para><para><simplesect kind="see"><para><ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member">GetPath()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1148"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1af95c9e026b116d04d92f08146bc61bcd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::SetTimes</definition>
+        <argsstring>(const wxDateTime *dtAccess, const wxDateTime *dtMod, const wxDateTime *dtCreate) const </argsstring>
+        <name>SetTimes</name>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> *</type>
+          <declname>dtAccess</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> *</type>
+          <declname>dtMod</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> *</type>
+          <declname>dtCreate</declname>
+        </param>
+        <briefdescription>
+<para>Sets the file creation and last access/modification times (any of the pointers may be NULL). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a0c8e256bd978ab9d0cc3c640758b2e2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFileName::SetVolume</definition>
+        <argsstring>(const wxString &amp;volume)</argsstring>
+        <name>SetVolume</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Sets the volume specifier. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a4471ce6c004e35014da63d480349e7a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::Touch</definition>
+        <argsstring>() const </argsstring>
+        <name>Touch</name>
+        <briefdescription>
+<para>Sets the access and modification times to the current moment. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1238"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a004720eaccbf477800b38907d06c1ab3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::operator!=</definition>
+        <argsstring>(const wxFileName &amp;filename) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the filenames are different. </para>        </briefdescription>
+        <detaileddescription>
+<para>The string <emphasis>filenames</emphasis> is interpreted as a path in the native filename format. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1244"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a8709983fcc2d5ea4712995891f871c99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::operator!=</definition>
+        <argsstring>(const wxString &amp;filename) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the filenames are different. </para>        </briefdescription>
+        <detaileddescription>
+<para>The string <emphasis>filenames</emphasis> is interpreted as a path in the native filename format. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1250"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a77797c666b031aaae461bae50d1435eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::operator==</definition>
+        <argsstring>(const wxFileName &amp;filename) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the filenames are equal. </para>        </briefdescription>
+        <detaileddescription>
+<para>The string <emphasis>filenames</emphasis> is interpreted as a path in the native filename format. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1256"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1c28136def93ad155fd1f9c038cc32fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::operator==</definition>
+        <argsstring>(const wxString &amp;filename) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the filenames are equal. </para>        </briefdescription>
+        <detaileddescription>
+<para>The string <emphasis>filenames</emphasis> is interpreted as a path in the native filename format. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1262"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1affa56269ea9bc0fde42324b845a1e228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+        <definition>wxFileName&amp; wxFileName::operator=</definition>
+        <argsstring>(const wxFileName &amp;filename)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Assigns the new value to this filename object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1267"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1afe2f258994e45c802a5b73daaf34d071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+        <definition>wxFileName&amp; wxFileName::operator=</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Assigns the new value to this filename object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1272"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_file_name_1a706cd439af5469ff913bb022dff1ed71" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::DirExists</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>DirExists</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the directory with name <emphasis>dir</emphasis> exists. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="461"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref></type>
+        <definition>static wxFileName wxFileName::DirName</definition>
+        <argsstring>(const wxString &amp;dir, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>DirName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the object corresponding to the directory with the given name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>dir</emphasis> parameter may have trailing path separator or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ab8a8e5bfeaf12b6479ffc295a68137b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::FileExists</definition>
+        <argsstring>(const wxString &amp;file)</argsstring>
+        <name>FileExists</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the file with name <emphasis>file</emphasis> exists. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="482"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a693b785e7230fb161dbd040439874436" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref></type>
+        <definition>static wxFileName wxFileName::FileName</definition>
+        <argsstring>(const wxString &amp;file, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>FileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the file name object corresponding to the given <emphasis>file</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function exists mainly for symmetry with <ref refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" kindref="member">DirName()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="489"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1af697f1c0f7864fc35ac0e8198eacc84d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetCwd</definition>
+        <argsstring>(const wxString &amp;volume=wxEmptyString)</argsstring>
+        <name>GetCwd</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>volume</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Retrieves the value of the current working directory on the specified volume. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the volume is empty, the program&apos;s current working directory is returned for the current volume.</para><para><simplesect kind="return"><para>The string containing the current working directory or an empty string on error.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_file_name_1a1cf7a6e3a6ac0f34260ea79f48663cc8" kindref="member">AssignCwd()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="501"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1acfe59c3758e4188fa76580a02c7c38af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetForbiddenChars</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>GetForbiddenChars</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the characters that can&apos;t be used in filenames and directory names for the specified format. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="522"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a889036f3a9913d5f1e4ba7c132a05f07" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+        <definition>static wxPathFormat wxFileName::GetFormat</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>GetFormat</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the canonical path format for this platform. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="527"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a8699fafd7b38069c2af0b4f0de89c180" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetHomeDir</definition>
+        <argsstring>()</argsstring>
+        <name>GetHomeDir</name>
+        <briefdescription>
+<para>Returns the home directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="542"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ad6f9ae274e12729fc5689128ea94d16e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
+        <definition>static wxUniChar wxFileName::GetPathSeparator</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>GetPathSeparator</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the usually used path separator for this format. </para>        </briefdescription>
+        <detaileddescription>
+<para>For all formats but <computeroutput>wxPATH_DOS</computeroutput> there is only one path separator anyhow, but for DOS there are two of them and the native one, i.e. the backslash is returned by this method.</para><para><simplesect kind="see"><para><ref refid="classwx_file_name_1a8db0c9210c80976e0dd2af83229d4be2" kindref="member">GetPathSeparators()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="630"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a8db0c9210c80976e0dd2af83229d4be2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetPathSeparators</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>GetPathSeparators</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the string containing all the path separators for this format. </para>        </briefdescription>
+        <detaileddescription>
+<para>For all formats but <computeroutput>wxPATH_DOS</computeroutput> this string contains only one character but for DOS and Windows both <computeroutput>&apos;/&apos;</computeroutput> and <computeroutput>&apos;\&apos;</computeroutput> may be used as separators.</para><para><simplesect kind="see"><para><ref refid="classwx_file_name_1ad6f9ae274e12729fc5689128ea94d16e" kindref="member">GetPathSeparator()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="639"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a22139e83bfeb325efcb253b605364167" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetPathTerminators</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>GetPathTerminators</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the string of characters which may terminate the path part. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the same as <ref refid="classwx_file_name_1a8db0c9210c80976e0dd2af83229d4be2" kindref="member">GetPathSeparators()</ref> except for VMS path format where ] is used at the end of the path part. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="646"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a9cfa29562cc40389ce7f4d7c1a12f495" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
+        <definition>static wxULongLong wxFileName::GetSize</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>GetSize</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of the file If the file does not exist or its size could not be read (because e.g. </para>        </briefdescription>
+        <detaileddescription>
+<para>the file is locked by another process) the returned value is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="676"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ada549d0b26eb20fc03f42f2182b05fc9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetTempDir</definition>
+        <argsstring>()</argsstring>
+        <name>GetTempDir</name>
+        <briefdescription>
+<para>Returns the directory used for temporary files. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="681"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a670e0da43feff098cdf637d21fc87c47" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetVolumeSeparator</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>GetVolumeSeparator</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns the string separating the volume from the path for this format. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="714"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a051821da028e3e0d08362ef02978a1a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::GetVolumeString</definition>
+        <argsstring>(char drive, int flags=wxPATH_GET_SEPARATOR)</argsstring>
+        <name>GetVolumeString</name>
+        <param>
+          <type>char</type>
+          <declname>drive</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxPATH_GET_SEPARATOR</defval>
+        </param>
+        <briefdescription>
+<para>This function builds a volume path string, for example &quot;C:\\&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para>Implemented for the platforms which use drive letters, i.e. DOS, MSW and OS/2 only.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The drive letter, &apos;A&apos; through &apos;Z&apos; or &apos;a&apos; through &apos;z&apos;.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>wxPATH_NO_SEPARATOR</computeroutput> or <computeroutput>wxPATH_GET_SEPARATOR</computeroutput> to omit or include the trailing path separator, the default is to include it.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Volume path string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="733"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1abe8d3ef3a404ed7050ad705d77d47eae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::IsCaseSensitive</definition>
+        <argsstring>(wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>IsCaseSensitive</name>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns true if the file names of this type are case-sensitive. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="764"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a37759678b0b0e4f01076c4358a2e63b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::IsDirReadable</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>IsDirReadable</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given <emphasis>dir</emphasis> is an existing directory and this process has read permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read permissions on a directory mean that you can list the directory contents but it doesn&apos;t imply that you have read permissions on the files contained. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="789"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1af163f5c99159a34be2f905eb1ec03b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::IsDirWritable</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>IsDirWritable</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given <emphasis>dir</emphasis> is an existing directory and this process has write permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+<para>Write permissions on a directory mean that you can create new files in the directory. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="805"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a65973db654e5b7b03eac0079b34f4694" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::IsFileExecutable</definition>
+        <argsstring>(const wxString &amp;file)</argsstring>
+        <name>IsFileExecutable</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if a file with this name exists and if this process has execute permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="817"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1aaf33a5de7f79587a58f9e20ae22d89b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::IsFileReadable</definition>
+        <argsstring>(const wxString &amp;file)</argsstring>
+        <name>IsFileReadable</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if a file with this name exists and if this process has read permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="829"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ac430b77411e87a46f7a354bcf384cf65" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::IsFileWritable</definition>
+        <argsstring>(const wxString &amp;file)</argsstring>
+        <name>IsFileWritable</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if a file with this name exists and if this process has write permissions on it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="841"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1abaf25b4b1c544d0d71511e93f82e264f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::IsPathSeparator</definition>
+        <argsstring>(wxChar ch, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>IsPathSeparator</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+          <declname>ch</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns true if the char is a path separator for this format. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="854"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ab039f42f5eea116a2f4759f3dd3877ff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::IsMSWUniqueVolumeNamePath</definition>
+        <argsstring>(const wxString &amp;path, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>IsMSWUniqueVolumeNamePath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Returns true if the volume part of the path is a unique volume name. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function will always return false if the path format is not wxPATH_DOS.</para><para>Unique volume names are Windows volume identifiers which remain the same regardless of where the volume is actually mounted. Example of a path using a volume name could be <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\\?\Volume{8089d7d7-d0ac-11db-9dd0-806d6172696f}\Program<sp/>Files\setup.exe</highlight></codeline>
+</programlisting></para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="872"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a2c3332f78de54e959fbca3591fb3f0f7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::MacFindDefaultTypeAndCreator</definition>
+        <argsstring>(const wxString &amp;ext, wxUint32 *type, wxUint32 *creator)</argsstring>
+        <name>MacFindDefaultTypeAndCreator</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref> *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref> *</type>
+          <declname>creator</declname>
+        </param>
+        <briefdescription>
+<para>On Mac OS, gets the common type and creator for the given extension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="884"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a502d197ca3d2d018125e7734fa93edcb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxFileName::MacRegisterDefaultTypeAndCreator</definition>
+        <argsstring>(const wxString &amp;ext, wxUint32 type, wxUint32 creator)</argsstring>
+        <name>MacRegisterDefaultTypeAndCreator</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>creator</declname>
+        </param>
+        <briefdescription>
+<para>On Mac OS, registers application defined extensions and their default type and creator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="892"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1ac2006b2fb30c0c0f11ef44560e1a62c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::Mkdir</definition>
+        <argsstring>(const wxString &amp;dir, int perm=wxS_DIR_DEFAULT, int flags=0)</argsstring>
+        <name>Mkdir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>perm</declname>
+          <defval>wxS_DIR_DEFAULT</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Creates a directory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory to create </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>perm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The permissions for the newly created directory. See the <ref refid="group__group__funcmacro__file_1ga64460401fb35c137c9df28f3c019694d" kindref="member">wxPosixPermissions</ref> enumeration for more info. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the flags contain <computeroutput>wxPATH_MKDIR_FULL</computeroutput> flag, try to create each directory in the path and also don&apos;t return an error if the target directory already exists.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the directory was successfully created, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="966"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1aa0aa5becff9a6d91ac5108bea7f12932" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::Rmdir</definition>
+        <argsstring>(const wxString &amp;dir, int flags=0)</argsstring>
+        <name>Rmdir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Deletes the specified directory from the file system. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory to delete </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can contain one of wxPATH_RMDIR_FULL or wxPATH_RMDIR_RECURSIVE. By default contains neither so the directory will not be removed unless it is empty.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the directory was successfully deleted, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1086"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a5c1d005ca788d42ca5d1c7bf8ff3d6b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::SetCwd</definition>
+        <argsstring>(const wxString &amp;cwd)</argsstring>
+        <name>SetCwd</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>cwd</declname>
+        </param>
+        <briefdescription>
+<para>Changes the current working directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a66a0a31c3113875d46d2058135339fea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxFileName::SplitVolume</definition>
+        <argsstring>(const wxString &amp;fullpath, wxString *volume, wxString *path, wxPathFormat format=wxPATH_NATIVE)</argsstring>
+        <name>SplitVolume</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullpath</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <briefdescription>
+<para>Splits the given <emphasis>fullpath</emphasis> into the volume part (which may be empty) and the pure path part, not containing any volume. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">SplitPath()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1211"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a1cc6ef65bdf702fc220893d1e1db1141" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxFileName::StripExtension</definition>
+        <argsstring>(const wxString &amp;fullname)</argsstring>
+        <name>StripExtension</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullname</declname>
+        </param>
+        <briefdescription>
+<para>Strip the file extension. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function does more than just removing everything after the last period from the string, for example it will return the string &quot;.vimrc&quot; unchanged because the part after the period is not an extension but the file name in this case. You can use <ref refid="classwx_string_1a9b6f088a6ef2faadf922a521df0fae3a" kindref="member">wxString::BeforeLast()</ref> to really get just the part before the last period (but notice that that function returns empty string if period is not present at all unlike this function which returns the <emphasis>fullname</emphasis> unchanged in this case).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fullname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File path including name and, optionally, extension.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>File path without extension</para></simplesect>
+<simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1233"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_file_name" kindref="compound">wxFileName</ref> encapsulates a file name. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class serves two purposes: first, it provides the functions to split the file names into components and to recombine these components in the full file name which can then be passed to the OS file functions (and <ref refid="group__group__funcmacro__file" kindref="compound">wxWidgets functions</ref> wrapping them). Second, it includes the functions for working with the files itself. Note that to change the file data you should use <ref refid="classwx_file" kindref="compound">wxFile</ref> class instead. <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> provides functions for working with the file attributes.</para><para>When working with directory names (i.e. without filename and extension) make sure not to misuse the file name part of this class with the last directory. Instead initialize the <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> instance like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref><sp/>dirname(<sp/></highlight><highlight class="stringliteral">&quot;C:\mydir&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MyMethod(<sp/>dirname.GetPath()<sp/>);</highlight></codeline>
+</programlisting></para><para>The same can be done using the static method <ref refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" kindref="member">wxFileName::DirName()</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref><sp/>dirname<sp/>=<sp/><ref refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" kindref="member" tooltip="Returns the object corresponding to the directory with the given name.">wxFileName::DirName</ref>(<sp/></highlight><highlight class="stringliteral">&quot;C:\mydir&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>MyMethod(<sp/>dirname.<ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member" tooltip="Returns the path part of the filename (without the name or extension).">GetPath</ref>()<sp/>);</highlight></codeline>
+</programlisting></para><para>Accordingly, methods dealing with directories or directory names like <ref refid="classwx_file_name_1ad1fccfcfdc93381216fdfc0ebfc44ec0" kindref="member">wxFileName::IsDirReadable()</ref> use <ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member">wxFileName::GetPath()</ref> whereas methods dealing with file names like <ref refid="classwx_file_name_1a13effc5ad97b5232390bee8348237bf1" kindref="member">wxFileName::IsFileReadable()</ref> use <ref refid="classwx_file_name_1a8fc8100ba99859a40558c068a841b586" kindref="member">wxFileName::GetFullPath()</ref>.</para><para>If it is not known whether a string contains a directory name or a complete file name (such as when interpreting user input) you need to use the static function <ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">wxFileName::DirExists()</ref> (or its identical variants <ref refid="classwx_dir_1ae03564ab50b6b83947f34477d89f0866" kindref="member">wxDir::Exists()</ref> and <ref refid="group__group__funcmacro__file_1ga3e960a6805631320fede18bf1176f278" kindref="member">wxDirExists()</ref>) and construct the <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> instance accordingly. This will only work if the directory actually exists, of course:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>user_input;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>input<sp/>from<sp/>user</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_file_name" kindref="compound" tooltip="wxFileName encapsulates a file name.">wxFileName</ref><sp/>fname;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__group__funcmacro__file_1ga3e960a6805631320fede18bf1176f278" kindref="member" tooltip="Returns true if dirname exists and is a directory.">wxDirExists</ref>(user_input))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fname.<ref refid="classwx_file_name_1a7aabf113d3d420ba65f2a3a11ef1d087" kindref="member" tooltip="Sets this file name object to the given directory name.">AssignDir</ref>(<sp/>user_input<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fname.<ref refid="classwx_file_name_1ab75d82f4024c6f15cc4247c8835da557" kindref="member" tooltip="Creates the file name from another filename object.">Assign</ref>(<sp/>user_input<sp/>);</highlight></codeline>
+</programlisting></para><para>Please note that many <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> methods accept the path format argument which is by <computeroutput>wxPATH_NATIVE</computeroutput> by default meaning to use the path format native for the current platform. The path format affects the operation of <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> functions in several ways: first and foremost, it defines the path separator character to use, but it also affects other things such as whether the path has the drive part or not. See wxPathFormat for more info.</para><sect1 id="classwx_file_name_1filename_format">
+<title>File name format</title>
+<para><ref refid="classwx_file_name" kindref="compound">wxFileName</ref> currently supports the file names in the Unix, DOS/Windows, Mac OS and VMS formats. Although these formats are quite different, <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> tries to treat them all in the same generic way. It supposes that all file names consist of the following parts: the volume (also known as drive under Windows or device under VMS), the path which is a sequence of directory names separated by the path separators and the full filename itself which, in turn, is composed from the base file name and the extension. All of the individual components of the file name may be empty and, for example, the volume name is always empty under Unix, but if they are all empty simultaneously, the filename object is considered to be in an invalid state and <ref refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" kindref="member">wxFileName::IsOk()</ref> returns false for it.</para><para>File names can be case-sensitive or not, the function <ref refid="classwx_file_name_1abe8d3ef3a404ed7050ad705d77d47eae" kindref="member">wxFileName::IsCaseSensitive()</ref> allows to determine this. The rules for determining whether the file name is absolute or relative also depend on the file name format and the only portable way to answer this question is to use <ref refid="classwx_file_name_1a0c0818ef96f533fe0c3f087394bdbca6" kindref="member">wxFileName::IsAbsolute()</ref> or <ref refid="classwx_file_name_1a0351b84987f8b58e1df6152347e937b4" kindref="member">wxFileName::IsRelative()</ref> method.</para><para>Note that on Windows,&quot;X:&quot; refers to the current working directory on drive X. Therefore, a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> instance constructed from for example &quot;X:dir/file.ext&quot; treats the portion beyond drive separator as being relative to that directory. To ensure that the filename is absolute, you may use <ref refid="classwx_file_name_1af947660cf109c3a39c4997f18a8670b6" kindref="member">wxFileName::MakeAbsolute()</ref>. There is also an inverse function <ref refid="classwx_file_name_1ab7ac6ac2f4f0d7dca3fd9c9764ec818d" kindref="member">wxFileName::MakeRelativeTo()</ref> which undoes what wxFileName::Normalize(wxPATH_NORM_DOTS) does. Other functions returning information about the file format provided by this class are <ref refid="classwx_file_name_1a670e0da43feff098cdf637d21fc87c47" kindref="member">wxFileName::GetVolumeSeparator()</ref>, <ref refid="classwx_file_name_1abaf25b4b1c544d0d71511e93f82e264f" kindref="member">wxFileName::IsPathSeparator()</ref>.</para></sect1>
+<sect1 id="classwx_file_name_1filename_construction">
+<title>File name construction</title>
+<para>You can initialize a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> instance using one of the following functions:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_file_name_1a2e54bc95c94eb773841c7cb1d7732e35" kindref="member">wxFileName::wxFileName()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1ab75d82f4024c6f15cc4247c8835da557" kindref="member">wxFileName::Assign()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a1cf7a6e3a6ac0f34260ea79f48663cc8" kindref="member">wxFileName::AssignCwd()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a7aabf113d3d420ba65f2a3a11ef1d087" kindref="member">wxFileName::AssignDir()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a021419b87e867a31ff4af5b6e84911cd" kindref="member">wxFileName::AssignHomeDir()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a6c56af101aea8c3d98c693811a44db69" kindref="member">wxFileName::AssignTempFileName()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" kindref="member">wxFileName::DirName()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a693b785e7230fb161dbd040439874436" kindref="member">wxFileName::FileName()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1affa56269ea9bc0fde42324b845a1e228" kindref="member">wxFileName::operator=()</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="classwx_file_name_1filename_tests">
+<title>File name tests</title>
+<para>Before doing other tests, you should use <ref refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" kindref="member">wxFileName::IsOk()</ref> to verify that the filename is well defined. If it is, <ref refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" kindref="member">FileExists()</ref> can be used to test whether a file with such name exists and <ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">wxFileName::DirExists()</ref> can be used to test for directory existence. File names should be compared using the <ref refid="classwx_file_name_1a46da7e5ecc480fe0dd40f28790c979c4" kindref="member">wxFileName::SameAs()</ref> method or <ref refid="classwx_file_name_1a77797c666b031aaae461bae50d1435eb" kindref="member">wxFileName::operator==()</ref>. For testing basic access modes, you can use:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_file_name_1a0ce0656507dbb99a8da44f0c64bd9bd5" kindref="member">wxFileName::IsDirWritable()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1ad1fccfcfdc93381216fdfc0ebfc44ec0" kindref="member">wxFileName::IsDirReadable()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a4d4be1373bcb6fc4abb79f37c0c0a181" kindref="member">wxFileName::IsFileWritable()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a13effc5ad97b5232390bee8348237bf1" kindref="member">wxFileName::IsFileReadable()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1abe00f9d78a0dcc0d099af846b8df52eb" kindref="member">wxFileName::IsFileExecutable()</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="classwx_file_name_1filename_components">
+<title>File name components</title>
+<para>These functions allow to examine and modify the individual directories of the path:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_file_name_1ae27fceb052e076466179cabd599bd878" kindref="member">wxFileName::AppendDir()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a8661306053b75a514942ee58bf119790" kindref="member">wxFileName::InsertDir()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1ae3196f7d5e004ce9690e1e050b35021d" kindref="member">wxFileName::GetDirCount()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a577475123161b94cb8f8a597cefe64d5" kindref="member">wxFileName::PrependDir()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1ad2b8491684c5bf97395ab9aa2f3d398b" kindref="member">wxFileName::RemoveDir()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1ab1336b56add13e0f2830197a3680da94" kindref="member">wxFileName::RemoveLastDir()</ref></para></listitem>
+</itemizedlist>
+To change the components of the file name individually you can use the following functions:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_file_name_1a6703bfd4f587b35926d5c2949bc11918" kindref="member">wxFileName::GetExt()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1ac6475b655ac68c02a094723f653270e9" kindref="member">wxFileName::GetName()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1af637b341e2119b1cac72a0f5ab52f768" kindref="member">wxFileName::GetVolume()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a37e3b818118007fdabf08dca07fe4491" kindref="member">wxFileName::HasExt()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1aa2096cc591692bc7aa971ae8e7924aba" kindref="member">wxFileName::HasName()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a6f1384657bde27dd9393359041657fd4" kindref="member">wxFileName::HasVolume()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a65c37fa5017b400d41009bbab56f2774" kindref="member">wxFileName::SetExt()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a03a2f73191dbf2392b9f1c8e850b407a" kindref="member">wxFileName::ClearExt()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a2d5df1c71c011b0f8897dc51fe8d91ce" kindref="member">wxFileName::SetEmptyExt()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a1bf12dfe55c3a2a56982a7a731fa1230" kindref="member">wxFileName::SetName()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a0c8e256bd978ab9d0cc3c640758b2e2f" kindref="member">wxFileName::SetVolume()</ref></para></listitem>
+</itemizedlist>
+You can initialize a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> instance using one of the following functions:</para></sect1>
+<sect1 id="classwx_file_name_1filename_operations">
+<title>File name operations</title>
+<para>These methods allow to work with the file creation, access and modification times. Note that not all filesystems under all platforms implement these times in the same way. For example, the access time under Windows has a resolution of one day (so it is really the access date and not time). The access time may be updated when the file is executed or not depending on the platform.</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_file_name_1a6a1908a872b80060af5ef46cdda6c0c1" kindref="member">wxFileName::GetModificationTime()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a835d9778ce835b803893f8557cb2c3e4" kindref="member">wxFileName::GetTimes()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1af95c9e026b116d04d92f08146bc61bcd" kindref="member">wxFileName::SetTimes()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1a4471ce6c004e35014da63d480349e7a9" kindref="member">wxFileName::Touch()</ref></para></listitem>
+</itemizedlist>
+Other file system operations functions are:</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_file_name_1a852d4f699225e767242d54df53d6f3be" kindref="member">wxFileName::Mkdir()</ref> </para></listitem>
+<listitem><para><ref refid="classwx_file_name_1aa718276c012c7e64a1e2c28b47a1056b" kindref="member">wxFileName::Rmdir()</ref></para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para></sect1>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="272" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" bodystart="271" bodyend="1273"/>
+    <listofallmembers>
+      <member refid="classwx_file_name_1ae27fceb052e076466179cabd599bd878" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>AppendDir</name></member>
+      <member refid="classwx_file_name_1ab75d82f4024c6f15cc4247c8835da557" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Assign</name></member>
+      <member refid="classwx_file_name_1abaa2f7fb89227ba59f10c5908fb6072c" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Assign</name></member>
+      <member refid="classwx_file_name_1a22b20107fe66d412c43663517d9f6cf4" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Assign</name></member>
+      <member refid="classwx_file_name_1a0c5ce686dc39e118800c08a278c92f21" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Assign</name></member>
+      <member refid="classwx_file_name_1a1a13a96c6f8dc3baabb41afba0d4af10" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Assign</name></member>
+      <member refid="classwx_file_name_1a9963f1d2f16ca1979df06fbb28a8da9a" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Assign</name></member>
+      <member refid="classwx_file_name_1a1cf7a6e3a6ac0f34260ea79f48663cc8" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>AssignCwd</name></member>
+      <member refid="classwx_file_name_1a7aabf113d3d420ba65f2a3a11ef1d087" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>AssignDir</name></member>
+      <member refid="classwx_file_name_1a021419b87e867a31ff4af5b6e84911cd" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>AssignHomeDir</name></member>
+      <member refid="classwx_file_name_1a6c56af101aea8c3d98c693811a44db69" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>AssignTempFileName</name></member>
+      <member refid="classwx_file_name_1acf47b12b1de8c47fc5cbc2ec7b5fe628" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>AssignTempFileName</name></member>
+      <member refid="classwx_file_name_1a0807cf78dcddc42d2467ee45cc108d08" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>AssignTempFileName</name></member>
+      <member refid="classwx_file_name_1aa4fbb922dd41ee6012f15c6d162fb0b3" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Clear</name></member>
+      <member refid="classwx_file_name_1a03a2f73191dbf2392b9f1c8e850b407a" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>ClearExt</name></member>
+      <member refid="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>CreateTempFileName</name></member>
+      <member refid="classwx_file_name_1a5a03fe160df4807b4de1c3bd0696d2ad" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>CreateTempFileName</name></member>
+      <member refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>DirExists</name></member>
+      <member refid="classwx_file_name_1a706cd439af5469ff913bb022dff1ed71" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>DirExists</name></member>
+      <member refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>DirName</name></member>
+      <member refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>FileExists</name></member>
+      <member refid="classwx_file_name_1ab8a8e5bfeaf12b6479ffc295a68137b9" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>FileExists</name></member>
+      <member refid="classwx_file_name_1a693b785e7230fb161dbd040439874436" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>FileName</name></member>
+      <member refid="classwx_file_name_1af697f1c0f7864fc35ac0e8198eacc84d" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetCwd</name></member>
+      <member refid="classwx_file_name_1ae3196f7d5e004ce9690e1e050b35021d" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetDirCount</name></member>
+      <member refid="classwx_file_name_1a8a1c3fbe46ecfb57ea6c4fcd53b20ed1" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetDirs</name></member>
+      <member refid="classwx_file_name_1a6703bfd4f587b35926d5c2949bc11918" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetExt</name></member>
+      <member refid="classwx_file_name_1acfe59c3758e4188fa76580a02c7c38af" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetForbiddenChars</name></member>
+      <member refid="classwx_file_name_1a889036f3a9913d5f1e4ba7c132a05f07" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetFormat</name></member>
+      <member refid="classwx_file_name_1af1a43f651750f2b8a44adf08bb5db7a3" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetFullName</name></member>
+      <member refid="classwx_file_name_1a8fc8100ba99859a40558c068a841b586" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetFullPath</name></member>
+      <member refid="classwx_file_name_1a8699fafd7b38069c2af0b4f0de89c180" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetHomeDir</name></member>
+      <member refid="classwx_file_name_1abc3e8d14a555ac691d56b6edc506f351" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetHumanReadableSize</name></member>
+      <member refid="classwx_file_name_1a91caf872b17d6d775cdcd36161b5c470" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetHumanReadableSize</name></member>
+      <member refid="classwx_file_name_1adfa5d06438fb9a7fcaa7d6efbc0b2cb3" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetLongPath</name></member>
+      <member refid="classwx_file_name_1a6a1908a872b80060af5ef46cdda6c0c1" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetModificationTime</name></member>
+      <member refid="classwx_file_name_1ac6475b655ac68c02a094723f653270e9" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetName</name></member>
+      <member refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetPath</name></member>
+      <member refid="classwx_file_name_1ad6f9ae274e12729fc5689128ea94d16e" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetPathSeparator</name></member>
+      <member refid="classwx_file_name_1a8db0c9210c80976e0dd2af83229d4be2" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetPathSeparators</name></member>
+      <member refid="classwx_file_name_1a22139e83bfeb325efcb253b605364167" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetPathTerminators</name></member>
+      <member refid="classwx_file_name_1aa9aeef951525bf6a1513c0b570b70bdb" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetPathWithSep</name></member>
+      <member refid="classwx_file_name_1a145939346b79fd1d0da3637d7eb68f11" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetShortPath</name></member>
+      <member refid="classwx_file_name_1ab4b3191fe205f39c5bc09d4aa047b0ce" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetSize</name></member>
+      <member refid="classwx_file_name_1a9cfa29562cc40389ce7f4d7c1a12f495" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetSize</name></member>
+      <member refid="classwx_file_name_1ada549d0b26eb20fc03f42f2182b05fc9" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetTempDir</name></member>
+      <member refid="classwx_file_name_1a835d9778ce835b803893f8557cb2c3e4" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetTimes</name></member>
+      <member refid="classwx_file_name_1af637b341e2119b1cac72a0f5ab52f768" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetVolume</name></member>
+      <member refid="classwx_file_name_1a670e0da43feff098cdf637d21fc87c47" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetVolumeSeparator</name></member>
+      <member refid="classwx_file_name_1a051821da028e3e0d08362ef02978a1a6" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>GetVolumeString</name></member>
+      <member refid="classwx_file_name_1a37e3b818118007fdabf08dca07fe4491" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>HasExt</name></member>
+      <member refid="classwx_file_name_1aa2096cc591692bc7aa971ae8e7924aba" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>HasName</name></member>
+      <member refid="classwx_file_name_1a6f1384657bde27dd9393359041657fd4" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>HasVolume</name></member>
+      <member refid="classwx_file_name_1a8661306053b75a514942ee58bf119790" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>InsertDir</name></member>
+      <member refid="classwx_file_name_1a0c0818ef96f533fe0c3f087394bdbca6" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsAbsolute</name></member>
+      <member refid="classwx_file_name_1abe8d3ef3a404ed7050ad705d77d47eae" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsCaseSensitive</name></member>
+      <member refid="classwx_file_name_1a991fccb3fddb7e0281b5314970b14e20" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsDir</name></member>
+      <member refid="classwx_file_name_1ad1fccfcfdc93381216fdfc0ebfc44ec0" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsDirReadable</name></member>
+      <member refid="classwx_file_name_1a37759678b0b0e4f01076c4358a2e63b9" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsDirReadable</name></member>
+      <member refid="classwx_file_name_1a0ce0656507dbb99a8da44f0c64bd9bd5" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsDirWritable</name></member>
+      <member refid="classwx_file_name_1a1af163f5c99159a34be2f905eb1ec03b" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsDirWritable</name></member>
+      <member refid="classwx_file_name_1abe00f9d78a0dcc0d099af846b8df52eb" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsFileExecutable</name></member>
+      <member refid="classwx_file_name_1a65973db654e5b7b03eac0079b34f4694" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsFileExecutable</name></member>
+      <member refid="classwx_file_name_1a13effc5ad97b5232390bee8348237bf1" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsFileReadable</name></member>
+      <member refid="classwx_file_name_1aaf33a5de7f79587a58f9e20ae22d89b4" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsFileReadable</name></member>
+      <member refid="classwx_file_name_1a4d4be1373bcb6fc4abb79f37c0c0a181" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsFileWritable</name></member>
+      <member refid="classwx_file_name_1ac430b77411e87a46f7a354bcf384cf65" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsFileWritable</name></member>
+      <member refid="classwx_file_name_1ab039f42f5eea116a2f4759f3dd3877ff" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsMSWUniqueVolumeNamePath</name></member>
+      <member refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsOk</name></member>
+      <member refid="classwx_file_name_1abaf25b4b1c544d0d71511e93f82e264f" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsPathSeparator</name></member>
+      <member refid="classwx_file_name_1a0351b84987f8b58e1df6152347e937b4" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>IsRelative</name></member>
+      <member refid="classwx_file_name_1a2c3332f78de54e959fbca3591fb3f0f7" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>MacFindDefaultTypeAndCreator</name></member>
+      <member refid="classwx_file_name_1a502d197ca3d2d018125e7734fa93edcb" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>MacRegisterDefaultTypeAndCreator</name></member>
+      <member refid="classwx_file_name_1a7affe5717d2ad6f9036aadbdd21edf53" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>MacSetDefaultTypeAndCreator</name></member>
+      <member refid="classwx_file_name_1af947660cf109c3a39c4997f18a8670b6" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>MakeAbsolute</name></member>
+      <member refid="classwx_file_name_1ab7ac6ac2f4f0d7dca3fd9c9764ec818d" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>MakeRelativeTo</name></member>
+      <member refid="classwx_file_name_1a852d4f699225e767242d54df53d6f3be" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Mkdir</name></member>
+      <member refid="classwx_file_name_1ac2006b2fb30c0c0f11ef44560e1a62c7" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Mkdir</name></member>
+      <member refid="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Normalize</name></member>
+      <member refid="classwx_file_name_1a004720eaccbf477800b38907d06c1ab3" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>operator!=</name></member>
+      <member refid="classwx_file_name_1a8709983fcc2d5ea4712995891f871c99" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>operator!=</name></member>
+      <member refid="classwx_file_name_1affa56269ea9bc0fde42324b845a1e228" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>operator=</name></member>
+      <member refid="classwx_file_name_1afe2f258994e45c802a5b73daaf34d071" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>operator=</name></member>
+      <member refid="classwx_file_name_1a77797c666b031aaae461bae50d1435eb" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>operator==</name></member>
+      <member refid="classwx_file_name_1a1c28136def93ad155fd1f9c038cc32fc" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>operator==</name></member>
+      <member refid="classwx_file_name_1a577475123161b94cb8f8a597cefe64d5" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>PrependDir</name></member>
+      <member refid="classwx_file_name_1ad2b8491684c5bf97395ab9aa2f3d398b" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>RemoveDir</name></member>
+      <member refid="classwx_file_name_1ab1336b56add13e0f2830197a3680da94" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>RemoveLastDir</name></member>
+      <member refid="classwx_file_name_1a945be5e2b6211800cc2f1c8f9072b071" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>ReplaceEnvVariable</name></member>
+      <member refid="classwx_file_name_1a1b19e2d1d986291ab6cee414028070df" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>ReplaceHomeDir</name></member>
+      <member refid="classwx_file_name_1aa718276c012c7e64a1e2c28b47a1056b" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Rmdir</name></member>
+      <member refid="classwx_file_name_1aa0aa5becff9a6d91ac5108bea7f12932" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Rmdir</name></member>
+      <member refid="classwx_file_name_1a46da7e5ecc480fe0dd40f28790c979c4" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SameAs</name></member>
+      <member refid="classwx_file_name_1acf954a5fb0ec5c9433fd7b49bfd781a8" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetCwd</name></member>
+      <member refid="classwx_file_name_1a5c1d005ca788d42ca5d1c7bf8ff3d6b6" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetCwd</name></member>
+      <member refid="classwx_file_name_1a2d5df1c71c011b0f8897dc51fe8d91ce" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetEmptyExt</name></member>
+      <member refid="classwx_file_name_1a65c37fa5017b400d41009bbab56f2774" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetExt</name></member>
+      <member refid="classwx_file_name_1a2490c8f2cc92fb88196adc33809a36c0" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetFullName</name></member>
+      <member refid="classwx_file_name_1a1bf12dfe55c3a2a56982a7a731fa1230" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetName</name></member>
+      <member refid="classwx_file_name_1a3a1269b6810aa55375da45d56f2ac3b9" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetPath</name></member>
+      <member refid="classwx_file_name_1af95c9e026b116d04d92f08146bc61bcd" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetTimes</name></member>
+      <member refid="classwx_file_name_1a0c8e256bd978ab9d0cc3c640758b2e2f" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SetVolume</name></member>
+      <member refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SplitPath</name></member>
+      <member refid="classwx_file_name_1ac822c21f143650264c9d433993909820" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SplitPath</name></member>
+      <member refid="classwx_file_name_1a1ee5834893e50987dc2e03b9cbfbaea6" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SplitPath</name></member>
+      <member refid="classwx_file_name_1a66a0a31c3113875d46d2058135339fea" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>SplitVolume</name></member>
+      <member refid="classwx_file_name_1a1cc6ef65bdf702fc220893d1e1db1141" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>StripExtension</name></member>
+      <member refid="classwx_file_name_1a4471ce6c004e35014da63d480349e7a9" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Touch</name></member>
+      <member refid="classwx_file_name_1a2e54bc95c94eb773841c7cb1d7732e35" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>wxFileName</name></member>
+      <member refid="classwx_file_name_1abc232361df39f16a802da8391692e2f5" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>wxFileName</name></member>
+      <member refid="classwx_file_name_1aac2508cfd52826e17fb048eeab27f87a" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>wxFileName</name></member>
+      <member refid="classwx_file_name_1a9f48ff32f106456d46b00c8db1f46535" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>wxFileName</name></member>
+      <member refid="classwx_file_name_1a7a885de7891214b03e64aac070b63e97" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>wxFileName</name></member>
+      <member refid="classwx_file_name_1acc6848de75dd154c572db65cf72a90b5" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>wxFileName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

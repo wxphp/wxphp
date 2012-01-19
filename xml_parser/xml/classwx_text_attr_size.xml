@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_text_attr_size" kind="class" prot="public">
+    <compoundname>wxTextAttrSize</compoundname>
+    <includes local="no">wx/richtext/richtextbuffer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classwx_text_attr_size_1a8ca4338ca9c86b82427c2a84d360c5d5" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref></type>
+        <definition>wxTextAttrDimension wxTextAttrSize::m_width</definition>
+        <argsstring></argsstring>
+        <name>m_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="497" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_text_attr_size_1a2f42d8c7082f3f47f7e0b1a0cf9098a2" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref></type>
+        <definition>wxTextAttrDimension wxTextAttrSize::m_height</definition>
+        <argsstring></argsstring>
+        <name>m_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="498" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_text_attr_size_1a5dbc97db5c681594650f8581933771fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>wxTextAttrSize::wxTextAttrSize</definition>
+        <argsstring>()</argsstring>
+        <name>wxTextAttrSize</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="426" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="426" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1af005d92d36883ad8f1d60a07ef521e84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextAttrSize::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+<para>Resets the width and height dimensions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="431" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="431" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1a6c280055497e20d16c7911bb0873d6e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextAttrSize::operator==</definition>
+        <argsstring>(const wxTextAttrSize &amp;size) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="436" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="436" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1ae1f4dec78a43985b5a6e881c34c5cd1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextAttrSize::EqPartial</definition>
+        <argsstring>(const wxTextAttrSize &amp;dims) const </argsstring>
+        <name>EqPartial</name>
+        <param>
+          <type>const <ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+          <declname>dims</declname>
+        </param>
+        <briefdescription>
+<para>Partial equality test. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="441"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1adb1c1ae3e869418cf728c6a3636483a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextAttrSize::Apply</definition>
+        <argsstring>(const wxTextAttrSize &amp;dims, const wxTextAttrSize *compareWith=NULL)</argsstring>
+        <name>Apply</name>
+        <param>
+          <type>const <ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+          <declname>dims</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> *</type>
+          <declname>compareWith</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Apply border to this object, but not if the same as <emphasis>compareWith</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="446"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1acef66ca3dd8a6d18180f48c1aaa51f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextAttrSize::CollectCommonAttributes</definition>
+        <argsstring>(const wxTextAttrSize &amp;attr, wxTextAttrSize &amp;clashingAttr, wxTextAttrSize &amp;absentAttr)</argsstring>
+        <name>CollectCommonAttributes</name>
+        <param>
+          <type>const <ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+          <declname>clashingAttr</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+          <declname>absentAttr</declname>
+        </param>
+        <briefdescription>
+<para>Collects the attributes that are common to a range of content, building up a note of which attributes are absent in some objects and which clash in some objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="452"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1ade036410fba9aa37f3524e319d0942bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTextAttrSize::RemoveStyle</definition>
+        <argsstring>(const wxTextAttrSize &amp;attr)</argsstring>
+        <name>RemoveStyle</name>
+        <param>
+          <type>const <ref refid="classwx_text_attr_size" kindref="compound">wxTextAttrSize</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+<para>Removes the specified attributes from this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="457"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1aadc1e4265bef98de7837c3aa1db9b601" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextAttrSize::GetWidth</definition>
+        <argsstring>()</argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Returns the width. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="462" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="462" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1a06f8e8b064c441671a483c4c2450b25f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextAttrSize::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="463" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="463" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1aa448fdd1ac7a6935d8abbc02c8c5dda0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextAttrSize::SetWidth</definition>
+        <argsstring>(int value, wxTextAttrDimensionFlags flags)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1a2596a0c8f9ba78d3019535e8796ef15d" kindref="member">wxTextAttrDimensionFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Sets the width. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="468" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="468" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1a4b07f2edf172b032b7451f88f1bdaaa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextAttrSize::SetWidth</definition>
+        <argsstring>(int value, wxTextAttrUnits units)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1afc8272df6ffacd221e762884be11bd19" kindref="member">wxTextAttrUnits</ref></type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Sets the width. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="472" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="472" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1a2a63a228a326a2aeed776ea391b252aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextAttrSize::SetWidth</definition>
+        <argsstring>(const wxTextAttrDimension &amp;dim)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+<para>Sets the width. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="476" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="476" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1a1dadd9f66ab2829992beb12c625276ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>wxTextAttrDimension&amp; wxTextAttrSize::GetHeight</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+<para>Gets the height. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="481" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="481" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1ad49ce2d55f08cd3546fe912ccd130d6b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+        <definition>const wxTextAttrDimension&amp; wxTextAttrSize::GetHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="482" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="482" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1a4d2565ba08ffded22d3d6200584d591e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextAttrSize::SetHeight</definition>
+        <argsstring>(int value, wxTextAttrDimensionFlags flags)</argsstring>
+        <name>SetHeight</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1a2596a0c8f9ba78d3019535e8796ef15d" kindref="member">wxTextAttrDimensionFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Sets the height. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="487" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="487" bodyend="487"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1a06d56e31468e05a7ae502a226a332de8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextAttrSize::SetHeight</definition>
+        <argsstring>(int value, wxTextAttrUnits units)</argsstring>
+        <name>SetHeight</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="richtextbuffer_8h_1afc8272df6ffacd221e762884be11bd19" kindref="member">wxTextAttrUnits</ref></type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Sets the height. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="491" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="491" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_attr_size_1a71dfba91cd6f9e4c4cb13fa6c024281e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextAttrSize::SetHeight</definition>
+        <argsstring>(const wxTextAttrDimension &amp;dim)</argsstring>
+        <name>SetHeight</name>
+        <param>
+          <type>const <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> &amp;</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+<para>Sets the height. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="495" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="495" bodyend="495"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class for representing width and height. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref>, <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="10698">
+        <label>wxTextAttrSize</label>
+        <link refid="classwx_text_attr_size"/>
+        <childnode refid="10699" relation="usage">
+          <edgelabel>m_width</edgelabel>
+          <edgelabel>m_height</edgelabel>
+        </childnode>
+      </node>
+      <node id="10699">
+        <label>wxTextAttrDimension</label>
+        <link refid="classwx_text_attr_dimension"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="421" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="420" bodyend="499"/>
+    <listofallmembers>
+      <member refid="classwx_text_attr_size_1adb1c1ae3e869418cf728c6a3636483a1" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>Apply</name></member>
+      <member refid="classwx_text_attr_size_1acef66ca3dd8a6d18180f48c1aaa51f28" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>CollectCommonAttributes</name></member>
+      <member refid="classwx_text_attr_size_1ae1f4dec78a43985b5a6e881c34c5cd1e" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>EqPartial</name></member>
+      <member refid="classwx_text_attr_size_1a1dadd9f66ab2829992beb12c625276ee" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>GetHeight</name></member>
+      <member refid="classwx_text_attr_size_1ad49ce2d55f08cd3546fe912ccd130d6b" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>GetHeight</name></member>
+      <member refid="classwx_text_attr_size_1aadc1e4265bef98de7837c3aa1db9b601" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>GetWidth</name></member>
+      <member refid="classwx_text_attr_size_1a06f8e8b064c441671a483c4c2450b25f" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>GetWidth</name></member>
+      <member refid="classwx_text_attr_size_1a2f42d8c7082f3f47f7e0b1a0cf9098a2" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>m_height</name></member>
+      <member refid="classwx_text_attr_size_1a8ca4338ca9c86b82427c2a84d360c5d5" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>m_width</name></member>
+      <member refid="classwx_text_attr_size_1a6c280055497e20d16c7911bb0873d6e2" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>operator==</name></member>
+      <member refid="classwx_text_attr_size_1ade036410fba9aa37f3524e319d0942bb" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>RemoveStyle</name></member>
+      <member refid="classwx_text_attr_size_1af005d92d36883ad8f1d60a07ef521e84" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>Reset</name></member>
+      <member refid="classwx_text_attr_size_1a4d2565ba08ffded22d3d6200584d591e" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>SetHeight</name></member>
+      <member refid="classwx_text_attr_size_1a06d56e31468e05a7ae502a226a332de8" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>SetHeight</name></member>
+      <member refid="classwx_text_attr_size_1a71dfba91cd6f9e4c4cb13fa6c024281e" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>SetHeight</name></member>
+      <member refid="classwx_text_attr_size_1aa448fdd1ac7a6935d8abbc02c8c5dda0" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>SetWidth</name></member>
+      <member refid="classwx_text_attr_size_1a4b07f2edf172b032b7451f88f1bdaaa2" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>SetWidth</name></member>
+      <member refid="classwx_text_attr_size_1a2a63a228a326a2aeed776ea391b252aa" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>SetWidth</name></member>
+      <member refid="classwx_text_attr_size_1a5dbc97db5c681594650f8581933771fb" prot="public" virt="non-virtual"><scope>wxTextAttrSize</scope><name>wxTextAttrSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_font_list" kind="class" prot="public">
+    <compoundname>wxFontList</compoundname>
+    <includes local="no">wx/font.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_font_list_1a1ca7f23958bc81f12893d1602b3a037d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFontList::wxFontList</definition>
+        <argsstring>()</argsstring>
+        <name>wxFontList</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The application should not construct its own font list: use the object pointer <ref refid="interface_2wx_2font_8h_1a7f6d6164fe33b3a8234b26229bd8c516" kindref="member">wxTheFontList</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1000"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_list_1afe069b663367cdcaf437c6079d1d39ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>wxFont* wxFontList::FindOrCreateFont</definition>
+        <argsstring>(int point_size, wxFontFamily family, wxFontStyle style, wxFontWeight weight, bool underline=false, const wxString &amp;facename=wxEmptyString, wxFontEncoding encoding=wxFONTENCODING_DEFAULT)</argsstring>
+        <name>FindOrCreateFont</name>
+        <param>
+          <type>int</type>
+          <declname>point_size</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>underline</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>facename</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+          <defval>wxFONTENCODING_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Finds a font of the given specification, or creates one and adds it to the list. </para>        </briefdescription>
+        <detaileddescription>
+<para>See the <ref refid="classwx_font" kindref="compound">wxFont constructor</ref> for details of the arguments. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1009"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A font list is a list containing all fonts which have been created. </para>    </briefdescription>
+    <detaileddescription>
+<para>There is only one instance of this class: <ref refid="interface_2wx_2font_8h_1a7f6d6164fe33b3a8234b26229bd8c516" kindref="member">wxTheFontList</ref>.</para><para>Use this object to search for a previously created font of the desired type and create it if not already found.</para><para>In some windowing systems, the font may be a scarce resource, so it is best to reuse old resources if possible. When an application finishes, all fonts will be deleted and their resources freed, eliminating the possibility of &apos;memory leaks&apos;.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_font" kindref="compound">wxFont</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="994" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="993" bodyend="1010"/>
+    <listofallmembers>
+      <member refid="classwx_font_list_1afe069b663367cdcaf437c6079d1d39ac" prot="public" virt="non-virtual"><scope>wxFontList</scope><name>FindOrCreateFont</name></member>
+      <member refid="classwx_font_list_1a1ca7f23958bc81f12893d1602b3a037d" prot="public" virt="non-virtual"><scope>wxFontList</scope><name>wxFontList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_grid_cell_bool_editor" kind="class" prot="public">
+    <compoundname>wxGridCellBoolEditor</compoundname>
+    <basecompoundref refid="classwx_grid_cell_editor" prot="public" virt="non-virtual">wxGridCellEditor</basecompoundref>
+    <includes local="no">wx/grid.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_grid_cell_bool_editor_1a5701d7d9f533a7e0f9429d71bb7b2c46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridCellBoolEditor::wxGridCellBoolEditor</definition>
+        <argsstring>()</argsstring>
+        <name>wxGridCellBoolEditor</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="502"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_grid_cell_bool_editor_1a1d91615431b403e9d7f7e323d1327af0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxGridCellBoolEditor::IsTrueValue</definition>
+        <argsstring>(const wxString &amp;value)</argsstring>
+        <name>IsTrueValue</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given <emphasis>value</emphasis> is equal to the string representation of the truth value we currently use (see <ref refid="classwx_grid_cell_bool_editor_1a9475875524033bdf33e2b49e0bb184ed" kindref="member">UseStringValues()</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="509"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_bool_editor_1a9475875524033bdf33e2b49e0bb184ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxGridCellBoolEditor::UseStringValues</definition>
+        <argsstring>(const wxString &amp;valueTrue=&quot;1&quot;, const wxString &amp;valueFalse=wxEmptyString)</argsstring>
+        <name>UseStringValues</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>valueTrue</declname>
+          <defval>&quot;1&quot;</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>valueFalse</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>This method allows you to customize the values returned by GetValue() for the cell using this editor. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, the default values of the arguments are used, i.e. <computeroutput>&quot;1&quot;</computeroutput> is returned if the cell is checked and an empty string otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="518"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Grid cell editor for boolean data. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_editor" kindref="compound">wxGridCellEditor</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_editor" kindref="compound">wxGridCellAutoWrapStringEditor</ref>, <ref refid="classwx_grid_cell_choice_editor" kindref="compound">wxGridCellChoiceEditor</ref>, <ref refid="classwx_grid_cell_enum_editor" kindref="compound">wxGridCellEnumEditor</ref>, <ref refid="classwx_grid_cell_float_editor" kindref="compound">wxGridCellFloatEditor</ref>, <ref refid="classwx_grid_cell_number_editor" kindref="compound">wxGridCellNumberEditor</ref>, <ref refid="classwx_grid_cell_text_editor" kindref="compound">wxGridCellTextEditor</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6655">
+        <label>wxGridCellEditor</label>
+        <link refid="classwx_grid_cell_editor"/>
+      </node>
+      <node id="6654">
+        <label>wxGridCellBoolEditor</label>
+        <link refid="classwx_grid_cell_bool_editor"/>
+        <childnode refid="6655" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6657">
+        <label>wxGridCellEditor</label>
+        <link refid="classwx_grid_cell_editor"/>
+      </node>
+      <node id="6656">
+        <label>wxGridCellBoolEditor</label>
+        <link refid="classwx_grid_cell_bool_editor"/>
+        <childnode refid="6657" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="497" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="496" bodyend="519"/>
+    <listofallmembers>
+      <member refid="classwx_grid_cell_editor_1a02016c9850d6a83aa86dfef9f3f3ccd6" prot="public" virt="pure-virtual"><scope>wxGridCellBoolEditor</scope><name>ApplyEdit</name></member>
+      <member refid="classwx_grid_cell_editor_1aa3be55056f9ec3ceed8f0d31ed613cd9" prot="public" virt="pure-virtual"><scope>wxGridCellBoolEditor</scope><name>BeginEdit</name></member>
+      <member refid="classwx_grid_cell_editor_1a94b39799217bae288506d1b90ae6aa7f" prot="public" virt="pure-virtual"><scope>wxGridCellBoolEditor</scope><name>Clone</name></member>
+      <member refid="classwx_grid_cell_editor_1ac04b8fe11c759ac027661d86b97fa70e" prot="public" virt="pure-virtual"><scope>wxGridCellBoolEditor</scope><name>Create</name></member>
+      <member refid="classwx_grid_cell_editor_1adc20623daa433958374412a440c2528e" prot="public" virt="virtual"><scope>wxGridCellBoolEditor</scope><name>Destroy</name></member>
+      <member refid="classwx_grid_cell_editor_1a227445c6c3b66494b2428ecb683a9ae7" prot="public" virt="pure-virtual"><scope>wxGridCellBoolEditor</scope><name>EndEdit</name></member>
+      <member refid="classwx_grid_cell_editor_1a265a3c935b3d5c204c8c75149fa0cb74" prot="public" virt="virtual"><scope>wxGridCellBoolEditor</scope><name>HandleReturn</name></member>
+      <member refid="classwx_grid_cell_editor_1a9e0e19a87a387d243a0c07f12bc0a2de" prot="public" virt="non-virtual"><scope>wxGridCellBoolEditor</scope><name>IsCreated</name></member>
+      <member refid="classwx_grid_cell_bool_editor_1a1d91615431b403e9d7f7e323d1327af0" prot="public" virt="non-virtual"><scope>wxGridCellBoolEditor</scope><name>IsTrueValue</name></member>
+      <member refid="classwx_grid_cell_editor_1a32ec1d1bf097eb5fcac5f2927180f15c" prot="public" virt="virtual"><scope>wxGridCellBoolEditor</scope><name>PaintBackground</name></member>
+      <member refid="classwx_grid_cell_editor_1a027e54b196a9f30271cfaf28fc1e30b7" prot="public" virt="pure-virtual"><scope>wxGridCellBoolEditor</scope><name>Reset</name></member>
+      <member refid="classwx_grid_cell_editor_1a76508cbb2989ce94aa3082f1a12e789f" prot="public" virt="virtual"><scope>wxGridCellBoolEditor</scope><name>SetSize</name></member>
+      <member refid="classwx_grid_cell_editor_1a1e69e1dac634ac0f24a5478002a9c576" prot="public" virt="virtual"><scope>wxGridCellBoolEditor</scope><name>Show</name></member>
+      <member refid="classwx_grid_cell_editor_1a222488a19f6f7d4562dd2ef390c01b0f" prot="public" virt="virtual"><scope>wxGridCellBoolEditor</scope><name>StartingClick</name></member>
+      <member refid="classwx_grid_cell_editor_1a814292778557067b6068f6ee966985dc" prot="public" virt="virtual"><scope>wxGridCellBoolEditor</scope><name>StartingKey</name></member>
+      <member refid="classwx_grid_cell_bool_editor_1a9475875524033bdf33e2b49e0bb184ed" prot="public" virt="non-virtual"><scope>wxGridCellBoolEditor</scope><name>UseStringValues</name></member>
+      <member refid="classwx_grid_cell_bool_editor_1a5701d7d9f533a7e0f9429d71bb7b2c46" prot="public" virt="non-virtual"><scope>wxGridCellBoolEditor</scope><name>wxGridCellBoolEditor</name></member>
+      <member refid="classwx_grid_cell_editor_1ae91db451fda342bc5456d38aeec8921a" prot="public" virt="non-virtual"><scope>wxGridCellBoolEditor</scope><name>wxGridCellEditor</name></member>
+      <member refid="classwx_grid_cell_editor_1a91d23d6330afefa1323a6ca5d397fd2c" prot="protected" virt="virtual"><scope>wxGridCellBoolEditor</scope><name>~wxGridCellEditor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

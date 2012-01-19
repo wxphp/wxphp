@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_m_b_conv" kind="class" prot="public">
+    <compoundname>wxMBConv</compoundname>
+    <derivedcompoundref refid="classwx_conv_auto" prot="public" virt="non-virtual">wxConvAuto</derivedcompoundref>
+    <derivedcompoundref refid="classwx_c_s_conv" prot="public" virt="non-virtual">wxCSConv</derivedcompoundref>
+    <derivedcompoundref refid="classwx_m_b_conv_file" prot="public" virt="non-virtual">wxMBConvFile</derivedcompoundref>
+    <derivedcompoundref refid="classwx_m_b_conv_u_t_f16" prot="public" virt="non-virtual">wxMBConvUTF16</derivedcompoundref>
+    <derivedcompoundref refid="classwx_m_b_conv_u_t_f32" prot="public" virt="non-virtual">wxMBConvUTF32</derivedcompoundref>
+    <derivedcompoundref refid="classwx_m_b_conv_u_t_f7" prot="public" virt="non-virtual">wxMBConvUTF7</derivedcompoundref>
+    <derivedcompoundref refid="classwx_m_b_conv_u_t_f8" prot="public" virt="non-virtual">wxMBConvUTF8</derivedcompoundref>
+    <includes local="no">wx/strconv.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_m_b_conv_1a62b723fea6758812e786a3ec5797f8ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxMBConv::cMB2WX</definition>
+        <argsstring>(const char *psz) const </argsstring>
+        <name>cMB2WX</name>
+        <param>
+          <type>const char *</type>
+          <declname>psz</declname>
+        </param>
+        <briefdescription>
+<para>Converts from multibyte encoding to the current wxChar type (which depends on whether wxUSE_UNICODE is set to 1). </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxChar is char, it returns the parameter unaltered. If wxChar is wchar_t, it returns the result in a <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref>. The macro wxMB2WXbuf is defined as the correct return type (without const). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1af8632260d14b0afcba0f2bc524ca2134" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref></type>
+        <definition>const wxWCharBuffer wxMBConv::cMB2WX</definition>
+        <argsstring>(const char *psz) const </argsstring>
+        <name>cMB2WX</name>
+        <param>
+          <type>const char *</type>
+          <declname>psz</declname>
+        </param>
+        <briefdescription>
+<para>Converts from multibyte encoding to the current wxChar type (which depends on whether wxUSE_UNICODE is set to 1). </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxChar is char, it returns the parameter unaltered. If wxChar is wchar_t, it returns the result in a <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref>. The macro wxMB2WXbuf is defined as the correct return type (without const). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="207"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_m_b_conv_1a9bcb820aebfdd3d3e50a929b01c52f8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxMBConv::cWC2WX</definition>
+        <argsstring>(const wchar_t *psz) const </argsstring>
+        <name>cWC2WX</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>psz</declname>
+        </param>
+        <briefdescription>
+<para>Converts from Unicode to the current wxChar type. </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxChar is wchar_t, it returns the parameter unaltered. If wxChar is char, it returns the result in a <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref>. The macro wxWC2WXbuf is defined as the correct return type (without const). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1ac6c7885e9186d5ce2786b49169c872f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref></type>
+        <definition>const wxCharBuffer wxMBConv::cWC2WX</definition>
+        <argsstring>(const wchar_t *psz) const </argsstring>
+        <name>cWC2WX</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>psz</declname>
+        </param>
+        <briefdescription>
+<para>Converts from Unicode to the current wxChar type. </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxChar is wchar_t, it returns the parameter unaltered. If wxChar is char, it returns the result in a <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref>. The macro wxWC2WXbuf is defined as the correct return type (without const). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="250"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_m_b_conv_1a15f4266aa96806bb5eebc9b1c4eaff05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxMBConv::cWX2MB</definition>
+        <argsstring>(const wxChar *psz) const </argsstring>
+        <name>cWX2MB</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>psz</declname>
+        </param>
+        <briefdescription>
+<para>Converts from the current wxChar type to multibyte encoding. </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxChar is char, it returns the parameter unaltered. If wxChar is wchar_t, it returns the result in a <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref>. The macro wxWX2MBbuf is defined as the correct return type (without const). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a3bbb71a7814c12dac290f6b61a3acc15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref></type>
+        <definition>const wxCharBuffer wxMBConv::cWX2MB</definition>
+        <argsstring>(const wxChar *psz) const </argsstring>
+        <name>cWX2MB</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>psz</declname>
+        </param>
+        <briefdescription>
+<para>Converts from the current wxChar type to multibyte encoding. </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxChar is char, it returns the parameter unaltered. If wxChar is wchar_t, it returns the result in a <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref>. The macro wxWX2MBbuf is defined as the correct return type (without const). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="262"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_m_b_conv_1ae08f0764f8acb6b075846c8bf126f57b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxMBConv::cWX2WC</definition>
+        <argsstring>(const wxChar *psz) const </argsstring>
+        <name>cWX2WC</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>psz</declname>
+        </param>
+        <briefdescription>
+<para>Converts from the current wxChar type to Unicode. </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxChar is wchar_t, it returns the parameter unaltered. If wxChar is char, it returns the result in a <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref>. The macro wxWX2WCbuf is defined as the correct return type (without const). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1ab4eec03d83e532986aca1e41ad472bb8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref></type>
+        <definition>const wxWCharBuffer wxMBConv::cWX2WC</definition>
+        <argsstring>(const wxChar *psz) const </argsstring>
+        <name>cWX2WC</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>psz</declname>
+        </param>
+        <briefdescription>
+<para>Converts from the current wxChar type to Unicode. </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxChar is wchar_t, it returns the parameter unaltered. If wxChar is char, it returns the result in a <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref>. The macro wxWX2WCbuf is defined as the correct return type (without const). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="274"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_m_b_conv_1ab2348d20301679ce0cf5c565446b0080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMBConv::wxMBConv</definition>
+        <argsstring>()</argsstring>
+        <name>wxMBConv</name>
+        <briefdescription>
+<para>Trivial default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1ae6fd1020a2c7c82191c4822682e80d05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> *</type>
+        <definition>virtual wxMBConv* wxMBConv::Clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Clone</name>
+        <briefdescription>
+<para>This pure virtual function is overridden in each of the derived classes to return a new copy of the object it is called on. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is used for copying the conversion objects while preserving their dynamic type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a2d6590cbcc686be76a9c4f1c071ff99f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t wxMBConv::GetMBNulLen</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMBNulLen</name>
+        <briefdescription>
+<para>This function returns 1 for most of the multibyte encodings in which the string is terminated by a single <computeroutput>NUL</computeroutput>, 2 for UTF-16 and 4 for UTF-32 for which the string is terminated with 2 and 4 <computeroutput>NUL</computeroutput> characters respectively. </para>        </briefdescription>
+        <detaileddescription>
+<para>The other cases are not currently supported and <computeroutput>wxCONV_FAILED</computeroutput> (defined as -1) is returned for them. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t wxMBConv::ToWChar</definition>
+        <argsstring>(wchar_t *dst, size_t dstLen, const char *src, size_t srcLen=wxNO_LEN) const </argsstring>
+        <name>ToWChar</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dstLen</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>srcLen</declname>
+          <defval>wxNO_LEN</defval>
+        </param>
+        <briefdescription>
+<para>Convert multibyte string to a wide character one. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the most general function for converting a multibyte string to a wide string, <ref refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" kindref="member">cMB2WC()</ref> may be often more convenient, however this function is the most efficient one as it allows to avoid any unnecessary copying.</para><para>The main case is when <emphasis>dst</emphasis> is not NULL and <emphasis>srcLen</emphasis> is not <computeroutput>wxNO_LEN</computeroutput> (which is defined as <computeroutput></computeroutput>(size_t)-1): then the function converts exactly <emphasis>srcLen</emphasis> bytes starting at <emphasis>src</emphasis> into wide string which it output to <emphasis>dst</emphasis>. If the length of the resulting wide string is greater than <emphasis>dstLen</emphasis>, an error is returned. Note that if <emphasis>srcLen</emphasis> bytes don&apos;t include <computeroutput>NUL</computeroutput> characters, the resulting wide string is not <computeroutput>NUL-terminated</computeroutput> neither.</para><para>If <emphasis>srcLen</emphasis> is <computeroutput>wxNO_LEN</computeroutput>, the function supposes that the string is properly (i.e. as necessary for the encoding handled by this conversion) <computeroutput>NUL-terminated</computeroutput> and converts the entire string, including any trailing <computeroutput>NUL</computeroutput> bytes. In this case the wide string is also <computeroutput>NUL-terminated</computeroutput>.</para><para>Finally, if <emphasis>dst</emphasis> is NULL, the function returns the length of the needed buffer.</para><para>Example of use of this function: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dstLen<sp/>=<sp/>conv.ToWChar(NULL,<sp/>0,<sp/>src);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dstLen<sp/>==<sp/>wxCONV_FAILED<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>handle<sp/>error<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*dst<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">[dstLen];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>conv.ToWChar(dst,<sp/>dstLen,<sp/>src)<sp/>==<sp/>wxCONV_FAILED<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>handle<sp/>error<sp/>...</highlight></codeline>
+</programlisting></para><para>Notice that when passing the explicit source length the output will <emphasis>not</emphasis> be <computeroutput>NUL</computeroutput> terminated if you pass <computeroutput>strlen(str)</computeroutput> as parameter. Either leave <emphasis>srcLen</emphasis> as default <computeroutput>wxNO_LEN</computeroutput> or add one to <computeroutput>strlen</computeroutput> result if you want the output to be <computeroutput>NUL</computeroutput> terminated.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to output buffer of the size of at least <emphasis>dstLen</emphasis> or NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dstLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximal number of characters to be written to the output buffer if <emphasis>dst</emphasis> is non-NULL, unused otherwise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point to the source string, must not be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters of the source string to convert or <computeroutput>wxNO_LEN</computeroutput> (default parameter) to convert everything up to and including the terminating <computeroutput>NUL</computeroutput> character(s).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of character written (or which would have been written if it were non-NULL) to <emphasis>dst</emphasis> or <computeroutput>wxCONV_FAILED</computeroutput> on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t wxMBConv::FromWChar</definition>
+        <argsstring>(char *dst, size_t dstLen, const wchar_t *src, size_t srcLen=wxNO_LEN) const </argsstring>
+        <name>FromWChar</name>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dstLen</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>srcLen</declname>
+          <defval>wxNO_LEN</defval>
+        </param>
+        <briefdescription>
+<para>Converts wide character string to multibyte. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function has the same semantics as <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> except that it converts a wide string to multibyte one. As with <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref>, it may be more convenient to use <ref refid="classwx_m_b_conv_1a496c808fc769800659e5de1a74115a54" kindref="member">cWC2MB()</ref> when working with <computeroutput>NUL</computeroutput> terminated strings.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to output buffer of the size of at least <emphasis>dstLen</emphasis> or NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dstLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximal number of characters to be written to the output buffer if <emphasis>dst</emphasis> is non-NULL, unused otherwise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point to the source string, must not be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters of the source string to convert or <computeroutput>wxNO_LEN</computeroutput> (default parameter) to convert everything up to and including the terminating <computeroutput>NUL</computeroutput> character.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of character written (or which would have been written if it were non-NULL) to <emphasis>dst</emphasis> or <computeroutput>wxCONV_FAILED</computeroutput> on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref></type>
+        <definition>const wxWCharBuffer wxMBConv::cMB2WC</definition>
+        <argsstring>(const char *in, size_t inLen, size_t *outLen) const </argsstring>
+        <name>cMB2WC</name>
+        <param>
+          <type>const char *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>inLen</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>outLen</declname>
+        </param>
+        <briefdescription>
+<para>Converts from multibyte encoding to Unicode by calling <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> and allocating a temporary <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> to hold the result. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is a convenient wrapper around <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> as it takes care of allocating the buffer of the necessary size itself. Its parameters have the same meaning as for <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref>, in particular <emphasis>inLen</emphasis> can be specified explicitly in which case exactly that many characters are converted and <emphasis>outLen</emphasis> receives (if non-NULL) exactly the corresponding number of wide characters, whether the last one of them is <computeroutput>NUL</computeroutput> or not. However if <computeroutput>inLen</computeroutput> is <computeroutput>wxNO_LEN</computeroutput>, then <computeroutput>outLen</computeroutput> doesn&apos;t count the trailing <computeroutput>NUL</computeroutput> even if it is always present in this case.</para><para>Finally notice that if the conversion fails, the returned buffer is invalid and <emphasis>outLen</emphasis> is set to 0 (and not <computeroutput>wxCONV_FAILED</computeroutput> for compatibility concerns). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1aced3961b0bdad13f390343b2b70d49b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref></type>
+        <definition>const wxWCharBuffer wxMBConv::cMB2WC</definition>
+        <argsstring>(const wxCharBuffer &amp;buf) const </argsstring>
+        <name>cMB2WC</name>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Converts a char buffer to wide char one. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the most convenient and safest conversion function as you don&apos;t have to deal with the buffer lengths directly. Use it if the input buffer is known not to be empty or if you are sure that the conversion is going to succeed -- otherwise, use the overload above to be able to distinguish between empty input and conversion failure.</para><para><simplesect kind="return"><para>The buffer containing the converted text, empty if the input was empty or if the conversion failed.</para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a496c808fc769800659e5de1a74115a54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref></type>
+        <definition>const wxCharBuffer wxMBConv::cWC2MB</definition>
+        <argsstring>(const wchar_t *in, size_t inLen, size_t *outLen) const </argsstring>
+        <name>cWC2MB</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>inLen</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>outLen</declname>
+        </param>
+        <briefdescription>
+<para>Converts from Unicode to multibyte encoding by calling <ref refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" kindref="member">FromWChar()</ref> and allocating a temporary <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> to hold the result. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is a convenient wrapper around <ref refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" kindref="member">FromWChar()</ref> as it takes care of allocating the buffer of necessary size itself.</para><para>Its parameters have the same meaning as the corresponding parameters of <ref refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" kindref="member">FromWChar()</ref>, please see the description of <ref refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" kindref="member">cMB2WC()</ref> for more details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a34d1ea0725e5001e4f74a5dbf5c81c4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref></type>
+        <definition>const wxCharBuffer wxMBConv::cWC2MB</definition>
+        <argsstring>(const wxWCharBuffer &amp;buf) const </argsstring>
+        <name>cWC2MB</name>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Converts a wide char buffer to char one. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the most convenient and safest conversion function as you don&apos;t have to deal with the buffer lengths directly. Use it if the input buffer is known not to be empty or if you are sure that the conversion is going to succeed -- otherwise, use the overload above to be able to distinguish between empty input and conversion failure.</para><para><simplesect kind="return"><para>The buffer containing the converted text, empty if the input was empty or if the conversion failed.</para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a79d63eff51836148157c986943835742" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t wxMBConv::MB2WC</definition>
+        <argsstring>(wchar_t *out, const char *in, size_t outLen) const </argsstring>
+        <name>MB2WC</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>outLen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000053"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, please use <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> instead.</para></xrefdescription></xrefsect>Converts from a string <emphasis>in</emphasis> multibyte encoding to Unicode putting up to <emphasis>outLen</emphasis> characters into the buffer <emphasis>out</emphasis>.</para><para>If <emphasis>out</emphasis> is NULL, only the length of the string which would result from the conversion is calculated and returned. Note that this is the length and not size, i.e. the returned value does not include the trailing <computeroutput>NUL</computeroutput>. But when the function is called with a non-NULL <emphasis>out</emphasis> buffer, the <emphasis>outLen</emphasis> parameter should be one more to allow to properly <computeroutput>NUL-terminate</computeroutput> the string.</para><para>So to properly use this function you need to write: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>lenConv<sp/>=<sp/>conv.MB2WC(NULL,<sp/>in,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>lenConv<sp/>==<sp/>wxCONV_FAILED<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>handle<sp/>error<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>allocate<sp/>1<sp/>more<sp/>character<sp/>for<sp/>the<sp/>trailing<sp/>NUL<sp/>and<sp/>also<sp/>pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>size<sp/>of<sp/>the<sp/>buffer<sp/>to<sp/>the<sp/>function<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*out<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">[lenConv<sp/>+<sp/>1];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>conv.MB2WC(out,<sp/>in,<sp/>lenConv<sp/>+<sp/>1)<sp/>==<sp/>wxCONV_FAILED<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>handle<sp/>error<sp/>...</highlight></codeline>
+</programlisting> For this and other reasons, <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> is strongly recommended as a replacement.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output buffer, may be NULL if the caller is only interested in the length of the resulting string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The NUL-terminated input string, cannot be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the output buffer but including NUL, ignored if out is NULL</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length of the converted string excluding the trailing NUL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_m_b_conv_1a537a0f90ab4738e3e9be58d9a77b71b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t wxMBConv::WC2MB</definition>
+        <argsstring>(char *buf, const wchar_t *psz, size_t n) const </argsstring>
+        <name>WC2MB</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>psz</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000054"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, please use <ref refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" kindref="member">FromWChar()</ref> instead.</para></xrefdescription></xrefsect>Converts from Unicode to multibyte encoding. The semantics of this function (including the return value meaning) is the same as for <ref refid="classwx_m_b_conv_1a79d63eff51836148157c986943835742" kindref="member">wxMBConv::MB2WC</ref>. Notice that when the function is called with a non-NULL buffer, the <emphasis>n</emphasis> parameter should be the size of the buffer and so it should take into account the trailing <computeroutput>NUL</computeroutput>, which might take two or four bytes for some encodings (UTF-16 and UTF-32) and not one, i.e. <ref refid="classwx_m_b_conv_1a2d6590cbcc686be76a9c4f1c071ff99f" kindref="member">GetMBNulLen()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="328"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_m_b_conv_1a9d22d211135f265ed018e103590a61f0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t wxMBConv::GetMaxMBNulLen</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxMBNulLen</name>
+        <briefdescription>
+<para>Returns the maximal value which can be returned by <ref refid="classwx_m_b_conv_1a2d6590cbcc686be76a9c4f1c071ff99f" kindref="member">GetMBNulLen()</ref> for any conversion object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently this value is 4.</para><para>This method can be used to allocate the buffer with enough space for the trailing <computeroutput>NUL</computeroutput> characters for any encoding. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is the base class of a hierarchy of classes capable of converting text strings between multibyte (SBCS or DBCS) encodings and Unicode. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is an abstract base class which defines the operations implemented by all different conversion classes. The derived classes don&apos;t add any new operations of their own (except, possibly, some non-default constructors) and so you should simply use this class <ref refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" kindref="member">ToWChar()</ref> and <ref refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" kindref="member">FromWChar()</ref> (or <ref refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" kindref="member">cMB2WC()</ref> and <ref refid="classwx_m_b_conv_1a496c808fc769800659e5de1a74115a54" kindref="member">cWC2MB()</ref>) methods with the objects of the derived class.</para><para>In the documentation for this and related classes please notice that length of the string refers to the number of characters in the string not counting the terminating <computeroutput>NUL</computeroutput>, if any. While the size of the string is the total number of bytes in the string, including any trailing <computeroutput>NUL</computeroutput>. Thus, length of wide character string <computeroutput>L&quot;foo&quot;</computeroutput> is 3 while its size can be either 8 or 16 depending on whether <computeroutput>wchar_t</computeroutput> is 2 bytes (as under Windows) or 4 (Unix).</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_c_s_conv" kindref="compound">wxCSConv</ref>, <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>, <ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7571">
+        <label>wxMBConvUTF7</label>
+        <link refid="classwx_m_b_conv_u_t_f7"/>
+        <childnode refid="7565" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7572">
+        <label>wxMBConvUTF8</label>
+        <link refid="classwx_m_b_conv_u_t_f8"/>
+        <childnode refid="7565" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7568">
+        <label>wxMBConvFile</label>
+        <link refid="classwx_m_b_conv_file"/>
+        <childnode refid="7565" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7566">
+        <label>wxConvAuto</label>
+        <link refid="classwx_conv_auto"/>
+        <childnode refid="7565" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7570">
+        <label>wxMBConvUTF32</label>
+        <link refid="classwx_m_b_conv_u_t_f32"/>
+        <childnode refid="7565" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7569">
+        <label>wxMBConvUTF16</label>
+        <link refid="classwx_m_b_conv_u_t_f16"/>
+        <childnode refid="7565" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7567">
+        <label>wxCSConv</label>
+        <link refid="classwx_c_s_conv"/>
+        <childnode refid="7565" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7565">
+        <label>wxMBConv</label>
+        <link refid="classwx_m_b_conv"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" bodystart="35" bodyend="329"/>
+    <listofallmembers>
+      <member refid="classwx_m_b_conv_1ae6fd1020a2c7c82191c4822682e80d05" prot="public" virt="pure-virtual"><scope>wxMBConv</scope><name>Clone</name></member>
+      <member refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cMB2WC</name></member>
+      <member refid="classwx_m_b_conv_1aced3961b0bdad13f390343b2b70d49b1" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cMB2WC</name></member>
+      <member refid="classwx_m_b_conv_1a62b723fea6758812e786a3ec5797f8ba" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cMB2WX</name></member>
+      <member refid="classwx_m_b_conv_1af8632260d14b0afcba0f2bc524ca2134" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cMB2WX</name></member>
+      <member refid="classwx_m_b_conv_1a496c808fc769800659e5de1a74115a54" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cWC2MB</name></member>
+      <member refid="classwx_m_b_conv_1a34d1ea0725e5001e4f74a5dbf5c81c4f" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cWC2MB</name></member>
+      <member refid="classwx_m_b_conv_1a9bcb820aebfdd3d3e50a929b01c52f8d" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cWC2WX</name></member>
+      <member refid="classwx_m_b_conv_1ac6c7885e9186d5ce2786b49169c872f1" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cWC2WX</name></member>
+      <member refid="classwx_m_b_conv_1a15f4266aa96806bb5eebc9b1c4eaff05" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cWX2MB</name></member>
+      <member refid="classwx_m_b_conv_1a3bbb71a7814c12dac290f6b61a3acc15" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cWX2MB</name></member>
+      <member refid="classwx_m_b_conv_1ae08f0764f8acb6b075846c8bf126f57b" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cWX2WC</name></member>
+      <member refid="classwx_m_b_conv_1ab4eec03d83e532986aca1e41ad472bb8" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>cWX2WC</name></member>
+      <member refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" prot="public" virt="virtual"><scope>wxMBConv</scope><name>FromWChar</name></member>
+      <member refid="classwx_m_b_conv_1a9d22d211135f265ed018e103590a61f0" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>GetMaxMBNulLen</name></member>
+      <member refid="classwx_m_b_conv_1a2d6590cbcc686be76a9c4f1c071ff99f" prot="public" virt="virtual"><scope>wxMBConv</scope><name>GetMBNulLen</name></member>
+      <member refid="classwx_m_b_conv_1a79d63eff51836148157c986943835742" prot="public" virt="virtual"><scope>wxMBConv</scope><name>MB2WC</name></member>
+      <member refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" prot="public" virt="virtual"><scope>wxMBConv</scope><name>ToWChar</name></member>
+      <member refid="classwx_m_b_conv_1a537a0f90ab4738e3e9be58d9a77b71b1" prot="public" virt="virtual"><scope>wxMBConv</scope><name>WC2MB</name></member>
+      <member refid="classwx_m_b_conv_1ab2348d20301679ce0cf5c565446b0080" prot="public" virt="non-virtual"><scope>wxMBConv</scope><name>wxMBConv</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

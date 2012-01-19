@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2stream_8h" kind="file">
+    <compoundname>stream.h</compoundname>
+    <innerclass refid="classwx_stream_base" prot="public">wxStreamBase</innerclass>
+    <innerclass refid="classwx_stream_buffer" prot="public">wxStreamBuffer</innerclass>
+    <innerclass refid="classwx_output_stream" prot="public">wxOutputStream</innerclass>
+    <innerclass refid="classwx_input_stream" prot="public">wxInputStream</innerclass>
+    <innerclass refid="classwx_counting_output_stream" prot="public">wxCountingOutputStream</innerclass>
+    <innerclass refid="classwx_buffered_input_stream" prot="public">wxBufferedInputStream</innerclass>
+    <innerclass refid="classwx_filter_class_factory" prot="public">wxFilterClassFactory</innerclass>
+    <innerclass refid="classwx_filter_output_stream" prot="public">wxFilterOutputStream</innerclass>
+    <innerclass refid="classwx_filter_input_stream" prot="public">wxFilterInputStream</innerclass>
+    <innerclass refid="classwx_buffered_output_stream" prot="public">wxBufferedOutputStream</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="interface_2wx_2stream_8h_1a3f7d92141b5177ab9661bd8073940b2e" prot="public" static="no">
+        <name>wxStreamError</name>
+        <enumvalue id="interface_2wx_2stream_8h_1a3f7d92141b5177ab9661bd8073940b2ea1815acdbaf8a17d9159633e71bb69150" prot="public">
+          <name>wxSTREAM_NO_ERROR</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>No error occurred. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2stream_8h_1a3f7d92141b5177ab9661bd8073940b2ea58e3edae8f8e557faefad8fda94d3c85" prot="public">
+          <name>wxSTREAM_EOF</name>
+          <briefdescription>
+<para>EOF reached in Read() or similar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2stream_8h_1a3f7d92141b5177ab9661bd8073940b2ead75c4c85219fbfe93d653982811435ee" prot="public">
+          <name>wxSTREAM_WRITE_ERROR</name>
+          <briefdescription>
+<para>generic write error on the last write call. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2stream_8h_1a3f7d92141b5177ab9661bd8073940b2eab098a75e591d1792e56713ea6798e75f" prot="public">
+          <name>wxSTREAM_READ_ERROR</name>
+          <briefdescription>
+<para>generic read error on the last read call. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>These enumeration values are returned by various functions in the context of wxStream classes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8" prot="public" static="no">
+        <name>wxStreamProtocolType</name>
+        <enumvalue id="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8a4149acac8ba8afeec2994b101840893b" prot="public">
+          <name>wxSTREAM_PROTOCOL</name>
+          <briefdescription>
+<para><ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> protocol (should be only one). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8ac727325987e4a14e072a8c5a941ff744" prot="public">
+          <name>wxSTREAM_MIMETYPE</name>
+          <briefdescription>
+<para>MIME types the stream handles. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8a5d74e555b036b56ee28af1555a50c776" prot="public">
+          <name>wxSTREAM_ENCODING</name>
+          <briefdescription>
+<para>The HTTP Content-Encodings the stream handles. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2stream_8h_1af43964582cc2e87658bf792727dceff8a6a7551247424d0c62b240da47daee204" prot="public">
+          <name>wxSTREAM_FILEEXT</name>
+          <briefdescription>
+<para>File extensions the stream handles. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration values used by <ref refid="classwx_filter_class_factory" kindref="compound">wxFilterClassFactory</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="783" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="782" bodyend="788"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h"/>
+  </compounddef>
+</doxygen>

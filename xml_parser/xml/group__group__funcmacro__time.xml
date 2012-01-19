@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__funcmacro__time" kind="group">
+    <compoundname>group_funcmacro_time</compoundname>
+    <title>Time</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga595d562b91080c486af44c752a725fea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGetTimeZone</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetTimeZone</name>
+        <briefdescription>
+<para>Returns the difference between UTC and local time in seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1gaa47bc61fdb1251cfc6ee234520e1df27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxGetLocalTime</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetLocalTime</name>
+        <briefdescription>
+<para>Returns the number of seconds since local time 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">wxDateTime::Now()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga163e97c4b3b5eeb0c8de80cd81ae09da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxGetLocalTimeMillis</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetLocalTimeMillis</name>
+        <briefdescription>
+<para>Returns the number of milliseconds since local time 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para>The use of <ref refid="group__group__funcmacro__time_1ga9e6cb143b3e04cf0459aa3f9763eec82" kindref="member">wxGetUTCTimeMillis()</ref> is preferred as it provides a usually (except for changes to the system time) monotonic clock which the local time also changes whenever DST begins or ends.</para><para><simplesect kind="see"><para><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">wxDateTime::Now()</ref>, <ref refid="group__group__funcmacro__time_1ga9e6cb143b3e04cf0459aa3f9763eec82" kindref="member">wxGetUTCTimeMillis()</ref>, <ref refid="group__group__funcmacro__time_1gafd807c12555028ba730f4aa56983339c" kindref="member">wxGetUTCTimeUSec()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga673d50c96dd575ba6658fa1b094dc769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxGetUTCTime</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUTCTime</name>
+        <briefdescription>
+<para>Returns the number of seconds since GMT 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">wxDateTime::Now()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga9e6cb143b3e04cf0459aa3f9763eec82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxGetUTCTimeMillis</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUTCTimeMillis</name>
+        <briefdescription>
+<para>Returns the number of milliseconds since GMT 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1gafd807c12555028ba730f4aa56983339c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxGetUTCTimeUSec</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUTCTimeUSec</name>
+        <briefdescription>
+<para>Returns the number of microseconds since GMT 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga21baed39430c5dae8517c4bd87fcf357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMicroSleep</definition>
+        <argsstring>(unsigned long microseconds)</argsstring>
+        <name>wxMicroSleep</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>microseconds</declname>
+        </param>
+        <briefdescription>
+<para>Sleeps for the specified number of microseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>The microsecond resolution may not, in fact, be available on all platforms (currently only Unix platforms with nanosleep(2) may provide it) in which case this is the same as calling <ref refid="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" kindref="member">wxMilliSleep()</ref> with the argument of <emphasis>microseconds/1000</emphasis>.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1206"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMilliSleep</definition>
+        <argsstring>(unsigned long milliseconds)</argsstring>
+        <name>wxMilliSleep</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>milliseconds</declname>
+        </param>
+        <briefdescription>
+<para>Sleeps for the specified number of milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that usage of this function is encouraged instead of calling usleep(3) directly because the standard <emphasis>usleep()</emphasis> function is not MT safe.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1215"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga6c406d666359a8c34ef4a35277e5ea83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxNow</definition>
+        <argsstring>()</argsstring>
+        <name>wxNow</name>
+        <briefdescription>
+<para>Returns a string representing the current date and time. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga35215dff464a300f45dec961b3c23539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSleep</definition>
+        <argsstring>(int secs)</argsstring>
+        <name>wxSleep</name>
+        <param>
+          <type>int</type>
+          <declname>secs</declname>
+        </param>
+        <briefdescription>
+<para>Sleeps for the specified number of seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1229"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1gac19b07b94bdf832cca9666b06f7d2882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxUsleep</definition>
+        <argsstring>(unsigned long milliseconds)</argsstring>
+        <name>wxUsleep</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>milliseconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000067"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated because its name is misleading: notice that the argument is in milliseconds, not microseconds. Please use either <ref refid="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" kindref="member">wxMilliSleep()</ref> or <ref refid="group__group__funcmacro__time_1ga21baed39430c5dae8517c4bd87fcf357" kindref="member">wxMicroSleep()</ref> depending on the resolution you need.</para></xrefdescription></xrefsect>Sleeps for the specified number of milliseconds.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1241"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The functions in this section deal with getting the current time and sleeping for the specified time interval. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_scoped_ptr_3_01_t_01_4" kind="class" prot="public">
+    <compoundname>wxScopedPtr&lt; T &gt;</compoundname>
+    <includes local="no">wx/scopedptr.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1a737056fbe3a7e54f628b7d5a43ee5281" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedPtr&lt; T &gt;::wxScopedPtr</definition>
+        <argsstring>(T *ptr=NULL)</argsstring>
+        <name>wxScopedPtr</name>
+        <param>
+          <type>T *</type>
+          <declname>ptr</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor takes ownership of the pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer allocated with <computeroutput>new</computeroutput> or NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1a8bf0c197623ad28953376673bc7e2064" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedPtr&lt; T &gt;::~wxScopedPtr</definition>
+        <argsstring>()</argsstring>
+        <name>~wxScopedPtr</name>
+        <briefdescription>
+<para>Destructor deletes the pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1ae977a918f432b7bb1484c592f739f4b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* wxScopedPtr&lt; T &gt;::get</definition>
+        <argsstring>() const </argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>Returns pointer to object or NULL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1a1b25e09d821215642e9f94d8c89c2ccc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedPtr&lt; T &gt;::operator unspecified_bool_type</definition>
+        <argsstring>() const </argsstring>
+        <name>operator unspecified_bool_type</name>
+        <briefdescription>
+<para>Conversion to a boolean expression (in a variant which is not convertible to anything but a boolean expression). </para>        </briefdescription>
+        <detaileddescription>
+<para>If this class contains a valid pointer it will return true, if it contains a NULL pointer it will return false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1a3fdb19f5a019d7a6647ef2e8c88fa9ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T&amp; wxScopedPtr&lt; T &gt;::operator*</definition>
+        <argsstring>() const </argsstring>
+        <name>operator*</name>
+        <briefdescription>
+<para>Returns a reference to the object. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1afcb2b91b39a9cf7e48ef3fd8e90f5029" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* wxScopedPtr&lt; T &gt;::operator-&gt;</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+<para>Smart pointer member access. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns pointer to object.</para><para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1abfdc1ffb4b244e8e7fd22b2c6762f292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* wxScopedPtr&lt; T &gt;::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <briefdescription>
+<para>Releases the current pointer and returns it. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>Afterwards the caller is responsible for deleting the data contained in the scoped pointer before. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1aa4db906b4966f8ad42d263f5b7001306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxScopedPtr&lt; T &gt;::reset</definition>
+        <argsstring>(T *ptr=NULL)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>T *</type>
+          <declname>ptr</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Reset pointer to the value of <emphasis>ptr</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The previous pointer will be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1af05ebf95340ac2cafeabb284efca7e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxScopedPtr&lt; T &gt;::swap</definition>
+        <argsstring>(wxScopedPtr&lt; T &gt; &amp;ot)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="classwx_scoped_ptr" kindref="compound">wxScopedPtr</ref>&lt; T &gt; &amp;</type>
+          <declname>ot</declname>
+        </param>
+        <briefdescription>
+<para>Swaps pointers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="266"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A scoped pointer template class. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is the template version of the old-style <ref refid="classwx_scoped_ptr" kindref="compound">scoped pointer macros</ref>.</para><para>Notice that objects of this class intentionally cannot be copied.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_shared_ptr_3_01_t_01_4" kindref="compound">wxSharedPtr&lt;T&gt;</ref>, <ref refid="classwx_weak_ref_3_01_t_01_4" kindref="compound">wxWeakRef&lt;T&gt;</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" bodystart="204" bodyend="267"/>
+    <listofallmembers>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1ae977a918f432b7bb1484c592f739f4b2" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>get</name></member>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1a1b25e09d821215642e9f94d8c89c2ccc" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>operator unspecified_bool_type</name></member>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1a3fdb19f5a019d7a6647ef2e8c88fa9ee" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>operator*</name></member>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1afcb2b91b39a9cf7e48ef3fd8e90f5029" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>operator-&gt;</name></member>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1abfdc1ffb4b244e8e7fd22b2c6762f292" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>release</name></member>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1aa4db906b4966f8ad42d263f5b7001306" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>reset</name></member>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1af05ebf95340ac2cafeabb284efca7e83" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>swap</name></member>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1a737056fbe3a7e54f628b7d5a43ee5281" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>wxScopedPtr</name></member>
+      <member refid="classwx_scoped_ptr_3_01_t_01_4_1a8bf0c197623ad28953376673bc7e2064" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>~wxScopedPtr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

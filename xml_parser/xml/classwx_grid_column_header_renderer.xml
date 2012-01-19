@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_grid_column_header_renderer" kind="class" prot="public">
+    <compoundname>wxGridColumnHeaderRenderer</compoundname>
+    <basecompoundref refid="classwx_grid_header_labels_renderer" prot="public" virt="non-virtual">wxGridHeaderLabelsRenderer</basecompoundref>
+    <derivedcompoundref refid="classwx_grid_column_header_renderer_default" prot="public" virt="non-virtual">wxGridColumnHeaderRendererDefault</derivedcompoundref>
+    <includes local="no">wx/grid.h</includes>
+    <briefdescription>
+<para>Base class for column headers renderer. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is the same as <ref refid="classwx_grid_header_labels_renderer" kindref="compound">wxGridHeaderLabelsRenderer</ref> currently but we still use a separate class for it to distinguish it from <ref refid="classwx_grid_row_header_renderer" kindref="compound">wxGridRowHeaderRenderer</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_grid_column_header_renderer_default" kindref="compound">wxGridColumnHeaderRendererDefault</ref></para><simplesectsep/><para><ref refid="classwx_grid_cell_attr_provider_1ae9dde8ba83cbd36f6decfcedbb22301e" kindref="member">wxGridCellAttrProvider::GetColumnHeaderRenderer()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6744">
+        <label>wxGridHeaderLabelsRenderer</label>
+        <link refid="classwx_grid_header_labels_renderer"/>
+        <childnode refid="6745" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6745">
+        <label>wxGridCornerHeaderRenderer</label>
+        <link refid="classwx_grid_corner_header_renderer"/>
+      </node>
+      <node id="6743">
+        <label>wxGridColumnHeaderRenderer</label>
+        <link refid="classwx_grid_column_header_renderer"/>
+        <childnode refid="6744" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6746">
+        <label>wxGridColumnHeaderRendererDefault</label>
+        <link refid="classwx_grid_column_header_renderer_default"/>
+        <childnode refid="6743" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6748">
+        <label>wxGridHeaderLabelsRenderer</label>
+        <link refid="classwx_grid_header_labels_renderer"/>
+        <childnode refid="6749" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6749">
+        <label>wxGridCornerHeaderRenderer</label>
+        <link refid="classwx_grid_corner_header_renderer"/>
+      </node>
+      <node id="6747">
+        <label>wxGridColumnHeaderRenderer</label>
+        <link refid="classwx_grid_column_header_renderer"/>
+        <childnode refid="6748" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1008" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1007" bodyend="1009"/>
+    <listofallmembers>
+      <member refid="classwx_grid_corner_header_renderer_1ae645864cfd4fe4be47522b2151ee2e45" prot="public" virt="pure-virtual"><scope>wxGridColumnHeaderRenderer</scope><name>DrawBorder</name></member>
+      <member refid="classwx_grid_header_labels_renderer_1adc92b8e48a5e88b1c91c5d50e37846ea" prot="public" virt="virtual"><scope>wxGridColumnHeaderRenderer</scope><name>DrawLabel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

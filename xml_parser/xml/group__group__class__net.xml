@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__net" kind="group">
+    <compoundname>group_class_net</compoundname>
+    <title>Networking</title>
+    <innerclass refid="classwx_protocol_log" prot="public">wxProtocolLog</innerclass>
+    <innerclass refid="classwx_dial_up_manager" prot="public">wxDialUpManager</innerclass>
+    <innerclass refid="classwx_f_t_p" prot="public">wxFTP</innerclass>
+    <innerclass refid="classwx_h_t_t_p" prot="public">wxHTTP</innerclass>
+    <innerclass refid="classwx_protocol" prot="public">wxProtocol</innerclass>
+    <innerclass refid="classwx_t_c_p_server" prot="public">wxTCPServer</innerclass>
+    <innerclass refid="classwx_t_c_p_client" prot="public">wxTCPClient</innerclass>
+    <innerclass refid="classwx_t_c_p_connection" prot="public">wxTCPConnection</innerclass>
+    <innerclass refid="classwx_socket_output_stream" prot="public">wxSocketOutputStream</innerclass>
+    <innerclass refid="classwx_socket_input_stream" prot="public">wxSocketInputStream</innerclass>
+    <innerclass refid="classwx_i_paddress" prot="public">wxIPaddress</innerclass>
+    <innerclass refid="classwx_i_p_v4address" prot="public">wxIPV4address</innerclass>
+    <innerclass refid="classwx_socket_server" prot="public">wxSocketServer</innerclass>
+    <innerclass refid="classwx_socket_client" prot="public">wxSocketClient</innerclass>
+    <innerclass refid="classwx_sock_address" prot="public">wxSockAddress</innerclass>
+    <innerclass refid="classwx_socket_event" prot="public">wxSocketEvent</innerclass>
+    <innerclass refid="classwx_socket_base" prot="public">wxSocketBase</innerclass>
+    <innerclass refid="classwx_datagram_socket" prot="public">wxDatagramSocket</innerclass>
+    <innerclass refid="classwx_u_r_i" prot="public">wxURI</innerclass>
+    <innerclass refid="classwx_u_r_l" prot="public">wxURL</innerclass>
+    <briefdescription>
+<para>wxWidgets provides its own classes for socket based networking. </para>    </briefdescription>
+    <detaileddescription>
+<para>Related macros/global-functions group: <ref refid="group__group__funcmacro__networkuseros" kindref="compound">Network, User and OS</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

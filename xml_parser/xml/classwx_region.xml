@@ -1,0 +1,839 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_region" kind="class" prot="public">
+    <compoundname>wxRegion</compoundname>
+    <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
+    <includes local="no">wx/region.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_region_1a09c39341b3bbcc7b4e56d0caaa55e7e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRegion::GetBox</definition>
+        <argsstring>(wxCoord &amp;x, wxCoord &amp;y, wxCoord &amp;width, wxCoord &amp;height) const </argsstring>
+        <name>GetBox</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref> &amp;</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref> &amp;</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Returns the outer bounds of the region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method returns 0-sized bounding box for invalid regions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ae971dbafb3b1d78049cd4eee00696614" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
+        <definition>wxRect wxRegion::GetBox</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBox</name>
+        <briefdescription>
+<para>Returns the outer bounds of the region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method returns 0-sized bounding box for invalid regions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="276"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_region_1abe953e65820362a0796b7bbe5a5ff35d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Offset</definition>
+        <argsstring>(wxCoord x, wxCoord y)</argsstring>
+        <name>Offset</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Moves the region by the specified offsets in horizontal and vertical directions. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can&apos;t be called if the region is invalid as it doesn&apos;t make sense to offset it then. Attempts to do it will result in assert failure.</para><para><simplesect kind="return"><para>true if successful, false otherwise (the region is unchanged then). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1afad58d401a561baeff26b2413cef9532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Offset</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>Offset</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Moves the region by the specified offsets in horizontal and vertical directions. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can&apos;t be called if the region is invalid as it doesn&apos;t make sense to offset it then. Attempts to do it will result in assert failure.</para><para><simplesect kind="return"><para>true if successful, false otherwise (the region is unchanged then). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="350"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_region_1a1edc6768118cf02749b46774a0ca37f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegion::wxRegion</definition>
+        <argsstring>()</argsstring>
+        <name>wxRegion</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor creates an invalid, or null, object, i.e. calling IsOk() on it returns false and <ref refid="classwx_region_1a59c5c5a41def2f2b67b9e1adb0f385c8" kindref="member">IsEmpty()</ref> returns true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1af2b51dd977107b0dd162db6e4e9e9c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegion::wxRegion</definition>
+        <argsstring>(wxCoord x, wxCoord y, wxCoord width, wxCoord height)</argsstring>
+        <name>wxRegion</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a rectangular region with the given position and size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a2cebf12d74122ce220f3ad48fa686e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegion::wxRegion</definition>
+        <argsstring>(const wxPoint &amp;topLeft, const wxPoint &amp;bottomRight)</argsstring>
+        <name>wxRegion</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>topLeft</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>bottomRight</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a rectangular region from the top left point and the bottom right point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a66708b42c8bce4a76ada65cb312b60f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegion::wxRegion</definition>
+        <argsstring>(const wxRect &amp;rect)</argsstring>
+        <name>wxRegion</name>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a rectangular region a <ref refid="classwx_rect" kindref="compound">wxRect</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ad88c11689e65f02bb99acea6d59a6d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegion::wxRegion</definition>
+        <argsstring>(const wxRegion &amp;region)</argsstring>
+        <name>wxRegion</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a4edcabc3e3beeeea45542c56873d50ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegion::wxRegion</definition>
+        <argsstring>(size_t n, const wxPoint *points, wxPolygonFillMode fillStyle=wxODDEVEN_RULE)</argsstring>
+        <name>wxRegion</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> *</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a771e5c5703eb406b19fb50bb718eee05" kindref="member">wxPolygonFillMode</ref></type>
+          <declname>fillStyle</declname>
+          <defval>wxODDEVEN_RULE</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a region corresponding to the polygon made of <emphasis>n</emphasis> points in the provided array. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>fillStyle</emphasis> parameter may have values <computeroutput>wxWINDING_RULE</computeroutput> or <computeroutput>wxODDEVEN_RULE</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ad7bfbeb79fe8dc281b91cfba43e8bd0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegion::wxRegion</definition>
+        <argsstring>(const wxBitmap &amp;bmp)</argsstring>
+        <name>wxRegion</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmp</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a region using a bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_region_1ae8ea15425722b296b6cb6974d7306e60" kindref="member">Union()</ref> for more details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1aab62039edc53c55b833042b7c83e9068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegion::wxRegion</definition>
+        <argsstring>(const wxBitmap &amp;bmp, const wxColour &amp;transColour, int tolerance=0)</argsstring>
+        <name>wxRegion</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>transColour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tolerance</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a region using the non-transparent pixels of a bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_region_1ae8ea15425722b296b6cb6974d7306e60" kindref="member">Union()</ref> for more details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1adb60f41b909b261b3292f34bfa700a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxRegion::~wxRegion</definition>
+        <argsstring>()</argsstring>
+        <name>~wxRegion</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a3e2c4b0910da7fadc36bd6ced199a673" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxRegion::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Clears the current region. </para>        </briefdescription>
+        <detaileddescription>
+<para>The object becomes invalid, or null, after being cleared. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a0e3c821e69f6f69b1b48d811783a5dad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664cca" kindref="member">wxRegionContain</ref></type>
+        <definition>wxRegionContain wxRegion::Contains</definition>
+        <argsstring>(wxCoord x, wxCoord y) const </argsstring>
+        <name>Contains</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Returns a value indicating whether the given point is contained within the region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always returns <computeroutput>wxOutRegion</computeroutput> for an invalid region but may, nevertheless, be safely called in this case.</para><para><simplesect kind="return"><para>The return value is one of <computeroutput>wxOutRegion</computeroutput> and <computeroutput>wxInRegion</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a23474efe70beaee07aa6d4d6a9d59478" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664cca" kindref="member">wxRegionContain</ref></type>
+        <definition>wxRegionContain wxRegion::Contains</definition>
+        <argsstring>(const wxPoint &amp;pt) const </argsstring>
+        <name>Contains</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Returns a value indicating whether the given point is contained within the region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always returns <computeroutput>wxOutRegion</computeroutput> for an invalid region but may, nevertheless, be safely called in this case.</para><para><simplesect kind="return"><para>The return value is one of <computeroutput>wxOutRegion</computeroutput> and <computeroutput>wxInRegion</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1aa7d0a5dc77828fa87be4d24fce4590fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664cca" kindref="member">wxRegionContain</ref></type>
+        <definition>wxRegionContain wxRegion::Contains</definition>
+        <argsstring>(wxCoord x, wxCoord y, wxCoord width, wxCoord height) const </argsstring>
+        <name>Contains</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Returns a value indicating whether the given rectangle is contained within the region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always returns <computeroutput>wxOutRegion</computeroutput> for an invalid region but may, nevertheless, be safely called in this case.</para><para><simplesect kind="return"><para>One of <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaa6cc641df760d2e307ec91b06a30ff1ce" kindref="member">wxOutRegion</ref>, <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaa8e29fb7c388f1f37a3249aef46eb27b2" kindref="member">wxPartRegion</ref> or <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaae60f62c5511732209bc5963cec28f85c" kindref="member">wxInRegion</ref>.</para></simplesect>
+<simplesect kind="note"><para>On Windows, only <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaa6cc641df760d2e307ec91b06a30ff1ce" kindref="member">wxOutRegion</ref> and <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaae60f62c5511732209bc5963cec28f85c" kindref="member">wxInRegion</ref> are returned; a value <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaae60f62c5511732209bc5963cec28f85c" kindref="member">wxInRegion</ref> then indicates that all or some part of the region is contained in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a63aa89c1eaad488abfa1d02b811f5fbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664cca" kindref="member">wxRegionContain</ref></type>
+        <definition>wxRegionContain wxRegion::Contains</definition>
+        <argsstring>(const wxRect &amp;rect) const </argsstring>
+        <name>Contains</name>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Returns a value indicating whether the given rectangle is contained within the region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always returns <computeroutput>wxOutRegion</computeroutput> for an invalid region but may, nevertheless, be safely called in this case.</para><para><simplesect kind="return"><para>One of <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaa6cc641df760d2e307ec91b06a30ff1ce" kindref="member">wxOutRegion</ref>, <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaa8e29fb7c388f1f37a3249aef46eb27b2" kindref="member">wxPartRegion</ref> or <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaae60f62c5511732209bc5963cec28f85c" kindref="member">wxInRegion</ref>.</para></simplesect>
+<simplesect kind="note"><para>On Windows, only <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaa6cc641df760d2e307ec91b06a30ff1ce" kindref="member">wxOutRegion</ref> and <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaae60f62c5511732209bc5963cec28f85c" kindref="member">wxInRegion</ref> are returned; a value <ref refid="region_8h_1aa3ced1100e2b9a034e102e5938664ccaae60f62c5511732209bc5963cec28f85c" kindref="member">wxInRegion</ref> then indicates that all or some part of the region is contained in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1af44f6a05c09550092ae79e83c67d8184" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
+        <definition>wxBitmap wxRegion::ConvertToBitmap</definition>
+        <argsstring>() const </argsstring>
+        <name>ConvertToBitmap</name>
+        <briefdescription>
+<para>Convert the region to a black and white bitmap with the white pixels being inside the region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can&apos;t be used for invalid region. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a241f47ba24eab7f10fe6acf2b6c0b7f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Intersect</definition>
+        <argsstring>(wxCoord x, wxCoord y, wxCoord width, wxCoord height)</argsstring>
+        <name>Intersect</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Finds the intersection of this region and another, rectangular region, specified using position and size. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always fails, i.e. returns false, if this region is invalid but may nevertheless be safely used even in this case.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>Creates the intersection of the two regions, that is, the parts which are in both regions. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a2aaa03bd30c4dad1f3aca89149933a22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Intersect</definition>
+        <argsstring>(const wxRect &amp;rect)</argsstring>
+        <name>Intersect</name>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Finds the intersection of this region and another, rectangular region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always fails, i.e. returns false, if this region is invalid but may nevertheless be safely used even in this case.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>Creates the intersection of the two regions, that is, the parts which are in both regions. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ad94d3469777fc5d8e9246acaa3ca7afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Intersect</definition>
+        <argsstring>(const wxRegion &amp;region)</argsstring>
+        <name>Intersect</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Finds the intersection of this region and another region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always fails, i.e. returns false, if this region is invalid but may nevertheless be safely used even in this case.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>Creates the intersection of the two regions, that is, the parts which are in both regions. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a59c5c5a41def2f2b67b9e1adb0f385c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRegion::IsEmpty</definition>
+        <argsstring>() const </argsstring>
+        <name>IsEmpty</name>
+        <briefdescription>
+<para>Returns true if the region is empty, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para>Always returns true if the region is invalid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a0a2e8377a438d0075b9ff2e497dbd686" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::IsEqual</definition>
+        <argsstring>(const wxRegion &amp;region) const </argsstring>
+        <name>IsEqual</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the region is equal to, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>covers the same area as, another one.</para><para>If both this region and <emphasis>region</emphasis> are both invalid, they are considered to be equal. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a569a77247771375b06dc159a739b79b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Subtract</definition>
+        <argsstring>(const wxRect &amp;rect)</argsstring>
+        <name>Subtract</name>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Subtracts a rectangular region from this region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always fails, i.e. returns false, if this region is invalid but may nevertheless be safely used even in this case.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation combines the parts of &apos;this&apos; region that are not part of the second region. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ac1ed0ca194bc1e9a46d32581a16203e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Subtract</definition>
+        <argsstring>(const wxRegion &amp;region)</argsstring>
+        <name>Subtract</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Subtracts a region from this region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method always fails, i.e. returns false, if this region is invalid but may nevertheless be safely used even in this case.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation combines the parts of &apos;this&apos; region that are not part of the second region. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ae8ea15425722b296b6cb6974d7306e60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Union</definition>
+        <argsstring>(wxCoord x, wxCoord y, wxCoord width, wxCoord height)</argsstring>
+        <name>Union</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Finds the union of this region and another, rectangular region, specified using position and size. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be used even if this region is invalid and has the natural behaviour in this case, i.e. makes this region equal to the given rectangle.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation creates a region that combines all of this region and the second region. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a4a78ad08c47361b8cfa95dabc54487e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Union</definition>
+        <argsstring>(const wxRect &amp;rect)</argsstring>
+        <name>Union</name>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Finds the union of this region and another, rectangular region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be used even if this region is invalid and has the natural behaviour in this case, i.e. makes this region equal to the given rectangle.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation creates a region that combines all of this region and the second region. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="408"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ac4edc555b9bef0263675b8afefdf0578" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Union</definition>
+        <argsstring>(const wxRegion &amp;region)</argsstring>
+        <name>Union</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Finds the union of this region and another region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be used even if this region is invalid and has the natural behaviour in this case, i.e. makes this region equal to the given <emphasis>region</emphasis>.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation creates a region that combines all of this region and the second region. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="422"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a9b8729b4d3acf9e77188f92ebdfaf168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Union</definition>
+        <argsstring>(const wxBitmap &amp;bmp)</argsstring>
+        <name>Union</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmp</declname>
+        </param>
+        <briefdescription>
+<para>Finds the union of this region and the non-transparent pixels of a bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>The bitmap&apos;s mask is used to determine transparency. If the bitmap doesn&apos;t have a mask, the bitmap&apos;s full dimensions are used.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation creates a region that combines all of this region and the second region. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ad33ab31d06beebe15b9b7fbd3f2978e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Union</definition>
+        <argsstring>(const wxBitmap &amp;bmp, const wxColour &amp;transColour, int tolerance=0)</argsstring>
+        <name>Union</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>transColour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tolerance</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Finds the union of this region and the non-transparent pixels of a bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>Colour to be treated as transparent is specified in the <emphasis>transColour</emphasis> argument, along with an optional colour tolerance value.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation creates a region that combines all of this region and the second region. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="447"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1aafeebc72cda33bc9b1285d1554be9ec3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Xor</definition>
+        <argsstring>(wxCoord x, wxCoord y, wxCoord width, wxCoord height)</argsstring>
+        <name>Xor</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Finds the Xor of this region and another, rectangular region, specified using position and size. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be used even if this region is invalid and has the natural behaviour in this case, i.e. makes this region equal to the given rectangle.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation creates a region that combines all of this region and the second region, except for any overlapping areas. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1ad9afb74d82763343326a4a60c397ea6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Xor</definition>
+        <argsstring>(const wxRect &amp;rect)</argsstring>
+        <name>Xor</name>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Finds the Xor of this region and another, rectangular region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be used even if this region is invalid and has the natural behaviour in this case, i.e. makes this region equal to the given rectangle.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation creates a region that combines all of this region and the second region, except for any overlapping areas. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a908a56969729732832b3c274ffae8071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegion::Xor</definition>
+        <argsstring>(const wxRegion &amp;region)</argsstring>
+        <name>Xor</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Finds the Xor of this region and another region. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be used even if this region is invalid and has the natural behaviour in this case, i.e. makes this region equal to the given <emphasis>region</emphasis>.</para><para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>This operation creates a region that combines all of this region and the second region, except for any overlapping areas. The result is stored in this region. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="491"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_1a4c0370cf9a88c41d0f8909cf38753ee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+        <definition>wxRegion&amp; wxRegion::operator=</definition>
+        <argsstring>(const wxRegion &amp;region)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="496"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classwx_region" kindref="compound">wxRegion</ref> represents a simple or complex region on a device context or window. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class uses <ref refid="overview__refcount" kindref="compound">reference counting and copy-on-write</ref> internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para>Predefined objects/pointers:<itemizedlist>
+<listitem><para><ref refid="region_8h_1a0e08242adcd1d3280b44543545b0a3ef" kindref="member">wxNullRegion</ref></para></listitem></itemizedlist>
+</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref>, <ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_region_iterator" kindref="compound">wxRegionIterator</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9057">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="9056">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="9057" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9055">
+        <label>wxRegion</label>
+        <link refid="classwx_region"/>
+        <childnode refid="9056" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9060">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9061" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9059">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="9060" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9058">
+        <label>wxRegion</label>
+        <link refid="classwx_region"/>
+        <childnode refid="9059" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9061">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="156" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" bodystart="155" bodyend="497"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRegion</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_region_1a3e2c4b0910da7fadc36bd6ced199a673" prot="public" virt="virtual"><scope>wxRegion</scope><name>Clear</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRegion</scope><name>CloneRefData</name></member>
+      <member refid="classwx_region_1a0e3c821e69f6f69b1b48d811783a5dad" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Contains</name></member>
+      <member refid="classwx_region_1a23474efe70beaee07aa6d4d6a9d59478" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Contains</name></member>
+      <member refid="classwx_region_1aa7d0a5dc77828fa87be4d24fce4590fb" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Contains</name></member>
+      <member refid="classwx_region_1a63aa89c1eaad488abfa1d02b811f5fbb" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Contains</name></member>
+      <member refid="classwx_region_1af44f6a05c09550092ae79e83c67d8184" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>ConvertToBitmap</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRegion</scope><name>CreateRefData</name></member>
+      <member refid="classwx_region_1a09c39341b3bbcc7b4e56d0caaa55e7e9" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>GetBox</name></member>
+      <member refid="classwx_region_1ae971dbafb3b1d78049cd4eee00696614" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>GetBox</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRegion</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>GetRefData</name></member>
+      <member refid="classwx_region_1a241f47ba24eab7f10fe6acf2b6c0b7f3" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Intersect</name></member>
+      <member refid="classwx_region_1a2aaa03bd30c4dad1f3aca89149933a22" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Intersect</name></member>
+      <member refid="classwx_region_1ad94d3469777fc5d8e9246acaa3ca7afd" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Intersect</name></member>
+      <member refid="classwx_region_1a59c5c5a41def2f2b67b9e1adb0f385c8" prot="public" virt="virtual"><scope>wxRegion</scope><name>IsEmpty</name></member>
+      <member refid="classwx_region_1a0a2e8377a438d0075b9ff2e497dbd686" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>IsEqual</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRegion</scope><name>m_refData</name></member>
+      <member refid="classwx_region_1abe953e65820362a0796b7bbe5a5ff35d" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Offset</name></member>
+      <member refid="classwx_region_1afad58d401a561baeff26b2413cef9532" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Offset</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>operator new</name></member>
+      <member refid="classwx_region_1a4c0370cf9a88c41d0f8909cf38753ee6" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>operator=</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Ref</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>SetRefData</name></member>
+      <member refid="classwx_region_1a569a77247771375b06dc159a739b79b8" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Subtract</name></member>
+      <member refid="classwx_region_1ac1ed0ca194bc1e9a46d32581a16203e4" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Subtract</name></member>
+      <member refid="classwx_region_1ae8ea15425722b296b6cb6974d7306e60" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Union</name></member>
+      <member refid="classwx_region_1a4a78ad08c47361b8cfa95dabc54487e8" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Union</name></member>
+      <member refid="classwx_region_1ac4edc555b9bef0263675b8afefdf0578" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Union</name></member>
+      <member refid="classwx_region_1a9b8729b4d3acf9e77188f92ebdfaf168" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Union</name></member>
+      <member refid="classwx_region_1ad33ab31d06beebe15b9b7fbd3f2978e9" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Union</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>UnShare</name></member>
+      <member refid="classwx_g_d_i_object_1a20ac442e0d24cf6250d7bd45f0d968d5" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxGDIObject</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxObject</name></member>
+      <member refid="classwx_region_1a1edc6768118cf02749b46774a0ca37f9" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxRegion</name></member>
+      <member refid="classwx_region_1af2b51dd977107b0dd162db6e4e9e9c5c" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxRegion</name></member>
+      <member refid="classwx_region_1a2cebf12d74122ce220f3ad48fa686e97" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxRegion</name></member>
+      <member refid="classwx_region_1a66708b42c8bce4a76ada65cb312b60f9" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxRegion</name></member>
+      <member refid="classwx_region_1ad88c11689e65f02bb99acea6d59a6d9f" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxRegion</name></member>
+      <member refid="classwx_region_1a4edcabc3e3beeeea45542c56873d50ac" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxRegion</name></member>
+      <member refid="classwx_region_1ad7bfbeb79fe8dc281b91cfba43e8bd0a" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxRegion</name></member>
+      <member refid="classwx_region_1aab62039edc53c55b833042b7c83e9068" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>wxRegion</name></member>
+      <member refid="classwx_region_1aafeebc72cda33bc9b1285d1554be9ec3" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Xor</name></member>
+      <member refid="classwx_region_1ad9afb74d82763343326a4a60c397ea6e" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Xor</name></member>
+      <member refid="classwx_region_1a908a56969729732832b3c274ffae8071" prot="public" virt="non-virtual"><scope>wxRegion</scope><name>Xor</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxRegion</scope><name>~wxObject</name></member>
+      <member refid="classwx_region_1adb60f41b909b261b3292f34bfa700a30" prot="public" virt="virtual"><scope>wxRegion</scope><name>~wxRegion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

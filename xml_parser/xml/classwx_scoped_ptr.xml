@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_scoped_ptr" kind="class" prot="public">
+    <compoundname>wxScopedPtr</compoundname>
+    <derivedcompoundref refid="classwx_scoped_tied_ptr" prot="public" virt="non-virtual">wxScopedTiedPtr</derivedcompoundref>
+    <includes local="no">wx/scopedptr.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_scoped_ptr_1a30fbfa2b44f99f62320b744b113144d8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedPtr::wxScopedPtr</definition>
+        <argsstring>(type *T=NULL)</argsstring>
+        <name>wxScopedPtr</name>
+        <param>
+          <type>type *</type>
+          <declname>T</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Creates the smart pointer with the given pointer or none if NULL. </para>        </briefdescription>
+        <detaileddescription>
+<para>On compilers that support it, this uses the explicit keyword. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_1ae824b3ae060054eb348a93c9004269a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedPtr::~wxScopedPtr</definition>
+        <argsstring>()</argsstring>
+        <name>~wxScopedPtr</name>
+        <briefdescription>
+<para>Destructor frees the pointer help by this object if it is not NULL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_1a3ccb3a9b7842b33dd7f05f0f425118ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* wxScopedPtr::get</definition>
+        <argsstring>() const </argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>This operator gets the pointer stored in the smart pointer or returns NULL if there is none. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_1ad7209afd14b11f0ae06102b59fcfa47f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T&amp; wxScopedPtr::operator*</definition>
+        <argsstring>() const </argsstring>
+        <name>operator*</name>
+        <briefdescription>
+<para>This operator works like the standard C++ pointer operator to return the object being pointed to by the pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_1a39a4b959af080169c094799804ff889c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* wxScopedPtr::operator-&gt;</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+<para>Smart pointer member access. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns pointer to its object.</para><para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_1af4f140f5486b9dc3bffee6b7ae6afb88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* wxScopedPtr::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <briefdescription>
+<para>Returns the currently hold pointer and resets the smart pointer object to NULL. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>After a call to this function the caller is responsible for deleting the pointer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_1a56e9edc9ce458e8170c8cc7f51eb6e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedPtr::reset</definition>
+        <argsstring>(T *p=NULL)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>T *</type>
+          <declname>p</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Deletes the currently held pointer and sets it to <emphasis>p</emphasis> or to NULL if no arguments are specified. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function does check to make sure that the pointer you are assigning is not the same pointer that is already stored. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_ptr_1a79d42258949a19d90c021dce70dd61c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedPtr::swap</definition>
+        <argsstring>(wxScopedPtr &amp;other)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="classwx_scoped_ptr" kindref="compound">wxScopedPtr</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Swap the pointer inside the smart pointer with <emphasis>other</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The pointer being swapped must be of the same type (hence the same class name). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="152"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a simple scoped smart pointer implementation that is similar to the Boost smart pointers (see <ulink url="http://www.boost.org">http://www.boost.org</ulink>) but rewritten to use macros instead. </para>    </briefdescription>
+    <detaileddescription>
+<para>Since wxWidgets 2.9.0 there is also a templated version of this class with the same name. See <ref refid="classwx_scoped_ptr_3_01_t_01_4" kindref="compound">wxScopedPtr&lt;T&gt;</ref>.</para><para>A smart pointer holds a pointer to an object. The memory used by the object is deleted when the smart pointer goes out of scope. This class is different from the <computeroutput>std::auto_ptr&lt;&gt;</computeroutput> in so far as it doesn&apos;t provide copy constructor nor assignment operator. This limits what you can do with it but is much less surprising than the &quot;destructive copy&quot; behaviour of the standard class.</para><para><bold>Example:</bold> </para><para>Below is an example of using a wxWidgets scoped smart pointer and pointer array.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass{<sp/>...<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>declare<sp/>a<sp/>smart<sp/>pointer<sp/>to<sp/>a<sp/>MyClass<sp/>called<sp/>wxMyClassPtr</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDECLARE_SCOPED_PTR(MyClass,<sp/>wxMyClassPtr)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>declare<sp/>a<sp/>smart<sp/>pointer<sp/>to<sp/>an<sp/>array<sp/>of<sp/>chars</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDECLARE_SCOPED_ARRAY(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">,<sp/>wxCharArray)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>the<sp/>first<sp/>pointer<sp/>class,<sp/>must<sp/>be<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDEFINE_SCOPED_PTR(MyClass,<sp/>wxMyClassPtr)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>the<sp/>second<sp/>pointer<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDEFINE_SCOPED_ARRAY(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">,<sp/>wxCharArray)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>an<sp/>object<sp/>with<sp/>a<sp/>new<sp/>pointer<sp/>to<sp/>MyClass</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxMyClassPtr<sp/>theObj(new<sp/>MyClass());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>the<sp/>pointer<sp/>(deletes<sp/>the<sp/>previous<sp/>one)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theObj.<ref refid="classwx_scoped_ptr_1a56e9edc9ce458e8170c8cc7f51eb6e6d" kindref="member" tooltip="Deletes the currently held pointer and sets it to p or to NULL if no arguments are...">reset</ref>(new<sp/>MyClass());</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>access<sp/>the<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theObj-&gt;MyFunc();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>an<sp/>object<sp/>with<sp/>a<sp/>new<sp/>array<sp/>of<sp/>chars</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxCharArray<sp/>theCharObj(new<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[100]);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>access<sp/>the<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theCharObj[0]<sp/>=<sp/>&quot;!&quot;;</highlight></codeline>
+</programlisting></para><sect1 id="classwx_scoped_ptr_1scopedptr_newpointers">
+<title>Declaring new smart pointer types</title>
+<para>To declare the smart pointer class <computeroutput>CLASSNAME</computeroutput> containing pointes to a (possibly incomplete) type <computeroutput>TYPE</computeroutput> you should use <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDECLARE_SCOPED_PTR(<sp/>TYPE,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>of<sp/>the<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLASSNAME<sp/>);<sp/></highlight><highlight class="comment">//<sp/>name<sp/>of<sp/>the<sp/>class</highlight></codeline>
+</programlisting> And later, when <computeroutput>TYPE</computeroutput> is fully defined, you must also use <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDEFINE_SCOPED_PTR(<sp/>TYPE,<sp/>CLASSNAME<sp/>);</highlight></codeline>
+</programlisting> to implement the scoped pointer class.</para><para>The first argument of these macro is the pointer type, the second is the name of the new smart pointer class being created. Below we will use <ref refid="classwx_scoped_ptr" kindref="compound">wxScopedPtr</ref> to represent the scoped pointer class, but the user may create the class with any legal name.</para><para>Alternatively, if you don&apos;t have to separate the point of declaration and definition of this class and if you accept the standard naming convention, that is that the scoped pointer for the class <computeroutput>Foo</computeroutput> is called <computeroutput>FooPtr</computeroutput>, you can use a single macro which replaces two macros above: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxDEFINE_SCOPED_PTR_TYPE(<sp/>TYPE<sp/>);</highlight></codeline>
+</programlisting> Once again, in this cass <computeroutput>CLASSNAME</computeroutput> will be <computeroutput>TYPEPtr</computeroutput>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scoped_array" kindref="compound">wxScopedArray</ref> </para></simplesect>
+</para></sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10019">
+        <label>wxScopedPtr</label>
+        <link refid="classwx_scoped_ptr"/>
+      </node>
+      <node id="10020">
+        <label>wxScopedTiedPtr</label>
+        <link refid="classwx_scoped_tied_ptr"/>
+        <childnode refid="10019" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" bodystart="92" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classwx_scoped_ptr_1a3ccb3a9b7842b33dd7f05f0f425118ea" prot="public" virt="non-virtual"><scope>wxScopedPtr</scope><name>get</name></member>
+      <member refid="classwx_scoped_ptr_1ad7209afd14b11f0ae06102b59fcfa47f" prot="public" virt="non-virtual"><scope>wxScopedPtr</scope><name>operator*</name></member>
+      <member refid="classwx_scoped_ptr_1a39a4b959af080169c094799804ff889c" prot="public" virt="non-virtual"><scope>wxScopedPtr</scope><name>operator-&gt;</name></member>
+      <member refid="classwx_scoped_ptr_1af4f140f5486b9dc3bffee6b7ae6afb88" prot="public" virt="non-virtual"><scope>wxScopedPtr</scope><name>release</name></member>
+      <member refid="classwx_scoped_ptr_1a56e9edc9ce458e8170c8cc7f51eb6e6d" prot="public" virt="non-virtual"><scope>wxScopedPtr</scope><name>reset</name></member>
+      <member refid="classwx_scoped_ptr_1a79d42258949a19d90c021dce70dd61c7" prot="public" virt="non-virtual"><scope>wxScopedPtr</scope><name>swap</name></member>
+      <member refid="classwx_scoped_ptr_1a30fbfa2b44f99f62320b744b113144d8" prot="public" virt="non-virtual"><scope>wxScopedPtr</scope><name>wxScopedPtr</name></member>
+      <member refid="classwx_scoped_ptr_1ae824b3ae060054eb348a93c9004269a4" prot="public" virt="non-virtual"><scope>wxScopedPtr</scope><name>~wxScopedPtr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

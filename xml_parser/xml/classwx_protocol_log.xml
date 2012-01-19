@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_protocol_log" kind="class" prot="public">
+    <compoundname>wxProtocolLog</compoundname>
+    <includes local="no">wx/protocol/log.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_protocol_log_1a449abb899cb6413c968bbda18cef6144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxProtocolLog::wxProtocolLog</definition>
+        <argsstring>(const wxString &amp;traceMask)</argsstring>
+        <name>wxProtocolLog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>traceMask</declname>
+        </param>
+        <briefdescription>
+<para>Create object doing the logging using <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> with the specified trace mask. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you override <ref refid="classwx_protocol_log_1aca6e0f45b42affec868c8f5128813967" kindref="member">DoLogString()</ref> in your class the <emphasis>traceMask</emphasis> may be left empty but it must have a valid value if you rely on the default <ref refid="classwx_protocol_log_1aca6e0f45b42affec868c8f5128813967" kindref="member">DoLogString()</ref> implementation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/log.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_protocol_log_1addf45beaed76b87ccbf6b43022076bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxProtocolLog::LogRequest</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>LogRequest</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Called by wxProtocol-derived objects to log strings sent to the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default implementation prepends a client-to-server marker to <emphasis>str</emphasis> and calls <ref refid="classwx_protocol_log_1aca6e0f45b42affec868c8f5128813967" kindref="member">DoLogString()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/log.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_protocol_log_1af4d66c55be1aa518626bbc97982d756b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxProtocolLog::LogResponse</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>LogResponse</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Called by wxProtocol-derived objects to log strings received from the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default implementation prepends a server-to-client marker to <emphasis>str</emphasis> and calls <ref refid="classwx_protocol_log_1aca6e0f45b42affec868c8f5128813967" kindref="member">DoLogString()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/log.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_protocol_log_1aca6e0f45b42affec868c8f5128813967" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxProtocolLog::DoLogString</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>DoLogString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Log the given string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called from <ref refid="classwx_protocol_log_1addf45beaed76b87ccbf6b43022076bf6" kindref="member">LogRequest()</ref> and <ref refid="classwx_protocol_log_1af4d66c55be1aa518626bbc97982d756b" kindref="member">LogResponse()</ref> and by default uses <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> with the trace mask specified in the constructor but can be overridden to do something different by the derived classes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/log.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class allowing to log network operations performed by <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_protocol" kindref="compound">wxProtocol</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/log.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/log.h" bodystart="19" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classwx_protocol_log_1aca6e0f45b42affec868c8f5128813967" prot="protected" virt="virtual"><scope>wxProtocolLog</scope><name>DoLogString</name></member>
+      <member refid="classwx_protocol_log_1addf45beaed76b87ccbf6b43022076bf6" prot="public" virt="virtual"><scope>wxProtocolLog</scope><name>LogRequest</name></member>
+      <member refid="classwx_protocol_log_1af4d66c55be1aa518626bbc97982d756b" prot="public" virt="virtual"><scope>wxProtocolLog</scope><name>LogResponse</name></member>
+      <member refid="classwx_protocol_log_1a449abb899cb6413c968bbda18cef6144" prot="public" virt="non-virtual"><scope>wxProtocolLog</scope><name>wxProtocolLog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

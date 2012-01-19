@@ -1,0 +1,4378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__funcmacro__crt" kind="group">
+    <compoundname>group_funcmacro_crt</compoundname>
+    <title>Wrappers of CRT functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga4d749baaa27c4c97d579733b0ac6a495" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsEmpty</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>wxIsEmpty</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad0261d656ed9c5ce1d0cbbecafbc6a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsEmpty</definition>
+        <argsstring>(const wchar_t *s)</argsstring>
+        <name>wxIsEmpty</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gadd02fd552d1bdb9d38a1800c18b5127d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsEmpty</definition>
+        <argsstring>(const wxCharBuffer &amp;s)</argsstring>
+        <name>wxIsEmpty</name>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="15"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga282177fc2b3c657a79dd476b1257798d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsEmpty</definition>
+        <argsstring>(const wxWCharBuffer &amp;s)</argsstring>
+        <name>wxIsEmpty</name>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gacecd9769ad220d53001b15294258e401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsEmpty</definition>
+        <argsstring>(const wxString &amp;s)</argsstring>
+        <name>wxIsEmpty</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8ece2a7fdc95b6506589c0558cdabfa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsEmpty</definition>
+        <argsstring>(const wxCStrData &amp;s)</argsstring>
+        <name>wxIsEmpty</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga800e96e871798122cf7ebf3e8c0d0e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+        <definition>wxChar* wxTmemchr</definition>
+        <argsstring>(const wxChar *s, wxChar c, size_t l)</argsstring>
+        <name>wxTmemchr</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaf05326bf8ce84127326caecd991b593d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTmemcmp</definition>
+        <argsstring>(const wxChar *sz1, const wxChar *sz2, size_t len)</argsstring>
+        <name>wxTmemcmp</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>sz1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>sz2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gadfeac2e77510214ac8dfb3cdad7665b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+        <definition>wxChar* wxTmemcpy</definition>
+        <argsstring>(wxChar *szOut, const wxChar *szIn, size_t len)</argsstring>
+        <name>wxTmemcpy</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>szOut</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>szIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gab0f7dff1c4e64cc5086e45a2fcf83694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+        <definition>wxChar* wxTmemmove</definition>
+        <argsstring>(wxChar *szOut, const wxChar *szIn, size_t len)</argsstring>
+        <name>wxTmemmove</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>szOut</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>szIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaae1acd3c00f238d73c52a5f5552b7901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+        <definition>wxChar* wxTmemset</definition>
+        <argsstring>(wxChar *szOut, const wxChar cIn, size_t len)</argsstring>
+        <name>wxTmemset</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>szOut</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+          <declname>cIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7121d1ee6707f0e61e46b2ce88b4aa5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxTmemchr</definition>
+        <argsstring>(const char *s, char c, size_t len)</argsstring>
+        <name>wxTmemchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="24"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga22aa15a46903808b7ff28d03981d6286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTmemcmp</definition>
+        <argsstring>(const char *sz1, const char *sz2, size_t len)</argsstring>
+        <name>wxTmemcmp</name>
+        <param>
+          <type>const char *</type>
+          <declname>sz1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sz2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga2391ffcfbe98c77464f36e44e62b19a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxTmemcpy</definition>
+        <argsstring>(char *szOut, const char *szIn, size_t len)</argsstring>
+        <name>wxTmemcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>szOut</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>szIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaca6af5eb49164b9d9b66f66b24d8aa9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxTmemmove</definition>
+        <argsstring>(char *szOut, const char *szIn, size_t len)</argsstring>
+        <name>wxTmemmove</name>
+        <param>
+          <type>char *</type>
+          <declname>szOut</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>szIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="27"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaaf5079d5f354dcb7274339f9019e0f4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxTmemset</definition>
+        <argsstring>(char *szOut, const char cIn, size_t len)</argsstring>
+        <name>wxTmemset</name>
+        <param>
+          <type>char *</type>
+          <declname>szOut</declname>
+        </param>
+        <param>
+          <type>const char</type>
+          <declname>cIn</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7f3846436d45c7772b2b936126386d74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxSetlocale</definition>
+        <argsstring>(int category, const wxCharBuffer &amp;locale)</argsstring>
+        <name>wxSetlocale</name>
+        <param>
+          <type>int</type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>locale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="29"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaae21f9d00505aa35af5c708a3d2f5942" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxSetlocale</definition>
+        <argsstring>(int category, const wxString &amp;locale)</argsstring>
+        <name>wxSetlocale</name>
+        <param>
+          <type>int</type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>locale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga997ba25c6943f65def0b833c4f0445ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxSetlocale</definition>
+        <argsstring>(int category, const wxCStrData &amp;locale)</argsstring>
+        <name>wxSetlocale</name>
+        <param>
+          <type>int</type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>locale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrlen</definition>
+        <argsstring>(const wxCharBuffer &amp;s)</argsstring>
+        <name>wxStrlen</name>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gae195109f1c5aa41abe32539190036a7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrlen</definition>
+        <argsstring>(const wxWCharBuffer &amp;s)</argsstring>
+        <name>wxStrlen</name>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga324addbfdf009ab71f1ca6c0623ed8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrlen</definition>
+        <argsstring>(const wxString &amp;s)</argsstring>
+        <name>wxStrlen</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga9ad5c804e9331b5089b0f5271cdd7b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrlen</definition>
+        <argsstring>(const wxCStrData &amp;s)</argsstring>
+        <name>wxStrlen</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa0750f97833324220b5e3bef512d33e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrnlen</definition>
+        <argsstring>(const char *str, size_t maxlen)</argsstring>
+        <name>wxStrnlen</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga80e8c1ca3c43e4ef914efec352ee55c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrnlen</definition>
+        <argsstring>(const wchar_t *str, size_t maxlen)</argsstring>
+        <name>wxStrnlen</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad53f3e259e320f534497703307491de2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrdup</definition>
+        <argsstring>(const wxCharBuffer &amp;s)</argsstring>
+        <name>wxStrdup</name>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad34bff45da9ddee21d84adef4910774a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrdup</definition>
+        <argsstring>(const wxWCharBuffer &amp;s)</argsstring>
+        <name>wxStrdup</name>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga01c85ef55b0ec4787e45892e587e1c42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrdup</definition>
+        <argsstring>(const wxString &amp;s)</argsstring>
+        <name>wxStrdup</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad66824dac2251bddfa3c72d811638d10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrdup</definition>
+        <argsstring>(const wxCStrData &amp;s)</argsstring>
+        <name>wxStrdup</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga1faaf19e0618e4583b1bcaf9a500494a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcpy</definition>
+        <argsstring>(char *dest, const char *src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gadb99dc21acf6c5d4126c12bc48328e6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcpy</definition>
+        <argsstring>(wchar_t *dest, const wchar_t *src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga6a77228de63274a54e145dd060509b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcpy</definition>
+        <argsstring>(char *dest, const wxString &amp;src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga6d29576844af843bcc40af92a36047e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcpy</definition>
+        <argsstring>(char *dest, const wxCStrData &amp;src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga433098e20cbf2913f19d1259c2eceba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcpy</definition>
+        <argsstring>(char *dest, const wxCharBuffer &amp;src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga30b7f0b80afcef92ffc3128aebc8e492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcpy</definition>
+        <argsstring>(wchar_t *dest, const wxString &amp;src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga6901e6773f318b11225326ea25aa520e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcpy</definition>
+        <argsstring>(wchar_t *dest, const wxCStrData &amp;src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga12a73b0417a49d627e7087d7ce53ea50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcpy</definition>
+        <argsstring>(wchar_t *dest, const wxWCharBuffer &amp;src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga503abca085fe2c7462d4e7cc41e2678b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcpy</definition>
+        <argsstring>(char *dest, const wchar_t *src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga23f5ee466fcdf083fe4e3502d628f1da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcpy</definition>
+        <argsstring>(wchar_t *dest, const char *src)</argsstring>
+        <name>wxStrcpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad2c5cc348a3ad0a6a72ac920555e67ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncpy</definition>
+        <argsstring>(char *dest, const char *src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga9453366905182996339679ec99078f2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncpy</definition>
+        <argsstring>(wchar_t *dest, const wchar_t *src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga9945214e006e0d256faadc2cfcfccd4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncpy</definition>
+        <argsstring>(char *dest, const wxString &amp;src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa2735419871fe42e45bb2a7580ccd986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncpy</definition>
+        <argsstring>(char *dest, const wxCStrData &amp;src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga5c0ac0791f7150b63113897925d9a12b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncpy</definition>
+        <argsstring>(char *dest, const wxCharBuffer &amp;src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga49df63db09b870cf2eb02b26a5d32369" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncpy</definition>
+        <argsstring>(wchar_t *dest, const wxString &amp;src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac38cf2e6d26d8ad1d1c73b8323b3f226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncpy</definition>
+        <argsstring>(wchar_t *dest, const wxCStrData &amp;src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga0065e99d28973d949937e6c58dfe3693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncpy</definition>
+        <argsstring>(wchar_t *dest, const wxWCharBuffer &amp;src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7f0652c94368077dcfc6814301642d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncpy</definition>
+        <argsstring>(char *dest, const wchar_t *src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga1ade4d616a6cc28d49d2a79d35de2d26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncpy</definition>
+        <argsstring>(wchar_t *dest, const char *src, size_t n)</argsstring>
+        <name>wxStrncpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga901f7a65a708a129b83a050afbfb0265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrlcpy</definition>
+        <argsstring>(char *dest, const char *src, size_t n)</argsstring>
+        <name>wxStrlcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gae5ee3df4dd28e2e78d19e31208f78847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrlcpy</definition>
+        <argsstring>(wchar_t *dest, const wchar_t *src, size_t n)</argsstring>
+        <name>wxStrlcpy</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga75d801b560c5d8caf34b28a8e2090ca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcat</definition>
+        <argsstring>(char *dest, const char *src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga9e493c415a66f109de9f383d28cae50d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcat</definition>
+        <argsstring>(wchar_t *dest, const wchar_t *src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac190163ace648d97075afe9efbb3f98a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcat</definition>
+        <argsstring>(char *dest, const wxString &amp;src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga5146d19dd369bed621651855f41f2f94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcat</definition>
+        <argsstring>(char *dest, const wxCStrData &amp;src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga1a8de533afabe7c2f669054eb4dbdf04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcat</definition>
+        <argsstring>(char *dest, const wxCharBuffer &amp;src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga2dd5a775732414dfdafe275d596874b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcat</definition>
+        <argsstring>(wchar_t *dest, const wxString &amp;src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga6bd2e41284b33afda0931853a6a36d42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcat</definition>
+        <argsstring>(wchar_t *dest, const wxCStrData &amp;src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga56d1435755f5ba9e004e90eddc717d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcat</definition>
+        <argsstring>(wchar_t *dest, const wxWCharBuffer &amp;src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8e39a1aa70ffd182e4c6ce69e1b68cab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrcat</definition>
+        <argsstring>(char *dest, const wchar_t *src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga9b866f376e1b59234e0f0af5b69643f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrcat</definition>
+        <argsstring>(wchar_t *dest, const char *src)</argsstring>
+        <name>wxStrcat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac94b10e06155d52da6d61178c194a04e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncat</definition>
+        <argsstring>(char *dest, const char *src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga0130d997349ffd607fb80a0f8357e448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncat</definition>
+        <argsstring>(wchar_t *dest, const wchar_t *src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga41cb3860e698863776374940f08db822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncat</definition>
+        <argsstring>(char *dest, const wxString &amp;src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaee05d0758e43f4ac296d918e81b7a159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncat</definition>
+        <argsstring>(char *dest, const wxCStrData &amp;src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga0711d9ca9505b32bf1df398d1d143fa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncat</definition>
+        <argsstring>(char *dest, const wxCharBuffer &amp;src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga3e4e64695c70b71dd9bb0af81a66ee92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncat</definition>
+        <argsstring>(wchar_t *dest, const wxString &amp;src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gab794209e3f9b44af3a3e2f6abd1e3fd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncat</definition>
+        <argsstring>(wchar_t *dest, const wxCStrData &amp;src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga258e47cae5d90fd13f100789a433bb6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncat</definition>
+        <argsstring>(wchar_t *dest, const wxWCharBuffer &amp;src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga5f9ab0171e4230ca44d8e0bb6be106c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrncat</definition>
+        <argsstring>(char *dest, const wchar_t *src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac0ebe5dc934573e47a6167a6195fa664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrncat</definition>
+        <argsstring>(wchar_t *dest, const char *src, size_t n)</argsstring>
+        <name>wxStrncat</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaadd6f67bc2aeb5f3fe51b9873c88ad7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxStrcmp_String</definition>
+        <argsstring>(const wxString &amp;s1, const T &amp;s2)</argsstring>
+        <name>wxStrcmp_String</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gae67475654a4493d0dd42fbb5df8fa0cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxStricmp_String</definition>
+        <argsstring>(const wxString &amp;s1, const T &amp;s2)</argsstring>
+        <name>wxStricmp_String</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga899089597cace427b30b3d1ccdc06c33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxStrcoll_String</definition>
+        <argsstring>(const wxString &amp;s1, const T &amp;s2)</argsstring>
+        <name>wxStrcoll_String</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga64826ebc4b9a4d0b670ba77335268f98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrspn_String</definition>
+        <argsstring>(const wxString &amp;s1, const T &amp;s2)</argsstring>
+        <name>wxStrspn_String</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga1d7b4970985eb5c8c6750cdae63333f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrcspn_String</definition>
+        <argsstring>(const wxString &amp;s1, const T &amp;s2)</argsstring>
+        <name>wxStrcspn_String</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gadfe3999114cd803dca2a3c72f6f5f1c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxStrncmp_String</definition>
+        <argsstring>(const wxString &amp;s1, const T &amp;s2, size_t n)</argsstring>
+        <name>wxStrncmp_String</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga837d7724c10b5a6d48b73b157eee202d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxStrnicmp_String</definition>
+        <argsstring>(const wxString &amp;s1, const T &amp;s2, size_t n)</argsstring>
+        <name>wxStrnicmp_String</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga3c864bcdafc9e36dfc5037e9006f2795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrxfrm</definition>
+        <argsstring>(char *dest, const char *src, size_t n)</argsstring>
+        <name>wxStrxfrm</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa09c77172dd740f5ef45e373a7d2e63a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrxfrm</definition>
+        <argsstring>(wchar_t *dest, const wchar_t *src, size_t n)</argsstring>
+        <name>wxStrxfrm</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga365dc4d95e4da481e38781f4f412979a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrxfrm</definition>
+        <argsstring>(T *dest, const wxCharTypeBuffer&lt; T &gt; &amp;src, size_t n)</argsstring>
+        <name>wxStrxfrm</name>
+        <param>
+          <type>T *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa071fc338f37151e0f9d63abd384c312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrxfrm</definition>
+        <argsstring>(char *dest, const wxString &amp;src, size_t n)</argsstring>
+        <name>wxStrxfrm</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaeef5b04ab64bb3d4fac7f950f56d8190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrxfrm</definition>
+        <argsstring>(wchar_t *dest, const wxString &amp;src, size_t n)</argsstring>
+        <name>wxStrxfrm</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga77846d7322c51a6ea63d21878a317438" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrxfrm</definition>
+        <argsstring>(char *dest, const wxCStrData &amp;src, size_t n)</argsstring>
+        <name>wxStrxfrm</name>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8051df7ef81e66a7124c589878ef1640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrxfrm</definition>
+        <argsstring>(wchar_t *dest, const wxCStrData &amp;src, size_t n)</argsstring>
+        <name>wxStrxfrm</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gae178be1923adb89c07805b074d308e2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrtok</definition>
+        <argsstring>(char *str, const char *delim, char **saveptr)</argsstring>
+        <name>wxStrtok</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>delim</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>saveptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga6d9fccfef597b2a539951c7285ce3a52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrtok</definition>
+        <argsstring>(wchar_t *str, const wchar_t *delim, wchar_t **saveptr)</argsstring>
+        <name>wxStrtok</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>delim</declname>
+        </param>
+        <param>
+          <type>wchar_t **</type>
+          <declname>saveptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga340cf9ecf38a953118a2529ac24db7d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrtok</definition>
+        <argsstring>(char *str, const wxCStrData &amp;delim, char **saveptr)</argsstring>
+        <name>wxStrtok</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>delim</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>saveptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga451bc86f06059a7d62befee79c10c4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrtok</definition>
+        <argsstring>(wchar_t *str, const wxCStrData &amp;delim, wchar_t **saveptr)</argsstring>
+        <name>wxStrtok</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>delim</declname>
+        </param>
+        <param>
+          <type>wchar_t **</type>
+          <declname>saveptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gae254c2cc3831e36c214413e2a07a34a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrtok</definition>
+        <argsstring>(char *str, const wxString &amp;delim, char **saveptr)</argsstring>
+        <name>wxStrtok</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>delim</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>saveptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga77ff723a47136445a9a4a10948b8a4ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrtok</definition>
+        <argsstring>(wchar_t *str, const wxString &amp;delim, wchar_t **saveptr)</argsstring>
+        <name>wxStrtok</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>delim</declname>
+        </param>
+        <param>
+          <type>wchar_t **</type>
+          <declname>saveptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac5b6f3acecb128f7e15b92d073dc5cee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrstr</definition>
+        <argsstring>(const char *haystack, const char *needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const char *</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad118d41c013eae7428cdf9ecdb7641fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrstr</definition>
+        <argsstring>(const wchar_t *haystack, const wchar_t *needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga47c6f8fcba9922cbba5def88d87883a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrstr</definition>
+        <argsstring>(const char *haystack, const wxString &amp;needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const char *</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga525a4f62afc026d8c298aa4b801d88d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrstr</definition>
+        <argsstring>(const wchar_t *haystack, const wxString &amp;needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga875a5fccaaa7279a89f82348b31fc0c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrstr</definition>
+        <argsstring>(const wxString &amp;haystack, const wxString &amp;needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac5cdc39c28d8e74c699c3fb3d78bcc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrstr</definition>
+        <argsstring>(const wxCStrData &amp;haystack, const wxString &amp;needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga4e7877ddbdf4b84dbc7ca2f9dd0f5426" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrstr</definition>
+        <argsstring>(const wxCStrData &amp;haystack, const wxCStrData &amp;needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga0ac79d4f6b994d250e8e3d4591ab06a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrstr</definition>
+        <argsstring>(const wxString &amp;haystack, const char *needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gab5bf2be7fbca9d10c5be2e50ea218504" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrstr</definition>
+        <argsstring>(const wxCStrData &amp;haystack, const char *needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gacc71f439e155805150e5d2d78fab8f79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrstr</definition>
+        <argsstring>(const wxString &amp;haystack, const wchar_t *needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga889b458fe19859adc8cf794c3653d5d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrstr</definition>
+        <argsstring>(const wxCStrData &amp;haystack, const wchar_t *needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga603c2a8dc2eec6c331fcbf0b169e4a8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const char *s, char c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga492308a9168c5270922a6e01b0d7c61d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrchr</definition>
+        <argsstring>(const wchar_t *s, wchar_t c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7aebfe5bee2edfc86bd6cae82d983a95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const char *s, char c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga5ed62dd76b3b9f797be68914fc32deae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrrchr</definition>
+        <argsstring>(const wchar_t *s, wchar_t c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8d55059083e9a238d27256a9a3d3553e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const char *s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga800781e2152e2459f89d494f922509e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrchr</definition>
+        <argsstring>(const wchar_t *s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa851b0f0dfb221ba3844a2e09ef2a7c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const char *s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad75c2442ccd5b27cac00318dc75be439" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrrchr</definition>
+        <argsstring>(const wchar_t *s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7514f8d35a343e67923cf34833a084d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const char *s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga75b00af8a0fe599b5f6ce2fdee509d6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrchr</definition>
+        <argsstring>(const wchar_t *s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7a63b1b63dd7be280190ffc98f7a1387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const char *s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaae30f6570593dd6e6a72bfd96b4c0cae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrrchr</definition>
+        <argsstring>(const wchar_t *s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8b20da6f2a1b1e0d90cd568ef3de233d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* wxStrchr</definition>
+        <argsstring>(const wxCharTypeBuffer&lt; T &gt; &amp;s, T c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga470b438759bf118e3c50046e6eb3c31c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* wxStrrchr</definition>
+        <argsstring>(const wxCharTypeBuffer&lt; T &gt; &amp;s, T c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga05329b39b6f676fa1498bb07d5d146ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* wxStrchr</definition>
+        <argsstring>(const wxCharTypeBuffer&lt; T &gt; &amp;s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="132"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gab20584b99e3e6d6266c52bd30e4cfda7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* wxStrrchr</definition>
+        <argsstring>(const wxCharTypeBuffer&lt; T &gt; &amp;s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga9b9c545e5e4cf1b00f6a74054e2a4778" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* wxStrchr</definition>
+        <argsstring>(const wxCharTypeBuffer&lt; T &gt; &amp;s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa5376f8327a8a46551385b5973781965" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* wxStrrchr</definition>
+        <argsstring>(const wxCharTypeBuffer&lt; T &gt; &amp;s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaf0e8c8d3379ef439c6cd2651ce3ce5f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const wxString &amp;s, char c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga0c527004508f67e4c0b7f52779ce9ef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const wxString &amp;s, char c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gab63ad8fe1d18ae727c2f08a48b4f20d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const wxString &amp;s, int c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="138"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad03f7f8b8b9f5865aa2da7b4947add30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const wxString &amp;s, int c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="139"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga22f23e2c343b4ad746e6deda986470b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const wxString &amp;s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaafa00700c096a0ac32419c3b96e1b8b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const wxString &amp;s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga43e05c2bdc0c674838e8683c9bf7410c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const wxString &amp;s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga584001891acd85c9a511ba7051dd042b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const wxString &amp;s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="143"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8a5d547fa5a9981cc5717e6dc7f017d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrchr</definition>
+        <argsstring>(const wxString &amp;s, wchar_t c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaf0b40564bc635c462c8c9a03bfca7072" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrrchr</definition>
+        <argsstring>(const wxString &amp;s, wchar_t c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gae415c225673df06dfa5529f346f99b07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, char c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gafcf35800ba0469ff1a5155fe8888903a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, char c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga77c612bf19739162fc9cd069cd979283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, int c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="148"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga27f77580e888eebac4ea8976f7eb214d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, int c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="149"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga62ca6919788733d7aeb6eb8531adb9b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga4a10c117ce31c1cb30f0927a1f1e53dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, const wxUniChar &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga3f07ef7b3e2837ef05fa87b4ba46d437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="152"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad87a1109e454cc2a67a6885f315afd9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, const wxUniCharRef &amp;c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7873196c81ec41a50b651807283e89b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, wchar_t c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga366927507b0244ff412848b9d602f83d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrrchr</definition>
+        <argsstring>(const wxCStrData &amp;s, wchar_t c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga3e2b3752341574ab6cfeeed99eaa65ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const char *s, const char *accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga40479a3b1bd47ad1e641c6e9496d6673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrpbrk</definition>
+        <argsstring>(const wchar_t *s, const wchar_t *accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="157"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gae8441024318f39d57466dced8b733bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const char *s, const wxString &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga18c94c6e12fe4e45cb30e1dab1339f1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const char *s, const wxCStrData &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga012c3579d62eb4c2d0f54f9aec626310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrpbrk</definition>
+        <argsstring>(const wchar_t *s, const wxString &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaee17a6a4840035cad1c4b7be4abd52b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrpbrk</definition>
+        <argsstring>(const wchar_t *s, const wxCStrData &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga9b68598e77db9cf5836f054a0d53fd71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const wxString &amp;s, const wxString &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga1409088bf3ccd5538f31c6a1a7895a60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const wxString &amp;s, const char *accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga9c2ec7dd9de7c2bafc38c6cbc2ef0fa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrpbrk</definition>
+        <argsstring>(const wxString &amp;s, const wchar_t *accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga0fac0c5ffaf756f19dfafb83e8cfbf52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const wxString &amp;s, const wxCStrData &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gacd4be90d4824a579856e7644da66ad1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const wxCStrData &amp;s, const wxString &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaab02792d21af988275d483af459ba611" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const wxCStrData &amp;s, const char *accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="167"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8e23e2e6b491f1067965198d20e86e05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* wxStrpbrk</definition>
+        <argsstring>(const wxCStrData &amp;s, const wchar_t *accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga981f59823769fd6c0fa3e7ef211c3095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* wxStrpbrk</definition>
+        <argsstring>(const wxCStrData &amp;s, const wxCStrData &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7b02362848bd6f281a47284499902105" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* wxStrpbrk</definition>
+        <argsstring>(const S &amp;s, const wxCharTypeBuffer&lt; T &gt; &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>const S &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga26158fc346bd0f97561d7b4c5f386fa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrstr</definition>
+        <argsstring>(char *haystack, const char *needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>char *</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga788a12f07b76ff918ec80ecd03ab6723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrstr</definition>
+        <argsstring>(wchar_t *haystack, const wchar_t *needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gadd5bd9952885ca9f901840a98f3d3652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrstr</definition>
+        <argsstring>(char *haystack, const wxString &amp;needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>char *</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga7802d9de0d73555f70affd1bed1e1d46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrstr</definition>
+        <argsstring>(wchar_t *haystack, const wxString &amp;needle)</argsstring>
+        <name>wxStrstr</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>haystack</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>needle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="175"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac81b8650a3d87f18a0e82728a3d2ae3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrchr</definition>
+        <argsstring>(char *s, char c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gae956927953409cbb516b8d5eab30b936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrrchr</definition>
+        <argsstring>(char *s, char c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga59f81e9c4934d34cad979356282d0212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrchr</definition>
+        <argsstring>(wchar_t *s, wchar_t c)</argsstring>
+        <name>wxStrchr</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga2e62cca45303da027c4d42500aa4191b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrrchr</definition>
+        <argsstring>(wchar_t *s, wchar_t c)</argsstring>
+        <name>wxStrrchr</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="179"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga4195903498ed23bf2254f6ca6e216bc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrpbrk</definition>
+        <argsstring>(char *s, const char *accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="180"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga4e6c29154852f5f3c8ccf078db9b4202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrpbrk</definition>
+        <argsstring>(wchar_t *s, const wchar_t *accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac2082f2d60d597ae639f89b836fa7d4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxStrpbrk</definition>
+        <argsstring>(char *s, const wxString &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="182"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gadc4662cf7b22ac8869d4356b5e868986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxStrpbrk</definition>
+        <argsstring>(wchar_t *s, const wxString &amp;accept)</argsstring>
+        <name>wxStrpbrk</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>accept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="183"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga69a1b88899d663c0b136fd031e427547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILE *</type>
+        <definition>FILE* wxFopen</definition>
+        <argsstring>(const wxString &amp;path, const wxString &amp;mode)</argsstring>
+        <name>wxFopen</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8d2502ee5b325fd585b6079fef3c4ebd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILE *</type>
+        <definition>FILE* wxFreopen</definition>
+        <argsstring>(const wxString &amp;path, const wxString &amp;mode, FILE *stream)</argsstring>
+        <name>wxFreopen</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="185"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga172a91c4890ff7302c4bdc601f966b25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxRemove</definition>
+        <argsstring>(const wxString &amp;path)</argsstring>
+        <name>wxRemove</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="186"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga5cd9c7d46f3f90bde0c925c16518d3ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxRename</definition>
+        <argsstring>(const wxString &amp;oldpath, const wxString &amp;newpath)</argsstring>
+        <name>wxRename</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>oldpath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>newpath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="187"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga23fa42087cb17fd293fb199aa7efdc95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxFgets</definition>
+        <argsstring>(char *s, int size, FILE *stream)</argsstring>
+        <name>wxFgets</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga740bce265995cfd73fd5824482858886" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxFgetc</definition>
+        <argsstring>(FILE *stream)</argsstring>
+        <name>wxFgetc</name>
+        <param>
+          <type>FILE *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="189"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga8fa195503043900bd24381662443475d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxUngetc</definition>
+        <argsstring>(int c, FILE *stream)</argsstring>
+        <name>wxUngetc</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="190"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gad0800841c3a401a906ca188b89893aa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxAtoi</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>wxAtoi</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="191"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga54500467c56ba382e9e7a12a4b98f605" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxAtol</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>wxAtol</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="193"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaeb65c37951da6642d022920e74980509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxAtof</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>wxAtof</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa904f5454b161f546bc27faa9d4e29b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxStrtod</definition>
+        <argsstring>(const char *nptr, char **endptr)</argsstring>
+        <name>wxStrtod</name>
+        <param>
+          <type>const char *</type>
+          <declname>nptr</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>endptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga6dbfc67c3dd7b1a65f03a31d27b92524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxStrtod</definition>
+        <argsstring>(const wchar_t *nptr, wchar_t **endptr)</argsstring>
+        <name>wxStrtod</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>nptr</declname>
+        </param>
+        <param>
+          <type>wchar_t **</type>
+          <declname>endptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="198"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga72a368df4aa55950ac262903443e2b74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxStrtod</definition>
+        <argsstring>(const wxCharTypeBuffer&lt; T &gt; &amp;nptr, T **endptr)</argsstring>
+        <name>wxStrtod</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>nptr</declname>
+        </param>
+        <param>
+          <type>T **</type>
+          <declname>endptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="199"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gafabd0fad3bc8a1eb7ca405efa06801d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxStrtod</definition>
+        <argsstring>(const wxString &amp;nptr, T endptr)</argsstring>
+        <name>wxStrtod</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>nptr</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>endptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="200"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac22218262badc8badeb1a7d3af2c2e13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxStrtod</definition>
+        <argsstring>(const wxCStrData &amp;nptr, T endptr)</argsstring>
+        <name>wxStrtod</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>nptr</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>endptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="201"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga6872da5cbf8192cdef59789a4b710f92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxSystem</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>wxSystem</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="202"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga4c0c7fefb09f17c292cde37a8bb8269d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxGetenv</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>wxGetenv</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="204"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa68c57d550a658b7af100e50206a3251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxGetenv</definition>
+        <argsstring>(const wchar_t *name)</argsstring>
+        <name>wxGetenv</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="205"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga33fddf6070f9da935d49791e5ef63fa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxGetenv</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>wxGetenv</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="206"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaf2362bbccff807b3c8d50d42f3c6c24b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxGetenv</definition>
+        <argsstring>(const wxCStrData &amp;name)</argsstring>
+        <name>wxGetenv</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="207"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga3599b024e5517f0edb1c64ade4400fd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxGetenv</definition>
+        <argsstring>(const wxCharBuffer &amp;name)</argsstring>
+        <name>wxGetenv</name>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="208"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga1b1eb754e411b41531d1b428328bcfa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t* wxGetenv</definition>
+        <argsstring>(const wxWCharBuffer &amp;name)</argsstring>
+        <name>wxGetenv</name>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="209"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga37da16436e429bc4dc408a2f2353ea64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrftime</definition>
+        <argsstring>(char *s, size_t max, size_t max, const wxString &amp;format, const struct tm *tm)</argsstring>
+        <name>wxStrftime</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>const struct tm *</type>
+          <declname>tm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga74bcb40cfccaabdc9999c3960ae09a04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStrftime</definition>
+        <argsstring>(wchar_t *s, size_t max, size_t max, const wxString &amp;format, const struct tm *tm)</argsstring>
+        <name>wxStrftime</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>const struct tm *</type>
+          <declname>tm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga5a1b5598d93897eda57d5f691de339cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsalnum</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsalnum</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="212"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga1db833e4d75bf60143bbbad0b28203ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsalpha</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsalpha</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga419b8bd51a574312ee23e8ff056d033e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIscntrl</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIscntrl</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="214"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaa354b14ed00785078e621932e2cf39b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsdigit</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsdigit</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga75540cdbecdd9601debb3e8b34de926b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsgraph</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsgraph</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga69063ec128e28c9a2f7787afdfed2503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIslower</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIslower</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="217"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga252a607b7df4cd1aec4d7bc871248aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsprint</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsprint</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="218"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gaba1494835c2b3620bcc9068b85617280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIspunct</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIspunct</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="219"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga3e619868d9eac1d2cb024b8dc67b06d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsspace</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsspace</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="220"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac3c2d421321e6ddaf62e1b9bda1e03cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsupper</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsupper</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="221"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac52b2b61443c4a07f3eb8f42b5d8b9d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsxdigit</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsxdigit</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="222"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1gac890e2c58c00a8d423a7846c08031393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
+        <definition>wxUniChar wxTolower</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxTolower</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga3ff3c09a36e86c04663668b76fcddf61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
+        <definition>wxUniChar wxToupper</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxToupper</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="224"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__crt_1ga6bcd7f8ddaafd0058011740058e89c7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsctrl</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>wxIsctrl</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wxcrt.h" line="225"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>For documentation of these functions please refer to the documentation of the standard CRT functions (see e.g. </para>    </briefdescription>
+    <detaileddescription>
+<para><ulink url="http://www.cppreference.com/wiki/c/start">http://www.cppreference.com/wiki/c/start</ulink>). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

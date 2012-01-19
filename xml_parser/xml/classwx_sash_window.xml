@@ -1,0 +1,792 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_sash_window" kind="class" prot="public">
+    <compoundname>wxSashWindow</compoundname>
+    <basecompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</basecompoundref>
+    <derivedcompoundref refid="classwx_sash_layout_window" prot="public" virt="non-virtual">wxSashLayoutWindow</derivedcompoundref>
+    <includes local="no">wx/sashwin.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_sash_window_1a49c7b9a829ab48237bbe479e5011f297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSashWindow::wxSashWindow</definition>
+        <argsstring>()</argsstring>
+        <name>wxSashWindow</name>
+        <briefdescription>
+<para>Default ctor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1aed974ee33685e7a209f061e39cf13451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSashWindow::wxSashWindow</definition>
+        <argsstring>(wxWindow *parent, wxWindowID id, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=wxCLIP_CHILDREN|wxSW_3D, const wxString &amp;name=&quot;sashWindow&quot;)</argsstring>
+        <name>wxSashWindow</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+          <defval><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+          <defval><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref></defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>style</declname>
+          <defval>wxCLIP_CHILDREN|wxSW_3D</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval>&quot;sashWindow&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a sash window, which can be a child of a frame, dialog or any other non-control window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a parent window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window identifier. If -1, will automatically create an identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window position. wxDefaultPosition is (-1, -1) which indicates that wxSashWindows should generate a default position for the window. If using the <ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref> class directly, supply an actual position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window size. wxDefaultSize is (-1, -1) which indicates that wxSashWindows should generate a default size for the window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window style. For window styles, please see <ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a64f2c2a520b39f27cf25f23026ab15e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxSashWindow::~wxSashWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~wxSashWindow</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a36e0ec36504f8a47142b19d189a53ed3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxSashWindow::GetMaximumSizeX</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMaximumSizeX</name>
+        <briefdescription>
+<para>Gets the maximum window size in the x direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a1733654b6053bcdc113a8d9db0045e13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxSashWindow::GetMaximumSizeY</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMaximumSizeY</name>
+        <briefdescription>
+<para>Gets the maximum window size in the y direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1ab43ff8ab6cce73ee2c95ad01a3d9f3fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxSashWindow::GetMinimumSizeX</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMinimumSizeX</name>
+        <briefdescription>
+<para>Gets the minimum window size in the x direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1aab48d586d85468819b6b588306dcfc25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxSashWindow::GetMinimumSizeY</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMinimumSizeY</name>
+        <briefdescription>
+<para>Gets the minimum window size in the y direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a2a68532a10d3f5c8c4b109564fcdb69c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSashWindow::GetSashVisible</definition>
+        <argsstring>(wxSashEdgePosition edge) const </argsstring>
+        <name>GetSashVisible</name>
+        <param>
+          <type><ref refid="sashwin_8h_1afb600316dcb731728456186c369bf455" kindref="member">wxSashEdgePosition</ref></type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if a sash is visible on the given edge, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Edge. One of wxSASH_TOP, wxSASH_RIGHT, wxSASH_BOTTOM, wxSASH_LEFT.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_sash_window_1a2d1c7d1912a7e0107501af0281d02cb3" kindref="member">SetSashVisible()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a6cbd57e36ac74497b6c250f88722ccfa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSashWindow::HasBorder</definition>
+        <argsstring>(wxSashEdgePosition edge) const </argsstring>
+        <name>HasBorder</name>
+        <param>
+          <type><ref refid="sashwin_8h_1afb600316dcb731728456186c369bf455" kindref="member">wxSashEdgePosition</ref></type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the sash has a border, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is obsolete since the sash border property is unused.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Edge. One of wxSASH_TOP, wxSASH_RIGHT, wxSASH_BOTTOM, wxSASH_LEFT.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_sash_window_1a4bd1cfe1fdad921435a1536f07cdfa1e" kindref="member">SetSashBorder()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a31a5d16924b62648c44d966ff9a87414" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxSashWindow::SetMaximumSizeX</definition>
+        <argsstring>(int min)</argsstring>
+        <name>SetMaximumSizeX</name>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <briefdescription>
+<para>Sets the maximum window size in the x direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a611a11221cd17757a44e944dd4ee90a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxSashWindow::SetMaximumSizeY</definition>
+        <argsstring>(int min)</argsstring>
+        <name>SetMaximumSizeY</name>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <briefdescription>
+<para>Sets the maximum window size in the y direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a1de8e31899aacc41f9bffa7f25c2f9f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxSashWindow::SetMinimumSizeX</definition>
+        <argsstring>(int min)</argsstring>
+        <name>SetMinimumSizeX</name>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <briefdescription>
+<para>Sets the minimum window size in the x direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a29bdb16095ffd1de0eb4d90ff3afa153" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxSashWindow::SetMinimumSizeY</definition>
+        <argsstring>(int min)</argsstring>
+        <name>SetMinimumSizeY</name>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <briefdescription>
+<para>Sets the minimum window size in the y direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a4bd1cfe1fdad921435a1536f07cdfa1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSashWindow::SetSashBorder</definition>
+        <argsstring>(wxSashEdgePosition edge, bool hasBorder)</argsstring>
+        <name>SetSashBorder</name>
+        <param>
+          <type><ref refid="sashwin_8h_1afb600316dcb731728456186c369bf455" kindref="member">wxSashEdgePosition</ref></type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasBorder</declname>
+        </param>
+        <briefdescription>
+<para>Call this function to give the sash a border, or remove the border. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is obsolete since the sash border property is unused.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Edge to change. One of wxSASH_TOP, wxSASH_RIGHT, wxSASH_BOTTOM, wxSASH_LEFT. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hasBorder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to give the sash a border visible, false to remove it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sash_window_1a2d1c7d1912a7e0107501af0281d02cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSashWindow::SetSashVisible</definition>
+        <argsstring>(wxSashEdgePosition edge, bool visible)</argsstring>
+        <name>SetSashVisible</name>
+        <param>
+          <type><ref refid="sashwin_8h_1afb600316dcb731728456186c369bf455" kindref="member">wxSashEdgePosition</ref></type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>visible</declname>
+        </param>
+        <briefdescription>
+<para>Call this function to make a sash visible or invisible on a particular edge. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Edge to change. One of wxSASH_TOP, wxSASH_RIGHT, wxSASH_BOTTOM, wxSASH_LEFT. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visible</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to make the sash visible, false to make it invisible.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_sash_window_1a2a68532a10d3f5c8c4b109564fcdb69c" kindref="member">GetSashVisible()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="189"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref> allows any of its edges to have a sash which can be dragged to resize the window. </para>    </briefdescription>
+    <detaileddescription>
+<para>The actual content window will be created by the application as a child of <ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref>.</para><para>The window (or an ancestor) will be notified of a drag via a <ref refid="classwx_sash_event" kindref="compound">wxSashEvent</ref> notification.</para><para><heading level="2">Styles</heading>
+</para><para>This class supports the following styles: <itemizedlist>
+<listitem><para>wxSW_3D: Draws a 3D effect sash and border. </para></listitem>
+<listitem><para>wxSW_3DSASH: Draws a 3D effect sash. </para></listitem>
+<listitem><para>wxSW_3DBORDER: Draws a 3D effect border. </para></listitem>
+<listitem><para>wxSW_BORDER: Draws a thin black border. </para></listitem>
+</itemizedlist>
+<heading level="2">Events emitted by this class</heading>
+</para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_sash_event" kindref="compound">wxSashEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
+<listitem><para>EVT_SASH_DRAGGED(id,  func): Process a <computeroutput>wxEVT_SASH_DRAGGED</computeroutput> event, when the user has finished dragging a sash. </para></listitem>
+<listitem><para>EVT_SASH_DRAGGED_RANGE(id1,  id2,  func): Process a <computeroutput>wxEVT_SASH_DRAGGED_RANGE</computeroutput> event, when the user has finished dragging a sash. The event handler is called when windows with ids in the given range have their sashes dragged. </para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sash_event" kindref="compound">wxSashEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="overview__events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10007">
+        <label>wxSashLayoutWindow</label>
+        <link refid="classwx_sash_layout_window"/>
+        <childnode refid="10002" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10005">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="10004">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="10005" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10006" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10006">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="10003">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="10004" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10002">
+        <label>wxSashWindow</label>
+        <link refid="classwx_sash_window"/>
+        <childnode refid="10003" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10011">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="10012" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10010">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10013" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10013">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="10009">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="10010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10012">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+      <node id="10008">
+        <label>wxSashWindow</label>
+        <link refid="classwx_sash_window"/>
+        <childnode refid="10009" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" bodystart="68" bodyend="190"/>
+    <listofallmembers>
+      <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>AcceptsFocus</name></member>
+      <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>AcceptsFocusFromKeyboard</name></member>
+      <member refid="classwx_window_1ac7ed96693517630f4d2e99265b76d1a9" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>AcceptsFocusRecursively</name></member>
+      <member refid="classwx_window_1abf60159278059a5bb397eb8647227bb3" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>AddChild</name></member>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>AddFilter</name></member>
+      <member refid="classwx_window_1a774b5b5548a6258727b5e2099e63ae9a" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_window_1aae29552806a328c6a55ef8f07647f5ba" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>AlwaysShowScrollbars</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Bind</name></member>
+      <member refid="classwx_window_1a100905524d330cfd9620fd726e378066" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>CacheBestSize</name></member>
+      <member refid="classwx_window_1a179f9a770f8c835f279923d2cbe5d766" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>CanScroll</name></member>
+      <member refid="classwx_window_1a64f7f6fb75bf4b7281e1d33542d523c7" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>CanSetTransparent</name></member>
+      <member refid="classwx_window_1a5c72c6260a73ef77bb0b1f7ec85fcfef" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>CaptureMouse</name></member>
+      <member refid="classwx_window_1a06c0ecb262995b40083bfb446a6cff99" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Center</name></member>
+      <member refid="classwx_window_1a2dc4e0a85d33fc55cc9650eaea1da0a4" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>CenterOnParent</name></member>
+      <member refid="classwx_window_1a4a1819eeee3f2143cdde4f329ffde787" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Centre</name></member>
+      <member refid="classwx_window_1ab8e9b91b0e2db344fd71259616dfd433" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>CentreOnParent</name></member>
+      <member refid="classwx_window_1a61e833684ee5c89775e91e88be1a9a52" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>ClearBackground</name></member>
+      <member refid="classwx_window_1a29eac611e5f6b47db82bb4dd5450ba3d" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ClientToScreen</name></member>
+      <member refid="classwx_window_1a7de852b144210b93b690189e99dbe1df" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ClientToScreen</name></member>
+      <member refid="classwx_window_1a693fffbbb7ad5f36a5f442703396dafa" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>ClientToWindowSize</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>CloneRefData</name></member>
+      <member refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Close</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Connect</name></member>
+      <member refid="classwx_window_1acb6787b6c3c314f9e015658a89ad0265" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ConvertDialogToPixels</name></member>
+      <member refid="classwx_window_1a3daf76b93f648c68224e6ccd8095066b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ConvertDialogToPixels</name></member>
+      <member refid="classwx_window_1a449aac6a24f1d14b1a82b58003447dfe" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ConvertPixelsToDialog</name></member>
+      <member refid="classwx_window_1afd955ce9d25ec26a115bfb794b1c7d8b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ConvertPixelsToDialog</name></member>
+      <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Create</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>CreateRefData</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Destroy</name></member>
+      <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>DestroyChildren</name></member>
+      <member refid="classwx_window_1a26d7329a9a753fa0445501f01f66c41e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Disable</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Disconnect</name></member>
+      <member refid="classwx_window_1a2d10b472a4962d1c852c83d55252c44b" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>DoCentre</name></member>
+      <member refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>DoGetBestSize</name></member>
+      <member refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>DoUpdateWindowUI</name></member>
+      <member refid="classwx_window_1a7e7015bc61bd79b6821d2dccaecf9eda" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>DragAcceptFiles</name></member>
+      <member refid="classwx_window_1a4e933aa891f42fbb3b87438057c573af" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Enable</name></member>
+      <member refid="classwx_window_1a777258379a3eef1b0530f12db6b77cab" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>FindFocus</name></member>
+      <member refid="classwx_window_1a3468ef382c612b5f8e91c7c18d00a69f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>FindWindow</name></member>
+      <member refid="classwx_window_1ab2dad735acc2121b964ee1d51836cffa" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>FindWindow</name></member>
+      <member refid="classwx_window_1a101201b12ccd5fba49fa06ed19b5c6fb" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>FindWindowById</name></member>
+      <member refid="classwx_window_1ab8eb148fffae109e0fac86e88d569670" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>FindWindowByLabel</name></member>
+      <member refid="classwx_window_1adbe4eea02f615313c12a2c00557a44c3" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>FindWindowByName</name></member>
+      <member refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Fit</name></member>
+      <member refid="classwx_window_1a55aca401aab29d59f7cc53f89ba2e38d" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>FitInside</name></member>
+      <member refid="classwx_window_1a15c678314cfc1d807196bc298b713ed3" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Freeze</name></member>
+      <member refid="classwx_window_1aefc02d7275010ebb8d5b66569e7287c4" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetAcceleratorTable</name></member>
+      <member refid="classwx_window_1ae0469b554e9c501b356b3ed4b6d8a3af" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetAccessible</name></member>
+      <member refid="classwx_window_1ad7a9d7fca325112fae493a00d253b3be" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetAutoLayout</name></member>
+      <member refid="classwx_window_1a3006d98a4145b7064c1f08e39487d257" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetBackgroundColour</name></member>
+      <member refid="classwx_window_1a59047d52b88f2422bbcf01bbecdc4b7b" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetBackgroundStyle</name></member>
+      <member refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetBestSize</name></member>
+      <member refid="classwx_window_1a0180343fa395e0c8e6de4022684ca5d6" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetBestVirtualSize</name></member>
+      <member refid="classwx_window_1ad95a95e683e57ac6365745b737571582" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetBorder</name></member>
+      <member refid="classwx_window_1aa53c8d1b5af17a8fbbe8845210e2032b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetBorder</name></member>
+      <member refid="classwx_window_1a483d3f73925bd38c3964dad058672f0a" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetCapture</name></member>
+      <member refid="classwx_window_1a83ed7c9d9252b912eebc753d6132245b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetCaret</name></member>
+      <member refid="classwx_window_1a304b4446de399b240a3fa4aa83a2e468" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetCharHeight</name></member>
+      <member refid="classwx_window_1aef2745df13435e913027107cab2a6286" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetCharWidth</name></member>
+      <member refid="classwx_window_1ad500085ad0511879b5e018706c91a494" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetChildren</name></member>
+      <member refid="classwx_window_1a666cfe7cc8eda6fcecfd39c67c50f609" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetChildren</name></member>
+      <member refid="classwx_window_1a170d85e4aa0cbacbfcdd0728120e1417" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetClassDefaultAttributes</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_window_1a8fd1c0fd88d63dfbf6fefb688b7fd19e" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetClientAreaOrigin</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetClientObject</name></member>
+      <member refid="classwx_window_1a3928765a8dd3c5c3d6a689179c8005e0" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetClientRect</name></member>
+      <member refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetClientSize</name></member>
+      <member refid="classwx_window_1afb9fd4a3b3310b2e11049a5113f749fa" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetClientSize</name></member>
+      <member refid="classwx_window_1ac5664c7cd26848b5eebfaded2ecde7be" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetConstraints</name></member>
+      <member refid="classwx_window_1ade8de9a91bb5bf49c3a52e5262a5ffea" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetContainingSizer</name></member>
+      <member refid="classwx_window_1ad7ce1e9af33e6be0b608813eff2d349c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetCursor</name></member>
+      <member refid="classwx_window_1a24e7b8f717e91f4590d148140e853dc5" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetDefaultAttributes</name></member>
+      <member refid="classwx_window_1a4511e71affd926a47c5c320563ca2df5" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetDropTarget</name></member>
+      <member refid="classwx_window_1a1a54fcda8d52986482e030bd54739e9f" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetEffectiveMinSize</name></member>
+      <member refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_window_1a8da0e59017af368c062f11c9abe2c667" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetExtraStyle</name></member>
+      <member refid="classwx_window_1a0dcc6f6f7bda203a868ff10c413289fa" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetFont</name></member>
+      <member refid="classwx_window_1acb8e9bd1c88f330bc9748255a5592964" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetForegroundColour</name></member>
+      <member refid="classwx_window_1a55d3155d2d3139a84e8fb19a8900aa76" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetGrandParent</name></member>
+      <member refid="classwx_window_1a185e6cd7065367b552748cb722651b27" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetHandle</name></member>
+      <member refid="classwx_window_1a77f8a4bbee228ed333af2e6a06509cff" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetHelpText</name></member>
+      <member refid="classwx_window_1afa448f4e01bedc4a5e3d4324929e5d5d" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetHelpTextAtPoint</name></member>
+      <member refid="classwx_window_1a4633b6ad527c921598f55af5274156f0" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetId</name></member>
+      <member refid="classwx_window_1a87fc676546f2ab837342b2e164dd52f0" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetLabel</name></member>
+      <member refid="classwx_window_1a0a624f5fad4a603d58ffe94b058d4dda" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetLayoutDirection</name></member>
+      <member refid="classwx_window_1aef9b71458720452374137cd20be24b97" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetMaxClientSize</name></member>
+      <member refid="classwx_window_1a5cc2082eb5ddb27f97be191bd093709e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetMaxHeight</name></member>
+      <member refid="classwx_sash_window_1a36e0ec36504f8a47142b19d189a53ed3" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetMaximumSizeX</name></member>
+      <member refid="classwx_sash_window_1a1733654b6053bcdc113a8d9db0045e13" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetMaximumSizeY</name></member>
+      <member refid="classwx_window_1a0a1672e81caf81a95eb5b48383d22065" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetMaxSize</name></member>
+      <member refid="classwx_window_1a2e953a64c41131b87bdd7c513ced3687" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetMaxWidth</name></member>
+      <member refid="classwx_window_1a8e88d1d38c2bf98a72d86b42cf3e35c0" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetMinClientSize</name></member>
+      <member refid="classwx_window_1ae4dd9a046ff774ea3ef114caeb452681" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetMinHeight</name></member>
+      <member refid="classwx_sash_window_1ab43ff8ab6cce73ee2c95ad01a3d9f3fd" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetMinimumSizeX</name></member>
+      <member refid="classwx_sash_window_1aab48d586d85468819b6b588306dcfc25" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetMinimumSizeY</name></member>
+      <member refid="classwx_window_1a853c9a8443f996a368569a8fae551f5a" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetMinSize</name></member>
+      <member refid="classwx_window_1a9f79aa07a1b82a9a738f6c1d9c17496f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetMinWidth</name></member>
+      <member refid="classwx_window_1aab1b302c4bdabd134ce8d401dbaaf990" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetName</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_window_1a41608736affe2ff115d80d8f69dc832e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetNextSibling</name></member>
+      <member refid="classwx_window_1a63871f881941b99b4b94328d1c4cd163" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetParent</name></member>
+      <member refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetPopupMenuSelectionFromUser</name></member>
+      <member refid="classwx_window_1a00f5cb3cac003205317a565a33d4bb27" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetPopupMenuSelectionFromUser</name></member>
+      <member refid="classwx_window_1a9f36392b289a1e567e95bee073d6533e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetPosition</name></member>
+      <member refid="classwx_window_1ad9a883e20827fa717e92fc2f8bd99d6b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetPosition</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_window_1aa4cb912eb28be31279fa1b95747c6d02" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetPrevSibling</name></member>
+      <member refid="classwx_window_1ac8809904bb379c32c33c79fbe38745eb" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetRect</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetRefData</name></member>
+      <member refid="classwx_sash_window_1a2a68532a10d3f5c8c4b109564fcdb69c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetSashVisible</name></member>
+      <member refid="classwx_window_1abd39ef50fbc1ef3771f695e7322e8c1d" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetScreenPosition</name></member>
+      <member refid="classwx_window_1a32074a2c677ebadb1ed6e92ab172656c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetScreenPosition</name></member>
+      <member refid="classwx_window_1a5c0e45fac07ac4cf29eefa108337a110" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetScreenRect</name></member>
+      <member refid="classwx_window_1a3e23d10c17943fd873d0acb472db0caa" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetScrollPos</name></member>
+      <member refid="classwx_window_1a067d2a38efbf2f535f717f1027003281" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetScrollRange</name></member>
+      <member refid="classwx_window_1a10d24c60525a1c612cd775fc44dd1953" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetScrollThumb</name></member>
+      <member refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetSize</name></member>
+      <member refid="classwx_window_1a66e144ed8ab9a20e080ae6c69fc7015c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetSize</name></member>
+      <member refid="classwx_window_1ad8284cce1a2afe57724b52a89d7fac2f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetSizer</name></member>
+      <member refid="classwx_window_1ac9cd7b4472d5419e518f69311914466f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetTextExtent</name></member>
+      <member refid="classwx_window_1a79e5f88a2408871663d4ab0405cd35f6" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetTextExtent</name></member>
+      <member refid="classwx_window_1a0b31a21532407cf809d73aa09f34235c" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetThemeEnabled</name></member>
+      <member refid="classwx_window_1aae94155ccf8a6e4e72ad08527c89ba89" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetToolTip</name></member>
+      <member refid="classwx_window_1ad1a9c53c8e7e5010874f15b8ff4a6568" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetToolTipText</name></member>
+      <member refid="classwx_window_1a7e32d9a9ffd058c931db20416bc55baa" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetUpdateClientRect</name></member>
+      <member refid="classwx_window_1aa982adbcebfa7bc73fbae7465132115b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetUpdateRegion</name></member>
+      <member refid="classwx_window_1a6a332586346cb9ece4a8fe058a7b88c4" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetValidator</name></member>
+      <member refid="classwx_window_1a614d32c464296b7d6caabcafc18deb97" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetVirtualSize</name></member>
+      <member refid="classwx_window_1a2628c6f1f4aecb790f0c86622ebf4d56" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetVirtualSize</name></member>
+      <member refid="classwx_window_1afd861e553190e22a76d3d40ee5e8d628" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetWindowBorderSize</name></member>
+      <member refid="classwx_window_1a994147d8294bd7d5a32c825d5692af28" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetWindowStyle</name></member>
+      <member refid="classwx_window_1a0a0e81677bf2f0de5982a634e11d9a69" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>GetWindowStyleFlag</name></member>
+      <member refid="classwx_window_1aafcccd0d5d31651484df02453c53361c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>GetWindowVariant</name></member>
+      <member refid="classwx_window_1a89d1b079de97aac170e999692095872c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>HandleAsNavigationKey</name></member>
+      <member refid="classwx_window_1a665731bbfa46a72c215b04df60216ef1" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>HandleWindowEvent</name></member>
+      <member refid="classwx_sash_window_1a6cbd57e36ac74497b6c250f88722ccfa" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>HasBorder</name></member>
+      <member refid="classwx_window_1a9b44f61543b77317f9820e06856c5514" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>HasCapture</name></member>
+      <member refid="classwx_window_1ae30b415c1ef526563161efea5b78d640" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>HasExtraStyle</name></member>
+      <member refid="classwx_window_1a62ba2fb9be6422bf06bb7db5871d551f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>HasFlag</name></member>
+      <member refid="classwx_window_1a4e0abff99d64d2a595ee0ab4b415bbd6" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>HasFocus</name></member>
+      <member refid="classwx_window_1abe1522483478b1f777ad8ef34fa7c44a" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>HasMultiplePages</name></member>
+      <member refid="classwx_window_1a950847ecf2d488d83c14a74a3906f668" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>HasScrollbar</name></member>
+      <member refid="classwx_window_1ab9cbcb6d6f4a272c2f0342e69a13b59a" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>HasTransparentBackground</name></member>
+      <member refid="classwx_window_1a7ed103df04014cb3c59c6a3fb4d95328" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Hide</name></member>
+      <member refid="classwx_window_1a5326fbb26557a224507a1c06e5640e89" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>HideWithEffect</name></member>
+      <member refid="classwx_window_1a6a026b2a16a9f050deddd44e5586762c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>HitTest</name></member>
+      <member refid="classwx_window_1a44f4d85f42fac6090a42cafd40f24ff5" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>HitTest</name></member>
+      <member refid="classwx_window_1a9fd5b6520c1b30eb8e82bb5d56bc24c0" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>InformFirstDirection</name></member>
+      <member refid="classwx_window_1a6b1bf9e099704e7a493b8c4666b1f7f7" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>InheritAttributes</name></member>
+      <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>InitDialog</name></member>
+      <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>InvalidateBestSize</name></member>
+      <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsDoubleBuffered</name></member>
+      <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsEnabled</name></member>
+      <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a31af79f647cbec4950ce31620db51753" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a4a23e724619ec070f7d5c45ba21529d5" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a4da9a2d13534535aaf7b45200ee8728e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a866c62cc23d8de88e952aad5db4d1a61" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsFrozen</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsKindOf</name></member>
+      <member refid="classwx_window_1ae9b31dec54256b68574a4bba8cca94ab" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsRetained</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsSameAs</name></member>
+      <member refid="classwx_window_1aeeef7eaf8c8f1ec1a54e7a68d63923d0" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsScrollbarAlwaysShown</name></member>
+      <member refid="classwx_window_1a95af3a39aa422580dae156ed281a7e88" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsShown</name></member>
+      <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsShownOnScreen</name></member>
+      <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsThisEnabled</name></member>
+      <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Layout</name></member>
+      <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>LineDown</name></member>
+      <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>LineUp</name></member>
+      <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Lower</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>m_refData</name></member>
+      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>MakeModal</name></member>
+      <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Move</name></member>
+      <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Move</name></member>
+      <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>MoveAfterInTabOrder</name></member>
+      <member refid="classwx_window_1af2b92f61cd9f9e2e0efe4cce307e25b1" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>MoveBeforeInTabOrder</name></member>
+      <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Navigate</name></member>
+      <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>NavigateIn</name></member>
+      <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>NewControlId</name></member>
+      <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>OnInternalIdle</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>operator new</name></member>
+      <member refid="classwx_window_1a61e78cb48ece3e9e989e37b475ac1e35" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>PageDown</name></member>
+      <member refid="classwx_window_1aa7c2bbc480d8863d9f139c01d7abc1b1" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>PageUp</name></member>
+      <member refid="classwx_window_1ac45c1f4cf96c70779764c14cf528790b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>PopEventHandler</name></member>
+      <member refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>PopupMenu</name></member>
+      <member refid="classwx_window_1a834bcdfd41f5e5370ebd9ea401c92900" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>PopupMenu</name></member>
+      <member refid="classwx_window_1ab1943463e6661f97e072b43337c6cc09" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>PostSizeEvent</name></member>
+      <member refid="classwx_window_1aa080d8dcda58bcc6ea2abd8bea592e3e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>PostSizeEventToParent</name></member>
+      <member refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_window_1a7cbee38944dab02d753a4dba74230443" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_window_1a9350b3a9c2e380707eaea92cedad12a5" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>ProcessThreadEvent</name></member>
+      <member refid="classwx_window_1a0a76891d726ad5f9a729e27e4eab2b57" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ProcessWindowEvent</name></member>
+      <member refid="classwx_window_1a0a11aa4a50491d051f947e2618e52178" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ProcessWindowEventLocally</name></member>
+      <member refid="classwx_window_1a398c11ab9af7956067a964f560d1978c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>PushEventHandler</name></member>
+      <member refid="classwx_window_1a69e450f21b0d7013269ec1a4771f043b" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>QueueEvent</name></member>
+      <member refid="classwx_window_1a54808c933f22a891c5db646f6209fa4d" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Raise</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Ref</name></member>
+      <member refid="classwx_window_1a29dc7251746154c821b17841b9877830" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Refresh</name></member>
+      <member refid="classwx_window_1ab0ae6b9898cd261c39ebeb2891aa3d67" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>RefreshRect</name></member>
+      <member refid="classwx_window_1a53ca57872dac5851ea6ba55a494b899b" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>RegisterHotKey</name></member>
+      <member refid="classwx_window_1adcc538819c11ecb3bd3e4e5d13c5ba7a" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ReleaseMouse</name></member>
+      <member refid="classwx_window_1acee332ed4368d26e8bc3db5767c1240a" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>RemoveChild</name></member>
+      <member refid="classwx_window_1aacbfe424fa527966b954229a1db96ab5" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>RemoveEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_window_1a7977b749284e65aecfed2ce146799cb9" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Reparent</name></member>
+      <member refid="classwx_window_1a0f9814efc50316b4c57b7ec2bf78b716" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_window_1a65531bbc52f9508b0e31a9c08c97bd31" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ScreenToClient</name></member>
+      <member refid="classwx_window_1a59d02b70a9107433836a977c4c0cd7a9" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ScreenToClient</name></member>
+      <member refid="classwx_window_1aa5c5b683bd11a0d9771bd2fcdf643c64" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>ScrollLines</name></member>
+      <member refid="classwx_window_1adc0ed5e1c4925223cb901ced14b8343d" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>ScrollPages</name></member>
+      <member refid="classwx_window_1ab7be4956ff22da37fff2b8aaa581045c" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>ScrollWindow</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_window_1a7e21eb6a0819281b29134a6432d064fe" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>SendDestroyEvent</name></member>
+      <member refid="classwx_window_1a237f739b21937d3e8f1bff5fa82ba4c2" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SendSizeEvent</name></member>
+      <member refid="classwx_window_1af7987987978fd8a93df88b29b19a6388" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SendSizeEventToParent</name></member>
+      <member refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetAcceleratorTable</name></member>
+      <member refid="classwx_window_1a413220ead41f05a2ec2cfe10b3d573df" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetAccessible</name></member>
+      <member refid="classwx_window_1ad369fe1db5c20f9d9edff7b5eb1f7226" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetAutoLayout</name></member>
+      <member refid="classwx_window_1a37219df52734626e23401fd83b25d8a0" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetBackgroundColour</name></member>
+      <member refid="classwx_window_1af14f8fd2ed2d30a9bbb5d4f9fd6594ec" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetBackgroundStyle</name></member>
+      <member refid="classwx_window_1a2b8b2e99231a0ec1a05f5066f1b7f3d8" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetCanFocus</name></member>
+      <member refid="classwx_window_1acfef5e1cada92c73e2937b84ff57ff57" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetCaret</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetClientObject</name></member>
+      <member refid="classwx_window_1aa59f715217fffa5bcf14cd97f92e7840" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetClientSize</name></member>
+      <member refid="classwx_window_1ab2aadc857ee7f55f47ab9a8669e3beb7" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetClientSize</name></member>
+      <member refid="classwx_window_1a582d4d1f60a3f777627773b2da0bb2ef" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetClientSize</name></member>
+      <member refid="classwx_window_1afa75d111bbd9a68f837101a5fbed60a7" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetConstraints</name></member>
+      <member refid="classwx_window_1a0ccf78fe06722b500adfb7f36b8ce443" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetContainingSizer</name></member>
+      <member refid="classwx_window_1ad83f9c51c6f31e0e05f598b47a19ed98" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetCursor</name></member>
+      <member refid="classwx_window_1a5477a89c17fdcc3ec6c90274796eb1c3" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetDoubleBuffered</name></member>
+      <member refid="classwx_window_1ae34b4d45433ca8287df0e47d46411e58" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetDropTarget</name></member>
+      <member refid="classwx_window_1af6c84b7679183b377ba27a52a2f708b4" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_window_1ae9655f7c35ce7ac89cac2f6c0054b103" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetExtraStyle</name></member>
+      <member refid="classwx_window_1a697f9f8d3ff389790f1c74b59bcb1d75" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetFocus</name></member>
+      <member refid="classwx_window_1a6fa03f82d7917dff482754d0d2e2b1c8" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetFocusFromKbd</name></member>
+      <member refid="classwx_window_1a9ab11e7da57a1d08918aa75fc33f6ad3" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetFont</name></member>
+      <member refid="classwx_window_1a69f1e1c7ddd370d72e68c70f13ac8de9" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetForegroundColour</name></member>
+      <member refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetHelpText</name></member>
+      <member refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetId</name></member>
+      <member refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>SetInitialBestSize</name></member>
+      <member refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetInitialSize</name></member>
+      <member refid="classwx_window_1aa00ffea9f53587f29ae343adde033b8e" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetLabel</name></member>
+      <member refid="classwx_window_1a7d494549f7fcfed44af95f8ee364c1f9" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetLayoutDirection</name></member>
+      <member refid="classwx_window_1a664e5b2ddd817d9c58788269fe1d8479" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetMaxClientSize</name></member>
+      <member refid="classwx_sash_window_1a31a5d16924b62648c44d966ff9a87414" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetMaximumSizeX</name></member>
+      <member refid="classwx_sash_window_1a611a11221cd17757a44e944dd4ee90a5" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetMaximumSizeY</name></member>
+      <member refid="classwx_window_1a38b496214d728a3212afadee5ed51606" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetMaxSize</name></member>
+      <member refid="classwx_window_1a6e35ba44b97e374dfffa460d41d94b31" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetMinClientSize</name></member>
+      <member refid="classwx_sash_window_1a1de8e31899aacc41f9bffa7f25c2f9f7" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetMinimumSizeX</name></member>
+      <member refid="classwx_sash_window_1a29bdb16095ffd1de0eb4d90ff3afa153" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetMinimumSizeY</name></member>
+      <member refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetMinSize</name></member>
+      <member refid="classwx_window_1af80875cda5e1af98dcd7c8e712e3c800" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetName</name></member>
+      <member refid="classwx_window_1aeab905f61df7004c1b76a3351dca9e96" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_window_1a9a3f9d8477aab1d9176cd66ee56e75d9" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetOwnBackgroundColour</name></member>
+      <member refid="classwx_window_1a89a4f62f23c1e7c845b8d07cecae4c43" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetOwnFont</name></member>
+      <member refid="classwx_window_1a53f4a878e4e2d440bd00543f8014aaaa" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetOwnForegroundColour</name></member>
+      <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetPalette</name></member>
+      <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetPosition</name></member>
+      <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetRefData</name></member>
+      <member refid="classwx_sash_window_1a4bd1cfe1fdad921435a1536f07cdfa1e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetSashBorder</name></member>
+      <member refid="classwx_sash_window_1a2d1c7d1912a7e0107501af0281d02cb3" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetSashVisible</name></member>
+      <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetScrollbar</name></member>
+      <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetScrollPos</name></member>
+      <member refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a8e383bc6d5ca008965922a36c676aea0" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a030a928cd854de3def97c5720f14695b" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a2ea9b25296d591aea4470c8fd99ff7cb" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a307329dc3b10f5584aeb2cbce9293ffd" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetSizeHints</name></member>
+      <member refid="classwx_window_1ae813c640e1e2bc6014423247050846cf" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetSizeHints</name></member>
+      <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetSizer</name></member>
+      <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetSizerAndFit</name></member>
+      <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetThemeEnabled</name></member>
+      <member refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetToolTip</name></member>
+      <member refid="classwx_window_1a494e0b7cfca9299caa40e847767e7357" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetToolTip</name></member>
+      <member refid="classwx_window_1ac8cf4398cec50ac36634760f45a0656f" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetTransparent</name></member>
+      <member refid="classwx_window_1a00066c70049a7be3ce6b648d206e6432" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetValidator</name></member>
+      <member refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetVirtualSize</name></member>
+      <member refid="classwx_window_1a8e95201edebe43b9623bd3bdc555af4d" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetVirtualSize</name></member>
+      <member refid="classwx_window_1a306af30adec68689f74ed537b4f9d5fd" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetWindowStyle</name></member>
+      <member refid="classwx_window_1aee2cf342f80523432e7f2299d299451b" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>SetWindowStyleFlag</name></member>
+      <member refid="classwx_window_1acd955418c336e73b3e32cadf1ca46e29" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>SetWindowVariant</name></member>
+      <member refid="classwx_window_1a0c43a27fa04f9c17cc28fde71fdba490" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>ShouldInheritColours</name></member>
+      <member refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Show</name></member>
+      <member refid="classwx_window_1a596b1715edfc7609f352b2e000ecbaec" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>ShowWithEffect</name></member>
+      <member refid="classwx_window_1a279a532124073261b28131b6afb59a1e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Thaw</name></member>
+      <member refid="classwx_window_1a8a4fa47129de552bfec37db8c69688a2" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>ToggleWindowStyle</name></member>
+      <member refid="classwx_window_1ab8e51f36e7d8790b361c8d8c6f37b1ad" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>TransferDataFromWindow</name></member>
+      <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>TransferDataToWindow</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxSashWindow</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxSashWindow</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>UnRef</name></member>
+      <member refid="classwx_window_1a695f60d65f8f6c12e3c3645ad9c0c35b" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>UnregisterHotKey</name></member>
+      <member refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>UnreserveControlId</name></member>
+      <member refid="classwx_window_1ae75712451673658b0a533480bf5eeaa4" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>UnsetToolTip</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>UnShare</name></member>
+      <member refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Update</name></member>
+      <member refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>UpdateWindowUI</name></member>
+      <member refid="classwx_window_1ac87f253253a0c5eb498871c83afa40fd" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>Validate</name></member>
+      <member refid="classwx_window_1ac500152d1eca3a2ee98a68e7ea7372b5" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>WarpPointer</name></member>
+      <member refid="classwx_window_1aa456f800c9dde3b2361cad0abf54bc27" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>WindowToClientSize</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>wxObject</name></member>
+      <member refid="classwx_sash_window_1a49c7b9a829ab48237bbe479e5011f297" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>wxSashWindow</name></member>
+      <member refid="classwx_sash_window_1aed974ee33685e7a209f061e39cf13451" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>wxSashWindow</name></member>
+      <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>wxWindow</name></member>
+      <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxSashWindow</scope><name>wxWindow</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>~wxObject</name></member>
+      <member refid="classwx_sash_window_1a64f2c2a520b39f27cf25f23026ab15e0" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>~wxSashWindow</name></member>
+      <member refid="classwx_window_1a0c2a46181a89c349327f0b276f5ef8d7" prot="public" virt="virtual"><scope>wxSashWindow</scope><name>~wxWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_grid_cell_float_renderer" kind="class" prot="public">
+    <compoundname>wxGridCellFloatRenderer</compoundname>
+    <basecompoundref refid="classwx_grid_cell_string_renderer" prot="public" virt="non-virtual">wxGridCellStringRenderer</basecompoundref>
+    <includes local="no">wx/grid.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_grid_cell_float_renderer_1af59b4b46093f250aa77b9aac9a30e61d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridCellFloatRenderer::wxGridCellFloatRenderer</definition>
+        <argsstring>(int width=-1, int precision=-1, int format=wxGRID_FLOAT_FORMAT_DEFAULT)</argsstring>
+        <name>wxGridCellFloatRenderer</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>format</declname>
+          <defval>wxGRID_FLOAT_FORMAT_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Float cell renderer ctor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum number of characters to be shown. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>precision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of digits after the decimal dot. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format used to display the string, must be a combination of <ref refid="interface_2wx_2grid_8h_1a6594fb49b365ff74b4f51d0a024d1105" kindref="member">wxGridCellFloatFormat</ref> enum elements. This parameter is only available since wxWidgets 2.9.3. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_float_renderer_1a0546923deb3a5aadfe91c32c36717629" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridCellFloatRenderer::GetFormat</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFormat</name>
+        <briefdescription>
+<para>Returns the specifier used to format the data to string. </para>        </briefdescription>
+        <detaileddescription>
+<para>The returned value is a combination of <ref refid="interface_2wx_2grid_8h_1a6594fb49b365ff74b4f51d0a024d1105" kindref="member">wxGridCellFloatFormat</ref> elements.</para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_float_renderer_1a2d55693158876a25e43e38eacbe32deb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridCellFloatRenderer::GetPrecision</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPrecision</name>
+        <briefdescription>
+<para>Returns the precision. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_float_renderer_1a1af5d5244f1c906aa9ef7eb11fca5b64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridCellFloatRenderer::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Returns the width. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_float_renderer_1a1a842e454dd25b0d287686487a8c20ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellFloatRenderer::SetFormat</definition>
+        <argsstring>(int format)</argsstring>
+        <name>SetFormat</name>
+        <param>
+          <type>int</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Set the format to use for display the number. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Must be a combination of <ref refid="interface_2wx_2grid_8h_1a6594fb49b365ff74b4f51d0a024d1105" kindref="member">wxGridCellFloatFormat</ref> enum elements.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_float_renderer_1aa95d698f378dc182efd0e0760881bcc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridCellFloatRenderer::SetParameters</definition>
+        <argsstring>(const wxString &amp;params)</argsstring>
+        <name>SetParameters</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>The parameters string format is &quot;width[,precision[,format]]&quot; where <computeroutput>format</computeroutput> should be choosen beween f|e|g|E|G (f is used by default). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_float_renderer_1aa007a50469b1dd84af29d53551fc66ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellFloatRenderer::SetPrecision</definition>
+        <argsstring>(int precision)</argsstring>
+        <name>SetPrecision</name>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+        </param>
+        <briefdescription>
+<para>Sets the precision. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_float_renderer_1ab8cfe22849be2893627f169868062c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellFloatRenderer::SetWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Sets the width. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class may be used to format floating point data in a cell. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_renderer" kindref="compound">wxGridCellAutoWrapStringRenderer</ref>, <ref refid="classwx_grid_cell_bool_renderer" kindref="compound">wxGridCellBoolRenderer</ref>, <ref refid="classwx_grid_cell_date_time_renderer" kindref="compound">wxGridCellDateTimeRenderer</ref>, <ref refid="classwx_grid_cell_enum_renderer" kindref="compound">wxGridCellEnumRenderer</ref>, <ref refid="classwx_grid_cell_number_renderer" kindref="compound">wxGridCellNumberRenderer</ref>, <ref refid="classwx_grid_cell_string_renderer" kindref="compound">wxGridCellStringRenderer</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6700">
+        <label>wxGridCellFloatRenderer</label>
+        <link refid="classwx_grid_cell_float_renderer"/>
+        <childnode refid="6701" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6702">
+        <label>wxGridCellRenderer</label>
+        <link refid="classwx_grid_cell_renderer"/>
+      </node>
+      <node id="6701">
+        <label>wxGridCellStringRenderer</label>
+        <link refid="classwx_grid_cell_string_renderer"/>
+        <childnode refid="6702" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6703">
+        <label>wxGridCellFloatRenderer</label>
+        <link refid="classwx_grid_cell_float_renderer"/>
+        <childnode refid="6704" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6705">
+        <label>wxGridCellRenderer</label>
+        <link refid="classwx_grid_cell_renderer"/>
+      </node>
+      <node id="6704">
+        <label>wxGridCellStringRenderer</label>
+        <link refid="classwx_grid_cell_string_renderer"/>
+        <childnode refid="6705" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="220" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="219" bodyend="281"/>
+    <listofallmembers>
+      <member refid="classwx_grid_cell_renderer_1a55c1db8c06f8cb994beb90615d5264f7" prot="public" virt="pure-virtual"><scope>wxGridCellFloatRenderer</scope><name>Clone</name></member>
+      <member refid="classwx_grid_cell_renderer_1a1848512422742bbbf9dec1b173bfc752" prot="public" virt="pure-virtual"><scope>wxGridCellFloatRenderer</scope><name>Draw</name></member>
+      <member refid="classwx_grid_cell_renderer_1a747661d7b50f6bc5d67a6ac218b12ed8" prot="public" virt="pure-virtual"><scope>wxGridCellFloatRenderer</scope><name>GetBestSize</name></member>
+      <member refid="classwx_grid_cell_float_renderer_1a0546923deb3a5aadfe91c32c36717629" prot="public" virt="non-virtual"><scope>wxGridCellFloatRenderer</scope><name>GetFormat</name></member>
+      <member refid="classwx_grid_cell_float_renderer_1a2d55693158876a25e43e38eacbe32deb" prot="public" virt="non-virtual"><scope>wxGridCellFloatRenderer</scope><name>GetPrecision</name></member>
+      <member refid="classwx_grid_cell_float_renderer_1a1af5d5244f1c906aa9ef7eb11fca5b64" prot="public" virt="non-virtual"><scope>wxGridCellFloatRenderer</scope><name>GetWidth</name></member>
+      <member refid="classwx_grid_cell_float_renderer_1a1a842e454dd25b0d287686487a8c20ce" prot="public" virt="non-virtual"><scope>wxGridCellFloatRenderer</scope><name>SetFormat</name></member>
+      <member refid="classwx_grid_cell_float_renderer_1aa95d698f378dc182efd0e0760881bcc8" prot="public" virt="virtual"><scope>wxGridCellFloatRenderer</scope><name>SetParameters</name></member>
+      <member refid="classwx_grid_cell_float_renderer_1aa007a50469b1dd84af29d53551fc66ce" prot="public" virt="non-virtual"><scope>wxGridCellFloatRenderer</scope><name>SetPrecision</name></member>
+      <member refid="classwx_grid_cell_float_renderer_1ab8cfe22849be2893627f169868062c2b" prot="public" virt="non-virtual"><scope>wxGridCellFloatRenderer</scope><name>SetWidth</name></member>
+      <member refid="classwx_grid_cell_float_renderer_1af59b4b46093f250aa77b9aac9a30e61d" prot="public" virt="non-virtual"><scope>wxGridCellFloatRenderer</scope><name>wxGridCellFloatRenderer</name></member>
+      <member refid="classwx_grid_cell_string_renderer_1a70b06ac882fc1f7481ae66af4a87bf16" prot="public" virt="non-virtual"><scope>wxGridCellFloatRenderer</scope><name>wxGridCellStringRenderer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

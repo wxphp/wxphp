@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="tarstrm_8h" kind="file">
+    <compoundname>tarstrm.h</compoundname>
+    <innerclass refid="classwx_tar_input_stream" prot="public">wxTarInputStream</innerclass>
+    <innerclass refid="classwx_tar_class_factory" prot="public">wxTarClassFactory</innerclass>
+    <innerclass refid="classwx_tar_output_stream" prot="public">wxTarOutputStream</innerclass>
+    <innerclass refid="classwx_tar_entry" prot="public">wxTarEntry</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" prot="public" static="no">
+        <name>wxTarType</name>
+        <enumvalue id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865fa54b62efa5396cf220845a23962d24da8" prot="public">
+          <name>wxTAR_REGTYPE</name>
+          <initializer> &apos;0&apos;</initializer>
+          <briefdescription>
+<para>regular file </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865fa8085ef0999833d132d738ceb361802bd" prot="public">
+          <name>wxTAR_LNKTYPE</name>
+          <initializer> &apos;1&apos;</initializer>
+          <briefdescription>
+<para>hard link </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865fac7d5732bc06a3722075d7e57048fa124" prot="public">
+          <name>wxTAR_SYMTYPE</name>
+          <initializer> &apos;2&apos;</initializer>
+          <briefdescription>
+<para>symbolic link </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865fab959b00243568db1edddf176157607d1" prot="public">
+          <name>wxTAR_CHRTYPE</name>
+          <initializer> &apos;3&apos;</initializer>
+          <briefdescription>
+<para>character special </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865fa0c3325ae576a70b0defac161e61d55ad" prot="public">
+          <name>wxTAR_BLKTYPE</name>
+          <initializer> &apos;4&apos;</initializer>
+          <briefdescription>
+<para>block special </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865fad14f6f211454536162df792801e546a9" prot="public">
+          <name>wxTAR_DIRTYPE</name>
+          <initializer> &apos;5&apos;</initializer>
+          <briefdescription>
+<para>directory </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865fa2aa7210ed1d2452d0e48d108199adc3b" prot="public">
+          <name>wxTAR_FIFOTYPE</name>
+          <initializer> &apos;6&apos;</initializer>
+          <briefdescription>
+<para>named pipe </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865fa62e3c10da7e52f9c368c4415d5acd101" prot="public">
+          <name>wxTAR_CONTTYPE</name>
+          <initializer> &apos;7&apos;</initializer>
+          <briefdescription>
+<para>contiguous file </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para><ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> values </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="11" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="enum" id="tarstrm_8h_1afdc9a1d1de204d191ef3b8f6f786134d" prot="public" static="no">
+        <name>wxTarFormat</name>
+        <enumvalue id="tarstrm_8h_1afdc9a1d1de204d191ef3b8f6f786134dabbd2ee488432db5f7133226bd6271faf" prot="public">
+          <name>wxTAR_USTAR</name>
+          <briefdescription>
+<para>POSIX.1-1990 tar format. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tarstrm_8h_1afdc9a1d1de204d191ef3b8f6f786134daa5628067beb4ecb8acdfeb065583f47b" prot="public">
+          <name>wxTAR_PAX</name>
+          <briefdescription>
+<para>POSIX.1-2001 tar format. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Archive Formats (use wxTAR_PAX, it&apos;s backward compatible) used by <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="24" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h"/>
+  </compounddef>
+</doxygen>

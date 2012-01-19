@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_mouse_state" kind="class" prot="public">
+    <compoundname>wxMouseState</compoundname>
+    <basecompoundref refid="classwx_keyboard_state" prot="public" virt="non-virtual">wxKeyboardState</basecompoundref>
+    <derivedcompoundref refid="classwx_mouse_event" prot="public" virt="non-virtual">wxMouseEvent</derivedcompoundref>
+    <includes local="no">wx/mousestate.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_mouse_state_1aa3eff164b6e5407a6185e051ab26ac52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+        <definition>wxPoint wxMouseState::GetPosition</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPosition</name>
+        <briefdescription>
+<para>Returns the physical mouse position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1aa7eb40470d873e107e4e974c680e7fac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::GetPosition</definition>
+        <argsstring>(int *x, int *y) const </argsstring>
+        <name>GetPosition</name>
+        <param>
+          <type>int *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Returns the physical mouse position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_mouse_state_1a96a28a4a38917b132ea51bef03955b28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMouseState::wxMouseState</definition>
+        <argsstring>()</argsstring>
+        <name>wxMouseState</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a55fe9f10344704c1e146d45ee556beec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>wxCoord wxMouseState::GetX</definition>
+        <argsstring>() const </argsstring>
+        <name>GetX</name>
+        <briefdescription>
+<para>Returns X coordinate of the physical mouse event position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a877349a678a1f8dbc349975657146f18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>wxCoord wxMouseState::GetY</definition>
+        <argsstring>() const </argsstring>
+        <name>GetY</name>
+        <briefdescription>
+<para>Returns Y coordinate of the physical mouse event position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a7c1a0c5dd4b603a8acf060e9b62e4c1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMouseState::LeftIsDown</definition>
+        <argsstring>() const </argsstring>
+        <name>LeftIsDown</name>
+        <briefdescription>
+<para>Returns true if the left mouse button is currently down. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1ad6ddb394c20f1a826043dea8032e6845" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMouseState::MiddleIsDown</definition>
+        <argsstring>() const </argsstring>
+        <name>MiddleIsDown</name>
+        <briefdescription>
+<para>Returns true if the middle mouse button is currently down. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a0ead92ed0f5fd12a40d98366933a646f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMouseState::RightIsDown</definition>
+        <argsstring>() const </argsstring>
+        <name>RightIsDown</name>
+        <briefdescription>
+<para>Returns true if the right mouse button is currently down. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a1fda1794b5f7c35c7b41bfc216516ea7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMouseState::Aux1IsDown</definition>
+        <argsstring>() const </argsstring>
+        <name>Aux1IsDown</name>
+        <briefdescription>
+<para>Returns true if the first extra button mouse button is currently down. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1ae1ad1e41d58a0763e406a3cb7e65a251" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMouseState::Aux2IsDown</definition>
+        <argsstring>() const </argsstring>
+        <name>Aux2IsDown</name>
+        <briefdescription>
+<para>Returns true if the second extra button mouse button is currently down. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a095c9989c4fc607295683882f9d94efa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetX</definition>
+        <argsstring>(wxCoord x)</argsstring>
+        <name>SetX</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1ad67621bb4a134ec32c0a5419474714e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetY</definition>
+        <argsstring>(wxCoord y)</argsstring>
+        <name>SetY</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a3af09115e9db255f820b54077da51cfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetPosition</definition>
+        <argsstring>(wxPoint pos)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1ab7f0e3c1b439df3069b9ed2438ab3fb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetLeftDown</definition>
+        <argsstring>(bool down)</argsstring>
+        <name>SetLeftDown</name>
+        <param>
+          <type>bool</type>
+          <declname>down</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a642c369edc8cc256898684b9ffe47c2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetMiddleDown</definition>
+        <argsstring>(bool down)</argsstring>
+        <name>SetMiddleDown</name>
+        <param>
+          <type>bool</type>
+          <declname>down</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a3dcc8691d8b73a015768ec5472346ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetRightDown</definition>
+        <argsstring>(bool down)</argsstring>
+        <name>SetRightDown</name>
+        <param>
+          <type>bool</type>
+          <declname>down</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a9f87d1187687b2e8d96ea14a93fdc397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetAux1Down</definition>
+        <argsstring>(bool down)</argsstring>
+        <name>SetAux1Down</name>
+        <param>
+          <type>bool</type>
+          <declname>down</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1ab0f55cf7fb235c4bb1bcd6dc4fd27cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetAux2Down</definition>
+        <argsstring>(bool down)</argsstring>
+        <name>SetAux2Down</name>
+        <param>
+          <type>bool</type>
+          <declname>down</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_state_1a59d981aa6726c5f7312b558159f25ced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMouseState::SetState</definition>
+        <argsstring>(const wxMouseState &amp;state)</argsstring>
+        <name>SetState</name>
+        <param>
+          <type>const <ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the mouse state. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class is used as a base class by <ref refid="classwx_mouse_event" kindref="compound">wxMouseEvent</ref> and so its methods may be used to obtain information about the mouse state for the mouse events. It also inherits from <ref refid="classwx_keyboard_state" kindref="compound">wxKeyboardState</ref> and so carries information about the keyboard state and not only the mouse one.</para><para>This class is implemented entirely inline in &lt;<ref refid="mousestate_8h" kindref="compound">wx/mousestate.h</ref>&gt; and thus has no linking requirements.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga6fb42677c51d509690e7062b9dadaa25" kindref="member">wxGetMouseState()</ref>, <ref refid="classwx_mouse_event" kindref="compound">wxMouseEvent</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7854">
+        <label>wxKeyboardState</label>
+        <link refid="classwx_keyboard_state"/>
+      </node>
+      <node id="7855">
+        <label>wxMouseEvent</label>
+        <link refid="classwx_mouse_event"/>
+        <childnode refid="7853" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7853">
+        <label>wxMouseState</label>
+        <link refid="classwx_mouse_state"/>
+        <childnode refid="7854" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7857">
+        <label>wxKeyboardState</label>
+        <link refid="classwx_keyboard_state"/>
+      </node>
+      <node id="7856">
+        <label>wxMouseState</label>
+        <link refid="classwx_mouse_state"/>
+        <childnode refid="7857" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" bodystart="57" bodyend="121"/>
+    <listofallmembers>
+      <member refid="classwx_keyboard_state_1af71012a9fdbd32bbdc391c984ec5a588" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>AltDown</name></member>
+      <member refid="classwx_mouse_state_1a1fda1794b5f7c35c7b41bfc216516ea7" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>Aux1IsDown</name></member>
+      <member refid="classwx_mouse_state_1ae1ad1e41d58a0763e406a3cb7e65a251" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>Aux2IsDown</name></member>
+      <member refid="classwx_keyboard_state_1a05240fdaf0b5cc9db5f8207d0b8062de" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>CmdDown</name></member>
+      <member refid="classwx_keyboard_state_1ae25436ceab56c88411dac479106b18dd" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>ControlDown</name></member>
+      <member refid="classwx_keyboard_state_1a44b1e849563ebf43e073915a447e4aa5" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>GetModifiers</name></member>
+      <member refid="classwx_mouse_state_1aa3eff164b6e5407a6185e051ab26ac52" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>GetPosition</name></member>
+      <member refid="classwx_mouse_state_1aa7eb40470d873e107e4e974c680e7fac" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>GetPosition</name></member>
+      <member refid="classwx_mouse_state_1a55fe9f10344704c1e146d45ee556beec" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>GetX</name></member>
+      <member refid="classwx_mouse_state_1a877349a678a1f8dbc349975657146f18" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>GetY</name></member>
+      <member refid="classwx_keyboard_state_1a85ae7433cada04555d88704066a2f4fb" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>HasModifiers</name></member>
+      <member refid="classwx_mouse_state_1a7c1a0c5dd4b603a8acf060e9b62e4c1a" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>LeftIsDown</name></member>
+      <member refid="classwx_keyboard_state_1a8875366f7792d7fd5308cc240f5f0c5f" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>MetaDown</name></member>
+      <member refid="classwx_mouse_state_1ad6ddb394c20f1a826043dea8032e6845" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>MiddleIsDown</name></member>
+      <member refid="classwx_keyboard_state_1ab0488a268111109cb6ff0ebd09e91ad1" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>RawControlDown</name></member>
+      <member refid="classwx_mouse_state_1a0ead92ed0f5fd12a40d98366933a646f" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>RightIsDown</name></member>
+      <member refid="classwx_keyboard_state_1a6ba12f87c2c95364528ab152fa813de0" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetAltDown</name></member>
+      <member refid="classwx_mouse_state_1a9f87d1187687b2e8d96ea14a93fdc397" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetAux1Down</name></member>
+      <member refid="classwx_mouse_state_1ab0f55cf7fb235c4bb1bcd6dc4fd27cbd" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetAux2Down</name></member>
+      <member refid="classwx_keyboard_state_1ac9e9f195b68f79f4aac683bb7eb620dd" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetControlDown</name></member>
+      <member refid="classwx_mouse_state_1ab7f0e3c1b439df3069b9ed2438ab3fb6" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetLeftDown</name></member>
+      <member refid="classwx_keyboard_state_1adb5578cce4dce054cd24c7eb3cd650e7" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetMetaDown</name></member>
+      <member refid="classwx_mouse_state_1a642c369edc8cc256898684b9ffe47c2c" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetMiddleDown</name></member>
+      <member refid="classwx_mouse_state_1a3af09115e9db255f820b54077da51cfc" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetPosition</name></member>
+      <member refid="classwx_keyboard_state_1a3a200bfbfaa31597f791e5bd57b99db6" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetRawControlDown</name></member>
+      <member refid="classwx_mouse_state_1a3dcc8691d8b73a015768ec5472346ce9" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetRightDown</name></member>
+      <member refid="classwx_keyboard_state_1a5a8f8337c65248310363aedf228303e9" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetShiftDown</name></member>
+      <member refid="classwx_mouse_state_1a59d981aa6726c5f7312b558159f25ced" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetState</name></member>
+      <member refid="classwx_mouse_state_1a095c9989c4fc607295683882f9d94efa" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetX</name></member>
+      <member refid="classwx_mouse_state_1ad67621bb4a134ec32c0a5419474714e4" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>SetY</name></member>
+      <member refid="classwx_keyboard_state_1a63b9ec3a2f30011471a7036853fc38f3" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>ShiftDown</name></member>
+      <member refid="classwx_keyboard_state_1aabf0c85adc4d56ca6364694eb26e55a8" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>wxKeyboardState</name></member>
+      <member refid="classwx_mouse_state_1a96a28a4a38917b132ea51bef03955b28" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>wxMouseState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

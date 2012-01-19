@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_f_s_file" kind="class" prot="public">
+    <compoundname>wxFSFile</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/filesys.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_f_s_file_1aae415b8ebe72e510ae3381bcacb880fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFSFile::wxFSFile</definition>
+        <argsstring>(wxInputStream *stream, const wxString &amp;location, const wxString &amp;mimetype, const wxString &amp;anchor, wxDateTime modif)</argsstring>
+        <name>wxFSFile</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>mimetype</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>anchor</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
+          <declname>modif</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>You probably won&apos;t use it. See the Note for details.</para><para>It is seldom used by the application programmer but you will need it if you are writing your own virtual FS. For example you may need something similar to <ref refid="classwx_memory_input_stream" kindref="compound">wxMemoryInputStream</ref>, but because <ref refid="classwx_memory_input_stream" kindref="compound">wxMemoryInputStream</ref> doesn&apos;t free the memory when destroyed and thus passing a memory stream pointer into <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> constructor would lead to memory leaks, you can write your own class derived from <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref>:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">wxMyFSFile<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_f_s_file" kindref="compound" tooltip="This class represents a single file opened by wxFileSystem.">wxFSFile</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*m_Mem;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxMyFSFile(.....)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~wxMyFSFile()<sp/>{free(m_Mem);}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>course<sp/>dtor<sp/>is<sp/>virtual<sp/>;-)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para>If you are not sure of the meaning of these params, see the description of the GetXXXX() functions.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input stream that will be used to access data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The full location (aka filename) of the file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mimetype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MIME type of this file. It may be left empty, in which case the type will be determined from file&apos;s extension (location must not be empty in this case). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>anchor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anchor. See <ref refid="classwx_f_s_file_1acba1c1772723faac368d0f0e9f002745" kindref="member">GetAnchor()</ref> for details. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>modif</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Modification date and time for this file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_s_file_1a1851086ffe35d936abd68cf33fca9985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+        <definition>wxInputStream* wxFSFile::DetachStream</definition>
+        <argsstring>()</argsstring>
+        <name>DetachStream</name>
+        <briefdescription>
+<para>Detaches the stream from the <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para>That is, the stream obtained with <ref refid="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" kindref="member">GetStream()</ref> will continue its existance after the <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> object is deleted.</para><para>You will have to delete the stream yourself. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_s_file_1acba1c1772723faac368d0f0e9f002745" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxFSFile::GetAnchor</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAnchor</name>
+        <briefdescription>
+<para>Returns anchor (if present). </para>        </briefdescription>
+        <detaileddescription>
+<para>The term of <bold>anchor</bold> can be easily explained using few examples:</para><para><verbatim>
+        index.htm#anchor                      // &apos;anchor&apos; is anchor
+        index/wx001.htm                       // NO anchor here!
+        archive/main.zip#zip:index.htm#global // &apos;global&apos;
+        archive/main.zip#zip:index.htm        // NO anchor here!
+        </verbatim></para><para>Usually an anchor is presented only if the MIME type is &apos;text/html&apos;. But it may have some meaning with other files; for example myanim.avi#200 may refer to position in animation or reality.wrl::MyView may refer to a predefined view in VRML. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_s_file_1a1f66063fc26adc1ede01ff072f46af5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxFSFile::GetLocation</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLocation</name>
+        <briefdescription>
+<para>Returns full location of the file, including path and protocol. </para>        </briefdescription>
+        <detaileddescription>
+<para>Examples: <verbatim>
+        http://www.wxwidgets.org
+        http://www.ms.mff.cuni.cz/~vsla8348/wxhtml/archive.zip#zip:info.txt
+        file:/home/vasek/index.htm
+        relative-file.htm
+        </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_s_file_1a85fc1cc7032d21d27457d0ee6824b398" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxFSFile::GetMimeType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMimeType</name>
+        <briefdescription>
+<para>Returns the MIME type of the content of this file. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is either extension-based (see <ref refid="classwx_mime_types_manager" kindref="compound">wxMimeTypesManager</ref>) or extracted from HTTP protocol Content-Type header. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_s_file_1ae3bda7d24f3f2b67ef7b4b0e20610fc6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
+        <definition>wxDateTime wxFSFile::GetModificationTime</definition>
+        <argsstring>() const </argsstring>
+        <name>GetModificationTime</name>
+        <briefdescription>
+<para>Returns time when this file was modified. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+        <definition>wxInputStream* wxFSFile::GetStream</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStream</name>
+        <briefdescription>
+<para>Returns pointer to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can use the returned stream to directly access data. You may suppose that the stream provide Seek and GetSize functionality (even in the case of the HTTP protocol which doesn&apos;t provide this by default. wxHtml uses local cache to work around this and to speed up the connection). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="306"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a single file opened by <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>It provides more informations than wxWidgets&apos; input streams (stream, filename, mime type, anchor).</para><para><simplesect kind="note"><para>Any pointer returned by a method of <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> is valid only as long as the <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> object exists. For example a call to <ref refid="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" kindref="member">GetStream()</ref> doesn&apos;t <emphasis>create</emphasis> the stream but only returns the pointer to it. In other words after 10 calls to <ref refid="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" kindref="member">GetStream()</ref> you will have obtained ten identical pointers.</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref>, <ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>, <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, <ref refid="overview__fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6447">
+        <label>wxFSFile</label>
+        <link refid="classwx_f_s_file"/>
+        <childnode refid="6448" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6448">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6449">
+        <label>wxFSFile</label>
+        <link refid="classwx_f_s_file"/>
+        <childnode refid="6450" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6450">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6451" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6451">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="200" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" bodystart="199" bodyend="307"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFSFile</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFSFile</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFSFile</scope><name>CreateRefData</name></member>
+      <member refid="classwx_f_s_file_1a1851086ffe35d936abd68cf33fca9985" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>DetachStream</name></member>
+      <member refid="classwx_f_s_file_1acba1c1772723faac368d0f0e9f002745" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>GetAnchor</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxFSFile</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_f_s_file_1a1f66063fc26adc1ede01ff072f46af5d" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>GetLocation</name></member>
+      <member refid="classwx_f_s_file_1a85fc1cc7032d21d27457d0ee6824b398" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>GetMimeType</name></member>
+      <member refid="classwx_f_s_file_1ae3bda7d24f3f2b67ef7b4b0e20610fc6" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>GetModificationTime</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>GetRefData</name></member>
+      <member refid="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>GetStream</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFSFile</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>Ref</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>UnShare</name></member>
+      <member refid="classwx_f_s_file_1aae415b8ebe72e510ae3381bcacb880fc" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>wxFSFile</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFSFile</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxFSFile</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

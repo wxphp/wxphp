@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="print_8h" kind="file">
+    <compoundname>print.h</compoundname>
+    <innerclass refid="classwx_preview_control_bar" prot="public">wxPreviewControlBar</innerclass>
+    <innerclass refid="classwx_preview_canvas" prot="public">wxPreviewCanvas</innerclass>
+    <innerclass refid="classwx_preview_frame" prot="public">wxPreviewFrame</innerclass>
+    <innerclass refid="classwx_print_preview" prot="public">wxPrintPreview</innerclass>
+    <innerclass refid="classwx_printer" prot="public">wxPrinter</innerclass>
+    <innerclass refid="classwx_printout" prot="public">wxPrintout</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="print_8h_1ad5bb1e32993261f9f12793c3050bb15f" prot="public" static="no">
+        <name>wxPreviewFrameModalityKind</name>
+        <enumvalue id="print_8h_1ad5bb1e32993261f9f12793c3050bb15fa076e1537b4643f79804fa5ab0e26fca7" prot="public">
+          <name>wxPreviewFrame_AppModal</name>
+          <briefdescription>
+<para>Disable all the other top level windows while the preview frame is shown. </para>          </briefdescription>
+          <detaileddescription>
+<para>This is the default behaviour. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="print_8h_1ad5bb1e32993261f9f12793c3050bb15facbdedca01f2d3e87172a7e4973b7813f" prot="public">
+          <name>wxPreviewFrame_WindowModal</name>
+          <briefdescription>
+<para>Disable only the parent window while the preview frame is shown. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="print_8h_1ad5bb1e32993261f9f12793c3050bb15fa170e896bb799b16c10d2ebf9aec3de9f" prot="public">
+          <name>wxPreviewFrame_NonModal</name>
+          <briefdescription>
+<para>Show the preview frame non-modally and don&apos;t disable any other windows. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Preview frame modality kind. </para>        </briefdescription>
+        <detaileddescription>
+<para>The elements of this enum can be used with <ref refid="classwx_preview_frame_1a3906d261e406fb21c4bdff861063fb31" kindref="member">wxPreviewFrame::Initialize()</ref> to indicate how should the preview frame be shown.</para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" line="129" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h" bodystart="128" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/print.h"/>
+  </compounddef>
+</doxygen>

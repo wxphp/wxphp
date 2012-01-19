@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__gdi" kind="group">
+    <compoundname>group_class_gdi</compoundname>
+    <title>Graphics Device Interface (GDI)</title>
+    <innerclass refid="structwx_font_metrics" prot="public">wxFontMetrics</innerclass>
+    <innerclass refid="classwx_graphics_gradient_stop" prot="public">wxGraphicsGradientStop</innerclass>
+    <innerclass refid="classwx_graphics_gradient_stops" prot="public">wxGraphicsGradientStops</innerclass>
+    <innerclass refid="classwx_animation" prot="public">wxAnimation</innerclass>
+    <innerclass refid="classwx_bitmap_handler" prot="public">wxBitmapHandler</innerclass>
+    <innerclass refid="classwx_bitmap" prot="public">wxBitmap</innerclass>
+    <innerclass refid="classwx_mask" prot="public">wxMask</innerclass>
+    <innerclass refid="classwx_brush" prot="public">wxBrush</innerclass>
+    <innerclass refid="classwx_brush_list" prot="public">wxBrushList</innerclass>
+    <innerclass refid="classwx_colour" prot="public">wxColour</innerclass>
+    <innerclass refid="classwx_cursor" prot="public">wxCursor</innerclass>
+    <innerclass refid="classwx_d_c" prot="public">wxDC</innerclass>
+    <innerclass refid="classwx_d_c_clipper" prot="public">wxDCClipper</innerclass>
+    <innerclass refid="classwx_d_c_brush_changer" prot="public">wxDCBrushChanger</innerclass>
+    <innerclass refid="classwx_d_c_pen_changer" prot="public">wxDCPenChanger</innerclass>
+    <innerclass refid="classwx_d_c_text_colour_changer" prot="public">wxDCTextColourChanger</innerclass>
+    <innerclass refid="classwx_d_c_font_changer" prot="public">wxDCFontChanger</innerclass>
+    <innerclass refid="classwx_font" prot="public">wxFont</innerclass>
+    <innerclass refid="classwx_font_list" prot="public">wxFontList</innerclass>
+    <innerclass refid="classwx_font_enumerator" prot="public">wxFontEnumerator</innerclass>
+    <innerclass refid="classwx_native_font_info" prot="public">wxNativeFontInfo</innerclass>
+    <innerclass refid="classwx_colour_database" prot="public">wxColourDatabase</innerclass>
+    <innerclass refid="classwx_g_d_i_object" prot="public">wxGDIObject</innerclass>
+    <innerclass refid="classwx_graphics_path" prot="public">wxGraphicsPath</innerclass>
+    <innerclass refid="classwx_graphics_object" prot="public">wxGraphicsObject</innerclass>
+    <innerclass refid="classwx_graphics_context" prot="public">wxGraphicsContext</innerclass>
+    <innerclass refid="classwx_graphics_renderer" prot="public">wxGraphicsRenderer</innerclass>
+    <innerclass refid="classwx_graphics_brush" prot="public">wxGraphicsBrush</innerclass>
+    <innerclass refid="classwx_graphics_font" prot="public">wxGraphicsFont</innerclass>
+    <innerclass refid="classwx_graphics_pen" prot="public">wxGraphicsPen</innerclass>
+    <innerclass refid="classwx_graphics_matrix" prot="public">wxGraphicsMatrix</innerclass>
+    <innerclass refid="classwx_icon" prot="public">wxIcon</innerclass>
+    <innerclass refid="classwx_icon_bundle" prot="public">wxIconBundle</innerclass>
+    <innerclass refid="classwx_icon_location" prot="public">wxIconLocation</innerclass>
+    <innerclass refid="classwx_image_handler" prot="public">wxImageHandler</innerclass>
+    <innerclass refid="classwx_image" prot="public">wxImage</innerclass>
+    <innerclass refid="classwx_image_list" prot="public">wxImageList</innerclass>
+    <innerclass refid="classwx_metafile" prot="public">wxMetafile</innerclass>
+    <innerclass refid="classwx_palette" prot="public">wxPalette</innerclass>
+    <innerclass refid="classwx_pen" prot="public">wxPen</innerclass>
+    <innerclass refid="classwx_pen_list" prot="public">wxPenList</innerclass>
+    <innerclass refid="classwx_pixel_data" prot="public">wxPixelData</innerclass>
+    <innerclass refid="classwx_region_iterator" prot="public">wxRegionIterator</innerclass>
+    <innerclass refid="classwx_region" prot="public">wxRegion</innerclass>
+    <innerclass refid="structwx_splitter_render_params" prot="public">wxSplitterRenderParams</innerclass>
+    <innerclass refid="structwx_header_button_params" prot="public">wxHeaderButtonParams</innerclass>
+    <innerclass refid="classwx_delegate_renderer_native" prot="public">wxDelegateRendererNative</innerclass>
+    <innerclass refid="classwx_renderer_native" prot="public">wxRendererNative</innerclass>
+    <innerclass refid="structwx_renderer_version" prot="public">wxRendererVersion</innerclass>
+    <innerclass refid="classwx_text_wrapper" prot="public">wxTextWrapper</innerclass>
+    <briefdescription>
+<para>The following are classes related to GDI (Graphics Device Interface) access. </para>    </briefdescription>
+    <detaileddescription>
+<para>They provide an API for drawing on device contexts, windows, and printing.</para><para>Related Overviews: <ref refid="overview__dc" kindref="compound">Device Contexts</ref>, <ref refid="overview__bitmap" kindref="compound">Bitmaps and Icons</ref></para><para>Related macros/global-functions group: <ref refid="group__group__funcmacro__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,639 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_rich_text_image_block" kind="class" prot="public">
+    <compoundname>wxRichTextImageBlock</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/richtext/richtextbuffer.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classwx_rich_text_image_block_1aa09ffafef0572f2ab2e029e58c76a6e3" prot="protected" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* wxRichTextImageBlock::m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3691" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3691" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_rich_text_image_block_1adfb01a1bb5ba93092f9b063b96a808bd" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t wxRichTextImageBlock::m_dataSize</definition>
+        <argsstring></argsstring>
+        <name>m_dataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3692" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3692" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_rich_text_image_block_1a995415534d9d716bf6334c6149029449" prot="protected" static="no" mutable="no">
+        <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+        <definition>wxBitmapType wxRichTextImageBlock::m_imageType</definition>
+        <argsstring></argsstring>
+        <name>m_imageType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3693" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3693" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a7551719271f8a90956cd6cb293ae44b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRichTextImageBlock::wxRichTextImageBlock</definition>
+        <argsstring>()</argsstring>
+        <name>wxRichTextImageBlock</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3547"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1aaa6037e883eace88a8594753c2631656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRichTextImageBlock::wxRichTextImageBlock</definition>
+        <argsstring>(const wxRichTextImageBlock &amp;block)</argsstring>
+        <name>wxRichTextImageBlock</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_image_block" kindref="compound">wxRichTextImageBlock</ref> &amp;</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3552"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1aadc501f66daafa5f50444b48f937ebe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxRichTextImageBlock::~wxRichTextImageBlock</definition>
+        <argsstring>()</argsstring>
+        <name>~wxRichTextImageBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3553"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a4e6bf780a310d5de3545ddd0d36a4153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextImageBlock::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Initialises the block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3558"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a91db1902768d838c1c11d712247c290a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextImageBlock::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Clears the block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3564"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a4a028d2960ed2a9c905b27c1a291941f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRichTextImageBlock::MakeImageBlock</definition>
+        <argsstring>(const wxString &amp;filename, wxBitmapType imageType, wxImage &amp;image, bool convertToJPEG=true)</argsstring>
+        <name>MakeImageBlock</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>imageType</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>convertToJPEG</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Load the original image into a memory block. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the image is not a JPEG, we must convert it into a JPEG to conserve space. If it&apos;s not a JPEG we can make use of <emphasis>image</emphasis>, already scaled, so we don&apos;t have to load the image a second time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3574"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a39362bb436b9c69b06c0abaec3e5cfaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRichTextImageBlock::MakeImageBlock</definition>
+        <argsstring>(wxImage &amp;image, wxBitmapType imageType, int quality=80)</argsstring>
+        <name>MakeImageBlock</name>
+        <param>
+          <type><ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>imageType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>quality</declname>
+          <defval>80</defval>
+        </param>
+        <briefdescription>
+<para>Make an image block from the <ref refid="classwx_image" kindref="compound">wxImage</ref> in the given format. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3580"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a29db114a40982d633c01ab90f03adcb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRichTextImageBlock::MakeImageBlockDefaultQuality</definition>
+        <argsstring>(const wxImage &amp;image, wxBitmapType imageType)</argsstring>
+        <name>MakeImageBlockDefaultQuality</name>
+        <param>
+          <type>const <ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>imageType</declname>
+        </param>
+        <briefdescription>
+<para>Uses a const <ref refid="classwx_image" kindref="compound">wxImage</ref> for efficiency, but can&apos;t set quality (only relevant for JPEG). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3585"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1ab1b52dd6e0649a4a96da997c4039afdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRichTextImageBlock::DoMakeImageBlock</definition>
+        <argsstring>(const wxImage &amp;image, wxBitmapType imageType)</argsstring>
+        <name>DoMakeImageBlock</name>
+        <param>
+          <type>const <ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>imageType</declname>
+        </param>
+        <briefdescription>
+<para>Makes the image block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3590"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1ae81054a62fcb3519c9a0d605b28c6d41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextImageBlock::Write</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Writes the block to a file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3595"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a8d9f6c901432a8f21f801847e1f3714e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextImageBlock::WriteHex</definition>
+        <argsstring>(wxOutputStream &amp;stream)</argsstring>
+        <name>WriteHex</name>
+        <param>
+          <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Writes the data in hex to a stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3600"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1abda5ca310b98f22f626f563a7f382215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextImageBlock::ReadHex</definition>
+        <argsstring>(wxInputStream &amp;stream, int length, wxBitmapType imageType)</argsstring>
+        <name>ReadHex</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>imageType</declname>
+        </param>
+        <briefdescription>
+<para>Reads the data in hex from a stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3605"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a6541075a18b5d868dcf899e147dab208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextImageBlock::Copy</definition>
+        <argsstring>(const wxRichTextImageBlock &amp;block)</argsstring>
+        <name>Copy</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_image_block" kindref="compound">wxRichTextImageBlock</ref> &amp;</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+<para>Copy from <emphasis>block</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3610"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a57e66bc465428fbaeaeae623c712957f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextImageBlock::Load</definition>
+        <argsstring>(wxImage &amp;image)</argsstring>
+        <name>Load</name>
+        <param>
+          <type><ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3615"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1aa208a8a5ff9349fad481c006a3327290" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextImageBlock::operator=</definition>
+        <argsstring>(const wxRichTextImageBlock &amp;block)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_image_block" kindref="compound">wxRichTextImageBlock</ref> &amp;</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3622"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1ab4d277be14114f567ca3cd0cbbc04df4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>unsigned char* wxRichTextImageBlock::GetData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetData</name>
+        <briefdescription>
+<para>Returns the raw data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3629" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3629" bodyend="3629"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a22f67f9c6a4648ec0dd88a22a4a5fa2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxRichTextImageBlock::GetDataSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDataSize</name>
+        <briefdescription>
+<para>Returns the data size in bytes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3634" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3634" bodyend="3634"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a86a0f31f32461e9f271e11f8527b6ab2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+        <definition>wxBitmapType wxRichTextImageBlock::GetImageType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetImageType</name>
+        <briefdescription>
+<para>Returns the image type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3639" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3639" bodyend="3639"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1aac061aba27aee0aa5a9f595be67455b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextImageBlock::SetData</definition>
+        <argsstring>(unsigned char *image)</argsstring>
+        <name>SetData</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3643" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3643" bodyend="3643"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a5d789e4fc615d0e5ac8930b250ce54ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextImageBlock::SetDataSize</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>SetDataSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets the data size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3648" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3648" bodyend="3648"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1aabcf34566b243a05e6b47942cd8b1733" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextImageBlock::SetImageType</definition>
+        <argsstring>(wxBitmapType imageType)</argsstring>
+        <name>SetImageType</name>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>imageType</declname>
+        </param>
+        <briefdescription>
+<para>Sets the image type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3653" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3653" bodyend="3653"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a2e2082681c331330121b6bd9335bf3f2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextImageBlock::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the data is non-NULL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3658" bodyend="3658"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1aa18266c62dbd020a4dadb3ac5fdb14b1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextImageBlock::Ok</definition>
+        <argsstring>() const </argsstring>
+        <name>Ok</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3659" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3659" bodyend="3659"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a8669eb583d67649ee0fad168420af056" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxRichTextImageBlock::GetExtension</definition>
+        <argsstring>() const </argsstring>
+        <name>GetExtension</name>
+        <briefdescription>
+<para>Gets the extension for the block&apos;s type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3664"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_rich_text_image_block_1acc1f50a04584c52813be82a11faaf4f0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>static unsigned char* wxRichTextImageBlock::ReadBlock</definition>
+        <argsstring>(wxInputStream &amp;stream, size_t size)</argsstring>
+        <name>ReadBlock</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Implementation. </para>        </briefdescription>
+        <detaileddescription>
+<para>Allocates and reads from a stream as a block of memory. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3671"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1ac1ac1cb8b426efadc073f8732153fc10" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>static unsigned char* wxRichTextImageBlock::ReadBlock</definition>
+        <argsstring>(const wxString &amp;filename, size_t size)</argsstring>
+        <name>ReadBlock</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Allocates and reads from a file as a block of memory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3676"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a9b669f8c08142413feba07d3e9e087b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxRichTextImageBlock::WriteBlock</definition>
+        <argsstring>(wxOutputStream &amp;stream, unsigned char *block, size_t size)</argsstring>
+        <name>WriteBlock</name>
+        <param>
+          <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes a memory block to stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3681"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_image_block_1a371bff1f334731f62357be01665af128" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxRichTextImageBlock::WriteBlock</definition>
+        <argsstring>(const wxString &amp;filename, unsigned char *block, size_t size)</argsstring>
+        <name>WriteBlock</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes a memory block to a file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3686"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class stores information about an image, in binary in-memory form. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref>, <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9608">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="9607">
+        <label>wxRichTextImageBlock</label>
+        <link refid="classwx_rich_text_image_block"/>
+        <childnode refid="9608" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9610">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9611" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9609">
+        <label>wxRichTextImageBlock</label>
+        <link refid="classwx_rich_text_image_block"/>
+        <childnode refid="9610" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9611">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3542" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3541" bodyend="3694"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_rich_text_image_block_1a91db1902768d838c1c11d712247c290a" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>Clear</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextImageBlock</scope><name>CloneRefData</name></member>
+      <member refid="classwx_rich_text_image_block_1a6541075a18b5d868dcf899e147dab208" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>Copy</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRichTextImageBlock</scope><name>CreateRefData</name></member>
+      <member refid="classwx_rich_text_image_block_1ab1b52dd6e0649a4a96da997c4039afdb" prot="public" virt="virtual"><scope>wxRichTextImageBlock</scope><name>DoMakeImageBlock</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRichTextImageBlock</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_rich_text_image_block_1ab4d277be14114f567ca3cd0cbbc04df4" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>GetData</name></member>
+      <member refid="classwx_rich_text_image_block_1a22f67f9c6a4648ec0dd88a22a4a5fa2b" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>GetDataSize</name></member>
+      <member refid="classwx_rich_text_image_block_1a8669eb583d67649ee0fad168420af056" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>GetExtension</name></member>
+      <member refid="classwx_rich_text_image_block_1a86a0f31f32461e9f271e11f8527b6ab2" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>GetImageType</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>GetRefData</name></member>
+      <member refid="classwx_rich_text_image_block_1a4e6bf780a310d5de3545ddd0d36a4153" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>Init</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>IsKindOf</name></member>
+      <member refid="classwx_rich_text_image_block_1a2e2082681c331330121b6bd9335bf3f2" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>IsSameAs</name></member>
+      <member refid="classwx_rich_text_image_block_1a57e66bc465428fbaeaeae623c712957f" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>Load</name></member>
+      <member refid="classwx_rich_text_image_block_1aa09ffafef0572f2ab2e029e58c76a6e3" prot="protected" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>m_data</name></member>
+      <member refid="classwx_rich_text_image_block_1adfb01a1bb5ba93092f9b063b96a808bd" prot="protected" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>m_dataSize</name></member>
+      <member refid="classwx_rich_text_image_block_1a995415534d9d716bf6334c6149029449" prot="protected" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>m_imageType</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>m_refData</name></member>
+      <member refid="classwx_rich_text_image_block_1a4a028d2960ed2a9c905b27c1a291941f" prot="public" virt="virtual"><scope>wxRichTextImageBlock</scope><name>MakeImageBlock</name></member>
+      <member refid="classwx_rich_text_image_block_1a39362bb436b9c69b06c0abaec3e5cfaf" prot="public" virt="virtual"><scope>wxRichTextImageBlock</scope><name>MakeImageBlock</name></member>
+      <member refid="classwx_rich_text_image_block_1a29db114a40982d633c01ab90f03adcb6" prot="public" virt="virtual"><scope>wxRichTextImageBlock</scope><name>MakeImageBlockDefaultQuality</name></member>
+      <member refid="classwx_rich_text_image_block_1aa18266c62dbd020a4dadb3ac5fdb14b1" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>Ok</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>operator new</name></member>
+      <member refid="classwx_rich_text_image_block_1aa208a8a5ff9349fad481c006a3327290" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>operator=</name></member>
+      <member refid="classwx_rich_text_image_block_1acc1f50a04584c52813be82a11faaf4f0" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>ReadBlock</name></member>
+      <member refid="classwx_rich_text_image_block_1ac1ac1cb8b426efadc073f8732153fc10" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>ReadBlock</name></member>
+      <member refid="classwx_rich_text_image_block_1abda5ca310b98f22f626f563a7f382215" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>ReadHex</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>Ref</name></member>
+      <member refid="classwx_rich_text_image_block_1aac061aba27aee0aa5a9f595be67455b8" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>SetData</name></member>
+      <member refid="classwx_rich_text_image_block_1a5d789e4fc615d0e5ac8930b250ce54ab" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>SetDataSize</name></member>
+      <member refid="classwx_rich_text_image_block_1aabcf34566b243a05e6b47942cd8b1733" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>SetImageType</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>UnShare</name></member>
+      <member refid="classwx_rich_text_image_block_1ae81054a62fcb3519c9a0d605b28c6d41" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>Write</name></member>
+      <member refid="classwx_rich_text_image_block_1a9b669f8c08142413feba07d3e9e087b7" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>WriteBlock</name></member>
+      <member refid="classwx_rich_text_image_block_1a371bff1f334731f62357be01665af128" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>WriteBlock</name></member>
+      <member refid="classwx_rich_text_image_block_1a8d9f6c901432a8f21f801847e1f3714e" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>WriteHex</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>wxObject</name></member>
+      <member refid="classwx_rich_text_image_block_1a7551719271f8a90956cd6cb293ae44b5" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>wxRichTextImageBlock</name></member>
+      <member refid="classwx_rich_text_image_block_1aaa6037e883eace88a8594753c2631656" prot="public" virt="non-virtual"><scope>wxRichTextImageBlock</scope><name>wxRichTextImageBlock</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxRichTextImageBlock</scope><name>~wxObject</name></member>
+      <member refid="classwx_rich_text_image_block_1aadc501f66daafa5f50444b48f937ebe7" prot="public" virt="virtual"><scope>wxRichTextImageBlock</scope><name>~wxRichTextImageBlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

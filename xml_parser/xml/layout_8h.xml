@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="layout_8h" kind="file">
+    <compoundname>layout.h</compoundname>
+    <innerclass refid="classwx_individual_layout_constraint" prot="public">wxIndividualLayoutConstraint</innerclass>
+    <innerclass refid="classwx_layout_constraints" prot="public">wxLayoutConstraints</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7" prot="public" static="no">
+        <name>wxEdge</name>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7a32c2ba94b682bb1a63833609237f7846" prot="public">
+          <name>wxLeft</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7aa262e094f237c8be34e0eb864dfeacdb" prot="public">
+          <name>wxTop</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7a908f261ea4576895a6c37efc0b01a30d" prot="public">
+          <name>wxRight</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7aa2571b26a0617c8adf4f70d60cc7ab8c" prot="public">
+          <name>wxBottom</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7a5608a4de98da1243ab2ba41a15bca9df" prot="public">
+          <name>wxWidth</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7adf520e0b3d1eb83a0861ed5f2949fa2e" prot="public">
+          <name>wxHeight</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7ab2921d947f3d816b19e510242bb30dab" prot="public">
+          <name>wxCentre</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7aa212e2d2666bbe09cbe32765d05ccc47" prot="public">
+          <name>wxCenter</name>
+          <initializer> wxCentre</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7a45811de61734bb6bd1656c874e931edd" prot="public">
+          <name>wxCentreX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7a1d547e92bb83ed49a435629c392621f1" prot="public">
+          <name>wxCentreY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="10" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="enum" id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1" prot="public" static="no">
+        <name>wxRelationship</name>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1a21745bd484dda6960e22a83f635496f1" prot="public">
+          <name>wxUnconstrained</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1aa94740e87f3d3fcec4597335da58439e" prot="public">
+          <name>wxAsIs</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1aa5766524273694befff752d168901117" prot="public">
+          <name>wxPercentOf</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1ada620ea4592920d45648d8e735c7670c" prot="public">
+          <name>wxAbove</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1a96deb38d9bcb21fda22da16852adb155" prot="public">
+          <name>wxBelow</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1accceb505eabee3f5453ec8addd48f48a" prot="public">
+          <name>wxLeftOf</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1a4572439ef9b2ed1706a2626438d86fcc" prot="public">
+          <name>wxRightOf</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1aa4d75393ff82416895136b3deb1915d5" prot="public">
+          <name>wxSameAs</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1a7d6f0314166aefdecb90934b8dac7c35" prot="public">
+          <name>wxAbsolute</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="16" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="layout_8h_1a90b927fc3f2bc887d1c6a372d3d7fdf0" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int wxLAYOUT_DEFAULT_MARGIN</definition>
+        <argsstring></argsstring>
+        <name>wxLAYOUT_DEFAULT_MARGIN</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h"/>
+  </compounddef>
+</doxygen>

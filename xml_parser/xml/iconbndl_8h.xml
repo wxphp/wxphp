@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="iconbndl_8h" kind="file">
+    <compoundname>iconbndl.h</compoundname>
+    <innerclass refid="classwx_icon_bundle" prot="public">wxIconBundle</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="iconbndl_8h_1a6b22172688a6f18a3c6c89ee327d5759" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_icon_bundle" kindref="compound">wxIconBundle</ref></type>
+        <definition>wxIconBundle wxNullIconBundle</definition>
+        <argsstring></argsstring>
+        <name>wxNullIconBundle</name>
+        <briefdescription>
+<para>An empty <ref refid="classwx_icon_bundle" kindref="compound">wxIconBundle</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" line="136" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconbndl.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structwx_visual_attributes" kind="struct" prot="public">
+    <compoundname>wxVisualAttributes</compoundname>
+    <includes local="no">wx/window.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwx_visual_attributes_1a8805824cafcc467dd4b68417f46f2a72" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxVisualAttributes::font</definition>
+        <argsstring></argsstring>
+        <name>font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_visual_attributes_1a79a563271030b92fdb5737bb5b880a72" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>wxColour wxVisualAttributes::colFg</definition>
+        <argsstring></argsstring>
+        <name>colFg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_visual_attributes_1a0b91d2c961e684e69f9388bcb770fd08" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>wxColour wxVisualAttributes::colBg</definition>
+        <argsstring></argsstring>
+        <name>colBg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>struct containing all the visual attributes of a control </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11312">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="11313" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11310">
+        <label>wxVisualAttributes</label>
+        <link refid="structwx_visual_attributes"/>
+        <childnode refid="11311" relation="usage">
+          <edgelabel>colFg</edgelabel>
+          <edgelabel>colBg</edgelabel>
+        </childnode>
+        <childnode refid="11314" relation="usage">
+          <edgelabel>font</edgelabel>
+        </childnode>
+      </node>
+      <node id="11311">
+        <label>wxColour</label>
+        <link refid="classwx_colour"/>
+        <childnode refid="11312" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11315">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="11312" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11314">
+        <label>wxFont</label>
+        <link refid="classwx_font"/>
+        <childnode refid="11315" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11313">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" bodystart="58" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structwx_visual_attributes_1a0b91d2c961e684e69f9388bcb770fd08" prot="public" virt="non-virtual"><scope>wxVisualAttributes</scope><name>colBg</name></member>
+      <member refid="structwx_visual_attributes_1a79a563271030b92fdb5737bb5b880a72" prot="public" virt="non-virtual"><scope>wxVisualAttributes</scope><name>colFg</name></member>
+      <member refid="structwx_visual_attributes_1a8805824cafcc467dd4b68417f46f2a72" prot="public" virt="non-virtual"><scope>wxVisualAttributes</scope><name>font</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

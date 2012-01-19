@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dde_8h" kind="file">
+    <compoundname>dde.h</compoundname>
+    <innerclass refid="classwx_d_d_e_connection" prot="public">wxDDEConnection</innerclass>
+    <innerclass refid="classwx_d_d_e_client" prot="public">wxDDEClient</innerclass>
+    <innerclass refid="classwx_d_d_e_server" prot="public">wxDDEServer</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gab8eb5d04fa3c1c12ea4b134b91481772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDDECleanUp</definition>
+        <argsstring>()</argsstring>
+        <name>wxDDECleanUp</name>
+        <briefdescription>
+<para>Called when wxWidgets exits, to clean up the DDE system. </para>        </briefdescription>
+        <detaileddescription>
+<para>This no longer needs to be called by the application.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga0327fbafa4fedceade1bd8d7faf015f1" kindref="member">wxDDEInitialize()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/dde.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="337"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga0327fbafa4fedceade1bd8d7faf015f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDDEInitialize</definition>
+        <argsstring>()</argsstring>
+        <name>wxDDEInitialize</name>
+        <briefdescription>
+<para>Initializes the DDE system. </para>        </briefdescription>
+        <detaileddescription>
+<para>May be called multiple times without harm.</para><para>This no longer needs to be called by the application: it will be called by wxWidgets if necessary.</para><para><simplesect kind="see"><para><ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref>, <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref>, <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, <ref refid="group__group__funcmacro__misc_1gab8eb5d04fa3c1c12ea4b134b91481772" kindref="member">wxDDECleanUp()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/dde.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="349"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h"/>
+  </compounddef>
+</doxygen>

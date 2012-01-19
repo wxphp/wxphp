@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="timectrl_8h" kind="file">
+    <compoundname>timectrl.h</compoundname>
+    <innerclass refid="classwx_time_picker_ctrl" prot="public">wxTimePickerCtrl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timectrl.h"/>
+  </compounddef>
+</doxygen>

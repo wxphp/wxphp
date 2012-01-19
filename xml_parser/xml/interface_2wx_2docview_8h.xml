@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2docview_8h" kind="file">
+    <compoundname>docview.h</compoundname>
+    <innerclass refid="classwx_doc_template" prot="public">wxDocTemplate</innerclass>
+    <innerclass refid="classwx_doc_manager" prot="public">wxDocManager</innerclass>
+    <innerclass refid="classwx_view" prot="public">wxView</innerclass>
+    <innerclass refid="classwx_doc_child_frame" prot="public">wxDocChildFrame</innerclass>
+    <innerclass refid="classwx_doc_parent_frame" prot="public">wxDocParentFrame</innerclass>
+    <innerclass refid="classwx_document" prot="public">wxDocument</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga49d5c1deabd84391f20e34a7ecefe260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTransferFileToStream</definition>
+        <argsstring>(const wxString &amp;filename, ostream &amp;stream)</argsstring>
+        <name>wxTransferFileToStream</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Copies the given file to <emphasis>stream</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include file: <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1643"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gaa5f4996b72cfd90c82d42b9038566828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTransferStreamToFile</definition>
+        <argsstring>(istream &amp;stream, const wxString &amp;filename)</argsstring>
+        <name>wxTransferStreamToFile</name>
+        <param>
+          <type>istream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Copies the given stream to the file <emphasis>filename</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include file: <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1653"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h"/>
+  </compounddef>
+</doxygen>

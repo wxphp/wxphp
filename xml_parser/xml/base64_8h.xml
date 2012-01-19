@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="base64_8h" kind="file">
+    <compoundname>base64.h</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__group__funcmacro__misc_1ga65c7d67ac9578376267a006c85b5e724" prot="public" static="no">
+        <name>wxBase64DecodeMode</name>
+        <enumvalue id="group__group__funcmacro__misc_1gga65c7d67ac9578376267a006c85b5e724a3426a63a24c350c0562eb527281f6044" prot="public">
+          <name>wxBase64DecodeMode_Strict</name>
+          <briefdescription>
+<para>Normal behaviour: stop at any invalid characters. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__misc_1gga65c7d67ac9578376267a006c85b5e724ac4bc5d1011a934727c1521b6ad2a37ea" prot="public">
+          <name>wxBase64DecodeMode_SkipWS</name>
+          <briefdescription>
+<para>Skip whitespace characters. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__misc_1gga65c7d67ac9578376267a006c85b5e724a771fbc3264d8c134581618dca7e81a1b" prot="public">
+          <name>wxBase64DecodeMode_Relaxed</name>
+          <briefdescription>
+<para>The most lenient behaviour: simply ignore all invalid characters. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Elements of this enum specify the possible behaviours of wxBase64Decode when an invalid character is encountered. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" bodystart="21" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gae76ac8ba0136d28435a233108cc40bee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxBase64Encode</definition>
+        <argsstring>(char *dst, size_t dstLen, const void *src, size_t srcLen)</argsstring>
+        <name>wxBase64Encode</name>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dstLen</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>srcLen</declname>
+        </param>
+        <briefdescription>
+<para>This function encodes the given data using base64. </para>        </briefdescription>
+        <detaileddescription>
+<para>To allocate the buffer of the correct size, use <ref refid="group__group__funcmacro__misc_1ga84d7266622d43ce4793a8f0bce865117" kindref="member">wxBase64EncodedSize()</ref> or call this function with <emphasis>dst</emphasis> set to NULL -- it will then return the necessary buffer size.</para><para>This raw encoding function overload writes the output string into the provided buffer; the other overloads return it as a <ref refid="classwx_string" kindref="compound">wxString</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output buffer, may be NULL to retrieve the needed buffer size. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dstLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output buffer size, ignored if dst is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input buffer, must not be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>wxCONV_FAILED</computeroutput> if the output buffer is too small.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gaafaeb4b7aef5c4f9795341938cb469ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxBase64Encode</definition>
+        <argsstring>(const void *src, size_t srcLen)</argsstring>
+        <name>wxBase64Encode</name>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>srcLen</declname>
+        </param>
+        <briefdescription>
+<para>This function encodes the given data using base64 and returns the output as a <ref refid="classwx_string" kindref="compound">wxString</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>There is no error return.</para><para>To allocate the buffer of the correct size, use <ref refid="group__group__funcmacro__misc_1ga84d7266622d43ce4793a8f0bce865117" kindref="member">wxBase64EncodedSize()</ref> or call this function with <emphasis>dst</emphasis> set to NULL -- it will then return the necessary buffer size.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input buffer, must not be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga12895467dca7cafd2d3c776e580d4861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxBase64Encode</definition>
+        <argsstring>(const wxMemoryBuffer &amp;buf)</argsstring>
+        <name>wxBase64Encode</name>
+        <param>
+          <type>const <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> &amp;</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>This function encodes the given data using base64 and returns the output as a <ref refid="classwx_string" kindref="compound">wxString</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>There is no error return.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga2b4f508809484666dfc7f81cf9073523" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxBase64DecodedSize</definition>
+        <argsstring>(size_t srcLen)</argsstring>
+        <name>wxBase64DecodedSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>srcLen</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of the buffer necessary to contain the data encoded in a base64 string of length <emphasis>srcLen</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This can be useful for allocating a buffer to be passed to <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode()</ref>.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga84d7266622d43ce4793a8f0bce865117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxBase64EncodedSize</definition>
+        <argsstring>(size_t len)</argsstring>
+        <name>wxBase64EncodedSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Returns the length of the string with base64 representation of a buffer of specified size <emphasis>len</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This can be useful for allocating the buffer passed to <ref refid="group__group__funcmacro__misc_1gae76ac8ba0136d28435a233108cc40bee" kindref="member">wxBase64Encode()</ref>.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxBase64Decode</definition>
+        <argsstring>(void *dst, size_t dstLen, const char *src, size_t srcLen=wxNO_LEN, wxBase64DecodeMode mode=wxBase64DecodeMode_Strict, size_t *posErr=NULL)</argsstring>
+        <name>wxBase64Decode</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dstLen</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>srcLen</declname>
+          <defval>wxNO_LEN</defval>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__misc_1ga65c7d67ac9578376267a006c85b5e724" kindref="member">wxBase64DecodeMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxBase64DecodeMode_Strict</defval>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>posErr</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This function decodes a Base64-encoded string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This overload is a raw decoding function and decodes the data into the provided buffer <emphasis>dst</emphasis> of the given size <emphasis>dstLen</emphasis>. An error is returned if the buffer is not large enough -- that is not at least wxBase64DecodedSize(srcLen) bytes. Notice that the buffer will <emphasis>not</emphasis> be NULL-terminated.</para><para>This overload returns the number of bytes written to the buffer or the necessary buffer size if <emphasis>dst</emphasis> was NULL or <computeroutput>wxCONV_FAILED</computeroutput> on error, e.g. if the output buffer is too small or invalid characters were encountered in the input string.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to output buffer, may be NULL to just compute the necessary buffer size. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dstLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the output buffer, ignored if dst is NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input string, must not be NULL. For the version using <ref refid="classwx_string" kindref="compound">wxString</ref>, the input string should contain only ASCII characters. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input string or special value wxNO_LEN if the string is NULL-terminated and the length should be computed by this function itself. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter specifies the function behaviour when invalid characters are encountered in input. By default, any such character stops the decoding with error. If the mode is wxBase64DecodeMode_SkipWS, then the white space characters are silently skipped instead. And if it is wxBase64DecodeMode_Relaxed, then all invalid characters are skipped. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posErr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If this pointer is non-NULL and an error occurs during decoding, it is filled with the index of the invalid character.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga093152150d5e353cbd9d5499b5d83c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxBase64Decode</definition>
+        <argsstring>(void *dst, size_t dstLen, const wxString &amp;str, wxBase64DecodeMode mode=wxBase64DecodeMode_Strict, size_t *posErr=NULL)</argsstring>
+        <name>wxBase64Decode</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dstLen</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__misc_1ga65c7d67ac9578376267a006c85b5e724" kindref="member">wxBase64DecodeMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxBase64DecodeMode_Strict</defval>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>posErr</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Decode a Base64-encoded <ref refid="classwx_string" kindref="compound">wxString</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function, the only difference between it and this one is that a <ref refid="classwx_string" kindref="compound">wxString</ref> is used instead of a <computeroutput>char*</computeroutput> pointer and its length.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
+Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga254a00deb9b405de6f11736937b032b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref></type>
+        <definition>wxMemoryBuffer wxBase64Decode</definition>
+        <argsstring>(const char *src, size_t srcLen=wxNO_LEN, wxBase64DecodeMode mode=wxBase64DecodeMode_Strict, size_t *posErr=NULL)</argsstring>
+        <name>wxBase64Decode</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>srcLen</declname>
+          <defval>wxNO_LEN</defval>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__misc_1ga65c7d67ac9578376267a006c85b5e724" kindref="member">wxBase64DecodeMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxBase64DecodeMode_Strict</defval>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>posErr</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Decode a Base64-encoded string and return decoded contents in a buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function. The difference of this overload is that it allocates a buffer of necessary size on its own and returns it, freeing you from the need to do it manually. Because of this, it is simpler to use and is recommended for normal use.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga57c3f3ee5b6ba0e9e2fcf5008634a32b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref></type>
+        <definition>wxMemoryBuffer wxBase64Decode</definition>
+        <argsstring>(const wxString &amp;src, wxBase64DecodeMode mode=wxBase64DecodeMode_Strict, size_t *posErr=NULL)</argsstring>
+        <name>wxBase64Decode</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__misc_1ga65c7d67ac9578376267a006c85b5e724" kindref="member">wxBase64DecodeMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxBase64DecodeMode_Strict</defval>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>posErr</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Decode a Base64-encoded <ref refid="classwx_string" kindref="compound">wxString</ref> and return decoded contents in a buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function.</para><para>This overload takes as input a <ref refid="classwx_string" kindref="compound">wxString</ref> and returns the internally-allocated memory as a <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref>, containing the Base64-decoded data.</para><para>Include file: <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="193"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h"/>
+  </compounddef>
+</doxygen>

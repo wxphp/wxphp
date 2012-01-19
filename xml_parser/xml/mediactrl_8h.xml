@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="mediactrl_8h" kind="file">
+    <compoundname>mediactrl.h</compoundname>
+    <innerclass refid="classwx_media_event" prot="public">wxMediaEvent</innerclass>
+    <innerclass refid="classwx_media_ctrl" prot="public">wxMediaCtrl</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="mediactrl_8h_1a5a30300b432bd386c9b9bf04106e847d" prot="public" static="no">
+        <name>wxMediaCtrlPlayerControls</name>
+        <enumvalue id="mediactrl_8h_1a5a30300b432bd386c9b9bf04106e847da44818deb871cdafcc77befc2f6610c79" prot="public">
+          <name>wxMEDIACTRLPLAYERCONTROLS_NONE</name>
+          <initializer>   0</initializer>
+          <briefdescription>
+<para>No controls. </para>          </briefdescription>
+          <detaileddescription>
+<para>return <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> to its default state. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mediactrl_8h_1a5a30300b432bd386c9b9bf04106e847dafc7d071a9215f73ce5f8d985c072ca7c" prot="public">
+          <name>wxMEDIACTRLPLAYERCONTROLS_STEP</name>
+          <initializer>   1 &lt;&lt; 0</initializer>
+          <briefdescription>
+<para>Step controls like fastforward, step one frame etc. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mediactrl_8h_1a5a30300b432bd386c9b9bf04106e847da662632bbe2d4079daeb28df48d298b8e" prot="public">
+          <name>wxMEDIACTRLPLAYERCONTROLS_VOLUME</name>
+          <initializer>   1 &lt;&lt; 1</initializer>
+          <briefdescription>
+<para>Volume controls like the speaker icon, volume slider, etc. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mediactrl_8h_1a5a30300b432bd386c9b9bf04106e847dac1698351f756c3fbe4c6f064c066a950" prot="public">
+          <name>wxMEDIACTRLPLAYERCONTROLS_DEFAULT</name>
+          <initializer>
+                    wxMEDIACTRLPLAYERCONTROLS_STEP |
+                    wxMEDIACTRLPLAYERCONTROLS_VOLUME</initializer>
+          <briefdescription>
+<para>Default controls for the toolkit. </para>          </briefdescription>
+          <detaileddescription>
+<para>Currently a combination for <computeroutput>wxMEDIACTRLPLAYERCONTROLS_STEP</computeroutput> and <computeroutput>wxMEDIACTRLPLAYERCONTROLS_VOLUME</computeroutput>. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" bodystart="10" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h"/>
+  </compounddef>
+</doxygen>

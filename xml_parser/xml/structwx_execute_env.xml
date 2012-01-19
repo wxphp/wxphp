@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structwx_execute_env" kind="struct" prot="public">
+    <compoundname>wxExecuteEnv</compoundname>
+    <includes local="no">wx/utils.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwx_execute_env_1a0705b3bfe79a7c25ddd6309a439ff66c" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxExecuteEnv::cwd</definition>
+        <argsstring></argsstring>
+        <name>cwd</name>
+        <briefdescription>
+<para>The initial working directory for the new process. </para>        </briefdescription>
+        <detaileddescription>
+<para>If this field is empty, the current working directory of this process is used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="807" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="807" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_execute_env_1a50bc7125cb5c22439e33fb88f09682e7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__env_1ga37c7bb54114fa4fdb99e19440ded6e00" kindref="member">wxEnvVariableHashMap</ref></type>
+        <definition>wxEnvVariableHashMap wxExecuteEnv::env</definition>
+        <argsstring></argsstring>
+        <name>env</name>
+        <briefdescription>
+<para>The environment variable map. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the map is empty, the environment variables of the current process are also used for the child one, otherwise only the variables defined in this map are used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="816" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="816" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This structure can optionally be passed to <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> to specify additional options to use for the child process. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="since"><para>2.9.2</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="6098">
+        <label>wxString</label>
+        <link refid="classwx_string"/>
+      </node>
+      <node id="6097">
+        <label>wxExecuteEnv</label>
+        <link refid="structwx_execute_env"/>
+        <childnode refid="6098" relation="usage">
+          <edgelabel>cwd</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="800" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="799" bodyend="817"/>
+    <listofallmembers>
+      <member refid="structwx_execute_env_1a0705b3bfe79a7c25ddd6309a439ff66c" prot="public" virt="non-virtual"><scope>wxExecuteEnv</scope><name>cwd</name></member>
+      <member refid="structwx_execute_env_1a50bc7125cb5c22439e33fb88f09682e7" prot="public" virt="non-virtual"><scope>wxExecuteEnv</scope><name>env</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_ext_help_controller" kind="class" prot="public">
+    <compoundname>wxExtHelpController</compoundname>
+    <basecompoundref refid="classwx_help_controller" prot="public" virt="non-virtual">wxHelpController</basecompoundref>
+    <includes local="no">wx/generic/helpext.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_ext_help_controller_1a192fadeed3476b5c05031f0b5365f8ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxExtHelpController::wxExtHelpController</definition>
+        <argsstring>(wxWindow *parentWindow=NULL)</argsstring>
+        <name>wxExtHelpController</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parentWindow</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1ac6cf7b5b330bf650d5b5c4f9745be1e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxExtHelpController::~wxExtHelpController</definition>
+        <argsstring>()</argsstring>
+        <name>~wxExtHelpController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a09067f77907e4b8986fce95c5f7bf76f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxExtHelpController::SetViewer</definition>
+        <argsstring>(const wxString &amp;viewer=wxEmptyString, long flags=wxHELP_NETSCAPE)</argsstring>
+        <name>SetViewer</name>
+        <reimplements refid="classwx_help_controller_1a0c0bfc45eca97004ddf62f41cf789031">SetViewer</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>viewer</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>flags</declname>
+          <defval>wxHELP_NETSCAPE</defval>
+        </param>
+        <briefdescription>
+<para>Tell it which browser to use. </para>        </briefdescription>
+        <detaileddescription>
+<para>The Netscape support will check whether Netscape is already running (by looking at the .netscape/lock file in the user&apos;s home directory) and tell it to load the page into the existing window.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>viewer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to call a browser/html viewer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set this to wxHELP_NETSCAPE if the browser is some variant of Netscape. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a940d69bf177f02f75ff9230e9a3fbcac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::Initialize</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>Initialize</name>
+        <reimplements refid="classwx_help_controller_1a1ad55c6eb7caec669399287b372bc226">Initialize</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>This must be called to tell the controller where to find the documentation. </para>        </briefdescription>
+        <detaileddescription>
+<para>If a locale is set, look in file/localename, i.e. If passed &quot;/usr/local/myapp/help&quot; and the current <ref refid="classwx_locale" kindref="compound">wxLocale</ref> is set to be &quot;de&quot;, then look in &quot;/usr/local/myapp/help/de/&quot; first and fall back to &quot;/usr/local/myapp/help&quot; if that doesn&apos;t exist.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>directory name where to fine the help files</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a0b6d17f9000f53f81a2a08189f4ebb55" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::LoadFile</definition>
+        <argsstring>(const wxString &amp;file=wxEmptyString)</argsstring>
+        <name>LoadFile</name>
+        <reimplements refid="classwx_help_controller_1a632fbbad190ebf6ef45ff1ca448beb30">LoadFile</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>If file is &quot;&quot;, reloads file given in Initialize. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of help directory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a5acb23d732d25319ac88e90b4d2607c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::DisplayContents</definition>
+        <argsstring>(void)</argsstring>
+        <name>DisplayContents</name>
+        <reimplements refid="classwx_help_controller_1a3e559eb797c41f6db66244dc26f86e52">DisplayContents</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Display list of all help entries. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1addfd43e1bb21602f9e8c86526411484f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::DisplaySection</definition>
+        <argsstring>(int sectionNo)</argsstring>
+        <name>DisplaySection</name>
+        <reimplements refid="classwx_help_controller_1a153bc6e425054ca7d515d4900e229abc">DisplaySection</reimplements>
+        <param>
+          <type>int</type>
+          <declname>sectionNo</declname>
+        </param>
+        <briefdescription>
+<para>Display help for id sectionNo. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a2dab567c64ff153c63a2c5b6e00feee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::DisplaySection</definition>
+        <argsstring>(const wxString &amp;section)</argsstring>
+        <name>DisplaySection</name>
+        <reimplements refid="classwx_help_controller_1a3b33afa37503d64b6d2d14cd5e618fbb">DisplaySection</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>section</declname>
+        </param>
+        <briefdescription>
+<para>Display help for id sectionNo -- identical with <ref refid="classwx_ext_help_controller_1addfd43e1bb21602f9e8c86526411484f" kindref="member">DisplaySection()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a6903a755c83c96e9635813ecff921bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::DisplayBlock</definition>
+        <argsstring>(long blockNo)</argsstring>
+        <name>DisplayBlock</name>
+        <reimplements refid="classwx_help_controller_1af9ef4a430d76d79698bcc74a32c63d07">DisplayBlock</reimplements>
+        <param>
+          <type>long</type>
+          <declname>blockNo</declname>
+        </param>
+        <briefdescription>
+<para>Display help for URL (using DisplayHelp) or keyword (using KeywordSearch). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a0eb62626aed22760d6a4b3cf527dd8f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::KeywordSearch</definition>
+        <argsstring>(const wxString &amp;k, wxHelpSearchMode mode=wxHELP_SEARCH_ALL)</argsstring>
+        <name>KeywordSearch</name>
+        <reimplements refid="classwx_help_controller_1a9a0100555c85cd7e81fdeb3f1bc7a792">KeywordSearch</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>wxHelpSearchMode</type>
+          <declname>mode</declname>
+          <defval>wxHELP_SEARCH_ALL</defval>
+        </param>
+        <briefdescription>
+<para>Search comment/documentation fields in map file and present a list to chose from. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to search for, empty string will list all entries</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>optional parameter allows the search the index (wxHELP_SEARCH_INDEX) but this currently only supported by the <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a6724c6cfd323707c8b80a272ab87c067" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::Quit</definition>
+        <argsstring>()</argsstring>
+        <name>Quit</name>
+        <reimplements refid="classwx_help_controller_1a1f814fd7342dec37725430511d1950b2">Quit</reimplements>
+        <briefdescription>
+<para>Does nothing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1ad672bb152334dcbf23765102b21948d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxExtHelpController::OnQuit</definition>
+        <argsstring>()</argsstring>
+        <name>OnQuit</name>
+        <reimplements refid="classwx_help_controller_1a6a8653ac15db5261ea74e32549c6bb34">OnQuit</reimplements>
+        <briefdescription>
+<para>Does nothing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1a9aea1a7af6f97d1a271e3b99d3a6c22e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxExtHelpController::DisplayHelp</definition>
+        <argsstring>(const wxString &amp;)</argsstring>
+        <name>DisplayHelp</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Call the browser using a relative URL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1ac7caae5434171c2126821b75dabe8bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxExtHelpController::SetFrameParameters</definition>
+        <argsstring>(const wxString &amp;title, const wxSize &amp;size, const wxPoint &amp;pos=wxDefaultPosition, bool newFrameEachTime=false)</argsstring>
+        <name>SetFrameParameters</name>
+        <reimplements refid="classwx_help_controller_1af55cac5005cb4bf9936b303852dee8e8">SetFrameParameters</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+          <defval><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newFrameEachTime</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Allows one to override the default settings for the help frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ext_help_controller_1ab7ff5bd233c274fb8788ebbeebe244c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
+        <definition>virtual wxFrame* wxExtHelpController::GetFrameParameters</definition>
+        <argsstring>(wxSize *size=NULL, wxPoint *pos=NULL, bool *newFrameEachTime=NULL)</argsstring>
+        <name>GetFrameParameters</name>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref> *</type>
+          <declname>size</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_point" kindref="compound">wxPoint</ref> *</type>
+          <declname>pos</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>newFrameEachTime</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Obtains the latest settings used by the help frame and the help frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class implements help via an external browser. </para>    </briefdescription>
+    <detaileddescription>
+<para>It requires the name of a directory containing the documentation and a file mapping numerical Section numbers to relative URLS.</para><para>The map file contains two or three fields per line: numeric_id relative_URL [; comment/documentation]</para><para>The numeric_id is the id used to look up the entry in <ref refid="classwx_ext_help_controller_1addfd43e1bb21602f9e8c86526411484f" kindref="member">DisplaySection()</ref>/DisplayBlock(). The relative_URL is a filename of an html file, relative to the help directory. The optional comment/documentation field (after a &apos;;&apos;) is used for keyword searches, so some meaningful text here does not hurt. If the documentation itself contains a &apos;;&apos;, only the part before that will be displayed in the listbox, but all of it used for search.</para><para>Lines starting with &apos;;&apos; will be ignored.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6100">
+        <label>wxHelpController</label>
+        <link refid="classwx_help_controller"/>
+      </node>
+      <node id="6099">
+        <label>wxExtHelpController</label>
+        <link refid="classwx_ext_help_controller"/>
+        <childnode refid="6100" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6102">
+        <label>wxHelpController</label>
+        <link refid="classwx_help_controller"/>
+      </node>
+      <node id="6101">
+        <label>wxExtHelpController</label>
+        <link refid="classwx_ext_help_controller"/>
+        <childnode refid="6102" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/generic/helpext.h" bodystart="35" bodyend="154"/>
+    <listofallmembers>
+      <member refid="classwx_ext_help_controller_1a6903a755c83c96e9635813ecff921bba" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>DisplayBlock</name></member>
+      <member refid="classwx_ext_help_controller_1a5acb23d732d25319ac88e90b4d2607c1" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>DisplayContents</name></member>
+      <member refid="classwx_help_controller_1a38cb16dff72acaad3dbf18618d14c5bb" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>DisplayContextPopup</name></member>
+      <member refid="classwx_ext_help_controller_1a9aea1a7af6f97d1a271e3b99d3a6c22e" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>DisplayHelp</name></member>
+      <member refid="classwx_ext_help_controller_1addfd43e1bb21602f9e8c86526411484f" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>DisplaySection</name></member>
+      <member refid="classwx_ext_help_controller_1a2dab567c64ff153c63a2c5b6e00feee6" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>DisplaySection</name></member>
+      <member refid="classwx_help_controller_1aec7708bb6d06272e53dcdc636c48d7ee" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>DisplayTextPopup</name></member>
+      <member refid="classwx_ext_help_controller_1ab7ff5bd233c274fb8788ebbeebe244c2" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>GetFrameParameters</name></member>
+      <member refid="classwx_help_controller_1ac3ec3f26e4023519dd5de5fdbc9bb8e3" prot="public" virt="virtual" ambiguityscope="wxHelpController::"><scope>wxExtHelpController</scope><name>GetFrameParameters</name></member>
+      <member refid="classwx_help_controller_1a4bffe31afd0f884add36fe56de767d40" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>GetParentWindow</name></member>
+      <member refid="classwx_ext_help_controller_1a940d69bf177f02f75ff9230e9a3fbcac" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>Initialize</name></member>
+      <member refid="classwx_help_controller_1ac79d6a0e6b6034ee21c3a0492328b278" prot="public" virt="virtual" ambiguityscope="wxHelpController::"><scope>wxExtHelpController</scope><name>Initialize</name></member>
+      <member refid="classwx_ext_help_controller_1a0eb62626aed22760d6a4b3cf527dd8f8" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>KeywordSearch</name></member>
+      <member refid="classwx_ext_help_controller_1a0b6d17f9000f53f81a2a08189f4ebb55" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>LoadFile</name></member>
+      <member refid="classwx_ext_help_controller_1ad672bb152334dcbf23765102b21948d5" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>OnQuit</name></member>
+      <member refid="classwx_ext_help_controller_1a6724c6cfd323707c8b80a272ab87c067" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>Quit</name></member>
+      <member refid="classwx_ext_help_controller_1ac7caae5434171c2126821b75dabe8bc0" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>SetFrameParameters</name></member>
+      <member refid="classwx_help_controller_1a8aa3495521c3d70df27b055ebe2ec647" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>SetParentWindow</name></member>
+      <member refid="classwx_ext_help_controller_1a09067f77907e4b8986fce95c5f7bf76f" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>SetViewer</name></member>
+      <member refid="classwx_ext_help_controller_1a192fadeed3476b5c05031f0b5365f8ab" prot="public" virt="non-virtual"><scope>wxExtHelpController</scope><name>wxExtHelpController</name></member>
+      <member refid="classwx_help_controller_1a33ea318ec42fbe28b84abfec61094209" prot="public" virt="non-virtual"><scope>wxExtHelpController</scope><name>wxHelpController</name></member>
+      <member refid="classwx_ext_help_controller_1ac6cf7b5b330bf650d5b5c4f9745be1e0" prot="public" virt="virtual"><scope>wxExtHelpController</scope><name>~wxExtHelpController</name></member>
+      <member refid="classwx_help_controller_1a85c0b798b823375ac1b7303d3b60be14" prot="public" virt="non-virtual"><scope>wxExtHelpController</scope><name>~wxHelpController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

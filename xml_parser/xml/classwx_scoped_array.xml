@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_scoped_array" kind="class" prot="public">
+    <compoundname>wxScopedArray</compoundname>
+    <includes local="no">wx/scopedarray.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classwx_scoped_array_1ac28509dec72c7d4c56bd1123ffafc80e" prot="public" static="no">
+        <type>T</type>
+        <definition>typedef T wxScopedArray&lt; T &gt;::element_type</definition>
+        <argsstring></argsstring>
+        <name>element_type</name>
+        <briefdescription>
+<para>The type of the array elements. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_scoped_array_1aae9a7af43d30a2ed88ad081726ad3bbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedArray&lt; T &gt;::wxScopedArray</definition>
+        <argsstring>(type *T=NULL)</argsstring>
+        <name>wxScopedArray</name>
+        <param>
+          <type>type *</type>
+          <declname>T</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Creates the smart pointer with the given pointer or none if NULL. </para>        </briefdescription>
+        <detaileddescription>
+<para>On compilers that support it, this uses the explicit keyword. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1aaba2436381ab2e5f8475012549d86db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* wxScopedArray&lt; T &gt;::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>This operator gets the pointer stored in the smart pointer or returns NULL if there is none. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1a8952ef9694da124e40130363038d4b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; wxScopedArray&lt; T &gt;::operator[]</definition>
+        <argsstring>(long int i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>long int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>This operator acts like the standard [] indexing operator for C++ arrays. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function does not do bounds checking. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1a2fda76162f6d263438e9b274d2f7b81b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedArray&lt; T &gt;::reset</definition>
+        <argsstring>(T *p=NULL)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>T *</type>
+          <declname>p</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Deletes the currently held pointer and sets it to &apos;p&apos; or to NULL if no arguments are specified. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function does check to make sure that the pointer you are assigning is not the same pointer that is already stored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1a1c2383aef679994454f4cd5f4faf8ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedArray&lt; T &gt;::swap</definition>
+        <argsstring>(wxScopedArray &amp;ot)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="classwx_scoped_array" kindref="compound">wxScopedArray</ref> &amp;</type>
+          <declname>ot</declname>
+        </param>
+        <briefdescription>
+<para>Swap the pointer inside the smart pointer with <emphasis>ot</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The pointer being swapped must be of the same type (hence the same class name). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1a0ccb5c555051a3455903bc70d62e34e7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedArray&lt; T &gt;::wxScopedArray</definition>
+        <argsstring>(T *array=NULL)</argsstring>
+        <name>wxScopedArray</name>
+        <param>
+          <type>T *</type>
+          <declname>array</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor takes ownership of the given array. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>array</emphasis> is NULL, <ref refid="classwx_scoped_array_1a2fda76162f6d263438e9b274d2f7b81b" kindref="member">reset()</ref> must presumably be called later.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array allocated using <computeroutput>new</computeroutput>[] or NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1ab1290af2f1e951056cdc33770584b11a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedArray&lt; T &gt;::~wxScopedArray</definition>
+        <argsstring>()</argsstring>
+        <name>~wxScopedArray</name>
+        <briefdescription>
+<para>Destructor destroy the array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1af451c2674e5a8d2bcc97dbf0795f7b12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxScopedArray&lt; T &gt;::operator unspecified_bool_type</definition>
+        <argsstring>() const </argsstring>
+        <name>operator unspecified_bool_type</name>
+        <briefdescription>
+<para>Conversion to a boolean expression (in a variant which is not convertible to anything but a boolean expression). </para>        </briefdescription>
+        <detaileddescription>
+<para>If this class contains a valid array it will return true, if it contains a NULL pointer it will return false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1a877c6b3f10236aa6ce0e273d93cdf910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxScopedArray&lt; T &gt;::reset</definition>
+        <argsstring>(T *array=NULL)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>T *</type>
+          <declname>array</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Change the array pointer stored. </para>        </briefdescription>
+        <detaileddescription>
+<para>The previously stored array is deleted.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array allocated using <computeroutput>new</computeroutput>[] or NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1a315ad6a56187a5a90c5d71c4dfd94d25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T&amp; wxScopedArray&lt; T &gt;::operator[]</definition>
+        <argsstring>(size_t n) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Return the n-th element of the array. </para>        </briefdescription>
+        <detaileddescription>
+<para>Must not be called if the array has no valid pointer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1a4d2097f0ae3410f5eb5afcc2e08c1b9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* wxScopedArray&lt; T &gt;::get</definition>
+        <argsstring>() const </argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>Return the array pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para>The returned pointer may be NULL. It must not be deleted by the caller, call <computeroutput>reset(NULL)</computeroutput> instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_scoped_array_1ac7f6ea16c7b21dcd2d53f5c3048f1061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxScopedArray&lt; T &gt;::swap</definition>
+        <argsstring>(wxScopedArray &amp;other)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="classwx_scoped_array" kindref="compound">wxScopedArray</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Swaps the contents of this array with another one. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A scoped array template class. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is a simple scoped smart pointer array implementation that is similar to the Boost smart pointers (see <ulink url="http://www.boost.org/">http://www.boost.org/</ulink>) but rewritten to use macros instead.</para><para>This class is similar to boost scoped_array class: <ulink url="http://www.boost.org/doc/libs/1_37_0/libs/smart_ptr/scoped_array.htm">http://www.boost.org/doc/libs/1_37_0/libs/smart_ptr/scoped_array.htm</ulink></para><para>Notice that objects of this class intentionally cannot be copied.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><bold>Example:</bold> </para><para>Below is an example of using a wxWidgets scoped smart pointer and pointer array.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass<sp/>{<sp/>...<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>declare<sp/>a<sp/>smart<sp/>pointer<sp/>to<sp/>a<sp/>MyClass<sp/>called<sp/>wxMyClassPtr</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDECLARE_SCOPED_PTR(MyClass,<sp/>wxMyClassPtr)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>declare<sp/>a<sp/>smart<sp/>pointer<sp/>to<sp/>an<sp/>array<sp/>of<sp/>chars</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDECLARE_SCOPED_ARRAY(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">,<sp/>wxCharArray)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>the<sp/>first<sp/>pointer<sp/>class,<sp/>must<sp/>be<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDEFINE_SCOPED_PTR(MyClass,<sp/>wxMyClassPtr)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>the<sp/>second<sp/>pointer<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDEFINE_SCOPED_ARRAY(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">,<sp/>wxCharArray)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>an<sp/>object<sp/>with<sp/>a<sp/>new<sp/>pointer<sp/>to<sp/>MyClass</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxMyClassPtr<sp/>theObj(new<sp/>MyClass());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>the<sp/>pointer<sp/>(deletes<sp/>the<sp/>previous<sp/>one)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theObj.<ref refid="classwx_scoped_array_1a2fda76162f6d263438e9b274d2f7b81b" kindref="member" tooltip="Deletes the currently held pointer and sets it to &amp;#39;p&amp;#39; or to NULL if no arguments...">reset</ref>(new<sp/>MyClass());</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>access<sp/>the<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theObj-&gt;MyFunc();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>an<sp/>object<sp/>with<sp/>a<sp/>new<sp/>array<sp/>of<sp/>chars</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxCharArray<sp/>theCharObj(new<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[100]);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>access<sp/>the<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theCharObj[0]<sp/>=<sp/>&quot;!&quot;;</highlight></codeline>
+</programlisting></para><para><bold>Declaring new smart pointer types:</bold> <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxDECLAR_SCOPED_ARRAY(<sp/>TYPE,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>of<sp/>the<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLASSNAME<sp/>);<sp/></highlight><highlight class="comment">//<sp/>name<sp/>of<sp/>the<sp/>class</highlight></codeline>
+</programlisting></para><para>A smart pointer holds a pointer to an object (which must be complete when wxDEFINE_SCOPED_ARRAY() is called).</para><para>The memory used by the object is deleted when the smart pointer goes out of scope. The first argument of the macro is the pointer type, the second is the name of the new smart pointer class being created. Below we will use <ref refid="classwx_scoped_array" kindref="compound">wxScopedArray</ref> to represent the scoped pointer array class, but the user may create the class with any legal name.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scoped_ptr" kindref="compound">wxScopedPtr</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" line="71" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedarray.h" bodystart="70" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classwx_scoped_array_1ac28509dec72c7d4c56bd1123ffafc80e" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>element_type</name></member>
+      <member refid="classwx_scoped_array_1aaba2436381ab2e5f8475012549d86db4" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>get</name></member>
+      <member refid="classwx_scoped_array_1a4d2097f0ae3410f5eb5afcc2e08c1b9b" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>get</name></member>
+      <member refid="classwx_scoped_array_1af451c2674e5a8d2bcc97dbf0795f7b12" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>operator unspecified_bool_type</name></member>
+      <member refid="classwx_scoped_array_1a8952ef9694da124e40130363038d4b3d" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>operator[]</name></member>
+      <member refid="classwx_scoped_array_1a315ad6a56187a5a90c5d71c4dfd94d25" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>operator[]</name></member>
+      <member refid="classwx_scoped_array_1a2fda76162f6d263438e9b274d2f7b81b" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>reset</name></member>
+      <member refid="classwx_scoped_array_1a877c6b3f10236aa6ce0e273d93cdf910" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>reset</name></member>
+      <member refid="classwx_scoped_array_1a1c2383aef679994454f4cd5f4faf8ad3" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>swap</name></member>
+      <member refid="classwx_scoped_array_1ac7f6ea16c7b21dcd2d53f5c3048f1061" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>swap</name></member>
+      <member refid="classwx_scoped_array_1aae9a7af43d30a2ed88ad081726ad3bbd" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>wxScopedArray</name></member>
+      <member refid="classwx_scoped_array_1a0ccb5c555051a3455903bc70d62e34e7" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>wxScopedArray</name></member>
+      <member refid="classwx_scoped_array_1ab1290af2f1e951056cdc33770584b11a" prot="public" virt="non-virtual"><scope>wxScopedArray</scope><name>~wxScopedArray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

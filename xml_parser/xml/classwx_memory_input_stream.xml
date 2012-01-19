@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_memory_input_stream" kind="class" prot="public">
+    <compoundname>wxMemoryInputStream</compoundname>
+    <basecompoundref refid="classwx_input_stream" prot="public" virt="non-virtual">wxInputStream</basecompoundref>
+    <includes local="no">wx/mstream.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_memory_input_stream_1a0140f81af05be1a3dec6c019b21a03d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMemoryInputStream::wxMemoryInputStream</definition>
+        <argsstring>(const void *data, size_t len)</argsstring>
+        <name>wxMemoryInputStream</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new read-only memory stream which will use the specified buffer data of length len. </para>        </briefdescription>
+        <detaileddescription>
+<para>The stream does not take ownership of the buffer, i.e. the buffer will not be deleted in its destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_memory_input_stream_1a22afa983e881c3d025aefdd76849a417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMemoryInputStream::wxMemoryInputStream</definition>
+        <argsstring>(const wxMemoryOutputStream &amp;stream)</argsstring>
+        <name>wxMemoryInputStream</name>
+        <param>
+          <type>const <ref refid="classwx_memory_output_stream" kindref="compound">wxMemoryOutputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new read-only memory stream, initializing it with the data from the given output stream <emphasis>stream</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_memory_input_stream_1a219b8dd84cf3ef9ebde4896ff275cc35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMemoryInputStream::wxMemoryInputStream</definition>
+        <argsstring>(wxInputStream &amp;stream, wxFileOffset len=wxInvalidOffset)</argsstring>
+        <name>wxMemoryInputStream</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+          <declname>len</declname>
+          <defval><ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref></defval>
+        </param>
+        <briefdescription>
+<para>Creates a new read-only memory stream, initializing it with the data from the given input stream <emphasis>stream</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>len</emphasis> argument specifies the amount of data to read from the <emphasis>stream</emphasis>. Setting it to <ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref> means that the <emphasis>stream</emphasis> is to be read entirely (i.e. till the EOF is reached). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_memory_input_stream_1a4ebc65676675463ad94ba2335404f476" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxMemoryInputStream::~wxMemoryInputStream</definition>
+        <argsstring>()</argsstring>
+        <name>~wxMemoryInputStream</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Does NOT free the buffer provided in the ctor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_memory_input_stream_1aefb535b9962d536cc4f6a5072f891bcb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref> *</type>
+        <definition>wxStreamBuffer* wxMemoryInputStream::GetInputStreamBuffer</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInputStreamBuffer</name>
+        <briefdescription>
+<para>Returns the pointer to the stream object used as an internal buffer for that stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class allows to use all methods taking a <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> reference to read in-memory data. </para>    </briefdescription>
+    <detaileddescription>
+<para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we&apos;ve<sp/>got<sp/>a<sp/>block<sp/>of<sp/>memory<sp/>containing<sp/>a<sp/>BMP<sp/>image<sp/>and<sp/>we<sp/>want</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>use<sp/>wxImage<sp/>to<sp/>load<sp/>it:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_memory_input_stream" kindref="compound" tooltip="This class allows to use all methods taking a wxInputStream reference to read in-memory...">wxMemoryInputStream</ref><sp/>stream(my_memory_block,<sp/>size);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_image" kindref="compound" tooltip="This class encapsulates a platform-independent image.">wxImage</ref><sp/>theBitmap;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!theBitmap.<ref refid="classwx_image_1aa249e657259fe6518d68a5208b9043d0" kindref="member" tooltip="Loads an image from an input stream.">LoadFile</ref>(stream,<sp/><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5abc0025c3eb363982583934a404706cb0" kindref="member">wxBITMAP_TYPE_BMP</ref>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>can<sp/>now<sp/>safely<sp/>delete<sp/>the<sp/>original<sp/>memory<sp/>buffer<sp/>as<sp/>the<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>been<sp/>decoded<sp/>by<sp/>wxImage:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>my_memory_block;</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_memory_output_stream" kindref="compound">wxMemoryOutputStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7685">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="7686" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7684">
+        <label>wxMemoryInputStream</label>
+        <link refid="classwx_memory_input_stream"/>
+        <childnode refid="7685" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7686">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7688">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="7689" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7687">
+        <label>wxMemoryInputStream</label>
+        <link refid="classwx_memory_input_stream"/>
+        <childnode refid="7688" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7689">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mstream.h" bodystart="99" bodyend="136"/>
+    <listofallmembers>
+      <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>CanRead</name></member>
+      <member refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>Eof</name></member>
+      <member refid="classwx_input_stream_1a98462fa7198b5c9dca1c71acf6148e0b" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>GetC</name></member>
+      <member refid="classwx_memory_input_stream_1aefb535b9962d536cc4f6a5072f891bcb" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>GetInputStreamBuffer</name></member>
+      <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>GetLastError</name></member>
+      <member refid="classwx_stream_base_1a0d2d992fd98835aabf2b9b656a1e6ccd" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>GetLength</name></member>
+      <member refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>GetSize</name></member>
+      <member refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>IsOk</name></member>
+      <member refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>IsSeekable</name></member>
+      <member refid="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>LastRead</name></member>
+      <member refid="classwx_input_stream_1a8ebacd18964a4b169a62ad9190cab4d5" prot="protected" virt="pure-virtual"><scope>wxMemoryInputStream</scope><name>OnSysRead</name></member>
+      <member refid="classwx_stream_base_1ae38e82c374f82d39993909f0a5d3017e" prot="protected" virt="virtual"><scope>wxMemoryInputStream</scope><name>OnSysSeek</name></member>
+      <member refid="classwx_stream_base_1a7bb3b0b470e960d1165a28e83d576c1b" prot="protected" virt="virtual"><scope>wxMemoryInputStream</scope><name>OnSysTell</name></member>
+      <member refid="classwx_stream_base_1aaee699fe59f603eaae1550ee55ac579f" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>operator!</name></member>
+      <member refid="classwx_input_stream_1a42dc4394276b726b9877faf2c71ae408" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>Peek</name></member>
+      <member refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>Read</name></member>
+      <member refid="classwx_input_stream_1a05cc7b25c9df86f00157a34ee9809bd5" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>Read</name></member>
+      <member refid="classwx_stream_base_1a52353ac42f72538b2022a84f416e5fe2" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>Reset</name></member>
+      <member refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>SeekI</name></member>
+      <member refid="classwx_input_stream_1aece5e9ece88100f15fa91802b005ef4b" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>TellI</name></member>
+      <member refid="classwx_input_stream_1a503ff01720f51c4fb170aa78a296be9d" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_input_stream_1a7fe847c79f8d2e1b98bb129c23e549c7" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_input_stream_1aeb3e1146260cabcfbe631ff3493ee851" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>wxInputStream</name></member>
+      <member refid="classwx_memory_input_stream_1a0140f81af05be1a3dec6c019b21a03d7" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>wxMemoryInputStream</name></member>
+      <member refid="classwx_memory_input_stream_1a22afa983e881c3d025aefdd76849a417" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>wxMemoryInputStream</name></member>
+      <member refid="classwx_memory_input_stream_1a219b8dd84cf3ef9ebde4896ff275cc35" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>wxMemoryInputStream</name></member>
+      <member refid="classwx_stream_base_1a2bdb01f1ccd34d551d3cfc848054bf1e" prot="public" virt="non-virtual"><scope>wxMemoryInputStream</scope><name>wxStreamBase</name></member>
+      <member refid="classwx_input_stream_1a30fea51e11bbf042f29bdf82bc052ab2" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>~wxInputStream</name></member>
+      <member refid="classwx_memory_input_stream_1a4ebc65676675463ad94ba2335404f476" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>~wxMemoryInputStream</name></member>
+      <member refid="classwx_stream_base_1aebba32b4da79c60933fa997735a8bfe5" prot="public" virt="virtual"><scope>wxMemoryInputStream</scope><name>~wxStreamBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

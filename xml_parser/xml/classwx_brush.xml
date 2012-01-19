@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_brush" kind="class" prot="public">
+    <compoundname>wxBrush</compoundname>
+    <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
+    <includes local="no">wx/brush.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_brush_1ab1b04a52bb694853168a88c4deab53b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBrush::SetColour</definition>
+        <argsstring>(const wxColour &amp;colour)</argsstring>
+        <name>SetColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Sets the brush colour using red, green and blue values. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_brush_1af615e0a0654e11a8ac6e202cddec8a9e" kindref="member">GetColour()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1ac6b7baf1c76783b6eb3bd1fe7bef4f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBrush::SetColour</definition>
+        <argsstring>(unsigned char red, unsigned char green, unsigned char blue)</argsstring>
+        <name>SetColour</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+<para>Sets the brush colour using red, green and blue values. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_brush_1af615e0a0654e11a8ac6e202cddec8a9e" kindref="member">GetColour()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="223"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_brush_1a36d9d097cd95d038427907d2aa0fd2ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBrush::wxBrush</definition>
+        <argsstring>()</argsstring>
+        <name>wxBrush</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The brush will be uninitialised, and <ref refid="classwx_brush" kindref="compound">wxBrush</ref>:<ref refid="classwx_brush_1aafe8cee326d90dc7145968370153ba0a" kindref="member">IsOk()</ref> will return false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a2cfdf97a0785eb608da61a01b8180912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBrush::wxBrush</definition>
+        <argsstring>(const wxColour &amp;colour, wxBrushStyle style=wxBRUSHSTYLE_SOLID)</argsstring>
+        <name>wxBrush</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <param>
+          <type><ref refid="brush_8h_1aa8a41c365a383f785e379812dfd367ef" kindref="member">wxBrushStyle</ref></type>
+          <declname>style</declname>
+          <defval>wxBRUSHSTYLE_SOLID</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a brush from a colour object and <emphasis>style</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Colour object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the <ref refid="brush_8h_1aa8a41c365a383f785e379812dfd367ef" kindref="member">wxBrushStyle</ref> enumeration values. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a0a5c0e09b4637f7749435fbe1acd6412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBrush::wxBrush</definition>
+        <argsstring>(const wxBitmap &amp;stippleBitmap)</argsstring>
+        <name>wxBrush</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>stippleBitmap</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a stippled brush using a bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>The brush style will be set to <computeroutput>wxBRUSHSTYLE_STIPPLE</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a6df3fbfc890e8af31fd6bbf2ca38c5e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBrush::wxBrush</definition>
+        <argsstring>(const wxBrush &amp;brush)</argsstring>
+        <name>wxBrush</name>
+        <param>
+          <type>const <ref refid="classwx_brush" kindref="compound">wxBrush</ref> &amp;</type>
+          <declname>brush</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a41b905436444f31c8cda492a548da62a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxBrush::~wxBrush</definition>
+        <argsstring>()</argsstring>
+        <name>~wxBrush</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info.</para><para><simplesect kind="remark"><para>Although all remaining brushes are deleted when the application exits, the application should try to clean up all brushes itself. This is because wxWidgets cannot know if a pointer to the brush object is stored in an application data structure, and there is a risk of double deletion. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1af615e0a0654e11a8ac6e202cddec8a9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>virtual wxColour wxBrush::GetColour</definition>
+        <argsstring>() const </argsstring>
+        <name>GetColour</name>
+        <briefdescription>
+<para>Returns a reference to the brush colour. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_brush_1ab1b04a52bb694853168a88c4deab53b1" kindref="member">SetColour()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a1f14bcfa5870f18bc8ff980eb7366d1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> *</type>
+        <definition>virtual wxBitmap* wxBrush::GetStipple</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStipple</name>
+        <briefdescription>
+<para>Gets a pointer to the stipple bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the brush does not have a <computeroutput>wxBRUSHSTYLE_STIPPLE</computeroutput> style, this bitmap may be non-NULL but uninitialised (i.e. <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>:<ref refid="classwx_brush_1aafe8cee326d90dc7145968370153ba0a" kindref="member">IsOk()</ref> returns false).</para><para><simplesect kind="see"><para><ref refid="classwx_brush_1a7da8162eda06d522fcde31ae51b5952c" kindref="member">SetStipple()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="brush_8h_1aa8a41c365a383f785e379812dfd367ef" kindref="member">wxBrushStyle</ref></type>
+        <definition>virtual wxBrushStyle wxBrush::GetStyle</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStyle</name>
+        <briefdescription>
+<para>Returns the brush style, one of the <ref refid="brush_8h_1aa8a41c365a383f785e379812dfd367ef" kindref="member">wxBrushStyle</ref> values. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_brush_1aaefe449c144d41f3c4ab48425b746282" kindref="member">SetStyle()</ref>, <ref refid="classwx_brush_1ab1b04a52bb694853168a88c4deab53b1" kindref="member">SetColour()</ref>, <ref refid="classwx_brush_1a7da8162eda06d522fcde31ae51b5952c" kindref="member">SetStipple()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a0d6bf75d8eecbb384d2a85ddde2a479e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxBrush::IsHatch</definition>
+        <argsstring>() const </argsstring>
+        <name>IsHatch</name>
+        <briefdescription>
+<para>Returns true if the style of the brush is any of hatched fills. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" kindref="member">GetStyle()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1aafe8cee326d90dc7145968370153ba0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxBrush::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the brush is initialised. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that an uninitialized brush object can&apos;t be queried for any brush properties and all calls to the accessor methods on it will result in an assert failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1aa21578fc165c4f188058ad8dbdb8c7fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxBrush::IsNonTransparent</definition>
+        <argsstring>() const </argsstring>
+        <name>IsNonTransparent</name>
+        <briefdescription>
+<para>Returns true if the brush is a valid non-transparent brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method returns true if the brush object is initialized and has a non-transparent style. Notice that this should be used instead of simply testing whether <ref refid="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" kindref="member">GetStyle()</ref> returns a style different from wxBRUSHSTYLE_TRANSPARENT if the brush may be invalid as <ref refid="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" kindref="member">GetStyle()</ref> would assert in this case.</para><para><simplesect kind="see"><para><ref refid="classwx_brush_1a7647b3dbf6c5d143302d4711724ea920" kindref="member">IsTransparent()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.2. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a7647b3dbf6c5d143302d4711724ea920" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxBrush::IsTransparent</definition>
+        <argsstring>() const </argsstring>
+        <name>IsTransparent</name>
+        <briefdescription>
+<para>Returns true if the brush is transparent. </para>        </briefdescription>
+        <detaileddescription>
+<para>A transparent brush is simply a brush with wxBRUSHSTYLE_TRANSPARENT style.</para><para>Notice that this function works even for non-initialized brushes (for which it returns false) unlike tests of the form <computeroutput><ref refid="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" kindref="member">GetStyle()</ref> == wxBRUSHSTYLE_TRANSPARENT</computeroutput> which would assert if the brush is invalid.</para><para><simplesect kind="see"><para><ref refid="classwx_brush_1aa21578fc165c4f188058ad8dbdb8c7fa" kindref="member">IsNonTransparent()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.2. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a7da8162eda06d522fcde31ae51b5952c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBrush::SetStipple</definition>
+        <argsstring>(const wxBitmap &amp;bitmap)</argsstring>
+        <name>SetStipple</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <briefdescription>
+<para>Sets the stipple bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bitmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitmap to use for stippling.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>The style will be set to <computeroutput>wxBRUSHSTYLE_STIPPLE</computeroutput>, unless the bitmap has a mask associated to it, in which case the style will be set to <computeroutput>wxBRUSHSTYLE_STIPPLE_MASK_OPAQUE</computeroutput>.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1aaefe449c144d41f3c4ab48425b746282" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBrush::SetStyle</definition>
+        <argsstring>(wxBrushStyle style)</argsstring>
+        <name>SetStyle</name>
+        <param>
+          <type><ref refid="brush_8h_1aa8a41c365a383f785e379812dfd367ef" kindref="member">wxBrushStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+<para>Sets the brush style. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the <ref refid="brush_8h_1aa8a41c365a383f785e379812dfd367ef" kindref="member">wxBrushStyle</ref> values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" kindref="member">GetStyle()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a58fa3500c20c6a0ae0564530650c138f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxBrush::operator!=</definition>
+        <argsstring>(const wxBrush &amp;brush) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_brush" kindref="compound">wxBrush</ref> &amp;</type>
+          <declname>brush</declname>
+        </param>
+        <briefdescription>
+<para>Inequality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_brush_1a5877ea3d717073c5c62e3d6e836edff7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxBrush::operator==</definition>
+        <argsstring>(const wxBrush &amp;brush) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_brush" kindref="compound">wxBrush</ref> &amp;</type>
+          <declname>brush</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">Object Comparison</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="260"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A brush is a drawing tool for filling in areas. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is used for painting the background of rectangles, ellipses, etc. It has a colour and a style.</para><para>On a monochrome display, wxWidgets shows all brushes as white unless the colour is really black.</para><para>Do not initialize objects on the stack before the program commences, since other required structures may not have been set up yet. Instead, define global pointers to objects and create them in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit</ref> or when required.</para><para>An application may wish to create brushes with different characteristics dynamically, and there is the consequent danger that a large number of duplicate brushes will be created. Therefore an application may wish to get a pointer to a brush by using the global list of brushes <ref refid="brush_8h_1acb7c7a277d9b428fc6cdfd97437d6ef8" kindref="member">wxTheBrushList</ref>, and calling the member function <ref refid="classwx_brush_list_1abca9ea5d90152ea4369f575e96c8317a" kindref="member">wxBrushList::FindOrCreateBrush()</ref>.</para><para>This class uses reference counting and copy-on-write internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <itemizedlist>
+<listitem><para><ref refid="brush_8h_1a9919a44109f2c6091c71aece17ca7013" kindref="member">wxNullBrush</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1a69faad3dd0814b86866bd36d0963d598" kindref="member">wxBLACK_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1a59deb993532ba47750c074a6539c557d" kindref="member">wxBLUE_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1a84d6b55f9b1b70e1c5f36aad248c7968" kindref="member">wxCYAN_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1aff6f39b67542f4a88437e9694b0a5deb" kindref="member">wxGREEN_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1ac7945749352f1e4e03d841fd93f95b18" kindref="member">wxYELLOW_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1a9fd61bfd0445d71e17e56d836098096f" kindref="member">wxGREY_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1a031a216a3113203ad79a534ebf2dafea" kindref="member">wxLIGHT_GREY_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1ad2ba01aad1dbd57e361a623b109a0dde" kindref="member">wxMEDIUM_GREY_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1a1556203b5244291d8c0a07e8e58f9ad2" kindref="member">wxRED_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1aa6cac71d7ee6ae54c3e6d2c87244d5b4" kindref="member">wxTRANSPARENT_BRUSH</ref> </para></listitem>
+<listitem><para><ref refid="brush_8h_1aae5659773c29d950f587fd01ac0b5649" kindref="member">wxWHITE_BRUSH</ref></para></listitem>
+</itemizedlist>
+<simplesect kind="see"><para><ref refid="classwx_brush_list" kindref="compound">wxBrushList</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_d_c_1a13978b2624116987a59ff729c4f81a96" kindref="member">wxDC::SetBrush</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4584">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4583">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="4584" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4582">
+        <label>wxBrush</label>
+        <link refid="classwx_brush"/>
+        <childnode refid="4583" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4587">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4588" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4586">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="4587" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4588">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+      <node id="4585">
+        <label>wxBrush</label>
+        <link refid="classwx_brush"/>
+        <childnode refid="4586" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="103" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="102" bodyend="261"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxBrush</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxBrush</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxBrush</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxBrush</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_brush_1af615e0a0654e11a8ac6e202cddec8a9e" prot="public" virt="virtual"><scope>wxBrush</scope><name>GetColour</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>GetRefData</name></member>
+      <member refid="classwx_brush_1a1f14bcfa5870f18bc8ff980eb7366d1c" prot="public" virt="virtual"><scope>wxBrush</scope><name>GetStipple</name></member>
+      <member refid="classwx_brush_1aa417c1eaa67e4476652fbf949a46c26a" prot="public" virt="virtual"><scope>wxBrush</scope><name>GetStyle</name></member>
+      <member refid="classwx_brush_1a0d6bf75d8eecbb384d2a85ddde2a479e" prot="public" virt="virtual"><scope>wxBrush</scope><name>IsHatch</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>IsKindOf</name></member>
+      <member refid="classwx_brush_1aa21578fc165c4f188058ad8dbdb8c7fa" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>IsNonTransparent</name></member>
+      <member refid="classwx_brush_1aafe8cee326d90dc7145968370153ba0a" prot="public" virt="virtual"><scope>wxBrush</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>IsSameAs</name></member>
+      <member refid="classwx_brush_1a7647b3dbf6c5d143302d4711724ea920" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>IsTransparent</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxBrush</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>operator new</name></member>
+      <member refid="classwx_brush_1a58fa3500c20c6a0ae0564530650c138f" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>operator!=</name></member>
+      <member refid="classwx_brush_1a5877ea3d717073c5c62e3d6e836edff7" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>operator==</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>Ref</name></member>
+      <member refid="classwx_brush_1ab1b04a52bb694853168a88c4deab53b1" prot="public" virt="virtual"><scope>wxBrush</scope><name>SetColour</name></member>
+      <member refid="classwx_brush_1ac6b7baf1c76783b6eb3bd1fe7bef4f8e" prot="public" virt="virtual"><scope>wxBrush</scope><name>SetColour</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>SetRefData</name></member>
+      <member refid="classwx_brush_1a7da8162eda06d522fcde31ae51b5952c" prot="public" virt="virtual"><scope>wxBrush</scope><name>SetStipple</name></member>
+      <member refid="classwx_brush_1aaefe449c144d41f3c4ab48425b746282" prot="public" virt="virtual"><scope>wxBrush</scope><name>SetStyle</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>UnShare</name></member>
+      <member refid="classwx_brush_1a36d9d097cd95d038427907d2aa0fd2ad" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>wxBrush</name></member>
+      <member refid="classwx_brush_1a2cfdf97a0785eb608da61a01b8180912" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>wxBrush</name></member>
+      <member refid="classwx_brush_1a0a5c0e09b4637f7749435fbe1acd6412" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>wxBrush</name></member>
+      <member refid="classwx_brush_1a6df3fbfc890e8af31fd6bbf2ca38c5e7" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>wxBrush</name></member>
+      <member refid="classwx_g_d_i_object_1a20ac442e0d24cf6250d7bd45f0d968d5" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>wxGDIObject</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxBrush</scope><name>wxObject</name></member>
+      <member refid="classwx_brush_1a41b905436444f31c8cda492a548da62a" prot="public" virt="virtual"><scope>wxBrush</scope><name>~wxBrush</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxBrush</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

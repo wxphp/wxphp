@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="htmlcell_8h" kind="file">
+    <compoundname>htmlcell.h</compoundname>
+    <innerclass refid="classwx_html_rendering_style" prot="public">wxHtmlRenderingStyle</innerclass>
+    <innerclass refid="classwx_html_rendering_info" prot="public">wxHtmlRenderingInfo</innerclass>
+    <innerclass refid="classwx_html_cell" prot="public">wxHtmlCell</innerclass>
+    <innerclass refid="classwx_html_container_cell" prot="public">wxHtmlContainerCell</innerclass>
+    <innerclass refid="classwx_html_link_info" prot="public">wxHtmlLinkInfo</innerclass>
+    <innerclass refid="classwx_html_colour_cell" prot="public">wxHtmlColourCell</innerclass>
+    <innerclass refid="classwx_html_widget_cell" prot="public">wxHtmlWidgetCell</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h"/>
+  </compounddef>
+</doxygen>

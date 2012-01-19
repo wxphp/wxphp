@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="vector_8h" kind="file">
+    <compoundname>vector.h</compoundname>
+    <innerclass refid="classwx_vector_3_01_t_01_4" prot="public">wxVector&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_vector_3_01_t_01_4_1_1reverse__iterator" prot="public">wxVector&lt; T &gt;::reverse_iterator</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="vector_8h_1a41dfc361588f2e2e8aa2bfcaa863e7ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void wxVectorSort</definition>
+        <argsstring>(wxVector&lt; T &gt; &amp;v)</argsstring>
+        <name>wxVectorSort</name>
+        <param>
+          <type>wxVector&lt; T &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Sort the contents of a <computeroutput><ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>In a STL build this function will be defined as a thin wrapper around std::sort. To be sortable the contained type must support the less-than operator.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/>wxVector&lt;SomeClass&gt;<sp/>v;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>...<sp/></highlight><highlight class="comment">//<sp/>items<sp/>are<sp/>added<sp/>to<sp/>the<sp/>vector<sp/>v...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><ref refid="vector_8h_1a41dfc361588f2e2e8aa2bfcaa863e7ef" kindref="member" tooltip="Sort the contents of a wxVector&amp;lt;T&amp;gt;.">wxVectorSort</ref>(v);</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="266"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h"/>
+  </compounddef>
+</doxygen>

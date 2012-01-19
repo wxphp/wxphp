@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_char_type_buffer" kind="class" prot="public">
+    <compoundname>wxCharTypeBuffer</compoundname>
+    <basecompoundref refid="classwx_scoped_char_type_buffer" prot="public" virt="non-virtual">wxScopedCharTypeBuffer&lt; T &gt;</basecompoundref>
+    <includes local="no">wx/buffer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_char_type_buffer_1a578b7c081162f38a78b4876965809239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCharTypeBuffer&lt; T &gt;::wxCharTypeBuffer</definition>
+        <argsstring>(const CharType *str=NULL, size_t len=wxNO_LEN)</argsstring>
+        <name>wxCharTypeBuffer</name>
+        <param>
+          <type>const <ref refid="classwx_scoped_char_type_buffer_1af80c4ff48b92f8e01b6167ff0468e213" kindref="member">CharType</ref> *</type>
+          <declname>str</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+          <defval>wxNO_LEN</defval>
+        </param>
+        <briefdescription>
+<para>Creates (owned) buffer from <emphasis>str</emphasis> and takes ownership of it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If specified, length of the string, otherwise the string is considered to be NUL-terminated.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_scoped_char_type_buffer_1af4e2152079dd0c253139c51b730604f7" kindref="member">wxScopedCharTypeBuffer&lt;T&gt;::CreateOwned()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_char_type_buffer_1a71e898e731781d49a34d8411cf54b3c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCharTypeBuffer&lt; T &gt;::wxCharTypeBuffer</definition>
+        <argsstring>(size_t len)</argsstring>
+        <name>wxCharTypeBuffer</name>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Creates (owned) buffer of size <emphasis>len</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_scoped_char_type_buffer_1af4e2152079dd0c253139c51b730604f7" kindref="member">wxScopedCharTypeBuffer&lt;T&gt;::CreateOwned()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_char_type_buffer_1aade101b22ef6134884452ef99ef6fdcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCharTypeBuffer&lt; T &gt;::wxCharTypeBuffer</definition>
+        <argsstring>(const wxCharTypeBuffer &amp;src)</argsstring>
+        <name>wxCharTypeBuffer</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Increases reference count on the data, does <emphasis>not</emphasis> make <ref refid="group__group__funcmacro__crt_1gad53f3e259e320f534497703307491de2" kindref="member">wxStrdup()</ref> copy of the data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_char_type_buffer_1a660ea31ce0dbb18c38bc15955c7e9a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCharTypeBuffer&lt; T &gt;::wxCharTypeBuffer</definition>
+        <argsstring>(const wxScopedCharTypeBuffer&lt; T &gt; &amp;src)</argsstring>
+        <name>wxCharTypeBuffer</name>
+        <param>
+          <type>const <ref refid="classwx_scoped_char_type_buffer" kindref="compound">wxScopedCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Makes a copy of scoped buffer <emphasis>src</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>src</emphasis> is a non-owned buffer, a copy of its data is made using <ref refid="group__group__funcmacro__crt_1gad53f3e259e320f534497703307491de2" kindref="member">wxStrdup()</ref>. If <emphasis>src</emphasis> is an owned buffer, this constructor behaves in the usual way (reference count on buffer data is incremented). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_char_type_buffer_1ada3c26e32a29310124c16dec9d2f824c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref> &amp;</type>
+        <definition>wxCharTypeBuffer&amp; wxCharTypeBuffer&lt; T &gt;::operator=</definition>
+        <argsstring>(const CharType *str)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_scoped_char_type_buffer_1af80c4ff48b92f8e01b6167ff0468e213" kindref="member">CharType</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Assigns <emphasis>str</emphasis> to this buffer and takes ownership of it (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>the buffer becomes &quot;owned&quot;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_char_type_buffer_1a33724952535c8e3100b6571e904dc976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref> &amp;</type>
+        <definition>wxCharTypeBuffer&amp; wxCharTypeBuffer&lt; T &gt;::operator=</definition>
+        <argsstring>(const wxCharTypeBuffer &amp;src)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator behaves in the same way as the copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_char_type_buffer_1abe58b7b3a0a03ad0d16a226ac36f6e16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_char_type_buffer" kindref="compound">wxCharTypeBuffer</ref> &amp;</type>
+        <definition>wxCharTypeBuffer&amp; wxCharTypeBuffer&lt; T &gt;::operator=</definition>
+        <argsstring>(const wxScopedCharTypeBuffer&lt; T &gt; &amp;src)</argsstring>
+        <name>operator=</name>
+        <reimplements refid="classwx_scoped_char_type_buffer_1ae74365a7c4c91ff1e43eaa64ebb341ed">operator=</reimplements>
+        <param>
+          <type>const <ref refid="classwx_scoped_char_type_buffer" kindref="compound">wxScopedCharTypeBuffer</ref>&lt; T &gt; &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Assigns a scoped buffer to this buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>src</emphasis> is a non-owned buffer, a copy of its data is made using <ref refid="group__group__funcmacro__crt_1gad53f3e259e320f534497703307491de2" kindref="member">wxStrdup()</ref>. If <emphasis>src</emphasis> is an owned buffer, the assignment behaves in the usual way (reference count on buffer data is incremented). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_char_type_buffer_1acefac18ca027f27362126dea204b6fe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxCharTypeBuffer&lt; T &gt;::extend</definition>
+        <argsstring>(size_t len)</argsstring>
+        <name>extend</name>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Extends the buffer to have size <emphasis>len</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can only be called on buffers that don&apos;t share data with another buffer (i.e. reference count of the data is 1).</para><para><simplesect kind="see"><para><ref refid="classwx_char_type_buffer_1a1e50c5137c9e9aa45aa2008a9b6fb63e" kindref="member">shrink()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_char_type_buffer_1a1e50c5137c9e9aa45aa2008a9b6fb63e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxCharTypeBuffer&lt; T &gt;::shrink</definition>
+        <argsstring>(size_t len)</argsstring>
+        <name>shrink</name>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Shrinks the buffer to have size <emphasis>len</emphasis> and NUL-terminates the string at this length. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can only be called on buffers that don&apos;t share data with another buffer (i.e. reference count of the data is 1).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length to shrink to. Must not be larger than current length.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The string is not reallocated to take less memory.</para></simplesect>
+<simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_char_type_buffer_1acefac18ca027f27362126dea204b6fe9" kindref="member">extend()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="223"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>wxCharTypeBuffer&lt;T&gt; is a template class for storing characters. </para>    </briefdescription>
+    <detaileddescription>
+<para>The difference from wxScopedCharTypeBuffer&lt;T&gt; is that this class doesn&apos;t have non-owned mode and the data stored in it are valid for as long as the buffer instance exists. Other than that, this class&apos; behaviour is the same as wxScopedCharTypeBuffer&lt;T&gt;&apos;s -- in particular, the data are reference-counted and copying the buffer is cheap.</para><para>wxScopedCharTypeBuffer&lt;T&gt; buffers can be converted into wxCharTypeBuffer&lt;T&gt;.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the characters stored in this class.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.0</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4693">
+        <label>wxCharTypeBuffer&lt; T &gt;</label>
+        <link refid="classwx_char_type_buffer"/>
+        <childnode refid="4694" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4694">
+        <label>wxScopedCharTypeBuffer&lt; T &gt;</label>
+        <link refid="classwx_scoped_char_type_buffer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4695">
+        <label>wxCharTypeBuffer&lt; T &gt;</label>
+        <link refid="classwx_char_type_buffer"/>
+        <childnode refid="4696" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4696">
+        <label>wxScopedCharTypeBuffer&lt; T &gt;</label>
+        <link refid="classwx_scoped_char_type_buffer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="142" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" bodystart="141" bodyend="224"/>
+    <listofallmembers>
+      <member refid="classwx_scoped_char_type_buffer_1af80c4ff48b92f8e01b6167ff0468e213" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>CharType</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1a7ee8d22a9db07acc53630b74fda08581" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>CreateNonOwned</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1af4e2152079dd0c253139c51b730604f7" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>CreateOwned</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1a7cd7ba0ab32e9f63779f602c2bdfd9b8" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>data</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1a246f355f8c369f155f34834980f9b332" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>data</name></member>
+      <member refid="classwx_char_type_buffer_1acefac18ca027f27362126dea204b6fe9" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>extend</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1a6402a288ccf377622d973d65b90a8d50" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>length</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1ac99fcaf848d1a724e926373055573c6d" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>operator const CharType *</name></member>
+      <member refid="classwx_char_type_buffer_1ada3c26e32a29310124c16dec9d2f824c" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>operator=</name></member>
+      <member refid="classwx_char_type_buffer_1a33724952535c8e3100b6571e904dc976" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>operator=</name></member>
+      <member refid="classwx_char_type_buffer_1abe58b7b3a0a03ad0d16a226ac36f6e16" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>operator=</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1a194bab9294740ccb17d78b2caa2ea671" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>operator[]</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1ab9681b17d94b2bdd44b1845c79561bee" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>reset</name></member>
+      <member refid="classwx_char_type_buffer_1a1e50c5137c9e9aa45aa2008a9b6fb63e" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>shrink</name></member>
+      <member refid="classwx_char_type_buffer_1a578b7c081162f38a78b4876965809239" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>wxCharTypeBuffer</name></member>
+      <member refid="classwx_char_type_buffer_1a71e898e731781d49a34d8411cf54b3c9" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>wxCharTypeBuffer</name></member>
+      <member refid="classwx_char_type_buffer_1aade101b22ef6134884452ef99ef6fdcf" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>wxCharTypeBuffer</name></member>
+      <member refid="classwx_char_type_buffer_1a660ea31ce0dbb18c38bc15955c7e9a06" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>wxCharTypeBuffer</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1a2c2b0a79621bf86c95cde5c5a88aa8dc" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>wxScopedCharTypeBuffer</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1a2cb195b3dfcb060d07a4e77ecd3d2ae6" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>wxScopedCharTypeBuffer</name></member>
+      <member refid="classwx_scoped_char_type_buffer_1afaa9bd0d5e705999e6620e8a13427014" prot="public" virt="non-virtual"><scope>wxCharTypeBuffer</scope><name>~wxScopedCharTypeBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

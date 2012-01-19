@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_colour_database" kind="class" prot="public">
+    <compoundname>wxColourDatabase</compoundname>
+    <includes local="no">wx/gdicmn.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_colour_database_1a66269122cb725da348b3a1c396002e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxColourDatabase::wxColourDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>wxColourDatabase</name>
+        <briefdescription>
+<para>Constructs the colour database. </para>        </briefdescription>
+        <detaileddescription>
+<para>It will be initialized at the first use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="749"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_colour_database_1ab52ecdf5e71d9ed0229236e799fc7dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxColourDatabase::AddColour</definition>
+        <argsstring>(const wxString &amp;colourName, const wxColour &amp;colour)</argsstring>
+        <name>AddColour</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>colourName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Adds a colour to the database. </para>        </briefdescription>
+        <detaileddescription>
+<para>If a colour with the same name already exists, it is replaced. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="755"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_colour_database_1af4770b188676ad4bd97ab4525d7c2d2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>wxColour wxColourDatabase::Find</definition>
+        <argsstring>(const wxString &amp;colourName) const </argsstring>
+        <name>Find</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>colourName</declname>
+        </param>
+        <briefdescription>
+<para>Finds a colour given the name. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns an invalid colour object (that is, <ref refid="classwx_colour_1a5616c16dbc5f312421adb50a49720320" kindref="member">wxColour::IsOk()</ref> will return false) if the colour wasn&apos;t found in the database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="762"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_colour_database_1a81131df659fe2500832e7443bacb3015" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxColourDatabase::FindName</definition>
+        <argsstring>(const wxColour &amp;colour) const </argsstring>
+        <name>FindName</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Finds a colour name given the colour. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns an empty string if the colour is not found in the database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="768"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>wxWidgets maintains a database of standard RGB colours for a predefined set of named colours. </para>    </briefdescription>
+    <detaileddescription>
+<para>The application may add to this set if desired by using <ref refid="classwx_colour_database_1ab52ecdf5e71d9ed0229236e799fc7dea" kindref="member">AddColour()</ref> and may use it to look up colours by names using <ref refid="classwx_colour_database_1af4770b188676ad4bd97ab4525d7c2d2a" kindref="member">Find()</ref> or find the names for the standard colour using <ref refid="classwx_colour_database_1a81131df659fe2500832e7443bacb3015" kindref="member">FindName()</ref>.</para><para>There is one predefined, global instance of this class called <ref refid="gdicmn_8h_1a94385d8ea5856702bfc3cbe445163fb0" kindref="member">wxTheColourDatabase</ref>.</para><para>The standard database contains at least the following colours:</para><para><table rows="1" cols="4"><row>
+<entry thead="no"><para>AQUAMARINE <linebreak/>
+ BLACK <linebreak/>
+ BLUE <linebreak/>
+ BLUE VIOLET <linebreak/>
+ BROWN <linebreak/>
+ CADET BLUE <linebreak/>
+ CORAL <linebreak/>
+ CORNFLOWER BLUE <linebreak/>
+ CYAN <linebreak/>
+ DARK GREY <linebreak/>
+ DARK GREEN <linebreak/>
+ DARK OLIVE GREEN <linebreak/>
+ DARK ORCHID <linebreak/>
+ DARK SLATE BLUE <linebreak/>
+ DARK SLATE GREY <linebreak/>
+ DARK TURQUOISE <linebreak/>
+ DIM GREY </para></entry><entry thead="no"><para>FIREBRICK <linebreak/>
+ FOREST GREEN <linebreak/>
+ GOLD <linebreak/>
+ GOLDENROD <linebreak/>
+ GREY <linebreak/>
+ GREEN <linebreak/>
+ GREEN YELLOW <linebreak/>
+ INDIAN RED <linebreak/>
+ KHAKI <linebreak/>
+ LIGHT BLUE <linebreak/>
+ LIGHT GREY <linebreak/>
+ LIGHT STEEL BLUE <linebreak/>
+ LIME GREEN <linebreak/>
+ MAGENTA <linebreak/>
+ MAROON <linebreak/>
+ MEDIUM AQUAMARINE <linebreak/>
+ MEDIUM BLUE </para></entry><entry thead="no"><para>MEDIUM FOREST GREEN <linebreak/>
+ MEDIUM GOLDENROD <linebreak/>
+ MEDIUM ORCHID <linebreak/>
+ MEDIUM SEA GREEN <linebreak/>
+ MEDIUM SLATE BLUE <linebreak/>
+ MEDIUM SPRING GREEN <linebreak/>
+ MEDIUM TURQUOISE <linebreak/>
+ MEDIUM VIOLET RED <linebreak/>
+ MIDNIGHT BLUE <linebreak/>
+ NAVY <linebreak/>
+ ORANGE <linebreak/>
+ ORANGE RED <linebreak/>
+ ORCHID <linebreak/>
+ PALE GREEN <linebreak/>
+ PINK <linebreak/>
+ PLUM <linebreak/>
+ PURPLE </para></entry><entry thead="no"><para>RED <linebreak/>
+ SALMON <linebreak/>
+ SEA GREEN <linebreak/>
+ SIENNA <linebreak/>
+ SKY BLUE <linebreak/>
+ SLATE BLUE <linebreak/>
+ SPRING GREEN <linebreak/>
+ STEEL BLUE <linebreak/>
+ TAN <linebreak/>
+ THISTLE <linebreak/>
+ TURQUOISE <linebreak/>
+ VIOLET <linebreak/>
+ VIOLET RED <linebreak/>
+ WHEAT <linebreak/>
+ WHITE <linebreak/>
+ YELLOW <linebreak/>
+ YELLOW GREEN  </para></entry></row>
+</table>
+</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour" kindref="compound">wxColour</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="743" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="742" bodyend="769"/>
+    <listofallmembers>
+      <member refid="classwx_colour_database_1ab52ecdf5e71d9ed0229236e799fc7dea" prot="public" virt="non-virtual"><scope>wxColourDatabase</scope><name>AddColour</name></member>
+      <member refid="classwx_colour_database_1af4770b188676ad4bd97ab4525d7c2d2a" prot="public" virt="non-virtual"><scope>wxColourDatabase</scope><name>Find</name></member>
+      <member refid="classwx_colour_database_1a81131df659fe2500832e7443bacb3015" prot="public" virt="non-virtual"><scope>wxColourDatabase</scope><name>FindName</name></member>
+      <member refid="classwx_colour_database_1a66269122cb725da348b3a1c396002e41" prot="public" virt="non-virtual"><scope>wxColourDatabase</scope><name>wxColourDatabase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

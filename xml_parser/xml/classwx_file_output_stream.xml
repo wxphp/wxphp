@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_file_output_stream" kind="class" prot="public">
+    <compoundname>wxFileOutputStream</compoundname>
+    <basecompoundref refid="classwx_output_stream" prot="public" virt="non-virtual">wxOutputStream</basecompoundref>
+    <derivedcompoundref refid="classwx_file_stream" prot="public" virt="non-virtual">wxFileStream</derivedcompoundref>
+    <includes local="no">wx/wfstream.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_file_output_stream_1a26efa07769b2239c18a82f960fc500a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileOutputStream::wxFileOutputStream</definition>
+        <argsstring>(const wxString &amp;ofileName)</argsstring>
+        <name>wxFileOutputStream</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>ofileName</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new file with <emphasis>ofileName</emphasis> name and initializes the stream in write-only mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>You should use <ref refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b" kindref="member">wxStreamBase::IsOk()</ref> to verify if the constructor succeeded. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_output_stream_1aa08a1b430be409055d87f1745409db3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileOutputStream::wxFileOutputStream</definition>
+        <argsstring>(wxFile &amp;file)</argsstring>
+        <name>wxFileOutputStream</name>
+        <param>
+          <type><ref refid="classwx_file" kindref="compound">wxFile</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a file stream in write-only mode using the file I/O object file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_output_stream_1a80f2b1a72c7032b3ab56c702872ac323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileOutputStream::wxFileOutputStream</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>wxFileOutputStream</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a file stream in write-only mode using the file descriptor <emphasis>fd</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_output_stream_1ac6bb88a9ee220f14f618724a1376b447" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxFileOutputStream::~wxFileOutputStream</definition>
+        <argsstring>()</argsstring>
+        <name>~wxFileOutputStream</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_output_stream_1a626753e0830d6c9c5acc91f3cfe0127e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool wxFileOutputStream::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <reimplements refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b">IsOk</reimplements>
+        <reimplementedby refid="classwx_file_stream_1aef7a2de6574ce8d0d06cf2c1005c41ec">IsOk</reimplementedby>
+        <briefdescription>
+<para>Returns true if the stream is initialized and ready. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents data written to a file. </para>    </briefdescription>
+    <detaileddescription>
+<para>There are actually two such groups of classes: this one is based on <ref refid="classwx_file" kindref="compound">wxFile</ref> whereas <ref refid="classwx_f_file_output_stream" kindref="compound">wxFFileOutputStream</ref> is based in the <ref refid="classwx_f_file" kindref="compound">wxFFile</ref> class.</para><para>Note that <ref refid="classwx_output_stream_1ac898dd36e44e5f4785a6658f470e9752" kindref="member">wxOutputStream::SeekO()</ref> can seek beyond the end of the stream (file) and will thus not return <ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref> for that.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_buffered_output_stream" kindref="compound">wxBufferedOutputStream</ref>, <ref refid="classwx_file_input_stream" kindref="compound">wxFileInputStream</ref>, <ref refid="classwx_f_file_output_stream" kindref="compound">wxFFileOutputStream</ref>, <ref refid="classwx_f_file_input_stream" kindref="compound">wxFFileInputStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6215">
+        <label>wxFileStream</label>
+        <link refid="classwx_file_stream"/>
+        <childnode refid="6212" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6212">
+        <label>wxFileOutputStream</label>
+        <link refid="classwx_file_output_stream"/>
+        <childnode refid="6213" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6214">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="6213">
+        <label>wxOutputStream</label>
+        <link refid="classwx_output_stream"/>
+        <childnode refid="6214" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6216">
+        <label>wxFileOutputStream</label>
+        <link refid="classwx_file_output_stream"/>
+        <childnode refid="6217" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6218">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="6217">
+        <label>wxOutputStream</label>
+        <link refid="classwx_output_stream"/>
+        <childnode refid="6218" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" bodystart="120" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>Close</name></member>
+      <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>GetLastError</name></member>
+      <member refid="classwx_stream_base_1a0d2d992fd98835aabf2b9b656a1e6ccd" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>GetLength</name></member>
+      <member refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>GetSize</name></member>
+      <member refid="classwx_file_output_stream_1a626753e0830d6c9c5acc91f3cfe0127e" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>IsOk</name></member>
+      <member refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>IsSeekable</name></member>
+      <member refid="classwx_output_stream_1a5bc5c04b8f46ed18f406d7e59484a546" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>LastWrite</name></member>
+      <member refid="classwx_stream_base_1ae38e82c374f82d39993909f0a5d3017e" prot="protected" virt="virtual"><scope>wxFileOutputStream</scope><name>OnSysSeek</name></member>
+      <member refid="classwx_stream_base_1a7bb3b0b470e960d1165a28e83d576c1b" prot="protected" virt="virtual"><scope>wxFileOutputStream</scope><name>OnSysTell</name></member>
+      <member refid="classwx_output_stream_1a41773bceb97b1981cbc3d69c596df929" prot="protected" virt="non-virtual"><scope>wxFileOutputStream</scope><name>OnSysWrite</name></member>
+      <member refid="classwx_stream_base_1aaee699fe59f603eaae1550ee55ac579f" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>operator!</name></member>
+      <member refid="classwx_output_stream_1a526dbd35592b0280659cf96c0a77e804" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>PutC</name></member>
+      <member refid="classwx_stream_base_1a52353ac42f72538b2022a84f416e5fe2" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>Reset</name></member>
+      <member refid="classwx_output_stream_1ac898dd36e44e5f4785a6658f470e9752" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>SeekO</name></member>
+      <member refid="classwx_output_stream_1acb127540592e6b5a3e8787329eb696a4" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>TellO</name></member>
+      <member refid="classwx_output_stream_1a22154f02408431ffe8b1590407c3b011" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>Write</name></member>
+      <member refid="classwx_output_stream_1aacced095d3e9b19b4f6264d94c85cf8f" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>Write</name></member>
+      <member refid="classwx_file_output_stream_1a26efa07769b2239c18a82f960fc500a7" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>wxFileOutputStream</name></member>
+      <member refid="classwx_file_output_stream_1aa08a1b430be409055d87f1745409db3b" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>wxFileOutputStream</name></member>
+      <member refid="classwx_file_output_stream_1a80f2b1a72c7032b3ab56c702872ac323" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>wxFileOutputStream</name></member>
+      <member refid="classwx_output_stream_1ab2391df744df6ec2d4e4e3f561c51118" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>wxOutputStream</name></member>
+      <member refid="classwx_stream_base_1a2bdb01f1ccd34d551d3cfc848054bf1e" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>wxStreamBase</name></member>
+      <member refid="classwx_file_output_stream_1ac6bb88a9ee220f14f618724a1376b447" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>~wxFileOutputStream</name></member>
+      <member refid="classwx_output_stream_1aadf4d69a6ab7430e99ecb8d02feecfd3" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>~wxOutputStream</name></member>
+      <member refid="classwx_stream_base_1aebba32b4da79c60933fa997735a8bfe5" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>~wxStreamBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

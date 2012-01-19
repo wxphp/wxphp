@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_aui_default_tool_bar_art" kind="class" prot="public">
+    <compoundname>wxAuiDefaultToolBarArt</compoundname>
+    <basecompoundref refid="classwx_aui_tool_bar_art" prot="public" virt="non-virtual">wxAuiToolBarArt</basecompoundref>
+    <includes local="no">wx/aui/toolbar.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1acbbd0ce107f5f4121447991d6485c778" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxAuiDefaultToolBarArt::wxAuiDefaultToolBarArt</definition>
+        <argsstring>()</argsstring>
+        <name>wxAuiDefaultToolBarArt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a6ccedb6af23c62b9e6371121910d430b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxAuiDefaultToolBarArt::~wxAuiDefaultToolBarArt</definition>
+        <argsstring>()</argsstring>
+        <name>~wxAuiDefaultToolBarArt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a2bc732c91d8e314f7ae17c244d2d180d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_aui_tool_bar_art" kindref="compound">wxAuiToolBarArt</ref> *</type>
+        <definition>virtual wxAuiToolBarArt* wxAuiDefaultToolBarArt::Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a799ff359e575af92b6f83bc23d96ef27">Clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1ac7690832d7c6a735fec476d975a0718e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::SetFlags</definition>
+        <argsstring>(unsigned int flags)</argsstring>
+        <name>SetFlags</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1adaf8fc605060991bc22faddbb82564f3">SetFlags</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a45f48ab3148b48cfb47c223a24f7e41c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int wxAuiDefaultToolBarArt::GetFlags</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlags</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a7ab1acf203538788cc2551e5546de199">GetFlags</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1abbb107bb1ccbad2ad99425c42f76e76b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::SetFont</definition>
+        <argsstring>(const wxFont &amp;font)</argsstring>
+        <name>SetFont</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a2c4da0dc4f46d93e8a46073a74d94551">SetFont</reimplements>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a8b132afa4ce9271ff1ed64bb4aa10722" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>virtual wxFont wxAuiDefaultToolBarArt::GetFont</definition>
+        <argsstring>()</argsstring>
+        <name>GetFont</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a1a0579b425c1b3ba0c54af0a92ea93b1">GetFont</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a3ead4a3a13472903396c65be33a7035a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::SetTextOrientation</definition>
+        <argsstring>(int orientation)</argsstring>
+        <name>SetTextOrientation</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a23e41b790de5e9e8809a2bd59a0f76b1">SetTextOrientation</reimplements>
+        <param>
+          <type>int</type>
+          <declname>orientation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1abc2f346891e125e1465081f89001eca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxAuiDefaultToolBarArt::GetTextOrientation</definition>
+        <argsstring>()</argsstring>
+        <name>GetTextOrientation</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a4030ffb3dceee13774ad96c333733a02">GetTextOrientation</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a65523923d57bc604b7d4bb69431fe03f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::DrawBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect)</argsstring>
+        <name>DrawBackground</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a813a001e71983dcd2840151a7f55ced1">DrawBackground</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a188833b0499a787c7798e833c5bc3721" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::DrawLabel</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxAuiToolBarItem &amp;item, const wxRect &amp;rect)</argsstring>
+        <name>DrawLabel</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a7115aab352e8641668c955d25e2b2b40">DrawLabel</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_aui_tool_bar_item" kindref="compound">wxAuiToolBarItem</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1ade9f7fe7b880448642186777a83a5ce0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::DrawButton</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxAuiToolBarItem &amp;item, const wxRect &amp;rect)</argsstring>
+        <name>DrawButton</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1aff3c8aecc5040e3236fc6c878ad115e0">DrawButton</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_aui_tool_bar_item" kindref="compound">wxAuiToolBarItem</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1af35c6a177df9ab77fd3ce1f06ae3f8bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::DrawDropDownButton</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxAuiToolBarItem &amp;item, const wxRect &amp;rect)</argsstring>
+        <name>DrawDropDownButton</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1ac4a25867ef46713fe83e5cfbef1b92a4">DrawDropDownButton</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_aui_tool_bar_item" kindref="compound">wxAuiToolBarItem</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a518b6a5c14b70b3157596343346fb383" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::DrawControlLabel</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxAuiToolBarItem &amp;item, const wxRect &amp;rect)</argsstring>
+        <name>DrawControlLabel</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a921527e928cacf8d7bc5c6388c914a26">DrawControlLabel</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_aui_tool_bar_item" kindref="compound">wxAuiToolBarItem</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a57be606f46ea196413cdcf547bf65884" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::DrawSeparator</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect)</argsstring>
+        <name>DrawSeparator</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1aedf8d519c3fae54c6f2734fa9185df53">DrawSeparator</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1abe069447ddd5625ccdcd3e075b23accb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::DrawGripper</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect)</argsstring>
+        <name>DrawGripper</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1ae8f89214c00ced5aca5b655f3cdde22d">DrawGripper</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a3d216d1f65b3c278f5cee65c75f627aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::DrawOverflowButton</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect, int state)</argsstring>
+        <name>DrawOverflowButton</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a3965f9fee00ee4599ba7ed60c1b94dcc">DrawOverflowButton</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a79dc983a898060cd99b588d0f8e86e46" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxAuiDefaultToolBarArt::GetLabelSize</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxAuiToolBarItem &amp;item)</argsstring>
+        <name>GetLabelSize</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1ae57f693405ccf8ef2fcca334965b9ce9">GetLabelSize</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_aui_tool_bar_item" kindref="compound">wxAuiToolBarItem</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a3c9a413d462a9b820dfb892d104241a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxAuiDefaultToolBarArt::GetToolSize</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxAuiToolBarItem &amp;item)</argsstring>
+        <name>GetToolSize</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a574ea477abd35d35977663bc95cc7bc1">GetToolSize</reimplements>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_aui_tool_bar_item" kindref="compound">wxAuiToolBarItem</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a31f8432487469d8734c0eb5b89ef1978" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxAuiDefaultToolBarArt::GetElementSize</definition>
+        <argsstring>(int element)</argsstring>
+        <name>GetElementSize</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a8832bc7900d7bc2bbef686a41dbdb3cc">GetElementSize</reimplements>
+        <param>
+          <type>int</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a3faf06b85490a7b601e29db14dd5af05" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDefaultToolBarArt::SetElementSize</definition>
+        <argsstring>(int element_id, int size)</argsstring>
+        <name>SetElementSize</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a3eed1a2c387529121c714b83ec69cc40">SetElementSize</reimplements>
+        <param>
+          <type>int</type>
+          <declname>element_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_default_tool_bar_art_1a26fb0cb3cb3b2df01b397b82a3b0803c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxAuiDefaultToolBarArt::ShowDropDown</definition>
+        <argsstring>(wxWindow *wnd, const wxAuiToolBarItemArray &amp;items)</argsstring>
+        <name>ShowDropDown</name>
+        <reimplements refid="classwx_aui_tool_bar_art_1a41d2759cfb04004c750fc05f105f8770">ShowDropDown</reimplements>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const wxAuiToolBarItemArray &amp;</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="330"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_aui_default_tool_bar_art" kindref="compound">wxAuiDefaultToolBarArt</ref> is part of the wxAUI class framework. </para>    </briefdescription>
+    <detaileddescription>
+<para>See also <ref refid="classwx_aui_tool_bar_art" kindref="compound">wxAuiToolBarArt</ref> , <ref refid="classwx_aui_tool_bar" kindref="compound">wxAuiToolBar</ref> and <ref refid="overview__aui" kindref="compound">wxAUI Overview</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4351">
+        <label>wxAuiDefaultToolBarArt</label>
+        <link refid="classwx_aui_default_tool_bar_art"/>
+        <childnode refid="4352" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4352">
+        <label>wxAuiToolBarArt</label>
+        <link refid="classwx_aui_tool_bar_art"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4353">
+        <label>wxAuiDefaultToolBarArt</label>
+        <link refid="classwx_aui_default_tool_bar_art"/>
+        <childnode refid="4354" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4354">
+        <label>wxAuiToolBarArt</label>
+        <link refid="classwx_aui_tool_bar_art"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="258" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="257" bodyend="331"/>
+    <listofallmembers>
+      <member refid="classwx_aui_default_tool_bar_art_1a2bc732c91d8e314f7ae17c244d2d180d" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>Clone</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a65523923d57bc604b7d4bb69431fe03f" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>DrawBackground</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1ade9f7fe7b880448642186777a83a5ce0" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>DrawButton</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a518b6a5c14b70b3157596343346fb383" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>DrawControlLabel</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1af35c6a177df9ab77fd3ce1f06ae3f8bc" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>DrawDropDownButton</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1abe069447ddd5625ccdcd3e075b23accb" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>DrawGripper</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a188833b0499a787c7798e833c5bc3721" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>DrawLabel</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a3d216d1f65b3c278f5cee65c75f627aa" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>DrawOverflowButton</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a57be606f46ea196413cdcf547bf65884" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>DrawSeparator</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a31f8432487469d8734c0eb5b89ef1978" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>GetElementSize</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a45f48ab3148b48cfb47c223a24f7e41c" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>GetFlags</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a8b132afa4ce9271ff1ed64bb4aa10722" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>GetFont</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a79dc983a898060cd99b588d0f8e86e46" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>GetLabelSize</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1abc2f346891e125e1465081f89001eca6" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>GetTextOrientation</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a3c9a413d462a9b820dfb892d104241a9" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>GetToolSize</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a3faf06b85490a7b601e29db14dd5af05" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>SetElementSize</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1ac7690832d7c6a735fec476d975a0718e" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>SetFlags</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1abbb107bb1ccbad2ad99425c42f76e76b" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>SetFont</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a3ead4a3a13472903396c65be33a7035a" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>SetTextOrientation</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a26fb0cb3cb3b2df01b397b82a3b0803c" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>ShowDropDown</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1acbbd0ce107f5f4121447991d6485c778" prot="public" virt="non-virtual"><scope>wxAuiDefaultToolBarArt</scope><name>wxAuiDefaultToolBarArt</name></member>
+      <member refid="classwx_aui_tool_bar_art_1a8218973ef744b11dc65ad41e1d11f6b8" prot="public" virt="non-virtual"><scope>wxAuiDefaultToolBarArt</scope><name>wxAuiToolBarArt</name></member>
+      <member refid="classwx_aui_default_tool_bar_art_1a6ccedb6af23c62b9e6371121910d430b" prot="public" virt="virtual"><scope>wxAuiDefaultToolBarArt</scope><name>~wxAuiDefaultToolBarArt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

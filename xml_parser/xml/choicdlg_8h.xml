@@ -1,0 +1,727 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="choicdlg_8h" kind="file">
+    <compoundname>choicdlg.h</compoundname>
+    <innerclass refid="classwx_multi_choice_dialog" prot="public">wxMultiChoiceDialog</innerclass>
+    <innerclass refid="classwx_single_choice_dialog" prot="public">wxSingleChoiceDialog</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga5364146ec10819c6d5d51c28b1137e1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGetSingleChoiceIndex</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, const wxArrayString &amp;aChoices, wxWindow *parent=NULL, int x=-1, int y=-1, bool centre=true, int width=150, int height=200, int initialSelection=0)</argsstring>
+        <name>wxGetSingleChoiceIndex</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>aChoices</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>150</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+          <defval>200</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialSelection</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Same as <ref refid="group__group__funcmacro__dialog_1ga1eb11c6b7634d7803110c3c5db3edae0" kindref="member">wxGetSingleChoice()</ref> but returns the index representing the selected string. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the user pressed cancel, -1 is returned.</para><para>Include file: <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>aChoices</emphasis> parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="320"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gafac19a83bcc167330658c174727d1ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGetSingleChoiceIndex</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, int n, const wxString &amp;choices[], wxWindow *parent=NULL, int x=-1, int y=-1, bool centre=true, int width=150, int height=200, int initialSelection=0)</argsstring>
+        <name>wxGetSingleChoiceIndex</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>choices</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>150</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+          <defval>200</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialSelection</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="332"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga6168fd891e0096c12f9d836d7bcd3dc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGetSingleChoiceIndex</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, const wxArrayString &amp;choices, int initialSelection, wxWindow *parent=NULL)</argsstring>
+        <name>wxGetSingleChoiceIndex</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>choices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialSelection</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="339"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga9cee9b87475af5ba9df08e21296ecaba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGetSingleChoiceIndex</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, int n, const wxString *choices, int initialSelection, wxWindow *parent=NULL)</argsstring>
+        <name>wxGetSingleChoiceIndex</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>choices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialSelection</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="345"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga1eb11c6b7634d7803110c3c5db3edae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetSingleChoice</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, const wxArrayString &amp;aChoices, wxWindow *parent=NULL, int x=-1, int y=-1, bool centre=true, int width=150, int height=200 int initialSelection=0)</argsstring>
+        <name>wxGetSingleChoice</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>aChoices</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>150</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+          <defval>200 int initialSelection=0</defval>
+        </param>
+        <briefdescription>
+<para>Pops up a dialog box containing a message, OK/Cancel buttons and a single-selection listbox. </para>        </briefdescription>
+        <detaileddescription>
+<para>The user may choose an item and press OK to return a string or Cancel to return the empty string. Use <ref refid="group__group__funcmacro__dialog_1ga5364146ec10819c6d5d51c28b1137e1d" kindref="member">wxGetSingleChoiceIndex()</ref> if empty string is a valid choice and if you want to be able to detect pressing Cancel reliably.</para><para>You may pass the list of strings to choose from either using <computeroutput>choices</computeroutput> which is an array of <emphasis>n</emphasis> strings for the listbox or by using a single <computeroutput>aChoices</computeroutput> parameter of type <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>Include file: <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="380"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga6c40a36c21ee83a1e45bc3403435f324" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetSingleChoice</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, int n, const wxString &amp;choices[], wxWindow *parent=NULL, int x=-1, int y=-1, bool centre=true, int width=150, int height=200 int initialSelection=0)</argsstring>
+        <name>wxGetSingleChoice</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>choices</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>150</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+          <defval>200 int initialSelection=0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="391"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga089d612e86a041ce12cc246f0eea90d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetSingleChoice</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, const wxArrayString &amp;choices, int initialSelection, wxWindow *parent=NULL)</argsstring>
+        <name>wxGetSingleChoice</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>choices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialSelection</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="398"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gae7a68e907b8b755a871fce09e726945c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetSingleChoice</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, int n, const wxString *choices, int initialSelection, wxWindow *parent=NULL)</argsstring>
+        <name>wxGetSingleChoice</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>choices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialSelection</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="404"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga5a082ef571709d17325559ed4849b202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetSingleChoiceData</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, const wxArrayString &amp;aChoices, const wxString &amp;client_data[], wxWindow *parent=NULL, int x=-1, int y=-1, bool centre=true, int width=150, int height=200 int initialSelection=0)</argsstring>
+        <name>wxGetSingleChoiceData</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>aChoices</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>client_data</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>150</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+          <defval>200 int initialSelection=0</defval>
+        </param>
+        <briefdescription>
+<para>Same as wxGetSingleChoice but takes an array of client data pointers corresponding to the strings, and returns one of these pointers or NULL if Cancel was pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <computeroutput>client_data</computeroutput> array must have the same number of elements as <computeroutput>choices</computeroutput> or <computeroutput>aChoices!</computeroutput> </para><para>Include file: <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>aChoices</emphasis> and <emphasis>client_data</emphasis> parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="433"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga6abf4bb6201293d74bda517e89f81af3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetSingleChoiceData</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, int n, const wxString &amp;choices[], const wxString &amp;client_data[], wxWindow *parent=NULL, int x=-1, int y=-1, bool centre=true, int width=150, int height=200 int initialSelection=0)</argsstring>
+        <name>wxGetSingleChoiceData</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>choices</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>client_data</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>150</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+          <defval>200 int initialSelection=0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="446"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gae442fee25a67b67a80a9bdf35ffb5646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* wxGetSingleChoiceData</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, const wxArrayString &amp;choices, void **client_data, int initialSelection, wxWindow *parent=NULL)</argsstring>
+        <name>wxGetSingleChoiceData</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>choices</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>client_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialSelection</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="453"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga37248dbdce791be397ff1a2d100a6ef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* wxGetSingleChoiceData</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption, int n, const wxString *choices, void **client_data, int initialSelection, wxWindow *parent=NULL)</argsstring>
+        <name>wxGetSingleChoiceData</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>choices</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>client_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialSelection</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="460"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga286fbdd746cbcb3dd14851ee0afdf8a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGetSelectedChoices</definition>
+        <argsstring>(wxArrayInt &amp;selections, const wxString &amp;message, const wxString &amp;caption, const wxArrayString &amp;aChoices, wxWindow *parent=NULL, int x=-1, int y=-1, bool centre=true, int width=150, int height=200)</argsstring>
+        <name>wxGetSelectedChoices</name>
+        <param>
+          <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
+          <declname>selections</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>aChoices</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>150</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+          <defval>200</defval>
+        </param>
+        <briefdescription>
+<para>Pops up a dialog box containing a message, OK/Cancel buttons and a multiple-selection listbox. </para>        </briefdescription>
+        <detaileddescription>
+<para>The user may choose an arbitrary (including 0) number of items in the listbox whose indices will be returned in <computeroutput>selections</computeroutput> array. The initial contents of this array will be used to select the items when the dialog is shown. If the user cancels the dialog, the function returns -1 and <computeroutput>selections</computeroutput> array is left unchanged.</para><para>You may pass the list of strings to choose from either using <computeroutput>choices</computeroutput> which is an array of <emphasis>n</emphasis> strings for the listbox or by using a single <computeroutput>aChoices</computeroutput> parameter of type <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>Include file: <verbatim>#include &lt;wx/choicdlg.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. In wxPerl there is no <emphasis>selections</emphasis> parameter; the function returns an array containing the user selections. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="499"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga55d2783b16d516a2ff814faf3282a7b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGetSelectedChoices</definition>
+        <argsstring>(wxArrayInt &amp;selections, const wxString &amp;message, const wxString &amp;caption, int n, const wxString &amp;choices[], wxWindow *parent=NULL, int x=-1, int y=-1, bool centre=true, int width=150, int height=200)</argsstring>
+        <name>wxGetSelectedChoices</name>
+        <param>
+          <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
+          <declname>selections</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>choices</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>150</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+          <defval>200</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h" line="511"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicdlg.h"/>
+  </compounddef>
+</doxygen>

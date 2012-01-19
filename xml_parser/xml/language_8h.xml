@@ -1,0 +1,1668 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="language_8h" kind="file">
+    <compoundname>language.h</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" prot="public" static="no">
+        <name>wxLanguage</name>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a1caaa4e9e1dd8010499b0c87b0c181cd" prot="public">
+          <name>wxLANGUAGE_DEFAULT</name>
+          <briefdescription>
+<para>User&apos;s default/preffered language as got from OS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a643bd13a662924994aae0142f8be9933" prot="public">
+          <name>wxLANGUAGE_UNKNOWN</name>
+          <briefdescription>
+<para>Unknown language, returned if <ref refid="classwx_locale_1ae8f67045995e55b8d853405a66365fd5" kindref="member">wxLocale::GetSystemLanguage</ref> fails. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a3d4cabfaef1a9abc9c23681607a85fa5" prot="public">
+          <name>wxLANGUAGE_ABKHAZIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aabc5fcead7143efe1f5f95533430af09" prot="public">
+          <name>wxLANGUAGE_AFAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aaf29d130c83e73672ad273cfb2ac5584" prot="public">
+          <name>wxLANGUAGE_AFRIKAANS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a532909f7a9bcd747ef6f4399dfb26523" prot="public">
+          <name>wxLANGUAGE_ALBANIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab59d97ca034c8d4a3a7dda4b1f74c365" prot="public">
+          <name>wxLANGUAGE_AMHARIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae335c0f6babb685310c02e39039efcf1" prot="public">
+          <name>wxLANGUAGE_ARABIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae773cf9658677fd9639e1d90131574ce" prot="public">
+          <name>wxLANGUAGE_ARABIC_ALGERIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab0310f622b217a5dce4ebc2d487596ac" prot="public">
+          <name>wxLANGUAGE_ARABIC_BAHRAIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab65bb0afc518f53f3c8df8c12aa22fbd" prot="public">
+          <name>wxLANGUAGE_ARABIC_EGYPT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86afc4ac9177fa9eea4fc547f8522a34270" prot="public">
+          <name>wxLANGUAGE_ARABIC_IRAQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa6ae45b6a453cd0c5a5ac7eca035b4a9" prot="public">
+          <name>wxLANGUAGE_ARABIC_JORDAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a3cb91c915977fa79c9ee2d1fbb5e820a" prot="public">
+          <name>wxLANGUAGE_ARABIC_KUWAIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad764b561ba87e7e8321a8bdcbb908c89" prot="public">
+          <name>wxLANGUAGE_ARABIC_LEBANON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af5494a556d4274f6dfb454caa4c8dc50" prot="public">
+          <name>wxLANGUAGE_ARABIC_LIBYA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af822b66835897902a707cd3a4296feea" prot="public">
+          <name>wxLANGUAGE_ARABIC_MOROCCO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a56ea2278318e0d472bac58c41910b416" prot="public">
+          <name>wxLANGUAGE_ARABIC_OMAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab1846841455724118f4e480b67682bf2" prot="public">
+          <name>wxLANGUAGE_ARABIC_QATAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a2504de777d152188bcd05c828d055c33" prot="public">
+          <name>wxLANGUAGE_ARABIC_SAUDI_ARABIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a94f7a085cd21c787af89d6b2eafa5eaf" prot="public">
+          <name>wxLANGUAGE_ARABIC_SUDAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af94f3297aecd4e29b77e53f88f4606e1" prot="public">
+          <name>wxLANGUAGE_ARABIC_SYRIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a45d532ad3a2f3da7ca58a3fd5f480703" prot="public">
+          <name>wxLANGUAGE_ARABIC_TUNISIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a5204e33c305755428094f8aaa4b4e2fd" prot="public">
+          <name>wxLANGUAGE_ARABIC_UAE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ada2a3e76f58eb509f460267494884e73" prot="public">
+          <name>wxLANGUAGE_ARABIC_YEMEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a0c8e50fe2a8e2dc44d0a2c103dfcfbfb" prot="public">
+          <name>wxLANGUAGE_ARMENIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a70ec62934a56f7dc1da15c76e1c78a51" prot="public">
+          <name>wxLANGUAGE_ASSAMESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af8e8c35117406558ccc3808f98848c25" prot="public">
+          <name>wxLANGUAGE_ASTURIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad0fdb1cc82218e429ede6616e4bed423" prot="public">
+          <name>wxLANGUAGE_AYMARA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aeaed183e775fbc952f14e3d0f75e1bca" prot="public">
+          <name>wxLANGUAGE_AZERI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8ebd30485343883f2b1a893bae044ef9" prot="public">
+          <name>wxLANGUAGE_AZERI_CYRILLIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8c0e6c40d23c6df4c26258d0024edeaf" prot="public">
+          <name>wxLANGUAGE_AZERI_LATIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a1fba2641599386291632efa1a301710d" prot="public">
+          <name>wxLANGUAGE_BASHKIR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab3571dc606567bc208be097ce09772b0" prot="public">
+          <name>wxLANGUAGE_BASQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aeceac0a83a3a0f68e8e71c758bf74029" prot="public">
+          <name>wxLANGUAGE_BELARUSIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa7b38714fafc2969dc496ea5bf5df2e0" prot="public">
+          <name>wxLANGUAGE_BENGALI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a206a8e8936f583ff7667c7650693d030" prot="public">
+          <name>wxLANGUAGE_BHUTANI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aab7eb7287c3fff607423220ac1f132c6" prot="public">
+          <name>wxLANGUAGE_BIHARI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a88ee4359828ef944feabee1f548469ac" prot="public">
+          <name>wxLANGUAGE_BISLAMA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a45eb9714bdb9194f5358e8282d8945d2" prot="public">
+          <name>wxLANGUAGE_BOSNIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a3ced1fa38b4a8b26617e1705d25278fb" prot="public">
+          <name>wxLANGUAGE_BRETON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a05d12758da06b7359db68c23ef237a5c" prot="public">
+          <name>wxLANGUAGE_BULGARIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a374c6c4728a23babbd1f8c005536ea13" prot="public">
+          <name>wxLANGUAGE_BURMESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac8f10be42cca417072bd051af714e993" prot="public">
+          <name>wxLANGUAGE_CAMBODIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aad07ca73ea7c402be68f3dcf6f8d5557" prot="public">
+          <name>wxLANGUAGE_CATALAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad9c5524817431d7cd07096f28ace3414" prot="public">
+          <name>wxLANGUAGE_CHINESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae365f71412344923c2909ca9f82c9476" prot="public">
+          <name>wxLANGUAGE_CHINESE_SIMPLIFIED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aeb6c8e752e3503eaeae6b768df13ee79" prot="public">
+          <name>wxLANGUAGE_CHINESE_TRADITIONAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a0ccec3777ee6c1632f99ca46972ce0d1" prot="public">
+          <name>wxLANGUAGE_CHINESE_HONGKONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa2bd0581351daa74147efb98823f1c59" prot="public">
+          <name>wxLANGUAGE_CHINESE_MACAU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a3352fdbab80bd98ad0d49fc2acc1aade" prot="public">
+          <name>wxLANGUAGE_CHINESE_SINGAPORE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad0967e48449f5ba5a64ae1a1dd0d47f6" prot="public">
+          <name>wxLANGUAGE_CHINESE_TAIWAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aba548974bdc7d67d164a27fa129f080a" prot="public">
+          <name>wxLANGUAGE_CORSICAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86abf8e0a5055104641d8bd56a6ce4024e9" prot="public">
+          <name>wxLANGUAGE_CROATIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac5608c5dc2adb6f6d9aced5afa3f8a94" prot="public">
+          <name>wxLANGUAGE_CZECH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae37c84583bcca85d58e6c2957c6da630" prot="public">
+          <name>wxLANGUAGE_DANISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae1c53550fe1dc45c24fbef98bc40a7b2" prot="public">
+          <name>wxLANGUAGE_DUTCH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a7c5c5d43aa32eb6705b6dd08f67b410f" prot="public">
+          <name>wxLANGUAGE_DUTCH_BELGIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aeeebaecd33a2ccfd5dd2503a53aef8c2" prot="public">
+          <name>wxLANGUAGE_ENGLISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae5d8511196ae5b11cd07a4e4fc8ffe39" prot="public">
+          <name>wxLANGUAGE_ENGLISH_UK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a725e65be081e03f3a20a4777262504c9" prot="public">
+          <name>wxLANGUAGE_ENGLISH_US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac90c56211cfb68cfa48c91ced11d0c9a" prot="public">
+          <name>wxLANGUAGE_ENGLISH_AUSTRALIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4bf741c3c81ac32e22be949cbb2c4ec4" prot="public">
+          <name>wxLANGUAGE_ENGLISH_BELIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a5703b4afaf1c5f265df276ab8ac551b4" prot="public">
+          <name>wxLANGUAGE_ENGLISH_BOTSWANA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a753e3e1e70ac7f400299556011b33def" prot="public">
+          <name>wxLANGUAGE_ENGLISH_CANADA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a7a2f36d4ed3670b5736f4aee3ae4a8d0" prot="public">
+          <name>wxLANGUAGE_ENGLISH_CARIBBEAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a3b9d19010ece4a7425df85b7a8aeb4df" prot="public">
+          <name>wxLANGUAGE_ENGLISH_DENMARK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a7c23ebdff1d6b9efc00a00351236febb" prot="public">
+          <name>wxLANGUAGE_ENGLISH_EIRE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab97a35a71c46039aef8f5a3af7333e30" prot="public">
+          <name>wxLANGUAGE_ENGLISH_JAMAICA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa0cd0c98a3475dd09d05d4d7554e4697" prot="public">
+          <name>wxLANGUAGE_ENGLISH_NEW_ZEALAND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4268d468c3a6b067cfa28041865b4d8c" prot="public">
+          <name>wxLANGUAGE_ENGLISH_PHILIPPINES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa070fbfa6392193e61471d6295b8b342" prot="public">
+          <name>wxLANGUAGE_ENGLISH_SOUTH_AFRICA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a897fc114ee86645e44b03c3be39c3be6" prot="public">
+          <name>wxLANGUAGE_ENGLISH_TRINIDAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab7aff16dc6056c9875e4fab086ad633d" prot="public">
+          <name>wxLANGUAGE_ENGLISH_ZIMBABWE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad43adad6f770aff29118b1e6f786ad09" prot="public">
+          <name>wxLANGUAGE_ESPERANTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4ade52b80da71ba44118eba5be73c1be" prot="public">
+          <name>wxLANGUAGE_ESTONIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a7341f93aa09deba4b82eb9c27d084cc7" prot="public">
+          <name>wxLANGUAGE_FAEROESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a47170156dd5271ba56edd03d7641fc7f" prot="public">
+          <name>wxLANGUAGE_FARSI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a2052528283fbb22e626c8d72e3c6cd9d" prot="public">
+          <name>wxLANGUAGE_FIJI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a267c2572b28611db7cadce0a067af3e0" prot="public">
+          <name>wxLANGUAGE_FINNISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a5e9197a03f58b00205274d7ad5e2b25a" prot="public">
+          <name>wxLANGUAGE_FRENCH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa166fbdbf0102a396dc1e54a1e81561a" prot="public">
+          <name>wxLANGUAGE_FRENCH_BELGIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a55a053e06042e7ecfc13cecb93e44cdb" prot="public">
+          <name>wxLANGUAGE_FRENCH_CANADIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa9add56a0c7852a3f62eaf76b94c9884" prot="public">
+          <name>wxLANGUAGE_FRENCH_LUXEMBOURG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae518c083e43c6a9e212707c8decfa1aa" prot="public">
+          <name>wxLANGUAGE_FRENCH_MONACO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a21833f59ff691544c72b70fe7d1a23c1" prot="public">
+          <name>wxLANGUAGE_FRENCH_SWISS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a5782ec8a17504969111ac1746585f6f1" prot="public">
+          <name>wxLANGUAGE_FRISIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a10361d4a88318853d374b3be1a72b32f" prot="public">
+          <name>wxLANGUAGE_GALICIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa6ed7e5a5bfbb51b3ace84bb6f288e74" prot="public">
+          <name>wxLANGUAGE_GEORGIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8fc3d592c6f1ac6c9bdfb3a006cec1dd" prot="public">
+          <name>wxLANGUAGE_GERMAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a6dd7abd3a98cc177f09b25ae0ee41cef" prot="public">
+          <name>wxLANGUAGE_GERMAN_AUSTRIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a86c7c36257cb2046cd2f33d47fea75fb" prot="public">
+          <name>wxLANGUAGE_GERMAN_BELGIUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad4c22ab2575876e8226596843ea06fa1" prot="public">
+          <name>wxLANGUAGE_GERMAN_LIECHTENSTEIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a95f4e6fae3026ba21d62a914d05b043e" prot="public">
+          <name>wxLANGUAGE_GERMAN_LUXEMBOURG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a2ce06eaf098e296b915feb11c03c8ada" prot="public">
+          <name>wxLANGUAGE_GERMAN_SWISS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aee9ba40e3c3d3130c18efa517787b06a" prot="public">
+          <name>wxLANGUAGE_GREEK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab77abd41bd9afc3c8a3163c106ea8cdf" prot="public">
+          <name>wxLANGUAGE_GREENLANDIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af94130cf392a4c037a32d4db8d3fa88c" prot="public">
+          <name>wxLANGUAGE_GUARANI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a64fd48aef9151b23b9a0c98621ab2571" prot="public">
+          <name>wxLANGUAGE_GUJARATI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8c006af27302ced885a1f6a58eb702f8" prot="public">
+          <name>wxLANGUAGE_HAUSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac3f64d1053da1c8a6dc0df55b3f20a81" prot="public">
+          <name>wxLANGUAGE_HEBREW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa59a11ff4f8ccbc64cae4a8bb8ca0f42" prot="public">
+          <name>wxLANGUAGE_HINDI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a49132d1a1657ec32714820ae5004a3db" prot="public">
+          <name>wxLANGUAGE_HUNGARIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4241a8108c80245c48d4327e6bde55b3" prot="public">
+          <name>wxLANGUAGE_ICELANDIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a42da0b030ea25fb6c80c3955764fc601" prot="public">
+          <name>wxLANGUAGE_INDONESIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a7578c115b29c1d26bc4d062e0c8abc25" prot="public">
+          <name>wxLANGUAGE_INTERLINGUA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86accbbef814022ece1e662b3b437a3f827" prot="public">
+          <name>wxLANGUAGE_INTERLINGUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae1abd13791a3f7cf5a1c781ae27328f7" prot="public">
+          <name>wxLANGUAGE_INUKTITUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad27b95c8fdc644b8b88330afb19830f3" prot="public">
+          <name>wxLANGUAGE_INUPIAK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a0224269c000ae379bc700f3f8485c8a8" prot="public">
+          <name>wxLANGUAGE_IRISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae929a3117d67e52ab7a62f95143a51c2" prot="public">
+          <name>wxLANGUAGE_ITALIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a388ebd6351f96dcd671a1562fa0fc5fd" prot="public">
+          <name>wxLANGUAGE_ITALIAN_SWISS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86afafbd39448946d9a0181dd8d3396c4ba" prot="public">
+          <name>wxLANGUAGE_JAPANESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae3d2467e9b97d1f62a38f12b48f2c8a0" prot="public">
+          <name>wxLANGUAGE_JAVANESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac0627cb4efff2f8bf5f16d9992118c95" prot="public">
+          <name>wxLANGUAGE_KANNADA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a590d9e1339873f09b90a923435aa62f5" prot="public">
+          <name>wxLANGUAGE_KASHMIRI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab0adb04e442cf12d802da148289963eb" prot="public">
+          <name>wxLANGUAGE_KASHMIRI_INDIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a1f5ae19c51e61e4e25611008035e9c19" prot="public">
+          <name>wxLANGUAGE_KAZAKH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ade74beb046d20221777444435b3348d5" prot="public">
+          <name>wxLANGUAGE_KERNEWEK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a6dc34485709153043d04ce40e17f47fd" prot="public">
+          <name>wxLANGUAGE_KINYARWANDA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af62dab54334d6908e93cbab2e57f6f8e" prot="public">
+          <name>wxLANGUAGE_KIRGHIZ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac5e0b97b5bd3a6f8a4b0f16659fd257b" prot="public">
+          <name>wxLANGUAGE_KIRUNDI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab8b8ff3614a9ddf491fe7c0e1900c6de" prot="public">
+          <name>wxLANGUAGE_KONKANI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac0345ed554af8c662d88a1ba82f9b08c" prot="public">
+          <name>wxLANGUAGE_KOREAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4e93012d3261ab5f992def1af5b01671" prot="public">
+          <name>wxLANGUAGE_KURDISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4b7c09575987692c1830ef2e988b64a8" prot="public">
+          <name>wxLANGUAGE_LAOTHIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86acc7368986b1b474951266bc3d26a1884" prot="public">
+          <name>wxLANGUAGE_LATIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a0fa4ffa3518eab63d0987cb20756fcf8" prot="public">
+          <name>wxLANGUAGE_LATVIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac965cc23b3833ced1e9261175c4dfb48" prot="public">
+          <name>wxLANGUAGE_LINGALA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4de5afd112d5b58a77d6d117ddd251eb" prot="public">
+          <name>wxLANGUAGE_LITHUANIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af45bde6a5a67801d6b6a14ded6f6a464" prot="public">
+          <name>wxLANGUAGE_MACEDONIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a63d28882fb9053ccbf9f5ebea672504b" prot="public">
+          <name>wxLANGUAGE_MALAGASY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a9954f2e22fa95dcc3290cc6fe26021e5" prot="public">
+          <name>wxLANGUAGE_MALAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a36c3ef02f80de7cb8471ff697d82df82" prot="public">
+          <name>wxLANGUAGE_MALAYALAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a44f105b897e4fe05e4420a0ee4b9131d" prot="public">
+          <name>wxLANGUAGE_MALAY_BRUNEI_DARUSSALAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a02d72bdfc0d6d883aed94f1078294730" prot="public">
+          <name>wxLANGUAGE_MALAY_MALAYSIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a685f46aa77c7c606add0f34f5bb7c310" prot="public">
+          <name>wxLANGUAGE_MALTESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a92aa77e34f3e92c24d1c1cd70e9be753" prot="public">
+          <name>wxLANGUAGE_MANIPURI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86add53abf67b7de74ecf78a8629549f5cf" prot="public">
+          <name>wxLANGUAGE_MAORI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af810ce09b11bc645e43e8a488c7f209b" prot="public">
+          <name>wxLANGUAGE_MARATHI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86adbb6c1a5e4890e9a6ffa60b21e2bea67" prot="public">
+          <name>wxLANGUAGE_MOLDAVIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa204e4e96873bec280884cf586651d73" prot="public">
+          <name>wxLANGUAGE_MONGOLIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86afd623e3b4118aa89b3cace3438a26dc6" prot="public">
+          <name>wxLANGUAGE_NAURU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac1b12179ad06129ef9212816b5b95cee" prot="public">
+          <name>wxLANGUAGE_NEPALI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a80da8b1fc1c9db8415936ad17fbaf938" prot="public">
+          <name>wxLANGUAGE_NEPALI_INDIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a0760a21b60ceba9fe6396ddc16bc1045" prot="public">
+          <name>wxLANGUAGE_NORWEGIAN_BOKMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a5fb789b8b86f091c39705cabc1b52799" prot="public">
+          <name>wxLANGUAGE_NORWEGIAN_NYNORSK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a44bb8596d7dcc68dad376040b52adbdd" prot="public">
+          <name>wxLANGUAGE_OCCITAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af60ab4d08ef72106d5c358645beaf307" prot="public">
+          <name>wxLANGUAGE_ORIYA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a275031da538f234b1cd43fb54973cc10" prot="public">
+          <name>wxLANGUAGE_OROMO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a265ee46dbc89c65fa8d79aac0f03eab7" prot="public">
+          <name>wxLANGUAGE_PASHTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae6bd7ffed5b6f39fa8ad10b066e9d5f7" prot="public">
+          <name>wxLANGUAGE_POLISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a5c6111cccc30846ad50b1376d7be7d9e" prot="public">
+          <name>wxLANGUAGE_PORTUGUESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86acec4788bddf2eb9f7a0a1b987b590a0d" prot="public">
+          <name>wxLANGUAGE_PORTUGUESE_BRAZILIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8dd82d9e3c37cac0aeccde6a9efa67d8" prot="public">
+          <name>wxLANGUAGE_PUNJABI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a3172c77a5278db259528494e189ff928" prot="public">
+          <name>wxLANGUAGE_QUECHUA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a9b6bb95a8c4d30bd2703e2c119f10c13" prot="public">
+          <name>wxLANGUAGE_RHAETO_ROMANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aeeaf7bb258f1e961801467ea1869ccfd" prot="public">
+          <name>wxLANGUAGE_ROMANIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a85c372ffd29e2ce5297fa6d0a224609c" prot="public">
+          <name>wxLANGUAGE_RUSSIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a89de3ba1f10da1659db9b0f23b93fc04" prot="public">
+          <name>wxLANGUAGE_RUSSIAN_UKRAINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab5f981b5fe2357157a53e79070ebf3ac" prot="public">
+          <name>wxLANGUAGE_SAMI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae6ecc4d5d11a9f0a6c2fb0b7078d5bc3" prot="public">
+          <name>wxLANGUAGE_SAMOAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa357591fb90ce55b7efbf30f34a0361c" prot="public">
+          <name>wxLANGUAGE_SANGHO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad545d5bb22ba9238a09497f746111702" prot="public">
+          <name>wxLANGUAGE_SANSKRIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8dde7c93801840c9f42d4957ef4ed10e" prot="public">
+          <name>wxLANGUAGE_SCOTS_GAELIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a16b3a54351a9ff27aebd9bef0d68080d" prot="public">
+          <name>wxLANGUAGE_SERBIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a1876f81380760df26eb0a700fb757f23" prot="public">
+          <name>wxLANGUAGE_SERBIAN_CYRILLIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae38975b51d6f07c38f84f7d4bbf2bc65" prot="public">
+          <name>wxLANGUAGE_SERBIAN_LATIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86abb5dc52d3e4e849938460438099dc973" prot="public">
+          <name>wxLANGUAGE_SERBO_CROATIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af7f8fb0bb76354a6fa34f03d0583fc23" prot="public">
+          <name>wxLANGUAGE_SESOTHO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86af2b08c86eb33f47a439cdf90837066b5" prot="public">
+          <name>wxLANGUAGE_SETSWANA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a7a370762984787da478ea3e8675c4a61" prot="public">
+          <name>wxLANGUAGE_SHONA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a37f0ce327ea75333942feb99804e58a4" prot="public">
+          <name>wxLANGUAGE_SINDHI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8e31ba1d171bad338c4c81afc900ff95" prot="public">
+          <name>wxLANGUAGE_SINHALESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4c9166b878ca3c99a6b01342bef8001a" prot="public">
+          <name>wxLANGUAGE_SISWATI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a318febc5dba4d42ec3bcd8109e4026c6" prot="public">
+          <name>wxLANGUAGE_SLOVAK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a422a10479738eaca9ce1ca9e0cae4dc4" prot="public">
+          <name>wxLANGUAGE_SLOVENIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a0395a9acbc3ffcb0a74aa5353505a36b" prot="public">
+          <name>wxLANGUAGE_SOMALI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aaf79e18c72d195e41292b429a3b37d09" prot="public">
+          <name>wxLANGUAGE_SPANISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a716545f5dff10a5f77bca1788884fd53" prot="public">
+          <name>wxLANGUAGE_SPANISH_ARGENTINA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a1c10a53c66132c013a3e8bcf996856d0" prot="public">
+          <name>wxLANGUAGE_SPANISH_BOLIVIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa16845a14ceba3e1f3c4093288a0c2b7" prot="public">
+          <name>wxLANGUAGE_SPANISH_CHILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4b7c441c90bc34bb707f48c486a2d765" prot="public">
+          <name>wxLANGUAGE_SPANISH_COLOMBIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab636f264331d755eb5686a0326f69a7d" prot="public">
+          <name>wxLANGUAGE_SPANISH_COSTA_RICA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86acc22e4a7c17e997bf3d577859509c215" prot="public">
+          <name>wxLANGUAGE_SPANISH_DOMINICAN_REPUBLIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a6b42855ed5b22d1825c5b6c63a59a1cb" prot="public">
+          <name>wxLANGUAGE_SPANISH_ECUADOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86acb6ab54b0a26d58fbc1ac38136b99022" prot="public">
+          <name>wxLANGUAGE_SPANISH_EL_SALVADOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa4f891abcdd190f7a041caebe6511ae9" prot="public">
+          <name>wxLANGUAGE_SPANISH_GUATEMALA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa88625298642decccdebc531ee8744be" prot="public">
+          <name>wxLANGUAGE_SPANISH_HONDURAS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad3f4ede01e4f62bb602386c9a01133e4" prot="public">
+          <name>wxLANGUAGE_SPANISH_MEXICAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a75d9a782b08f32db4fed0f6ad989cd43" prot="public">
+          <name>wxLANGUAGE_SPANISH_MODERN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86afca35e0a06aaa1b04588874d46b89d0b" prot="public">
+          <name>wxLANGUAGE_SPANISH_NICARAGUA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a07d746338bb0dc7662f0c68e5ad3f5f4" prot="public">
+          <name>wxLANGUAGE_SPANISH_PANAMA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a5a413c0a107f4281bd2c8f50689d8be7" prot="public">
+          <name>wxLANGUAGE_SPANISH_PARAGUAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8cade8b5dff673c880775fe2d7574135" prot="public">
+          <name>wxLANGUAGE_SPANISH_PERU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a538665b39de38af057f717ccabcd4205" prot="public">
+          <name>wxLANGUAGE_SPANISH_PUERTO_RICO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a38e7d71216eb697e0eba33e302776e95" prot="public">
+          <name>wxLANGUAGE_SPANISH_URUGUAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a14d9b9405cf5eec567d6730bcfaa0831" prot="public">
+          <name>wxLANGUAGE_SPANISH_US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a6922252c34a017508e93961bba577403" prot="public">
+          <name>wxLANGUAGE_SPANISH_VENEZUELA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a9a903769323f18554efb498352fc3e6d" prot="public">
+          <name>wxLANGUAGE_SUNDANESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aada77eae0a206c5129e5c32f0bcfa1b3" prot="public">
+          <name>wxLANGUAGE_SWAHILI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a232e9339ebf7bc6ae426a58a653c0276" prot="public">
+          <name>wxLANGUAGE_SWEDISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a644855457d4d177de8f782fd00783a25" prot="public">
+          <name>wxLANGUAGE_SWEDISH_FINLAND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86adccd4a4dc11e5197c24d89602a485b68" prot="public">
+          <name>wxLANGUAGE_TAGALOG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a05423813da743af17d2c48e013bf24b1" prot="public">
+          <name>wxLANGUAGE_TAJIK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac83505f717c3021bda1e4a9eae7aa0f6" prot="public">
+          <name>wxLANGUAGE_TAMIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a12cc93e4ad92b7038612a3a698af1875" prot="public">
+          <name>wxLANGUAGE_TATAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a7cb83fa48e715d79603eb4ea0d26ba68" prot="public">
+          <name>wxLANGUAGE_TELUGU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a4b82ec75acee018471c814613de4472f" prot="public">
+          <name>wxLANGUAGE_THAI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a88926931b437e6813dff10ee1ccc4c4c" prot="public">
+          <name>wxLANGUAGE_TIBETAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aec630cec181f8eda1b9490510e91d7c7" prot="public">
+          <name>wxLANGUAGE_TIGRINYA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86acb5e66c0cc019e077cec8c2eeb3c0d92" prot="public">
+          <name>wxLANGUAGE_TONGA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a40048bd8a9685e2b44cbffd6ee5e45f0" prot="public">
+          <name>wxLANGUAGE_TSONGA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86abdc8737f4ecd744f18f8ac365625f980" prot="public">
+          <name>wxLANGUAGE_TURKISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a11898a026ea67efb66437419c0679643" prot="public">
+          <name>wxLANGUAGE_TURKMEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aab9852aa763d3b055bff722ece872f40" prot="public">
+          <name>wxLANGUAGE_TWI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ac591281b7c801d1887bcd97c0072e927" prot="public">
+          <name>wxLANGUAGE_UIGHUR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab7c5eb15807ed26870dbbac8ab181435" prot="public">
+          <name>wxLANGUAGE_UKRAINIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a8032071d1c251282484133ee13de2863" prot="public">
+          <name>wxLANGUAGE_URDU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab027e45111f83edba8111d3ace1dfb20" prot="public">
+          <name>wxLANGUAGE_URDU_INDIA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a48e1ba090232084656e692b9c9989d69" prot="public">
+          <name>wxLANGUAGE_URDU_PAKISTAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a62220527bfca6a47054f39b562a1d126" prot="public">
+          <name>wxLANGUAGE_UZBEK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa02d1fd4293b9f68aabfce6eb53dff54" prot="public">
+          <name>wxLANGUAGE_UZBEK_CYRILLIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a0509ad9eb936189bd6b7344e82a9e922" prot="public">
+          <name>wxLANGUAGE_UZBEK_LATIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a2acddaa62b7f9a567316e53066a1b367" prot="public">
+          <name>wxLANGUAGE_VALENCIAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a2e201641971336468bb3fdcc2a29d8f5" prot="public">
+          <name>wxLANGUAGE_VIETNAMESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aab2d0bc0e6e43d9f8bf6215d154defde" prot="public">
+          <name>wxLANGUAGE_VOLAPUK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ab0934e83f7cfb2f6544d5e0225d2ea0f" prot="public">
+          <name>wxLANGUAGE_WELSH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86aa7c83f2917e4792582a3aeef0c88f3ca" prot="public">
+          <name>wxLANGUAGE_WOLOF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ad138e890bf455b794aa89391a83b1b35" prot="public">
+          <name>wxLANGUAGE_XHOSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a35877471c2f37c47cd9bee5b185c52f0" prot="public">
+          <name>wxLANGUAGE_YIDDISH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a302026ef679945a338cb1f747ef8800b" prot="public">
+          <name>wxLANGUAGE_YORUBA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86a6101542b143ee792b5adf77cc6e1da85" prot="public">
+          <name>wxLANGUAGE_ZHUANG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86afb0e359a3f5d74e5e407c865a4cc4c2f" prot="public">
+          <name>wxLANGUAGE_ZULU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86ae5c778d462d256646d740c6c3868823d" prot="public">
+          <name>wxLANGUAGE_USER_DEFINED</name>
+          <briefdescription>
+<para>For custom, user-defined languages. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The languages supported by <ref refid="classwx_locale" kindref="compound">wxLocale</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This enum is generated by misc/languages/genlang.py When making changes, please put them into misc/languages/langtabl.txt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/language.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/language.h" bodystart="18" bodyend="261"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/language.h"/>
+  </compounddef>
+</doxygen>

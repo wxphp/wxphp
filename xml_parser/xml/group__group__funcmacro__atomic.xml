@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__funcmacro__atomic" kind="group">
+    <compoundname>group_funcmacro_atomic</compoundname>
+    <title>Atomic Operations</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__atomic_1ga35470b5fc125b443e73b7967100752d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAtomicInc</definition>
+        <argsstring>(wxAtomicInt &amp;value)</argsstring>
+        <name>wxAtomicInc</name>
+        <param>
+          <type>wxAtomicInt &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>This function increments <emphasis>value</emphasis> in an atomic manner. </para>        </briefdescription>
+        <detaileddescription>
+<para>Whenever possible wxWidgets provides an efficient, CPU-specific, implementation of this function. If such implementation is available, the symbol wxHAS_ATOMIC_OPS is defined. Otherwise this function still exists but is implemented in a generic way using a critical section which can be prohibitively expensive for use in performance-sensitive code.</para><para>Include file: <verbatim>#include &lt;wx/atomic.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/atomic.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__atomic_1ga396a0a6c5b705d46862564f5b16897b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
+        <definition>wxInt32 wxAtomicDec</definition>
+        <argsstring>(wxAtomicInt &amp;value)</argsstring>
+        <name>wxAtomicDec</name>
+        <param>
+          <type>wxAtomicInt &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>This function decrements value in an atomic manner. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns 0 if value is 0 after decrement or any non-zero value (not necessarily equal to the value of the variable) otherwise.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__atomic_1ga35470b5fc125b443e73b7967100752d4" kindref="member">wxAtomicInc</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/atomic.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/atomic.h" line="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>When using multi-threaded applications, it is often required to access or modify memory which is shared between threads. </para>    </briefdescription>
+    <detaileddescription>
+<para>Atomic integer and pointer operations are an efficient way to handle this issue (another, less efficient, way is to use a <ref refid="classwx_mutex" kindref="compound">wxMutex</ref> or <ref refid="classwx_critical_section" kindref="compound">wxCriticalSection</ref>). A native implementation exists for Windows, Linux, Solaris and Mac OS X; for others, a <ref refid="classwx_critical_section" kindref="compound">wxCriticalSection</ref> is used to protect the data.</para><para>One particular application is reference counting (used by so-called <ref refid="group__group__class__smartpointers" kindref="compound">smart pointers</ref>).</para><para>You should define your variable with the type wxAtomicInt in order to apply atomic operations to it. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

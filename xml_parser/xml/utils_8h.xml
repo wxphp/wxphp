@@ -1,0 +1,1571 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="utils_8h" kind="file">
+    <compoundname>utils.h</compoundname>
+    <innerclass refid="classwx_window_disabler" prot="public">wxWindowDisabler</innerclass>
+    <innerclass refid="classwx_busy_cursor" prot="public">wxBusyCursor</innerclass>
+    <innerclass refid="structwx_execute_env" prot="public">wxExecuteEnv</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__group__funcmacro__procctrl_1ga39fca1837c5ce7715cbf571669660c13" prot="public" static="no">
+        <name>@22</name>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a457bddfa2a7ce4927358680893910cc8" prot="public">
+          <name>wxEXEC_ASYNC</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Execute the process asynchronously. </para>          </briefdescription>
+          <detaileddescription>
+<para>Notice that, due to its value, this is the default. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a412f75e022e82e7d8415109a6712be36" prot="public">
+          <name>wxEXEC_SYNC</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Execute the process synchronously. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a433c517e46d1dd61a5dda1ffeb750552" prot="public">
+          <name>wxEXEC_SHOW_CONSOLE</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Always show the child process console under MSW. </para>          </briefdescription>
+          <detaileddescription>
+<para>The child console is hidden by default if the child IO is redirected, this flag allows to change this and show it nevertheless.</para><para>This flag is ignored under the other platforms. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13afd7547e6ac65800275cdffc7be65fd74" prot="public">
+          <name>wxEXEC_MAKE_GROUP_LEADER</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+<para>Make the new process a group leader. </para>          </briefdescription>
+          <detaileddescription>
+<para>Under Unix, if the process is the group leader then passing wxKILL_CHILDREN to <ref refid="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" kindref="member">wxKill()</ref> kills all children as well as pid.</para><para>This flag is currently ignored under MSW. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a8d51ac2386c10f6f5eb7c7a0704addb1" prot="public">
+          <name>wxEXEC_NODISABLE</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+<para>Don&apos;t disable the program UI while running the child synchronously. </para>          </briefdescription>
+          <detaileddescription>
+<para>By default synchronous execution disables all program windows to avoid that the user interacts with the program while the child process is running, you can use this flag to prevent this from happening.</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a00bae6530ff099a5ead1c80f81d5a5c9" prot="public">
+          <name>wxEXEC_NOEVENTS</name>
+          <initializer> 16</initializer>
+          <briefdescription>
+<para>Don&apos;t dispatch events while the child process is executed. </para>          </briefdescription>
+          <detaileddescription>
+<para>By default, the event loop is run while waiting for synchronous execution to complete and this flag can be used to simply block the main process until the child process finishes</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a6eb92c81a5e49ef172b9d74528be55a0" prot="public">
+          <name>wxEXEC_HIDE_CONSOLE</name>
+          <initializer> 32</initializer>
+          <briefdescription>
+<para>Hide child process console under MSW. </para>          </briefdescription>
+          <detaileddescription>
+<para>Under MSW, hide the console of the child process if it has one, even if its IO is not redirected.</para><para>This flag is ignored under the other platforms. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a81dbb296e5efdd73668a1570e7af5716" prot="public">
+          <name>wxEXEC_BLOCK</name>
+          <initializer> wxEXEC_SYNC | wxEXEC_NOEVENTS</initializer>
+          <briefdescription>
+<para>Convenient synonym for flags given system()-like behaviour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Bit flags that can be used with <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="823" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="822" bodyend="892"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__group__funcmacro__env_1ga37c7bb54114fa4fdb99e19440ded6e00" prot="public" static="no">
+        <type>wxStringToStringHashMap</type>
+        <definition>typedef wxStringToStringHashMap wxEnvVariableHashMap</definition>
+        <argsstring></argsstring>
+        <name>wxEnvVariableHashMap</name>
+        <briefdescription>
+<para>A map type containing environment variables names and values. </para>        </briefdescription>
+        <detaileddescription>
+<para>This type is used with <ref refid="group__group__funcmacro__env_1ga147974e23a77dadf95a67317774ada4d" kindref="member">wxGetEnvMap()</ref> function and <ref refid="structwx_execute_env" kindref="compound">wxExecuteEnv</ref> structure optionally passed to <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref>.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="193" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__funcmacro__misc_1ga35fec5f8f6480a13c339ce6d0710962a" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* wxSortCallback)(const void *pItem1, const void *pItem2, const void *user_data)</definition>
+        <argsstring>)(const void *pItem1, const void *pItem2, const void *user_data)</argsstring>
+        <name>wxSortCallback</name>
+        <briefdescription>
+<para>Compare function type for use with <ref refid="group__group__funcmacro__misc_1gaaa680fc5a0eb13ed1f9ad56721e1171c" kindref="member">wxQsort()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="499" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxBeginBusyCursor</definition>
+        <argsstring>(const wxCursor *cursor=wxHOURGLASS_CURSOR)</argsstring>
+        <name>wxBeginBusyCursor</name>
+        <param>
+          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> *</type>
+          <declname>cursor</declname>
+          <defval><ref refid="cursor_8h_1aedcab46c717d02f9b5deb151d1fe85f8" kindref="member">wxHOURGLASS_CURSOR</ref></defval>
+        </param>
+        <briefdescription>
+<para>Changes the cursor to the given cursor for all windows in the application. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref> to revert the cursor back to its previous state. These two calls can be nested, and a counter ensures that only the outer calls take effect.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__dialog_1gac66e5849170bf4b1f816e0a8c5912e9e" kindref="member">wxIsBusy()</ref>, <ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEndBusyCursor</definition>
+        <argsstring>()</argsstring>
+        <name>wxEndBusyCursor</name>
+        <briefdescription>
+<para>Changes the cursor back to the original cursor, for all windows in the application. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use with <ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref>.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__dialog_1gac66e5849170bf4b1f816e0a8c5912e9e" kindref="member">wxIsBusy()</ref>, <ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gac66e5849170bf4b1f816e0a8c5912e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsBusy</definition>
+        <argsstring>()</argsstring>
+        <name>wxIsBusy</name>
+        <briefdescription>
+<para>Returns true if between two <ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref> and <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref> calls. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref>.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga3267f33060d2ae403862427acb758bab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxBell</definition>
+        <argsstring>()</argsstring>
+        <name>wxBell</name>
+        <briefdescription>
+<para>Ring the system bell. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is categorized as a GUI one and so is not thread-safe.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga10cbf79d51b2467289d1f6c11a7d0beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxInfoMessageBox</definition>
+        <argsstring>(wxWindow *parent)</argsstring>
+        <name>wxInfoMessageBox</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Shows a message box with the information about the wxWidgets build used, including its version, most important build parameters and the version of the underlying GUI toolkit. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is mainly used for diagnostic purposes and can be invoked by Ctrl-Alt-middle clicking on any <ref refid="classwx_window" kindref="compound">wxWindow</ref> which doesn&apos;t otherwise handle this event.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__version_1ga362595d425b3ff956744bcea8e72b374" kindref="member">wxGetLibraryVersionInfo()</ref> Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__version_1ga362595d425b3ff956744bcea8e72b374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_version_info" kindref="compound">wxVersionInfo</ref></type>
+        <definition>wxVersionInfo wxGetLibraryVersionInfo</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetLibraryVersionInfo</name>
+        <briefdescription>
+<para>Get wxWidgets version information. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_version_info" kindref="compound">wxVersionInfo</ref> Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> <heading level="2"></heading>
+</para></simplesect>
+Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__env_1ga2e874b3553a5a4f6a939aa83ab8dedfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+        <definition>wxChar* wxGetenv</definition>
+        <argsstring>(const wxString &amp;var)</argsstring>
+        <name>wxGetenv</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>This is a macro defined as <computeroutput>getenv()</computeroutput> or its wide char version in Unicode mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that under Win32 it may not return correct value for the variables set with <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref>, use <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> function instead.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="204"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetEnv</definition>
+        <argsstring>(const wxString &amp;var, wxString *value)</argsstring>
+        <name>wxGetEnv</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Returns the current value of the environment variable <emphasis>var</emphasis> in <emphasis>value</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>value</emphasis> may be NULL if you just want to know if the variable exists and are not interested in its value.</para><para>Returns true if the variable exists, false otherwise.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSetEnv</definition>
+        <argsstring>(const wxString &amp;var, const wxString &amp;value)</argsstring>
+        <name>wxSetEnv</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the environment variable <emphasis>var</emphasis> (adding it if necessary) to <emphasis>value</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that under Windows platforms the program may have two different environment blocks: the first one is that of a Windows process and is always present, but the CRT may maintain its own independent copy of the environment. <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref> will always update the first copy, which means that <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref>, which uses it directly, will always return the expected value after this call. But <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref> only updates the second copy for some compilers/CRT implementations (currently only MSVC and MinGW which uses the same MSVC CRT) and so using <ref refid="group__group__funcmacro__env_1ga2e874b3553a5a4f6a939aa83ab8dedfc" kindref="member">wxGetenv()</ref> (notice the difference in case) may not return the updated value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The environment variable to be set, must not contain <computeroutput>&apos;=&apos;</computeroutput> character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value of the variable. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success or false if changing the value failed.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__env_1ga4a72b083dad08150adcf9f950677284c" kindref="member">wxUnsetEnv()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="243"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__env_1ga4a72b083dad08150adcf9f950677284c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUnsetEnv</definition>
+        <argsstring>(const wxString &amp;var)</argsstring>
+        <name>wxUnsetEnv</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Removes the variable <emphasis>var</emphasis> from the environment. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> will return NULL after the call to this function.</para><para>Returns true on success.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="254"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__env_1ga147974e23a77dadf95a67317774ada4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetEnvMap</definition>
+        <argsstring>(wxEnvVariableHashMap *map)</argsstring>
+        <name>wxGetEnvMap</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__env_1ga37c7bb54114fa4fdb99e19440ded6e00" kindref="member">wxEnvVariableHashMap</ref> *</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Fill a map with the complete content of current environment. </para>        </briefdescription>
+        <detaileddescription>
+<para>The map will contain the environment variable names as keys and their values as values.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The environment map to fill, must be non-NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if environment was successfully retrieved or false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="271"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gaceace1c71d01adb27b30a068015836e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="power_8h_1a1222ff013d6af054701028e127405bbd" kindref="member">wxBatteryState</ref></type>
+        <definition>wxBatteryState wxGetBatteryState</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetBatteryState</name>
+        <briefdescription>
+<para>Returns battery state as one of <computeroutput>wxBATTERY_NORMAL_STATE</computeroutput>, <computeroutput>wxBATTERY_LOW_STATE</computeroutput>, <computeroutput>wxBATTERY_CRITICAL_STATE</computeroutput>, <computeroutput>wxBATTERY_SHUTDOWN_STATE</computeroutput> or <computeroutput>wxBATTERY_UNKNOWN_STATE</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>wxBATTERY_UNKNOWN_STATE</computeroutput> is also the default on platforms where this feature is not implemented (currently everywhere but MS Windows).</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="288"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gac7a20e813e3d3259f98e9a54440cf633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="power_8h_1ae3f5c432e430cf701d4cef6abf893632" kindref="member">wxPowerType</ref></type>
+        <definition>wxPowerType wxGetPowerType</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetPowerType</name>
+        <briefdescription>
+<para>Returns the type of power source as one of <computeroutput>wxPOWER_SOCKET</computeroutput>, <computeroutput>wxPOWER_BATTERY</computeroutput> or <computeroutput>wxPOWER_UNKNOWN</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>wxPOWER_UNKNOWN</computeroutput> is also the default on platforms where this feature is not implemented (currently everywhere but MS Windows).</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="298"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gabb98f8c6c7df627b3c4a5246b452a5b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetDisplayName</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetDisplayName</name>
+        <briefdescription>
+<para>Under X only, returns the current display name. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga6a5c19411145daf20a1cc6d875dbfe45" kindref="member">wxSetDisplayName()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="307"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga82a18ac43492bfb375604c41b71ce84f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetKeyState</definition>
+        <argsstring>(wxKeyCode key)</argsstring>
+        <name>wxGetKeyState</name>
+        <param>
+          <type><ref refid="defs_8h_1a41c4609211685cff198618963ec8f77d" kindref="member">wxKeyCode</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>For normal keys, returns true if the specified key is currently down. </para>        </briefdescription>
+        <detaileddescription>
+<para>For togglable keys (Caps Lock, Num Lock and Scroll Lock), returns true if the key is toggled such that its LED indicator is lit. There is currently no way to test whether togglable keys are up or down.</para><para>Even though there are virtual key codes defined for mouse buttons, they cannot be used with this function currently.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="321"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga00fef3cd1a110189e737ad7bf948a3d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+        <definition>wxPoint wxGetMousePosition</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetMousePosition</name>
+        <briefdescription>
+<para>Returns the mouse position in screen coordinates. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="328"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga6fb42677c51d509690e7062b9dadaa25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref></type>
+        <definition>wxMouseState wxGetMouseState</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetMouseState</name>
+        <briefdescription>
+<para>Returns the current state of the mouse. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns a <ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref> instance that contains the current position of the mouse pointer in screen coordinates, as well as boolean values indicating the up/down status of the mouse buttons and the modifier keys.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="338"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga26ae851bd6d2d8df09afedad1e8e5d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEnableTopLevelWindows</definition>
+        <argsstring>(bool enable=true)</argsstring>
+        <name>wxEnableTopLevelWindows</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This function enables or disables all top level windows. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is used by <ref refid="group__group__funcmacro__appinitterm_1ga25abb4004fac0bcc0b937d93657c8cba" kindref="member">wxSafeYield()</ref>.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="346"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga13f5ea19998bb9fd38ce07d61a6a2e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+        <definition>wxWindow* wxFindWindowAtPoint</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>wxFindWindowAtPoint</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Find the deepest window at the given mouse position in screen coordinates, returning the window if found, or NULL if not. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="354"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga0736ab488cec8607a031567059dfe6f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+        <definition>wxWindow* wxFindWindowByLabel</definition>
+        <argsstring>(const wxString &amp;label, wxWindow *parent=NULL)</argsstring>
+        <name>wxFindWindowByLabel</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000059"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1ab8eb148fffae109e0fac86e88d569670" kindref="member">wxWindow::FindWindowByLabel()</ref>.</para></xrefdescription></xrefsect>Find a window by its label. Depending on the type of window, the label may be a window title or panel item label. If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="368"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga3b60179234c123ea62e2a1a598397150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+        <definition>wxWindow* wxFindWindowByName</definition>
+        <argsstring>(const wxString &amp;name, wxWindow *parent=NULL)</argsstring>
+        <name>wxFindWindowByName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000060"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1adbe4eea02f615313c12a2c00557a44c3" kindref="member">wxWindow::FindWindowByName()</ref>.</para></xrefdescription></xrefsect>Find a window by its name (as given in a window constructor or <emphasis>Create</emphasis> function call). If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>If no such named window is found, <ref refid="group__group__funcmacro__misc_1ga0736ab488cec8607a031567059dfe6f2" kindref="member">wxFindWindowByLabel()</ref> is called.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="382"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga5c3705ca3d228c51155fcf22404b739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxFindMenuItemId</definition>
+        <argsstring>(wxFrame *frame, const wxString &amp;menuString, const wxString &amp;itemString)</argsstring>
+        <name>wxFindMenuItemId</name>
+        <param>
+          <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>menuString</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>itemString</declname>
+        </param>
+        <briefdescription>
+<para>Find a menu item identifier associated with the given frame&apos;s menu bar. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="390"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gaef162e1ba5d17a839b2f7912424bc822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxNewId</definition>
+        <argsstring>()</argsstring>
+        <name>wxNewId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000061"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Ids generated by it can conflict with the Ids defined by the user code, use <computeroutput>wxID_ANY</computeroutput> to assign ids which are guaranteed to not conflict with the user-defined ids for the controls and menu items you create instead of using this function.</para></xrefdescription></xrefsect>Generates an integer identifier unique to this run of the program.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="402"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga61bb9dcbb5f0a32904c8e290a63f8022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRegisterId</definition>
+        <argsstring>(long id)</argsstring>
+        <name>wxRegisterId</name>
+        <param>
+          <type>long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Ensures that Ids subsequently generated by <ref refid="group__group__funcmacro__misc_1gaef162e1ba5d17a839b2f7912424bc822" kindref="member">wxNewId()</ref> do not clash with the given <emphasis>id</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="410"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga04038d4c78e4c111d018b8f82b2d66c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLaunchDefaultApplication</definition>
+        <argsstring>(const wxString &amp;document, int flags=0)</argsstring>
+        <name>wxLaunchDefaultApplication</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Opens the <emphasis>document</emphasis> in the application associated with the files of this type. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>flags</emphasis> parameter is currently not used</para><para>Returns true if the application was successfully launched.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" kindref="member">wxLaunchDefaultBrowser()</ref>, <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="424"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLaunchDefaultBrowser</definition>
+        <argsstring>(const wxString &amp;url, int flags=0)</argsstring>
+        <name>wxLaunchDefaultBrowser</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Opens the <emphasis>url</emphasis> in user&apos;s default browser. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the <emphasis>flags</emphasis> parameter contains <computeroutput>wxBROWSER_NEW_WINDOW</computeroutput> flag, a new window is opened for the URL (currently this is only supported under Windows).</para><para>And unless the <emphasis>flags</emphasis> parameter contains <computeroutput>wxBROWSER_NOBUSYCURSOR</computeroutput> flag, a busy cursor is shown while the browser is being launched (using <ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref>).</para><para>The parameter <emphasis>url</emphasis> is interpreted as follows:<itemizedlist>
+<listitem><para>if it has a valid scheme (e.g. <computeroutput>&quot;file:&quot;</computeroutput>, <computeroutput>&quot;http:&quot;</computeroutput> or <computeroutput>&quot;mailto:&quot;</computeroutput>) it is passed to the appropriate browser configured in the user system.</para></listitem><listitem><para>if it has no valid scheme (e.g. it&apos;s a local file path without the <computeroutput>&quot;file:&quot;</computeroutput> prefix), then <ref refid="group__group__funcmacro__file_1ga72d2e4ef03d51c0d59c2cb788462d600" kindref="member">wxFileExists</ref> and <ref refid="group__group__funcmacro__file_1ga3e960a6805631320fede18bf1176f278" kindref="member">wxDirExists</ref> are used to test if it&apos;s a local file/directory; if it is, then the browser is called with the <emphasis>url</emphasis> parameter eventually prefixed by <computeroutput>&quot;file:&quot;</computeroutput>.</para></listitem><listitem><para>if it has no valid scheme and it&apos;s not a local file/directory, then <computeroutput>&quot;http:&quot;</computeroutput> is prepended and the browser is called.</para></listitem></itemizedlist>
+</para><para>Returns true if the application was successfully launched.</para><para><simplesect kind="note"><para>For some configurations of the running user, the application which is launched to open the given URL may be URL-dependent (e.g. a browser may be used for local URLs while another one may be used for remote URLs).</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga04038d4c78e4c111d018b8f82b2d66c3" kindref="member">wxLaunchDefaultApplication()</ref>, <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="458"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gaff02a820db63eab038d64508aeeacc19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxLoadUserResource</definition>
+        <argsstring>(const wxString &amp;resourceName, const wxString &amp;resourceType=&quot;TEXT&quot;)</argsstring>
+        <name>wxLoadUserResource</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>resourceName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>resourceType</declname>
+          <defval>&quot;TEXT&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Loads a user-defined Windows resource as a string. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the resource is found, the function creates a new character array and copies the data into it. A pointer to this data is returned. If unsuccessful, NULL is returned.</para><para>The resource must be defined in the <computeroutput></computeroutput>.rc file using the following syntax:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>myResource<sp/>TEXT<sp/>file.ext</highlight></codeline>
+</programlisting></para><para>Where <computeroutput>file.ext</computeroutput> is a file that the resource compiler can find.</para><para>This function is available under Windows only.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="478"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gaf617bfe542c74d75f97adeab88fab2e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPostDelete</definition>
+        <argsstring>(wxObject *object)</argsstring>
+        <name>wxPostDelete</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000062"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close()</ref>. See the <ref refid="overview__windowdeletion" kindref="compound">window deletion overview</ref>.</para></xrefdescription></xrefsect>Tells the system to delete the specified object when all other events have been processed. In some environments, it is necessary to use this instead of deleting a frame directly with the delete operator, because some GUIs will still send events to a deleted window.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="491"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1gaaa680fc5a0eb13ed1f9ad56721e1171c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxQsort</definition>
+        <argsstring>(void *pbase, size_t total_elems, size_t size, wxSortCallback cmp, const void *user_data)</argsstring>
+        <name>wxQsort</name>
+        <param>
+          <type>void *</type>
+          <declname>pbase</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>total_elems</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__misc_1ga35fec5f8f6480a13c339ce6d0710962a" kindref="member">wxSortCallback</ref></type>
+          <declname>cmp</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+<para>Function implementing quick sort algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function sorts <emphasis>total_elems</emphasis> objects of size <emphasis>size</emphasis> located at <emphasis>pbase</emphasis>. It uses <emphasis>cmp</emphasis> function for comparing them and passes <emphasis>user_data</emphasis> pointer to the comparison function each time it&apos;s called.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="511"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga6a5c19411145daf20a1cc6d875dbfe45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSetDisplayName</definition>
+        <argsstring>(const wxString &amp;displayName)</argsstring>
+        <name>wxSetDisplayName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>displayName</declname>
+        </param>
+        <briefdescription>
+<para>Under X only, sets the current display name. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the X host and display name such as &quot;colonsay:0.0&quot;, and the function indicates which display should be used for creating windows from this point on. Setting the display within an application allows multiple displays to be used.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1gabb98f8c6c7df627b3c4a5246b452a5b8" kindref="member">wxGetDisplayName()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="524"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga1513748c5eb0df0de6103c5105a18d55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxStripMenuCodes</definition>
+        <argsstring>(const wxString &amp;str, int flags=wxStrip_All)</argsstring>
+        <name>wxStripMenuCodes</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxStrip_All</defval>
+        </param>
+        <briefdescription>
+<para>Strips any menu codes from <emphasis>str</emphasis> and returns the result. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, the functions strips both the mnemonics character (<computeroutput>&apos;&amp;&apos;</computeroutput>) which is used to indicate a keyboard shortkey, and the accelerators, which are used only in the menu items and are separated from the main text by the <computeroutput>\t</computeroutput> (TAB) character. By using <emphasis>flags</emphasis> of <computeroutput>wxStrip_Mnemonics</computeroutput> or <computeroutput>wxStrip_Accel</computeroutput> to strip only the former or the latter part, respectively.</para><para>Notice that in most cases <ref refid="classwx_menu_item_1af8f7bb0c7ca8808047c3c97b564069ed" kindref="member">wxMenuItem::GetLabelFromText()</ref> or <ref refid="classwx_control_1ad95895ecdd123dff35866db1d2430a76" kindref="member">wxControl::GetLabelText()</ref> can be used instead.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="540"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetEmailAddress</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetEmailAddress</name>
+        <briefdescription>
+<para>Copies the user&apos;s email address into the supplied buffer, by concatenating the values returned by <ref refid="group__group__funcmacro__networkuseros_1ga8e3277f772d143953b4e7eca3312dea0" kindref="member">wxGetFullHostName()</ref> and <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="557"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga9df97118e6514b933b0aa755ff62964d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetEmailAddress</definition>
+        <argsstring>(char *buf, int sz)</argsstring>
+        <name>wxGetEmailAddress</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000063"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" kindref="member">wxGetEmailAddress()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the email address in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="569"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga295ff6a2681c806195447a920f681499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wxMemorySize</type>
+        <definition>wxMemorySize wxGetFreeMemory</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetFreeMemory</name>
+        <briefdescription>
+<para>Returns the amount of free memory in bytes under environments which support it, and -1 if not supported or failed to perform measurement. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="577"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetHomeDir</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetHomeDir</name>
+        <briefdescription>
+<para>Return the (current) user&apos;s home directory. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga18db911e93361ebd5bbfb0d5136ddf5b" kindref="member">wxGetUserHome()</ref>, <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="586"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetHostName</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetHostName</name>
+        <briefdescription>
+<para>Copies the current host machine&apos;s name into the supplied buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please note that the returned name is <emphasis>not</emphasis> fully qualified, i.e. it does not include the domain name.</para><para>Under Windows or NT, this function first looks in the environment variable SYSTEM_NAME; if this is not found, the entry <bold>HostName</bold> in the wxWidgets section of the WIN.INI file is tried.</para><para><simplesect kind="return"><para>The hostname if successful or an empty string otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga8e3277f772d143953b4e7eca3312dea0" kindref="member">wxGetFullHostName()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="603"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga6f8c550ed86ea82ac363e925db7026f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetHostName</definition>
+        <argsstring>(char *buf, int sz)</argsstring>
+        <name>wxGetHostName</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000064"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" kindref="member">wxGetHostName()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the host name in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="615"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga8e3277f772d143953b4e7eca3312dea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetFullHostName</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetFullHostName</name>
+        <briefdescription>
+<para>Returns the FQDN (fully qualified domain host name) or an empty string on error. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" kindref="member">wxGetHostName()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="625"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga18db911e93361ebd5bbfb0d5136ddf5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetUserHome</definition>
+        <argsstring>(const wxString &amp;user=wxEmptyString)</argsstring>
+        <name>wxGetUserHome</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>user</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Returns the home directory for the given user. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the <emphasis>user</emphasis> is empty (default value), this function behaves like <ref refid="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" kindref="member">wxGetHomeDir()</ref> (i.e. returns the current user home directory).</para><para>If the home directory couldn&apos;t be determined, an empty string is returned.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="636"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetUserId</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUserId</name>
+        <briefdescription>
+<para>This function returns the &quot;user id&quot; also known as &quot;login name&quot; under Unix (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>something like &quot;jsmith&quot;). It uniquely identifies the current user (on this system). Under Windows or NT, this function first looks in the environment variables USER and LOGNAME; if neither of these is found, the entry <bold>UserId</bold> in the <bold>wxWidgets</bold> section of the WIN.INI file is tried.</para><para><simplesect kind="return"><para>The login name if successful or an empty string otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" kindref="member">wxGetUserName()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="651"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gac27162ecb34dab557506f6a612df6211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetUserId</definition>
+        <argsstring>(char *buf, int sz)</argsstring>
+        <name>wxGetUserId</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000065"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the login name in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="663"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetUserName</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUserName</name>
+        <briefdescription>
+<para>This function returns the full user name (something like &quot;Mr. John Smith&quot;). </para>        </briefdescription>
+        <detaileddescription>
+<para>Under Windows or NT, this function looks for the entry UserName in the wxWidgets section of the WIN.INI file. If PenWindows is running, the entry Current in the section User of the PENWIN.INI file is used.</para><para><simplesect kind="return"><para>The full user name if successful or an empty string otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="678"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gaae7f8332d69c28360110242de6f3d3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetUserName</definition>
+        <argsstring>(char *buf, int sz)</argsstring>
+        <name>wxGetUserName</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000066"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" kindref="member">wxGetUserName()</ref> instead.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the full user name in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="690"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga2404d9ca32701ddb2a34af00e81446b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetOsDescription</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetOsDescription</name>
+        <briefdescription>
+<para>Returns the string containing the description of the current platform in a user-readable form. </para>        </briefdescription>
+        <detaileddescription>
+<para>For example, this function may return strings like &quot;Windows NT Version 4.0&quot; or &quot;Linux 2.2.2 i386&quot;.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="701"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
+        <definition>wxOperatingSystemId wxGetOsVersion</definition>
+        <argsstring>(int *major=NULL, int *minor=NULL)</argsstring>
+        <name>wxGetOsVersion</name>
+        <param>
+          <type>int *</type>
+          <declname>major</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>minor</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Gets the version and the operating system ID for currently running OS. </para>        </briefdescription>
+        <detaileddescription>
+<para>The returned wxOperatingSystemId value can be used for a basic categorization of the OS family; the major and minor version numbers allows to detect a specific system.</para><para>For Unix-like systems (<computeroutput>wxOS_UNIX</computeroutput>) the major and minor version integers will contain the kernel major and minor version numbers (as returned by the &apos;uname -r&apos; command); e.g. &quot;2&quot; and &quot;6&quot; if the machine is using kernel 2.6.19.</para><para>For Mac OS X systems (<computeroutput>wxOS_MAC</computeroutput>) the major and minor version integers are the natural version numbers associated with the OS; e.g. &quot;10&quot; and &quot;6&quot; if the machine is using Mac OS X Snow Leopard.</para><para>For Windows-like systems (<computeroutput>wxOS_WINDOWS</computeroutput>) the major and minor version integers will contain the following values: <table rows="9" cols="3"><row>
+<entry thead="no"><para><bold>Windows OS name</bold> </para></entry><entry thead="no"><para><bold>Major version</bold> </para></entry><entry thead="no"><para><bold>Minor version</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>Windows 7 </para></entry><entry thead="no"><para>6 </para></entry><entry thead="no"><para>1 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Server 2008 R2 </para></entry><entry thead="no"><para>6 </para></entry><entry thead="no"><para>1 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Server 2008 </para></entry><entry thead="no"><para>6 </para></entry><entry thead="no"><para>0 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Vista </para></entry><entry thead="no"><para>6 </para></entry><entry thead="no"><para>0 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Server 2003 R2 </para></entry><entry thead="no"><para>5 </para></entry><entry thead="no"><para>2 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows Server 2003 </para></entry><entry thead="no"><para>5 </para></entry><entry thead="no"><para>2 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows XP </para></entry><entry thead="no"><para>5 </para></entry><entry thead="no"><para>1 </para></entry></row>
+<row>
+<entry thead="no"><para>Windows 2000 </para></entry><entry thead="no"><para>5 </para></entry><entry thead="no"><para>0 </para></entry></row>
+</table>
+See the <ulink url="http://msdn.microsoft.com/en-us/library/ms724832(VS.85).aspx">MSDN</ulink> for more info about the values above.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2404d9ca32701ddb2a34af00e81446b4" kindref="member">wxGetOsDescription()</ref>, <ref refid="classwx_platform_info" kindref="compound">wxPlatformInfo</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="737"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga56083f0f3875e40b13aa6094e283584e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsPlatform64Bit</definition>
+        <argsstring>()</argsstring>
+        <name>wxIsPlatform64Bit</name>
+        <briefdescription>
+<para>Returns true if the operating system the program is running under is 64 bit. </para>        </briefdescription>
+        <detaileddescription>
+<para>The check is performed at run-time and may differ from the value available at compile-time (at compile-time you can just check if <computeroutput>sizeof(void*) == 8</computeroutput>) since the program could be running in emulation mode or in a mixed 32/64 bit system (bi-architecture operating system).</para><para><simplesect kind="note"><para>This function is not 100% reliable on some systems given the fact that there isn&apos;t always a standard way to do a reliable check on the OS architecture.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="753"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gaccf71bf91abcb6469e6b812acf40bd38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsPlatformLittleEndian</definition>
+        <argsstring>()</argsstring>
+        <name>wxIsPlatformLittleEndian</name>
+        <briefdescription>
+<para>Returns true if the current platform is little endian (instead of big endian). </para>        </briefdescription>
+        <detaileddescription>
+<para>The check is performed at run-time.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__byteorder" kindref="compound">Byte Order Functions and Macros</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="763"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga06f6fb212c396bd20865ee4e2f69aa1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref></type>
+        <definition>wxLinuxDistributionInfo wxGetLinuxDistributionInfo</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetLinuxDistributionInfo</name>
+        <briefdescription>
+<para>Returns a structure containing informations about the currently running Linux distribution. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function uses the <computeroutput>lsb_release</computeroutput> utility which is part of the <computeroutput>Linux Standard Base Core</computeroutput> specification (see <ulink url="http://refspecs.linux-foundation.org/lsb.shtml">http://refspecs.linux-foundation.org/lsb.shtml</ulink>) since the very first LSB release 1.0 (released in 2001). The <computeroutput>lsb_release</computeroutput> utility is very common on modern Linux distributions but in case it&apos;s not available, then this function will return a <ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref> structure containing empty strings.</para><para>This function is Linux-specific and is only available when the <computeroutput>__LINUX__</computeroutput> symbol is defined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="780"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxExecute</definition>
+        <argsstring>(const wxString &amp;command, int flags=wxEXEC_ASYNC, wxProcess *callback=NULL, const wxExecuteEnv *env=NULL)</argsstring>
+        <name>wxExecute</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxEXEC_ASYNC</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_process" kindref="compound">wxProcess</ref> *</type>
+          <declname>callback</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>const <ref refid="structwx_execute_env" kindref="compound">wxExecuteEnv</ref> *</type>
+          <declname>env</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Executes another program in Unix or Windows. </para>        </briefdescription>
+        <detaileddescription>
+<para>In the overloaded versions of this function, if <emphasis>flags</emphasis> parameter contains <computeroutput>wxEXEC_ASYNC</computeroutput> flag (the default), flow of control immediately returns. If it contains <computeroutput>wxEXEC_SYNC</computeroutput>, the current application waits until the other program has terminated.</para><para>In the case of synchronous execution, the return value is the exit code of the process (which terminates by the moment the function returns) and will be -1 if the process couldn&apos;t be started and typically 0 if the process terminated successfully. Also, while waiting for the process to terminate, <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> will call <ref refid="group__group__funcmacro__appinitterm_1gac386c89a04e364afc07edce6d848c27a" kindref="member">wxYield()</ref>. Because of this, by default this function disables all application windows to avoid unexpected reentrancies which could result from the users interaction with the program while the child process is running. If you are sure that it is safe to not disable the program windows, you may pass <computeroutput>wxEXEC_NODISABLE</computeroutput> flag to prevent this automatic disabling from happening.</para><para>For asynchronous execution, however, the return value is the process id and zero value indicates that the command could not be executed. As an added complication, the return value of -1 in this case indicates that we didn&apos;t launch a new process, but connected to the running one (this can only happen when using DDE under Windows for command execution). In particular, in this case only, the calling code will not get the notification about process termination.</para><para>If <emphasis>callback</emphasis> isn&apos;t NULL and if execution is asynchronous, <ref refid="classwx_process_1aa378b7e705c9191431cad51a81581836" kindref="member">wxProcess::OnTerminate()</ref> will be called when the process finishes. Specifying this parameter also allows you to redirect the standard input and/or output of the process being launched by calling <ref refid="classwx_process_1a9d1fc94d98e373c26dbb128516c2c348" kindref="member">wxProcess::Redirect()</ref>.</para><para>Under Windows, when launching a console process its console is shown by default but hidden if its IO is redirected. Both of these default behaviours may be overridden: if <ref refid="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a6eb92c81a5e49ef172b9d74528be55a0" kindref="member">wxEXEC_HIDE_CONSOLE</ref> is specified, the console will never be shown. If <ref refid="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a433c517e46d1dd61a5dda1ffeb750552" kindref="member">wxEXEC_SHOW_CONSOLE</ref> is used, the console will be shown even if the child process IO is redirected. Neither of these flags affect non-console Windows applications or does anything under the other systems.</para><para>Under Unix the flag <computeroutput>wxEXEC_MAKE_GROUP_LEADER</computeroutput> may be used to ensure that the new process is a group leader (this will create a new session if needed). Calling <ref refid="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" kindref="member">wxKill()</ref> passing wxKILL_CHILDREN will kill this process as well as all of its children (except those which have started their own session).</para><para>The <computeroutput>wxEXEC_NOEVENTS</computeroutput> flag prevents processing of any events from taking place while the child process is running. It should be only used for very short-lived processes as otherwise the application windows risk becoming unresponsive from the users point of view. As this flag only makes sense with <computeroutput>wxEXEC_SYNC</computeroutput>, <computeroutput>wxEXEC_BLOCK</computeroutput> equal to the sum of both of these flags is provided as a convenience.</para><para><simplesect kind="note"><para>Currently <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> can only be used from the main thread, calling this function from another thread will result in an assert failure in debug build and won&apos;t work.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to execute and any parameters to pass to it as a single string, i.e. &quot;emacs file.txt&quot;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Must include either wxEXEC_ASYNC or wxEXEC_SYNC and can also include wxEXEC_SHOW_CONSOLE, wxEXEC_HIDE_CONSOLE, wxEXEC_MAKE_GROUP_LEADER (in either case) or wxEXEC_NODISABLE and wxEXEC_NOEVENTS or wxEXEC_BLOCK, which is equal to their combination, in wxEXEC_SYNC case. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional pointer to <ref refid="classwx_process" kindref="compound">wxProcess</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>env</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional pointer to additional parameters for the child process, such as its initial working directory and environment variables. This parameter is available in wxWidgets 2.9.2 and later only.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__procctrl_1gad7f2f357f592f8c786ab05f516578023" kindref="member">wxShell()</ref>, <ref refid="classwx_process" kindref="compound">wxProcess</ref>, <ref refid="page__samples_1page_samples_exec" kindref="member">External Program Execution Sample</ref>, <ref refid="group__group__funcmacro__misc_1ga04038d4c78e4c111d018b8f82b2d66c3" kindref="member">wxLaunchDefaultApplication()</ref>, <ref refid="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" kindref="member">wxLaunchDefaultBrowser()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> In wxPerl this function is called <computeroutput>Wx::ExecuteCommand</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="977"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga8116ca17aec4eea74b848f1544805960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxExecute</definition>
+        <argsstring>(char **argv, int flags=wxEXEC_ASYNC, wxProcess *callback=NULL, const wxExecuteEnv *env=NULL)</argsstring>
+        <name>wxExecute</name>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxEXEC_ASYNC</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_process" kindref="compound">wxProcess</ref> *</type>
+          <declname>callback</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>const <ref refid="structwx_execute_env" kindref="compound">wxExecuteEnv</ref> *</type>
+          <declname>env</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded version of wxExecute(const wxString&amp;,int,wxProcess*), please see its documentation for general information. </para>        </briefdescription>
+        <detaileddescription>
+<para>This version takes an array of values: a command, any number of arguments, terminated by NULL.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to execute should be the first element of this array, any additional ones are the command parameters and the array must be terminated with a NULL pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Same as for wxExecute(const wxString&amp;,int,wxProcess*) overload. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional pointer to <ref refid="classwx_process" kindref="compound">wxProcess</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>env</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional pointer to additional parameters for the child process, such as its initial working directory and environment variables. This parameter is available in wxWidgets 2.9.2 and later only.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__procctrl_1gad7f2f357f592f8c786ab05f516578023" kindref="member">wxShell()</ref>, <ref refid="classwx_process" kindref="compound">wxProcess</ref>, <ref refid="page__samples_1page_samples_exec" kindref="member">External Program Execution Sample</ref>, <ref refid="group__group__funcmacro__misc_1ga04038d4c78e4c111d018b8f82b2d66c3" kindref="member">wxLaunchDefaultApplication()</ref>, <ref refid="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" kindref="member">wxLaunchDefaultBrowser()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> In wxPerl this function is called <computeroutput>Wx::ExecuteArgs</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1013"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1gabba679a024d6a4a084fc8d16220c4d7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxExecute</definition>
+        <argsstring>(wchar_t **argv, int flags=wxEXEC_ASYNC, wxProcess *callback=NULL, const wxExecuteEnv *env=NULL)</argsstring>
+        <name>wxExecute</name>
+        <param>
+          <type>wchar_t **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxEXEC_ASYNC</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_process" kindref="compound">wxProcess</ref> *</type>
+          <declname>callback</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>const <ref refid="structwx_execute_env" kindref="compound">wxExecuteEnv</ref> *</type>
+          <declname>env</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1016"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga8f0c6749817ce450eae22290194c812e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxExecute</definition>
+        <argsstring>(const wxString &amp;command, wxArrayString &amp;output, int flags=0, const wxExecuteEnv *env=NULL)</argsstring>
+        <name>wxExecute</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="structwx_execute_env" kindref="compound">wxExecuteEnv</ref> *</type>
+          <declname>env</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded version of wxExecute(const wxString&amp;,int,wxProcess*), please see its documentation for general information. </para>        </briefdescription>
+        <detaileddescription>
+<para>This version can be used to execute a process (always synchronously, the contents of <emphasis>flags</emphasis> is or&apos;d with <computeroutput>wxEXEC_SYNC</computeroutput>) and capture its output in the array <emphasis>output</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to execute and any parameters to pass to it as a single string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string array where the stdout of the executed process is saved. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>env</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional pointer to additional parameters for the child process, such as its initial working directory and environment variables. This parameter is available in wxWidgets 2.9.2 and later only.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__procctrl_1gad7f2f357f592f8c786ab05f516578023" kindref="member">wxShell()</ref>, <ref refid="classwx_process" kindref="compound">wxProcess</ref>, <ref refid="page__samples_1page_samples_exec" kindref="member">External Program Execution Sample</ref>, <ref refid="group__group__funcmacro__misc_1ga04038d4c78e4c111d018b8f82b2d66c3" kindref="member">wxLaunchDefaultApplication()</ref>, <ref refid="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" kindref="member">wxLaunchDefaultBrowser()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> This function is called <computeroutput>Wx::ExecuteStdout:</computeroutput> it only takes the <emphasis>command</emphasis> argument, and returns a 2-element list (<computeroutput>status</computeroutput>, <computeroutput>output</computeroutput>), where <computeroutput>output</computeroutput> in an array reference. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1054"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga481a6f4eb3783d38e022aaca1b6ed757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxExecute</definition>
+        <argsstring>(const wxString &amp;command, wxArrayString &amp;output, wxArrayString &amp;errors, int flags=0, const wxExecuteEnv *env=NULL)</argsstring>
+        <name>wxExecute</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>errors</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="structwx_execute_env" kindref="compound">wxExecuteEnv</ref> *</type>
+          <declname>env</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded version of wxExecute(const wxString&amp;,int,wxProcess*), please see its documentation for general information. </para>        </briefdescription>
+        <detaileddescription>
+<para>This version adds the possibility to additionally capture the messages from standard error output in the <emphasis>errors</emphasis> array. As with the above overload capturing standard output only, execution is always synchronous.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to execute and any parameters to pass to it as a single string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string array where the stdout of the executed process is saved. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string array where the stderr of the executed process is saved. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga39fca1837c5ce7715cbf571669660c13a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>env</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional pointer to additional parameters for the child process, such as its initial working directory and environment variables. This parameter is available in wxWidgets 2.9.2 and later only.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__group__funcmacro__procctrl_1gad7f2f357f592f8c786ab05f516578023" kindref="member">wxShell()</ref>, <ref refid="classwx_process" kindref="compound">wxProcess</ref>, <ref refid="page__samples_1page_samples_exec" kindref="member">External Program Execution Sample</ref>, <ref refid="group__group__funcmacro__misc_1ga04038d4c78e4c111d018b8f82b2d66c3" kindref="member">wxLaunchDefaultApplication()</ref>, <ref refid="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" kindref="member">wxLaunchDefaultBrowser()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> This function is called <computeroutput>Wx::ExecuteStdoutStderr:</computeroutput> it only takes the <emphasis>command</emphasis> argument, and returns a 3-element list (<computeroutput>status</computeroutput>, <computeroutput>output</computeroutput>, <computeroutput>errors</computeroutput>), where <computeroutput>output</computeroutput> and <computeroutput>errors</computeroutput> are array references. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1091"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1gab50b6a7e83f7a59d4c1d08d52505f8c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long wxGetProcessId</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetProcessId</name>
+        <briefdescription>
+<para>Returns the number uniquely identifying the current process in the system. </para>        </briefdescription>
+        <detaileddescription>
+<para>If an error occurs, 0 is returned.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1099"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxKill</definition>
+        <argsstring>(long pid, wxSignal sig=wxSIGTERM, wxKillError *rc=NULL, int flags=wxKILL_NOCHILDREN)</argsstring>
+        <name>wxKill</name>
+        <param>
+          <type>long</type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314" kindref="member">wxSignal</ref></type>
+          <declname>sig</declname>
+          <defval>wxSIGTERM</defval>
+        </param>
+        <param>
+          <type><ref refid="process_8h_1af9655b6ab587e0a65ad6f63eb32d814f" kindref="member">wxKillError</ref> *</type>
+          <declname>rc</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxKILL_NOCHILDREN</defval>
+        </param>
+        <briefdescription>
+<para>Equivalent to the Unix kill function: send the given signal <emphasis>sig</emphasis> to the process with PID <emphasis>pid</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The valid signal values are:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314" kindref="member" tooltip="Signal constants used by wxProcess.">wxSignal</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314ae642607b5b7e709b6e4b87039d25ca6a" kindref="member" tooltip="verify if the process exists under Unix">wxSIGNONE</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="comment">//<sp/>verify<sp/>if<sp/>the<sp/>process<sp/>exists<sp/>under<sp/>Unix</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314afb13d3ae732f5e9ec0e07dfd85d86a9c" kindref="member">wxSIGHUP</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314af4562905d83597f381104c16482cbb6c" kindref="member">wxSIGINT</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314a6fa9706c853b48e2f1b3669fe468284d" kindref="member">wxSIGQUIT</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314a0b70ce38f179007b68def47b052a3dd8" kindref="member">wxSIGILL</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314a6d90c2a96bef2ee77a158abaf77778f6" kindref="member">wxSIGTRAP</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314a9643a6b5f988df535c6bc623f6d153fb" kindref="member">wxSIGABRT</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314aa6c621ec07fdf10677acee295e3c8f85" kindref="member">wxSIGEMT</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314a655d4b96c0ccd68a189cb644b22a4ce1" kindref="member">wxSIGFPE</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314af4b0ffd5af303d0794f9ecd58ed9a2b0" kindref="member" tooltip="forcefully kill, dangerous!">wxSIGKILL</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>forcefully<sp/>kill,<sp/>dangerous!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314a958b8241790be6e7be8fb6074427770b" kindref="member">wxSIGBUS</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314a9fc992c7c8eddd3105d1c3c080a4143d" kindref="member">wxSIGSEGV</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314aa7e7ee41dd3387d774b014d4c0b45f53" kindref="member">wxSIGSYS</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314a13cdc0f322dd573168401981112be24a" kindref="member">wxSIGPIPE</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314acd9f5bb5cb3c04ca790eaf16f65adf90" kindref="member">wxSIGALRM</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1a20679c5ff68fdf39b9ea552b0d94c314ae53272781ce284433c1aed7d4457b951" kindref="member" tooltip="terminate the process gently">wxSIGTERM</ref><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>terminate<sp/>the<sp/>process<sp/>gently</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para><computeroutput>wxSIGNONE</computeroutput>, <computeroutput>wxSIGKILL</computeroutput> and <computeroutput>wxSIGTERM</computeroutput> have the same meaning under both Unix and Windows but all the other signals are equivalent to <computeroutput>wxSIGTERM</computeroutput> under Windows.</para><para>Returns 0 on success, -1 on failure. If the <emphasis>rc</emphasis> parameter is not NULL, it will be filled with a value from the <computeroutput>wxKillError</computeroutput> enum:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="process_8h_1af9655b6ab587e0a65ad6f63eb32d814f" kindref="member" tooltip="Return values for wxProcess::Kill.">wxKillError</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1af9655b6ab587e0a65ad6f63eb32d814fa8b3d0f6e88641bade2f21b356f534116" kindref="member" tooltip="no error">wxKILL_OK</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1af9655b6ab587e0a65ad6f63eb32d814fa32f4fc9699e037907b7db08cb28588b4" kindref="member" tooltip="no such signal">wxKILL_BAD_SIGNAL</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>such<sp/>signal</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1af9655b6ab587e0a65ad6f63eb32d814fab8516295327be51026247adaa82ef467" kindref="member" tooltip="permission denied">wxKILL_ACCESS_DENIED</ref>,<sp/></highlight><highlight class="comment">//<sp/>permission<sp/>denied</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1af9655b6ab587e0a65ad6f63eb32d814fa7cc78accfb5dba7833929628c8206c1e" kindref="member" tooltip="no such process">wxKILL_NO_PROCESS</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>such<sp/>process</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="process_8h_1af9655b6ab587e0a65ad6f63eb32d814fa416b6f81586bd58881566d42fad847f9" kindref="member" tooltip="another, unspecified error">wxKILL_ERROR</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>another,<sp/>unspecified<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para>The <emphasis>flags</emphasis> parameter can be wxKILL_NOCHILDREN (the default), or wxKILL_CHILDREN, in which case the child processes of this process will be killed too. Note that under Unix, for wxKILL_CHILDREN to work you should have created the process by passing wxEXEC_MAKE_GROUP_LEADER to <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_process_1a6b3ff71a9d026d93600add4cbb72a172" kindref="member">wxProcess::Kill()</ref>, <ref refid="classwx_process_1a3c81aa4ef5b6b76018e245f0b004f51b" kindref="member">wxProcess::Exists()</ref>, <ref refid="page__samples_1page_samples_exec" kindref="member">External Program Execution Sample</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1gad7f2f357f592f8c786ab05f516578023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxShell</definition>
+        <argsstring>(const wxString &amp;command=wxEmptyString)</argsstring>
+        <name>wxShell</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>command</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Executes a command in an interactive shell window. </para>        </briefdescription>
+        <detaileddescription>
+<para>If no command is specified, then just the shell is spawned.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref>, <ref refid="page__samples_1page_samples_exec" kindref="member">External Program Execution Sample</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1168"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga3177c2a68564921806525f8fefa7e5c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxShutdown</definition>
+        <argsstring>(int flags=wxSHUTDOWN_POWEROFF)</argsstring>
+        <name>wxShutdown</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxSHUTDOWN_POWEROFF</defval>
+        </param>
+        <briefdescription>
+<para>This function shuts down or reboots the computer depending on the value of the <emphasis>flags</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Note that performing the shutdown requires the corresponding access rights (superuser under Unix, SE_SHUTDOWN privilege under Windows NT) and that this function is only implemented under Unix and MSW.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of <computeroutput>wxSHUTDOWN_POWEROFF</computeroutput>, <computeroutput>wxSHUTDOWN_REBOOT</computeroutput> or <computeroutput>wxSHUTDOWN_LOGOFF</computeroutput> (currently implemented only for MSW) possibly combined with <computeroutput>wxSHUTDOWN_FORCE</computeroutput> which forces shutdown under MSW by forcefully terminating all the applications. As doing this can result in a data loss, this flag shouldn&apos;t be used unless really necessary.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false if an error occurred.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1189"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga21baed39430c5dae8517c4bd87fcf357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMicroSleep</definition>
+        <argsstring>(unsigned long microseconds)</argsstring>
+        <name>wxMicroSleep</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>microseconds</declname>
+        </param>
+        <briefdescription>
+<para>Sleeps for the specified number of microseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>The microsecond resolution may not, in fact, be available on all platforms (currently only Unix platforms with nanosleep(2) may provide it) in which case this is the same as calling <ref refid="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" kindref="member">wxMilliSleep()</ref> with the argument of <emphasis>microseconds/1000</emphasis>.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1206"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMilliSleep</definition>
+        <argsstring>(unsigned long milliseconds)</argsstring>
+        <name>wxMilliSleep</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>milliseconds</declname>
+        </param>
+        <briefdescription>
+<para>Sleeps for the specified number of milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that usage of this function is encouraged instead of calling usleep(3) directly because the standard <emphasis>usleep()</emphasis> function is not MT safe.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1215"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga6c406d666359a8c34ef4a35277e5ea83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxNow</definition>
+        <argsstring>()</argsstring>
+        <name>wxNow</name>
+        <briefdescription>
+<para>Returns a string representing the current date and time. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga35215dff464a300f45dec961b3c23539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSleep</definition>
+        <argsstring>(int secs)</argsstring>
+        <name>wxSleep</name>
+        <param>
+          <type>int</type>
+          <declname>secs</declname>
+        </param>
+        <briefdescription>
+<para>Sleeps for the specified number of seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1229"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1gac19b07b94bdf832cca9666b06f7d2882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxUsleep</definition>
+        <argsstring>(unsigned long milliseconds)</argsstring>
+        <name>wxUsleep</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>milliseconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000067"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated because its name is misleading: notice that the argument is in milliseconds, not microseconds. Please use either <ref refid="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" kindref="member">wxMilliSleep()</ref> or <ref refid="group__group__funcmacro__time_1ga21baed39430c5dae8517c4bd87fcf357" kindref="member">wxMicroSleep()</ref> depending on the resolution you need.</para></xrefdescription></xrefsect>Sleeps for the specified number of milliseconds.</para><para>Include file: <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1241"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h"/>
+  </compounddef>
+</doxygen>

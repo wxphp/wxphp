@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_individual_layout_constraint" kind="class" prot="public">
+    <compoundname>wxIndividualLayoutConstraint</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/layout.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a89e94343531176faec310020c1f47bd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxIndividualLayoutConstraint::wxIndividualLayoutConstraint</definition>
+        <argsstring>()</argsstring>
+        <name>wxIndividualLayoutConstraint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1ab624b1e864f8ccfc0c6af2ac155fb3ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxIndividualLayoutConstraint::~wxIndividualLayoutConstraint</definition>
+        <argsstring>()</argsstring>
+        <name>~wxIndividualLayoutConstraint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a648bd68db74082ac8c48d09a857ee715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::Set</definition>
+        <argsstring>(wxRelationship rel, wxWindow *otherW, wxEdge otherE, int val=0, int margin=wxLAYOUT_DEFAULT_MARGIN)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1" kindref="member">wxRelationship</ref></type>
+          <declname>rel</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>otherW</declname>
+        </param>
+        <param>
+          <type><ref refid="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7" kindref="member">wxEdge</ref></type>
+          <declname>otherE</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>margin</declname>
+          <defval><ref refid="layout_8h_1a90b927fc3f2bc887d1c6a372d3d7fdf0" kindref="member">wxLAYOUT_DEFAULT_MARGIN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a4c3bc9ceec644b0bb494c877d3afe8f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::LeftOf</definition>
+        <argsstring>(wxWindow *sibling, int margin=wxLAYOUT_DEFAULT_MARGIN)</argsstring>
+        <name>LeftOf</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>sibling</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>margin</declname>
+          <defval><ref refid="layout_8h_1a90b927fc3f2bc887d1c6a372d3d7fdf0" kindref="member">wxLAYOUT_DEFAULT_MARGIN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a69b221adb3fb436b51c95370f52a9db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::RightOf</definition>
+        <argsstring>(wxWindow *sibling, int margin=wxLAYOUT_DEFAULT_MARGIN)</argsstring>
+        <name>RightOf</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>sibling</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>margin</declname>
+          <defval><ref refid="layout_8h_1a90b927fc3f2bc887d1c6a372d3d7fdf0" kindref="member">wxLAYOUT_DEFAULT_MARGIN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a8be116eb428a18074987822b566802f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::Above</definition>
+        <argsstring>(wxWindow *sibling, int margin=wxLAYOUT_DEFAULT_MARGIN)</argsstring>
+        <name>Above</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>sibling</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>margin</declname>
+          <defval><ref refid="layout_8h_1a90b927fc3f2bc887d1c6a372d3d7fdf0" kindref="member">wxLAYOUT_DEFAULT_MARGIN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a33ff304bfb455500cf539c5dc007d420" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::Below</definition>
+        <argsstring>(wxWindow *sibling, int margin=wxLAYOUT_DEFAULT_MARGIN)</argsstring>
+        <name>Below</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>sibling</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>margin</declname>
+          <defval><ref refid="layout_8h_1a90b927fc3f2bc887d1c6a372d3d7fdf0" kindref="member">wxLAYOUT_DEFAULT_MARGIN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1abb2f1176eba21e5fc5c1b9e8d4b6dfa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::SameAs</definition>
+        <argsstring>(wxWindow *otherW, wxEdge edge, int margin=wxLAYOUT_DEFAULT_MARGIN)</argsstring>
+        <name>SameAs</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>otherW</declname>
+        </param>
+        <param>
+          <type><ref refid="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7" kindref="member">wxEdge</ref></type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>margin</declname>
+          <defval><ref refid="layout_8h_1a90b927fc3f2bc887d1c6a372d3d7fdf0" kindref="member">wxLAYOUT_DEFAULT_MARGIN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a9f284aba8611bde3f6a30e6b1db3fd12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::PercentOf</definition>
+        <argsstring>(wxWindow *otherW, wxEdge wh, int per)</argsstring>
+        <name>PercentOf</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>otherW</declname>
+        </param>
+        <param>
+          <type><ref refid="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7" kindref="member">wxEdge</ref></type>
+          <declname>wh</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>per</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a88cb480c5541a8354d2b19e3fa8ebfdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::Absolute</definition>
+        <argsstring>(int val)</argsstring>
+        <name>Absolute</name>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a3e61fd2f841dbd96a98434b2541d53fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::Unconstrained</definition>
+        <argsstring>()</argsstring>
+        <name>Unconstrained</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a16786c9cbb409119e9a91c081a1d293c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::AsIs</definition>
+        <argsstring>()</argsstring>
+        <name>AsIs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a319b8e21b233535c963c3c0946a44c89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+        <definition>wxWindow* wxIndividualLayoutConstraint::GetOtherWindow</definition>
+        <argsstring>()</argsstring>
+        <name>GetOtherWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1aceb10bdab496b95d4524ff649a6dab07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7" kindref="member">wxEdge</ref></type>
+        <definition>wxEdge wxIndividualLayoutConstraint::GetMyEdge</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMyEdge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1aca6c3ab7397941a531b0fa23639ee205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::SetEdge</definition>
+        <argsstring>(wxEdge which)</argsstring>
+        <name>SetEdge</name>
+        <param>
+          <type><ref refid="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7" kindref="member">wxEdge</ref></type>
+          <declname>which</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a6abf56b3412b780996d14558fc1b289e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::SetValue</definition>
+        <argsstring>(int v)</argsstring>
+        <name>SetValue</name>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1aa408e0cf44610933a2cb1f75fce9656a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIndividualLayoutConstraint::GetMargin</definition>
+        <argsstring>()</argsstring>
+        <name>GetMargin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1ab554ed64d91f8d411d89879e36c1f6d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::SetMargin</definition>
+        <argsstring>(int m)</argsstring>
+        <name>SetMargin</name>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a101862b356f53d63ad19b25aeb55b48b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIndividualLayoutConstraint::GetValue</definition>
+        <argsstring>() const </argsstring>
+        <name>GetValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a16a0b4dbaa7e3df3a5fddc26dc730bef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIndividualLayoutConstraint::GetPercent</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPercent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a759c400dcdf1485581d81ffa1da6d088" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIndividualLayoutConstraint::GetOtherEdge</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOtherEdge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a480ad67f12cff2d0f7236b6d4bb3d5cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIndividualLayoutConstraint::GetDone</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1ae189b16280b45063f3f9cd8e64e66040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::SetDone</definition>
+        <argsstring>(bool d)</argsstring>
+        <name>SetDone</name>
+        <param>
+          <type>bool</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a61b29d9e1fa5e0b7cbee1c035829aedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1" kindref="member">wxRelationship</ref></type>
+        <definition>wxRelationship wxIndividualLayoutConstraint::GetRelationship</definition>
+        <argsstring>()</argsstring>
+        <name>GetRelationship</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1a5e857dc243c0c6e56bf6217264dc44bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxIndividualLayoutConstraint::SetRelationship</definition>
+        <argsstring>(wxRelationship r)</argsstring>
+        <name>SetRelationship</name>
+        <param>
+          <type><ref refid="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1" kindref="member">wxRelationship</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1ac8b87247980fd13025db8cac56cd21d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIndividualLayoutConstraint::ResetIfWin</definition>
+        <argsstring>(wxWindow *otherW)</argsstring>
+        <name>ResetIfWin</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>otherW</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1ae0172d5e016d15f5a09a493bbaf7f9fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIndividualLayoutConstraint::SatisfyConstraint</definition>
+        <argsstring>(wxLayoutConstraints *constraints, wxWindow *win)</argsstring>
+        <name>SatisfyConstraint</name>
+        <param>
+          <type><ref refid="classwx_layout_constraints" kindref="compound">wxLayoutConstraints</ref> *</type>
+          <declname>constraints</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_individual_layout_constraint_1ab9171e40b243d4be9af99805d170df8e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIndividualLayoutConstraint::GetEdge</definition>
+        <argsstring>(wxEdge which, wxWindow *thisWin, wxWindow *other) const </argsstring>
+        <name>GetEdge</name>
+        <param>
+          <type><ref refid="layout_8h_1add86e0d78c35fcb5c14d99b9732c58b7" kindref="member">wxEdge</ref></type>
+          <declname>which</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>thisWin</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7256">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7255">
+        <label>wxIndividualLayoutConstraint</label>
+        <link refid="classwx_individual_layout_constraint"/>
+        <childnode refid="7256" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7258">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7259" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7257">
+        <label>wxIndividualLayoutConstraint</label>
+        <link refid="classwx_individual_layout_constraint"/>
+        <childnode refid="7258" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7259">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="35" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classwx_individual_layout_constraint_1a8be116eb428a18074987822b566802f6" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>Above</name></member>
+      <member refid="classwx_individual_layout_constraint_1a88cb480c5541a8354d2b19e3fa8ebfdd" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>Absolute</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_individual_layout_constraint_1a16786c9cbb409119e9a91c081a1d293c" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>AsIs</name></member>
+      <member refid="classwx_individual_layout_constraint_1a33ff304bfb455500cf539c5dc007d420" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>Below</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxIndividualLayoutConstraint</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxIndividualLayoutConstraint</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_individual_layout_constraint_1a480ad67f12cff2d0f7236b6d4bb3d5cc" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetDone</name></member>
+      <member refid="classwx_individual_layout_constraint_1ab9171e40b243d4be9af99805d170df8e" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetEdge</name></member>
+      <member refid="classwx_individual_layout_constraint_1aa408e0cf44610933a2cb1f75fce9656a" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetMargin</name></member>
+      <member refid="classwx_individual_layout_constraint_1aceb10bdab496b95d4524ff649a6dab07" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetMyEdge</name></member>
+      <member refid="classwx_individual_layout_constraint_1a759c400dcdf1485581d81ffa1da6d088" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetOtherEdge</name></member>
+      <member refid="classwx_individual_layout_constraint_1a319b8e21b233535c963c3c0946a44c89" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetOtherWindow</name></member>
+      <member refid="classwx_individual_layout_constraint_1a16a0b4dbaa7e3df3a5fddc26dc730bef" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetPercent</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetRefData</name></member>
+      <member refid="classwx_individual_layout_constraint_1a61b29d9e1fa5e0b7cbee1c035829aedc" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetRelationship</name></member>
+      <member refid="classwx_individual_layout_constraint_1a101862b356f53d63ad19b25aeb55b48b" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>GetValue</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>IsSameAs</name></member>
+      <member refid="classwx_individual_layout_constraint_1a4c3bc9ceec644b0bb494c877d3afe8f9" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>LeftOf</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>operator new</name></member>
+      <member refid="classwx_individual_layout_constraint_1a9f284aba8611bde3f6a30e6b1db3fd12" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>PercentOf</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>Ref</name></member>
+      <member refid="classwx_individual_layout_constraint_1ac8b87247980fd13025db8cac56cd21d7" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>ResetIfWin</name></member>
+      <member refid="classwx_individual_layout_constraint_1a69b221adb3fb436b51c95370f52a9db4" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>RightOf</name></member>
+      <member refid="classwx_individual_layout_constraint_1abb2f1176eba21e5fc5c1b9e8d4b6dfa1" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>SameAs</name></member>
+      <member refid="classwx_individual_layout_constraint_1ae0172d5e016d15f5a09a493bbaf7f9fd" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>SatisfyConstraint</name></member>
+      <member refid="classwx_individual_layout_constraint_1a648bd68db74082ac8c48d09a857ee715" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>Set</name></member>
+      <member refid="classwx_individual_layout_constraint_1ae189b16280b45063f3f9cd8e64e66040" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>SetDone</name></member>
+      <member refid="classwx_individual_layout_constraint_1aca6c3ab7397941a531b0fa23639ee205" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>SetEdge</name></member>
+      <member refid="classwx_individual_layout_constraint_1ab554ed64d91f8d411d89879e36c1f6d9" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>SetMargin</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>SetRefData</name></member>
+      <member refid="classwx_individual_layout_constraint_1a5e857dc243c0c6e56bf6217264dc44bc" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>SetRelationship</name></member>
+      <member refid="classwx_individual_layout_constraint_1a6abf56b3412b780996d14558fc1b289e" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>SetValue</name></member>
+      <member refid="classwx_individual_layout_constraint_1a3e61fd2f841dbd96a98434b2541d53fb" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>Unconstrained</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>UnShare</name></member>
+      <member refid="classwx_individual_layout_constraint_1a89e94343531176faec310020c1f47bd1" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>wxIndividualLayoutConstraint</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxIndividualLayoutConstraint</scope><name>wxObject</name></member>
+      <member refid="classwx_individual_layout_constraint_1ab624b1e864f8ccfc0c6af2ac155fb3ae" prot="public" virt="virtual"><scope>wxIndividualLayoutConstraint</scope><name>~wxIndividualLayoutConstraint</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxIndividualLayoutConstraint</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

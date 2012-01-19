@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="icon_8h" kind="file">
+    <compoundname>icon.h</compoundname>
+    <innerclass refid="classwx_icon" prot="public">wxIcon</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="icon_8h_1a19b04e4d5f8c0580645bf701dd73a176" prot="public" static="no">
+        <name>wxICON_SCREEN_DEPTH</name>
+        <initializer>(-1)</initializer>
+        <briefdescription>
+<para>In <ref refid="classwx_icon" kindref="compound">wxIcon</ref> context this value means: &quot;use the screen depth&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="icon_8h_1a953854798a8dfd400777318358dad5b6" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
+        <definition>wxIcon wxNullIcon</definition>
+        <argsstring></argsstring>
+        <name>wxNullIcon</name>
+        <briefdescription>
+<para>An empty <ref refid="classwx_icon" kindref="compound">wxIcon</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="283" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h"/>
+  </compounddef>
+</doxygen>

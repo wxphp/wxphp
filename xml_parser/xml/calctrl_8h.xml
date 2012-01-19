@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="calctrl_8h" kind="file">
+    <compoundname>calctrl.h</compoundname>
+    <innerclass refid="classwx_calendar_event" prot="public">wxCalendarEvent</innerclass>
+    <innerclass refid="classwx_calendar_date_attr" prot="public">wxCalendarDateAttr</innerclass>
+    <innerclass refid="classwx_calendar_ctrl" prot="public">wxCalendarCtrl</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="calctrl_8h_1a6dbe7946c87601eee0d7fd2b4f73fdd6" prot="public" static="no">
+        <name>wxCalendarDateBorder</name>
+        <enumvalue id="calctrl_8h_1a6dbe7946c87601eee0d7fd2b4f73fdd6ab019c909b7996da160f11d6c3ea07efd" prot="public">
+          <name>wxCAL_BORDER_NONE</name>
+          <briefdescription>
+<para>No Border (Default). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1a6dbe7946c87601eee0d7fd2b4f73fdd6a7cea25ec4206093af864e46e1f29b0ab" prot="public">
+          <name>wxCAL_BORDER_SQUARE</name>
+          <briefdescription>
+<para>Rectangular Border. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1a6dbe7946c87601eee0d7fd2b4f73fdd6abc2a2353b43b035a0ad57c4e3326fc21" prot="public">
+          <name>wxCAL_BORDER_ROUND</name>
+          <briefdescription>
+<para>Round Border. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible kinds of borders which may be used to decorate a date using <ref refid="classwx_calendar_date_attr" kindref="compound">wxCalendarDateAttr</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="enum" id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bc" prot="public" static="no">
+        <name>wxCalendarHitTestResult</name>
+        <enumvalue id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bcada80a77a0153b4b2272c4e809af1717e" prot="public">
+          <name>wxCAL_HITTEST_NOWHERE</name>
+          <briefdescription>
+<para>Hit outside of anything. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bca5caef7bf61497fd17bb47c78a49867bf" prot="public">
+          <name>wxCAL_HITTEST_HEADER</name>
+          <briefdescription>
+<para>Hit on the header (weekdays). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bca4bbc3f65fbfbd013ea0e3994fc8630bb" prot="public">
+          <name>wxCAL_HITTEST_DAY</name>
+          <briefdescription>
+<para>Hit on a day in the calendar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bca63891cfdd9e11ad85e0c0a52bf0375fa" prot="public">
+          <name>wxCAL_HITTEST_INCMONTH</name>
+          <briefdescription>
+<para>Hit on next month arrow (in alternate month selector mode). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bca24ce4056a1cc15bf0b73fb38682c86d3" prot="public">
+          <name>wxCAL_HITTEST_DECMONTH</name>
+          <briefdescription>
+<para>Hit on previous month arrow (in alternate month selector mode). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bcaec2c69699fdcc4f72ddbba9f4ab60248" prot="public">
+          <name>wxCAL_HITTEST_SURROUNDING_WEEK</name>
+          <briefdescription>
+<para>Hit on surrounding week of previous/next month (if shown). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calctrl_8h_1ab54c21fe15c064d2ea6741533fa235bca5f528d77aae04f97c2f0b3c681fa7e99" prot="public">
+          <name>wxCAL_HITTEST_WEEK</name>
+          <briefdescription>
+<para>Hit on week of the year number (if shown). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible return values from <ref refid="classwx_calendar_ctrl_1a986900efb8466550508681559f093110" kindref="member">wxCalendarCtrl::HitTest()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" line="182" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h" bodystart="181" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/calctrl.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="richtextprint_8h" kind="file">
+    <compoundname>richtextprint.h</compoundname>
+    <innerclass refid="classwx_rich_text_header_footer_data" prot="public">wxRichTextHeaderFooterData</innerclass>
+    <innerclass refid="classwx_rich_text_printout" prot="public">wxRichTextPrintout</innerclass>
+    <innerclass refid="classwx_rich_text_printing" prot="public">wxRichTextPrinting</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="richtextprint_8h_1acdf2ae0f1ebacfd257b275da19723822" prot="public" static="no">
+        <name>wxRichTextOddEvenPage</name>
+        <enumvalue id="richtextprint_8h_1acdf2ae0f1ebacfd257b275da19723822a8de7effdd0fc7fecd54dc4ff945a0830" prot="public">
+          <name>wxRICHTEXT_PAGE_ODD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextprint_8h_1acdf2ae0f1ebacfd257b275da19723822ad99a8c84b07d6360e7a3c4b50dfbfe1c" prot="public">
+          <name>wxRICHTEXT_PAGE_EVEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextprint_8h_1acdf2ae0f1ebacfd257b275da19723822a7152fa8e405ad4a0995d4d2f370bc692" prot="public">
+          <name>wxRICHTEXT_PAGE_ALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>These are the header and footer page identifiers, passed to functions such as <ref refid="classwx_rich_text_header_footer_data_1a19611cda3d298ffff3cd72a4c6d6a9ba" kindref="member">wxRichTextHeaderFooterData::SetFooterText</ref> to specify the odd or even page for the text. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextprint_8h_1a5bd5259cc0c16c1ba325e534c53b795f" prot="public" static="no">
+        <name>wxRichTextPageLocation</name>
+        <enumvalue id="richtextprint_8h_1a5bd5259cc0c16c1ba325e534c53b795fab7da3fb51ee44f27f023f2b7a2a3cdc1" prot="public">
+          <name>wxRICHTEXT_PAGE_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextprint_8h_1a5bd5259cc0c16c1ba325e534c53b795fa2847aa83d70013a65e28e36f8147a2ba" prot="public">
+          <name>wxRICHTEXT_PAGE_CENTRE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextprint_8h_1a5bd5259cc0c16c1ba325e534c53b795fa2675c1671184a6b3d300647ec9edd2d4" prot="public">
+          <name>wxRICHTEXT_PAGE_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>These are the location identifiers for passing to functions such as <ref refid="classwx_rich_text_header_footer_data_1a19611cda3d298ffff3cd72a4c6d6a9ba" kindref="member">wxRichTextHeaderFooterData::SetFooterText()</ref>, to specify whether the text is on the left, centre or right of the page. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" bodystart="27" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h"/>
+  </compounddef>
+</doxygen>

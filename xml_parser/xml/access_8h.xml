@@ -1,0 +1,1487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="access_8h" kind="file">
+    <compoundname>access.h</compoundname>
+    <innerclass refid="classwx_accessible" prot="public">wxAccessible</innerclass>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="define" id="access_8h_1a1aa16360b865d4a814bdf068afedcb39" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_ALERT_HIGH</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="144" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a9a4946f1825959bde9bce87edc91c390" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_ALERT_MEDIUM</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="145" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1aa43857790b73c0dc3bec7c1e1c8d9fa1" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_ALERT_LOW</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="146" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a3c9beb2233499c4fb1df199ebcd710c0" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_ANIMATED</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="147" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1aeb6e22650913cdd905e5df6440221496" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_BUSY</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="148" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a19ecd872ef2efa30e8793d7ba7d9fcd6" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_CHECKED</name>
+        <initializer>0x00000020</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="149" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a2582795948ffce831c955dd4573a6c7f" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_COLLAPSED</name>
+        <initializer>0x00000040</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="150" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ae8590ff85711fe3e188be5f300dba4da" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_DEFAULT</name>
+        <initializer>0x00000080</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a8ea3aba7389c79b0e12860e5311079d7" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_EXPANDED</name>
+        <initializer>0x00000100</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="152" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a0cfedc4fd194a49044cc613647842e0b" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_EXTSELECTABLE</name>
+        <initializer>0x00000200</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="153" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a628688036d4051f4dfb7b32bdcba44ce" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_FLOATING</name>
+        <initializer>0x00000400</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="154" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ad335be976f42d9a6adb03880a807e57a" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_FOCUSABLE</name>
+        <initializer>0x00000800</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a2c5f331d892864ac02a788f011817aef" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_FOCUSED</name>
+        <initializer>0x00001000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="156" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a3e420e474fa0026836ee0f4958dd9d94" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_HOTTRACKED</name>
+        <initializer>0x00002000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="157" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ac0ee68abafae9cef81ba603e2d1356ef" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_INVISIBLE</name>
+        <initializer>0x00004000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="158" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a4cbe97423dd7e0bfcfb149d6bf4d629f" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_MARQUEED</name>
+        <initializer>0x00008000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="159" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a7a90db80eacfa7edb251805bb0bfb363" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_MIXED</name>
+        <initializer>0x00010000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="160" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1aa403be829223fad709add1eed9057fdd" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_MULTISELECTABLE</name>
+        <initializer>0x00020000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="161" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a9a0ec8f8484d7bc3fa669628b589b594" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_OFFSCREEN</name>
+        <initializer>0x00040000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="162" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a4e990478220cc14b60394e0f8b323c22" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_PRESSED</name>
+        <initializer>0x00080000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="163" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a5e3352922223b03d23219185d6e17512" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_PROTECTED</name>
+        <initializer>0x00100000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="164" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a0cba7f7de2ff4c578db03aa4a66f1613" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_READONLY</name>
+        <initializer>0x00200000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="165" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ac255da73f4327b3e5a67b3de1599927f" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_SELECTABLE</name>
+        <initializer>0x00400000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="166" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a22faed5f0c8b66b5806051524ea9be33" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_SELECTED</name>
+        <initializer>0x00800000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="167" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a91770bcc71df22e2dd3c8980d165bfbc" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_SELFVOICING</name>
+        <initializer>0x01000000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="168" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ae5e9244ce0817b42709ead5584f079d2" prot="public" static="no">
+        <name>wxACC_STATE_SYSTEM_UNAVAILABLE</name>
+        <initializer>0x02000000</initializer>
+        <briefdescription>
+<para>Represents a status of the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="169" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="define" id="access_8h_1afc22f3acfb1d7fd648112508f899ae75" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_SOUND</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="176" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a24ab412f8a769d9728a958ab33b8da80" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_ALERT</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="177" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a171a4ec7a36e69e5c63fb7c1935da538" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_FOREGROUND</name>
+        <initializer>0x0003</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="178" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a21d192b23e9e53e415842733f9f74c61" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_MENUSTART</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="179" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ad3227b0a813ae353b7bdefbc94e862de" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_MENUEND</name>
+        <initializer>0x0005</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="180" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a8203daa946c10c3db65f008568283e3e" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_MENUPOPUPSTART</name>
+        <initializer>0x0006</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="181" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a42f3e9537ef947c8474db89513bf7f62" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_MENUPOPUPEND</name>
+        <initializer>0x0007</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="182" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1afa7252de574a4bd6f714d9bfe011a9d5" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_CAPTURESTART</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="183" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1aad7b0543dd50f258fd0c651a65859be7" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_CAPTUREEND</name>
+        <initializer>0x0009</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="184" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a3ebd2c41030e0f217d58e83fed3e4bc4" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_MOVESIZESTART</name>
+        <initializer>0x000A</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="185" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ab7b8a90585df1d26438a583f9a50ad3e" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_MOVESIZEEND</name>
+        <initializer>0x000B</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="186" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ab6f16453ab72f8c68e7f86d92173a67d" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_CONTEXTHELPSTART</name>
+        <initializer>0x000C</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="187" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a48e9297da1d49a81850dec785505bfc8" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_CONTEXTHELPEND</name>
+        <initializer>0x000D</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="188" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a087898542486c4f2653a2da3879a8664" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_DRAGDROPSTART</name>
+        <initializer>0x000E</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="189" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a5c211a5f40789f3a35e1b52a17cef7ed" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_DRAGDROPEND</name>
+        <initializer>0x000F</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="190" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1adf935f3f9a17047a8511a5307417f1e6" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_DIALOGSTART</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="191" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a00e0aaad5add92a97b05c7c69eff78de" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_DIALOGEND</name>
+        <initializer>0x0011</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="192" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ad6d2cbfe08c43845285000aeedac33b3" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_SCROLLINGSTART</name>
+        <initializer>0x0012</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="193" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ad6a4e406470b0b1063c81b29ae57d179" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_SCROLLINGEND</name>
+        <initializer>0x0013</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="194" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a056a2a12d0b30f11fbdc803a07d33cdc" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_SWITCHSTART</name>
+        <initializer>0x0014</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="195" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1aa6918e780ddcdf1eb112f872643ca2d6" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_SWITCHEND</name>
+        <initializer>0x0015</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="196" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a44e86e621e3632abeea02b1311c8e093" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_MINIMIZESTART</name>
+        <initializer>0x0016</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="197" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a2b2b620bdc64fb2b441e280e8e3594c5" prot="public" static="no">
+        <name>wxACC_EVENT_SYSTEM_MINIMIZEEND</name>
+        <initializer>0x0017</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="198" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a756ec9879f0425edccf06fc3c16e26b0" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_CREATE</name>
+        <initializer>0x8000</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1aa540c79dbbc1297b1782cbd67b2b453b" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_DESTROY</name>
+        <initializer>0x8001</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="200" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ab5f52e6030d840dc5a8ff19152a3df9e" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_SHOW</name>
+        <initializer>0x8002</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="201" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1af8178c353903ff592e9ba55c8463fd3e" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_HIDE</name>
+        <initializer>0x8003</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="202" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a35a1c053285d30f4f75f90328da64b0f" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_REORDER</name>
+        <initializer>0x8004</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="203" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a9f642dbcc52c2797bfb7f0329702295a" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_FOCUS</name>
+        <initializer>0x8005</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="204" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a179726dd66cef0abc2e465dc60181af2" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_SELECTION</name>
+        <initializer>0x8006</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1af03284a335d0a60e0e14414eb5b914c9" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_SELECTIONADD</name>
+        <initializer>0x8007</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="206" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ab1d1a375fd558338e70a03f1d4d84948" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_SELECTIONREMOVE</name>
+        <initializer>0x8008</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="207" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a60161cfa5291d5a948ef604be1f694d5" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_SELECTIONWITHIN</name>
+        <initializer>0x8009</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="208" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1ad40af129cd8ca420b66ad7a092807e07" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_STATECHANGE</name>
+        <initializer>0x800A</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="209" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a8049c560afaa0e66c716bed9da39af5f" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_LOCATIONCHANGE</name>
+        <initializer>0x800B</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="210" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a5070c95c0e259c18044b1ad87e685e4b" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_NAMECHANGE</name>
+        <initializer>0x800C</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="211" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a50b1b11b641ddbca4ed9908102790da2" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_DESCRIPTIONCHANGE</name>
+        <initializer>0x800D</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="212" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a1456db9bc39e65d4cc1fa5a44f61ea9e" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_VALUECHANGE</name>
+        <initializer>0x800E</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="213" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a726acae0d805090576c0d2bea8f47450" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_PARENTCHANGE</name>
+        <initializer>0x800F</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="214" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a1abb17e705431f3e6233e5cabe3ef5e2" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_HELPCHANGE</name>
+        <initializer>0x8010</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="215" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a74d91c83caa9569ec54a8ef2f40aa638" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_DEFACTIONCHANGE</name>
+        <initializer>0x8011</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="216" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="access_8h_1a84f786eb8e52a962d9001007bcc1027f" prot="public" static="no">
+        <name>wxACC_EVENT_OBJECT_ACCELERATORCHANGE</name>
+        <initializer>0x8012</initializer>
+        <briefdescription>
+<para>An event identifier that can be sent via <ref refid="classwx_accessible_1a9ca5bb05805cecaa3b889b02d3f08377" kindref="member">wxAccessible::NotifyEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="access_8h_1adbb7f2b71088722b071ab881a9d123e3" prot="public" static="no">
+        <name>wxAccStatus</name>
+        <enumvalue id="access_8h_1adbb7f2b71088722b071ab881a9d123e3a871c403cae0cb29f1cf0bf76bd6392cc" prot="public">
+          <name>wxACC_FAIL</name>
+          <briefdescription>
+<para>The function failed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1adbb7f2b71088722b071ab881a9d123e3a30e958bf15304480e8d0cf462b8536bf" prot="public">
+          <name>wxACC_FALSE</name>
+          <briefdescription>
+<para>The function returned false. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1adbb7f2b71088722b071ab881a9d123e3ae4e16e8d41507f9800f84d1d541a155e" prot="public">
+          <name>wxACC_OK</name>
+          <briefdescription>
+<para>The function completed successfully. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1adbb7f2b71088722b071ab881a9d123e3acd77332c1e1d6754fedba80f22156fcb" prot="public">
+          <name>wxACC_NOT_IMPLEMENTED</name>
+          <briefdescription>
+<para>The function is not implemented. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1adbb7f2b71088722b071ab881a9d123e3a1ef6dd450af04c82b5d4a274860c4a1c" prot="public">
+          <name>wxACC_NOT_SUPPORTED</name>
+          <briefdescription>
+<para>The function is not supported. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para><ref refid="classwx_accessible" kindref="compound">wxAccessible</ref> functions return a wxAccStatus error code, which may be one of this enum&apos;s values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="14" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="enum" id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0" prot="public" static="no">
+        <name>wxNavDir</name>
+        <enumvalue id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0af6dc8b3240dec7e8e20e32b7a2ebd5f3" prot="public">
+          <name>wxNAVDIR_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0a64ad909e561cf89717e91deaa03ac6b3" prot="public">
+          <name>wxNAVDIR_FIRSTCHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0afe990e4a61ba18475999d69080595b76" prot="public">
+          <name>wxNAVDIR_LASTCHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0ac775506e6fa40e19f6e9519b481832a4" prot="public">
+          <name>wxNAVDIR_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0ae00a5580779de697943a8e230ec0709c" prot="public">
+          <name>wxNAVDIR_NEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0ac9fc0c01965577c2e55a275ec2085d18" prot="public">
+          <name>wxNAVDIR_PREVIOUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0ad6ad2f0626a193a37b3ceb7ed0dcc579" prot="public">
+          <name>wxNAVDIR_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a0dde8a2980f30ed4ce1168edc9c9bfa0a8bd7c466a6fb6526173ffd367dc2e0c7" prot="public">
+          <name>wxNAVDIR_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Directions of navigation are represented by this enum. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="enum" id="access_8h_1a1670ea211368fe694c373f3b1bd71b83" prot="public" static="no">
+        <name>wxAccRole</name>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83aa84db02189e139bb00e7144de178dcf1" prot="public">
+          <name>wxROLE_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ad63cdf71eb61cdac0ed8975943c14787" prot="public">
+          <name>wxROLE_SYSTEM_ALERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a397aa3f7893ed734470172f1392aaf15" prot="public">
+          <name>wxROLE_SYSTEM_ANIMATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a6a1265c2422ffc9449025b9c43851f2f" prot="public">
+          <name>wxROLE_SYSTEM_APPLICATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a42b54ca8e87cc8a94aaaca4add7a60d2" prot="public">
+          <name>wxROLE_SYSTEM_BORDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a34f9e14e3388197b83bf93842915fdfa" prot="public">
+          <name>wxROLE_SYSTEM_BUTTONDROPDOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ae6ebe33c8e8aa7d34400843f0bdabc42" prot="public">
+          <name>wxROLE_SYSTEM_BUTTONDROPDOWNGRID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a005707dfc3ae2099447dfdff25ea4e60" prot="public">
+          <name>wxROLE_SYSTEM_BUTTONMENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a4225f92029408bb98eb9647b26cc7150" prot="public">
+          <name>wxROLE_SYSTEM_CARET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a1ce52fc84ddd7fa8eabaca94637fbdbe" prot="public">
+          <name>wxROLE_SYSTEM_CELL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a97baefdf13c21d2be9fb67ecf844c0e7" prot="public">
+          <name>wxROLE_SYSTEM_CHARACTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a6e8cc8fdd54ccc73e39b74fcef7c6662" prot="public">
+          <name>wxROLE_SYSTEM_CHART</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a3373907274c3f58445736cae56f9c41f" prot="public">
+          <name>wxROLE_SYSTEM_CHECKBUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a1568b94d8fa3933e4efbdab775e50f85" prot="public">
+          <name>wxROLE_SYSTEM_CLIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a760a574115e68497b54207c95b00ac91" prot="public">
+          <name>wxROLE_SYSTEM_CLOCK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83add391833151a9e14ea5990a9325f5273" prot="public">
+          <name>wxROLE_SYSTEM_COLUMN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a5554be4b6e65259817f3ac8274cf2bfe" prot="public">
+          <name>wxROLE_SYSTEM_COLUMNHEADER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a24d21b61d9365c036396cc4bf3a9fd5b" prot="public">
+          <name>wxROLE_SYSTEM_COMBOBOX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a3dd7f8afe5615092c1e5c77f589a2ca1" prot="public">
+          <name>wxROLE_SYSTEM_CURSOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a1d8b3f06435b898962bbaa8daaa41002" prot="public">
+          <name>wxROLE_SYSTEM_DIAGRAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ac6619ba1293b4defae68c997fb0e8c69" prot="public">
+          <name>wxROLE_SYSTEM_DIAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ae81207898aa0c99d6adabbc0bb55f410" prot="public">
+          <name>wxROLE_SYSTEM_DIALOG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a8f9255deca62f4fe27a154ec5159aad8" prot="public">
+          <name>wxROLE_SYSTEM_DOCUMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ad828036bb2e9d56f0331bb21b7758d9f" prot="public">
+          <name>wxROLE_SYSTEM_DROPLIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ab4cf253ef44c7aa5b35d93ea3e102a8b" prot="public">
+          <name>wxROLE_SYSTEM_EQUATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a5d5f6f5d08d6abcbafd1d496ea03396d" prot="public">
+          <name>wxROLE_SYSTEM_GRAPHIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83af98b177870e7e6e3f4a273e2163b44e0" prot="public">
+          <name>wxROLE_SYSTEM_GRIP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ae2d4f5a5cb5471322edf4ddc59418a7a" prot="public">
+          <name>wxROLE_SYSTEM_GROUPING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a9000ef860ce3429153fe9c47ab476dc6" prot="public">
+          <name>wxROLE_SYSTEM_HELPBALLOON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83aa5ab2d19e5fabfa80f64539f4c264c46" prot="public">
+          <name>wxROLE_SYSTEM_HOTKEYFIELD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a714e1808b05e6d5760f264468d192a9b" prot="public">
+          <name>wxROLE_SYSTEM_INDICATOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a38ddb9fd02fa7c3dcb4a004d66a4ffdd" prot="public">
+          <name>wxROLE_SYSTEM_LINK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a022ba3410bfe47cbfdb35e3d45bacc9c" prot="public">
+          <name>wxROLE_SYSTEM_LIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a5fbce509f6079197c6c48629db483084" prot="public">
+          <name>wxROLE_SYSTEM_LISTITEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83afb391310c27dbbe600ac3ec0b1a13d63" prot="public">
+          <name>wxROLE_SYSTEM_MENUBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ac11cb8760e6f42c08a6e961e44c4f287" prot="public">
+          <name>wxROLE_SYSTEM_MENUITEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ac64b43d32f882a47a1b69bb8effbfe56" prot="public">
+          <name>wxROLE_SYSTEM_MENUPOPUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83adf8ae25a5a03082d93adc50835ddbbbb" prot="public">
+          <name>wxROLE_SYSTEM_OUTLINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83aa806a2bdb2b162288a3fc000b8abcf4e" prot="public">
+          <name>wxROLE_SYSTEM_OUTLINEITEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a3509f0dc6fb07e2f5092789d07f8a43b" prot="public">
+          <name>wxROLE_SYSTEM_PAGETAB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a7703ce50b7c51ba4758de985dcc39459" prot="public">
+          <name>wxROLE_SYSTEM_PAGETABLIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a994cfaee0f215d3a111d15f6c3606549" prot="public">
+          <name>wxROLE_SYSTEM_PANE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a7a369536e67c6aee3ba3b53dd674bc30" prot="public">
+          <name>wxROLE_SYSTEM_PROGRESSBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83abac7a32db55f1366c58afe117358842f" prot="public">
+          <name>wxROLE_SYSTEM_PROPERTYPAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a55b3bbf44df0043f6207d8556b00057a" prot="public">
+          <name>wxROLE_SYSTEM_PUSHBUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a8b44c9ed95a4cfa6b934c8fa5b8bfc94" prot="public">
+          <name>wxROLE_SYSTEM_RADIOBUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83af1fe15764e3d6d3830140c6d746e7e2c" prot="public">
+          <name>wxROLE_SYSTEM_ROW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ac6be9b53d656fccc144f8c526f0bb037" prot="public">
+          <name>wxROLE_SYSTEM_ROWHEADER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a4e9f910499982d17623ad2c089ca3109" prot="public">
+          <name>wxROLE_SYSTEM_SCROLLBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ad829e2f764ced36ebaeb81afb3e6d403" prot="public">
+          <name>wxROLE_SYSTEM_SEPARATOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a09a8c40852b788e73a329cb86783e4b3" prot="public">
+          <name>wxROLE_SYSTEM_SLIDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a3603b9294a2b872825583c351b5376b6" prot="public">
+          <name>wxROLE_SYSTEM_SOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a0136ed7b72f3c9a5ba6b066fcd32ba06" prot="public">
+          <name>wxROLE_SYSTEM_SPINBUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ab4d116e89ce4df987dc21c2547ee6427" prot="public">
+          <name>wxROLE_SYSTEM_STATICTEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a26acde22e4380b34f4ff34352ae737f8" prot="public">
+          <name>wxROLE_SYSTEM_STATUSBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a2f8b349b0b0b69f0a2852ad68bd93f3e" prot="public">
+          <name>wxROLE_SYSTEM_TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83aed08b07707cff7d55df39da4bb4a5918" prot="public">
+          <name>wxROLE_SYSTEM_TEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a40293656ad45345aed8c5bc070aa089a" prot="public">
+          <name>wxROLE_SYSTEM_TITLEBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83ac1330d1f09104ebc2252e6662c331c1d" prot="public">
+          <name>wxROLE_SYSTEM_TOOLBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83aaba4326166d5c37176a956f2cbe1ac13" prot="public">
+          <name>wxROLE_SYSTEM_TOOLTIP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a2d9b332c207a5d5def292d452c4ce979" prot="public">
+          <name>wxROLE_SYSTEM_WHITESPACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a1670ea211368fe694c373f3b1bd71b83a7910d601ddd842a906644f5f9245e5b5" prot="public">
+          <name>wxROLE_SYSTEM_WINDOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The role of a user interface element is represented by the values of this enum. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="43" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="enum" id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adab" prot="public" static="no">
+        <name>wxAccObject</name>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adaba389c09cbc26a6b6601874170c9c7c329" prot="public">
+          <name>wxOBJID_WINDOW</name>
+          <initializer>    0x00000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adaba006106dd686d16b46b46b33a65e25efa" prot="public">
+          <name>wxOBJID_SYSMENU</name>
+          <initializer>   0xFFFFFFFF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adaba2c81c76b5c9f8ccd8f9fcc020dc3e8ea" prot="public">
+          <name>wxOBJID_TITLEBAR</name>
+          <initializer>  0xFFFFFFFE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adabaaf446b998a401a594561ebf70cc6c116" prot="public">
+          <name>wxOBJID_MENU</name>
+          <initializer>      0xFFFFFFFD</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adaba1b145328d79b2c3159bd06ca2464c239" prot="public">
+          <name>wxOBJID_CLIENT</name>
+          <initializer>    0xFFFFFFFC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adabac12337f7f047b86628dabd3166e5e6d6" prot="public">
+          <name>wxOBJID_VSCROLL</name>
+          <initializer>   0xFFFFFFFB</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adabaf15b605dd3c7157d76ae42475222d143" prot="public">
+          <name>wxOBJID_HSCROLL</name>
+          <initializer>   0xFFFFFFFA</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adabaf1b306cf738fc2a73042722fc9d740b8" prot="public">
+          <name>wxOBJID_SIZEGRIP</name>
+          <initializer>  0xFFFFFFF9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adaba9b5a38c4923835377113e475165bc450" prot="public">
+          <name>wxOBJID_CARET</name>
+          <initializer>     0xFFFFFFF8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adabaeef55fb31b6458b33cefdcb4c6c28f5e" prot="public">
+          <name>wxOBJID_CURSOR</name>
+          <initializer>    0xFFFFFFF7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adaba9c5a42822cb56d2afc4ddfedc72dbd59" prot="public">
+          <name>wxOBJID_ALERT</name>
+          <initializer>     0xFFFFFFF6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a987836e9db2faa5d65f4df1c7fa2adabaee99fe18ff2cc2decce475ff6a80937d" prot="public">
+          <name>wxOBJID_SOUND</name>
+          <initializer>     0xFFFFFFF5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Objects are represented by a wxAccObject enum value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="111" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="enum" id="access_8h_1a70adef9390161584246d75e5780efa1c" prot="public" static="no">
+        <name>wxAccSelectionFlags</name>
+        <enumvalue id="access_8h_1a70adef9390161584246d75e5780efa1ca880dd25e0f12ebe15b6f6ed8d502ab54" prot="public">
+          <name>wxACC_SEL_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a70adef9390161584246d75e5780efa1cafe4e598e97aeec92a408b4b40d4eadcc" prot="public">
+          <name>wxACC_SEL_TAKEFOCUS</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a70adef9390161584246d75e5780efa1ca9540f865a75c58e513d5764e2e45de77" prot="public">
+          <name>wxACC_SEL_TAKESELECTION</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a70adef9390161584246d75e5780efa1ca860505f6c14966734815bc48bec1dc05" prot="public">
+          <name>wxACC_SEL_EXTENDSELECTION</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a70adef9390161584246d75e5780efa1ca8c0f6b9398fd661af585b056369544f8" prot="public">
+          <name>wxACC_SEL_ADDSELECTION</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="access_8h_1a70adef9390161584246d75e5780efa1cade77387c1b65e753e36a83116686f864" prot="public">
+          <name>wxACC_SEL_REMOVESELECTION</name>
+          <initializer> 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Selection actions are identified by the wxAccSelectionFlags values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h" bodystart="130" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/access.h"/>
+  </compounddef>
+</doxygen>

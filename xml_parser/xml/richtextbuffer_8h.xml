@@ -1,0 +1,1505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="richtextbuffer_8h" kind="file">
+    <compoundname>richtextbuffer.h</compoundname>
+    <innerclass refid="classwx_text_attr_dimension" prot="public">wxTextAttrDimension</innerclass>
+    <innerclass refid="classwx_text_attr_dimensions" prot="public">wxTextAttrDimensions</innerclass>
+    <innerclass refid="classwx_text_attr_size" prot="public">wxTextAttrSize</innerclass>
+    <innerclass refid="classwx_text_attr_dimension_converter" prot="public">wxTextAttrDimensionConverter</innerclass>
+    <innerclass refid="classwx_text_attr_border" prot="public">wxTextAttrBorder</innerclass>
+    <innerclass refid="classwx_text_attr_borders" prot="public">wxTextAttrBorders</innerclass>
+    <innerclass refid="classwx_text_box_attr" prot="public">wxTextBoxAttr</innerclass>
+    <innerclass refid="classwx_rich_text_attr" prot="public">wxRichTextAttr</innerclass>
+    <innerclass refid="classwx_rich_text_properties" prot="public">wxRichTextProperties</innerclass>
+    <innerclass refid="classwx_rich_text_font_table" prot="public">wxRichTextFontTable</innerclass>
+    <innerclass refid="classwx_rich_text_range" prot="public">wxRichTextRange</innerclass>
+    <innerclass refid="classwx_rich_text_selection" prot="public">wxRichTextSelection</innerclass>
+    <innerclass refid="classwx_rich_text_object" prot="public">wxRichTextObject</innerclass>
+    <innerclass refid="classwx_rich_text_composite_object" prot="public">wxRichTextCompositeObject</innerclass>
+    <innerclass refid="classwx_rich_text_paragraph_layout_box" prot="public">wxRichTextParagraphLayoutBox</innerclass>
+    <innerclass refid="classwx_rich_text_box" prot="public">wxRichTextBox</innerclass>
+    <innerclass refid="classwx_rich_text_line" prot="public">wxRichTextLine</innerclass>
+    <innerclass refid="classwx_rich_text_paragraph" prot="public">wxRichTextParagraph</innerclass>
+    <innerclass refid="classwx_rich_text_plain_text" prot="public">wxRichTextPlainText</innerclass>
+    <innerclass refid="classwx_rich_text_image_block" prot="public">wxRichTextImageBlock</innerclass>
+    <innerclass refid="classwx_rich_text_image" prot="public">wxRichTextImage</innerclass>
+    <innerclass refid="classwx_rich_text_buffer" prot="public">wxRichTextBuffer</innerclass>
+    <innerclass refid="classwx_rich_text_cell" prot="public">wxRichTextCell</innerclass>
+    <innerclass refid="classwx_rich_text_table" prot="public">wxRichTextTable</innerclass>
+    <innerclass refid="classwx_rich_text_object_address" prot="public">wxRichTextObjectAddress</innerclass>
+    <innerclass refid="classwx_rich_text_command" prot="public">wxRichTextCommand</innerclass>
+    <innerclass refid="classwx_rich_text_action" prot="public">wxRichTextAction</innerclass>
+    <innerclass refid="classwx_rich_text_file_handler" prot="public">wxRichTextFileHandler</innerclass>
+    <innerclass refid="classwx_rich_text_plain_text_handler" prot="public">wxRichTextPlainTextHandler</innerclass>
+    <innerclass refid="classwx_rich_text_renderer" prot="public">wxRichTextRenderer</innerclass>
+    <innerclass refid="classwx_rich_text_std_renderer" prot="public">wxRichTextStdRenderer</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="richtextbuffer_8h_1a53352ec8d1824dc6a38f1f4810c1de00" prot="public" static="no">
+        <name>wxRICHTEXT_FIXED_WIDTH</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>Flags determining the available space, passed to Layout. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1aadd58d20d6f37b8090cea46722f38926" prot="public" static="no">
+        <name>wxRICHTEXT_FIXED_HEIGHT</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1af2f53add251ddb12fd5a705a0ed0a75e" prot="public" static="no">
+        <name>wxRICHTEXT_VARIABLE_WIDTH</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a2d9850a3bdbb36debb025e94e519d067" prot="public" static="no">
+        <name>wxRICHTEXT_VARIABLE_HEIGHT</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a1cb973ddf5880b9986cc28dcef210467" prot="public" static="no">
+        <name>wxRICHTEXT_LAYOUT_SPECIFIED_RECT</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="42" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1aea15f7c3e705c709c38d8aed43d92007" prot="public" static="no">
+        <name>wxRICHTEXT_DRAW_IGNORE_CACHE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>Flags to pass to Draw. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a6019d46e979773900cd477bb114b3ab7" prot="public" static="no">
+        <name>wxRICHTEXT_DRAW_SELECTED</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a477cc595846b1a1c854970e256a8d76f" prot="public" static="no">
+        <name>wxRICHTEXT_DRAW_PRINT</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a9c51856400b82f1646851cc8d91dc338" prot="public" static="no">
+        <name>wxRICHTEXT_DRAW_GUIDELINES</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a22a68c42c9bbbd895f6c59c7216e5ada" prot="public" static="no">
+        <name>wxRICHTEXT_FORMATTED</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>Flags for GetRangeSize. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="87" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a43a4560649d81aab723d195651371c4c" prot="public" static="no">
+        <name>wxRICHTEXT_UNFORMATTED</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="88" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1aa76df960b98fa6c945f81eca5337fd5e" prot="public" static="no">
+        <name>wxRICHTEXT_CACHE_SIZE</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="89" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1aa1e9903ccb46b72a9c9069acdab38062" prot="public" static="no">
+        <name>wxRICHTEXT_HEIGHT_ONLY</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="90" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1aca1937a5b94f9d37e52d483f98bfad82" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>Flags for SetStyle/SetListStyle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="96" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1aeafdee4672685bce0b5227a8901cc3f0" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_WITH_UNDO</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a89da5a421606f2bd5e4ab0b6eb3315bb" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_OPTIMIZE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="103" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a9ef2110d730927363f8ee0ab1aefa172" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_PARAGRAPHS_ONLY</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="108" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a3043ff56462bb459dafad39cbd8bd581" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_CHARACTERS_ONLY</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="113" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1ae174fc8b49a6725b13408e1b9fd4282f" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_RENUMBER</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="117" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1ab80307d9d9e6069b6bd306f5c23378e8" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_SPECIFY_LEVEL</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1af03d37a906ccaa6c60cb59bc419d7e95" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_RESET</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="124" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a9a55ad8fa98b87fefbb9416ffec1efbd" prot="public" static="no">
+        <name>wxRICHTEXT_SETSTYLE_REMOVE</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="127" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a5cbc43e1a1b46b89f7f09d89fd1f9a50" prot="public" static="no">
+        <name>wxRICHTEXT_INSERT_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>Flags for object insertion. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="133" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1acbd568dc31379b56abb7ee4c5d711587" prot="public" static="no">
+        <name>wxRICHTEXT_INSERT_WITH_PREVIOUS_PARAGRAPH_STYLE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="134" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a357c1741e421808e03a3bbbece310e24" prot="public" static="no">
+        <name>wxRICHTEXT_INSERT_INTERACTIVE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="135" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a0f7310e75c946254cc7fbb43e76ffe01" prot="public" static="no">
+        <name>wxTEXT_ATTR_KEEP_FIRST_PARA_STYLE</name>
+        <initializer>0x10000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="140" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a0cd59add4587231cd502069c0e3a7b0f" prot="public" static="no">
+        <name>wxSCRIPT_MUL_FACTOR</name>
+        <initializer>1.5</initializer>
+        <briefdescription>
+<para>Default superscript/subscript font multiplication factor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="146" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a36e1a7d465ccfcf85c58069b15a91635" prot="public" static="no">
+        <name>wxRICHTEXT_ALL</name>
+        <initializer><ref refid="classwx_rich_text_range" kindref="compound">wxRichTextRange</ref>(-2, -2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1677" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1677" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a67ac27817a8f52e49d1511f1936fef1c" prot="public" static="no">
+        <name>wxRICHTEXT_NONE</name>
+        <initializer><ref refid="classwx_rich_text_range" kindref="compound">wxRichTextRange</ref>(-1, -1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1678" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a499f13f3f5150da8a96cea675bf1d0e1" prot="public" static="no">
+        <name>wxRICHTEXT_NO_SELECTION</name>
+        <initializer><ref refid="classwx_rich_text_range" kindref="compound">wxRichTextRange</ref>(-2, -2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1680" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="1680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a5f74e84d2361ecc9d24ac1578898bf05" prot="public" static="no">
+        <name>wxRICHTEXT_HANDLER_INCLUDE_STYLESHEET</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handler flags </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5059" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5059" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a7ccc40447ceaeee96909ac6305d1e8c8" prot="public" static="no">
+        <name>wxRICHTEXT_HANDLER_SAVE_IMAGES_TO_MEMORY</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5062" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5062" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1aa73056574618b0869db9f8a7c2b60d8e" prot="public" static="no">
+        <name>wxRICHTEXT_HANDLER_SAVE_IMAGES_TO_FILES</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5065" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5065" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1af81bb245e0c80d8c249b03d06e72304e" prot="public" static="no">
+        <name>wxRICHTEXT_HANDLER_SAVE_IMAGES_TO_BASE64</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5068" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5068" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a8ffbfec9a73a2d683a513873104f185d" prot="public" static="no">
+        <name>wxRICHTEXT_HANDLER_NO_HEADER_FOOTER</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5072" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5072" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextbuffer_8h_1a5e90fdbba5eff476effe3ae748fb54b6" prot="public" static="no">
+        <name>wxRICHTEXT_HANDLER_CONVERT_FACENAMES</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5076" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5076" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="richtextbuffer_8h_1a8c9beb7a76d787e04afe3fb4026bc8d6" prot="public" static="no">
+        <name>wxRichTextFileType</name>
+        <enumvalue id="richtextbuffer_8h_1a8c9beb7a76d787e04afe3fb4026bc8d6a06ff45324d4d99905eb82ca76cf3d6ed" prot="public">
+          <name>wxRICHTEXT_TYPE_ANY</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a8c9beb7a76d787e04afe3fb4026bc8d6adef76b16bc1298c1f5e5fa375d0156ef" prot="public">
+          <name>wxRICHTEXT_TYPE_TEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a8c9beb7a76d787e04afe3fb4026bc8d6a23cebd07428b28a2f734d3199eef52d0" prot="public">
+          <name>wxRICHTEXT_TYPE_XML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a8c9beb7a76d787e04afe3fb4026bc8d6afd59119d9f74df145178dc60f7e80393" prot="public">
+          <name>wxRICHTEXT_TYPE_HTML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a8c9beb7a76d787e04afe3fb4026bc8d6a42231e83df5137ac7a10776361070136" prot="public">
+          <name>wxRICHTEXT_TYPE_RTF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a8c9beb7a76d787e04afe3fb4026bc8d6a9f713ad162ca077040e6cba6d72780a0" prot="public">
+          <name>wxRICHTEXT_TYPE_PDF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>File types in wxRichText context. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="21" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1ad855d173e40a6cffd90b8fe2b78c1490" prot="public" static="no">
+        <name>wxRichTextHitTestFlags</name>
+        <enumvalue id="richtextbuffer_8h_1ad855d173e40a6cffd90b8fe2b78c1490af5dca80614a4e43649d6b87ad61be511" prot="public">
+          <name>wxRICHTEXT_HITTEST_NONE</name>
+          <initializer>    0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1ad855d173e40a6cffd90b8fe2b78c1490ad19d620d9f8fe8c8d54ffcedde3393b4" prot="public">
+          <name>wxRICHTEXT_HITTEST_BEFORE</name>
+          <initializer>  0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1ad855d173e40a6cffd90b8fe2b78c1490a5c39c350603fe6f72900a73064923f73" prot="public">
+          <name>wxRICHTEXT_HITTEST_AFTER</name>
+          <initializer>   0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1ad855d173e40a6cffd90b8fe2b78c1490adee716ceb7a60cc1dae26eb642fb9535" prot="public">
+          <name>wxRICHTEXT_HITTEST_ON</name>
+          <initializer>      0x08</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1ad855d173e40a6cffd90b8fe2b78c1490a36f1cd434d02f14404b51742c062c354" prot="public">
+          <name>wxRICHTEXT_HITTEST_OUTSIDE</name>
+          <initializer> 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1ad855d173e40a6cffd90b8fe2b78c1490a563025576fae7ef92f0682f2e67ed3d5" prot="public">
+          <name>wxRICHTEXT_HITTEST_NO_NESTED_OBJECTS</name>
+          <initializer> 0x20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1ad855d173e40a6cffd90b8fe2b78c1490a36b6496500cfa9fb6d711b7785d46d47" prot="public">
+          <name>wxRICHTEXT_HITTEST_NO_FLOATING_OBJECTS</name>
+          <initializer> 0x40</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags returned from hit-testing, or passed to hit-test function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="60" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="59" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1adaea42d0595ccb41682477db8f57d927" prot="public" static="no">
+        <name>wxTextBoxAttrFlags</name>
+        <enumvalue id="richtextbuffer_8h_1adaea42d0595ccb41682477db8f57d927a640363576cf369cec83e50d00bbd8fe5" prot="public">
+          <name>wxTEXT_BOX_ATTR_FLOAT</name>
+          <initializer> 0x00000001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adaea42d0595ccb41682477db8f57d927ac3ffa59b71eeb84977132b4550bdb530" prot="public">
+          <name>wxTEXT_BOX_ATTR_CLEAR</name>
+          <initializer> 0x00000002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adaea42d0595ccb41682477db8f57d927adc046b136bcf0f78a8c6584889db55de" prot="public">
+          <name>wxTEXT_BOX_ATTR_COLLAPSE_BORDERS</name>
+          <initializer> 0x00000004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adaea42d0595ccb41682477db8f57d927adfc29bfdc3d8a9add9d35236ee269fbf" prot="public">
+          <name>wxTEXT_BOX_ATTR_VERTICAL_ALIGNMENT</name>
+          <initializer> 0x00000008</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Miscellaneous text box flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="157" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="156" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1a8b6c8f4151b2e627d314ee944fecdb11" prot="public" static="no">
+        <name>wxTextAttrValueFlags</name>
+        <enumvalue id="richtextbuffer_8h_1a8b6c8f4151b2e627d314ee944fecdb11a59edae93937c0f1bf49ff019d27dfe89" prot="public">
+          <name>wxTEXT_ATTR_VALUE_VALID</name>
+          <initializer> 0x1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a8b6c8f4151b2e627d314ee944fecdb11a31ec58db3f8bc3d7b2a893cfbafec853" prot="public">
+          <name>wxTEXT_ATTR_VALUE_VALID_MASK</name>
+          <initializer> 0x1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Whether a value is present, used in dimension flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="168" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="167" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1afc8272df6ffacd221e762884be11bd19" prot="public" static="no">
+        <name>wxTextAttrUnits</name>
+        <enumvalue id="richtextbuffer_8h_1afc8272df6ffacd221e762884be11bd19a7dc52fd2478e6160b8338ab327bb8767" prot="public">
+          <name>wxTEXT_ATTR_UNITS_TENTHS_MM</name>
+          <initializer> 0x0001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1afc8272df6ffacd221e762884be11bd19ae89b23c8af0be18049cdf678ac144aa6" prot="public">
+          <name>wxTEXT_ATTR_UNITS_PIXELS</name>
+          <initializer> 0x0002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1afc8272df6ffacd221e762884be11bd19a1c86d718aa04dc478eeca2324a6dd908" prot="public">
+          <name>wxTEXT_ATTR_UNITS_PERCENTAGE</name>
+          <initializer> 0x0004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1afc8272df6ffacd221e762884be11bd19aa928bdabe690bddf80ed431847ae92df" prot="public">
+          <name>wxTEXT_ATTR_UNITS_POINTS</name>
+          <initializer> 0x0008</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1afc8272df6ffacd221e762884be11bd19ab055baac753de4f74164219a0f1374c3" prot="public">
+          <name>wxTEXT_ATTR_UNITS_MASK</name>
+          <initializer> 0x000F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Units, included in the dimension value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="177" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="176" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1a43150851c928dea903e8856cd646c3e9" prot="public" static="no">
+        <name>wxTextBoxAttrPosition</name>
+        <enumvalue id="richtextbuffer_8h_1a43150851c928dea903e8856cd646c3e9a23cb1886f8ec6a36f7bc165c3af294b3" prot="public">
+          <name>wxTEXT_BOX_ATTR_POSITION_STATIC</name>
+          <initializer> 0x0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a43150851c928dea903e8856cd646c3e9ab10f5ae352a87b23723fa8c5b3ffb7c1" prot="public">
+          <name>wxTEXT_BOX_ATTR_POSITION_RELATIVE</name>
+          <initializer> 0x0010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a43150851c928dea903e8856cd646c3e9aaab8337333e5206fd744285fd5bc9c87" prot="public">
+          <name>wxTEXT_BOX_ATTR_POSITION_ABSOLUTE</name>
+          <initializer> 0x0020</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a43150851c928dea903e8856cd646c3e9a10ef8fee25b9b1bb210426aba3f1c6e0" prot="public">
+          <name>wxTEXT_BOX_ATTR_POSITION_MASK</name>
+          <initializer> 0x00F0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Position alternatives, included in the dimension flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="190" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="189" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265" prot="public" static="no">
+        <name>wxTextAttrBorderStyle</name>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265a2f4b01d51449d885b6c8db734bf1156c" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265af9d09918a402e164d20295c834bcbbcb" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_SOLID</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265aee67196c296bf75c127426e4bbd73fe4" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_DOTTED</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265acbb0d691076698442d13705dc4892647" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_DASHED</name>
+          <initializer> 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265a91893c671cc4133af1680bc260592651" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_DOUBLE</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265a6cff74435c628ef38144ffcc4fb89e3b" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_GROOVE</name>
+          <initializer> 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265aa2eb71e93204cba8c2a9db5e4d9df985" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_RIDGE</name>
+          <initializer> 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265a5488df3a907b15f81ebba1dcd4082c45" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_INSET</name>
+          <initializer> 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adab4f4f5653fab50791a0b67ccfaf265ab20e36b424c5ff0320b8f9fca319611f" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_OUTSET</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Border styles, used with <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="550" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="549" bodyend="560"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1a80c55e720e852cd7d830f05742d81ba8" prot="public" static="no">
+        <name>wxTextAttrBorderFlags</name>
+        <enumvalue id="richtextbuffer_8h_1a80c55e720e852cd7d830f05742d81ba8ad122c8d7a7a80c877b6d2490fd6abc80" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_STYLE</name>
+          <initializer> 0x0001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a80c55e720e852cd7d830f05742d81ba8a400a50a1f3ed8e77f705829b85682911" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_COLOUR</name>
+          <initializer> 0x0002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Border style presence flags, used with <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="566" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="565" bodyend="569"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1a10c075b2b144bad7893295f789ecce7a" prot="public" static="no">
+        <name>wxTextAttrBorderWidth</name>
+        <enumvalue id="richtextbuffer_8h_1a10c075b2b144bad7893295f789ecce7aa2046e949261e1ae05a77ecc5f1066a6a" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_THIN</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a10c075b2b144bad7893295f789ecce7aa2e0099e5d2742087c4d686a33629e758" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_MEDIUM</name>
+          <initializer> -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a10c075b2b144bad7893295f789ecce7aa980c518151ce22b2a0eda4780c740078" prot="public">
+          <name>wxTEXT_BOX_ATTR_BORDER_THICK</name>
+          <initializer> -3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Border width symbols for qualitative widths, used with <ref refid="classwx_text_attr_border" kindref="compound">wxTextAttrBorder</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="575" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="574" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1a116ee323e2700a60bc2b603001958526" prot="public" static="no">
+        <name>wxTextBoxAttrFloatStyle</name>
+        <enumvalue id="richtextbuffer_8h_1a116ee323e2700a60bc2b603001958526aad6e56f45b54edb94db0f675ac76abae" prot="public">
+          <name>wxTEXT_BOX_ATTR_FLOAT_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a116ee323e2700a60bc2b603001958526adabdcb6d3a041fcc00da1a55f77ce463" prot="public">
+          <name>wxTEXT_BOX_ATTR_FLOAT_LEFT</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1a116ee323e2700a60bc2b603001958526ad9586712c1c1a14b356613e3040c388f" prot="public">
+          <name>wxTEXT_BOX_ATTR_FLOAT_RIGHT</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Float styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="585" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="584" bodyend="589"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1afeeea46d367fb5787136dbae234f6b6f" prot="public" static="no">
+        <name>wxTextBoxAttrClearStyle</name>
+        <enumvalue id="richtextbuffer_8h_1afeeea46d367fb5787136dbae234f6b6fa5903bfc00af5dd67dd54f54df58154bc" prot="public">
+          <name>wxTEXT_BOX_ATTR_CLEAR_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1afeeea46d367fb5787136dbae234f6b6faefa3a388f25e43fe34b872cea715cd43" prot="public">
+          <name>wxTEXT_BOX_ATTR_CLEAR_LEFT</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1afeeea46d367fb5787136dbae234f6b6fa6f2197efc63707231d7988724ce0e748" prot="public">
+          <name>wxTEXT_BOX_ATTR_CLEAR_RIGHT</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1afeeea46d367fb5787136dbae234f6b6fa5080c169455690b0fd1a8680077676f2" prot="public">
+          <name>wxTEXT_BOX_ATTR_CLEAR_BOTH</name>
+          <initializer> 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Clear styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="595" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="594" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1aaf8dcfe6b26c819ebdf51753d575a014" prot="public" static="no">
+        <name>wxTextBoxAttrCollapseMode</name>
+        <enumvalue id="richtextbuffer_8h_1aaf8dcfe6b26c819ebdf51753d575a014a090cd0d20f7f56b9b51b7169a644fc89" prot="public">
+          <name>wxTEXT_BOX_ATTR_COLLAPSE_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1aaf8dcfe6b26c819ebdf51753d575a014a006061b993b88a022fc758de1e016682" prot="public">
+          <name>wxTEXT_BOX_ATTR_COLLAPSE_FULL</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Collapse mode styles. </para>        </briefdescription>
+        <detaileddescription>
+<para>TODO: can they be switched on per side? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="606" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="605" bodyend="609"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1adde8b611f7482b2915ae143b9658a5f1" prot="public" static="no">
+        <name>wxTextBoxAttrVerticalAlignment</name>
+        <enumvalue id="richtextbuffer_8h_1adde8b611f7482b2915ae143b9658a5f1ac7ad8549e345609fa86d31ea8cde62df" prot="public">
+          <name>wxTEXT_BOX_ATTR_VERTICAL_ALIGNMENT_NONE</name>
+          <initializer>       0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adde8b611f7482b2915ae143b9658a5f1a93b3f71b9ca081037f22b4a00cc3fbc6" prot="public">
+          <name>wxTEXT_BOX_ATTR_VERTICAL_ALIGNMENT_TOP</name>
+          <initializer>       1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adde8b611f7482b2915ae143b9658a5f1ab20722cc16568ec48fad7848ee6c6468" prot="public">
+          <name>wxTEXT_BOX_ATTR_VERTICAL_ALIGNMENT_CENTRE</name>
+          <initializer>     2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1adde8b611f7482b2915ae143b9658a5f1a53c349b7369c3783f6d022a7c30ec3ad" prot="public">
+          <name>wxTEXT_BOX_ATTR_VERTICAL_ALIGNMENT_BOTTOM</name>
+          <initializer>    3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Vertical alignment values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="615" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="614" bodyend="620"/>
+      </memberdef>
+      <memberdef kind="enum" id="richtextbuffer_8h_1abfe80b5388eddd51c35f2c318cf33a80" prot="public" static="no">
+        <name>wxRichTextCommandId</name>
+        <enumvalue id="richtextbuffer_8h_1abfe80b5388eddd51c35f2c318cf33a80a2c6dbc66a16b3c79200e8e699af94f83" prot="public">
+          <name>wxRICHTEXT_INSERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1abfe80b5388eddd51c35f2c318cf33a80abb062d7ebb564683bca96b2cf29bbd54" prot="public">
+          <name>wxRICHTEXT_DELETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1abfe80b5388eddd51c35f2c318cf33a80a2a6501282ea0c8fa06bc407d07d5d57d" prot="public">
+          <name>wxRICHTEXT_CHANGE_ATTRIBUTES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1abfe80b5388eddd51c35f2c318cf33a80ac724161683cb2c674e27a9f4cf4e908e" prot="public">
+          <name>wxRICHTEXT_CHANGE_STYLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="richtextbuffer_8h_1abfe80b5388eddd51c35f2c318cf33a80aedde44f45bbc3991cc98168d52b40a37" prot="public">
+          <name>wxRICHTEXT_CHANGE_OBJECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The command identifiers for Do/Undo. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="4737" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="4736" bodyend="4743"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="richtextbuffer_8h_1a2596a0c8f9ba78d3019535e8796ef15d" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short wxTextAttrDimensionFlags</definition>
+        <argsstring></argsstring>
+        <name>wxTextAttrDimensionFlags</name>
+        <briefdescription>
+<para>The type for <ref refid="classwx_text_attr_dimension" kindref="compound">wxTextAttrDimension</ref> flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="richtextbuffer_8h_1aabb7d82eb7dca33962e902c7ad23c634" prot="public" static="no" mutable="no">
+        <type>WXDLLIMPEXP_RICHTEXT const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+        <definition>WXDLLIMPEXP_RICHTEXT const wxChar wxRichTextLineBreakChar</definition>
+        <argsstring></argsstring>
+        <name>wxRichTextLineBreakChar</name>
+        <briefdescription>
+<para>The line break character that can be embedded in content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="16"/>
+      </memberdef>
+      <memberdef kind="variable" id="richtextbuffer_8h_1a2a740eff61926e1c2966572e4c7a1a55" prot="public" static="no" mutable="no">
+        <type>class WXDLLIMPEXP_FWD_RICHTEXT</type>
+        <definition>class WXDLLIMPEXP_FWD_RICHTEXT wxRichTextCommand</definition>
+        <argsstring></argsstring>
+        <name>wxRichTextCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3817" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3817" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="richtextbuffer_8h_1a9c6cb8ecf9c0bf75e70d1eb2df213231" prot="public" static="no" mutable="no">
+        <type>class WXDLLIMPEXP_FWD_RICHTEXT</type>
+        <definition>class WXDLLIMPEXP_FWD_RICHTEXT wxRichTextAction</definition>
+        <argsstring></argsstring>
+        <name>wxRichTextAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3818" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="3818" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="richtextbuffer_8h_1a2eb4c5adc32c1f334c0eeef8cf524c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WX_DECLARE_USER_EXPORTED_OBJARRAY</definition>
+        <argsstring>(wxVariant, wxRichTextVariantArray, WXDLLIMPEXP_RICHTEXT)</argsstring>
+        <name>WX_DECLARE_USER_EXPORTED_OBJARRAY</name>
+        <param>
+          <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
+        </param>
+        <param>
+          <type>wxRichTextVariantArray</type>
+        </param>
+        <param>
+          <type>WXDLLIMPEXP_RICHTEXT</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1325"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1a5f6b55a52de246a3a9cf992ea02d5442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WX_DECLARE_USER_EXPORTED_OBJARRAY</definition>
+        <argsstring>(wxRichTextRange, wxRichTextRangeArray, WXDLLIMPEXP_RICHTEXT)</argsstring>
+        <name>WX_DECLARE_USER_EXPORTED_OBJARRAY</name>
+        <param>
+          <type><ref refid="classwx_rich_text_range" kindref="compound">wxRichTextRange</ref></type>
+        </param>
+        <param>
+          <type>wxRichTextRangeArray</type>
+        </param>
+        <param>
+          <type>WXDLLIMPEXP_RICHTEXT</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="1675"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1a47dbcf515fa35ec7b6bdb75f3388a3a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WX_DECLARE_LIST_WITH_DECL</definition>
+        <argsstring>(wxRichTextObject, wxRichTextObjectList, class WXDLLIMPEXP_RICHTEXT)</argsstring>
+        <name>WX_DECLARE_LIST_WITH_DECL</name>
+        <param>
+          <type><ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref></type>
+        </param>
+        <param>
+          <type>wxRichTextObjectList</type>
+        </param>
+        <param>
+          <type>class WXDLLIMPEXP_RICHTEXT</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="2391"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1a4cbc6b777238fe262085d4cce2ee8d6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WX_DECLARE_LIST_WITH_DECL</definition>
+        <argsstring>(wxRichTextLine, wxRichTextLineList, class WXDLLIMPEXP_RICHTEXT)</argsstring>
+        <name>WX_DECLARE_LIST_WITH_DECL</name>
+        <param>
+          <type><ref refid="classwx_rich_text_line" kindref="compound">wxRichTextLine</ref></type>
+        </param>
+        <param>
+          <type>wxRichTextLineList</type>
+        </param>
+        <param>
+          <type>class WXDLLIMPEXP_RICHTEXT</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="3256"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1ab497ced92a2630597297100314b9ed22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WX_DEFINE_ARRAY_PTR</definition>
+        <argsstring>(wxRichTextObject *, wxRichTextObjectPtrArray)</argsstring>
+        <name>WX_DEFINE_ARRAY_PTR</name>
+        <param>
+          <type><ref refid="classwx_rich_text_object" kindref="compound">wxRichTextObject</ref> *</type>
+        </param>
+        <param>
+          <type>wxRichTextObjectPtrArray</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="4557"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1ae267bced101176876e1b4792e974e091" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WX_DECLARE_OBJARRAY</definition>
+        <argsstring>(wxRichTextObjectPtrArray, wxRichTextObjectPtrArrayArray)</argsstring>
+        <name>WX_DECLARE_OBJARRAY</name>
+        <param>
+          <type>wxRichTextObjectPtrArray</type>
+        </param>
+        <param>
+          <type>wxRichTextObjectPtrArrayArray</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="4558"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1a958c20f0a80cea0223a844ad68cb8383" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextHasStyle</definition>
+        <argsstring>(int flags, int style)</argsstring>
+        <name>wxRichTextHasStyle</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Utilities </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5403" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" bodystart="5402" bodyend="5405"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1aaf3f266d4cf61186b59595e813e6c070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT bool</type>
+        <definition>WXDLLIMPEXP_RICHTEXT bool wxTextAttrEq</definition>
+        <argsstring>(const wxRichTextAttr &amp;attr1, const wxRichTextAttr &amp;attr2)</argsstring>
+        <name>wxTextAttrEq</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>attr1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>attr2</declname>
+        </param>
+        <briefdescription>
+<para>Compare two attribute objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5408"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1a0053b9f5e40e30ca40102b09bbc9a0e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT bool</type>
+        <definition>WXDLLIMPEXP_RICHTEXT bool wxTextAttrEqPartial</definition>
+        <argsstring>(const wxRichTextAttr &amp;attr1, const wxRichTextAttr &amp;attr2)</argsstring>
+        <name>wxTextAttrEqPartial</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>attr1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>attr2</declname>
+        </param>
+        <briefdescription>
+<para>Compare two attribute objects, but take into account the flags specifying attributes of interest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5413"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1ad2ad9b6a6817b185e11fe799f7cc4ab9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT bool</type>
+        <definition>WXDLLIMPEXP_RICHTEXT bool wxRichTextApplyStyle</definition>
+        <argsstring>(wxRichTextAttr &amp;destStyle, const wxRichTextAttr &amp;style, wxRichTextAttr *compareWith=NULL)</argsstring>
+        <name>wxRichTextApplyStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>destStyle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> *</type>
+          <declname>compareWith</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Apply one style to another. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5416"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1abbd8add746997c2b44438842cf5a59f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT bool</type>
+        <definition>WXDLLIMPEXP_RICHTEXT bool wxRichTextRemoveStyle</definition>
+        <argsstring>(wxRichTextAttr &amp;destStyle, const wxRichTextAttr &amp;style)</argsstring>
+        <name>wxRichTextRemoveStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>destStyle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5419"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1ade05e56d1f858520572bc2333a3ebd53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT bool</type>
+        <definition>WXDLLIMPEXP_RICHTEXT bool wxRichTextCombineBitlists</definition>
+        <argsstring>(int &amp;valueA, int valueB, int &amp;flagsA, int flagsB)</argsstring>
+        <name>wxRichTextCombineBitlists</name>
+        <param>
+          <type>int &amp;</type>
+          <declname>valueA</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>valueB</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>flagsA</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flagsB</declname>
+        </param>
+        <briefdescription>
+<para>Combine two bitlists. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5422"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1aee844a0db4ec850efd065f8cd6447353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT bool</type>
+        <definition>WXDLLIMPEXP_RICHTEXT bool wxRichTextBitlistsEqPartial</definition>
+        <argsstring>(int valueA, int valueB, int flags)</argsstring>
+        <name>wxRichTextBitlistsEqPartial</name>
+        <param>
+          <type>int</type>
+          <declname>valueA</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>valueB</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Compare two bitlists. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5425"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1aa8013cff6c25cd2d556265ba0e150ac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT bool</type>
+        <definition>WXDLLIMPEXP_RICHTEXT bool wxRichTextSplitParaCharStyles</definition>
+        <argsstring>(const wxRichTextAttr &amp;style, wxRichTextAttr &amp;parStyle, wxRichTextAttr &amp;charStyle)</argsstring>
+        <name>wxRichTextSplitParaCharStyles</name>
+        <param>
+          <type>const <ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>parStyle</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rich_text_attr" kindref="compound">wxRichTextAttr</ref> &amp;</type>
+          <declname>charStyle</declname>
+        </param>
+        <briefdescription>
+<para>Split into paragraph and character styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5428"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1ab5da564533fc9a2f86cdde03d4e1e4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT bool</type>
+        <definition>WXDLLIMPEXP_RICHTEXT bool wxRichTextTabsEq</definition>
+        <argsstring>(const wxArrayInt &amp;tabs1, const wxArrayInt &amp;tabs2)</argsstring>
+        <name>wxRichTextTabsEq</name>
+        <param>
+          <type>const <ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
+          <declname>tabs1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
+          <declname>tabs2</declname>
+        </param>
+        <briefdescription>
+<para>Compare tabs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5431"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1a2cda712787b94105800f4af666a782e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT <ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>WXDLLIMPEXP_RICHTEXT wxString wxRichTextDecimalToRoman</definition>
+        <argsstring>(long n)</argsstring>
+        <name>wxRichTextDecimalToRoman</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Convert a decimal to Roman numerals. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5434"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1a3030f9fe4e56b2d6d8697c2a4d4da067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT void</type>
+        <definition>WXDLLIMPEXP_RICHTEXT void wxTextAttrCollectCommonAttributes</definition>
+        <argsstring>(wxTextAttr &amp;currentStyle, const wxTextAttr &amp;attr, wxTextAttr &amp;clashingAttr, wxTextAttr &amp;absentAttr)</argsstring>
+        <name>wxTextAttrCollectCommonAttributes</name>
+        <param>
+          <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> &amp;</type>
+          <declname>currentStyle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> &amp;</type>
+          <declname>clashingAttr</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> &amp;</type>
+          <declname>absentAttr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5438"/>
+      </memberdef>
+      <memberdef kind="function" id="richtextbuffer_8h_1a01dca2385de80e2d2b0b80dd454929d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WXDLLIMPEXP_RICHTEXT void</type>
+        <definition>WXDLLIMPEXP_RICHTEXT void wxRichTextModuleInit</definition>
+        <argsstring>()</argsstring>
+        <name>wxRichTextModuleInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h" line="5440"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextbuffer.h"/>
+  </compounddef>
+</doxygen>

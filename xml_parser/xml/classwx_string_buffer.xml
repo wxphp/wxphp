@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_string_buffer" kind="class" prot="public">
+    <compoundname>wxStringBuffer</compoundname>
+    <includes local="no">wx/string.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_string_buffer_1abcb53ccbb849af669bb51402ea57d7c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxStringBuffer::wxStringBuffer</definition>
+        <argsstring>(const wxString &amp;str, size_t len)</argsstring>
+        <name>wxStringBuffer</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a writable string buffer object associated with the given string and containing enough space for at least <emphasis>len</emphasis> characters. </para>        </briefdescription>
+        <detaileddescription>
+<para>Basically, this is equivalent to calling <ref refid="classwx_string_1a0c87e85cee09e65d314457379e5aba19" kindref="member">wxString::GetWriteBuf()</ref> and saving the result. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1770"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_buffer_1ae7801d52c22c50d100b2a2a5fdb6dccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxStringBuffer::~wxStringBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~wxStringBuffer</name>
+        <briefdescription>
+<para>Restores the string passed to the constructor to the usable state by calling <ref refid="classwx_string_1a3783b441b540bac783a8e5a2cceaae7d" kindref="member">wxString::UngetWriteBuf()</ref> on it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1776"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_buffer_1a0483dde557c8c40f519ec52536d7fad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__string_1gaf558f1d34fbf3cf5e3258e42a40875fd" kindref="member">wxStringCharType</ref> *</type>
+        <definition>wxStringCharType* wxStringBuffer::operator wxStringCharType *</definition>
+        <argsstring>()</argsstring>
+        <name>operator wxStringCharType *</name>
+        <briefdescription>
+<para>Returns the writable pointer to a buffer of the size at least equal to the length specified in the constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1782"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This tiny class allows you to conveniently access the <ref refid="classwx_string" kindref="compound">wxString</ref> internal buffer as a writable pointer without any risk of forgetting to restore the string to the usable state later. </para>    </briefdescription>
+    <detaileddescription>
+<para>For example, assuming you have a low-level OS function called <computeroutput>&quot;GetMeaningOfLifeAsString(char *)&quot;</computeroutput> returning the value in the provided buffer (which must be writable, of course) you might call it like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>theAnswer;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetMeaningOfLifeAsString(<ref refid="classwx_string_buffer_1abcb53ccbb849af669bb51402ea57d7c8" kindref="member" tooltip="Constructs a writable string buffer object associated with the given string and containing...">wxStringBuffer</ref>(theAnswer,<sp/>1024));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>theAnswer<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;42&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Something<sp/>is<sp/>very<sp/>wrong!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>Note that the exact usage of this depends on whether or not <computeroutput>wxUSE_STL</computeroutput> is enabled. If <computeroutput>wxUSE_STL</computeroutput> is enabled, <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref> creates a separate empty character buffer, and if <computeroutput>wxUSE_STL</computeroutput> is disabled, it uses GetWriteBuf() from <ref refid="classwx_string" kindref="compound">wxString</ref>, keeping the same buffer <ref refid="classwx_string" kindref="compound">wxString</ref> uses intact. In other words, relying on <ref refid="classwx_string_buffer" kindref="compound">wxStringBuffer</ref> containing the old <ref refid="classwx_string" kindref="compound">wxString</ref> data is not a good idea if you want to build your program both with and without <computeroutput>wxUSE_STL</computeroutput>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1762" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="1761" bodyend="1783"/>
+    <listofallmembers>
+      <member refid="classwx_string_buffer_1a0483dde557c8c40f519ec52536d7fad8" prot="public" virt="non-virtual"><scope>wxStringBuffer</scope><name>operator wxStringCharType *</name></member>
+      <member refid="classwx_string_buffer_1abcb53ccbb849af669bb51402ea57d7c8" prot="public" virt="non-virtual"><scope>wxStringBuffer</scope><name>wxStringBuffer</name></member>
+      <member refid="classwx_string_buffer_1ae7801d52c22c50d100b2a2a5fdb6dccc" prot="public" virt="non-virtual"><scope>wxStringBuffer</scope><name>~wxStringBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

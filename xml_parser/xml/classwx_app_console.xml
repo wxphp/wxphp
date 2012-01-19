@@ -1,0 +1,975 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_app_console" kind="class" prot="public">
+    <compoundname>wxAppConsole</compoundname>
+    <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
+    <basecompoundref refid="classwx_event_filter" prot="public" virt="non-virtual">wxEventFilter</basecompoundref>
+    <derivedcompoundref refid="classwx_app" prot="public" virt="non-virtual">wxApp</derivedcompoundref>
+    <includes local="no">wx/app.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Event-handling</header>
+      <description><para><anchor id="_1amgrpbf9fecadf84bfa30f3a9dcc31697e56c"/>Note that you should look at wxEvtLoopBase for more event-processing documentation. </para></description>
+      <memberdef kind="function" id="classwx_app_console_1a14523f3e9ab468c19c697c65484b36db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxAppConsole::MainLoop</definition>
+        <argsstring>()</argsstring>
+        <name>MainLoop</name>
+        <briefdescription>
+<para>Called by wxWidgets on creation of the application. </para>        </briefdescription>
+        <detaileddescription>
+<para>Override this if you wish to provide your own (environment-dependent) main loop.</para><para><simplesect kind="return"><para>0 under X, and the wParam of the WM_QUIT message under Windows. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1ad0f1e724efa8ae1e94cde655c74c85dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::ExitMainLoop</definition>
+        <argsstring>()</argsstring>
+        <name>ExitMainLoop</name>
+        <briefdescription>
+<para>Call this to explicitly exit the main message (event) loop. </para>        </briefdescription>
+        <detaileddescription>
+<para>You should normally exit the main loop (and the application) by deleting the top window.</para><para>This function simply calls wxEvtLoopBase::Exit() on the active loop. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1ada7ab606e014a10d46e4b3c6f602e20c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxAppConsole::FilterEvent</definition>
+        <argsstring>(wxEvent &amp;event)</argsstring>
+        <name>FilterEvent</name>
+        <reimplements refid="classwx_event_filter_1ae9aee87e6c6c7ff3df84e46a2e3b2c6a">FilterEvent</reimplements>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Overridden <ref refid="classwx_event_filter" kindref="compound">wxEventFilter</ref> method. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called before processing any event and allows the application to preempt the processing of some events, see <ref refid="classwx_event_filter" kindref="compound">wxEventFilter</ref> documentation for more information.</para><para><ref refid="classwx_app" kindref="compound">wxApp</ref> implementation of this method always return -1 indicating that the event should be processed normally. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a131ba350b1be3ef88a764170c59d8e40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> *</type>
+        <definition>wxEventLoopBase* wxAppConsole::GetMainLoop</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMainLoop</name>
+        <briefdescription>
+<para>Returns the main event loop instance, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>the event loop which is started by <ref refid="classwx_app_console_1ac05a28c7cdb529f2cdfe77b3431c385c" kindref="member">OnRun()</ref> and which dispatches all events sent from the native toolkit to the application (except when new event loops are temporarily set-up). The returned value maybe NULL. Put initialization code which needs a non-NULL main event loop into <ref refid="classwx_app_console_1aa116701a3bd7700fe6979117e53ae999" kindref="member">OnEventLoopEnter()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a78a6f9e56b77addf8251f0f5c10004fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::HandleEvent</definition>
+        <argsstring>(wxEvtHandler *handler, wxEventFunction func, wxEvent &amp;event) const </argsstring>
+        <name>HandleEvent</name>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>wxEventFunction</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>This function simply invokes the given method <emphasis>func</emphasis> of the specified event handler <emphasis>handler</emphasis> with the <emphasis>event</emphasis> as parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para>It exists solely to allow to catch the C++ exceptions which could be thrown by all event handlers in the application in one place: if you want to do this, override this function in your wxApp-derived class and add try/catch clause(s) to it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1af393b68a318373e43ee731bec38bdc29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxAppConsole::UsesEventLoop</definition>
+        <argsstring>() const </argsstring>
+        <name>UsesEventLoop</name>
+        <briefdescription>
+<para>Returns true if the application is using an event loop. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function always returns true for the GUI applications which must use an event loop but by default only returns true for the console programs if an event loop is already running as it can&apos;t know whether one will be created in the future.</para><para>Thus, it only makes sense to override it in console applications which do use an event loop, to return true instead of checking if there is a currently active event loop. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Pending events</header>
+      <description><para><anchor id="_1amgrp59d45f70ffc02e64ee6ae514ae8d3ce1"/>Pending events are handled by <ref refid="classwx_app_console" kindref="compound">wxAppConsole</ref> rather than <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> to allow queuing of events even when there&apos;s no event loop (e.g.</para><para>in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxAppConsole::OnInit</ref>). </para></description>
+      <memberdef kind="function" id="classwx_app_console_1ab62db8e6265c1e841220c47b9778ab7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::ProcessPendingEvents</definition>
+        <argsstring>()</argsstring>
+        <name>ProcessPendingEvents</name>
+        <reimplements refid="classwx_evt_handler_1a6f643dbdcf8e914ae1c8b70dd305e6f2">ProcessPendingEvents</reimplements>
+        <briefdescription>
+<para>Process all pending events; it is necessary to call this function to process events posted with <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">wxEvtHandler::QueueEvent</ref> or <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This happens during each event loop iteration (see <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref>) in GUI mode but it may be also called directly.</para><para>Note that this function does not only process the pending events for the <ref refid="classwx_app" kindref="compound">wxApp</ref> object itself (which derives from <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>) but also the pending events for <emphasis>any</emphasis> event handler of this application.</para><para>This function will immediately return and do nothing if <ref refid="classwx_app_console_1af892210f0e50a1c7df9ae39280cbc972" kindref="member">SuspendProcessingOfPendingEvents()</ref> was called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1ad89ebde765071beef409f6e6e81d1b31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::DeletePendingEvents</definition>
+        <argsstring>()</argsstring>
+        <name>DeletePendingEvents</name>
+        <reimplements refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8">DeletePendingEvents</reimplements>
+        <briefdescription>
+<para>Deletes the pending events of all wxEvtHandlers of this application. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" kindref="member">wxEvtHandler::DeletePendingEvents()</ref> for warnings about deleting the pending events. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a253eccb58ac202af728ac4f137c88619" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAppConsole::HasPendingEvents</definition>
+        <argsstring>() const </argsstring>
+        <name>HasPendingEvents</name>
+        <briefdescription>
+<para>Returns true if there are pending events on the internal pending event list. </para>        </briefdescription>
+        <detaileddescription>
+<para>Whenever <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">wxEvtHandler::QueueEvent</ref> or <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent()</ref> are called (not only for <ref refid="classwx_app" kindref="compound">wxApp</ref> itself, but for any event handler of the application!), the internal wxApp&apos;s list of handlers with pending events is updated and this function will return true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1af892210f0e50a1c7df9ae39280cbc972" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::SuspendProcessingOfPendingEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SuspendProcessingOfPendingEvents</name>
+        <briefdescription>
+<para>Temporary suspends processing of the pending events. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_app_console_1a3ddc42127ce53b8cac04716315124765" kindref="member">ResumeProcessingOfPendingEvents()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a3ddc42127ce53b8cac04716315124765" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::ResumeProcessingOfPendingEvents</definition>
+        <argsstring>()</argsstring>
+        <name>ResumeProcessingOfPendingEvents</name>
+        <briefdescription>
+<para>Resume processing of the pending events previously stopped because of a call to <ref refid="classwx_app_console_1af892210f0e50a1c7df9ae39280cbc972" kindref="member">SuspendProcessingOfPendingEvents()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="187"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_app_console_1adc46f57d8691bc0098830522f9de9d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::ScheduleForDestruction</definition>
+        <argsstring>(wxObject *object)</argsstring>
+        <name>ScheduleForDestruction</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Delayed objects destruction. </para>        </briefdescription>
+        <detaileddescription>
+<para>In applications using events it may be unsafe for an event handler to delete the object which generated the event because more events may be still pending for the same object. In this case the handler may call <ref refid="classwx_app_console_1adc46f57d8691bc0098830522f9de9d90" kindref="member">ScheduleForDestruction()</ref> instead. Schedule the object for destruction in the near future.</para><para>Notice that if the application is not using an event loop, i.e. if <ref refid="classwx_app_console_1af393b68a318373e43ee731bec38bdc29" kindref="member">UsesEventLoop()</ref> returns false, this method will simply delete the object immediately.</para><para>Examples of using this function inside wxWidgets itself include deleting the top level windows when they are closed and sockets when they are disconnected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1aad8d60da021487976b4a620364100fa5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAppConsole::IsScheduledForDestruction</definition>
+        <argsstring>(wxObject *object) const </argsstring>
+        <name>IsScheduledForDestruction</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Check if the object had been scheduled for destruction with <ref refid="classwx_app_console_1adc46f57d8691bc0098830522f9de9d90" kindref="member">ScheduleForDestruction()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function may be useful as an optimization to avoid doing something with an object which will be soon destroyed in any case. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="221"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Callbacks for application-wide &quot;events&quot;</header>
+      <description><para><anchor id="_1amgrp4ba7046725b8d11e72d2c0c82208268b"/> </para></description>
+      <memberdef kind="function" id="classwx_app_console_1a5f91d78bbfe3c9ef28e8e3c8fdf29989" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::OnAssertFailure</definition>
+        <argsstring>(const wxChar *file, int line, const wxChar *func, const wxChar *cond, const wxChar *msg)</argsstring>
+        <name>OnAssertFailure</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>This function is called when an assert failure occurs, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>the condition specified in <ref refid="group__group__funcmacro__debug_1ga204cc264ee560b67e6c6467ba8ffee5f" kindref="member">wxASSERT()</ref> macro evaluated to false.</para><para>It is only called in debug mode (when <computeroutput>__WXDEBUG__</computeroutput> is defined) as asserts are not left in the release code at all. The base class version shows the default assert failure dialog box proposing to the user to stop the program, continue or ignore all subsequent asserts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the source file where the assert occurred </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the line number in this file where the assert occurred </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the function where the assert occurred, may be empty if the compiler doesn&apos;t support C99 __FUNCTION__ </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the condition of the failed assert in text form </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message specified as argument to wxASSERT_MSG or wxFAIL_MSG, will be NULL if just wxASSERT or wxFAIL was used </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a1c8bf26b12a280fd03911caac70e3144" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxAppConsole::OnCmdLineError</definition>
+        <argsstring>(wxCmdLineParser &amp;parser)</argsstring>
+        <name>OnCmdLineError</name>
+        <param>
+          <type><ref refid="classwx_cmd_line_parser" kindref="compound">wxCmdLineParser</ref> &amp;</type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+<para>Called when command line parsing fails (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>an incorrect command line option was specified by the user). The default behaviour is to show the program usage text and abort the program.</para><para>Return true to continue normal execution or false to return false from <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">OnInit()</ref> thus terminating the program.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a1708aeb916cbc3dc4a3333f1a6f33e04" kindref="member">OnInitCmdLine()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a1d9ee414483ec30c03acde70d2dc1e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxAppConsole::OnCmdLineHelp</definition>
+        <argsstring>(wxCmdLineParser &amp;parser)</argsstring>
+        <name>OnCmdLineHelp</name>
+        <param>
+          <type><ref refid="classwx_cmd_line_parser" kindref="compound">wxCmdLineParser</ref> &amp;</type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+<para>Called when the help option (<computeroutput>--help</computeroutput>) was specified on the command line. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default behaviour is to show the program usage text and abort the program.</para><para>Return true to continue normal execution or false to return false from <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">OnInit()</ref> thus terminating the program.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a1708aeb916cbc3dc4a3333f1a6f33e04" kindref="member">OnInitCmdLine()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="311"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1aa6a309dbbaec2f75720df2d5743cf0e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxAppConsole::OnCmdLineParsed</definition>
+        <argsstring>(wxCmdLineParser &amp;parser)</argsstring>
+        <name>OnCmdLineParsed</name>
+        <param>
+          <type><ref refid="classwx_cmd_line_parser" kindref="compound">wxCmdLineParser</ref> &amp;</type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+<para>Called after the command line had been successfully parsed. </para>        </briefdescription>
+        <detaileddescription>
+<para>You may override this method to test for the values of the various parameters which could be set from the command line.</para><para>Don&apos;t forget to call the base class version unless you want to suppress processing of the standard command line options. Return true to continue normal execution or false to return false from <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">OnInit()</ref> thus terminating the program.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a1708aeb916cbc3dc4a3333f1a6f33e04" kindref="member">OnInitCmdLine()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1aa116701a3bd7700fe6979117e53ae999" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::OnEventLoopEnter</definition>
+        <argsstring>(wxEventLoopBase *loop)</argsstring>
+        <name>OnEventLoopEnter</name>
+        <param>
+          <type><ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> *</type>
+          <declname>loop</declname>
+        </param>
+        <briefdescription>
+<para>Called by <ref refid="classwx_event_loop_base_1a23646c8c2bdf2def39c856ac8ec250d8" kindref="member">wxEventLoopBase::SetActive()</ref>: you can override this function and put here the code which needs an active event loop. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that this function is called whenever an event loop is activated; you may want to use <ref refid="classwx_event_loop_base_1a676545d2915e616e70683e056d703553" kindref="member">wxEventLoopBase::IsMain()</ref> to perform initialization specific for the app&apos;s main event loop.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a8f94f02a752bb416e99161710637d8f3" kindref="member">OnEventLoopExit()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a8f94f02a752bb416e99161710637d8f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::OnEventLoopExit</definition>
+        <argsstring>(wxEventLoopBase *loop)</argsstring>
+        <name>OnEventLoopExit</name>
+        <param>
+          <type><ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> *</type>
+          <declname>loop</declname>
+        </param>
+        <briefdescription>
+<para>Called by <ref refid="classwx_event_loop_base_1aeb893bc6dbbf80f19925a9e108965669" kindref="member">wxEventLoopBase::OnExit()</ref> for each event loop which is exited. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_app_console_1aa116701a3bd7700fe6979117e53ae999" kindref="member">OnEventLoopEnter()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1aca806b41cf74fd6166e4fb2e2708e9bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxAppConsole::OnExceptionInMainLoop</definition>
+        <argsstring>()</argsstring>
+        <name>OnExceptionInMainLoop</name>
+        <briefdescription>
+<para>This function is called if an unhandled exception occurs inside the main application event loop. </para>        </briefdescription>
+        <detaileddescription>
+<para>It can return true to ignore the exception and to continue running the loop or false to exit the loop and terminate the program. In the latter case it can also use C++ <computeroutput>throw</computeroutput> keyword to rethrow the current exception.</para><para>The default behaviour of this function is the latter in all ports except under Windows where a dialog is shown to the user which allows him to choose between the different options. You may override this function in your class to do something more appropriate.</para><para>Finally note that if the exception is rethrown from here, it can be caught in <ref refid="classwx_app_console_1a8c241ae1aa045da4470664813b7ec960" kindref="member">OnUnhandledException()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxAppConsole::OnExit</definition>
+        <argsstring>()</argsstring>
+        <name>OnExit</name>
+        <briefdescription>
+<para>Override this member function for any processing which needs to be done as the application is about to exit. </para>        </briefdescription>
+        <detaileddescription>
+<para>OnExit is called after destroying all application windows and controls, but before wxWidgets cleanup. Note that it is not called at all if <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">OnInit()</ref> failed.</para><para>The return value of this function is currently ignored, return the same value as returned by the base class method if you override it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a927931aafbb7aec4debdfc02ee6f6f9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::OnFatalException</definition>
+        <argsstring>()</argsstring>
+        <name>OnFatalException</name>
+        <briefdescription>
+<para>This function may be called if something fatal happens: an unhandled exception under Win32 or a fatal signal under Unix, for example. </para>        </briefdescription>
+        <detaileddescription>
+<para>However, this will not happen by default: you have to explicitly call <ref refid="group__group__funcmacro__appinitterm_1ga28a4fb827b93fa6bac18c9666c23ee10" kindref="member">wxHandleFatalExceptions()</ref> to enable this.</para><para>Generally speaking, this function should only show a message to the user and return. You may attempt to save unsaved data but this is not guaranteed to work and, in fact, probably won&apos;t.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__appinitterm_1ga28a4fb827b93fa6bac18c9666c23ee10" kindref="member">wxHandleFatalExceptions()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxAppConsole::OnInit</definition>
+        <argsstring>()</argsstring>
+        <name>OnInit</name>
+        <briefdescription>
+<para>This must be provided by the application, and will usually create the application&apos;s main window, optionally calling SetTopWindow(). </para>        </briefdescription>
+        <detaileddescription>
+<para>You may use <ref refid="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" kindref="member">OnExit()</ref> to clean up anything initialized here, provided that the function returns true.</para><para>Notice that if you want to use the command line processing provided by wxWidgets you have to call the base class version in the derived class <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">OnInit()</ref>.</para><para>Return true to continue processing, false to exit the application immediately. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="404"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a1708aeb916cbc3dc4a3333f1a6f33e04" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::OnInitCmdLine</definition>
+        <argsstring>(wxCmdLineParser &amp;parser)</argsstring>
+        <name>OnInitCmdLine</name>
+        <param>
+          <type><ref refid="classwx_cmd_line_parser" kindref="compound">wxCmdLineParser</ref> &amp;</type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+<para>Called from <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">OnInit()</ref> and may be used to initialize the parser with the command line options for this application. </para>        </briefdescription>
+        <detaileddescription>
+<para>The base class versions adds support for a few standard options only. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="411"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1ac05a28c7cdb529f2cdfe77b3431c385c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxAppConsole::OnRun</definition>
+        <argsstring>()</argsstring>
+        <name>OnRun</name>
+        <briefdescription>
+<para>This virtual function is where the execution of a program written in wxWidgets starts. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default implementation just enters the main loop and starts handling the events until it terminates, either because <ref refid="classwx_app_console_1ad0f1e724efa8ae1e94cde655c74c85dc" kindref="member">ExitMainLoop()</ref> has been explicitly called or because the last frame has been deleted and GetExitOnFrameDelete() flag is true (this is the default).</para><para>The return value of this function becomes the exit code of the program, so it should return 0 in case of successful termination. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="423"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a8c241ae1aa045da4470664813b7ec960" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxAppConsole::OnUnhandledException</definition>
+        <argsstring>()</argsstring>
+        <name>OnUnhandledException</name>
+        <briefdescription>
+<para>This function is called when an unhandled C++ exception occurs in user code called by wxWidgets. </para>        </briefdescription>
+        <detaileddescription>
+<para>Any unhandled exceptions thrown from (overridden versions of) <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">OnInit()</ref> and <ref refid="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" kindref="member">OnExit()</ref> methods as well as any exceptions thrown from inside the main loop and re-thrown by <ref refid="classwx_app_console_1a8c241ae1aa045da4470664813b7ec960" kindref="member">OnUnhandledException()</ref> will result in a call to this function.</para><para>By the time this function is called, the program is already about to exit and the exception can&apos;t be handled nor ignored any more, override <ref refid="classwx_app_console_1a8c241ae1aa045da4470664813b7ec960" kindref="member">OnUnhandledException()</ref> or use explicit <computeroutput>try/catch</computeroutput> blocks around <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">OnInit()</ref> body to be able to handle the exception earlier.</para><para>The default implementation dumps information about the exception using <ref refid="classwx_message_output_best" kindref="compound">wxMessageOutputBest</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="442"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Application informations</header>
+      <description><para><anchor id="_1amgrp85ff99f21ccd05470c599503208e6caa"/> </para></description>
+      <memberdef kind="function" id="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxAppConsole::GetAppDisplayName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAppDisplayName</name>
+        <briefdescription>
+<para>Returns the user-readable application name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The difference between this string and the one returned by <ref refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" kindref="member">GetAppName()</ref> is that this one is meant to be shown to the user and so should be used for the window titles, page headers and so on while the other one should be only used internally, e.g. for the file names or configuration file keys.</para><para>If the application name for display had been previously set by <ref refid="classwx_app_console_1a716fee0bf023e73e80c75dc9e817a8b2" kindref="member">SetAppDisplayName()</ref>, it will be returned by this function. Otherwise, if <ref refid="classwx_app_console_1a31ba1a76d63a2265d981ceedbfd6d5cf" kindref="member">SetAppName()</ref> had been called its value will be returned; also as is. Finally if none was called, this function returns the program name capitalized using <ref refid="classwx_string_1a88592121dde64b682cd67d30bfc9b45f" kindref="member">wxString::Capitalize()</ref>.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="469"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxAppConsole::GetAppName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAppName</name>
+        <briefdescription>
+<para>Returns the application name. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <ref refid="classwx_app_console_1a31ba1a76d63a2265d981ceedbfd6d5cf" kindref="member">SetAppName()</ref> had been called, returns the string passed to it. Otherwise returns the program name, i.e. the value of <computeroutput>argv</computeroutput>[0] passed to the <computeroutput>main()</computeroutput> function.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" kindref="member">GetAppDisplayName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="480"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a938d78da101d4edfbd76387ad4d221be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxAppConsole::GetClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetClassName</name>
+        <briefdescription>
+<para>Gets the class name of the application. </para>        </briefdescription>
+        <detaileddescription>
+<para>The class name may be used in a platform specific manner to refer to the application.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1aabcfbdc9d4ec3f31fe14589eee873960" kindref="member">SetClassName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="488"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a75ed8ce022a4ca58785f14f736853e93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> *</type>
+        <definition>wxAppTraits* wxAppConsole::GetTraits</definition>
+        <argsstring>()</argsstring>
+        <name>GetTraits</name>
+        <briefdescription>
+<para>Returns a pointer to the <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> object for the application. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you want to customize the <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> object, you must override the <ref refid="classwx_app_console_1ab2811644bfee7a93d0564a09397c4408" kindref="member">CreateTraits()</ref> function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="495"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1aff0e285cecca295bc6de1ad8323093df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxAppConsole::GetVendorDisplayName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVendorDisplayName</name>
+        <briefdescription>
+<para>Returns the user-readable vendor name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The difference between this string and the one returned by <ref refid="classwx_app_console_1af73ec0d186dd10b7fdabb57cf097bef8" kindref="member">GetVendorName()</ref> is that this one is meant to be shown to the user and so should be used for the window titles, page headers and so on while the other one should be only used internally, e.g. for the file names or configuration file keys.</para><para>By default, returns the same string as <ref refid="classwx_app_console_1af73ec0d186dd10b7fdabb57cf097bef8" kindref="member">GetVendorName()</ref>.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="508"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1af73ec0d186dd10b7fdabb57cf097bef8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxAppConsole::GetVendorName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVendorName</name>
+        <briefdescription>
+<para>Returns the application&apos;s vendor name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="513"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a716fee0bf023e73e80c75dc9e817a8b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::SetAppDisplayName</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>SetAppDisplayName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the application name to be used in the user-visible places such as window titles. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" kindref="member">GetAppDisplayName()</ref> for more about the differences between the display name and name.</para><para>Notice that if this function is called, the name is used as is, without any capitalization as done by default by <ref refid="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" kindref="member">GetAppDisplayName()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="525"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a31ba1a76d63a2265d981ceedbfd6d5cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::SetAppName</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>SetAppName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Sets the name of the application. </para>        </briefdescription>
+        <detaileddescription>
+<para>This name should be used for file names, configuration file entries and other internal strings. For the user-visible strings, such as the window titles, the application display name set by <ref refid="classwx_app_console_1a716fee0bf023e73e80c75dc9e817a8b2" kindref="member">SetAppDisplayName()</ref> is used instead.</para><para>By default the application name is set to the name of its executable file.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" kindref="member">GetAppName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="537"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1aabcfbdc9d4ec3f31fe14589eee873960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::SetClassName</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>SetClassName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Sets the class name of the application. </para>        </briefdescription>
+        <detaileddescription>
+<para>This may be used in a platform specific manner to refer to the application.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a938d78da101d4edfbd76387ad4d221be" kindref="member">GetClassName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="545"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a5ad4d1e383bc2fbb2d1c12f118140d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::SetVendorDisplayName</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>SetVendorDisplayName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the vendor name to be used in the user-visible places. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_app_console_1aff0e285cecca295bc6de1ad8323093df" kindref="member">GetVendorDisplayName()</ref> for more about the differences between the display name and name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="552"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1afc276a78f5ad56d4f34fcf0e93872913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAppConsole::SetVendorName</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>SetVendorName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Sets the name of application&apos;s vendor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The name will be used in registry access. A default name is set by wxWidgets.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1af73ec0d186dd10b7fdabb57cf097bef8" kindref="member">GetVendorName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="560"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classwx_app_console_1a18d2288273cee260ff047831a5e8bfc5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxAppConsole::argc</definition>
+        <argsstring></argsstring>
+        <name>argc</name>
+        <briefdescription>
+<para>Number of command line arguments (after environment-specific processing). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="568" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" bodystart="568" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_app_console_1aec036ffd2b28e72ca36cb0f7ef6a3b37" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> **</type>
+        <definition>wxChar** wxAppConsole::argv</definition>
+        <argsstring></argsstring>
+        <name>argv</name>
+        <briefdescription>
+<para>Command line arguments (after environment-specific processing). </para>        </briefdescription>
+        <detaileddescription>
+<para>Under Windows and Linux/Unix, you should parse the command line arguments and check for files to be opened when starting your application. Under OS X, you need to override MacOpenFiles() since command line arguments are used differently there.</para><para>You may use the <ref refid="classwx_cmd_line_parser" kindref="compound">wxCmdLineParser</ref> to parse command line arguments. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="580" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" bodystart="580" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_app_console_1ab2811644bfee7a93d0564a09397c4408" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> *</type>
+        <definition>virtual wxAppTraits* wxAppConsole::CreateTraits</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTraits</name>
+        <briefdescription>
+<para>Creates the <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> object when <ref refid="classwx_app_console_1a75ed8ce022a4ca58785f14f736853e93" kindref="member">GetTraits()</ref> needs it for the first time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_app_console_1a15802038794a8646f42f0cdd3bf74b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxAppConsole::~wxAppConsole</definition>
+        <argsstring>()</argsstring>
+        <name>~wxAppConsole</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a302adeb701f247bf8cac1570efc25020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAppConsole::Yield</definition>
+        <argsstring>(bool onlyIfNeeded=false)</argsstring>
+        <name>Yield</name>
+        <param>
+          <type>bool</type>
+          <declname>onlyIfNeeded</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="226"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_app_console_1a7ca751aa37cd3f920e20d9d967ad413d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxAppConsole::SetInstance</definition>
+        <argsstring>(wxAppConsole *app)</argsstring>
+        <name>SetInstance</name>
+        <param>
+          <type><ref refid="classwx_app_console" kindref="compound">wxAppConsole</ref> *</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+<para>Allows external code to modify global <ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member">wxTheApp</ref>, but you should really know what you&apos;re doing if you call it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>app</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replacement for the global application object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_app_console_1a2cb953d248e41fd5bdb95ade98311ad3" kindref="member">GetInstance()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1a2cb953d248e41fd5bdb95ade98311ad3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_app_console" kindref="compound">wxAppConsole</ref> *</type>
+        <definition>static wxAppConsole* wxAppConsole::GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <briefdescription>
+<para>Returns the one and only global application object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Usually <ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member">wxTheApp</ref> is used instead.</para><para><simplesect kind="see"><para><ref refid="classwx_app_console_1a7ca751aa37cd3f920e20d9d967ad413d" kindref="member">SetInstance()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_app_console_1abe34922edd0a98a63de3cc73e95fda35" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxAppConsole::IsMainLoopRunning</definition>
+        <argsstring>()</argsstring>
+        <name>IsMainLoopRunning</name>
+        <briefdescription>
+<para>Returns true if the main event loop is currently running, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>if the application is inside <ref refid="classwx_app_console_1ac05a28c7cdb529f2cdfe77b3431c385c" kindref="member">OnRun()</ref>.</para><para>This can be useful to test whether events can be dispatched. For example, if this function returns false, non-blocking sockets cannot be used because the events from them would never be processed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="255"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is essential for writing console-only or hybrid apps without having to define <computeroutput>wxUSE_GUI=0</computeroutput>. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is used to: <itemizedlist>
+<listitem><para>set and get application-wide properties (see <ref refid="classwx_app_console_1ab2811644bfee7a93d0564a09397c4408" kindref="member">wxAppConsole::CreateTraits</ref> and wxAppConsole::SetXXX functions) </para></listitem>
+<listitem><para>implement the windowing system message or event loop: events in fact are supported even in console-mode applications (see <ref refid="classwx_app_console_1a78a6f9e56b77addf8251f0f5c10004fb" kindref="member">wxAppConsole::HandleEvent</ref> and <ref refid="classwx_app_console_1ab62db8e6265c1e841220c47b9778ab7e" kindref="member">wxAppConsole::ProcessPendingEvents</ref>); </para></listitem>
+<listitem><para>initiate application processing via <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit</ref>; </para></listitem>
+<listitem><para>allow default processing of events not handled by other objects in the application (see <ref refid="classwx_app_console_1ada7ab606e014a10d46e4b3c6f602e20c" kindref="member">wxAppConsole::FilterEvent</ref>) </para></listitem>
+<listitem><para>implement Apple-specific event handlers (see wxAppConsole::MacXXX functions)</para></listitem>
+</itemizedlist>
+You should use the macro <ref refid="group__group__funcmacro__rtti_1ga967aafaa261481fe2d2e1cf599e3e003" kindref="member">wxIMPLEMENT_APP(appClass)</ref> in your application implementation file to tell wxWidgets how to create an instance of your application class.</para><para>Use <ref refid="group__group__funcmacro__rtti_1ga1523a2d553dea288d66cd35e8a0ffd5c" kindref="member">wxDECLARE_APP(appClass)</ref> in a header file if you want the <ref refid="group__group__funcmacro__appinitterm_1gac387a69e740a149f9888e4992a3a4c6c" kindref="member">wxGetApp()</ref> function (which returns a reference to your application object) to be visible to other files.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="overview__app" kindref="compound">wxApp Overview</ref>, <ref refid="classwx_app" kindref="compound">wxApp</ref>, <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref>, <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4290">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4289">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4290" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4291" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4291">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4293">
+        <label>wxApp</label>
+        <link refid="classwx_app"/>
+        <childnode refid="4288" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4288">
+        <label>wxAppConsole</label>
+        <link refid="classwx_app_console"/>
+        <childnode refid="4289" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4292" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4292">
+        <label>wxEventFilter</label>
+        <link refid="classwx_event_filter"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4296">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4297" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4295">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4296" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4298" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4298">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4294">
+        <label>wxAppConsole</label>
+        <link refid="classwx_app_console"/>
+        <childnode refid="4295" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4299" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4299">
+        <label>wxEventFilter</label>
+        <link refid="classwx_event_filter"/>
+      </node>
+      <node id="4297">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="42" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" bodystart="40" bodyend="581"/>
+    <listofallmembers>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>AddFilter</name></member>
+      <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAppConsole</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_app_console_1a18d2288273cee260ff047831a5e8bfc5" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>argc</name></member>
+      <member refid="classwx_app_console_1aec036ffd2b28e72ca36cb0f7ef6a3b37" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>argv</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Bind</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxAppConsole</scope><name>CloneRefData</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Connect</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxAppConsole</scope><name>CreateRefData</name></member>
+      <member refid="classwx_app_console_1ab2811644bfee7a93d0564a09397c4408" prot="protected" virt="virtual"><scope>wxAppConsole</scope><name>CreateTraits</name></member>
+      <member refid="classwx_app_console_1ad89ebde765071beef409f6e6e81d1b31" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Disconnect</name></member>
+      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9aa2b35768d0be474ac339b9162c0db85a" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Ignore</name></member>
+      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9a6d508074572ecf366e3c3b537bcba776" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Processed</name></member>
+      <member refid="classwx_event_filter_1a24ff5a104b4bff9fc8f26752be22d8f9ae3620010ea8dc45c4547052a75fe51da" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Event_Skip</name></member>
+      <member refid="classwx_app_console_1ad0f1e724efa8ae1e94cde655c74c85dc" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>ExitMainLoop</name></member>
+      <member refid="classwx_app_console_1ada7ab606e014a10d46e4b3c6f602e20c" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>FilterEvent</name></member>
+      <member refid="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetAppDisplayName</name></member>
+      <member refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetAppName</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_app_console_1a938d78da101d4edfbd76387ad4d221be" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetClassName</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_app_console_1a2cb953d248e41fd5bdb95ade98311ad3" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetInstance</name></member>
+      <member refid="classwx_app_console_1a131ba350b1be3ef88a764170c59d8e40" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetMainLoop</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetRefData</name></member>
+      <member refid="classwx_app_console_1a75ed8ce022a4ca58785f14f736853e93" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetTraits</name></member>
+      <member refid="classwx_app_console_1aff0e285cecca295bc6de1ad8323093df" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetVendorDisplayName</name></member>
+      <member refid="classwx_app_console_1af73ec0d186dd10b7fdabb57cf097bef8" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>GetVendorName</name></member>
+      <member refid="classwx_app_console_1a78a6f9e56b77addf8251f0f5c10004fb" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>HandleEvent</name></member>
+      <member refid="classwx_app_console_1a253eccb58ac202af728ac4f137c88619" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>HasPendingEvents</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>IsKindOf</name></member>
+      <member refid="classwx_app_console_1abe34922edd0a98a63de3cc73e95fda35" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>IsMainLoopRunning</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>IsSameAs</name></member>
+      <member refid="classwx_app_console_1aad8d60da021487976b4a620364100fa5" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>IsScheduledForDestruction</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxAppConsole</scope><name>m_refData</name></member>
+      <member refid="classwx_app_console_1a14523f3e9ab468c19c697c65484b36db" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>MainLoop</name></member>
+      <member refid="classwx_app_console_1a5f91d78bbfe3c9ef28e8e3c8fdf29989" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnAssertFailure</name></member>
+      <member refid="classwx_app_console_1a1c8bf26b12a280fd03911caac70e3144" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnCmdLineError</name></member>
+      <member refid="classwx_app_console_1a1d9ee414483ec30c03acde70d2dc1e3b" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnCmdLineHelp</name></member>
+      <member refid="classwx_app_console_1aa6a309dbbaec2f75720df2d5743cf0e0" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnCmdLineParsed</name></member>
+      <member refid="classwx_app_console_1aa116701a3bd7700fe6979117e53ae999" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnEventLoopEnter</name></member>
+      <member refid="classwx_app_console_1a8f94f02a752bb416e99161710637d8f3" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnEventLoopExit</name></member>
+      <member refid="classwx_app_console_1aca806b41cf74fd6166e4fb2e2708e9bf" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnExceptionInMainLoop</name></member>
+      <member refid="classwx_app_console_1a5ee60051c92b0b2933258799626a0485" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnExit</name></member>
+      <member refid="classwx_app_console_1a927931aafbb7aec4debdfc02ee6f6f9d" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnFatalException</name></member>
+      <member refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnInit</name></member>
+      <member refid="classwx_app_console_1a1708aeb916cbc3dc4a3333f1a6f33e04" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnInitCmdLine</name></member>
+      <member refid="classwx_app_console_1ac05a28c7cdb529f2cdfe77b3431c385c" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnRun</name></member>
+      <member refid="classwx_app_console_1a8c241ae1aa045da4470664813b7ec960" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>OnUnhandledException</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>operator new</name></member>
+      <member refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_app_console_1ab62db8e6265c1e841220c47b9778ab7e" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>QueueEvent</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Ref</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_app_console_1a3ddc42127ce53b8cac04716315124765" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>ResumeProcessingOfPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_app_console_1adc46f57d8691bc0098830522f9de9d90" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>ScheduleForDestruction</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_app_console_1a716fee0bf023e73e80c75dc9e817a8b2" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetAppDisplayName</name></member>
+      <member refid="classwx_app_console_1a31ba1a76d63a2265d981ceedbfd6d5cf" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetAppName</name></member>
+      <member refid="classwx_app_console_1aabcfbdc9d4ec3f31fe14589eee873960" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetClassName</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_app_console_1a7ca751aa37cd3f920e20d9d967ad413d" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetInstance</name></member>
+      <member refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetRefData</name></member>
+      <member refid="classwx_app_console_1a5ad4d1e383bc2fbb2d1c12f118140d4a" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetVendorDisplayName</name></member>
+      <member refid="classwx_app_console_1afc276a78f5ad56d4f34fcf0e93872913" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SetVendorName</name></member>
+      <member refid="classwx_app_console_1af892210f0e50a1c7df9ae39280cbc972" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>SuspendProcessingOfPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxAppConsole</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxAppConsole</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxAppConsole</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>UnShare</name></member>
+      <member refid="classwx_app_console_1af393b68a318373e43ee731bec38bdc29" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>UsesEventLoop</name></member>
+      <member refid="classwx_event_filter_1a1bd4a99149877bdac06ec5e20c1b997c" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>wxEventFilter</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>wxObject</name></member>
+      <member refid="classwx_app_console_1a302adeb701f247bf8cac1570efc25020" prot="public" virt="non-virtual"><scope>wxAppConsole</scope><name>Yield</name></member>
+      <member refid="classwx_app_console_1a15802038794a8646f42f0cdd3bf74b3d" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>~wxAppConsole</name></member>
+      <member refid="classwx_event_filter_1a30dd4950835241d658ee6cc5d99b4abc" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>~wxEventFilter</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxAppConsole</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

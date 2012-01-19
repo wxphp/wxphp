@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="longlong_8h" kind="file">
+    <compoundname>longlong.h</compoundname>
+    <innerclass refid="classwx_long_long" prot="public">wxLongLong</innerclass>
+    <innerclass refid="classwx_u_long_long" prot="public">wxULongLong</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group__funcmacro__misc_1ga6203af2f81f7b2a3dd8aa384426631a8" prot="public" static="no">
+        <name>wxLongLongFmtSpec</name>
+        <briefdescription>
+<para>This macro is defined to contain the <computeroutput>printf()</computeroutput> format specifier using which 64 bit integer numbers (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>those of type <computeroutput>wxLongLong_t</computeroutput>) can be printed. Example of using it:</para><para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>wxLongLong_t</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxLongLong_t<sp/>ll<sp/>=<sp/><ref refid="group__group__funcmacro__misc_1ga8d211f75f18b9dfa770f93a1518e78da" kindref="member" tooltip="This macro is defined for the platforms with a native 64 bit integer type and allow...">wxLL</ref>(0x1234567890abcdef);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Long<sp/>long<sp/>=<sp/>%&quot;</highlight><highlight class="normal"><sp/><ref refid="group__group__funcmacro__misc_1ga6203af2f81f7b2a3dd8aa384426631a8" kindref="member" tooltip="This macro is defined to contain the printf() format specifier using which 64 bit...">wxLongLongFmtSpec</ref><sp/></highlight><highlight class="stringliteral">&quot;x\n&quot;</highlight><highlight class="normal">,<sp/>ll);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga8d211f75f18b9dfa770f93a1518e78da" kindref="member">wxLL()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/longlong.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="226" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga8d211f75f18b9dfa770f93a1518e78da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wxLongLong_t</type>
+        <definition>wxLongLong_t wxLL</definition>
+        <argsstring>(number)</argsstring>
+        <name>wxLL</name>
+        <param>
+          <type>number</type>
+        </param>
+        <briefdescription>
+<para>This macro is defined for the platforms with a native 64 bit integer type and allow the use of 64 bit compile time constants: </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>wxLongLong_t</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxLongLong_t<sp/>ll<sp/>=<sp/><ref refid="group__group__funcmacro__misc_1ga8d211f75f18b9dfa770f93a1518e78da" kindref="member" tooltip="This macro is defined for the platforms with a native 64 bit integer type and allow...">wxLL</ref>(0x1234567890abcdef);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga61a8fc8ea56fd6333d804e789af35ad4" kindref="member">wxULL()</ref>, <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/longlong.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="242"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga61a8fc8ea56fd6333d804e789af35ad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wxLongLong_t</type>
+        <definition>wxLongLong_t wxULL</definition>
+        <argsstring>(number)</argsstring>
+        <name>wxULL</name>
+        <param>
+          <type>number</type>
+        </param>
+        <briefdescription>
+<para>This macro is defined for the platforms with a native 64 bit integer type and allow the use of 64 bit compile time constants: </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>wxLongLong_t</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>wxLongLong_t<sp/>ll<sp/>=<sp/><ref refid="group__group__funcmacro__misc_1ga61a8fc8ea56fd6333d804e789af35ad4" kindref="member" tooltip="This macro is defined for the platforms with a native 64 bit integer type and allow...">wxULL</ref>(0x1234567890abcdef);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga8d211f75f18b9dfa770f93a1518e78da" kindref="member">wxLL()</ref>, <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/longlong.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="258"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h"/>
+  </compounddef>
+</doxygen>

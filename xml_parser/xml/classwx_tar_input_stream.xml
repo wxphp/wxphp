@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_tar_input_stream" kind="class" prot="public">
+    <compoundname>wxTarInputStream</compoundname>
+    <basecompoundref refid="classwx_archive_input_stream" prot="public" virt="non-virtual">wxArchiveInputStream</basecompoundref>
+    <includes local="no">wx/tarstrm.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_input_stream_1a0bc98eeda030e2587de196173d79d325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTarInputStream::wxTarInputStream</definition>
+        <argsstring>(wxInputStream &amp;stream, wxMBConv &amp;conv=wxConvLocal)</argsstring>
+        <name>wxTarInputStream</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> &amp;</type>
+          <declname>conv</declname>
+          <defval>wxConvLocal</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>In a Unicode build the second parameter <emphasis>conv</emphasis> is used to translate fields from the standard tar header into Unicode.</para><para>It has no effect on the stream&apos;s data. <emphasis>conv</emphasis> is only used for the standard tar headers, any pax extended headers are always UTF-8 encoded.</para><para>If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_input_stream_1a6c66866604a8403840226c0996efd959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTarInputStream::wxTarInputStream</definition>
+        <argsstring>(wxInputStream *stream, wxMBConv &amp;conv=wxConvLocal)</argsstring>
+        <name>wxTarInputStream</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> &amp;</type>
+          <declname>conv</declname>
+          <defval>wxConvLocal</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>In a Unicode build the second parameter <emphasis>conv</emphasis> is used to translate fields from the standard tar header into Unicode.</para><para>It has no effect on the stream&apos;s data. <emphasis>conv</emphasis> is only used for the standard tar headers, any pax extended headers are always UTF-8 encoded.</para><para>If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_tar_input_stream_1a2f67d0c302c3a73c9b8fe11cf2ae4cdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool wxTarInputStream::CloseEntry</definition>
+        <argsstring>()</argsstring>
+        <name>CloseEntry</name>
+        <reimplements refid="classwx_archive_input_stream_1a091c14b91d891de1014a53251dc7835e">CloseEntry</reimplements>
+        <briefdescription>
+<para>Closes the current entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>On a non-seekable stream reads to the end of the current entry first. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_input_stream_1a2caf9fbd8b60d18422852e2c77f8d3b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> *</type>
+        <definition>wxTarEntry* wxTarInputStream::GetNextEntry</definition>
+        <argsstring>()</argsstring>
+        <name>GetNextEntry</name>
+        <reimplements refid="classwx_archive_input_stream_1a87615df48e5f57305aa360098f5dae26">GetNextEntry</reimplements>
+        <briefdescription>
+<para>Closes the current entry if one is open, then reads the meta-data for the next entry and returns it in a <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> object, giving away ownership. </para>        </briefdescription>
+        <detaileddescription>
+<para>The stream is then open and can be read. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_input_stream_1a04c4b7aed15a2940a5f9c02ebe70964d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTarInputStream::OpenEntry</definition>
+        <argsstring>(wxTarEntry &amp;entry)</argsstring>
+        <name>OpenEntry</name>
+        <param>
+          <type><ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+<para>Closes the current entry if one is open, then opens the entry specified by the <emphasis>entry</emphasis> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>entry</emphasis> should be from the same tar file, and the tar should be on a seekable stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Input stream for reading tar files. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classwx_tar_input_stream_1a2caf9fbd8b60d18422852e2c77f8d3b1" kindref="member">wxTarInputStream::GetNextEntry()</ref> returns a <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> object containing the meta-data for the next entry in the tar (and gives away ownership). Reading from the <ref refid="classwx_tar_input_stream" kindref="compound">wxTarInputStream</ref> then returns the entry&apos;s data. <ref refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" kindref="member">wxTarInputStream::Eof()</ref> becomes true after an attempt has been made to read past the end of the entry&apos;s data.</para><para>When there are no more entries, <ref refid="classwx_tar_input_stream_1a2caf9fbd8b60d18422852e2c77f8d3b1" kindref="member">wxTarInputStream::GetNextEntry()</ref> returns NULL and sets <ref refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" kindref="member">wxTarInputStream::Eof()</ref>.</para><para>Tar entries are seekable if the parent stream is seekable. In practice this usually means they are only seekable if the tar is stored as a local file and is not compressed.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive_1overview_archive_byname" kindref="member">Looking Up an Archive Entry by Name</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10623">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="10624" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10621">
+        <label>wxArchiveInputStream</label>
+        <link refid="classwx_archive_input_stream"/>
+        <childnode refid="10622" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10624">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="10622">
+        <label>wxFilterInputStream</label>
+        <link refid="classwx_filter_input_stream"/>
+        <childnode refid="10623" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10620">
+        <label>wxTarInputStream</label>
+        <link refid="classwx_tar_input_stream"/>
+        <childnode refid="10621" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10628">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="10629" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10626">
+        <label>wxArchiveInputStream</label>
+        <link refid="classwx_archive_input_stream"/>
+        <childnode refid="10627" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10629">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="10627">
+        <label>wxFilterInputStream</label>
+        <link refid="classwx_filter_input_stream"/>
+        <childnode refid="10628" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10625">
+        <label>wxTarInputStream</label>
+        <link refid="classwx_tar_input_stream"/>
+        <childnode refid="10626" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="54" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>CanRead</name></member>
+      <member refid="classwx_tar_input_stream_1a2f67d0c302c3a73c9b8fe11cf2ae4cdb" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>CloseEntry</name></member>
+      <member refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>Eof</name></member>
+      <member refid="classwx_input_stream_1a98462fa7198b5c9dca1c71acf6148e0b" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>GetC</name></member>
+      <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>GetLastError</name></member>
+      <member refid="classwx_stream_base_1a0d2d992fd98835aabf2b9b656a1e6ccd" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>GetLength</name></member>
+      <member refid="classwx_tar_input_stream_1a2caf9fbd8b60d18422852e2c77f8d3b1" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>GetNextEntry</name></member>
+      <member refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>GetSize</name></member>
+      <member refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>IsOk</name></member>
+      <member refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>IsSeekable</name></member>
+      <member refid="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>LastRead</name></member>
+      <member refid="classwx_input_stream_1a8ebacd18964a4b169a62ad9190cab4d5" prot="protected" virt="pure-virtual"><scope>wxTarInputStream</scope><name>OnSysRead</name></member>
+      <member refid="classwx_stream_base_1ae38e82c374f82d39993909f0a5d3017e" prot="protected" virt="virtual"><scope>wxTarInputStream</scope><name>OnSysSeek</name></member>
+      <member refid="classwx_stream_base_1a7bb3b0b470e960d1165a28e83d576c1b" prot="protected" virt="virtual"><scope>wxTarInputStream</scope><name>OnSysTell</name></member>
+      <member refid="classwx_tar_input_stream_1a04c4b7aed15a2940a5f9c02ebe70964d" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>OpenEntry</name></member>
+      <member refid="classwx_archive_input_stream_1abb0e2896bbb5b50b7cef95cfdd8fb8e5" prot="public" virt="pure-virtual" ambiguityscope="wxArchiveInputStream::"><scope>wxTarInputStream</scope><name>OpenEntry</name></member>
+      <member refid="classwx_stream_base_1aaee699fe59f603eaae1550ee55ac579f" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>operator!</name></member>
+      <member refid="classwx_input_stream_1a42dc4394276b726b9877faf2c71ae408" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>Peek</name></member>
+      <member refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>Read</name></member>
+      <member refid="classwx_input_stream_1a05cc7b25c9df86f00157a34ee9809bd5" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>Read</name></member>
+      <member refid="classwx_stream_base_1a52353ac42f72538b2022a84f416e5fe2" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>Reset</name></member>
+      <member refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>SeekI</name></member>
+      <member refid="classwx_input_stream_1aece5e9ece88100f15fa91802b005ef4b" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>TellI</name></member>
+      <member refid="classwx_input_stream_1a503ff01720f51c4fb170aa78a296be9d" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_input_stream_1a7fe847c79f8d2e1b98bb129c23e549c7" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_filter_input_stream_1a21dda00003313a92200677f2d9c78d99" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>wxFilterInputStream</name></member>
+      <member refid="classwx_filter_input_stream_1a64c3433e69bcec829fec8e0381a24847" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>wxFilterInputStream</name></member>
+      <member refid="classwx_input_stream_1aeb3e1146260cabcfbe631ff3493ee851" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>wxInputStream</name></member>
+      <member refid="classwx_stream_base_1a2bdb01f1ccd34d551d3cfc848054bf1e" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>wxStreamBase</name></member>
+      <member refid="classwx_tar_input_stream_1a0bc98eeda030e2587de196173d79d325" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>wxTarInputStream</name></member>
+      <member refid="classwx_tar_input_stream_1a6c66866604a8403840226c0996efd959" prot="public" virt="non-virtual"><scope>wxTarInputStream</scope><name>wxTarInputStream</name></member>
+      <member refid="classwx_input_stream_1a30fea51e11bbf042f29bdf82bc052ab2" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>~wxInputStream</name></member>
+      <member refid="classwx_stream_base_1aebba32b4da79c60933fa997735a8bfe5" prot="public" virt="virtual"><scope>wxTarInputStream</scope><name>~wxStreamBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

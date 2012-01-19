@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="colour_8h" kind="file">
+    <compoundname>colour.h</compoundname>
+    <innerclass refid="classwx_colour" prot="public">wxColour</innerclass>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="enum" id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5" prot="public" static="no">
+        <name>@2</name>
+        <enumvalue id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5a11f9e43cf157a8d4b49c87c957807bea" prot="public">
+          <name>wxC2S_NAME</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5ab47c838efa2889a17a00d8e2713db292" prot="public">
+          <name>wxC2S_CSS_SYNTAX</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="colour_8h_1a99fb83031ce9923c84392b4e92f956b5a434fb8012dffb290fb63e0279c216325" prot="public">
+          <name>wxC2S_HTML_SYNTAX</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags for <ref refid="classwx_colour" kindref="compound">wxColour</ref> -&gt; <ref refid="classwx_string" kindref="compound">wxString</ref> conversion (see <ref refid="classwx_colour_1acd9eda2800e18506fbb74763ce4e7de6" kindref="member">wxColour::GetAsString</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="16" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Predefined colors.</header>
+      <description><para><anchor id="_1amgrp53cbe6475a70038d27355642f8f3f03f"/> </para></description>
+      <memberdef kind="variable" id="colour_8h_1a882fc9395ce82080f0c2c91ca04731d6" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>wxColour wxNullColour</definition>
+        <argsstring></argsstring>
+        <name>wxNullColour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="279" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1abf2d471367e1ee194d88bc3e814a7d11" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>wxColour wxTransparentColour</definition>
+        <argsstring></argsstring>
+        <name>wxTransparentColour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="280" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1a28c9e9208c4907063eb9869ff2332776" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+        <definition>wxColour* wxBLACK</definition>
+        <argsstring></argsstring>
+        <name>wxBLACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="281" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1a6682c822c66afb0c9bec02469b40e58a" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+        <definition>wxColour* wxBLUE</definition>
+        <argsstring></argsstring>
+        <name>wxBLUE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="282" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1ab5873717d157d334f20e0a0b02d8ffa1" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+        <definition>wxColour* wxCYAN</definition>
+        <argsstring></argsstring>
+        <name>wxCYAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="283" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1a98125a3b5ab1f7bc8dbc7a62e329f142" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+        <definition>wxColour* wxGREEN</definition>
+        <argsstring></argsstring>
+        <name>wxGREEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="284" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1ab826607ad843990349914e1457a6425a" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+        <definition>wxColour* wxYELLOW</definition>
+        <argsstring></argsstring>
+        <name>wxYELLOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="285" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1a76762d1254986a92025f54e7683c3441" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+        <definition>wxColour* wxLIGHT_GREY</definition>
+        <argsstring></argsstring>
+        <name>wxLIGHT_GREY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="286" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1a69785ac6d0c5ed3fb4d2053693390e2a" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+        <definition>wxColour* wxRED</definition>
+        <argsstring></argsstring>
+        <name>wxRED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="287" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1a3b00973fd189d6ddd42d74046bd45694" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+        <definition>wxColour* wxWHITE</definition>
+        <argsstring></argsstring>
+        <name>wxWHITE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="288" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="colour_8h_1af779c89b1f869fbe06c4b4bc748a3ba1" prot="public" static="no" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char wxALPHA_TRANSPARENT</definition>
+        <argsstring></argsstring>
+        <name>wxALPHA_TRANSPARENT</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colour_8h_1ae1306fc09217b01cfec7bfb46eed0d66" prot="public" static="no" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char wxALPHA_OPAQUE</definition>
+        <argsstring></argsstring>
+        <name>wxALPHA_OPAQUE</name>
+        <initializer> 0xff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFromString</definition>
+        <argsstring>(const wxString &amp;string, wxColour *colour)</argsstring>
+        <name>wxFromString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Converts string to a <ref refid="classwx_colour" kindref="compound">wxColour</ref> best represented by the given string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true on success.</para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga0adf8026ea8ed126420a2e7ef9edc678" kindref="member">wxToString(const wxColour&amp;)</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="308"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__misc_1ga0adf8026ea8ed126420a2e7ef9edc678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxToString</definition>
+        <argsstring>(const wxColour &amp;colour)</argsstring>
+        <name>wxToString</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Converts the given <ref refid="classwx_colour" kindref="compound">wxColour</ref> into a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" kindref="member">wxFromString(const wxString&amp;, wxColour*)</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="317"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h"/>
+  </compounddef>
+</doxygen>

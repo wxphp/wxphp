@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_size" kind="class" prot="public">
+    <compoundname>wxSize</compoundname>
+    <includes local="no">wx/gdicmn.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_size_1a7f1e3a02453f5b97c53322031b07d36d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::DecBy</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>DecBy</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Decreases the size in both x and y directions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a0ce7f06029d8d884e673d6115180ed9c" kindref="member">IncBy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="826"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1ab0d46d98d425f35d51a8a284f0d65fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::DecBy</definition>
+        <argsstring>(const wxSize &amp;size)</argsstring>
+        <name>DecBy</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Decreases the size in both x and y directions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a0ce7f06029d8d884e673d6115180ed9c" kindref="member">IncBy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="827"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1aea2001c0eb4ee58bfe8053dae90c35e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::DecBy</definition>
+        <argsstring>(int dx, int dy)</argsstring>
+        <name>DecBy</name>
+        <param>
+          <type>int</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+<para>Decreases the size in both x and y directions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a0ce7f06029d8d884e673d6115180ed9c" kindref="member">IncBy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="828"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1ad67ffe193f1390c3b59ca90bee2297e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::DecBy</definition>
+        <argsstring>(int d)</argsstring>
+        <name>DecBy</name>
+        <param>
+          <type>int</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Decreases the size in both x and y directions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a0ce7f06029d8d884e673d6115180ed9c" kindref="member">IncBy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="829"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_size_1a0ce7f06029d8d884e673d6115180ed9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::IncBy</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>IncBy</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Increases the size in both x and y directions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a7f1e3a02453f5b97c53322031b07d36d" kindref="member">DecBy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="856"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1abdddee0dd164b74d899c05f1ee6ea5e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::IncBy</definition>
+        <argsstring>(const wxSize &amp;size)</argsstring>
+        <name>IncBy</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Increases the size in both x and y directions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a7f1e3a02453f5b97c53322031b07d36d" kindref="member">DecBy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="857"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a1cef28aa72da68daea6a8ffd0e417a41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::IncBy</definition>
+        <argsstring>(int dx, int dy)</argsstring>
+        <name>IncBy</name>
+        <param>
+          <type>int</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+<para>Increases the size in both x and y directions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a7f1e3a02453f5b97c53322031b07d36d" kindref="member">DecBy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="858"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a5b93ee9afc913c3aaa061a4d436e91e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::IncBy</definition>
+        <argsstring>(int d)</argsstring>
+        <name>IncBy</name>
+        <param>
+          <type>int</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Increases the size in both x and y directions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a7f1e3a02453f5b97c53322031b07d36d" kindref="member">DecBy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="859"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Miscellaneous operators</header>
+      <description><para><anchor id="_1amgrpe09e661963a51ecc56ad0a00cbd2649b"/>Note that these operators are documented as class members (to make them easier to find) but, as their prototype shows, they are implemented as global operators; note that this is transparent to the user but it helps to understand why the following functions are documented to take the <ref refid="classwx_size" kindref="compound">wxSize</ref> they operate on as an explicit argument. </para></description>
+      <memberdef kind="function" id="classwx_size_1a832bba08ddb172eca2181e4e100d35ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+        <definition>wxSize&amp; wxSize::operator=</definition>
+        <argsstring>(const wxSize &amp;sz)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="932"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1acef5beab40255d67241168617a6dd8d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSize::operator==</definition>
+        <argsstring>(const wxSize &amp;s1, const wxSize &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="934"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a4f5e8c5b985bc7c4a0b690b5d03aa185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSize::operator!=</definition>
+        <argsstring>(const wxSize &amp;s1, const wxSize &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="935"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1ad9d50601f4afff8badda2979b1cffc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxSize::operator+</definition>
+        <argsstring>(const wxSize &amp;s1, const wxSize &amp;s2)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="937"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a2c8637c5b45909c4d353b45a0628a6c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxSize::operator-</definition>
+        <argsstring>(const wxSize &amp;s1, const wxSize &amp;s2)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="938"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1adcc7979939cfae0f82cead04c7b6eb34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+        <definition>wxSize&amp; wxSize::operator+=</definition>
+        <argsstring>(const wxSize &amp;sz)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="939"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a1c46a9f17eb4451efadf0aa192f88f6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+        <definition>wxSize&amp; wxSize::operator-=</definition>
+        <argsstring>(const wxSize &amp;sz)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="940"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1ae0070f6158c8d7de53d9f7e6d301b670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxSize::operator/</definition>
+        <argsstring>(const wxSize &amp;sz, int factor)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="942"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1adb9c5e8999a606eaf4e04549c631d15e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxSize::operator*</definition>
+        <argsstring>(const wxSize &amp;sz, int factor)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="943"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1aceb625572b23b7851cdf445537f5ea88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxSize::operator*</definition>
+        <argsstring>(int factor, const wxSize &amp;sz)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="944"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a398b45f7f99eac7bb2f53c457012b58e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+        <definition>wxSize&amp; wxSize::operator/=</definition>
+        <argsstring>(int factor)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="945"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a6ff396754f0e0944a6ed7223ec29b760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+        <definition>wxSize&amp; wxSize::operator*=</definition>
+        <argsstring>(int factor)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="946"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_size_1a89bbb1a42ad12573ff42809221e243a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSize::wxSize</definition>
+        <argsstring>()</argsstring>
+        <name>wxSize</name>
+        <briefdescription>
+<para>Initializes this size object with zero width and height. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="813"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1aaa5ee9cd2943878582267508255c5bc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSize::wxSize</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>wxSize</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Initializes this size object with the given <emphasis>width</emphasis> and <emphasis>height</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="818"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1ac1e1d3b84b295669b20323b72a9c14a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::DecTo</definition>
+        <argsstring>(const wxSize &amp;size)</argsstring>
+        <name>DecTo</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Decrements this object so that both of its dimensions are not greater than the corresponding dimensions of the <emphasis>size</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1a8377564f72496d664286bdad0fdce941" kindref="member">IncTo()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="838"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1af841d5b084fd441d35d9ea237dc8cac0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxSize::GetHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+<para>Gets the height member. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="843"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a13433c2ef31e7e08cd42dd21afeaa60a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxSize::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Gets the width member. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="848"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a8377564f72496d664286bdad0fdce941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::IncTo</definition>
+        <argsstring>(const wxSize &amp;size)</argsstring>
+        <name>IncTo</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Increments this object so that both of its dimensions are not less than the corresponding dimensions of the <emphasis>size</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_size_1ac1e1d3b84b295669b20323b72a9c14a9" kindref="member">DecTo()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="868"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSize::IsFullySpecified</definition>
+        <argsstring>() const </argsstring>
+        <name>IsFullySpecified</name>
+        <briefdescription>
+<para>Returns true if neither of the size object components is equal to -1, which is used as default for the size values in wxWidgets (hence the predefined <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref> has both of its components equal to -1). </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is typically used before calling <ref refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" kindref="member">SetDefaults()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="877"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a21eb89b963b3bc7c3ec001bf31d1305c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+        <definition>wxSize&amp; wxSize::Scale</definition>
+        <argsstring>(float xscale, float yscale)</argsstring>
+        <name>Scale</name>
+        <param>
+          <type>float</type>
+          <declname>xscale</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yscale</declname>
+        </param>
+        <briefdescription>
+<para>Scales the dimensions of this object by the given factors. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you want to scale both dimensions by the same factor you can also use <ref refid="classwx_size_1a6ff396754f0e0944a6ed7223ec29b760" kindref="member">operator*=()</ref>.</para><para><simplesect kind="return"><para>A reference to this object (so that you can concatenate other operations in the same line). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="887"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1ac5dbc35615c2d17ccb072efe334c75bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::Set</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Sets the width and height members. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="892"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::SetDefaults</definition>
+        <argsstring>(const wxSize &amp;sizeDefault)</argsstring>
+        <name>SetDefaults</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sizeDefault</declname>
+        </param>
+        <briefdescription>
+<para>Combine this size object with another one replacing the default (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>equal to -1) components of this object with those of the other. It is typically used like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!size.<ref refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" kindref="member" tooltip="Returns true if neither of the size object components is equal to -1, which is used...">IsFullySpecified</ref>()<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size.<ref refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" kindref="member" tooltip="Combine this size object with another one replacing the default (i.e.">SetDefaults</ref>(GetDefaultSize());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" kindref="member">IsFullySpecified()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="908"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a4567577104dbf480c6331f97a71e73ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::SetHeight</definition>
+        <argsstring>(int height)</argsstring>
+        <name>SetHeight</name>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Sets the height. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="913"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_size_1a41d149df3805e7bca1d39eda9e035920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSize::SetWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Sets the width. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="918"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classwx_size" kindref="compound">wxSize</ref> is a useful data structure for graphics operations. </para>    </briefdescription>
+    <detaileddescription>
+<para>It simply contains integer <emphasis>width</emphasis> and <emphasis>height</emphasis> members.</para><para>Note that the width and height stored inside a <ref refid="classwx_size" kindref="compound">wxSize</ref> object may be negative and that <ref refid="classwx_size" kindref="compound">wxSize</ref> functions do not perform any check against negative values (this is used to e.g. store the special -1 value in <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref> instance). See also <ref refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" kindref="member">IsFullySpecified()</ref> and <ref refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" kindref="member">SetDefaults()</ref> for utility functions regarding the special -1 value.</para><para><ref refid="classwx_size" kindref="compound">wxSize</ref> is used throughout wxWidgets as well as <ref refid="classwx_point" kindref="compound">wxPoint</ref> which, although almost equivalent to <ref refid="classwx_size" kindref="compound">wxSize</ref>, has a different meaning: <ref refid="classwx_point" kindref="compound">wxPoint</ref> represents a position while <ref refid="classwx_size" kindref="compound">wxSize</ref> represents the size.</para><para><bold>wxPython Note:</bold> wxPython defines aliases for the <emphasis>x</emphasis> and <emphasis>y</emphasis> members named <emphasis>width</emphasis> and <emphasis>height</emphasis> since it makes much more sense for sizes.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers: <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="808" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="807" bodyend="948"/>
+    <listofallmembers>
+      <member refid="classwx_size_1a7f1e3a02453f5b97c53322031b07d36d" prot="public" virt="non-virtual"><scope>wxSize</scope><name>DecBy</name></member>
+      <member refid="classwx_size_1ab0d46d98d425f35d51a8a284f0d65fb5" prot="public" virt="non-virtual"><scope>wxSize</scope><name>DecBy</name></member>
+      <member refid="classwx_size_1aea2001c0eb4ee58bfe8053dae90c35e5" prot="public" virt="non-virtual"><scope>wxSize</scope><name>DecBy</name></member>
+      <member refid="classwx_size_1ad67ffe193f1390c3b59ca90bee2297e9" prot="public" virt="non-virtual"><scope>wxSize</scope><name>DecBy</name></member>
+      <member refid="classwx_size_1ac1e1d3b84b295669b20323b72a9c14a9" prot="public" virt="non-virtual"><scope>wxSize</scope><name>DecTo</name></member>
+      <member refid="classwx_size_1af841d5b084fd441d35d9ea237dc8cac0" prot="public" virt="non-virtual"><scope>wxSize</scope><name>GetHeight</name></member>
+      <member refid="classwx_size_1a13433c2ef31e7e08cd42dd21afeaa60a" prot="public" virt="non-virtual"><scope>wxSize</scope><name>GetWidth</name></member>
+      <member refid="classwx_size_1a0ce7f06029d8d884e673d6115180ed9c" prot="public" virt="non-virtual"><scope>wxSize</scope><name>IncBy</name></member>
+      <member refid="classwx_size_1abdddee0dd164b74d899c05f1ee6ea5e6" prot="public" virt="non-virtual"><scope>wxSize</scope><name>IncBy</name></member>
+      <member refid="classwx_size_1a1cef28aa72da68daea6a8ffd0e417a41" prot="public" virt="non-virtual"><scope>wxSize</scope><name>IncBy</name></member>
+      <member refid="classwx_size_1a5b93ee9afc913c3aaa061a4d436e91e4" prot="public" virt="non-virtual"><scope>wxSize</scope><name>IncBy</name></member>
+      <member refid="classwx_size_1a8377564f72496d664286bdad0fdce941" prot="public" virt="non-virtual"><scope>wxSize</scope><name>IncTo</name></member>
+      <member refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" prot="public" virt="non-virtual"><scope>wxSize</scope><name>IsFullySpecified</name></member>
+      <member refid="classwx_size_1a4f5e8c5b985bc7c4a0b690b5d03aa185" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator!=</name></member>
+      <member refid="classwx_size_1adb9c5e8999a606eaf4e04549c631d15e" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator*</name></member>
+      <member refid="classwx_size_1aceb625572b23b7851cdf445537f5ea88" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator*</name></member>
+      <member refid="classwx_size_1a6ff396754f0e0944a6ed7223ec29b760" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator*=</name></member>
+      <member refid="classwx_size_1ad9d50601f4afff8badda2979b1cffc08" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator+</name></member>
+      <member refid="classwx_size_1adcc7979939cfae0f82cead04c7b6eb34" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator+=</name></member>
+      <member refid="classwx_size_1a2c8637c5b45909c4d353b45a0628a6c3" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator-</name></member>
+      <member refid="classwx_size_1a1c46a9f17eb4451efadf0aa192f88f6c" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator-=</name></member>
+      <member refid="classwx_size_1ae0070f6158c8d7de53d9f7e6d301b670" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator/</name></member>
+      <member refid="classwx_size_1a398b45f7f99eac7bb2f53c457012b58e" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator/=</name></member>
+      <member refid="classwx_size_1a832bba08ddb172eca2181e4e100d35ca" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator=</name></member>
+      <member refid="classwx_size_1acef5beab40255d67241168617a6dd8d1" prot="public" virt="non-virtual"><scope>wxSize</scope><name>operator==</name></member>
+      <member refid="classwx_size_1a21eb89b963b3bc7c3ec001bf31d1305c" prot="public" virt="non-virtual"><scope>wxSize</scope><name>Scale</name></member>
+      <member refid="classwx_size_1ac5dbc35615c2d17ccb072efe334c75bb" prot="public" virt="non-virtual"><scope>wxSize</scope><name>Set</name></member>
+      <member refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" prot="public" virt="non-virtual"><scope>wxSize</scope><name>SetDefaults</name></member>
+      <member refid="classwx_size_1a4567577104dbf480c6331f97a71e73ab" prot="public" virt="non-virtual"><scope>wxSize</scope><name>SetHeight</name></member>
+      <member refid="classwx_size_1a41d149df3805e7bca1d39eda9e035920" prot="public" virt="non-virtual"><scope>wxSize</scope><name>SetWidth</name></member>
+      <member refid="classwx_size_1a89bbb1a42ad12573ff42809221e243a7" prot="public" virt="non-virtual"><scope>wxSize</scope><name>wxSize</name></member>
+      <member refid="classwx_size_1aaa5ee9cd2943878582267508255c5bc8" prot="public" virt="non-virtual"><scope>wxSize</scope><name>wxSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

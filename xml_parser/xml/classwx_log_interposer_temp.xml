@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_log_interposer_temp" kind="class" prot="public">
+    <compoundname>wxLogInterposerTemp</compoundname>
+    <basecompoundref refid="classwx_log_chain" prot="public" virt="non-virtual">wxLogChain</basecompoundref>
+    <includes local="no">wx/log.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_log_interposer_temp_1af3cb7655189fdfc53ad9b5a70ac10677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxLogInterposerTemp::wxLogInterposerTemp</definition>
+        <argsstring>()</argsstring>
+        <name>wxLogInterposerTemp</name>
+        <briefdescription>
+<para>The default constructor installs this object as the current active log target. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A special version of <ref refid="classwx_log_chain" kindref="compound">wxLogChain</ref> which uses itself as the new log target. </para>    </briefdescription>
+    <detaileddescription>
+<para>It forwards log messages to the previously installed one in addition to processing them itself. Unlike <ref refid="classwx_log_interposer" kindref="compound">wxLogInterposer</ref>, it doesn&apos;t delete the old target which means it can be used to temporarily redirect log output.</para><para>As per <ref refid="classwx_log_interposer" kindref="compound">wxLogInterposer</ref>, this class must be derived from to implement wxLog::DoLog and/or wxLog::DoLogString methods.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7519">
+        <label>wxLogInterposerTemp</label>
+        <link refid="classwx_log_interposer_temp"/>
+        <childnode refid="7520" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7520">
+        <label>wxLogChain</label>
+        <link refid="classwx_log_chain"/>
+        <childnode refid="7521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7521">
+        <label>wxLog</label>
+        <link refid="classwx_log"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7522">
+        <label>wxLogInterposerTemp</label>
+        <link refid="classwx_log_interposer_temp"/>
+        <childnode refid="7523" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7523">
+        <label>wxLogChain</label>
+        <link refid="classwx_log_chain"/>
+        <childnode refid="7524" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7524">
+        <label>wxLog</label>
+        <link refid="classwx_log"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="161" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="160" bodyend="167"/>
+    <listofallmembers>
+      <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>AddTraceMask</name></member>
+      <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>ClearTraceMasks</name></member>
+      <member refid="classwx_log_chain_1a29d346136ed27d0ed887a72057f96c15" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>DetachOldLog</name></member>
+      <member refid="classwx_log_1a9df108f087542c81daf3a00bbeab0aa5" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>DisableTimestamp</name></member>
+      <member refid="classwx_log_1aede0ff7812690d487de845b7f3095dfd" prot="protected" virt="virtual"><scope>wxLogInterposerTemp</scope><name>DoLogRecord</name></member>
+      <member refid="classwx_log_1a18c877e0038afe284757512b866b0aac" prot="protected" virt="virtual"><scope>wxLogInterposerTemp</scope><name>DoLogText</name></member>
+      <member refid="classwx_log_1a3fafbd3b87ff2d08dfdd1378d35013bb" prot="protected" virt="virtual"><scope>wxLogInterposerTemp</scope><name>DoLogTextAtLevel</name></member>
+      <member refid="classwx_log_1af51afebbfa375827936ba3c93c78857a" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>DontCreateOnDemand</name></member>
+      <member refid="classwx_log_1a58bbfc0831eb47f0d88c9350d1f6e02d" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>EnableLogging</name></member>
+      <member refid="classwx_log_1a21f8a2a7d83bd17a0e89bbe7dd7e6feb" prot="public" virt="virtual"><scope>wxLogInterposerTemp</scope><name>Flush</name></member>
+      <member refid="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>FlushActive</name></member>
+      <member refid="classwx_log_1aabbef40bf3aa7ba2c71b33932d4854ec" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>GetActiveTarget</name></member>
+      <member refid="classwx_log_1a474ba0555bce38b182d7bc8e152d128a" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>GetLogLevel</name></member>
+      <member refid="classwx_log_chain_1a158915f59a400e201f8d56cd34623f71" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>GetOldLog</name></member>
+      <member refid="classwx_log_1add8fb43f08799998e68251e9b77020d7" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>GetRepetitionCounting</name></member>
+      <member refid="classwx_log_1a872a55302394dfc42d0035e987156622" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>GetTimestamp</name></member>
+      <member refid="classwx_log_1a899ccb4d60fe3d096e4c8c713774ba5c" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>GetTraceMasks</name></member>
+      <member refid="classwx_log_1ae67871e92f85fcf92a0eb885d0684777" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>GetVerbose</name></member>
+      <member refid="classwx_log_1a28fece055f6d4eb97455b216bc042ee4" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>IsAllowedTraceMask</name></member>
+      <member refid="classwx_log_1a386ce41902b74521a31f4b0de7e1007f" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>IsEnabled</name></member>
+      <member refid="classwx_log_1a9376ab96ed687a54068ed7f0d7639c16" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>IsLevelEnabled</name></member>
+      <member refid="classwx_log_chain_1a03ae2fb38e4e8ad315f301c1577f090a" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>IsPassingMessages</name></member>
+      <member refid="classwx_log_1a99bd499a7375bb627ecbc22ff057ec04" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>LogRecord</name></member>
+      <member refid="classwx_log_chain_1a5595a43501953825b6a07516d791fa90" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>PassMessages</name></member>
+      <member refid="classwx_log_1ab2d378dce2d927e36b7e09618c61fa05" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>RemoveTraceMask</name></member>
+      <member refid="classwx_log_1a14a562556933276939cedbb470f149cb" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>Resume</name></member>
+      <member refid="classwx_log_1ac7ea85f71c8d3ecd4247f412be410505" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetActiveTarget</name></member>
+      <member refid="classwx_log_1a7ae244e71dff20efd3a37b3718841a39" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetComponentLevel</name></member>
+      <member refid="classwx_log_chain_1aecfefb1a2435a5372d4a317353b8a7e9" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetLog</name></member>
+      <member refid="classwx_log_1a4ea68379469ca27f645d5f91c2d42b3b" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetLogLevel</name></member>
+      <member refid="classwx_log_1ae814f9b9b4c8b4a52e34d7c919f98296" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetRepetitionCounting</name></member>
+      <member refid="classwx_log_1a2525bf54fa3f31dc50e6e3cd8651e71d" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetThreadActiveTarget</name></member>
+      <member refid="classwx_log_1a9d0193f89e127de5cc996a32d75cf5c0" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetTimestamp</name></member>
+      <member refid="classwx_log_1a854c6f60a72ef046b4f54953287534e6" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>SetVerbose</name></member>
+      <member refid="classwx_log_1ac563b1d13ec717fb7d5ccf4590e35308" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>Suspend</name></member>
+      <member refid="classwx_log_chain_1a0b13ad0a56791e4686cf13d759bcab23" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>wxLogChain</name></member>
+      <member refid="classwx_log_interposer_temp_1af3cb7655189fdfc53ad9b5a70ac10677" prot="public" virt="non-virtual"><scope>wxLogInterposerTemp</scope><name>wxLogInterposerTemp</name></member>
+      <member refid="classwx_log_chain_1a20f79de4c4e1e0e995b600d9dbcf3310" prot="public" virt="virtual"><scope>wxLogInterposerTemp</scope><name>~wxLogChain</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="mdi_8h" kind="file">
+    <compoundname>mdi.h</compoundname>
+    <innerclass refid="classwx_m_d_i_client_window" prot="public">wxMDIClientWindow</innerclass>
+    <innerclass refid="classwx_m_d_i_parent_frame" prot="public">wxMDIParentFrame</innerclass>
+    <innerclass refid="classwx_m_d_i_child_frame" prot="public">wxMDIChildFrame</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_font" kind="class" prot="public">
+    <compoundname>wxFont</compoundname>
+    <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
+    <includes local="no">wx/font.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <description><para><anchor id="_1amgrpc9fd0bcb5385a65354c37f1bb504399d"/> </para></description>
+      <memberdef kind="function" id="classwx_font_1a6213ecdc22472eeb718735fc274b15f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+        <definition>virtual wxFontEncoding wxFont::GetEncoding</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEncoding</name>
+        <briefdescription>
+<para>Returns the encoding of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that under wxGTK the returned value is always <computeroutput>wxFONTENCODING_UTF8</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1af8dd83a8ab30564d53e643d5bfe0bd57" kindref="member">SetEncoding()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="438"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a8bc47f26fc8ac471b9d312550430adaf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxFont::GetFaceName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFaceName</name>
+        <briefdescription>
+<para>Returns the face name associated with the font, or the empty string if there is no face information. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1a97456a61332a1b6d44a76f0b57b01709" kindref="member">SetFaceName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="446"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ab30e7d5190af3f4770e0726162036248" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+        <definition>virtual wxFontFamily wxFont::GetFamily</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFamily</name>
+        <briefdescription>
+<para>Gets the font family if possible. </para>        </briefdescription>
+        <detaileddescription>
+<para>As described in <ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref> docs the returned value acts as a rough, basic classification of the main font properties (look, spacing).</para><para>If the current font face name is not recognized by <ref refid="classwx_font" kindref="compound">wxFont</ref> or by the underlying system, <computeroutput>wxFONTFAMILY_DEFAULT</computeroutput> is returned.</para><para>Note that currently this function is not very precise and so not particularly useful. Font families mostly make sense only for font creation, see <ref refid="classwx_font_1a20202449727755508176f186b8d5b340" kindref="member">SetFamily()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a20202449727755508176f186b8d5b340" kindref="member">SetFamily()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ac78bab66824b38f42669cfc0b4dc7c9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFont::GetNativeFontInfoDesc</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNativeFontInfoDesc</name>
+        <briefdescription>
+<para>Returns the platform-dependent string completely describing this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returned string is always non-empty unless the font is invalid (in which case an assert is triggered).</para><para>Note that the returned string is not meant to be shown or edited by the user: a typical use of this function is for serializing in string-form a <ref refid="classwx_font" kindref="compound">wxFont</ref> object.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref>, <ref refid="classwx_font_1a4cfe1d8a93962db84e16266f819b38b5" kindref="member">GetNativeFontInfoUserDesc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a4cfe1d8a93962db84e16266f819b38b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFont::GetNativeFontInfoUserDesc</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNativeFontInfoUserDesc</name>
+        <briefdescription>
+<para>Returns a user-friendly string for this font object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returned string is always non-empty unless the font is invalid (in which case an assert is triggered).</para><para>The string does not encode all <ref refid="classwx_font" kindref="compound">wxFont</ref> infos under all platforms; e.g. under wxMSW the font family is not present in the returned string.</para><para>Some examples of the formats of returned strings (which are platform-dependent) are in <ref refid="classwx_font_1afa8eb67298aea006e3a262bd7b0c8493" kindref="member">SetNativeFontInfoUserDesc()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1afa8eb67298aea006e3a262bd7b0c8493" kindref="member">SetNativeFontInfoUserDesc()</ref>, <ref refid="classwx_font_1ac78bab66824b38f42669cfc0b4dc7c9f" kindref="member">GetNativeFontInfoDesc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="492"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a4e29e4bfc1abc6cc40a0090aef8acac4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_native_font_info" kindref="compound">wxNativeFontInfo</ref> *</type>
+        <definition>const wxNativeFontInfo* wxFont::GetNativeFontInfo</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNativeFontInfo</name>
+        <briefdescription>
+<para>Returns the encoding of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that under wxGTK the returned value is always <computeroutput>wxFONTENCODING_UTF8</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1af8dd83a8ab30564d53e643d5bfe0bd57" kindref="member">SetEncoding()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="494"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a889b67c4a005c53c9902b249e67c92bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxFont::GetPointSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPointSize</name>
+        <briefdescription>
+<para>Gets the point size. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1a32d54af99749f180991c4cdab9f9a7dd" kindref="member">SetPointSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="501"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1aa1a71826329661e40ef8d6beba7954ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxFont::GetPixelSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPixelSize</name>
+        <briefdescription>
+<para>Gets the pixel size. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that under wxMSW if you passed to <ref refid="classwx_font_1a94f364735647de9ddd065dfa992ad4e4" kindref="member">SetPixelSize()</ref> (or to the ctor) a <ref refid="classwx_size" kindref="compound">wxSize</ref> object with a null width value, you&apos;ll get a null width in the returned object.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a94f364735647de9ddd065dfa992ad4e4" kindref="member">SetPixelSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="512"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a443add23b2aa92835412c884966bb5de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
+        <definition>virtual wxFontStyle wxFont::GetStyle</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStyle</name>
+        <briefdescription>
+<para>Gets the font style. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref> for a list of valid styles.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a1e2199aae978662fc4ceaa79be8a70b7" kindref="member">SetStyle()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="519"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a6ab8532e2022ddeeed6440bb3fc021e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFont::GetUnderlined</definition>
+        <argsstring>() const </argsstring>
+        <name>GetUnderlined</name>
+        <briefdescription>
+<para>Returns true if the font is underlined, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1a2a8a3a71090bfa4ed957dfd1ffcc524c" kindref="member">SetUnderlined()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="526"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a31a59466126665b0ff2b59fabff99258" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
+        <definition>virtual wxFontWeight wxFont::GetWeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWeight</name>
+        <briefdescription>
+<para>Gets the font weight. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref> for a list of valid weight identifiers.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a63c3c48f10dd64bfdca812f4526cb7eb" kindref="member">SetWeight()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="533"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a16b426084f431686ffd5d628b2ff9b61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFont::IsFixedWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>IsFixedWidth</name>
+        <briefdescription>
+<para>Returns true if the font is a fixed width (or monospaced) font, false if it is a proportional one or font is invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that this function under some platforms is different than just testing for the font family being equal to <computeroutput>wxFONTFAMILY_TELETYPE</computeroutput> because native platform-specific functions are used for the check (resulting in a more accurate return value). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="544"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFont::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if this object is a valid font, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="549"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Similar fonts creation</header>
+      <description><para><anchor id="_1amgrpf725db28525fdd821e5692f12838e215"/>The functions in this section either modify the font in place or create a new font similar to the given one but with its weight, style or size changed. </para></description>
+      <memberdef kind="function" id="classwx_font_1ac528779f9748a5853e854c5514ff711f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFont::Bold</definition>
+        <argsstring>() const </argsstring>
+        <name>Bold</name>
+        <briefdescription>
+<para>Returns a bold version of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1a490c5c47ce9d42a9b430664c476e3940" kindref="member">MakeBold()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="570"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a593fb633202b4ac5977fd4210d2a7d55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFont::Italic</definition>
+        <argsstring>() const </argsstring>
+        <name>Italic</name>
+        <briefdescription>
+<para>Returns an italic version of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1a656641cb094eaa574be999ca791ced96" kindref="member">MakeItalic()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="579"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a3167bed7db5f0c4d3a88fc3395bd3c56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFont::Larger</definition>
+        <argsstring>() const </argsstring>
+        <name>Larger</name>
+        <briefdescription>
+<para>Returns a larger version of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>The font size is multiplied by <computeroutput>1.2</computeroutput>, the factor of <computeroutput>1.2</computeroutput> being inspired by the W3C CSS specification.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1aae5977e23525729e23d3ac4dbc70c365" kindref="member">MakeLarger()</ref>, <ref refid="classwx_font_1a7661691f4f1b5e93d923eaa41681c551" kindref="member">Smaller()</ref>, <ref refid="classwx_font_1ada3d128075fbf8c41a50da0398aeb1cd" kindref="member">Scaled()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="591"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a7661691f4f1b5e93d923eaa41681c551" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFont::Smaller</definition>
+        <argsstring>() const </argsstring>
+        <name>Smaller</name>
+        <briefdescription>
+<para>Returns a smaller version of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>The font size is divided by <computeroutput>1.2</computeroutput>, the factor of <computeroutput>1.2</computeroutput> being inspired by the W3C CSS specification.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a119d3c74838fe89bc4f36ebd698421a2" kindref="member">MakeSmaller()</ref>, <ref refid="classwx_font_1a3167bed7db5f0c4d3a88fc3395bd3c56" kindref="member">Larger()</ref>, <ref refid="classwx_font_1ada3d128075fbf8c41a50da0398aeb1cd" kindref="member">Scaled()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="603"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ab618e94bface067515b6a88ecb206827" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFont::Underlined</definition>
+        <argsstring>() const </argsstring>
+        <name>Underlined</name>
+        <briefdescription>
+<para>Returns underlined version of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1a6b44689f563aebc1f55e8fd09ba4315f" kindref="member">MakeUnderlined()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="612"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a490c5c47ce9d42a9b430664c476e3940" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxFont::MakeBold</definition>
+        <argsstring>()</argsstring>
+        <name>MakeBold</name>
+        <briefdescription>
+<para>Changes this font to be bold. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1ac528779f9748a5853e854c5514ff711f" kindref="member">Bold()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="621"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a656641cb094eaa574be999ca791ced96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxFont::MakeItalic</definition>
+        <argsstring>()</argsstring>
+        <name>MakeItalic</name>
+        <briefdescription>
+<para>Changes this font to be italic. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1a593fb633202b4ac5977fd4210d2a7d55" kindref="member">Italic()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="630"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1aae5977e23525729e23d3ac4dbc70c365" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxFont::MakeLarger</definition>
+        <argsstring>()</argsstring>
+        <name>MakeLarger</name>
+        <briefdescription>
+<para>Changes this font to be larger. </para>        </briefdescription>
+        <detaileddescription>
+<para>The font size is multiplied by <computeroutput>1.2</computeroutput>, the factor of <computeroutput>1.2</computeroutput> being inspired by the W3C CSS specification.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a3167bed7db5f0c4d3a88fc3395bd3c56" kindref="member">Larger()</ref>, <ref refid="classwx_font_1a119d3c74838fe89bc4f36ebd698421a2" kindref="member">MakeSmaller()</ref>, <ref refid="classwx_font_1ab9921c9c057e5aceef20c701bda6a80d" kindref="member">Scale()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="642"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a119d3c74838fe89bc4f36ebd698421a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxFont::MakeSmaller</definition>
+        <argsstring>()</argsstring>
+        <name>MakeSmaller</name>
+        <briefdescription>
+<para>Changes this font to be smaller. </para>        </briefdescription>
+        <detaileddescription>
+<para>The font size is divided by <computeroutput>1.2</computeroutput>, the factor of <computeroutput>1.2</computeroutput> being inspired by the W3C CSS specification.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a7661691f4f1b5e93d923eaa41681c551" kindref="member">Smaller()</ref>, <ref refid="classwx_font_1aae5977e23525729e23d3ac4dbc70c365" kindref="member">MakeLarger()</ref>, <ref refid="classwx_font_1ab9921c9c057e5aceef20c701bda6a80d" kindref="member">Scale()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="654"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a6b44689f563aebc1f55e8fd09ba4315f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxFont::MakeUnderlined</definition>
+        <argsstring>()</argsstring>
+        <name>MakeUnderlined</name>
+        <briefdescription>
+<para>Changes this font to be underlined. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_font_1ab618e94bface067515b6a88ecb206827" kindref="member">Underlined()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="663"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ab9921c9c057e5aceef20c701bda6a80d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxFont::Scale</definition>
+        <argsstring>(float x)</argsstring>
+        <name>Scale</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Changes the size of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>The font size is multiplied by the given factor (which may be less than 1 to create a smaller version of the font).</para><para><simplesect kind="see"><para><ref refid="classwx_font_1ada3d128075fbf8c41a50da0398aeb1cd" kindref="member">Scaled()</ref>, <ref refid="classwx_font_1aae5977e23525729e23d3ac4dbc70c365" kindref="member">MakeLarger()</ref>, <ref refid="classwx_font_1a119d3c74838fe89bc4f36ebd698421a2" kindref="member">MakeSmaller()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="675"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ada3d128075fbf8c41a50da0398aeb1cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxFont::Scaled</definition>
+        <argsstring>(float x) const </argsstring>
+        <name>Scaled</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Returns a scaled version of this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>The font size is multiplied by the given factor (which may be less than 1 to create a smaller version of the font).</para><para><simplesect kind="see"><para><ref refid="classwx_font_1ab9921c9c057e5aceef20c701bda6a80d" kindref="member">Scale()</ref>, <ref refid="classwx_font_1a3167bed7db5f0c4d3a88fc3395bd3c56" kindref="member">Larger()</ref>, <ref refid="classwx_font_1a7661691f4f1b5e93d923eaa41681c551" kindref="member">Smaller()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="687"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Setters</header>
+      <description><para><anchor id="_1amgrp6e47466b75bb957a603aa54c079ac8bf"/>These functions internally recreate the native font object with the new specified property. </para></description>
+      <memberdef kind="function" id="classwx_font_1af8dd83a8ab30564d53e643d5bfe0bd57" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFont::SetEncoding</definition>
+        <argsstring>(wxFontEncoding encoding)</argsstring>
+        <name>SetEncoding</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+        </param>
+        <briefdescription>
+<para>Sets the encoding for this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that under wxGTK this function has no effect (because the underlying Pango library always uses <computeroutput>wxFONTENCODING_UTF8</computeroutput>).</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a6213ecdc22472eeb718735fc274b15f9" kindref="member">GetEncoding()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="707"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a97456a61332a1b6d44a76f0b57b01709" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFont::SetFaceName</definition>
+        <argsstring>(const wxString &amp;faceName)</argsstring>
+        <name>SetFaceName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>faceName</declname>
+        </param>
+        <briefdescription>
+<para>Sets the facename for the font. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>faceName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A valid facename, which should be on the end-user&apos;s system.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>To avoid portability problems, don&apos;t rely on a specific face, but specify the font family instead (see <ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref> and <ref refid="classwx_font_1a20202449727755508176f186b8d5b340" kindref="member">SetFamily()</ref>).</para></simplesect>
+<simplesect kind="return"><para>true if the given face name exists; if the face name doesn&apos;t exist in the user&apos;s system then the font is invalidated (so that <ref refid="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" kindref="member">IsOk()</ref> will return false) and false is returned.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_font_1a8bc47f26fc8ac471b9d312550430adaf" kindref="member">GetFaceName()</ref>, <ref refid="classwx_font_1a20202449727755508176f186b8d5b340" kindref="member">SetFamily()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="724"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a20202449727755508176f186b8d5b340" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFont::SetFamily</definition>
+        <argsstring>(wxFontFamily family)</argsstring>
+        <name>SetFamily</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font family. </para>        </briefdescription>
+        <detaileddescription>
+<para>As described in <ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref> docs the given <emphasis>family</emphasis> value acts as a rough, basic indication of the main font properties (look, spacing).</para><para>Note that changing the font family results in changing the font face name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>family</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the <ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref> values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_font_1ab30e7d5190af3f4770e0726162036248" kindref="member">GetFamily()</ref>, <ref refid="classwx_font_1a97456a61332a1b6d44a76f0b57b01709" kindref="member">SetFaceName()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="739"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFont::SetNativeFontInfo</definition>
+        <argsstring>(const wxString &amp;info)</argsstring>
+        <name>SetNativeFontInfo</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Creates the font corresponding to the given native font description string which must have been previously returned by <ref refid="classwx_font_1ac78bab66824b38f42669cfc0b4dc7c9f" kindref="member">GetNativeFontInfoDesc()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the string is invalid, font is unchanged. This function is typically used for de-serializing a <ref refid="classwx_font" kindref="compound">wxFont</ref> object previously saved in a string-form.</para><para><simplesect kind="return"><para>true if the creation was successful.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_font_1afa8eb67298aea006e3a262bd7b0c8493" kindref="member">SetNativeFontInfoUserDesc()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="753"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1afa8eb67298aea006e3a262bd7b0c8493" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFont::SetNativeFontInfoUserDesc</definition>
+        <argsstring>(const wxString &amp;info)</argsstring>
+        <name>SetNativeFontInfoUserDesc</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Creates the font corresponding to the given native font description string and returns true if the creation was successful. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unlike <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref>, this function accepts strings which are user-friendly. Examples of accepted string formats are:</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>platform </para></entry><entry thead="yes"><para>generic syntax </para></entry><entry thead="yes"><para>example </para></entry></row>
+<row>
+<entry thead="no"><para>wxGTK2 </para></entry><entry thead="no"><para><computeroutput>[FACE-NAME] [bold] [oblique|italic] [POINTSIZE]</computeroutput> </para></entry><entry thead="no"><para>Monospace bold 10 </para></entry></row>
+<row>
+<entry thead="no"><para>wxMSW </para></entry><entry thead="no"><para><computeroutput>[light|bold] [italic] [FACE-NAME] [POINTSIZE] [ENCODING]</computeroutput> </para></entry><entry thead="no"><para>Tahoma 10 WINDOWS-1252 </para></entry></row>
+</table>
+</para><para><xrefsect id="todo_1_todo000031"><xreftitle>Todo</xreftitle><xrefdescription><para>add an example for wxMac</para></xrefdescription></xrefsect>For more detailed information about the allowed syntaxes you can look at the documentation of the native API used for font-rendering (e.g. <computeroutput>pango_font_description_from_string</computeroutput> on GTK).</para><para>Note that unlike <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref>, this function doesn&apos;t always restore all attributes of the <ref refid="classwx_font" kindref="compound">wxFont</ref> object under all platforms; e.g. on wxMSW the font family is not restored (because GetNativeFontInfoUserDesc doesn&apos;t return it on wxMSW). If you want to serialize/deserialize a font in string form, you should use <ref refid="classwx_font_1ac78bab66824b38f42669cfc0b4dc7c9f" kindref="member">GetNativeFontInfoDesc()</ref> and <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref> instead.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="782"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a31bb8005da8e4172a0f8e3fecc04efef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFont::SetNativeFontInfo</definition>
+        <argsstring>(const wxNativeFontInfo &amp;info)</argsstring>
+        <name>SetNativeFontInfo</name>
+        <param>
+          <type>const <ref refid="classwx_native_font_info" kindref="compound">wxNativeFontInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Sets the encoding for this font. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that under wxGTK this function has no effect (because the underlying Pango library always uses <computeroutput>wxFONTENCODING_UTF8</computeroutput>).</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a6213ecdc22472eeb718735fc274b15f9" kindref="member">GetEncoding()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="784"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a32d54af99749f180991c4cdab9f9a7dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFont::SetPointSize</definition>
+        <argsstring>(int pointSize)</argsstring>
+        <name>SetPointSize</name>
+        <param>
+          <type>int</type>
+          <declname>pointSize</declname>
+        </param>
+        <briefdescription>
+<para>Sets the point size. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>point size</emphasis> is defined as 1/72 of the anglo-Saxon inch (25.4 mm): it is approximately 0.0139 inch or 352.8 um.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in points.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_font_1a889b67c4a005c53c9902b249e67c92bd" kindref="member">GetPointSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="797"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a94f364735647de9ddd065dfa992ad4e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFont::SetPixelSize</definition>
+        <argsstring>(const wxSize &amp;pixelSize)</argsstring>
+        <name>SetPixelSize</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>pixelSize</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pixel size. </para>        </briefdescription>
+        <detaileddescription>
+<para>The height parameter of <emphasis>pixelSize</emphasis> must be positive while the width parameter may also be zero (to indicate that you&apos;re not interested in the width of the characters: a suitable width will be chosen for best rendering).</para><para>This feature (specifying the font pixel size) is directly supported only under wxMSW and wxGTK currently; under other platforms a font with the closest size to the given one is found using binary search (this maybe slower).</para><para><simplesect kind="see"><para><ref refid="classwx_font_1aa1a71826329661e40ef8d6beba7954ec" kindref="member">GetPixelSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="812"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a1e2199aae978662fc4ceaa79be8a70b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFont::SetStyle</definition>
+        <argsstring>(wxFontStyle style)</argsstring>
+        <name>SetStyle</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font style. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the <ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref> enumeration values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_font_1a443add23b2aa92835412c884966bb5de" kindref="member">GetStyle()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="822"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a8954f2ebca7091d8f06b9db733884932" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFont::SetSymbolicSize</definition>
+        <argsstring>(wxFontSymbolicSize size)</argsstring>
+        <name>SetSymbolicSize</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a8ef63b60a0a464f610b56c892dba9f45" kindref="member">wxFontSymbolicSize</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font size using a predefined symbolic size name. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function allows to change font size to be (very) large or small compared to the standard font size.</para><para><simplesect kind="see"><para><ref refid="classwx_font_1a62d30098660ab88cae1bb157dba92fc2" kindref="member">SetSymbolicSizeRelativeTo()</ref>.</para></simplesect>
+<simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="834"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a62d30098660ab88cae1bb157dba92fc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFont::SetSymbolicSizeRelativeTo</definition>
+        <argsstring>(wxFontSymbolicSize size, int base)</argsstring>
+        <name>SetSymbolicSizeRelativeTo</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a8ef63b60a0a464f610b56c892dba9f45" kindref="member">wxFontSymbolicSize</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font size compared to the base font size. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the same as <ref refid="classwx_font_1a8954f2ebca7091d8f06b9db733884932" kindref="member">SetSymbolicSize()</ref> except that it uses the given font size as the normal font size instead of the standard font size.</para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="844"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a2a8a3a71090bfa4ed957dfd1ffcc524c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFont::SetUnderlined</definition>
+        <argsstring>(bool underlined)</argsstring>
+        <name>SetUnderlined</name>
+        <param>
+          <type>bool</type>
+          <declname>underlined</declname>
+        </param>
+        <briefdescription>
+<para>Sets underlining. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>underlined</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to underline, false otherwise.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_font_1a6ab8532e2022ddeeed6440bb3fc021e8" kindref="member">GetUnderlined()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="854"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a63c3c48f10dd64bfdca812f4526cb7eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFont::SetWeight</definition>
+        <argsstring>(wxFontWeight weight)</argsstring>
+        <name>SetWeight</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font weight. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the <ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref> values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_font_1a31a59466126665b0ff2b59fabff99258" kindref="member">GetWeight()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="864"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_font_1a9d2f00bf5f89780396b8e95aec377fe8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>static wxFont* wxFont::New</definition>
+        <argsstring>(int pointSize, wxFontFamily family, wxFontStyle style, wxFontWeight weight, bool underline=false, const wxString &amp;faceName=wxEmptyString, wxFontEncoding encoding=wxFONTENCODING_DEFAULT)</argsstring>
+        <name>New</name>
+        <param>
+          <type>int</type>
+          <declname>pointSize</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>underline</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>faceName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+          <defval>wxFONTENCODING_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>This function takes the same parameters as the relative <ref refid="classwx_font_1af183c2709f2b8f03e8fe88f28826612c" kindref="member">wxFont constructor</ref> and returns a new font object allocated on the heap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="917"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1aa3a2b32a848f28d1002cee6fef00919e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>static wxFont* wxFont::New</definition>
+        <argsstring>(int pointSize, wxFontFamily family, int flags=wxFONTFLAG_DEFAULT, const wxString &amp;faceName=wxEmptyString, wxFontEncoding encoding=wxFONTENCODING_DEFAULT)</argsstring>
+        <name>New</name>
+        <param>
+          <type>int</type>
+          <declname>pointSize</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxFONTFLAG_DEFAULT</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>faceName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+          <defval>wxFONTENCODING_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>This function takes the same parameters as the relative <ref refid="classwx_font_1af183c2709f2b8f03e8fe88f28826612c" kindref="member">wxFont constructor</ref> and returns a new font object allocated on the heap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="921"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1afce36dbeb3a745d51bc3bc96c8d054ac" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>static wxFont* wxFont::New</definition>
+        <argsstring>(const wxSize &amp;pixelSize, wxFontFamily family, wxFontStyle style, wxFontWeight weight, bool underline=false, const wxString &amp;faceName=wxEmptyString, wxFontEncoding encoding=wxFONTENCODING_DEFAULT)</argsstring>
+        <name>New</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>pixelSize</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>underline</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>faceName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+          <defval>wxFONTENCODING_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>This function takes the same parameters as the relative <ref refid="classwx_font_1af183c2709f2b8f03e8fe88f28826612c" kindref="member">wxFont constructor</ref> and returns a new font object allocated on the heap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="928"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1aa811bdd42f19b988d266f72ebc6f187b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>static wxFont* wxFont::New</definition>
+        <argsstring>(const wxSize &amp;pixelSize, wxFontFamily family, int flags=wxFONTFLAG_DEFAULT, const wxString &amp;faceName=wxEmptyString, wxFontEncoding encoding=wxFONTENCODING_DEFAULT)</argsstring>
+        <name>New</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>pixelSize</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxFONTFLAG_DEFAULT</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>faceName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+          <defval>wxFONTENCODING_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>This function takes the same parameters as the relative <ref refid="classwx_font_1af183c2709f2b8f03e8fe88f28826612c" kindref="member">wxFont constructor</ref> and returns a new font object allocated on the heap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="933"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ac8142ebe654a60391cb391788b8b3fc8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>static wxFont* wxFont::New</definition>
+        <argsstring>(const wxNativeFontInfo &amp;nativeInfo)</argsstring>
+        <name>New</name>
+        <param>
+          <type>const <ref refid="classwx_native_font_info" kindref="compound">wxNativeFontInfo</ref> &amp;</type>
+          <declname>nativeInfo</declname>
+        </param>
+        <briefdescription>
+<para>This function takes the same parameters as the relative <ref refid="classwx_font_1af183c2709f2b8f03e8fe88f28826612c" kindref="member">wxFont constructor</ref> and returns a new font object allocated on the heap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="936"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1af576c894ec8b69e2525202abde04e81c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>static wxFont* wxFont::New</definition>
+        <argsstring>(const wxString &amp;nativeInfoString)</argsstring>
+        <name>New</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>nativeInfoString</declname>
+        </param>
+        <briefdescription>
+<para>This function takes the same parameters as the relative <ref refid="classwx_font_1af183c2709f2b8f03e8fe88f28826612c" kindref="member">wxFont constructor</ref> and returns a new font object allocated on the heap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="937"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_font_1af183c2709f2b8f03e8fe88f28826612c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFont::wxFont</definition>
+        <argsstring>()</argsstring>
+        <name>wxFont</name>
+        <briefdescription>
+<para>Default ctor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ad77ff719ea7cf27f32d1de7e14dc76c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFont::wxFont</definition>
+        <argsstring>(const wxFont &amp;font)</argsstring>
+        <name>wxFont</name>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a76044c9609bf8300e2c77a908a417544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFont::wxFont</definition>
+        <argsstring>(int pointSize, wxFontFamily family, wxFontStyle style, wxFontWeight weight, bool underline=false, const wxString &amp;faceName=wxEmptyString, wxFontEncoding encoding=wxFONTENCODING_DEFAULT)</argsstring>
+        <name>wxFont</name>
+        <param>
+          <type>int</type>
+          <declname>pointSize</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>underline</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>faceName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+          <defval>wxFONTENCODING_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Creates a font object with the specified attributes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in points. See <ref refid="classwx_font_1a32d54af99749f180991c4cdab9f9a7dd" kindref="member">SetPointSize()</ref> for more info. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>family</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The font family: a generic portable way of referring to fonts without specifying a facename. This parameter must be one of the <ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref> enumeration values. If the <emphasis>faceName</emphasis> argument is provided, then it overrides the font family. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of <computeroutput>wxFONTSTYLE_NORMAL</computeroutput>, <computeroutput>wxFONTSTYLE_SLANT</computeroutput> and <computeroutput>wxFONTSTYLE_ITALIC</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Font weight, sometimes also referred to as font boldness. One of the <ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref> enumeration values. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>underline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value can be true or false. At present this has an effect on Windows and Motif 2.x only. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>faceName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional string specifying the face name to be used. If it is an empty string, a default face name will be chosen based on the family. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An encoding which may be one of the enumeration values of <ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref>. Briefly these can be summed up as: <table rows="5" cols="2"><row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_SYSTEM</computeroutput> </para></entry><entry thead="no"><para>Default system encoding. </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_DEFAULT</computeroutput> </para></entry><entry thead="no"><para>Default application encoding: this is the encoding set by calls to <ref refid="classwx_font_1af1e93b4d416b6d62c6b0a374055c600a" kindref="member">SetDefaultEncoding()</ref> and which may be set to, say, KOI8 to create all fonts by default with KOI8 encoding. Initially, the default application encoding is the same as default system encoding. </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_ISO8859_1</computeroutput>...15</para></entry><entry thead="no"><para>ISO8859 encodings. </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_KOI8</computeroutput> </para></entry><entry thead="no"><para>The standard Russian encoding for Internet. </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_CP1250</computeroutput>...1252</para></entry><entry thead="no"><para>Windows encodings similar to ISO8859 (but not identical). </para></entry></row>
+</table>
+If the specified encoding isn&apos;t available, no font is created (see also <ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>If the desired font does not exist, the closest match will be chosen. Under Windows, only scalable TrueType fonts are used. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a713d2958dea28fbfd9a4ad03b4627cfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFont::wxFont</definition>
+        <argsstring>(const wxSize &amp;pixelSize, wxFontFamily family, wxFontStyle style, wxFontWeight weight, bool underline=false, const wxString &amp;faceName=wxEmptyString, wxFontEncoding encoding=wxFONTENCODING_DEFAULT)</argsstring>
+        <name>wxFont</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>pixelSize</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref></type>
+          <declname>family</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" kindref="member">wxFontStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref></type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>underline</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>faceName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+          <defval>wxFONTENCODING_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Creates a font object with the specified attributes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pixelSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in pixels. See <ref refid="classwx_font_1a94f364735647de9ddd065dfa992ad4e4" kindref="member">SetPixelSize()</ref> for more info. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>family</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The font family: a generic portable way of referring to fonts without specifying a facename. This parameter must be one of the <ref refid="interface_2wx_2font_8h_1a0cd7bfd21a4f901245d3c86d8ea0c080" kindref="member">wxFontFamily</ref> enumeration values. If the <emphasis>faceName</emphasis> argument is provided, then it overrides the font family. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of <computeroutput>wxFONTSTYLE_NORMAL</computeroutput>, <computeroutput>wxFONTSTYLE_SLANT</computeroutput> and <computeroutput>wxFONTSTYLE_ITALIC</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Font weight, sometimes also referred to as font boldness. One of the <ref refid="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" kindref="member">wxFontWeight</ref> enumeration values. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>underline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value can be true or false. At present this has an effect on Windows and Motif 2.x only. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>faceName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional string specifying the face name to be used. If it is an empty string, a default face name will be chosen based on the family. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encoding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An encoding which may be one of the enumeration values of <ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref>. Briefly these can be summed up as: <table rows="5" cols="2"><row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_SYSTEM</computeroutput> </para></entry><entry thead="no"><para>Default system encoding. </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_DEFAULT</computeroutput> </para></entry><entry thead="no"><para>Default application encoding: this is the encoding set by calls to <ref refid="classwx_font_1af1e93b4d416b6d62c6b0a374055c600a" kindref="member">SetDefaultEncoding()</ref> and which may be set to, say, KOI8 to create all fonts by default with KOI8 encoding. Initially, the default application encoding is the same as default system encoding. </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_ISO8859_1</computeroutput>...15</para></entry><entry thead="no"><para>ISO8859 encodings. </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_KOI8</computeroutput> </para></entry><entry thead="no"><para>The standard Russian encoding for Internet. </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>wxFONTENCODING_CP1250</computeroutput>...1252</para></entry><entry thead="no"><para>Windows encodings similar to ISO8859 (but not identical). </para></entry></row>
+</table>
+If the specified encoding isn&apos;t available, no font is created (see also <ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>If the desired font does not exist, the closest match will be chosen. Under Windows, only scalable TrueType fonts are used. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a9d43775aaeafc628064b0e1b63730567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFont::wxFont</definition>
+        <argsstring>(const wxString &amp;nativeInfoString)</argsstring>
+        <name>wxFont</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>nativeInfoString</declname>
+        </param>
+        <briefdescription>
+<para>Constructor from font description string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor uses <ref refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" kindref="member">SetNativeFontInfo()</ref> to initialize the font. If <emphasis>fontdesc</emphasis> is invalid the font remains uninitialized, i.e. its <ref refid="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" kindref="member">IsOk()</ref> method will return false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="404"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a17d85e1cac77bf812182915f3a017976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFont::wxFont</definition>
+        <argsstring>(const wxNativeFontInfo &amp;nativeInfo)</argsstring>
+        <name>wxFont</name>
+        <param>
+          <type>const <ref refid="classwx_native_font_info" kindref="compound">wxNativeFontInfo</ref> &amp;</type>
+          <declname>nativeInfo</declname>
+        </param>
+        <briefdescription>
+<para>Construct font from a native font info structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ac706dcbd9f032e4e0e32f72163e65827" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxFont::~wxFont</definition>
+        <argsstring>()</argsstring>
+        <name>~wxFont</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info.</para><para><simplesect kind="remark"><para>Although all remaining fonts are deleted when the application exits, the application should try to clean up all fonts itself. This is because wxWidgets cannot know if a pointer to the font object is stored in an application data structure, and there is a risk of double deletion. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="423"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1a1ff8c4459b61511f71add9541ed5d6c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFont::operator!=</definition>
+        <argsstring>(const wxFont &amp;font) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Inequality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="875"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1ab90b5364937fd6a31a12644171681c29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFont::operator==</definition>
+        <argsstring>(const wxFont &amp;font) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="883"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1aec71458f1c78b21704eafcb87017936f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxFont::operator=</definition>
+        <argsstring>(const wxFont &amp;font)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="888"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_font_1a25477da7dac4edbf65fab4a72191d729" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+        <definition>static wxFontEncoding wxFont::GetDefaultEncoding</definition>
+        <argsstring>()</argsstring>
+        <name>GetDefaultEncoding</name>
+        <briefdescription>
+<para>Returns the current application&apos;s default encoding. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="classwx_font_1af1e93b4d416b6d62c6b0a374055c600a" kindref="member">SetDefaultEncoding()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="898"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_font_1af1e93b4d416b6d62c6b0a374055c600a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxFont::SetDefaultEncoding</definition>
+        <argsstring>(wxFontEncoding encoding)</argsstring>
+        <name>SetDefaultEncoding</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+        </param>
+        <briefdescription>
+<para>Sets the default font encoding. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="overview__fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="classwx_font_1a25477da7dac4edbf65fab4a72191d729" kindref="member">GetDefaultEncoding()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="905"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A font is an object which determines the appearance of text. </para>    </briefdescription>
+    <detaileddescription>
+<para>Fonts are used for drawing text to a device context, and setting the appearance of a window&apos;s text.</para><para>This class uses <ref refid="overview__refcount" kindref="compound">reference counting and copy-on-write</ref> internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para>You can retrieve the current system font settings with <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="interface_2wx_2font_8h_1aa81b6e7b8f74356bfe604485a4be1066" kindref="member">wxNullFont</ref>, <ref refid="interface_2wx_2font_8h_1a3d7653ceb6b4f01e64fcfce0aec79a5a" kindref="member">wxNORMAL_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a717f06a50bfc94b1b0e5a5cf18f85e9f" kindref="member">wxSMALL_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a0105413f0c4164745a0102ed3ee8177a" kindref="member">wxITALIC_FONT</ref>, <ref refid="interface_2wx_2font_8h_1a45e210182a5159f343998b151ef0c813" kindref="member">wxSWISS_FONT</ref></para><para><simplesect kind="see"><para><ref refid="overview__font" kindref="compound">wxFont Overview</ref>, <ref refid="classwx_d_c_1afab18239d707cd403235b36a987171a8" kindref="member">wxDC::SetFont</ref>, <ref refid="classwx_d_c_1a11d35ce34fccb57b0efc7dc91168660b" kindref="member">wxDC::DrawText</ref>, <ref refid="classwx_d_c_1ae55cbf1bc7b7e836cb192eb48d31efab" kindref="member">wxDC::GetTextExtent</ref>, <ref refid="classwx_font_dialog" kindref="compound">wxFontDialog</ref>, <ref refid="classwx_system_settings" kindref="compound">wxSystemSettings</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6362">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6361">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="6362" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6360">
+        <label>wxFont</label>
+        <link refid="classwx_font"/>
+        <childnode refid="6361" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6365">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6366" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6364">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="6365" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6363">
+        <label>wxFont</label>
+        <link refid="classwx_font"/>
+        <childnode refid="6364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6366">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="293" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="292" bodyend="940"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFont</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_font_1ac528779f9748a5853e854c5514ff711f" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Bold</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFont</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFont</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxFont</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_font_1a25477da7dac4edbf65fab4a72191d729" prot="public" virt="non-virtual"><scope>wxFont</scope><name>GetDefaultEncoding</name></member>
+      <member refid="classwx_font_1a6213ecdc22472eeb718735fc274b15f9" prot="public" virt="virtual"><scope>wxFont</scope><name>GetEncoding</name></member>
+      <member refid="classwx_font_1a8bc47f26fc8ac471b9d312550430adaf" prot="public" virt="virtual"><scope>wxFont</scope><name>GetFaceName</name></member>
+      <member refid="classwx_font_1ab30e7d5190af3f4770e0726162036248" prot="public" virt="virtual"><scope>wxFont</scope><name>GetFamily</name></member>
+      <member refid="classwx_font_1a4e29e4bfc1abc6cc40a0090aef8acac4" prot="public" virt="non-virtual"><scope>wxFont</scope><name>GetNativeFontInfo</name></member>
+      <member refid="classwx_font_1ac78bab66824b38f42669cfc0b4dc7c9f" prot="public" virt="non-virtual"><scope>wxFont</scope><name>GetNativeFontInfoDesc</name></member>
+      <member refid="classwx_font_1a4cfe1d8a93962db84e16266f819b38b5" prot="public" virt="non-virtual"><scope>wxFont</scope><name>GetNativeFontInfoUserDesc</name></member>
+      <member refid="classwx_font_1aa1a71826329661e40ef8d6beba7954ec" prot="public" virt="virtual"><scope>wxFont</scope><name>GetPixelSize</name></member>
+      <member refid="classwx_font_1a889b67c4a005c53c9902b249e67c92bd" prot="public" virt="virtual"><scope>wxFont</scope><name>GetPointSize</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFont</scope><name>GetRefData</name></member>
+      <member refid="classwx_font_1a443add23b2aa92835412c884966bb5de" prot="public" virt="virtual"><scope>wxFont</scope><name>GetStyle</name></member>
+      <member refid="classwx_font_1a6ab8532e2022ddeeed6440bb3fc021e8" prot="public" virt="virtual"><scope>wxFont</scope><name>GetUnderlined</name></member>
+      <member refid="classwx_font_1a31a59466126665b0ff2b59fabff99258" prot="public" virt="virtual"><scope>wxFont</scope><name>GetWeight</name></member>
+      <member refid="classwx_font_1a16b426084f431686ffd5d628b2ff9b61" prot="public" virt="virtual"><scope>wxFont</scope><name>IsFixedWidth</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxFont</scope><name>IsKindOf</name></member>
+      <member refid="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" prot="public" virt="virtual"><scope>wxFont</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxFont</scope><name>IsSameAs</name></member>
+      <member refid="classwx_font_1a593fb633202b4ac5977fd4210d2a7d55" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Italic</name></member>
+      <member refid="classwx_font_1a3167bed7db5f0c4d3a88fc3395bd3c56" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Larger</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFont</scope><name>m_refData</name></member>
+      <member refid="classwx_font_1a490c5c47ce9d42a9b430664c476e3940" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeBold</name></member>
+      <member refid="classwx_font_1a656641cb094eaa574be999ca791ced96" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeItalic</name></member>
+      <member refid="classwx_font_1aae5977e23525729e23d3ac4dbc70c365" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeLarger</name></member>
+      <member refid="classwx_font_1a119d3c74838fe89bc4f36ebd698421a2" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeSmaller</name></member>
+      <member refid="classwx_font_1a6b44689f563aebc1f55e8fd09ba4315f" prot="public" virt="non-virtual"><scope>wxFont</scope><name>MakeUnderlined</name></member>
+      <member refid="classwx_font_1a9d2f00bf5f89780396b8e95aec377fe8" prot="public" virt="non-virtual"><scope>wxFont</scope><name>New</name></member>
+      <member refid="classwx_font_1aa3a2b32a848f28d1002cee6fef00919e" prot="public" virt="non-virtual"><scope>wxFont</scope><name>New</name></member>
+      <member refid="classwx_font_1afce36dbeb3a745d51bc3bc96c8d054ac" prot="public" virt="non-virtual"><scope>wxFont</scope><name>New</name></member>
+      <member refid="classwx_font_1aa811bdd42f19b988d266f72ebc6f187b" prot="public" virt="non-virtual"><scope>wxFont</scope><name>New</name></member>
+      <member refid="classwx_font_1ac8142ebe654a60391cb391788b8b3fc8" prot="public" virt="non-virtual"><scope>wxFont</scope><name>New</name></member>
+      <member refid="classwx_font_1af576c894ec8b69e2525202abde04e81c" prot="public" virt="non-virtual"><scope>wxFont</scope><name>New</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFont</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFont</scope><name>operator new</name></member>
+      <member refid="classwx_font_1a1ff8c4459b61511f71add9541ed5d6c4" prot="public" virt="non-virtual"><scope>wxFont</scope><name>operator!=</name></member>
+      <member refid="classwx_font_1aec71458f1c78b21704eafcb87017936f" prot="public" virt="non-virtual"><scope>wxFont</scope><name>operator=</name></member>
+      <member refid="classwx_font_1ab90b5364937fd6a31a12644171681c29" prot="public" virt="non-virtual"><scope>wxFont</scope><name>operator==</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Ref</name></member>
+      <member refid="classwx_font_1ab9921c9c057e5aceef20c701bda6a80d" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Scale</name></member>
+      <member refid="classwx_font_1ada3d128075fbf8c41a50da0398aeb1cd" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Scaled</name></member>
+      <member refid="classwx_font_1af1e93b4d416b6d62c6b0a374055c600a" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetDefaultEncoding</name></member>
+      <member refid="classwx_font_1af8dd83a8ab30564d53e643d5bfe0bd57" prot="public" virt="virtual"><scope>wxFont</scope><name>SetEncoding</name></member>
+      <member refid="classwx_font_1a97456a61332a1b6d44a76f0b57b01709" prot="public" virt="virtual"><scope>wxFont</scope><name>SetFaceName</name></member>
+      <member refid="classwx_font_1a20202449727755508176f186b8d5b340" prot="public" virt="virtual"><scope>wxFont</scope><name>SetFamily</name></member>
+      <member refid="classwx_font_1aaef8dc8fc6c8b81246af000a201b52c5" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetNativeFontInfo</name></member>
+      <member refid="classwx_font_1a31bb8005da8e4172a0f8e3fecc04efef" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetNativeFontInfo</name></member>
+      <member refid="classwx_font_1afa8eb67298aea006e3a262bd7b0c8493" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetNativeFontInfoUserDesc</name></member>
+      <member refid="classwx_font_1a94f364735647de9ddd065dfa992ad4e4" prot="public" virt="virtual"><scope>wxFont</scope><name>SetPixelSize</name></member>
+      <member refid="classwx_font_1a32d54af99749f180991c4cdab9f9a7dd" prot="public" virt="virtual"><scope>wxFont</scope><name>SetPointSize</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetRefData</name></member>
+      <member refid="classwx_font_1a1e2199aae978662fc4ceaa79be8a70b7" prot="public" virt="virtual"><scope>wxFont</scope><name>SetStyle</name></member>
+      <member refid="classwx_font_1a8954f2ebca7091d8f06b9db733884932" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetSymbolicSize</name></member>
+      <member refid="classwx_font_1a62d30098660ab88cae1bb157dba92fc2" prot="public" virt="non-virtual"><scope>wxFont</scope><name>SetSymbolicSizeRelativeTo</name></member>
+      <member refid="classwx_font_1a2a8a3a71090bfa4ed957dfd1ffcc524c" prot="public" virt="virtual"><scope>wxFont</scope><name>SetUnderlined</name></member>
+      <member refid="classwx_font_1a63c3c48f10dd64bfdca812f4526cb7eb" prot="public" virt="virtual"><scope>wxFont</scope><name>SetWeight</name></member>
+      <member refid="classwx_font_1a7661691f4f1b5e93d923eaa41681c551" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Smaller</name></member>
+      <member refid="classwx_font_1ab618e94bface067515b6a88ecb206827" prot="public" virt="non-virtual"><scope>wxFont</scope><name>Underlined</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFont</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFont</scope><name>UnShare</name></member>
+      <member refid="classwx_font_1af183c2709f2b8f03e8fe88f28826612c" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
+      <member refid="classwx_font_1ad77ff719ea7cf27f32d1de7e14dc76c1" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
+      <member refid="classwx_font_1a76044c9609bf8300e2c77a908a417544" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
+      <member refid="classwx_font_1a713d2958dea28fbfd9a4ad03b4627cfb" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
+      <member refid="classwx_font_1a9d43775aaeafc628064b0e1b63730567" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
+      <member refid="classwx_font_1a17d85e1cac77bf812182915f3a017976" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxFont</name></member>
+      <member refid="classwx_g_d_i_object_1a20ac442e0d24cf6250d7bd45f0d968d5" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxGDIObject</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFont</scope><name>wxObject</name></member>
+      <member refid="classwx_font_1ac706dcbd9f032e4e0e32f72163e65827" prot="public" virt="virtual"><scope>wxFont</scope><name>~wxFont</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxFont</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

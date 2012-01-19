@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_hash_table" kind="class" prot="public">
+    <compoundname>wxHashTable</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/hash.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_hash_table_1a0f34a4036abaee734629f5ede3ec00cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>wxObject* wxHashTable::Delete</definition>
+        <argsstring>(long key)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type>long</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Deletes entry in hash table and returns the user&apos;s data (if found). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1aff09f249e24efd29d19b6c39f83f3004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>wxObject* wxHashTable::Delete</definition>
+        <argsstring>(const wxString &amp;key)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Deletes entry in hash table and returns the user&apos;s data (if found). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_hash_table_1a5fc53c8d664abdccfd096f7f6aa9fa92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>wxObject* wxHashTable::Get</definition>
+        <argsstring>(long key)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>long</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Gets data from the hash table, using an integer or string key (depending on which has table constructor was used). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1ac547d2424eb4de291ae4dcab32ad0a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>wxObject* wxHashTable::Get</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Gets data from the hash table, using an integer or string key (depending on which has table constructor was used). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_hash_table_1a778c39dd4f605dada3a8d5f0ac26860d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHashTable::Put</definition>
+        <argsstring>(long key, wxObject *object)</argsstring>
+        <name>Put</name>
+        <param>
+          <type>long</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Inserts data into the hash table, using an integer or string key (depending on which has table constructor was used). </para>        </briefdescription>
+        <detaileddescription>
+<para>The key string is copied and stored by the hash table implementation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1a1b49d2625b891b2340b7f144b5446faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHashTable::Put</definition>
+        <argsstring>(const char *key, wxObject *object)</argsstring>
+        <name>Put</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Inserts data into the hash table, using an integer or string key (depending on which has table constructor was used). </para>        </briefdescription>
+        <detaileddescription>
+<para>The key string is copied and stored by the hash table implementation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_hash_table_1aa91adcfa7f9a293f38ac9f3fb4a31bf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHashTable::wxHashTable</definition>
+        <argsstring>(wxKeyType key_type=wxKEY_INTEGER, size_t size=1000)</argsstring>
+        <name>wxHashTable</name>
+        <param>
+          <type>wxKeyType</type>
+          <declname>key_type</declname>
+          <defval>wxKEY_INTEGER</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+          <defval>1000</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>key_type</emphasis> is one of wxKEY_INTEGER, or wxKEY_STRING, and indicates what sort of keying is required. <emphasis>size</emphasis> is optional. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1a45efbe355442ffb851e54369f272bb97" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxHashTable::~wxHashTable</definition>
+        <argsstring>()</argsstring>
+        <name>~wxHashTable</name>
+        <briefdescription>
+<para>Destroys the hash table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1a430714a9e63d36f76c092e5cdfb23f31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHashTable::BeginFind</definition>
+        <argsstring>()</argsstring>
+        <name>BeginFind</name>
+        <briefdescription>
+<para>The counterpart of <ref refid="classwx_hash_table_1a00235bc431b25a3b39e2be9ab69b6eda" kindref="member">Next()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the application wishes to iterate through all the data in the hash table, it can call <ref refid="classwx_hash_table_1a430714a9e63d36f76c092e5cdfb23f31" kindref="member">BeginFind()</ref> and then loop on <ref refid="classwx_hash_table_1a00235bc431b25a3b39e2be9ab69b6eda" kindref="member">Next()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1a2e50578a4f417d135e0063cacc216768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHashTable::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Clears the hash table of all nodes (but as usual, doesn&apos;t delete user data). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1a8f55c12691b5f49e6475fd76b4816c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHashTable::DeleteContents</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>DeleteContents</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>If set to true data stored in hash table will be deleted when hash table object is destroyed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1ae0a8acd448351eb22a8a173df866fcf7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxHashTable::GetCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCount</name>
+        <briefdescription>
+<para>Returns the number of elements in the hash table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_hash_table_1a00235bc431b25a3b39e2be9ab69b6eda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wxHashTable::Node *</type>
+        <definition>wxHashTable::Node* wxHashTable::Next</definition>
+        <argsstring>()</argsstring>
+        <name>Next</name>
+        <briefdescription>
+<para>If the application wishes to iterate through all the data in the hash table, it can call <ref refid="classwx_hash_table_1a430714a9e63d36f76c092e5cdfb23f31" kindref="member">BeginFind()</ref> and then loop on <ref refid="classwx_hash_table_1a00235bc431b25a3b39e2be9ab69b6eda" kindref="member">Next()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns a <bold>wxHashTable::Node</bold> pointer (or NULL if there are no more nodes).</para><para>The return value is functionally equivalent to <bold>wxNode</bold> but might not be implemented as a <bold>wxNode</bold>. The user will probably only wish to use the wxNode::GetData() method to retrieve the data; the node may also be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_hash_table_1a4336375442bdc3e8e0987f23650da350" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>static long wxHashTable::MakeKey</definition>
+        <argsstring>(const wxString &amp;string)</argsstring>
+        <name>MakeKey</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Makes an integer key out of a string. </para>        </briefdescription>
+        <detaileddescription>
+<para>An application may wish to make a key explicitly (for instance when combining two data values to form a key). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000020"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Please note that this class is retained for backward compatibility reasons; you should use <ref refid="classwx_hash_map" kindref="compound">wxHashMap</ref>.</para></xrefdescription></xrefsect>This class provides hash table functionality for wxWidgets, and for an application if it wishes. Data can be hashed on an integer or string key.</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_hash_table" kindref="compound">wxHashTable</ref><sp/>table(wxKEY_STRING);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref><sp/>*point<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref>(100,<sp/>200);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table.Put(</highlight><highlight class="stringliteral">&quot;point<sp/>1&quot;</highlight><highlight class="normal">,<sp/>point);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>....</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref><sp/>*found_point<sp/>=<sp/>(<ref refid="classwx_point" kindref="compound" tooltip="A wxPoint is a useful data structure for graphics operations.">wxPoint</ref><sp/>*)table.Get(</highlight><highlight class="stringliteral">&quot;point<sp/>1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>A hash table is implemented as an array of pointers to lists. When no data has been stored, the hash table takes only a little more space than this array (default size is 1000). When a data item is added, an integer is constructed from the integer or string key that is within the bounds of the array. If the array element is NULL, a new (keyed) list is created for the element. Then the data object is appended to the list, storing the key in case other data objects need to be stored in the list also (when a &apos;collision&apos; occurs).</para><para>Retrieval involves recalculating the array index from the key, and searching along the keyed list for the data object whose stored key matches the passed key. Obviously this is quicker when there are fewer collisions, so hashing will become inefficient if the number of items to be stored greatly exceeds the size of the hash table.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para>wxList </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6858">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6857">
+        <label>wxHashTable</label>
+        <link refid="classwx_hash_table"/>
+        <childnode refid="6858" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6860">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6861" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6859">
+        <label>wxHashTable</label>
+        <link refid="classwx_hash_table"/>
+        <childnode refid="6860" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6861">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hash.h" bodystart="50" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHashTable</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_hash_table_1a430714a9e63d36f76c092e5cdfb23f31" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>BeginFind</name></member>
+      <member refid="classwx_hash_table_1a2e50578a4f417d135e0063cacc216768" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Clear</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHashTable</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHashTable</scope><name>CreateRefData</name></member>
+      <member refid="classwx_hash_table_1a0f34a4036abaee734629f5ede3ec00cf" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Delete</name></member>
+      <member refid="classwx_hash_table_1aff09f249e24efd29d19b6c39f83f3004" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Delete</name></member>
+      <member refid="classwx_hash_table_1a8f55c12691b5f49e6475fd76b4816c9a" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>DeleteContents</name></member>
+      <member refid="classwx_hash_table_1a5fc53c8d664abdccfd096f7f6aa9fa92" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Get</name></member>
+      <member refid="classwx_hash_table_1ac547d2424eb4de291ae4dcab32ad0a42" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Get</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxHashTable</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_hash_table_1ae0a8acd448351eb22a8a173df866fcf7" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>GetCount</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHashTable</scope><name>m_refData</name></member>
+      <member refid="classwx_hash_table_1a4336375442bdc3e8e0987f23650da350" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>MakeKey</name></member>
+      <member refid="classwx_hash_table_1a00235bc431b25a3b39e2be9ab69b6eda" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Next</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>operator new</name></member>
+      <member refid="classwx_hash_table_1a778c39dd4f605dada3a8d5f0ac26860d" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Put</name></member>
+      <member refid="classwx_hash_table_1a1b49d2625b891b2340b7f144b5446faf" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Put</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>Ref</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>UnShare</name></member>
+      <member refid="classwx_hash_table_1aa91adcfa7f9a293f38ac9f3fb4a31bf5" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>wxHashTable</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxHashTable</scope><name>wxObject</name></member>
+      <member refid="classwx_hash_table_1a45efbe355442ffb851e54369f272bb97" prot="public" virt="virtual"><scope>wxHashTable</scope><name>~wxHashTable</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxHashTable</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

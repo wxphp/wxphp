@@ -1,0 +1,953 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__funcmacro__file" kind="group">
+    <compoundname>group_funcmacro_file</compoundname>
+    <title>Files and Directories</title>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__group__funcmacro__file_1ga64460401fb35c137c9df28f3c019694d" prot="public" static="no">
+        <name>wxPosixPermissions</name>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da2cb504f6e30ccc6ed552110bb005b0b9" prot="public">
+          <name>wxS_IRUSR</name>
+          <initializer> 00400</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da557d16e2921d75535a6fe4272e23e044" prot="public">
+          <name>wxS_IWUSR</name>
+          <initializer> 00200</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da5763552ab472cdbbb7b4dd6eb15f05e1" prot="public">
+          <name>wxS_IXUSR</name>
+          <initializer> 00100</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da9ce36c701f91cd2f003a6a7ac3f9b00b" prot="public">
+          <name>wxS_IRGRP</name>
+          <initializer> 00040</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da0ef16d9b01e80a95a6dc7c9c898a6901" prot="public">
+          <name>wxS_IWGRP</name>
+          <initializer> 00020</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da09c9d6f954ca9775aa7f48c18158c5dd" prot="public">
+          <name>wxS_IXGRP</name>
+          <initializer> 00010</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da47be4d99d71beba1fcb2e821a6631642" prot="public">
+          <name>wxS_IROTH</name>
+          <initializer> 00004</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da5b033d3ce45260025db43f2bbd2c46ac" prot="public">
+          <name>wxS_IWOTH</name>
+          <initializer> 00002</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da7d7f484ad42ddd73cb5159cfd1d02e4a" prot="public">
+          <name>wxS_IXOTH</name>
+          <initializer> 00001</initializer>
+          <briefdescription>
+<para>Standard POSIX names for these permission flags with &quot;wx&quot; prefix. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694dae6ccfc49749696bde05b3fc0f4715472" prot="public">
+          <name>wxPOSIX_USER_READ</name>
+          <initializer> wxS_IRUSR</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da2c075df747ffd225a6130f59ca79adb8" prot="public">
+          <name>wxPOSIX_USER_WRITE</name>
+          <initializer> wxS_IWUSR</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da75cc6cc510fe86effd87b47988f860b8" prot="public">
+          <name>wxPOSIX_USER_EXECUTE</name>
+          <initializer> wxS_IXUSR</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694daf7251a6ad124b0520943d557cf1e673f" prot="public">
+          <name>wxPOSIX_GROUP_READ</name>
+          <initializer> wxS_IRGRP</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694dacde14b24d7a9fc27953400fcb22f911b" prot="public">
+          <name>wxPOSIX_GROUP_WRITE</name>
+          <initializer> wxS_IWGRP</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694dabbcb96c7161c59fdb19e5a422a992279" prot="public">
+          <name>wxPOSIX_GROUP_EXECUTE</name>
+          <initializer> wxS_IXGRP</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694daeaa5b05ffb802f240179676ab2ba0fbb" prot="public">
+          <name>wxPOSIX_OTHERS_READ</name>
+          <initializer> wxS_IROTH</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da1fffa881f2abdd7b2ad7f4bb8a301261" prot="public">
+          <name>wxPOSIX_OTHERS_WRITE</name>
+          <initializer> wxS_IWOTH</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da322f5744545e16c6d38e8140cf8ff29d" prot="public">
+          <name>wxPOSIX_OTHERS_EXECUTE</name>
+          <initializer> wxS_IXOTH</initializer>
+          <briefdescription>
+<para>Longer but more readable synonyms for the constants above. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694dad36cd32167ca85203a51fba1ec2f31f2" prot="public">
+          <name>wxS_DEFAULT</name>
+          <initializer> (wxPOSIX_USER_READ | wxPOSIX_USER_WRITE | 
+                   wxPOSIX_GROUP_READ | wxPOSIX_GROUP_WRITE | 
+                   wxPOSIX_OTHERS_READ | wxPOSIX_OTHERS_WRITE)</initializer>
+          <briefdescription>
+<para>Default mode for the new files: allow reading/writing them to everybody but the effective file mode will be set after ANDing this value with umask and so won&apos;t include wxS_IW{GRP,OTH} for the default 022 umask value. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga64460401fb35c137c9df28f3c019694da5508d32ba8e3138121f604e731c7f096" prot="public">
+          <name>wxS_DIR_DEFAULT</name>
+          <initializer> (wxPOSIX_USER_READ | wxPOSIX_USER_WRITE | wxPOSIX_USER_EXECUTE | 
+                       wxPOSIX_GROUP_READ | wxPOSIX_GROUP_WRITE | wxPOSIX_GROUP_EXECUTE | 
+                       wxPOSIX_OTHERS_READ | wxPOSIX_OTHERS_WRITE | wxPOSIX_OTHERS_EXECUTE)</initializer>
+          <briefdescription>
+<para>Default mode for the new directories (see <ref refid="classwx_file_name_1a852d4f699225e767242d54df53d6f3be" kindref="member">wxFileName::Mkdir</ref>): allow reading/writing/executing them to everybody, but just like wxS_DEFAULT the effective directory mode will be set after ANDing this value with umask. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>File permission bit names. </para>        </briefdescription>
+        <detaileddescription>
+<para>We define these constants in wxWidgets because S_IREAD &amp;c are not standard. However, we do assume that the values correspond to the Unix umask bits. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="372" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="371" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" prot="public" static="no">
+        <name>wxFileKind</name>
+        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809dad3eb9262e8b40fafb4f4e6906f072268" prot="public">
+          <name>wxFILE_KIND_UNKNOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809da8ae84056179343e1c01d426aaa3f6ccd" prot="public">
+          <name>wxFILE_KIND_DISK</name>
+          <briefdescription>
+<para>A file supporting seeking to arbitrary offsets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809da356638265164942b77d7ba9a0ca850ce" prot="public">
+          <name>wxFILE_KIND_TERMINAL</name>
+          <briefdescription>
+<para>A terminal. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809dae56644a4f434d367dcf033e76e1c77c5" prot="public">
+          <name>wxFILE_KIND_PIPE</name>
+          <briefdescription>
+<para>A pipe. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809dad3eb9262e8b40fafb4f4e6906f072268" prot="public">
+          <name>wxFILE_KIND_UNKNOWN</name>
+          <briefdescription>
+<para>Unknown file kind, or unable to determine. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809da8ae84056179343e1c01d426aaa3f6ccd" prot="public">
+          <name>wxFILE_KIND_DISK</name>
+          <briefdescription>
+<para>A file supporting seeking to arbitrary offsets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809da356638265164942b77d7ba9a0ca850ce" prot="public">
+          <name>wxFILE_KIND_TERMINAL</name>
+          <briefdescription>
+<para>A tty. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__funcmacro__file_1gga68af15575db590aaa874d40a1073809dae56644a4f434d367dcf033e76e1c77c5" prot="public">
+          <name>wxFILE_KIND_PIPE</name>
+          <briefdescription>
+<para>A pipe. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>File kind enumerations returned from <ref refid="group__group__funcmacro__file_1ga4fd2489fadb203b1c4451f2642b3eb8f" kindref="member">wxGetFileKind()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="488" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="487" bodyend="493"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" prot="public" static="no">
+        <type>off_t</type>
+        <definition>typedef off_t wxFileOffset</definition>
+        <argsstring></argsstring>
+        <name>wxFileOffset</name>
+        <briefdescription>
+<para>The type used to store and provide byte offsets or byte sizes for files or streams. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is type-defined as <computeroutput>off_t</computeroutput> on POSIX platforms (see <ulink url="http://www.gnu.org/software/libc/manual/html_node/File-Position-Primitive.html">http://www.gnu.org/software/libc/manual/html_node/File-Position-Primitive.html</ulink>) or to <computeroutput>wxLongLong_t</computeroutput> on Windows when <computeroutput>wxHAS_HUGE_FILES</computeroutput> is defined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="120" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int wxInvalidOffset</definition>
+        <argsstring></argsstring>
+        <name>wxInvalidOffset</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>A special return value of many wxWidgets classes to indicate that an invalid offset was given. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga49d5c1deabd84391f20e34a7ecefe260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTransferFileToStream</definition>
+        <argsstring>(const wxString &amp;filename, ostream &amp;stream)</argsstring>
+        <name>wxTransferFileToStream</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Copies the given file to <emphasis>stream</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include file: <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1643"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gaa5f4996b72cfd90c82d42b9038566828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTransferStreamToFile</definition>
+        <argsstring>(istream &amp;stream, const wxString &amp;filename)</argsstring>
+        <name>wxTransferStreamToFile</name>
+        <param>
+          <type>istream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Copies the given stream to the file <emphasis>filename</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include file: <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1653"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gab94c2e0044fd40d901ac250be547d0da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetDiskSpace</definition>
+        <argsstring>(const wxString &amp;path, wxLongLong total=NULL, wxLongLong free=NULL)</argsstring>
+        <name>wxGetDiskSpace</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+          <declname>total</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+          <declname>free</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This function returns the total number of bytes and number of free bytes on the disk containing the directory <emphasis>path</emphasis> (it should exist). </para>        </briefdescription>
+        <detaileddescription>
+<para>Both <emphasis>total</emphasis> and <emphasis>free</emphasis> parameters may be NULL if the corresponding information is not needed.</para><para><simplesect kind="since"><para>2.3.2</para></simplesect>
+<simplesect kind="note"><para>The generic Unix implementation depends on the system having the <computeroutput>statfs()</computeroutput> or <computeroutput>statvfs()</computeroutput> function.</para></simplesect>
+<simplesect kind="return"><para>true on success, false if an error occurred (for example, the directory doesn’t exist).</para></simplesect>
+Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga26e222d4250fd4cab65f03fc89b7ec45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetOSDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetOSDirectory</name>
+        <briefdescription>
+<para>Returns the Windows directory under Windows; other platforms return an empty string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga499c49ff35d9a9b6cff8cbbdba46b322" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxParseCommonDialogsFilter</definition>
+        <argsstring>(const wxString &amp;wildCard, wxArrayString &amp;descriptions, wxArrayString &amp;filters)</argsstring>
+        <name>wxParseCommonDialogsFilter</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>wildCard</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>descriptions</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>filters</declname>
+        </param>
+        <briefdescription>
+<para>Parses the <emphasis>wildCard</emphasis>, returning the number of filters. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns 0 if none or if there&apos;s a problem.</para><para>The arrays will contain an equal number of items found before the error. On platforms where native dialogs handle only one filter per entry, entries in arrays are automatically adjusted. <emphasis>wildCard</emphasis> is in the form:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;All<sp/>files<sp/>(*)|*|Image<sp/>Files<sp/>(*.jpeg<sp/>*.png)|*.jpg;*.png&quot;</highlight></codeline>
+</programlisting></para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga42358e18253927c01bfc5f48e6778075" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDos2UnixFilename</definition>
+        <argsstring>(wxChar *s)</argsstring>
+        <name>wxDos2UnixFilename</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Converts a DOS to a Unix filename by replacing backslashes with forward slashes. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000013"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Construct a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> with wxPATH_DOS and then use wxFileName::GetFullPath(wxPATH_UNIX) instead.</para></xrefdescription></xrefsect>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="189"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gaae581d4a5d5a334a0e10ed53470312be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxUnix2DosFilename</definition>
+        <argsstring>(wxChar *s)</argsstring>
+        <name>wxUnix2DosFilename</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Converts a Unix to a DOS filename by replacing forward slashes with backslashes. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000014"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Construct a <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> with wxPATH_UNIX and then use wxFileName::GetFullPath(wxPATH_DOS) instead.</para></xrefdescription></xrefsect>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="201"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga3e960a6805631320fede18bf1176f278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDirExists</definition>
+        <argsstring>(const wxString &amp;dirname)</argsstring>
+        <name>wxDirExists</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dirname</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if <emphasis>dirname</emphasis> exists and is a directory. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="208"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga3ab12077f51f54497b7ce829a4339326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSplitPath</definition>
+        <argsstring>(const wxString &amp;fullname, wxString *path, wxString *name, wxString *ext)</argsstring>
+        <name>wxSplitPath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fullname</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>ext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000015"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">wxFileName::SplitPath()</ref> instead.</para></xrefdescription></xrefsect>This function splits a full file name into components: the path (including possible disk/drive specification under Windows), the base name, and the extension. Any of the output parameters (<emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component.</para><para><ref refid="group__group__funcmacro__file_1ga3ab12077f51f54497b7ce829a4339326" kindref="member">wxSplitPath()</ref> will correctly handle filenames with both DOS and Unix path separators under Windows, however it will not consider backslashes as path separators under Unix (where backslash is a valid character in a filename).</para><para>On entry, <emphasis>fullname</emphasis> should be non-NULL (it may be empty though).</para><para>On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <computeroutput>ext</computeroutput> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="236"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga45ff442ed00090a09401fc1c93a5747e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>time_t</type>
+        <definition>time_t wxFileModificationTime</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>wxFileModificationTime</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns time of last modification of given file. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function returns <computeroutput>(time_t)-1</computeroutput> if an error occurred (e.g. file not found).</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="246"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga599c484cd4deea8fed7275a9a7e0a11c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRenameFile</definition>
+        <argsstring>(const wxString &amp;file1, const wxString &amp;file2, bool overwrite=true)</argsstring>
+        <name>wxRenameFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>overwrite</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Renames <emphasis>file1</emphasis> to <emphasis>file2</emphasis>, returning true if successful. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>file2</emphasis> is a directory, <emphasis>file1</emphasis> is moved into it (<emphasis>overwrite</emphasis> is ignored in this case). Otherwise, if <emphasis>file2</emphasis> is an existing file, it is overwritten if <emphasis>overwrite</emphasis> is true (default) and the function fails if <emphasis>overwrite</emphasis> is false.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="260"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga65ec867ed441231ed2ba67b3bb5ee4e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxCopyFile</definition>
+        <argsstring>(const wxString &amp;file1, const wxString &amp;file2, bool overwrite=true)</argsstring>
+        <name>wxCopyFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>overwrite</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Copies <emphasis>file1</emphasis> to <emphasis>file2</emphasis>, returning true if successful. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>overwrite</emphasis> parameter is true (default), the destination file is overwritten if it exists, but if <emphasis>overwrite</emphasis> is false, the functions fails in this case.</para><para>This function supports resources forks under Mac OS.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="273"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga72d2e4ef03d51c0d59c2cb788462d600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileExists</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>wxFileExists</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the file exists and is a plain file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="280"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga0d499f5b09fb2b6e381bddff181dba17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMatchWild</definition>
+        <argsstring>(const wxString &amp;pattern, const wxString &amp;text, bool dot_special)</argsstring>
+        <name>wxMatchWild</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dot_special</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the <emphasis>pattern</emphasis> matches the <emphasis>text</emphasis>; if <emphasis>dot_special</emphasis> is true, filenames beginning with a dot are not matched with wildcard characters. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__file_1gac3789ec7318ad36e403f32bb8269d001" kindref="member">wxIsWild()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="293"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga139aabab52fdd09c37716662d6a47110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetWorkingDirectory</definition>
+        <argsstring>(char *buf=NULL, int sz=1000)</argsstring>
+        <name>wxGetWorkingDirectory</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+          <defval>1000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000016"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated, use <ref refid="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" kindref="member">wxGetCwd()</ref> instead.</para></xrefdescription></xrefsect>Copies the current working directory into the buffer if supplied, or copies the working directory into new storage (which you must delete yourself) if the buffer is NULL.</para><para><emphasis>sz</emphasis> is the size of the buffer if supplied.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="306"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga5a4bc3ac5b1952c29416335daa9ba0dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxPathOnly</definition>
+        <argsstring>(const wxString &amp;path)</argsstring>
+        <name>wxPathOnly</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Returns the directory part of the filename. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="313"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gac3789ec7318ad36e403f32bb8269d001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsWild</definition>
+        <argsstring>(const wxString &amp;pattern)</argsstring>
+        <name>wxIsWild</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>pattern</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the pattern contains wildcards. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__group__funcmacro__file_1ga0d499f5b09fb2b6e381bddff181dba17" kindref="member">wxMatchWild()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="322"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gaa80bce04d491b7e27cc3e78cab979ed8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxIsAbsolutePath</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>wxIsAbsolutePath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the argument is an absolute filename, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>with a slash or drive name at the beginning.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="330"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gab0cc6ceca11d23f61cba353c01eeac06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetCwd</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetCwd</name>
+        <briefdescription>
+<para>Returns a string containing the current (or working) directory. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="337"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga315b861f905ae6b3915faa79526a198e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSetWorkingDirectory</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>wxSetWorkingDirectory</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Sets the current working directory, returning true if the operation succeeded. </para>        </briefdescription>
+        <detaileddescription>
+<para>Under MS Windows, the current drive is also changed if <emphasis>dir</emphasis> contains a drive specification.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="346"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga1f2c59b71636d40bafa3757fcf36cd67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxConcatFiles</definition>
+        <argsstring>(const wxString &amp;file1, const wxString &amp;file2, const wxString &amp;file3)</argsstring>
+        <name>wxConcatFiles</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file3</declname>
+        </param>
+        <briefdescription>
+<para>Concatenates <emphasis>file1</emphasis> and <emphasis>file2</emphasis> to <emphasis>file3</emphasis>, returning true if successful. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="356"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga147f3601590c8c29a97d1101e03b2b90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRemoveFile</definition>
+        <argsstring>(const wxString &amp;file)</argsstring>
+        <name>wxRemoveFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Removes <emphasis>file</emphasis>, returning true if successful. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="363"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga3510d5cf8163eded5bae385ce758df57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMkdir</definition>
+        <argsstring>(const wxString &amp;dir, int perm=wxS_DIR_DEFAULT)</argsstring>
+        <name>wxMkdir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>perm</declname>
+          <defval>wxS_DIR_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Makes the directory <emphasis>dir</emphasis>, returning true if successful. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>perm</emphasis> is the access mask for the directory for the systems on which it is supported (Unix) and doesn&apos;t have any effect on the other ones.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="426"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga9ae2276737ad4fe72ea96c5f2d9bbfd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRmdir</definition>
+        <argsstring>(const wxString &amp;dir, int flags=0)</argsstring>
+        <name>wxRmdir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Removes the directory <emphasis>dir</emphasis>, returning true if successful. </para>        </briefdescription>
+        <detaileddescription>
+<para>Does not work under VMS.</para><para>The <emphasis>flags</emphasis> parameter is reserved for future use.</para><para><simplesect kind="note"><para>There is also a wxRmDir() function which simply wraps the standard POSIX <computeroutput>rmdir()</computeroutput> function and so return an integer error code instead of a boolean value (but otherwise is currently identical to <ref refid="group__group__funcmacro__file_1ga9ae2276737ad4fe72ea96c5f2d9bbfd3" kindref="member">wxRmdir()</ref>), don&apos;t confuse these two functions.</para></simplesect>
+Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="441"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gabc2b3ae7f5c1f49034cc8577f00bc235" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFindNextFile</definition>
+        <argsstring>()</argsstring>
+        <name>wxFindNextFile</name>
+        <briefdescription>
+<para>Returns the next file that matches the path passed to <ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member">wxFindFirstFile()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member">wxFindFirstFile()</ref> for an example.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="450"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFindFirstFile</definition>
+        <argsstring>(const wxString &amp;spec, int flags=0)</argsstring>
+        <name>wxFindFirstFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>spec</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>This function does directory searching; returns the first file that matches the path <emphasis>spec</emphasis>, or the empty string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use <ref refid="group__group__funcmacro__file_1gabc2b3ae7f5c1f49034cc8577f00bc235" kindref="member">wxFindNextFile()</ref> to get the next matching file. Neither will report the current directory &quot;.&quot; or the parent directory &quot;..&quot;.</para><para><simplesect kind="warning"><para>As of 2.5.2, these functions are not thread-safe! (they use static variables). You probably want to use <ref refid="classwx_dir_1a08bad912e7c04ed2b5f7a4e498f77247" kindref="member">wxDir::GetFirst()</ref> or <ref refid="classwx_dir_traverser" kindref="compound">wxDirTraverser</ref> instead.</para></simplesect>
+<emphasis>spec</emphasis> may contain wildcards.</para><para><emphasis>flags</emphasis> may be wxDIR for restricting the query to directories, wxFILE for files or zero for either.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>f<sp/>=<sp/><ref refid="group__group__funcmacro__file_1gab136c4ed6c3d71262d12780b723479ce" kindref="member" tooltip="This function does directory searching; returns the first file that matches the path...">wxFindFirstFile</ref>(</highlight><highlight class="stringliteral">&quot;/home/project/*.*&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>!f.<ref refid="classwx_string_1ac6ae24a8ccc6e4e671f972948fca437c" kindref="member">empty</ref>()<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f<sp/>=<sp/><ref refid="group__group__funcmacro__file_1gabc2b3ae7f5c1f49034cc8577f00bc235" kindref="member" tooltip="Returns the next file that matches the path passed to wxFindFirstFile().">wxFindNextFile</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="480"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga4fd2489fadb203b1c4451f2642b3eb8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ffile_8h_1a68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref></type>
+        <definition>wxFileKind wxGetFileKind</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>wxGetFileKind</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>Returns the type of an open file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Possible return values are enumerations of <ref refid="group__group__funcmacro__file_1ga68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref>.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="505"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga749d8c7166598b5a82a7b638b0cb4d35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ffile_8h_1a68af15575db590aaa874d40a1073809d" kindref="member">wxFileKind</ref></type>
+        <definition>wxFileKind wxGetFileKind</definition>
+        <argsstring>(FILE *fp)</argsstring>
+        <name>wxGetFileKind</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="506"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga2414d8f9b3d08370551b0609eef5f0db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileNameFromPath</definition>
+        <argsstring>(const wxString &amp;path)</argsstring>
+        <name>wxFileNameFromPath</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000017"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a4f06c2499ce10643e41175405b93e61c" kindref="member">wxFileName::SplitPath()</ref> instead.</para></xrefdescription></xrefsect>Returns the filename for a full path. The second form returns a pointer to temporary storage that should not be deallocated.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="520"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga0d16799305c79b72c1b62fce18734075" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxFileNameFromPath</definition>
+        <argsstring>(char *path)</argsstring>
+        <name>wxFileNameFromPath</name>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="521"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1ga550c9561a7a15c571cb8ddf79d233457" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* wxGetTempFileName</definition>
+        <argsstring>(const wxString &amp;prefix, char *buf=NULL)</argsstring>
+        <name>wxGetTempFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000018"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is obsolete, please use <ref refid="classwx_file_name_1a416af84fddd624a3b457dbffbe174317" kindref="member">wxFileName::CreateTempFileName()</ref> instead.</para></xrefdescription></xrefsect>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="532"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__file_1gad57f5b539f70d723cff8b8b6084f0332" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGetTempFileName</definition>
+        <argsstring>(const wxString &amp;prefix, wxString &amp;buf)</argsstring>
+        <name>wxGetTempFileName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="533"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group__funcmacro__file_1gaf20a1b90767d4e46462f2af875048922" prot="public" static="no">
+        <name>wxCHANGE_UMASK</name>
+        <param><defname>mask</defname></param>
+        <briefdescription>
+<para>Under Unix this macro changes the current process umask to the given value, unless it is equal to -1 in which case nothing is done, and restores it to the original value on scope exit. </para>        </briefdescription>
+        <detaileddescription>
+<para>It works by declaring a variable which sets umask to <emphasis>mask</emphasis> in its constructor and restores it in its destructor. Under other platforms this macro expands to nothing.</para><para>Include file: <verbatim>#include &lt;wx/filefn.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filefn.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>These functions provide a platform-independent API for common file and directory functionality. </para>    </briefdescription>
+    <detaileddescription>
+<para>Related class group: <ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

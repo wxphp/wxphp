@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_debug_report_preview" kind="class" prot="public">
+    <compoundname>wxDebugReportPreview</compoundname>
+    <derivedcompoundref refid="classwx_debug_report_preview_std" prot="public" virt="non-virtual">wxDebugReportPreviewStd</derivedcompoundref>
+    <includes local="no">wx/debugrpt.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_debug_report_preview_1a25c6bed0bf6ad6acf5d06817f520fb57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDebugReportPreview::wxDebugReportPreview</definition>
+        <argsstring>()</argsstring>
+        <name>wxDebugReportPreview</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_debug_report_preview_1ac538eb0d478526f3a88154b7897d07cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxDebugReportPreview::~wxDebugReportPreview</definition>
+        <argsstring>()</argsstring>
+        <name>~wxDebugReportPreview</name>
+        <briefdescription>
+<para>Destructor is trivial as well but should be virtual for a base class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_debug_report_preview_1a713eb7e9ed71174e57753c08eb4e4ee7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDebugReportPreview::Show</definition>
+        <argsstring>(wxDebugReport &amp;dbgrpt) const =0</argsstring>
+        <name>Show</name>
+        <reimplementedby refid="classwx_debug_report_preview_std_1a5b6ea5f83145afd8904fe2af5d19074b">Show</reimplementedby>
+        <param>
+          <type><ref refid="classwx_debug_report" kindref="compound">wxDebugReport</ref> &amp;</type>
+          <declname>dbgrpt</declname>
+        </param>
+        <briefdescription>
+<para>Present the report to the user and allow him to modify it by removing some or all of the files and, potentially, adding some notes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the report should be processed or false if the user chose to cancel report generation or removed all files from it. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class presents the debug report to the user and allows him to veto report entirely or remove some parts of it. </para>    </briefdescription>
+    <detaileddescription>
+<para>Although not mandatory, using this class is strongly recommended as data included in the debug report might contain sensitive private information and the user should be notified about it as well as having a possibility to examine the data which had been gathered to check whether this is effectively the case and discard the debug report if it is.</para><para><ref refid="classwx_debug_report_preview" kindref="compound">wxDebugReportPreview</ref> is an abstract base class, currently the only concrete class deriving from it is <ref refid="classwx_debug_report_preview_std" kindref="compound">wxDebugReportPreviewStd</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5552">
+        <label>wxDebugReportPreview</label>
+        <link refid="classwx_debug_report_preview"/>
+      </node>
+      <node id="5553">
+        <label>wxDebugReportPreviewStd</label>
+        <link refid="classwx_debug_report_preview_std"/>
+        <childnode refid="5552" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" bodystart="26" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classwx_debug_report_preview_1a713eb7e9ed71174e57753c08eb4e4ee7" prot="public" virt="pure-virtual"><scope>wxDebugReportPreview</scope><name>Show</name></member>
+      <member refid="classwx_debug_report_preview_1a25c6bed0bf6ad6acf5d06817f520fb57" prot="public" virt="non-virtual"><scope>wxDebugReportPreview</scope><name>wxDebugReportPreview</name></member>
+      <member refid="classwx_debug_report_preview_1ac538eb0d478526f3a88154b7897d07cf" prot="public" virt="virtual"><scope>wxDebugReportPreview</scope><name>~wxDebugReportPreview</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

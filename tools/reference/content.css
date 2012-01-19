@@ -1,0 +1,90 @@
+body *
+{
+	font-family: courier, sans-serif;
+}
+
+a
+{
+	color: #194CCE;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+a:active
+{
+	color: red;
+}
+
+h1
+{
+	padding: 5px;
+	color: #fff;
+	background-color: #6C7EB7;
+	font-family: Arial, sans-serif;
+}
+
+h2
+{
+	color: #333;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+}
+
+h3
+{
+	color: #4A4A4A;
+}
+
+hr
+{
+	border: 0;
+	border-bottom: dotted 1px #d3d3d3;
+	background-color: transparent;
+	color: transparent;
+	height: 1px;
+}
+
+p, p *
+{
+	font-family: verdana, sans-serif;
+}
+
+.return-type
+{
+	color: blue;
+}
+
+.parameter-type
+{
+	font-weight: bold;
+	color: #194CCE;
+}
+
+.parameter-value
+{
+	font-style: italic;
+}
+
+.parameter-name
+{
+	color: #555;
+}
+
+.constants-list li
+{
+	margin: 5px 0 5px 0;
+}
+
+.footer
+{
+	text-align: center;
+	margin-top: 25px; 
+	color: #786E6E; 
+	font-family: verdana, sans-serif; 
+	border-top: solid 3px #6C7EB7; 
+	padding: 5px;
+}

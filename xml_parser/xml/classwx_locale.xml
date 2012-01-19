@@ -1,0 +1,683 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_locale" kind="class" prot="public">
+    <compoundname>wxLocale</compoundname>
+    <includes local="no">wx/intl.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_locale_1ab536c2c82f72f70e7c15e1091eb9e5cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxLocale::wxLocale</definition>
+        <argsstring>()</argsstring>
+        <name>wxLocale</name>
+        <briefdescription>
+<para>This is the default constructor and it does nothing to initialize the object: <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref> must be used to do that. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a6e32eaba74aff33f10803bf881c1ca33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxLocale::wxLocale</definition>
+        <argsstring>(int language, int flags=wxLOCALE_LOAD_DEFAULT)</argsstring>
+        <name>wxLocale</name>
+        <param>
+          <type>int</type>
+          <declname>language</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxLOCALE_LOAD_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>See <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref> for parameters description. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a08a66e0450161b86285c367486433f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxLocale::wxLocale</definition>
+        <argsstring>(const wxString &amp;name, const wxString &amp;shortName=wxEmptyString, const wxString &amp;locale=wxEmptyString, bool bLoadDefault=true)</argsstring>
+        <name>wxLocale</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>shortName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>locale</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bLoadDefault</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>See <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref> for parameters description. </para>        </briefdescription>
+        <detaileddescription>
+<para>The call of this function has several global side effects which you should understand: first of all, the application locale is changed - note that this will affect many of standard C library functions such as printf() or strftime(). Second, this <ref refid="classwx_locale" kindref="compound">wxLocale</ref> object becomes the new current global locale for the application and so all subsequent calls to <ref refid="group__group__funcmacro__string_1ga223e9aea5b1a2252c7e632613c7b9a74" kindref="member">wxGetTranslation()</ref> will try to translate the messages using the message catalogs for this locale. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1ad4a6e67f200f59311471fcfba6ed9dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxLocale::~wxLocale</definition>
+        <argsstring>()</argsstring>
+        <name>~wxLocale</name>
+        <briefdescription>
+<para>The destructor, like the constructor, also has global side effects: the previously set locale is restored and so the changes described in <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref> documentation are rolled back. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a1e9eb6387646a94c65d1493b5be7641c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLocale::AddCatalog</definition>
+        <argsstring>(const wxString &amp;domain)</argsstring>
+        <name>AddCatalog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" kindref="member">wxTranslations::AddCatalog(const wxString&amp;)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1aa42e2d9e0537afcf009d334732e112b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLocale::AddCatalog</definition>
+        <argsstring>(const wxString &amp;domain, wxLanguage msgIdLanguage)</argsstring>
+        <name>AddCatalog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type><ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref></type>
+          <declname>msgIdLanguage</declname>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_translations_1a8b0bc47ae1b33f14ae294dbe55da76bd" kindref="member">wxTranslations::AddCatalog(const wxString&amp;, wxLanguage)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1ae6ce1aee1d8b54274b5889ad27bf7893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLocale::AddCatalog</definition>
+        <argsstring>(const wxString &amp;domain, wxLanguage msgIdLanguage, const wxString &amp;msgIdCharset)</argsstring>
+        <name>AddCatalog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type><ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref></type>
+          <declname>msgIdLanguage</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>msgIdCharset</declname>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_translations_1a7e049aa6b090972e7924392c6f5d6a99" kindref="member">wxTranslations::AddCatalog(const wxString&amp;, wxLanguage, const wxString&amp;)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxLocale::GetCanonicalName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCanonicalName</name>
+        <briefdescription>
+<para>Returns the canonical form of current locale name. </para>        </briefdescription>
+        <detaileddescription>
+<para>Canonical form is the one that is used on UNIX systems: it is a two- or five-letter string in xx or xx_YY format, where xx is ISO 639 code of language and YY is ISO 3166 code of the country. Examples are &quot;en&quot;, &quot;en_GB&quot;, &quot;en_US&quot; or &quot;fr_FR&quot;. This form is internally used when looking up message catalogs. Compare <ref refid="classwx_locale_1a01a3752dfba43d28ea5d14cda63846da" kindref="member">GetSysName()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1abdefae235ce4de0314f016956331398a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxLocale::GetHeaderValue</definition>
+        <argsstring>(const wxString &amp;header, const wxString &amp;domain=wxEmptyString) const </argsstring>
+        <name>GetHeaderValue</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_translations_1a49b9c3ec1e9487a4473f09259284c61a" kindref="member">wxTranslations::GetHeaderValue()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a6516d2529c936e441d7d23c42dc3e1b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxLocale::GetLanguage</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLanguage</name>
+        <briefdescription>
+<para>Returns the <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> constant of current language. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that you can call this function only if you used the form of <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref> that takes <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> argument. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a2ae3d7a2e2df6e5de02e2b89ff7c7246" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxLocale::GetLocale</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLocale</name>
+        <briefdescription>
+<para>Returns the locale name as passed to the constructor or <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a full, human-readable name, e.g. &quot;English&quot; or &quot;French&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1abe917e8aaabd5a0bf05e43625a9ff94a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxLocale::GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+<para>Returns the current short name for the locale (as given to the constructor or the <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref> function). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="355"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1ab7bfa739af4e02181c822039a855ff22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>virtual const wxString&amp; wxLocale::GetString</definition>
+        <argsstring>(const wxString &amp;origString, const wxString &amp;domain=wxEmptyString) const </argsstring>
+        <name>GetString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>origString</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" kindref="member">wxTranslations::GetString(const wxString&amp;, const wxString&amp;) const</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a73800e8acd6fac2869e1c913b5d80f90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>virtual const wxString&amp; wxLocale::GetString</definition>
+        <argsstring>(const wxString &amp;origString, const wxString &amp;origString2, unsigned n, const wxString &amp;domain=wxEmptyString) const </argsstring>
+        <name>GetString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>origString</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>origString2</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_translations_1a7480771c24a53e0ccf1170a3a70b2ba4" kindref="member">wxTranslations::GetString(const wxString&amp;, const wxString&amp;, unsigned, const wxString&amp;) const</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="368"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a01a3752dfba43d28ea5d14cda63846da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxLocale::GetSysName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSysName</name>
+        <briefdescription>
+<para>Returns current platform-specific locale name as passed to setlocale(). </para>        </briefdescription>
+        <detaileddescription>
+<para>Compare <ref refid="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" kindref="member">GetCanonicalName()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLocale::Init</definition>
+        <argsstring>(int language=wxLANGUAGE_DEFAULT, int flags=wxLOCALE_LOAD_DEFAULT)</argsstring>
+        <name>Init</name>
+        <param>
+          <type>int</type>
+          <declname>language</declname>
+          <defval>wxLANGUAGE_DEFAULT</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxLOCALE_LOAD_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="classwx_locale" kindref="compound">wxLocale</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+<para>The call of this function has several global side effects which you should understand: first of all, the application locale is changed - note that this will affect many of standard C library functions such as printf() or strftime(). Second, this <ref refid="classwx_locale" kindref="compound">wxLocale</ref> object becomes the new current global locale for the application and so all subsequent calls to <ref refid="group__group__funcmacro__string_1ga223e9aea5b1a2252c7e632613c7b9a74" kindref="member">wxGetTranslation()</ref> will try to translate the messages using the message catalogs for this locale.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>language</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> identifier of the locale. <computeroutput>wxLANGUAGE_DEFAULT</computeroutput> has special meaning -- <ref refid="classwx_locale" kindref="compound">wxLocale</ref> will use system&apos;s default language (see <ref refid="classwx_locale_1ae8f67045995e55b8d853405a66365fd5" kindref="member">GetSystemLanguage()</ref>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Combination of the following:<itemizedlist>
+<listitem><para>wxLOCALE_LOAD_DEFAULT: Load the message catalog for the given locale containing the translations of standard wxWidgets messages automatically.</para></listitem><listitem><para>wxLOCALE_DONT_LOAD_DEFAULT: Negation of wxLOCALE_LOAD_DEFAULT.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success or false if the given locale couldn&apos;t be set. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a294bb96e0162dd844a64f9f6ce260030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLocale::Init</definition>
+        <argsstring>(const wxString &amp;name, const wxString &amp;shortName=wxEmptyString, const wxString &amp;locale=wxEmptyString, bool bLoadDefault=true)</argsstring>
+        <name>Init</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>shortName</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>locale</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bLoadDefault</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000026"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This form is deprecated, use the other one unless you know what you are doing.</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the locale. Only used in diagnostic messages. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>short</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The standard 2 letter locale abbreviation; it is used as the directory prefix when looking for the message catalog files. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>locale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter for the call to setlocale(). Note that it is platform-specific. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bLoadDefault</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>May be set to false to prevent loading of the message catalog for the given locale containing the translations of standard wxWidgets messages. This parameter would be rarely used in normal circumstances. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a34cfcc10fafd0e7c8c3186fb8660e81f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLocale::IsLoaded</definition>
+        <argsstring>(const wxString &amp;domain) const </argsstring>
+        <name>IsLoaded</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_translations_1a1baf790dc4226869a727e03a59ff5b25" kindref="member">wxTranslations::IsLoaded()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="483"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1ad31448ac1181c1ee4be56951051f1707" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxLocale::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the locale could be set successfully. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="488"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_locale_1ab9c802bd24b0dc1e12a417e7b8febc17" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxLocale::AddCatalogLookupPathPrefix</definition>
+        <argsstring>(const wxString &amp;prefix)</argsstring>
+        <name>AddCatalogLookupPathPrefix</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+<para>Calls <ref refid="classwx_file_translations_loader_1aef1c18a8e931eaff259e0d1b84e4bd94" kindref="member">wxFileTranslationsLoader::AddCatalogLookupPathPrefix()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1ad65c3a047d9a3dd9dad997337b69f546" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxLocale::AddLanguage</definition>
+        <argsstring>(const wxLanguageInfo &amp;info)</argsstring>
+        <name>AddLanguage</name>
+        <param>
+          <type>const <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Adds custom, user-defined language to the database of known languages. </para>        </briefdescription>
+        <detaileddescription>
+<para>This database is used in conjunction with the first form of <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1ad199b975b09ba5c8c2f90da955f0748a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> *</type>
+        <definition>static const wxLanguageInfo* wxLocale::FindLanguageInfo</definition>
+        <argsstring>(const wxString &amp;locale)</argsstring>
+        <name>FindLanguageInfo</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>locale</declname>
+        </param>
+        <briefdescription>
+<para>This function may be used to find the language description structure for the given locale, specified either as a two letter ISO language code (for example, &quot;pt&quot;), a language code followed by the country code (&quot;pt_BR&quot;) or a full, human readable, language description (&quot;Portuguese-Brazil&quot;). </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns the information for the given language or NULL if this language is unknown. Note that even if the returned pointer is valid, the caller should <emphasis>not</emphasis> delete it.</para><para><simplesect kind="see"><para><ref refid="classwx_locale_1a3584472a1458ce535027576c77e9565b" kindref="member">GetLanguageInfo()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a3584472a1458ce535027576c77e9565b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> *</type>
+        <definition>static const wxLanguageInfo* wxLocale::GetLanguageInfo</definition>
+        <argsstring>(int lang)</argsstring>
+        <name>GetLanguageInfo</name>
+        <param>
+          <type>int</type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+<para>Returns a pointer to <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> structure containing information about the given language or NULL if this language is unknown. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that even if the returned pointer is valid, the caller should <emphasis>not</emphasis> delete it.</para><para>See <ref refid="classwx_locale_1ad65c3a047d9a3dd9dad997337b69f546" kindref="member">AddLanguage()</ref> for the <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> description. As with <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref>, <computeroutput>wxLANGUAGE_DEFAULT</computeroutput> has the special meaning if passed as an argument to this function and in this case the result of <ref refid="classwx_locale_1ae8f67045995e55b8d853405a66365fd5" kindref="member">GetSystemLanguage()</ref> is used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a9d9f7478358bf7676da611dfbfc5da82" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxLocale::GetLanguageName</definition>
+        <argsstring>(int lang)</argsstring>
+        <name>GetLanguageName</name>
+        <param>
+          <type>int</type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+<para>Returns English name of the given language or empty string if this language is unknown. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_locale_1a3584472a1458ce535027576c77e9565b" kindref="member">GetLanguageInfo()</ref> for a remark about special meaning of <computeroutput>wxLANGUAGE_DEFAULT</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a881139e58ad0f3ed1d54868e2e2161fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxLocale::GetLanguageCanonicalName</definition>
+        <argsstring>(int lang)</argsstring>
+        <name>GetLanguageCanonicalName</name>
+        <param>
+          <type>int</type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+<para>Returns canonical name (see <ref refid="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" kindref="member">GetCanonicalName()</ref>) of the given language or empty string if this language is unknown. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_locale_1a3584472a1458ce535027576c77e9565b" kindref="member">GetLanguageInfo()</ref> for a remark about special meaning of <computeroutput>wxLANGUAGE_DEFAULT</computeroutput>.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="342"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1aa807dd0db36c3bd6556c2a37014239d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+        <definition>static wxFontEncoding wxLocale::GetSystemEncoding</definition>
+        <argsstring>()</argsstring>
+        <name>GetSystemEncoding</name>
+        <briefdescription>
+<para>Tries to detect the user&apos;s default font encoding. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns <ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding()</ref> value or <computeroutput>wxFONTENCODING_SYSTEM</computeroutput> if it couldn&apos;t be determined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a301032f2ecdf0be5321fab2281c71206" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxLocale::GetSystemEncodingName</definition>
+        <argsstring>()</argsstring>
+        <name>GetSystemEncodingName</name>
+        <briefdescription>
+<para>Tries to detect the name of the user&apos;s default font encoding. </para>        </briefdescription>
+        <detaileddescription>
+<para>This string isn&apos;t particularly useful for the application as its form is platform-dependent and so you should probably use <ref refid="classwx_locale_1aa807dd0db36c3bd6556c2a37014239d6" kindref="member">GetSystemEncoding()</ref> instead.</para><para>Returns a user-readable string value or an empty string if it couldn&apos;t be determined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1ae8f67045995e55b8d853405a66365fd5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int wxLocale::GetSystemLanguage</definition>
+        <argsstring>()</argsstring>
+        <name>GetSystemLanguage</name>
+        <briefdescription>
+<para>Tries to detect the user&apos;s default language setting. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns the <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> value or <computeroutput>wxLANGUAGE_UNKNOWN</computeroutput> if the language-guessing algorithm failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1acd6eccc8900847c0a29e7a4598c7d83f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxLocale::GetInfo</definition>
+        <argsstring>(wxLocaleInfo index, wxLocaleCategory cat=wxLOCALE_CAT_DEFAULT)</argsstring>
+        <name>GetInfo</name>
+        <param>
+          <type><ref refid="intl_8h_1a54d3421c44d428cc5cce0c772d583c34" kindref="member">wxLocaleInfo</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="intl_8h_1a934e5f080f46c8c1b3c043775466f121" kindref="member">wxLocaleCategory</ref></type>
+          <declname>cat</declname>
+          <defval>wxLOCALE_CAT_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Get the values of the given locale-dependent datum. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the value of the locale-specific option specified by the given <emphasis>index</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the elements of wxLocaleInfo enum. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The category to use with the given index or wxLOCALE_CAT_DEFAULT if the index can only apply to a single category. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The option value or empty string if the function failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_locale_1a8e36e46b5b82f71b44ec0363a4c61288" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxLocale::IsAvailable</definition>
+        <argsstring>(int lang)</argsstring>
+        <name>IsAvailable</name>
+        <param>
+          <type>int</type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+<para>Check whether the operating system and/or C run time environment supports this locale. </para>        </briefdescription>
+        <detaileddescription>
+<para>For example in Windows 2000 and Windows XP, support for many locales is not installed by default. Returns true if the locale is supported.</para><para>The argument <emphasis>lang</emphasis> is the <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> identifier. To obtain this for a given a two letter ISO language code, use <ref refid="classwx_locale_1ad199b975b09ba5c8c2f90da955f0748a" kindref="member">FindLanguageInfo()</ref> to obtain its <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> structure. See <ref refid="classwx_locale_1ad65c3a047d9a3dd9dad997337b69f546" kindref="member">AddLanguage()</ref> for the <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> description.</para><para><simplesect kind="since"><para>2.7.1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="478"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_locale" kindref="compound">wxLocale</ref> class encapsulates all language-dependent settings and is a generalization of the C locale concept. </para>    </briefdescription>
+    <detaileddescription>
+<para>In wxWidgets this class manages current locale. It also initializes and activates <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> object that manages message catalogs.</para><para>For a list of the supported languages, please see <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> enum values. These constants may be used to specify the language in <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">wxLocale::Init</ref> and are returned by <ref refid="classwx_locale_1ae8f67045995e55b8d853405a66365fd5" kindref="member">wxLocale::GetSystemLanguage</ref>.</para><para><bold>wxPerl Note:</bold> In wxPerl you can&apos;t use the &apos;_&apos; function name, so the <computeroutput>Wx::Locale</computeroutput> module can export the <computeroutput>gettext</computeroutput> and <computeroutput>gettext_noop</computeroutput> under any given name.</para><para><programlisting><codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>this<sp/>imports<sp/>gettext<sp/>(<sp/>equivalent<sp/>to<sp/>Wx::GetTranslation</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>and<sp/>gettext_noop<sp/>(<sp/>a<sp/>noop<sp/>)</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>into<sp/>your<sp/>module</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>use<sp/>Wx::Locale<sp/>qw(:</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>....</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>use<sp/>the<sp/>functions</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print<sp/>gettext(<sp/></highlight><highlight class="stringliteral">&quot;Panic!&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>button<sp/>=<sp/>Wx::Button-</highlight><highlight class="keyword">new</highlight><highlight class="normal">(<sp/>window,<sp/>-1,<sp/>gettext(<sp/></highlight><highlight class="stringliteral">&quot;Label&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+</programlisting></para><para>If you need to translate a lot of strings, then adding gettext( ) around each one is a long task ( that is why <ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member">_( )</ref> was introduced ), so just choose a shorter name for gettext:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>use<sp/>Wx::Locale<sp/></highlight><highlight class="stringliteral">&apos;gettext&apos;</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="charliteral">&apos;t&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;gettext_noop&apos;</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;gettext_noop&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>...</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>use<sp/>the<sp/>functions</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print<sp/>t(<sp/></highlight><highlight class="stringliteral">&quot;Panic!!&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>...</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="overview__i18n" kindref="compound">Internationalization</ref>, <ref refid="page__samples_1page_samples_internat" kindref="member">Internationalization Sample</ref>, <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref>, <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="214" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="213" bodyend="489"/>
+    <listofallmembers>
+      <member refid="classwx_locale_1a1e9eb6387646a94c65d1493b5be7641c" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>AddCatalog</name></member>
+      <member refid="classwx_locale_1aa42e2d9e0537afcf009d334732e112b2" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>AddCatalog</name></member>
+      <member refid="classwx_locale_1ae6ce1aee1d8b54274b5889ad27bf7893" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>AddCatalog</name></member>
+      <member refid="classwx_locale_1ab9c802bd24b0dc1e12a417e7b8febc17" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>AddCatalogLookupPathPrefix</name></member>
+      <member refid="classwx_locale_1ad65c3a047d9a3dd9dad997337b69f546" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>AddLanguage</name></member>
+      <member refid="classwx_locale_1ad199b975b09ba5c8c2f90da955f0748a" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>FindLanguageInfo</name></member>
+      <member refid="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetCanonicalName</name></member>
+      <member refid="classwx_locale_1abdefae235ce4de0314f016956331398a" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetHeaderValue</name></member>
+      <member refid="classwx_locale_1acd6eccc8900847c0a29e7a4598c7d83f" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetInfo</name></member>
+      <member refid="classwx_locale_1a6516d2529c936e441d7d23c42dc3e1b4" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetLanguage</name></member>
+      <member refid="classwx_locale_1a881139e58ad0f3ed1d54868e2e2161fe" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetLanguageCanonicalName</name></member>
+      <member refid="classwx_locale_1a3584472a1458ce535027576c77e9565b" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetLanguageInfo</name></member>
+      <member refid="classwx_locale_1a9d9f7478358bf7676da611dfbfc5da82" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetLanguageName</name></member>
+      <member refid="classwx_locale_1a2ae3d7a2e2df6e5de02e2b89ff7c7246" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetLocale</name></member>
+      <member refid="classwx_locale_1abe917e8aaabd5a0bf05e43625a9ff94a" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetName</name></member>
+      <member refid="classwx_locale_1ab7bfa739af4e02181c822039a855ff22" prot="public" virt="virtual"><scope>wxLocale</scope><name>GetString</name></member>
+      <member refid="classwx_locale_1a73800e8acd6fac2869e1c913b5d80f90" prot="public" virt="virtual"><scope>wxLocale</scope><name>GetString</name></member>
+      <member refid="classwx_locale_1a01a3752dfba43d28ea5d14cda63846da" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetSysName</name></member>
+      <member refid="classwx_locale_1aa807dd0db36c3bd6556c2a37014239d6" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetSystemEncoding</name></member>
+      <member refid="classwx_locale_1a301032f2ecdf0be5321fab2281c71206" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetSystemEncodingName</name></member>
+      <member refid="classwx_locale_1ae8f67045995e55b8d853405a66365fd5" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>GetSystemLanguage</name></member>
+      <member refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>Init</name></member>
+      <member refid="classwx_locale_1a294bb96e0162dd844a64f9f6ce260030" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>Init</name></member>
+      <member refid="classwx_locale_1a8e36e46b5b82f71b44ec0363a4c61288" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>IsAvailable</name></member>
+      <member refid="classwx_locale_1a34cfcc10fafd0e7c8c3186fb8660e81f" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>IsLoaded</name></member>
+      <member refid="classwx_locale_1ad31448ac1181c1ee4be56951051f1707" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>IsOk</name></member>
+      <member refid="classwx_locale_1ab536c2c82f72f70e7c15e1091eb9e5cf" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>wxLocale</name></member>
+      <member refid="classwx_locale_1a6e32eaba74aff33f10803bf881c1ca33" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>wxLocale</name></member>
+      <member refid="classwx_locale_1a08a66e0450161b86285c367486433f49" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>wxLocale</name></member>
+      <member refid="classwx_locale_1ad4a6e67f200f59311471fcfba6ed9dd2" prot="public" virt="virtual"><scope>wxLocale</scope><name>~wxLocale</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_grid_cell_attr" kind="class" prot="public">
+    <compoundname>wxGridCellAttr</compoundname>
+    <includes local="no">wx/grid.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440" prot="public" static="no">
+        <name>wxAttrKind</name>
+        <enumvalue id="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440a64c5695fae5610f4c16e2e34e09a85fd" prot="public">
+          <name>Any</name>
+          <briefdescription>
+<para>Return the combined effective attribute for the cell. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440aff982b237d3e09351a8f2bbab5d902ff" prot="public">
+          <name>Cell</name>
+          <briefdescription>
+<para>Return the attribute explicitly set for this cell. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440aecee1c73c99b037163924c15926326c1" prot="public">
+          <name>Row</name>
+          <briefdescription>
+<para>Return the attribute set for this cells row. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440ae1667f512e2dd0b7d65c265b995bbf01" prot="public">
+          <name>Col</name>
+          <briefdescription>
+<para>Return the attribute set for this cells column. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Kind of the attribute to retrieve. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_grid_cell_attr_provider_1a26ce9f9fd2e86e649b031b6211b6ab0a" kindref="member">wxGridCellAttrProvider::GetAttr()</ref>, <ref refid="classwx_grid_table_base_1af031321a86e3835d23177ffe53eee643" kindref="member">wxGridTableBase::GetAttr()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="728" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="727" bodyend="740"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a544f8205e657608299e63bb154acfe77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridCellAttr::wxGridCellAttr</definition>
+        <argsstring>(wxGridCellAttr *attrDefault=NULL)</argsstring>
+        <name>wxGridCellAttr</name>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
+          <declname>attrDefault</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="745"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1aec5dc1c4c8abceda074bcd9d4cb22534" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridCellAttr::wxGridCellAttr</definition>
+        <argsstring>(const wxColour &amp;colText, const wxColour &amp;colBack, const wxFont &amp;font, int hAlign, int vAlign)</argsstring>
+        <name>wxGridCellAttr</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colText</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colBack</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hAlign</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vAlign</declname>
+        </param>
+        <briefdescription>
+<para>Constructor specifying some of the often used attributes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="750"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1afaacb45ec1f3d2dadc281040d6c3d27a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
+        <definition>wxGridCellAttr* wxGridCellAttr::Clone</definition>
+        <argsstring>() const </argsstring>
+        <name>Clone</name>
+        <briefdescription>
+<para>Creates a new copy of this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="755"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::DecRef</definition>
+        <argsstring>()</argsstring>
+        <name>DecRef</name>
+        <briefdescription>
+<para>This class is reference counted: it is created with ref count of 1, so calling <ref refid="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" kindref="member">DecRef()</ref> once will delete it. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calling <ref refid="classwx_grid_cell_attr_1afd6f163592a87b4ed66e9142cccbcf43" kindref="member">IncRef()</ref> allows to lock it until the matching <ref refid="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" kindref="member">DecRef()</ref> is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="762"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a7e75484460cddef9f61f27fb585d575f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::GetAlignment</definition>
+        <argsstring>(int *hAlign, int *vAlign) const </argsstring>
+        <name>GetAlignment</name>
+        <param>
+          <type>int *</type>
+          <declname>hAlign</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vAlign</declname>
+        </param>
+        <briefdescription>
+<para>Get the alignment to use for the cell with the given attribute. </para>        </briefdescription>
+        <detaileddescription>
+<para>If this attribute doesn&apos;t specify any alignment, the default attribute alignment is used (which can be changed using <ref refid="classwx_grid_1ae4dabe2d98427cd34ade7088c204bf9f" kindref="member">wxGrid::SetDefaultCellAlignment()</ref> but is left and top by default).</para><para>Notice that <emphasis>hAlign</emphasis> and <emphasis>vAlign</emphasis> values are always overwritten by this function, use <ref refid="classwx_grid_cell_attr_1a84adcc498fe5ca6c34f771e2a54056f4" kindref="member">GetNonDefaultAlignment()</ref> if this is not desirable.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hAlign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Horizontal alignment is returned here if this argument is non-NULL. It is one of wxALIGN_LEFT, wxALIGN_CENTRE or wxALIGN_RIGHT. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vAlign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertical alignment is returned here if this argument is non-NULL. It is one of wxALIGN_TOP, wxALIGN_CENTRE or wxALIGN_BOTTOM. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="781"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a2cb3e26b3c6206904860b0ff327276ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+        <definition>const wxColour&amp; wxGridCellAttr::GetBackgroundColour</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBackgroundColour</name>
+        <briefdescription>
+<para>Returns the background colour. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="786"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a79286ff24bcb292f75849958a616fdc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_grid_cell_editor" kindref="compound">wxGridCellEditor</ref> *</type>
+        <definition>wxGridCellEditor* wxGridCellAttr::GetEditor</definition>
+        <argsstring>(const wxGrid *grid, int row, int col) const </argsstring>
+        <name>GetEditor</name>
+        <param>
+          <type>const <ref refid="classwx_grid" kindref="compound">wxGrid</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Returns the cell editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="791"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a3ae4beed21bb500a3255066ba42bfa8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>const wxFont&amp; wxGridCellAttr::GetFont</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFont</name>
+        <briefdescription>
+<para>Returns the font. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="796"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a84adcc498fe5ca6c34f771e2a54056f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::GetNonDefaultAlignment</definition>
+        <argsstring>(int *hAlign, int *vAlign) const </argsstring>
+        <name>GetNonDefaultAlignment</name>
+        <param>
+          <type>int *</type>
+          <declname>hAlign</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vAlign</declname>
+        </param>
+        <briefdescription>
+<para>Get the alignment defined by this attribute. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unlike <ref refid="classwx_grid_cell_attr_1a7e75484460cddef9f61f27fb585d575f" kindref="member">GetAlignment()</ref> this function only modifies <emphasis>hAlign</emphasis> and <emphasis>vAlign</emphasis> if this attribute does define a non-default alignment. This means that they must be initialized before calling this function and that their values will be preserved unchanged if they are different from wxALIGN_INVALID.</para><para>For example, the following fragment can be used to use the cell alignment if one is defined but right-align its contents by default (instead of left-aligning it by default) while still using the default vertical alignment: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hAlign<sp/>=<sp/><ref refid="defs_8h_1a543dd017a172dc316253a8a1f351dde9a0e5767d868ab07b01a162db7fe56e578" kindref="member">wxALIGN_RIGHT</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vAlign<sp/>=<sp/><ref refid="defs_8h_1a543dd017a172dc316253a8a1f351dde9a0b3f0e2a21a5923e4f9d854be222b3b7" kindref="member" tooltip="A value different from any valid alignment value.">wxALIGN_INVALID</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attr.GetNonDefaultAlignment(&amp;hAlign,<sp/>&amp;vAlign);</highlight></codeline>
+</programlisting></para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="819"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1ad3809a482a4352aff5e6d0119ffda2b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref> *</type>
+        <definition>wxGridCellRenderer* wxGridCellAttr::GetRenderer</definition>
+        <argsstring>(const wxGrid *grid, int row, int col) const </argsstring>
+        <name>GetRenderer</name>
+        <param>
+          <type>const <ref refid="classwx_grid" kindref="compound">wxGrid</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Returns the cell renderer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="824"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1aa81e78d44e7bfbd3e72aec7c0d855393" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+        <definition>const wxColour&amp; wxGridCellAttr::GetTextColour</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTextColour</name>
+        <briefdescription>
+<para>Returns the text colour. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="829"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a4ac91ab1a5e731280f6ba6b2eb0cf49f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellAttr::HasAlignment</definition>
+        <argsstring>() const </argsstring>
+        <name>HasAlignment</name>
+        <briefdescription>
+<para>Returns true if this attribute has a valid alignment set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="834"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a2d7c282e3010625513b4178da7a152eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellAttr::HasBackgroundColour</definition>
+        <argsstring>() const </argsstring>
+        <name>HasBackgroundColour</name>
+        <briefdescription>
+<para>Returns true if this attribute has a valid background colour set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="839"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a21b089217c94f70d5581a33936416ba9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellAttr::HasEditor</definition>
+        <argsstring>() const </argsstring>
+        <name>HasEditor</name>
+        <briefdescription>
+<para>Returns true if this attribute has a valid cell editor set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="844"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a2ddbea7be26c17a69e6ff433f9062598" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellAttr::HasFont</definition>
+        <argsstring>() const </argsstring>
+        <name>HasFont</name>
+        <briefdescription>
+<para>Returns true if this attribute has a valid font set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="849"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1aca31de3d88e5bb4247684ccca60ee413" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellAttr::HasRenderer</definition>
+        <argsstring>() const </argsstring>
+        <name>HasRenderer</name>
+        <briefdescription>
+<para>Returns true if this attribute has a valid cell renderer set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="854"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1ab6d46e429b570e7ac157576dcd9661d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellAttr::HasTextColour</definition>
+        <argsstring>() const </argsstring>
+        <name>HasTextColour</name>
+        <briefdescription>
+<para>Returns true if this attribute has a valid text colour set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="859"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1afd6f163592a87b4ed66e9142cccbcf43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::IncRef</definition>
+        <argsstring>()</argsstring>
+        <name>IncRef</name>
+        <briefdescription>
+<para>This class is reference counted: it is created with ref count of 1, so calling <ref refid="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" kindref="member">DecRef()</ref> once will delete it. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calling <ref refid="classwx_grid_cell_attr_1afd6f163592a87b4ed66e9142cccbcf43" kindref="member">IncRef()</ref> allows to lock it until the matching <ref refid="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" kindref="member">DecRef()</ref> is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="866"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a01248c3dde35f00379b879926dfd74b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellAttr::IsReadOnly</definition>
+        <argsstring>() const </argsstring>
+        <name>IsReadOnly</name>
+        <briefdescription>
+<para>Returns true if this cell is set as read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="871"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a37df7e8345e3649db7e40277a0c23478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::SetAlignment</definition>
+        <argsstring>(int hAlign, int vAlign)</argsstring>
+        <name>SetAlignment</name>
+        <param>
+          <type>int</type>
+          <declname>hAlign</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vAlign</declname>
+        </param>
+        <briefdescription>
+<para>Sets the alignment. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>hAlign</emphasis> can be one of <computeroutput>wxALIGN_LEFT</computeroutput>, <computeroutput>wxALIGN_CENTRE</computeroutput> or <computeroutput>wxALIGN_RIGHT</computeroutput> and <emphasis>vAlign</emphasis> can be one of <computeroutput>wxALIGN_TOP</computeroutput>, <computeroutput>wxALIGN_CENTRE</computeroutput> or <computeroutput>wxALIGN_BOTTOM</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="878"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1acb527e1463a4df7234bce6b8c3420ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::SetBackgroundColour</definition>
+        <argsstring>(const wxColour &amp;colBack)</argsstring>
+        <name>SetBackgroundColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colBack</declname>
+        </param>
+        <briefdescription>
+<para>Sets the background colour. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="883"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1afd5c2f4f037deed9dd25ab5570d8011b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::SetDefAttr</definition>
+        <argsstring>(wxGridCellAttr *defAttr)</argsstring>
+        <name>SetDefAttr</name>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
+          <declname>defAttr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000032"><xreftitle>Todo</xreftitle><xrefdescription><para>Needs documentation. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="888"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a12b19ca0f0ead1062f02831470112080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::SetEditor</definition>
+        <argsstring>(wxGridCellEditor *editor)</argsstring>
+        <name>SetEditor</name>
+        <param>
+          <type><ref refid="classwx_grid_cell_editor" kindref="compound">wxGridCellEditor</ref> *</type>
+          <declname>editor</declname>
+        </param>
+        <briefdescription>
+<para>Sets the editor to be used with the cells with this attribute. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="893"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1aea145852c52bd1310362db6b6711cace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::SetFont</definition>
+        <argsstring>(const wxFont &amp;font)</argsstring>
+        <name>SetFont</name>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="898"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1af5c0bfc11a1d5e09557a00d3b54a163b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::SetReadOnly</definition>
+        <argsstring>(bool isReadOnly=true)</argsstring>
+        <name>SetReadOnly</name>
+        <param>
+          <type>bool</type>
+          <declname>isReadOnly</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Sets the cell as read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="903"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a97d3c498325f6024653b74dcc4609e0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::SetRenderer</definition>
+        <argsstring>(wxGridCellRenderer *renderer)</argsstring>
+        <name>SetRenderer</name>
+        <param>
+          <type><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref> *</type>
+          <declname>renderer</declname>
+        </param>
+        <briefdescription>
+<para>Sets the renderer to be used for cells with this attribute. </para>        </briefdescription>
+        <detaileddescription>
+<para>Takes ownership of the pointer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="909"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_attr_1a19b6fe93b5fd949c201fa38284eef603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellAttr::SetTextColour</definition>
+        <argsstring>(const wxColour &amp;colText)</argsstring>
+        <name>SetTextColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colText</declname>
+        </param>
+        <briefdescription>
+<para>Sets the text colour. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="914"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class can be used to alter the cells&apos; appearance in the grid by changing their attributes from the defaults. </para>    </briefdescription>
+    <detaileddescription>
+<para>An object of this class may be returned by <ref refid="classwx_grid_table_base_1af031321a86e3835d23177ffe53eee643" kindref="member">wxGridTableBase::GetAttr()</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="720" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="719" bodyend="915"/>
+    <listofallmembers>
+      <member refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440a64c5695fae5610f4c16e2e34e09a85fd" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>Any</name></member>
+      <member refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440aff982b237d3e09351a8f2bbab5d902ff" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>Cell</name></member>
+      <member refid="classwx_grid_cell_attr_1afaacb45ec1f3d2dadc281040d6c3d27a" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>Clone</name></member>
+      <member refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440ae1667f512e2dd0b7d65c265b995bbf01" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>Col</name></member>
+      <member refid="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>DecRef</name></member>
+      <member refid="classwx_grid_cell_attr_1a7e75484460cddef9f61f27fb585d575f" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>GetAlignment</name></member>
+      <member refid="classwx_grid_cell_attr_1a2cb3e26b3c6206904860b0ff327276ba" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>GetBackgroundColour</name></member>
+      <member refid="classwx_grid_cell_attr_1a79286ff24bcb292f75849958a616fdc2" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>GetEditor</name></member>
+      <member refid="classwx_grid_cell_attr_1a3ae4beed21bb500a3255066ba42bfa8d" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>GetFont</name></member>
+      <member refid="classwx_grid_cell_attr_1a84adcc498fe5ca6c34f771e2a54056f4" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>GetNonDefaultAlignment</name></member>
+      <member refid="classwx_grid_cell_attr_1ad3809a482a4352aff5e6d0119ffda2b7" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>GetRenderer</name></member>
+      <member refid="classwx_grid_cell_attr_1aa81e78d44e7bfbd3e72aec7c0d855393" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>GetTextColour</name></member>
+      <member refid="classwx_grid_cell_attr_1a4ac91ab1a5e731280f6ba6b2eb0cf49f" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>HasAlignment</name></member>
+      <member refid="classwx_grid_cell_attr_1a2d7c282e3010625513b4178da7a152eb" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>HasBackgroundColour</name></member>
+      <member refid="classwx_grid_cell_attr_1a21b089217c94f70d5581a33936416ba9" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>HasEditor</name></member>
+      <member refid="classwx_grid_cell_attr_1a2ddbea7be26c17a69e6ff433f9062598" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>HasFont</name></member>
+      <member refid="classwx_grid_cell_attr_1aca31de3d88e5bb4247684ccca60ee413" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>HasRenderer</name></member>
+      <member refid="classwx_grid_cell_attr_1ab6d46e429b570e7ac157576dcd9661d4" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>HasTextColour</name></member>
+      <member refid="classwx_grid_cell_attr_1afd6f163592a87b4ed66e9142cccbcf43" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>IncRef</name></member>
+      <member refid="classwx_grid_cell_attr_1a01248c3dde35f00379b879926dfd74b0" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>IsReadOnly</name></member>
+      <member refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440aecee1c73c99b037163924c15926326c1" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>Row</name></member>
+      <member refid="classwx_grid_cell_attr_1a37df7e8345e3649db7e40277a0c23478" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>SetAlignment</name></member>
+      <member refid="classwx_grid_cell_attr_1acb527e1463a4df7234bce6b8c3420ca3" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>SetBackgroundColour</name></member>
+      <member refid="classwx_grid_cell_attr_1afd5c2f4f037deed9dd25ab5570d8011b" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>SetDefAttr</name></member>
+      <member refid="classwx_grid_cell_attr_1a12b19ca0f0ead1062f02831470112080" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>SetEditor</name></member>
+      <member refid="classwx_grid_cell_attr_1aea145852c52bd1310362db6b6711cace" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>SetFont</name></member>
+      <member refid="classwx_grid_cell_attr_1af5c0bfc11a1d5e09557a00d3b54a163b" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>SetReadOnly</name></member>
+      <member refid="classwx_grid_cell_attr_1a97d3c498325f6024653b74dcc4609e0e" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>SetRenderer</name></member>
+      <member refid="classwx_grid_cell_attr_1a19b6fe93b5fd949c201fa38284eef603" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>SetTextColour</name></member>
+      <member refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>wxAttrKind</name></member>
+      <member refid="classwx_grid_cell_attr_1a544f8205e657608299e63bb154acfe77" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>wxGridCellAttr</name></member>
+      <member refid="classwx_grid_cell_attr_1aec5dc1c4c8abceda074bcd9d4cb22534" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>wxGridCellAttr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

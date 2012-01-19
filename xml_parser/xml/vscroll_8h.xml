@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="vscroll_8h" kind="file">
+    <compoundname>vscroll.h</compoundname>
+    <innerclass refid="classwx_var_scroll_helper_base" prot="public">wxVarScrollHelperBase</innerclass>
+    <innerclass refid="classwx_var_v_scroll_helper" prot="public">wxVarVScrollHelper</innerclass>
+    <innerclass refid="classwx_var_h_scroll_helper" prot="public">wxVarHScrollHelper</innerclass>
+    <innerclass refid="classwx_var_h_v_scroll_helper" prot="public">wxVarHVScrollHelper</innerclass>
+    <innerclass refid="classwx_v_scrolled_window" prot="public">wxVScrolledWindow</innerclass>
+    <innerclass refid="classwx_h_scrolled_window" prot="public">wxHScrolledWindow</innerclass>
+    <innerclass refid="classwx_h_v_scrolled_window" prot="public">wxHVScrolledWindow</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h"/>
+  </compounddef>
+</doxygen>

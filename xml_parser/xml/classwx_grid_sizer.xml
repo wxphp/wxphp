@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_grid_sizer" kind="class" prot="public">
+    <compoundname>wxGridSizer</compoundname>
+    <basecompoundref refid="classwx_sizer" prot="public" virt="non-virtual">wxSizer</basecompoundref>
+    <derivedcompoundref refid="classwx_flex_grid_sizer" prot="public" virt="non-virtual">wxFlexGridSizer</derivedcompoundref>
+    <includes local="no">wx/sizer.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_grid_sizer_1a54163c431608c0cbe6c74c9009ef1ca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridSizer::wxGridSizer</definition>
+        <argsstring>(int cols, int vgap, int hgap)</argsstring>
+        <name>wxGridSizer</name>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vgap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hgap</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classwx_grid_sizer" kindref="compound">wxGridSizer</ref> constructors. </para>        </briefdescription>
+        <detaileddescription>
+<para>Usually only the number of columns in the flex grid sizer needs to be specified using <emphasis>cols</emphasis> argument. The number of rows will be deduced automatically depending on the number of the elements added to the sizer.</para><para>If a constructor form with <emphasis>rows</emphasis> parameter is used (and the value of <emphasis>rows</emphasis> argument is not zero, meaning &quot;unspecified&quot;) the sizer will check that no more than <computeroutput>cols*rows</computeroutput> elements are added to it, i.e. that no more than the given number of <emphasis>rows</emphasis> is used. Adding less than maximally allowed number of items is not an error however.</para><para>Finally, it is also possible to specify the number of rows and use 0 for <emphasis>cols</emphasis>. In this case, the sizer will use the given fixed number of rows and as many columns as necessary.</para><para>The <emphasis>gap</emphasis> (or <emphasis>vgap</emphasis> and <emphasis>hgap</emphasis>, which correspond to the height and width of the <ref refid="classwx_size" kindref="compound">wxSize</ref> object) argument defines the size of the padding between the rows (its vertical component, or <emphasis>vgap</emphasis>) and columns (its horizontal component, or <emphasis>hgap</emphasis>), in pixels.</para><para><simplesect kind="since"><para>2.9.1 (except for the four argument overload) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1653"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a6b0493be4197aff5bf59f1e68676d711" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridSizer::wxGridSizer</definition>
+        <argsstring>(int cols, const wxSize &amp;gap=wxSize(0, 0))</argsstring>
+        <name>wxGridSizer</name>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>gap</declname>
+          <defval><ref refid="classwx_size" kindref="compound">wxSize</ref>(0, 0)</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="classwx_grid_sizer" kindref="compound">wxGridSizer</ref> constructors. </para>        </briefdescription>
+        <detaileddescription>
+<para>Usually only the number of columns in the flex grid sizer needs to be specified using <emphasis>cols</emphasis> argument. The number of rows will be deduced automatically depending on the number of the elements added to the sizer.</para><para>If a constructor form with <emphasis>rows</emphasis> parameter is used (and the value of <emphasis>rows</emphasis> argument is not zero, meaning &quot;unspecified&quot;) the sizer will check that no more than <computeroutput>cols*rows</computeroutput> elements are added to it, i.e. that no more than the given number of <emphasis>rows</emphasis> is used. Adding less than maximally allowed number of items is not an error however.</para><para>Finally, it is also possible to specify the number of rows and use 0 for <emphasis>cols</emphasis>. In this case, the sizer will use the given fixed number of rows and as many columns as necessary.</para><para>The <emphasis>gap</emphasis> (or <emphasis>vgap</emphasis> and <emphasis>hgap</emphasis>, which correspond to the height and width of the <ref refid="classwx_size" kindref="compound">wxSize</ref> object) argument defines the size of the padding between the rows (its vertical component, or <emphasis>vgap</emphasis>) and columns (its horizontal component, or <emphasis>hgap</emphasis>), in pixels.</para><para><simplesect kind="since"><para>2.9.1 (except for the four argument overload) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1654"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a1f0a163a3a216ed647452a31951b66bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridSizer::wxGridSizer</definition>
+        <argsstring>(int rows, int cols, int vgap, int hgap)</argsstring>
+        <name>wxGridSizer</name>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vgap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hgap</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classwx_grid_sizer" kindref="compound">wxGridSizer</ref> constructors. </para>        </briefdescription>
+        <detaileddescription>
+<para>Usually only the number of columns in the flex grid sizer needs to be specified using <emphasis>cols</emphasis> argument. The number of rows will be deduced automatically depending on the number of the elements added to the sizer.</para><para>If a constructor form with <emphasis>rows</emphasis> parameter is used (and the value of <emphasis>rows</emphasis> argument is not zero, meaning &quot;unspecified&quot;) the sizer will check that no more than <computeroutput>cols*rows</computeroutput> elements are added to it, i.e. that no more than the given number of <emphasis>rows</emphasis> is used. Adding less than maximally allowed number of items is not an error however.</para><para>Finally, it is also possible to specify the number of rows and use 0 for <emphasis>cols</emphasis>. In this case, the sizer will use the given fixed number of rows and as many columns as necessary.</para><para>The <emphasis>gap</emphasis> (or <emphasis>vgap</emphasis> and <emphasis>hgap</emphasis>, which correspond to the height and width of the <ref refid="classwx_size" kindref="compound">wxSize</ref> object) argument defines the size of the padding between the rows (its vertical component, or <emphasis>vgap</emphasis>) and columns (its horizontal component, or <emphasis>hgap</emphasis>), in pixels.</para><para><simplesect kind="since"><para>2.9.1 (except for the four argument overload) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1656"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1afa96e5d782116e2418ee440724b1a312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridSizer::wxGridSizer</definition>
+        <argsstring>(int rows, int cols, const wxSize &amp;gap)</argsstring>
+        <name>wxGridSizer</name>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>gap</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classwx_grid_sizer" kindref="compound">wxGridSizer</ref> constructors. </para>        </briefdescription>
+        <detaileddescription>
+<para>Usually only the number of columns in the flex grid sizer needs to be specified using <emphasis>cols</emphasis> argument. The number of rows will be deduced automatically depending on the number of the elements added to the sizer.</para><para>If a constructor form with <emphasis>rows</emphasis> parameter is used (and the value of <emphasis>rows</emphasis> argument is not zero, meaning &quot;unspecified&quot;) the sizer will check that no more than <computeroutput>cols*rows</computeroutput> elements are added to it, i.e. that no more than the given number of <emphasis>rows</emphasis> is used. Adding less than maximally allowed number of items is not an error however.</para><para>Finally, it is also possible to specify the number of rows and use 0 for <emphasis>cols</emphasis>. In this case, the sizer will use the given fixed number of rows and as many columns as necessary.</para><para>The <emphasis>gap</emphasis> (or <emphasis>vgap</emphasis> and <emphasis>hgap</emphasis>, which correspond to the height and width of the <ref refid="classwx_size" kindref="compound">wxSize</ref> object) argument defines the size of the padding between the rows (its vertical component, or <emphasis>vgap</emphasis>) and columns (its horizontal component, or <emphasis>hgap</emphasis>), in pixels.</para><para><simplesect kind="since"><para>2.9.1 (except for the four argument overload) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1657"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_grid_sizer_1a7942ae4d4d1abd31e4d1ac5f736e5843" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridSizer::GetCols</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCols</name>
+        <briefdescription>
+<para>Returns the number of columns that has been specified for the sizer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns zero if the sizer is automatically adjusting the number of columns depending on number of its children. To get the effective number of columns or rows being currently used, see <ref refid="classwx_grid_sizer_1a107ab1f41dee07ced0de5b3ed2e53e60" kindref="member">GetEffectiveColsCount()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1668"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1abe7f77c9c2a22a957e763b7f25f98a96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridSizer::GetRows</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRows</name>
+        <briefdescription>
+<para>Returns the number of rows that has been specified for the sizer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns zero if the sizer is automatically adjusting the number of rows depending on number of its children. To get the effective number of columns or rows being currently used, see <ref refid="classwx_grid_sizer_1a9e94e9f0ad79977117ca9ed62c59f9f8" kindref="member">GetEffectiveRowsCount()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1678"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a107ab1f41dee07ced0de5b3ed2e53e60" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridSizer::GetEffectiveColsCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEffectiveColsCount</name>
+        <briefdescription>
+<para>Returns the number of columns currently used by the sizer. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will depend on the number of children the sizer has if the sizer is automatically adjusting the number of columns/rows.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1688"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a9e94e9f0ad79977117ca9ed62c59f9f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridSizer::GetEffectiveRowsCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEffectiveRowsCount</name>
+        <briefdescription>
+<para>Returns the number of rows currently used by the sizer. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will depend on the number of children the sizer has if the sizer is automatically adjusting the number of columns/rows.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1698"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a30f4453dc4ca68b3b9edacf865014dc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridSizer::GetHGap</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHGap</name>
+        <briefdescription>
+<para>Returns the horizontal gap (in pixels) between cells in the sizer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1703"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a8b7b88e632daf2138fc33a766ed09dc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridSizer::GetVGap</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVGap</name>
+        <briefdescription>
+<para>Returns the vertical gap (in pixels) between the cells in the sizer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1708"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1aaa0e5a8e167de18b0fd3066febed5cad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridSizer::SetCols</definition>
+        <argsstring>(int cols)</argsstring>
+        <name>SetCols</name>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+<para>Sets the number of columns in the sizer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1713"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1acf9b3399f7b6044f1d75446015f28747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridSizer::SetHGap</definition>
+        <argsstring>(int gap)</argsstring>
+        <name>SetHGap</name>
+        <param>
+          <type>int</type>
+          <declname>gap</declname>
+        </param>
+        <briefdescription>
+<para>Sets the horizontal gap (in pixels) between cells in the sizer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1718"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a66b7cccb173e76a06a70256ba2cbaf33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridSizer::SetRows</definition>
+        <argsstring>(int rows)</argsstring>
+        <name>SetRows</name>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+<para>Sets the number of rows in the sizer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1723"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a89c28d0796cead886b0e2218178125f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridSizer::SetVGap</definition>
+        <argsstring>(int gap)</argsstring>
+        <name>SetVGap</name>
+        <param>
+          <type>int</type>
+          <declname>gap</declname>
+        </param>
+        <briefdescription>
+<para>Sets the vertical gap (in pixels) between the cells in the sizer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1728"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1a6ea31d3cb8b6d101d5d279e84b58ba39" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxGridSizer::CalcMin</definition>
+        <argsstring>()</argsstring>
+        <name>CalcMin</name>
+        <reimplements refid="classwx_sizer_1a371b9b72e55c1fedfbea9d298bc2df77">CalcMin</reimplements>
+        <reimplementedby refid="classwx_flex_grid_sizer_1add516aeac6cf56faef4cefd53542bba2">CalcMin</reimplementedby>
+        <reimplementedby refid="classwx_grid_bag_sizer_1ad8ae813d3acdca02d81ecb84d82e2083">CalcMin</reimplementedby>
+        <briefdescription>
+<para>This method is abstract and has to be overwritten by any derived class. </para>        </briefdescription>
+        <detaileddescription>
+<para>Here, the sizer will do the actual calculation of its children&apos;s minimal sizes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1730"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_sizer_1ae77a4c0a71b771157989af8f1b5b44f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridSizer::RecalcSizes</definition>
+        <argsstring>()</argsstring>
+        <name>RecalcSizes</name>
+        <reimplements refid="classwx_sizer_1ad8bbc5e78a46f85d445db3c324fe1614">RecalcSizes</reimplements>
+        <reimplementedby refid="classwx_flex_grid_sizer_1a1e2cdf743dfd82b5c81c8e08d21ef6c7">RecalcSizes</reimplementedby>
+        <reimplementedby refid="classwx_grid_bag_sizer_1ac9aaee82eb6c51e467c4d92e0c03b015">RecalcSizes</reimplementedby>
+        <briefdescription>
+<para>This method is abstract and has to be overwritten by any derived class. </para>        </briefdescription>
+        <detaileddescription>
+<para>Here, the sizer will do the actual calculation of its children&apos;s positions and sizes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1731"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A grid sizer is a sizer which lays out its children in a two-dimensional table with all table fields having the same size, i.e. </para>    </briefdescription>
+    <detaileddescription>
+<para>the width of each field is the width of the widest child, the height of each field is the height of the tallest child.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview__sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6838">
+        <label>wxFlexGridSizer</label>
+        <link refid="classwx_flex_grid_sizer"/>
+        <childnode refid="6835" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6837">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6839">
+        <label>wxGridBagSizer</label>
+        <link refid="classwx_grid_bag_sizer"/>
+        <childnode refid="6838" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6836">
+        <label>wxSizer</label>
+        <link refid="classwx_sizer"/>
+        <childnode refid="6837" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6835">
+        <label>wxGridSizer</label>
+        <link refid="classwx_grid_sizer"/>
+        <childnode refid="6836" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6842">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6843" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6841">
+        <label>wxSizer</label>
+        <link refid="classwx_sizer"/>
+        <childnode refid="6842" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6840">
+        <label>wxGridSizer</label>
+        <link refid="classwx_grid_sizer"/>
+        <childnode refid="6841" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6843">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1624" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" bodystart="1623" bodyend="1732"/>
+    <listofallmembers>
+      <member refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1a81d21f287c416da96739a73faa54840d" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1a1c45a17c2d1e2d669c46d558d521d891" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1aaa40babf76cdb56d20f6c37fff282610" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1aa2d6009b34b1d34de920390795d8c0fb" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1a6d7602d14f246395773e00ca46bf816a" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1aedfc0bfd98114c348766431dcb49c9f3" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>AddSpacer</name></member>
+      <member refid="classwx_sizer_1af529134a9dc74a0551d12e747af5c976" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>AddStretchSpacer</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGridSizer</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_grid_sizer_1a6ea31d3cb8b6d101d5d279e84b58ba39" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>CalcMin</name></member>
+      <member refid="classwx_sizer_1a5909429d14de1baf1b832d5c1abf7821" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Clear</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGridSizer</scope><name>CloneRefData</name></member>
+      <member refid="classwx_sizer_1a0da5d65c9b4192bd24cc3feb1be69e59" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>ComputeFittingClientSize</name></member>
+      <member refid="classwx_sizer_1a3056cb4d47ea296e095b6cbc35d61155" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>ComputeFittingWindowSize</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxGridSizer</scope><name>CreateRefData</name></member>
+      <member refid="classwx_sizer_1a362d7d556185fe9cd1b5d24004b86518" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Detach</name></member>
+      <member refid="classwx_sizer_1a0283dc800bd1c03cd10d437cef240791" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Detach</name></member>
+      <member refid="classwx_sizer_1aef45062fe9096f2c48c20d8ae3ad6476" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Detach</name></member>
+      <member refid="classwx_sizer_1abad9cedc0cbe9ade2c799da23462d17e" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Fit</name></member>
+      <member refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>FitInside</name></member>
+      <member refid="classwx_sizer_1a619f8bd8f4fd641819626813b1c1f576" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetChildren</name></member>
+      <member refid="classwx_sizer_1a542ef0705987b3b25cec3d0607dfdca2" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetChildren</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_grid_sizer_1a7942ae4d4d1abd31e4d1ac5f736e5843" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetCols</name></member>
+      <member refid="classwx_sizer_1afc4df63c94cf062b7ef29d274d2ee6c1" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetContainingWindow</name></member>
+      <member refid="classwx_grid_sizer_1a107ab1f41dee07ced0de5b3ed2e53e60" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetEffectiveColsCount</name></member>
+      <member refid="classwx_grid_sizer_1a9e94e9f0ad79977117ca9ed62c59f9f8" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetEffectiveRowsCount</name></member>
+      <member refid="classwx_grid_sizer_1a30f4453dc4ca68b3b9edacf865014dc2" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetHGap</name></member>
+      <member refid="classwx_sizer_1adca9ab35f05d28156ac0d4bc2e2ed6ac" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetItem</name></member>
+      <member refid="classwx_sizer_1acb45fd75ab336670f41879fd557a7c65" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetItem</name></member>
+      <member refid="classwx_sizer_1a2aa7f3c241944ae28ee9cbd6df662227" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetItem</name></member>
+      <member refid="classwx_sizer_1ab94e21f858a3c82055faed4b621e4ad2" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetItemById</name></member>
+      <member refid="classwx_sizer_1ac0e0239d22c99213b99bbafdade6793d" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetItemCount</name></member>
+      <member refid="classwx_sizer_1a9fab8d16aefe347dbd57e0bdfe0d810d" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetMinSize</name></member>
+      <member refid="classwx_sizer_1a3907d4a032274c808b57de3c0c70d215" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetPosition</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetRefData</name></member>
+      <member refid="classwx_grid_sizer_1abe7f77c9c2a22a957e763b7f25f98a96" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetRows</name></member>
+      <member refid="classwx_sizer_1a4898d4754c1b45e8acc79a2376fc6220" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetSize</name></member>
+      <member refid="classwx_grid_sizer_1a8b7b88e632daf2138fc33a766ed09dc4" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>GetVGap</name></member>
+      <member refid="classwx_sizer_1a317299431009a0adb4874f9c3f39ea8c" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Hide</name></member>
+      <member refid="classwx_sizer_1ae822dbd21860bfdbf7f76ca22cdcc1f4" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Hide</name></member>
+      <member refid="classwx_sizer_1a53c972f52267daea500d78f606fa0032" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Hide</name></member>
+      <member refid="classwx_sizer_1ad0cc504036ef6c3a9d670dc3c98df3a5" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>InformFirstDirection</name></member>
+      <member refid="classwx_sizer_1aafc5f53e9d3511440be05f9805bb2871" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1aecb6744c0c82c0eb1ae12a532d5d019b" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1a244f64c3d5c900615b2384b320f6c17b" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1a9308aed2cb55227ac1aec7e14707eb3e" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1a43cfac9112288a7d9302ceb674694bf4" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1a6d1daeda52f9f944a0ebd667471ecf6d" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1afb001f9018ff92400937bf6bd494de0d" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>InsertSpacer</name></member>
+      <member refid="classwx_sizer_1a8aeaaac2a98635d45a06961e505e8dde" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>InsertStretchSpacer</name></member>
+      <member refid="classwx_sizer_1ae456d3459b9b31545100a799eb5e8c2a" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>IsEmpty</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>IsSameAs</name></member>
+      <member refid="classwx_sizer_1a44f05d5396f62aa3764d319489223536" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>IsShown</name></member>
+      <member refid="classwx_sizer_1a5fd1c503a027709c29e4f56c9707b75c" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>IsShown</name></member>
+      <member refid="classwx_sizer_1a7543a671a8ae7193ba8d15532ca8712d" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>IsShown</name></member>
+      <member refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Layout</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxGridSizer</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>operator new</name></member>
+      <member refid="classwx_sizer_1a7417fb9b0e3b4777c11b381f14cf0153" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1a66ce726dcc4bf0a283530d3bc425aae9" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1aedfd27f1b77cd34d23c06e001670a62d" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1a968936425f2d5e6b9c15a3820737e1fe" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1a504343f0780c3d1ea7f16bcf1e6e90b5" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1a0f34608b8bf5b119938cea846a4b29c6" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1acc707e1e6d0afd18dc4e70052fa21d78" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>PrependSpacer</name></member>
+      <member refid="classwx_sizer_1ac102680023527ab0610a0d2a6340d4e4" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>PrependStretchSpacer</name></member>
+      <member refid="classwx_grid_sizer_1ae77a4c0a71b771157989af8f1b5b44f4" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>RecalcSizes</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Ref</name></member>
+      <member refid="classwx_sizer_1a06ef74a0bb6aba1f1d3aab02fb402fec" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Remove</name></member>
+      <member refid="classwx_sizer_1a7fce6ce0e986e00e6702914436b6191a" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Remove</name></member>
+      <member refid="classwx_sizer_1accad1425ce5f2504fb63d2801b5b85e1" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Remove</name></member>
+      <member refid="classwx_sizer_1ade62512b74abfa0c6ff45825ea0c9d9d" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Replace</name></member>
+      <member refid="classwx_sizer_1a842fc94c0f5e58597216cb952e044509" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Replace</name></member>
+      <member refid="classwx_sizer_1a5283d4d5fd059cea93e9401e3708f294" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>Replace</name></member>
+      <member refid="classwx_grid_sizer_1aaa0e5a8e167de18b0fd3066febed5cad" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetCols</name></member>
+      <member refid="classwx_sizer_1a3c5483afdc5b5b5657548e190226f285" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetDimension</name></member>
+      <member refid="classwx_sizer_1aa993f4a4534bd4dd24c801bfda6da224" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetDimension</name></member>
+      <member refid="classwx_grid_sizer_1acf9b3399f7b6044f1d75446015f28747" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetHGap</name></member>
+      <member refid="classwx_sizer_1a26fc90231667639d5af7c2f8f7b75c80" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1a486d80e43e6cbd8fea5fa2879d111071" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1a8e4230a56ca442a3eb3577f6c47094d4" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1a9941c644acf3b215678cea0ea15aeec0" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1aae51219b9dfd74c3af5823e39f558ed4" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1abc7a754f4a12f80025fad0d131082fbb" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1a97bbbf3ee6e55c321d7bb72b4c1b7d79" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetMinSize</name></member>
+      <member refid="classwx_sizer_1a0e89f59e611c0279e8bee1b7ee345446" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetMinSize</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetRefData</name></member>
+      <member refid="classwx_grid_sizer_1a66b7cccb173e76a06a70256ba2cbaf33" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetRows</name></member>
+      <member refid="classwx_sizer_1abc460cd0e2bb3bde72142fdb434bc546" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetSizeHints</name></member>
+      <member refid="classwx_grid_sizer_1a89c28d0796cead886b0e2218178125f0" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetVGap</name></member>
+      <member refid="classwx_sizer_1a92cab30589d91cc09028a3abfefe6221" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>SetVirtualSizeHints</name></member>
+      <member refid="classwx_sizer_1afb6638468fe2253d1870b4d387c57a0b" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Show</name></member>
+      <member refid="classwx_sizer_1a65289f40a39fb31512f93d8d7f63720e" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Show</name></member>
+      <member refid="classwx_sizer_1a15f781b11cbe978d6fbc0b62f32bc3b4" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Show</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>UnShare</name></member>
+      <member refid="classwx_grid_sizer_1a54163c431608c0cbe6c74c9009ef1ca2" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>wxGridSizer</name></member>
+      <member refid="classwx_grid_sizer_1a6b0493be4197aff5bf59f1e68676d711" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>wxGridSizer</name></member>
+      <member refid="classwx_grid_sizer_1a1f0a163a3a216ed647452a31951b66bd" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>wxGridSizer</name></member>
+      <member refid="classwx_grid_sizer_1afa96e5d782116e2418ee440724b1a312" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>wxGridSizer</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>wxObject</name></member>
+      <member refid="classwx_sizer_1ae05f76a5e5a8e721065dd5aec1bd6cb2" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>wxSizer</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>~wxObject</name></member>
+      <member refid="classwx_sizer_1a5d52467e4e1367939ef4d9ddc6876cfe" prot="public" virt="virtual"><scope>wxGridSizer</scope><name>~wxSizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_rich_text_character_style_definition" kind="class" prot="public">
+    <compoundname>wxRichTextCharacterStyleDefinition</compoundname>
+    <basecompoundref refid="classwx_rich_text_style_definition" prot="public" virt="non-virtual">wxRichTextStyleDefinition</basecompoundref>
+    <includes local="no">wx/richtext/richtextstyles.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_rich_text_character_style_definition_1ae898350e38cc85ceb335733a7ece23d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRichTextCharacterStyleDefinition::wxRichTextCharacterStyleDefinition</definition>
+        <argsstring>(const wxString &amp;name=wxEmptyString)</argsstring>
+        <name>wxRichTextCharacterStyleDefinition</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_character_style_definition_1aab49e31ab92fbdb59f719e51b61ca03e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxRichTextCharacterStyleDefinition::~wxRichTextCharacterStyleDefinition</definition>
+        <argsstring>()</argsstring>
+        <name>~wxRichTextCharacterStyleDefinition</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="421"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a character style definition, usually added to a <ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9405">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="9404">
+        <label>wxRichTextStyleDefinition</label>
+        <link refid="classwx_rich_text_style_definition"/>
+        <childnode refid="9405" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9403">
+        <label>wxRichTextCharacterStyleDefinition</label>
+        <link refid="classwx_rich_text_character_style_definition"/>
+        <childnode refid="9404" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9408">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9409" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9407">
+        <label>wxRichTextStyleDefinition</label>
+        <link refid="classwx_rich_text_style_definition"/>
+        <childnode refid="9408" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9406">
+        <label>wxRichTextCharacterStyleDefinition</label>
+        <link refid="classwx_rich_text_character_style_definition"/>
+        <childnode refid="9407" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9409">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="411" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" bodystart="410" bodyend="422"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>CreateRefData</name></member>
+      <member refid="classwx_rich_text_style_definition_1a738696e84705cfa5408f1df73a4c0e6a" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>GetBaseStyle</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_rich_text_style_definition_1a1b43cb6485a25cd777ab0ae258f1e10b" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>GetDescription</name></member>
+      <member refid="classwx_rich_text_style_definition_1a2d7af2bd8de9d4e5f9b051dc4bcbe3be" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>GetName</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>GetRefData</name></member>
+      <member refid="classwx_rich_text_style_definition_1a62be10b2d4ff814f48d86bada751124d" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>GetStyle</name></member>
+      <member refid="classwx_rich_text_style_definition_1a6251f4f415203754898415e1ca8ca06a" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>GetStyle</name></member>
+      <member refid="classwx_rich_text_style_definition_1ace4827afa53ad92b3d8ec8ce799a7118" prot="public" virt="virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>GetStyleMergedWithBase</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>Ref</name></member>
+      <member refid="classwx_rich_text_style_definition_1a2d4525ac47865887a828b02252855254" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>SetBaseStyle</name></member>
+      <member refid="classwx_rich_text_style_definition_1a6b4c5c3f44f10bd07e58ae2bfc611ec9" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>SetDescription</name></member>
+      <member refid="classwx_rich_text_style_definition_1a7085d485d0892a4f223a8e2c4a78e219" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>SetName</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>SetRefData</name></member>
+      <member refid="classwx_rich_text_style_definition_1afbd30b0796407ba1ea3c04e3e1367991" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>SetStyle</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>wxObject</name></member>
+      <member refid="classwx_rich_text_character_style_definition_1ae898350e38cc85ceb335733a7ece23d5" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>wxRichTextCharacterStyleDefinition</name></member>
+      <member refid="classwx_rich_text_style_definition_1a79c0b73fe76b618cf70b0df85ea46f31" prot="public" virt="non-virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>wxRichTextStyleDefinition</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>~wxObject</name></member>
+      <member refid="classwx_rich_text_character_style_definition_1aab49e31ab92fbdb59f719e51b61ca03e" prot="public" virt="virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>~wxRichTextCharacterStyleDefinition</name></member>
+      <member refid="classwx_rich_text_style_definition_1a7e0bd7f060d6354104543f7cb6d8e137" prot="public" virt="virtual"><scope>wxRichTextCharacterStyleDefinition</scope><name>~wxRichTextStyleDefinition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

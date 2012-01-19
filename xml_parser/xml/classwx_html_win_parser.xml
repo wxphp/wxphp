@@ -1,0 +1,663 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_html_win_parser" kind="class" prot="public">
+    <compoundname>wxHtmlWinParser</compoundname>
+    <basecompoundref refid="classwx_html_parser" prot="public" virt="non-virtual">wxHtmlParser</basecompoundref>
+    <includes local="no">wx/html/winpars.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_html_win_parser_1ae6e4b8436bac5421e615c77a5b8cb45c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHtmlWinParser::wxHtmlWinParser</definition>
+        <argsstring>(wxHtmlWindowInterface *wndIface=NULL)</argsstring>
+        <name>wxHtmlWinParser</name>
+        <param>
+          <type>wxHtmlWindowInterface *</type>
+          <declname>wndIface</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Don&apos;t use the default one, use the constructor with <emphasis>wndIface</emphasis> parameter (<emphasis>wndIface</emphasis> is a pointer to interface object for the associated <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> or other HTML rendering window such as <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1aad9104fa431ab3573fd55cf8ddef4f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
+        <definition>wxHtmlContainerCell* wxHtmlWinParser::CloseContainer</definition>
+        <argsstring>()</argsstring>
+        <name>CloseContainer</name>
+        <briefdescription>
+<para>Closes the container, sets actual container to the parent one and returns pointer to it (see <ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1ada1e87387b94f32cef2b1104d99c7902" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>virtual wxFont* wxHtmlWinParser::CreateCurrentFont</definition>
+        <argsstring>()</argsstring>
+        <name>CreateCurrentFont</name>
+        <briefdescription>
+<para>Creates font based on current setting (see <ref refid="classwx_html_win_parser_1a7ba34af3e883e91f0534d924f8110d97" kindref="member">SetFontSize()</ref>, <ref refid="classwx_html_win_parser_1a423f6ef5434aeeaaf52f3ae8fe11aa05" kindref="member">SetFontBold()</ref>, <ref refid="classwx_html_win_parser_1afe136004d2f3ba7dcdd6394ce066dc83" kindref="member">SetFontItalic()</ref>, <ref refid="classwx_html_win_parser_1a79a1ecaa98f00de98117de16bf3acf03" kindref="member">SetFontFixed()</ref>, <ref refid="classwx_html_win_parser_1a06bf052fc526f650c883db33554b4e4e" kindref="member">wxHtmlWinParser::SetFontUnderlined</ref>) and returns pointer to it. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the font was already created only a pointer is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1adf0fbe00bc47eeed954f328a2a547e0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+        <definition>const wxColour&amp; wxHtmlWinParser::GetActualColor</definition>
+        <argsstring>() const </argsstring>
+        <name>GetActualColor</name>
+        <briefdescription>
+<para>Returns actual text colour. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1ad08178da222715d99fae02119fa6ac5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlWinParser::GetAlign</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAlign</name>
+        <briefdescription>
+<para>Returns default horizontal alignment. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1afcbf6233423d9734bb9fbf9cb062e56a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlWinParser::GetCharHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCharHeight</name>
+        <briefdescription>
+<para>Returns (average) char height in standard font. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is used as DC-independent metrics.</para><para><simplesect kind="note"><para>This function doesn&apos;t return the <emphasis>actual</emphasis> height. If you want to know the height of the current font, call <computeroutput>GetDC-&gt;<ref refid="classwx_html_win_parser_1afcbf6233423d9734bb9fbf9cb062e56a" kindref="member">GetCharHeight()</ref></computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a0fe540c3d5146677f85ce1bccccf799c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlWinParser::GetCharWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCharWidth</name>
+        <briefdescription>
+<para>Returns average char width in standard font. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is used as DC-independent metrics.</para><para><simplesect kind="note"><para>This function doesn&apos;t return the <emphasis>actual</emphasis> width. If you want to know the height of the current font, call <computeroutput>GetDC-&gt;<ref refid="classwx_html_win_parser_1a0fe540c3d5146677f85ce1bccccf799c" kindref="member">GetCharWidth()</ref></computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1aae7e19af3ac1b42fa57113f9bcbe997c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
+        <definition>wxHtmlContainerCell* wxHtmlWinParser::GetContainer</definition>
+        <argsstring>() const </argsstring>
+        <name>GetContainer</name>
+        <briefdescription>
+<para>Returns pointer to the currently opened container (see <ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
+        <detaileddescription>
+<para>Common use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_WParser<sp/>-&gt;<sp/><ref refid="classwx_html_win_parser_1aae7e19af3ac1b42fa57113f9bcbe997c" kindref="member" tooltip="Returns pointer to the currently opened container (see Cells and Containers).">GetContainer</ref>()<sp/>-&gt;<sp/>InsertCell(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>...);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a2abd87a4c73912c003e35614493a65e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> *</type>
+        <definition>wxDC* wxHtmlWinParser::GetDC</definition>
+        <argsstring>()</argsstring>
+        <name>GetDC</name>
+        <briefdescription>
+<para>Returns pointer to the DC used during parsing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1ae4332025fc2dca3e2c771c1c82603c90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref> *</type>
+        <definition>wxEncodingConverter* wxHtmlWinParser::GetEncodingConverter</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEncodingConverter</name>
+        <briefdescription>
+<para>Returns <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref> class used to do conversion between the <ref refid="classwx_html_win_parser_1ac21739c0bcedad7a43ba5ca796d45159" kindref="member">input encoding</ref> and the <ref refid="classwx_html_win_parser_1a2658e54c1f7bd8e5663faae906bf50a1" kindref="member">output encoding</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a60366178684b53b0a956282a9c7ab1c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlWinParser::GetFontBold</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFontBold</name>
+        <briefdescription>
+<para>Returns true if actual font is bold, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1ad22d30ddb714b8421daed468661d63b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxHtmlWinParser::GetFontFace</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFontFace</name>
+        <briefdescription>
+<para>Returns actual font face name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a7086dc239ce43cc08a72df29f0cdb217" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlWinParser::GetFontFixed</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFontFixed</name>
+        <briefdescription>
+<para>Returns true if actual font is fixed face, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a5ff97d921e4760b126331bf3887a3b20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlWinParser::GetFontItalic</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFontItalic</name>
+        <briefdescription>
+<para>Returns true if actual font is italic, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a716afd1a419ea618283cd90e170560d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlWinParser::GetFontSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFontSize</name>
+        <briefdescription>
+<para>Returns actual font size (HTML size varies from -2 to +4). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a20b4f3396cfb67eda54f9bdf4fac74bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlWinParser::GetFontUnderlined</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFontUnderlined</name>
+        <briefdescription>
+<para>Returns true if actual font is underlined, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1ac21739c0bcedad7a43ba5ca796d45159" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+        <definition>wxFontEncoding wxHtmlWinParser::GetInputEncoding</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInputEncoding</name>
+        <briefdescription>
+<para>Returns input encoding. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a91585f410810a6180fb02aa3c583eeed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref> &amp;</type>
+        <definition>const wxHtmlLinkInfo&amp; wxHtmlWinParser::GetLink</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLink</name>
+        <briefdescription>
+<para>Returns actual hypertext link. </para>        </briefdescription>
+        <detaileddescription>
+<para>(This value has a non-empty <ref refid="classwx_html_link_info_1abc179e298f968a124578f53ea024662d" kindref="member">wxHtmlLinkInfo::GetHref</ref> Href string if the parser is between &lt;A&gt; and &lt;/A&gt; tags, wxEmptyString otherwise.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a874bb42c7af97d42ae89530652b48524" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+        <definition>const wxColour&amp; wxHtmlWinParser::GetLinkColor</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLinkColor</name>
+        <briefdescription>
+<para>Returns the colour of hypertext link text. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a2658e54c1f7bd8e5663faae906bf50a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+        <definition>wxFontEncoding wxHtmlWinParser::GetOutputEncoding</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOutputEncoding</name>
+        <briefdescription>
+<para>Returns output encoding, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>closest match to document&apos;s input encoding that is supported by operating system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a053718939ca694aa6f65aeacab851d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> *</type>
+        <definition>wxHtmlWindow* wxHtmlWinParser::GetWindow</definition>
+        <argsstring>()</argsstring>
+        <name>GetWindow</name>
+        <briefdescription>
+<para>Returns associated window (<ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref>). </para>        </briefdescription>
+        <detaileddescription>
+<para>This may be NULL! (You should always test if it is non-NULL. For example <computeroutput>TITLE</computeroutput> handler sets window title only if some window is associated, otherwise it does nothing. <xrefsect id="deprecated_1_deprecated000025"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use GetWindowInterface()-&gt;GetHTMLWindow() instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a893a9b0a622a76275a8fdd8227bfa7de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
+        <definition>wxHtmlContainerCell* wxHtmlWinParser::OpenContainer</definition>
+        <argsstring>()</argsstring>
+        <name>OpenContainer</name>
+        <briefdescription>
+<para>Opens new container and returns pointer to it (see <ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1ac907a10217394dd080867c4a2e55c5f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetActualColor</definition>
+        <argsstring>(const wxColour &amp;clr)</argsstring>
+        <name>SetActualColor</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>clr</declname>
+        </param>
+        <briefdescription>
+<para>Sets actual text colour. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note: this DOESN&apos;T change the colour! You must create <ref refid="classwx_html_colour_cell" kindref="compound">wxHtmlColourCell</ref> yourself. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a426535f9bf8e2c44335242488212bc05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetAlign</definition>
+        <argsstring>(int a)</argsstring>
+        <name>SetAlign</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Sets default horizontal alignment (see <ref refid="classwx_html_container_cell_1a094ec1d188a7fb01a9ae90115480a01d" kindref="member">wxHtmlContainerCell::SetAlignHor</ref>). </para>        </briefdescription>
+        <detaileddescription>
+<para>Alignment of newly opened container is set to this value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1ae1b4a5967cc3d9ac94877a77573383b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
+        <definition>wxHtmlContainerCell* wxHtmlWinParser::SetContainer</definition>
+        <argsstring>(wxHtmlContainerCell *c)</argsstring>
+        <name>SetContainer</name>
+        <param>
+          <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Allows you to directly set opened container. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is not recommended - you should use <ref refid="classwx_html_win_parser_1a893a9b0a622a76275a8fdd8227bfa7de" kindref="member">OpenContainer()</ref> wherever possible. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a967c0644be980c403c4e22f898734e63" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxHtmlWinParser::SetDC</definition>
+        <argsstring>(wxDC *dc, double pixel_scale=1.0e+0)</argsstring>
+        <name>SetDC</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> *</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pixel_scale</declname>
+          <defval>1.0e+0</defval>
+        </param>
+        <briefdescription>
+<para>Sets the DC. </para>        </briefdescription>
+        <detaileddescription>
+<para>This must be called before <ref refid="classwx_html_parser_1ad2a0f4c4a60f7745f31a0b0bac9ceac5" kindref="member">wxHtmlParser::Parse</ref>!</para><para><emphasis>pixel_scale</emphasis> can be used when rendering to high-resolution DCs (e.g. printer) to adjust size of pixel metrics. (Many dimensions in HTML are given in pixels -- e.g. image sizes. 300x300 image would be only one inch wide on typical printer. With pixel_scale = 3.0 it would be 3 inches.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a423f6ef5434aeeaaf52f3ae8fe11aa05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetFontBold</definition>
+        <argsstring>(int x)</argsstring>
+        <name>SetFontBold</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Sets bold flag of actualfont. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>x</emphasis> is either true of false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1ac112e4b42c325907cc490e0e38ab7045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetFontFace</definition>
+        <argsstring>(const wxString &amp;face)</argsstring>
+        <name>SetFontFace</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Sets current font face to <emphasis>face</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This affects either fixed size font or proportional, depending on context (whether the parser is inside <computeroutput>&lt;TT&gt;</computeroutput> tag or not). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a79a1ecaa98f00de98117de16bf3acf03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetFontFixed</definition>
+        <argsstring>(int x)</argsstring>
+        <name>SetFontFixed</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Sets fixed face flag of actualfont. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>x</emphasis> is either true of false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1afe136004d2f3ba7dcdd6394ce066dc83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetFontItalic</definition>
+        <argsstring>(int x)</argsstring>
+        <name>SetFontItalic</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Sets italic flag of actualfont. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>x</emphasis> is either true of false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a7ba34af3e883e91f0534d924f8110d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetFontSize</definition>
+        <argsstring>(int s)</argsstring>
+        <name>SetFontSize</name>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Sets actual font size (HTML size varies from 1 to 7). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a06bf052fc526f650c883db33554b4e4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetFontUnderlined</definition>
+        <argsstring>(int x)</argsstring>
+        <name>SetFontUnderlined</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Sets underlined flag of actualfont. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>x</emphasis> is either true of false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1a2a8444d57b8b1cc75c02fa0c5c66dc9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetFonts</definition>
+        <argsstring>(const wxString &amp;normal_face, const wxString &amp;fixed_face, const int *sizes=0)</argsstring>
+        <name>SetFonts</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>normal_face</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fixed_face</declname>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>sizes</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Sets fonts. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" kindref="member">wxHtmlWindow::SetFonts</ref> for detailed description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1aea8e3d8834abbdca41cebf144e6d843a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetInputEncoding</definition>
+        <argsstring>(wxFontEncoding enc)</argsstring>
+        <name>SetInputEncoding</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>enc</declname>
+        </param>
+        <briefdescription>
+<para>Sets input encoding. </para>        </briefdescription>
+        <detaileddescription>
+<para>The parser uses this information to build conversion tables from document&apos;s encoding to some encoding supported by operating system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1aae1f9a5c34fae114c20ea04ebb64d915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetLink</definition>
+        <argsstring>(const wxHtmlLinkInfo &amp;link)</argsstring>
+        <name>SetLink</name>
+        <param>
+          <type>const <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref> &amp;</type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Sets actual hypertext link. </para>        </briefdescription>
+        <detaileddescription>
+<para>Empty link is represented by <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref> with <emphasis>Href</emphasis> equal to wxEmptyString. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_win_parser_1aee39cfe3bb21fd68f265611d7a26c4cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWinParser::SetLinkColor</definition>
+        <argsstring>(const wxColour &amp;clr)</argsstring>
+        <name>SetLinkColor</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>clr</declname>
+        </param>
+        <briefdescription>
+<para>Sets colour of hypertext link. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="308"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_html_win_parser_1ab4687a3f0cfec951418dc58c35f6f8c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxHtmlWinParser::AddModule</definition>
+        <argsstring>(wxHtmlTagsModule *module)</argsstring>
+        <name>AddModule</name>
+        <param>
+          <type><ref refid="classwx_html_tags_module" kindref="compound">wxHtmlTagsModule</ref> *</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>Adds module() to the list of <ref refid="classwx_html_win_parser" kindref="compound">wxHtmlWinParser</ref> tag handler. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is derived from <ref refid="classwx_html_parser" kindref="compound">wxHtmlParser</ref> and its main goal is to parse HTML input so that it can be displayed in <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>It uses a special <ref refid="classwx_html_win_tag_handler" kindref="compound">wxHtmlWinTagHandler</ref>.</para><para><simplesect kind="note"><para>The product of parsing is a <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> (resp. wxHtmlContainer) object.</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_handlers" kindref="member">Tag Handlers</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7139">
+        <label>wxHtmlWinParser</label>
+        <link refid="classwx_html_win_parser"/>
+        <childnode refid="7140" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7140">
+        <label>wxHtmlParser</label>
+        <link refid="classwx_html_parser"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7141">
+        <label>wxHtmlWinParser</label>
+        <link refid="classwx_html_win_parser"/>
+        <childnode refid="7142" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7142">
+        <label>wxHtmlParser</label>
+        <link refid="classwx_html_parser"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" bodystart="78" bodyend="309"/>
+    <listofallmembers>
+      <member refid="classwx_html_win_parser_1ab4687a3f0cfec951418dc58c35f6f8c1" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>AddModule</name></member>
+      <member refid="classwx_html_parser_1a78f5d8c42846d23b6b33093f585f1352" prot="protected" virt="virtual"><scope>wxHtmlWinParser</scope><name>AddTag</name></member>
+      <member refid="classwx_html_parser_1a67e06c2e5023fb50c893a1a283205e45" prot="public" virt="virtual"><scope>wxHtmlWinParser</scope><name>AddTagHandler</name></member>
+      <member refid="classwx_html_parser_1ae4856660f14cbcb812b48678b4984665" prot="public" virt="virtual"><scope>wxHtmlWinParser</scope><name>AddWord</name></member>
+      <member refid="classwx_html_win_parser_1aad9104fa431ab3573fd55cf8ddef4f60" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>CloseContainer</name></member>
+      <member refid="classwx_html_win_parser_1ada1e87387b94f32cef2b1104d99c7902" prot="public" virt="virtual"><scope>wxHtmlWinParser</scope><name>CreateCurrentFont</name></member>
+      <member refid="classwx_html_parser_1a354d30d5071266b868a225b13333cd0e" prot="public" virt="virtual"><scope>wxHtmlWinParser</scope><name>DoneParser</name></member>
+      <member refid="classwx_html_parser_1ac04230b82e6de6dde10757cbe6149980" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>DoParsing</name></member>
+      <member refid="classwx_html_parser_1a743a08491352f57043d2069df5cc7a7e" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>DoParsing</name></member>
+      <member refid="classwx_html_win_parser_1adf0fbe00bc47eeed954f328a2a547e0f" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetActualColor</name></member>
+      <member refid="classwx_html_win_parser_1ad08178da222715d99fae02119fa6ac5f" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetAlign</name></member>
+      <member refid="classwx_html_win_parser_1afcbf6233423d9734bb9fbf9cb062e56a" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetCharHeight</name></member>
+      <member refid="classwx_html_win_parser_1a0fe540c3d5146677f85ce1bccccf799c" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetCharWidth</name></member>
+      <member refid="classwx_html_win_parser_1aae7e19af3ac1b42fa57113f9bcbe997c" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetContainer</name></member>
+      <member refid="classwx_html_win_parser_1a2abd87a4c73912c003e35614493a65e5" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetDC</name></member>
+      <member refid="classwx_html_win_parser_1ae4332025fc2dca3e2c771c1c82603c90" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetEncodingConverter</name></member>
+      <member refid="classwx_html_win_parser_1a60366178684b53b0a956282a9c7ab1c8" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetFontBold</name></member>
+      <member refid="classwx_html_win_parser_1ad22d30ddb714b8421daed468661d63b9" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetFontFace</name></member>
+      <member refid="classwx_html_win_parser_1a7086dc239ce43cc08a72df29f0cdb217" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetFontFixed</name></member>
+      <member refid="classwx_html_win_parser_1a5ff97d921e4760b126331bf3887a3b20" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetFontItalic</name></member>
+      <member refid="classwx_html_win_parser_1a716afd1a419ea618283cd90e170560d8" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetFontSize</name></member>
+      <member refid="classwx_html_win_parser_1a20b4f3396cfb67eda54f9bdf4fac74bf" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetFontUnderlined</name></member>
+      <member refid="classwx_html_parser_1aaea2ccc752d947e65dfe49d4ff1a1e2d" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetFS</name></member>
+      <member refid="classwx_html_win_parser_1ac21739c0bcedad7a43ba5ca796d45159" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetInputEncoding</name></member>
+      <member refid="classwx_html_win_parser_1a91585f410810a6180fb02aa3c583eeed" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetLink</name></member>
+      <member refid="classwx_html_win_parser_1a874bb42c7af97d42ae89530652b48524" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetLinkColor</name></member>
+      <member refid="classwx_html_win_parser_1a2658e54c1f7bd8e5663faae906bf50a1" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetOutputEncoding</name></member>
+      <member refid="classwx_html_parser_1a9b715eb585661ec4a9a1e9bf48fe660f" prot="public" virt="pure-virtual"><scope>wxHtmlWinParser</scope><name>GetProduct</name></member>
+      <member refid="classwx_html_parser_1a7e1be4b2e16a3cee02ffc2906b14992b" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetSource</name></member>
+      <member refid="classwx_html_win_parser_1a053718939ca694aa6f65aeacab851d21" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>GetWindow</name></member>
+      <member refid="classwx_html_parser_1ad047fa0b03c8241080e0561fd9a5d8b6" prot="public" virt="virtual"><scope>wxHtmlWinParser</scope><name>InitParser</name></member>
+      <member refid="classwx_html_win_parser_1a893a9b0a622a76275a8fdd8227bfa7de" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>OpenContainer</name></member>
+      <member refid="classwx_html_parser_1aaecb050ca8be6e6d980f28774aa35bef" prot="public" virt="virtual"><scope>wxHtmlWinParser</scope><name>OpenURL</name></member>
+      <member refid="classwx_html_parser_1ad2a0f4c4a60f7745f31a0b0bac9ceac5" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>Parse</name></member>
+      <member refid="classwx_html_parser_1a8cc9ec3e59aa0d12116988831d4708dd" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>PopTagHandler</name></member>
+      <member refid="classwx_html_parser_1a80498b0ad245e26f6041915e9bae934a" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>PushTagHandler</name></member>
+      <member refid="classwx_html_win_parser_1ac907a10217394dd080867c4a2e55c5f8" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetActualColor</name></member>
+      <member refid="classwx_html_win_parser_1a426535f9bf8e2c44335242488212bc05" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetAlign</name></member>
+      <member refid="classwx_html_win_parser_1ae1b4a5967cc3d9ac94877a77573383b4" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetContainer</name></member>
+      <member refid="classwx_html_win_parser_1a967c0644be980c403c4e22f898734e63" prot="public" virt="virtual"><scope>wxHtmlWinParser</scope><name>SetDC</name></member>
+      <member refid="classwx_html_win_parser_1a423f6ef5434aeeaaf52f3ae8fe11aa05" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetFontBold</name></member>
+      <member refid="classwx_html_win_parser_1ac112e4b42c325907cc490e0e38ab7045" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetFontFace</name></member>
+      <member refid="classwx_html_win_parser_1a79a1ecaa98f00de98117de16bf3acf03" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetFontFixed</name></member>
+      <member refid="classwx_html_win_parser_1afe136004d2f3ba7dcdd6394ce066dc83" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetFontItalic</name></member>
+      <member refid="classwx_html_win_parser_1a2a8444d57b8b1cc75c02fa0c5c66dc9d" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetFonts</name></member>
+      <member refid="classwx_html_win_parser_1a7ba34af3e883e91f0534d924f8110d97" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetFontSize</name></member>
+      <member refid="classwx_html_win_parser_1a06bf052fc526f650c883db33554b4e4e" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetFontUnderlined</name></member>
+      <member refid="classwx_html_parser_1ae49af4d0bc1de1476e9d6d0f235e2766" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetFS</name></member>
+      <member refid="classwx_html_win_parser_1aea8e3d8834abbdca41cebf144e6d843a" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetInputEncoding</name></member>
+      <member refid="classwx_html_win_parser_1aae1f9a5c34fae114c20ea04ebb64d915" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetLink</name></member>
+      <member refid="classwx_html_win_parser_1aee39cfe3bb21fd68f265611d7a26c4cc" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>SetLinkColor</name></member>
+      <member refid="classwx_html_parser_1af32c63cbcc6c42ac522b2aba269a422b" prot="public" virt="virtual"><scope>wxHtmlWinParser</scope><name>StopParsing</name></member>
+      <member refid="classwx_html_parser_1a2c2f4cd486c0bfaee31132b7dfea1387" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>wxHtmlParser</name></member>
+      <member refid="classwx_html_win_parser_1ae6e4b8436bac5421e615c77a5b8cb45c" prot="public" virt="non-virtual"><scope>wxHtmlWinParser</scope><name>wxHtmlWinParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_socket_server" kind="class" prot="public">
+    <compoundname>wxSocketServer</compoundname>
+    <basecompoundref refid="classwx_socket_base" prot="public" virt="non-virtual">wxSocketBase</basecompoundref>
+    <includes local="no">wx/socket.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_socket_server_1a043ecb02a352a27ef52389722e1f6f66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSocketServer::wxSocketServer</definition>
+        <argsstring>(const wxSockAddress &amp;address, wxSocketFlags flags=wxSOCKET_NONE)</argsstring>
+        <name>wxSocketServer</name>
+        <param>
+          <type>const <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref> &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>wxSocketFlags</type>
+          <declname>flags</declname>
+          <defval>wxSOCKET_NONE</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a new server and tries to bind to the specified <emphasis>address</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Before trying to accept new connections, remember to test whether it succeeded with <ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>:<ref refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" kindref="member">IsOk()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the local address for the server (e.g. port number). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket flags (See <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">wxSocketBase::SetFlags()</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_server_1ab622729632cca56cbc14c8e6e7a7bb50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxSocketServer::~wxSocketServer</definition>
+        <argsstring>()</argsstring>
+        <name>~wxSocketServer</name>
+        <briefdescription>
+<para>Destructor (it doesn&apos;t close the accepted connections). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> *</type>
+        <definition>wxSocketBase* wxSocketServer::Accept</definition>
+        <argsstring>(bool wait=true)</argsstring>
+        <name>Accept</name>
+        <param>
+          <type>bool</type>
+          <declname>wait</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Accepts an incoming connection request, and creates a new <ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> object which represents the server-side of the connection. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>wait</emphasis> is true and there are no pending connections to be accepted, it will wait for the next incoming connection to arrive.</para><para><simplesect kind="warning"><para>This method will block the GUI.</para></simplesect>
+If <emphasis>wait</emphasis> is false, it will try to accept a pending connection if there is one, but it will always return immediately without blocking the GUI. If you want to use <ref refid="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" kindref="member">Accept()</ref> in this way, you can either check for incoming connections with <ref refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" kindref="member">WaitForAccept()</ref> or catch <bold>wxSOCKET_CONNECTION</bold> events, then call <ref refid="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" kindref="member">Accept()</ref> once you know that there is an incoming connection waiting to be accepted.</para><para><simplesect kind="return"><para>Returns an opened socket connection, or NULL if an error occurred or if the wait parameter was false and there were no pending connections.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" kindref="member">WaitForAccept()</ref>, <ref refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" kindref="member">wxSocketBase::SetNotify()</ref>, <ref refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" kindref="member">wxSocketBase::Notify()</ref>, <ref refid="classwx_socket_server_1abe8446b81f5bedbc33e4f74fd5b36982" kindref="member">AcceptWith()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_server_1abe8446b81f5bedbc33e4f74fd5b36982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketServer::AcceptWith</definition>
+        <argsstring>(wxSocketBase &amp;socket, bool wait=true)</argsstring>
+        <name>AcceptWith</name>
+        <param>
+          <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wait</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Accept an incoming connection using the specified socket object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket to be initialized </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wait</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See <ref refid="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" kindref="member">Accept()</ref> for more info.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true on success, or false if an error occurred or if the wait parameter was false and there were no pending connections.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" kindref="member">WaitForAccept()</ref>, <ref refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" kindref="member">wxSocketBase::SetNotify()</ref>, <ref refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" kindref="member">wxSocketBase::Notify()</ref>, <ref refid="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" kindref="member">Accept()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketServer::WaitForAccept</definition>
+        <argsstring>(long seconds=-1, long millisecond=0)</argsstring>
+        <name>WaitForAccept</name>
+        <param>
+          <type>long</type>
+          <declname>seconds</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>millisecond</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Wait for an incoming connection. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use it if you want to call <ref refid="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" kindref="member">Accept()</ref> or <ref refid="classwx_socket_server_1abe8446b81f5bedbc33e4f74fd5b36982" kindref="member">AcceptWith()</ref> with <emphasis>wait</emphasis> set to false, to detect when an incoming connection is waiting to be accepted.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds to wait. If -1, it will wait for the default timeout, as set with <ref refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" kindref="member">wxSocketBase::SetTimeout()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>millisecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds to wait.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if an incoming connection arrived, false if the timeout elapsed.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" kindref="member">Accept()</ref>, <ref refid="classwx_socket_server_1abe8446b81f5bedbc33e4f74fd5b36982" kindref="member">AcceptWith()</ref>, <ref refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" kindref="member">wxSocketBase::InterruptWait()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="265"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="todo_1_todo000058"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10262">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="10263" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10263">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="10261">
+        <label>wxSocketServer</label>
+        <link refid="classwx_socket_server"/>
+        <childnode refid="10262" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10265">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="10266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10266">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="10267" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10264">
+        <label>wxSocketServer</label>
+        <link refid="classwx_socket_server"/>
+        <childnode refid="10265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10267">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="184" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="183" bodyend="266"/>
+    <listofallmembers>
+      <member refid="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Accept</name></member>
+      <member refid="classwx_socket_server_1abe8446b81f5bedbc33e4f74fd5b36982" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>AcceptWith</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSocketServer</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSocketServer</scope><name>CloneRefData</name></member>
+      <member refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" prot="public" virt="virtual"><scope>wxSocketServer</scope><name>Close</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxSocketServer</scope><name>CreateRefData</name></member>
+      <member refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Destroy</name></member>
+      <member refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Discard</name></member>
+      <member refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Error</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxSocketServer</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_socket_base_1a9dd69ce31cb441c2c47e374256fabcc4" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>GetClientData</name></member>
+      <member refid="classwx_socket_base_1a1eecc8010fa40587623778cf9902e661" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>GetFlags</name></member>
+      <member refid="classwx_socket_base_1a1751b32af0172a30f544068100ba90d2" prot="public" virt="virtual"><scope>wxSocketServer</scope><name>GetLocal</name></member>
+      <member refid="classwx_socket_base_1aae825b5309067c212640189d6ad7e993" prot="public" virt="virtual"><scope>wxSocketServer</scope><name>GetPeer</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>GetRefData</name></member>
+      <member refid="classwx_socket_base_1adb940bb2853901b4ea0b2840964f8e5b" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>GetTimeout</name></member>
+      <member refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Initialize</name></member>
+      <member refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>InterruptWait</name></member>
+      <member refid="classwx_socket_base_1a2d171f3eac0dbc9211f0032188d381ac" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>IsConnected</name></member>
+      <member refid="classwx_socket_base_1a6703a3dd7c15fcb2eff7c7baf0b886f5" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>IsData</name></member>
+      <member refid="classwx_socket_base_1ac5118b15195664969b7d914a045936f6" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>IsDisconnected</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>IsKindOf</name></member>
+      <member refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>IsSameAs</name></member>
+      <member refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>LastCount</name></member>
+      <member refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>LastError</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSocketServer</scope><name>m_refData</name></member>
+      <member refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Notify</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>operator new</name></member>
+      <member refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Peek</name></member>
+      <member refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Read</name></member>
+      <member refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>ReadMsg</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Ref</name></member>
+      <member refid="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>RestoreState</name></member>
+      <member refid="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>SaveState</name></member>
+      <member refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>SetClientData</name></member>
+      <member refid="classwx_socket_base_1a09819e56d36638fb6b45bf3dd7ea8742" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>SetEventHandler</name></member>
+      <member refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>SetFlags</name></member>
+      <member refid="classwx_socket_base_1a18b26d4201f86daf64c881433c68a1b3" prot="public" virt="virtual"><scope>wxSocketServer</scope><name>SetLocal</name></member>
+      <member refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>SetNotify</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>SetRefData</name></member>
+      <member refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>SetTimeout</name></member>
+      <member refid="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Shutdown</name></member>
+      <member refid="classwx_socket_base_1a90d2aea95b10c68eee2656860d90e23e" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>ShutdownOutput</name></member>
+      <member refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Unread</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>UnShare</name></member>
+      <member refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Wait</name></member>
+      <member refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>WaitForAccept</name></member>
+      <member refid="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>WaitForLost</name></member>
+      <member refid="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>WaitForRead</name></member>
+      <member refid="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>WaitForWrite</name></member>
+      <member refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Write</name></member>
+      <member refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>WriteMsg</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>wxObject</name></member>
+      <member refid="classwx_socket_base_1a3bf32997db6732a5b053d8d52b1173f0" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>wxSocketBase</name></member>
+      <member refid="classwx_socket_server_1a043ecb02a352a27ef52389722e1f6f66" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>wxSocketServer</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxSocketServer</scope><name>~wxObject</name></member>
+      <member refid="classwx_socket_base_1a636e72242dd5550e84456c277ca31222" prot="public" virt="virtual"><scope>wxSocketServer</scope><name>~wxSocketBase</name></member>
+      <member refid="classwx_socket_server_1ab622729632cca56cbc14c8e6e7a7bb50" prot="public" virt="virtual"><scope>wxSocketServer</scope><name>~wxSocketServer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

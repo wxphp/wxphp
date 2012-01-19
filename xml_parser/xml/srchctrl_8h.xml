@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="srchctrl_8h" kind="file">
+    <compoundname>srchctrl.h</compoundname>
+    <innerclass refid="classwx_search_ctrl" prot="public">wxSearchCtrl</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="srchctrl_8h_1a5c18b6a3ef86403309147ed7468f95af" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_SEARCHCTRL_CANCEL_BTN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_SEARCHCTRL_CANCEL_BTN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="170" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="srchctrl_8h_1a7a5a7f3d0684566ce7bdd3dff0475914" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_SEARCHCTRL_SEARCH_BTN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_SEARCHCTRL_SEARCH_BTN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="171" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h"/>
+  </compounddef>
+</doxygen>

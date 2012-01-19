@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_drop_target" kind="class" prot="public">
+    <compoundname>wxDropTarget</compoundname>
+    <derivedcompoundref refid="classwx_file_drop_target" prot="public" virt="non-virtual">wxFileDropTarget</derivedcompoundref>
+    <derivedcompoundref refid="classwx_text_drop_target" prot="public" virt="non-virtual">wxTextDropTarget</derivedcompoundref>
+    <includes local="no">wx/dnd.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_drop_target_1a95ba8e24dd0b27d428e168a686cfafbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDropTarget::wxDropTarget</definition>
+        <argsstring>(wxDataObject *data=NULL)</argsstring>
+        <name>wxDropTarget</name>
+        <param>
+          <type><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> *</type>
+          <declname>data</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>data</emphasis> is the data to be associated with the drop target. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_drop_target_1ac7af5b2047050278248dc9ab41625892" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxDropTarget::~wxDropTarget</definition>
+        <argsstring>()</argsstring>
+        <name>~wxDropTarget</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Deletes the associated data object, if any. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_drop_target_1a179adb5f161e0a8abc17e65f4470c51d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDropTarget::GetData</definition>
+        <argsstring>()</argsstring>
+        <name>GetData</name>
+        <briefdescription>
+<para>This method may only be called from within <ref refid="classwx_drop_target_1a5c27f66d59eb89ab7e014fd153ace093" kindref="member">OnData()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, this method copies the data from the drop source to the <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> associated with this drop target, calling its <ref refid="classwx_data_object_1ab73fa5f1cb933c67df20ddb1fad99071" kindref="member">wxDataObject::SetData()</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_drop_target_1a5c27f66d59eb89ab7e014fd153ace093" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member">wxDragResult</ref></type>
+        <definition>virtual wxDragResult wxDropTarget::OnData</definition>
+        <argsstring>(wxCoord x, wxCoord y, wxDragResult def)</argsstring>
+        <name>OnData</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member">wxDragResult</ref></type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>Called after <ref refid="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1" kindref="member">OnDrop()</ref> returns true. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default this will usually <ref refid="classwx_drop_target_1a179adb5f161e0a8abc17e65f4470c51d" kindref="member">GetData()</ref> and will return the suggested default value <emphasis>def</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_drop_target_1a2b1ae4317f7079e811060e3745eb0601" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member">wxDragResult</ref></type>
+        <definition>virtual wxDragResult wxDropTarget::OnDragOver</definition>
+        <argsstring>(wxCoord x, wxCoord y, wxDragResult def)</argsstring>
+        <name>OnDragOver</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member">wxDragResult</ref></type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>Called when the mouse is being dragged over the drop target. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, this calls functions return the suggested return value <emphasis>def</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the mouse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the mouse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>def</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suggested value for return value. Determined by SHIFT or CONTROL key states.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The desired operation or wxDragNone. This is used for optical feedback from the side of the drop source, typically in form of changing the icon. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDropTarget::OnDrop</definition>
+        <argsstring>(wxCoord x, wxCoord y)</argsstring>
+        <name>OnDrop</name>
+        <reimplementedby refid="classwx_file_drop_target_1a17b5db1464b525ffe1974af64b034f6d">OnDrop</reimplementedby>
+        <reimplementedby refid="classwx_text_drop_target_1ad53cf7bbc99a63480e9575423b48db6c">OnDrop</reimplementedby>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Called when the user drops a data object on the target. </para>        </briefdescription>
+        <detaileddescription>
+<para>Return false to veto the operation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the mouse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the mouse.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true to accept the data, or false to veto the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_drop_target_1a00de5f93c9d2ef8010ad8bd3475b623a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member">wxDragResult</ref></type>
+        <definition>virtual wxDragResult wxDropTarget::OnEnter</definition>
+        <argsstring>(wxCoord x, wxCoord y, wxDragResult def)</argsstring>
+        <name>OnEnter</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member">wxDragResult</ref></type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>Called when the mouse enters the drop target. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, this calls <ref refid="classwx_drop_target_1a2b1ae4317f7079e811060e3745eb0601" kindref="member">OnDragOver()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the mouse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the mouse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>def</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suggested default for return value. Determined by SHIFT or CONTROL key states.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The desired operation or wxDragNone. This is used for optical feedback from the side of the drop source, typically in form of changing the icon. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_drop_target_1a8627e82d3f3ee58a09d67fc51c265113" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxDropTarget::OnLeave</definition>
+        <argsstring>()</argsstring>
+        <name>OnLeave</name>
+        <briefdescription>
+<para>Called when the mouse leaves the drop target. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_drop_target_1a06c2858ba321c2095fc220b82c238a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDropTarget::SetDataObject</definition>
+        <argsstring>(wxDataObject *data)</argsstring>
+        <name>SetDataObject</name>
+        <param>
+          <type><ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Sets the data <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> associated with the drop target and deletes any previously associated data object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a target for a drag and drop operation. </para>    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> can be associated with it and by default, this object will be filled with the data from the drag source, if the data formats supported by the data object match the drag source data format.</para><para>There are various virtual handler functions defined in this class which may be overridden to give visual feedback or react in a more fine-tuned way, e.g. by not accepting data on the whole window area, but only a small portion of it. The normal sequence of calls is <ref refid="classwx_drop_target_1a00de5f93c9d2ef8010ad8bd3475b623a" kindref="member">OnEnter()</ref>, <ref refid="classwx_drop_target_1a2b1ae4317f7079e811060e3745eb0601" kindref="member">OnDragOver()</ref> possibly many times, <ref refid="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1" kindref="member">OnDrop()</ref> and finally <ref refid="classwx_drop_target_1a5c27f66d59eb89ab7e014fd153ace093" kindref="member">OnData()</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="overview__dataobject" kindref="compound">wxDataObject Overview</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref>, <ref refid="classwx_file_drop_target" kindref="compound">wxFileDropTarget</ref>, <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5790">
+        <label>wxDropTarget</label>
+        <link refid="classwx_drop_target"/>
+      </node>
+      <node id="5791">
+        <label>wxFileDropTarget</label>
+        <link refid="classwx_file_drop_target"/>
+        <childnode refid="5790" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5792">
+        <label>wxTextDropTarget</label>
+        <link refid="classwx_text_drop_target"/>
+        <childnode refid="5790" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="83" bodyend="169"/>
+    <listofallmembers>
+      <member refid="classwx_drop_target_1a179adb5f161e0a8abc17e65f4470c51d" prot="public" virt="virtual"><scope>wxDropTarget</scope><name>GetData</name></member>
+      <member refid="classwx_drop_target_1a5c27f66d59eb89ab7e014fd153ace093" prot="public" virt="virtual"><scope>wxDropTarget</scope><name>OnData</name></member>
+      <member refid="classwx_drop_target_1a2b1ae4317f7079e811060e3745eb0601" prot="public" virt="virtual"><scope>wxDropTarget</scope><name>OnDragOver</name></member>
+      <member refid="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1" prot="public" virt="virtual"><scope>wxDropTarget</scope><name>OnDrop</name></member>
+      <member refid="classwx_drop_target_1a00de5f93c9d2ef8010ad8bd3475b623a" prot="public" virt="virtual"><scope>wxDropTarget</scope><name>OnEnter</name></member>
+      <member refid="classwx_drop_target_1a8627e82d3f3ee58a09d67fc51c265113" prot="public" virt="virtual"><scope>wxDropTarget</scope><name>OnLeave</name></member>
+      <member refid="classwx_drop_target_1a06c2858ba321c2095fc220b82c238a2d" prot="public" virt="non-virtual"><scope>wxDropTarget</scope><name>SetDataObject</name></member>
+      <member refid="classwx_drop_target_1a95ba8e24dd0b27d428e168a686cfafbf" prot="public" virt="non-virtual"><scope>wxDropTarget</scope><name>wxDropTarget</name></member>
+      <member refid="classwx_drop_target_1ac7af5b2047050278248dc9ab41625892" prot="public" virt="virtual"><scope>wxDropTarget</scope><name>~wxDropTarget</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

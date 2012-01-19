@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="geometry_8h" kind="file">
+    <compoundname>geometry.h</compoundname>
+    <innerclass refid="classwx_point2_d_int" prot="public">wxPoint2DInt</innerclass>
+    <innerclass refid="classwx_point2_d_double" prot="public">wxPoint2DDouble</innerclass>
+    <innerclass refid="classwx_rect2_d_double" prot="public">wxRect2DDouble</innerclass>
+    <innerclass refid="classwx_rect2_d_int" prot="public">wxRect2DInt</innerclass>
+    <innerclass refid="classwx_transform2_d" prot="public">wxTransform2D</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="geometry_8h_1a50bd884791829cde5a71840abed7eb82" prot="public" static="no">
+        <name>wxOutCode</name>
+        <enumvalue id="geometry_8h_1a50bd884791829cde5a71840abed7eb82ae4f17411499f916186cd7bd3983e3f8d" prot="public">
+          <name>wxInside</name>
+          <initializer> 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="geometry_8h_1a50bd884791829cde5a71840abed7eb82ac18879134b2d591f755d5f990f803027" prot="public">
+          <name>wxOutLeft</name>
+          <initializer> 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="geometry_8h_1a50bd884791829cde5a71840abed7eb82a0c1651f0c0258006aea53a73b939f7e6" prot="public">
+          <name>wxOutRight</name>
+          <initializer> 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="geometry_8h_1a50bd884791829cde5a71840abed7eb82a83f6ab9f70c6d8794cea588c9915f297" prot="public">
+          <name>wxOutTop</name>
+          <initializer> 0x08</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="geometry_8h_1a50bd884791829cde5a71840abed7eb82a28a29a1d9b386478917f9eebeb3ef8ce" prot="public">
+          <name>wxOutBottom</name>
+          <initializer> 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" bodystart="10" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="geometry_8h_1a0ce32af1d7f53fb59f9daae3b92e591f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref></type>
+        <definition>wxPoint2DInt operator+</definition>
+        <argsstring>(const wxPoint2DInt &amp;pt1, const wxPoint2DInt &amp;pt2)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a562ebde19cc7d7ef2c9f60f3708d3a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref></type>
+        <definition>wxPoint2DInt operator-</definition>
+        <argsstring>(const wxPoint2DInt &amp;pt1, const wxPoint2DInt &amp;pt2)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a368bfa9a79ca7cc3e7cc0159317bbc93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref></type>
+        <definition>wxPoint2DInt operator*</definition>
+        <argsstring>(const wxPoint2DInt &amp;pt1, const wxPoint2DInt &amp;pt2)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1abd213fa90c91d7ee85d66d8db756c290" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref></type>
+        <definition>wxPoint2DInt operator*</definition>
+        <argsstring>(wxInt32 n, const wxPoint2DInt &amp;pt)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a602323af4ac16c2ee3fba4b1a1a32cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref></type>
+        <definition>wxPoint2DInt operator*</definition>
+        <argsstring>(const wxPoint2DInt &amp;pt, wxInt32 n)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a29712afb673bd3271aa6b99fb4ef9b4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref></type>
+        <definition>wxPoint2DInt operator/</definition>
+        <argsstring>(const wxPoint2DInt &amp;pt1, const wxPoint2DInt &amp;pt2)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a181014a9f36cb1b05f97a594c254b48d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref></type>
+        <definition>wxPoint2DInt operator/</definition>
+        <argsstring>(const wxPoint2DInt &amp;pt, wxInt32 n)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_int" kindref="compound">wxPoint2DInt</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a526c67f75f651eeb1b8b1b3e5befd9e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator+</definition>
+        <argsstring>(const wxPoint2DDouble &amp;pt1, const wxPoint2DDouble &amp;pt2)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a6cfc31ba55e28d202f9790b1bfdc81cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator-</definition>
+        <argsstring>(const wxPoint2DDouble &amp;pt1, const wxPoint2DDouble &amp;pt2)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a1465b35d57db72c6d8300581a3a620b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator*</definition>
+        <argsstring>(const wxPoint2DDouble &amp;pt1, const wxPoint2DDouble &amp;pt2)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a6673689925793b43c03b570394ede245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator*</definition>
+        <argsstring>(wxDouble n, const wxPoint2DDouble &amp;pt)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a274ddff81e247017a6159362bdbb05e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator*</definition>
+        <argsstring>(wxInt32 n, const wxPoint2DDouble &amp;pt)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a0a94bbc196f69dfe984763da59d1b016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator*</definition>
+        <argsstring>(const wxPoint2DDouble &amp;pt, wxDouble n)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a83e60350fb1c399a9306f38f5c8f649a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator*</definition>
+        <argsstring>(const wxPoint2DDouble &amp;pt, wxInt32 n)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a68e2b41833a57ab842101646b588b553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator/</definition>
+        <argsstring>(const wxPoint2DDouble &amp;pt1, const wxPoint2DDouble &amp;pt2)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="132"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1ac4b1faafc9edb88761f0cde92003d0ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator/</definition>
+        <argsstring>(const wxPoint2DDouble &amp;pt, wxDouble n)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry_8h_1a75382225e354a674d69a96d3eb03a0fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble operator/</definition>
+        <argsstring>(const wxPoint2DDouble &amp;pt, wxInt32 n)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h" line="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/geometry.h"/>
+  </compounddef>
+</doxygen>

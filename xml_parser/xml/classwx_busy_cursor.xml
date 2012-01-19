@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_busy_cursor" kind="class" prot="public">
+    <compoundname>wxBusyCursor</compoundname>
+    <includes local="no">wx/utils.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_busy_cursor_1aeaa61938f7322311eb43bfa1ef4ea205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBusyCursor::wxBusyCursor</definition>
+        <argsstring>(const wxCursor *cursor=wxHOURGLASS_CURSOR)</argsstring>
+        <name>wxBusyCursor</name>
+        <param>
+          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> *</type>
+          <declname>cursor</declname>
+          <defval><ref refid="cursor_8h_1aedcab46c717d02f9b5deb151d1fe85f8" kindref="member">wxHOURGLASS_CURSOR</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a busy cursor object, calling <ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_busy_cursor_1ae02fa91dc7ce6ef2909d5b22ec7d9022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBusyCursor::~wxBusyCursor</definition>
+        <argsstring>()</argsstring>
+        <name>~wxBusyCursor</name>
+        <briefdescription>
+<para>Destroys the busy cursor object, calling <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class makes it easy to tell your user that the program is temporarily busy. </para>    </briefdescription>
+    <detaileddescription>
+<para>Just create a <ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref> object on the stack, and within the current scope, the hourglass will be shown.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_busy_cursor" kindref="compound" tooltip="This class makes it easy to tell your user that the program is temporarily busy.">wxBusyCursor</ref><sp/>wait;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>100000;<sp/>i++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DoACalculation();</highlight></codeline>
+</programlisting></para><para>It works by calling <ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref> in the constructor, and <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref> in the destructor.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref>, <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref>, <ref refid="classwx_window_disabler" kindref="compound">wxWindowDisabler</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="83" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classwx_busy_cursor_1aeaa61938f7322311eb43bfa1ef4ea205" prot="public" virt="non-virtual"><scope>wxBusyCursor</scope><name>wxBusyCursor</name></member>
+      <member refid="classwx_busy_cursor_1ae02fa91dc7ce6ef2909d5b22ec7d9022" prot="public" virt="non-virtual"><scope>wxBusyCursor</scope><name>~wxBusyCursor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

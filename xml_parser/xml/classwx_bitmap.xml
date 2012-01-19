@@ -1,0 +1,993 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_bitmap" kind="class" prot="public">
+    <compoundname>wxBitmap</compoundname>
+    <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
+    <includes local="no">wx/bitmap.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_bitmap_1a5b4b1b408108b78cdbfd325b03c903b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBitmap::wxBitmap</definition>
+        <argsstring>()</argsstring>
+        <name>wxBitmap</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Constructs a bitmap object with no data; an assignment or another member function such as <ref refid="classwx_bitmap_1aa793ed387091a03f30060dd6e876bea5" kindref="member">Create()</ref> or <ref refid="classwx_bitmap_1ab4d271d200338e9274cebfee474fbd7f" kindref="member">LoadFile()</ref> must be called subsequently. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1abfaa21ec563a64ea913af918150db900" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBitmap::wxBitmap</definition>
+        <argsstring>(const wxBitmap &amp;bitmap)</argsstring>
+        <name>wxBitmap</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">reference counting</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To make a real copy, you can use:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/>newBitmap<sp/>=<sp/>oldBitmap.GetSubBitmap(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_rect" kindref="compound" tooltip="A class for manipulating rectangles.">wxRect</ref>(0,<sp/>0,<sp/>oldBitmap.GetWidth(),<sp/>oldBitmap.GetHeight()));</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a9b34f9ec18dc652163bc3153a067e6c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBitmap::wxBitmap</definition>
+        <argsstring>(const char *bits[], int width, int height, int depth=1)</argsstring>
+        <name>wxBitmap</name>
+        <param>
+          <type>const char *</type>
+          <declname>bits</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Creates a bitmap from the given array <emphasis>bits</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>You should only use this function for monochrome bitmaps (depth 1) in portable programs: in this case the bits parameter should contain an XBM image.</para><para>For other bit depths, the behaviour is platform dependent: under Windows, the data is passed without any changes to the underlying CreateBitmap() API. Under other platforms, only monochrome bitmaps may be created using this constructor and <ref refid="classwx_image" kindref="compound">wxImage</ref> should be used for creating colour bitmaps from static data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies an array of pixel values. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the width of the bitmap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the height of the bitmap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the depth of the bitmap. If this is omitted, then a value of 1 (monochrome bitmap) is used.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>wxPerl Note:</bold> In wxPerl use Wx::Bitmap-&gt;newFromBits(bits, width, height, depth). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a3bb19e8d368d6565f52a9c1294d80d7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBitmap::wxBitmap</definition>
+        <argsstring>(int width, int height, int depth=wxBITMAP_SCREEN_DEPTH)</argsstring>
+        <name>wxBitmap</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+          <defval>wxBITMAP_SCREEN_DEPTH</defval>
+        </param>
+        <briefdescription>
+<para>Creates a new bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>A depth of <ref refid="interface_2wx_2bitmap_8h_1a92f17e2abdf285ce14f0ef47997fdb06" kindref="member">wxBITMAP_SCREEN_DEPTH</ref> indicates the depth of the current screen or visual.</para><para>Some platforms only support 1 for monochrome and <ref refid="interface_2wx_2bitmap_8h_1a92f17e2abdf285ce14f0ef47997fdb06" kindref="member">wxBITMAP_SCREEN_DEPTH</ref> for the current colour setting.</para><para>A depth of 32 including an alpha channel is supported under MSW, Mac and GTK+. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a2a73d89860df03b474086a7db694527d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBitmap::wxBitmap</definition>
+        <argsstring>(const wxSize &amp;sz, int depth=wxBITMAP_SCREEN_DEPTH)</argsstring>
+        <name>wxBitmap</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+          <defval>wxBITMAP_SCREEN_DEPTH</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a0b750963aa91e021dfa222138d1678ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBitmap::wxBitmap</definition>
+        <argsstring>(const char *const *bits)</argsstring>
+        <name>wxBitmap</name>
+        <param>
+          <type>const char *const *</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+<para>Creates a bitmap from XPM data. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl use Wx::Bitmap-&gt;newFromXPM(data). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1af7c12dde97793393d6ef19e0dda39b1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBitmap::wxBitmap</definition>
+        <argsstring>(const wxString &amp;name, wxBitmapType type=wxBITMAP_DEFAULT_TYPE)</argsstring>
+        <name>wxBitmap</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>type</declname>
+          <defval>wxBITMAP_DEFAULT_TYPE</defval>
+        </param>
+        <briefdescription>
+<para>Loads a bitmap from a file or resource. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This can refer to a resource name or a filename under MS Windows and X. Its meaning is determined by the <emphasis>type</emphasis> parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>May be one of the <ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref> values and indicates which type of bitmap should be loaded. See the note in the class detailed description. Note that the wxBITMAP_DEFAULT_TYPE constant has different value under different wxWidgets ports. See the bitmap.h header for the value it takes for a specific port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_bitmap_1ab4d271d200338e9274cebfee474fbd7f" kindref="member">LoadFile()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a9855ffc55043187e4cff075aeefbaaf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxBitmap::wxBitmap</definition>
+        <argsstring>(const wxImage &amp;img, int depth=wxBITMAP_SCREEN_DEPTH)</argsstring>
+        <name>wxBitmap</name>
+        <param>
+          <type>const <ref refid="classwx_image" kindref="compound">wxImage</ref> &amp;</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+          <defval>wxBITMAP_SCREEN_DEPTH</defval>
+        </param>
+        <briefdescription>
+<para>Creates this bitmap object from the given image. </para>        </briefdescription>
+        <detaileddescription>
+<para>This has to be done to actually display an image as you cannot draw an image directly on a window.</para><para>The resulting bitmap will use the provided colour depth (or that of the current system if depth is <ref refid="interface_2wx_2bitmap_8h_1a92f17e2abdf285ce14f0ef47997fdb06" kindref="member">wxBITMAP_SCREEN_DEPTH</ref>) which entails that a colour reduction may take place.</para><para>When in 8-bit mode (PseudoColour mode), the GTK port will use a color cube created on program start-up to look up colors. This ensures a very fast conversion, but the image quality won&apos;t be perfect (and could be better for photo images using more sophisticated dithering algorithms).</para><para>On Windows, if there is a palette present (set with SetPalette), it will be used when creating the <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> (most useful in 8-bit display mode). On other platforms, the palette is currently ignored.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Platform-independent <ref refid="classwx_image" kindref="compound">wxImage</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the depth of the bitmap. If this is omitted, the display depth of the screen is used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a6b5f4ed6a11ac208fe6ea45b4bdb5298" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxBitmap::~wxBitmap</definition>
+        <argsstring>()</argsstring>
+        <name>~wxBitmap</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info.</para><para>If the application omits to delete the bitmap explicitly, the bitmap will be destroyed automatically by wxWidgets when the application exits.</para><para><simplesect kind="warning"><para>Do not delete a bitmap that is selected into a memory device context. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a063fed54a77f63d2cfa69d12f9035fe2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
+        <definition>virtual wxImage wxBitmap::ConvertToImage</definition>
+        <argsstring>() const </argsstring>
+        <name>ConvertToImage</name>
+        <briefdescription>
+<para>Creates an image from a platform-dependent bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>This preserves mask information so that bitmaps and images can be converted back and forth without loss in that respect. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1afd23ea63dc5fb72cc806652ba4d6cf9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxBitmap::CopyFromIcon</definition>
+        <argsstring>(const wxIcon &amp;icon)</argsstring>
+        <name>CopyFromIcon</name>
+        <param>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <declname>icon</declname>
+        </param>
+        <briefdescription>
+<para>Creates the bitmap from an icon. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="396"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1aa793ed387091a03f30060dd6e876bea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxBitmap::Create</definition>
+        <argsstring>(int width, int height, int depth=wxBITMAP_SCREEN_DEPTH)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+          <defval>wxBITMAP_SCREEN_DEPTH</defval>
+        </param>
+        <briefdescription>
+<para>Creates a fresh bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the final argument is omitted, the display depth of the screen is used.</para><para><simplesect kind="return"><para>true if the creation was successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="404"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a5b9cc5283dba021db3de367701497a73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxBitmap::Create</definition>
+        <argsstring>(const wxSize &amp;sz, int depth=wxBITMAP_SCREEN_DEPTH)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+          <defval>wxBITMAP_SCREEN_DEPTH</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a4b11030807d240af9278e5a3ce36cff5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxBitmap::GetDepth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDepth</name>
+        <briefdescription>
+<para>Gets the colour depth of the bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>A value of 1 indicates a monochrome bitmap. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="473"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a43fa1cfa77a428259d68e6a237aaeba2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxBitmap::GetHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+<para>Gets the height of the bitmap in pixels. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_bitmap_1a513b5dc67c3ffa7c9a6a5aacbc5ed0f2" kindref="member">GetWidth()</ref>, <ref refid="classwx_bitmap_1ac1bba3f3bca9b16db5545d1b3f2df40a" kindref="member">GetSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="487"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1ac2dc7d543479e959aa820a8f20dc8037" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_mask" kindref="compound">wxMask</ref> *</type>
+        <definition>virtual wxMask* wxBitmap::GetMask</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMask</name>
+        <briefdescription>
+<para>Gets the associated mask (if any) which may have been loaded from a file or set for the bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_bitmap_1a93ca840fdf8cd761e7ad419a90626ac4" kindref="member">SetMask()</ref>, <ref refid="classwx_mask" kindref="compound">wxMask</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="495"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1aaa9cfa654deb84237cbcaf9757d2deaa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_palette" kindref="compound">wxPalette</ref> *</type>
+        <definition>virtual wxPalette* wxBitmap::GetPalette</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPalette</name>
+        <briefdescription>
+<para>Gets the associated palette (if any) which may have been loaded from a file or set for the bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_palette" kindref="compound">wxPalette</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="503"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a8745c687705511f1432d9f36ad26f95b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
+        <definition>virtual wxBitmap wxBitmap::GetSubBitmap</definition>
+        <argsstring>(const wxRect &amp;rect) const </argsstring>
+        <name>GetSubBitmap</name>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Returns a sub bitmap of the current one as long as the rect belongs entirely to the bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function preserves bit depth and mask information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="509"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1ac1bba3f3bca9b16db5545d1b3f2df40a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxBitmap::GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+<para>Returns the size of the bitmap in pixels. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_bitmap_1a43fa1cfa77a428259d68e6a237aaeba2" kindref="member">GetHeight()</ref>, <ref refid="classwx_bitmap_1a513b5dc67c3ffa7c9a6a5aacbc5ed0f2" kindref="member">GetWidth()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="518"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1af52987a85a128c685a6d7a54349bc22d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
+        <definition>wxBitmap wxBitmap::ConvertToDisabled</definition>
+        <argsstring>(unsigned char brightness=255) const </argsstring>
+        <name>ConvertToDisabled</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>brightness</declname>
+          <defval>255</defval>
+        </param>
+        <briefdescription>
+<para>Returns disabled (dimmed) version of the bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is not available when <computeroutput>wxUSE_IMAGE == 0</computeroutput>.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="527"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a513b5dc67c3ffa7c9a6a5aacbc5ed0f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxBitmap::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Gets the width of the bitmap in pixels. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_bitmap_1a43fa1cfa77a428259d68e6a237aaeba2" kindref="member">GetHeight()</ref>, <ref refid="classwx_bitmap_1ac1bba3f3bca9b16db5545d1b3f2df40a" kindref="member">GetSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="534"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1ab825460a217d250db53df0c9ca293068" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxBitmap::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if bitmap data is present. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="561"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1ab4d271d200338e9274cebfee474fbd7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxBitmap::LoadFile</definition>
+        <argsstring>(const wxString &amp;name, wxBitmapType type=wxBITMAP_DEFAULT_TYPE)</argsstring>
+        <name>LoadFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>type</declname>
+          <defval>wxBITMAP_DEFAULT_TYPE</defval>
+        </param>
+        <briefdescription>
+<para>Loads a bitmap from a file or resource. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Either a filename or a Windows resource name. The meaning of name is determined by the <emphasis>type</emphasis> parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the <ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref> values; see the note in the class detailed description. Note that the wxBITMAP_DEFAULT_TYPE constant has different value under different wxWidgets ports. See the bitmap.h header for the value it takes for a specific port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the operation succeeded, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>A palette may be associated with the bitmap if one exists (especially for colour Windows bitmaps), and if the code supports it. You can check if one has been created by using the <ref refid="classwx_bitmap_1aaa9cfa654deb84237cbcaf9757d2deaa" kindref="member">GetPalette()</ref> member.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_bitmap_1a48617712dd0f5a6a51bb1897a49ae273" kindref="member">SaveFile()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="585"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a48617712dd0f5a6a51bb1897a49ae273" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxBitmap::SaveFile</definition>
+        <argsstring>(const wxString &amp;name, wxBitmapType type, const wxPalette *palette=NULL) const </argsstring>
+        <name>SaveFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_palette" kindref="compound">wxPalette</ref> *</type>
+          <declname>palette</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Saves a bitmap in the named file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A filename. The meaning of name is determined by the type parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the <ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref> values; see the note in the class detailed description. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>palette</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional palette used for saving the bitmap.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the operation succeeded, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>Depending on how wxWidgets has been configured, not all formats may be available.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_bitmap_1ab4d271d200338e9274cebfee474fbd7f" kindref="member">LoadFile()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="619"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1ac2d3b023cf64f90fa1257eb874ed015e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBitmap::SetDepth</definition>
+        <argsstring>(int depth)</argsstring>
+        <name>SetDepth</name>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Sets the depth member (does not affect the bitmap data). </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000019"><xreftitle>Todo</xreftitle><xrefdescription><para>since these functions do not affect the bitmap data, why they exist??</para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap depth. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="630"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a0091921ee85f7444e846e6183ec64909" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBitmap::SetHeight</definition>
+        <argsstring>(int height)</argsstring>
+        <name>SetHeight</name>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Sets the height member (does not affect the bitmap data). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap height in pixels. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="638"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a93ca840fdf8cd761e7ad419a90626ac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBitmap::SetMask</definition>
+        <argsstring>(wxMask *mask)</argsstring>
+        <name>SetMask</name>
+        <param>
+          <type><ref refid="classwx_mask" kindref="compound">wxMask</ref> *</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mask for this bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>The bitmap object owns the mask once this has been called.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_bitmap_1ac2dc7d543479e959aa820a8f20dc8037" kindref="member">GetMask()</ref>, <ref refid="classwx_mask" kindref="compound">wxMask</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="647"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a57d5e5389c7603ecb3edf822bc5eaf9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBitmap::SetPalette</definition>
+        <argsstring>(const wxPalette &amp;palette)</argsstring>
+        <name>SetPalette</name>
+        <param>
+          <type>const <ref refid="classwx_palette" kindref="compound">wxPalette</ref> &amp;</type>
+          <declname>palette</declname>
+        </param>
+        <briefdescription>
+<para>Sets the associated palette. </para>        </briefdescription>
+        <detaileddescription>
+<para>(Not implemented under GTK+).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>palette</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The palette to set.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_palette" kindref="compound">wxPalette</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="657"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a82c54a43db80f31c9ff70b0e18a1d972" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxBitmap::SetWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Sets the width member (does not affect the bitmap data). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap width in pixels. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="665"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_bitmap_1a6418825ad15574229188e0c5f97a4f3a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxBitmap::AddHandler</definition>
+        <argsstring>(wxBitmapHandler *handler)</argsstring>
+        <name>AddHandler</name>
+        <param>
+          <type><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Adds a handler to the end of the static list of format handlers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A new bitmap format handler object. There is usually only one instance of a given handler class in an application session.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Note that unlike <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler</ref>, there&apos;s no documented list of the wxBitmapHandlers available in wxWidgets. This is because they are platform-specific and most important, they are all automatically loaded at startup.</para><para>If you want to be sure that <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> can load a certain type of image, you&apos;d better use <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a62381d78867e552f713ae712fd23bc81" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxBitmap::CleanUpHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>CleanUpHandlers</name>
+        <briefdescription>
+<para>Deletes all bitmap handlers. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called by wxWidgets on exit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1aae67381581ac0ad8378adc23d01f593e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> *</type>
+        <definition>static wxBitmapHandler* wxBitmap::FindHandler</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>FindHandler</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Finds the handler with the given <emphasis>name</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to the handler if found, NULL otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="441"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a4ba567f7704a26e9b2ce293203574dc3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> *</type>
+        <definition>static wxBitmapHandler* wxBitmap::FindHandler</definition>
+        <argsstring>(const wxString &amp;extension, wxBitmapType bitmapType)</argsstring>
+        <name>FindHandler</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>bitmapType</declname>
+        </param>
+        <briefdescription>
+<para>Finds the handler associated with the given <emphasis>extension</emphasis> and <emphasis>type</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>extension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file extension, such as &quot;bmp&quot; (without the dot). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmapType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitmap type managed by the handler, see <ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the handler if found, NULL otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1ab8d543233b6b3c9f153c47911fcd1a1b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> *</type>
+        <definition>static wxBitmapHandler* wxBitmap::FindHandler</definition>
+        <argsstring>(wxBitmapType bitmapType)</argsstring>
+        <name>FindHandler</name>
+        <param>
+          <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
+          <declname>bitmapType</declname>
+        </param>
+        <briefdescription>
+<para>Finds the handler associated with the given bitmap type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bitmapType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitmap type managed by the handler, see <ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the handler if found, NULL otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="467"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1af5acce4a660c9bfe0bfe363e1b183e42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wxList &amp;</type>
+        <definition>static wxList&amp; wxBitmap::GetHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>GetHandlers</name>
+        <briefdescription>
+<para>Returns the static list of bitmap format handlers. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="480"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1ac2626d4a4ddca5fa54756d7f942c96a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxBitmap::InitStandardHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>InitStandardHandlers</name>
+        <briefdescription>
+<para>Adds the standard bitmap format handlers, which, depending on wxWidgets configuration, can be handlers for Windows bitmap, Windows bitmap resource, and XPM. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called by wxWidgets on startup.</para><para><simplesect kind="see"><para><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="545"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a228a76708d605d22ed82c889f15859a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxBitmap::InsertHandler</definition>
+        <argsstring>(wxBitmapHandler *handler)</argsstring>
+        <name>InsertHandler</name>
+        <param>
+          <type><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Adds a handler at the start of the static list of format handlers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A new bitmap format handler object. There is usually only one instance of a given handler class in an application session.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="556"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_bitmap_1a0316baef61f8f9cc3ba05bd8e52f1670" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxBitmap::RemoveHandler</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>RemoveHandler</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Finds the handler with the given name, and removes it. </para>        </briefdescription>
+        <detaileddescription>
+<para>The handler is not deleted.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler name.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the handler was found and removed, false otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_bitmap_handler" kindref="compound">wxBitmapHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="598"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class encapsulates the concept of a platform-dependent bitmap, either monochrome or colour or colour with alpha channel support. </para>    </briefdescription>
+    <detaileddescription>
+<para>If you need direct access the bitmap data instead going through drawing to it using <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> you need to use the <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> class (either wxNativePixelData for RGB bitmaps or wxAlphaPixelData for bitmaps with an additionaly alpha channel).</para><para>Note that many <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> functions take a <emphasis>type</emphasis> parameter, which is a value of the <ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref> enumeration. The validity of those values depends however on the platform where your program is running and from the wxWidgets configuration. If all possible wxWidgets settings are used:<itemizedlist>
+<listitem><para>wxMSW supports BMP and ICO files, BMP and ICO resources;</para></listitem><listitem><para>wxGTK supports XPM files;</para></listitem><listitem><para>wxMac supports PICT resources;</para></listitem><listitem><para>wxX11 supports XPM files, XPM data, XBM data;</para></listitem></itemizedlist>
+</para><para>In addition, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> can load and save all formats that <ref refid="classwx_image" kindref="compound">wxImage</ref> can; see <ref refid="classwx_image" kindref="compound">wxImage</ref> for more info. Of course, you must have loaded the <ref refid="classwx_image" kindref="compound">wxImage</ref> handlers (see <ref refid="group__group__funcmacro__appinitterm_1ga27f6c78d5d13374a28022b7bd44c6823" kindref="member">wxInitAllImageHandlers()</ref> and <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler</ref>). Note that all available wxBitmapHandlers for a given wxWidgets port are automatically loaded at startup so you won&apos;t need to use <ref refid="classwx_bitmap_1a6418825ad15574229188e0c5f97a4f3a" kindref="member">wxBitmap::AddHandler</ref>.</para><para>More on the difference between <ref refid="classwx_image" kindref="compound">wxImage</ref> and <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>: <ref refid="classwx_image" kindref="compound">wxImage</ref> is just a buffer of RGB bytes with an optional buffer for the alpha bytes. It is all generic, platform independent and image file format independent code. It includes generic code for scaling, resizing, clipping, and other manipulations of the image data. OTOH, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> is intended to be a wrapper of whatever is the native image format that is quickest/easiest to draw to a DC or to be the target of the drawing operations performed on a <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>. By splitting the responsibilities between wxImage/wxBitmap like this then it&apos;s easier to use generic code shared by all platforms and image types for generic operations and platform specific code where performance or compatibility is needed.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></para><para><simplesect kind="see"><para><ref refid="overview__bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="overview__bitmap_1overview_bitmap_supportedformats" kindref="member">Supported Bitmap File Formats</ref>, <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">wxDC::Blit</ref>, <ref refid="classwx_icon" kindref="compound">wxIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_image" kindref="compound">wxImage</ref>, <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4467">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4465">
+        <label>wxBitmap</label>
+        <link refid="classwx_bitmap"/>
+        <childnode refid="4466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4466">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="4467" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4470">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4471" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4468">
+        <label>wxBitmap</label>
+        <link refid="classwx_bitmap"/>
+        <childnode refid="4469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4469">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="4470" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4471">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" line="207" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bitmap.h" bodystart="206" bodyend="666"/>
+    <listofallmembers>
+      <member refid="classwx_bitmap_1a6418825ad15574229188e0c5f97a4f3a" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>AddHandler</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxBitmap</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_bitmap_1a62381d78867e552f713ae712fd23bc81" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>CleanUpHandlers</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxBitmap</scope><name>CloneRefData</name></member>
+      <member refid="classwx_bitmap_1af52987a85a128c685a6d7a54349bc22d" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>ConvertToDisabled</name></member>
+      <member refid="classwx_bitmap_1a063fed54a77f63d2cfa69d12f9035fe2" prot="public" virt="virtual"><scope>wxBitmap</scope><name>ConvertToImage</name></member>
+      <member refid="classwx_bitmap_1afd23ea63dc5fb72cc806652ba4d6cf9b" prot="public" virt="virtual"><scope>wxBitmap</scope><name>CopyFromIcon</name></member>
+      <member refid="classwx_bitmap_1aa793ed387091a03f30060dd6e876bea5" prot="public" virt="virtual"><scope>wxBitmap</scope><name>Create</name></member>
+      <member refid="classwx_bitmap_1a5b9cc5283dba021db3de367701497a73" prot="public" virt="virtual"><scope>wxBitmap</scope><name>Create</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxBitmap</scope><name>CreateRefData</name></member>
+      <member refid="classwx_bitmap_1aae67381581ac0ad8378adc23d01f593e" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>FindHandler</name></member>
+      <member refid="classwx_bitmap_1a4ba567f7704a26e9b2ce293203574dc3" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>FindHandler</name></member>
+      <member refid="classwx_bitmap_1ab8d543233b6b3c9f153c47911fcd1a1b" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>FindHandler</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxBitmap</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_bitmap_1a4b11030807d240af9278e5a3ce36cff5" prot="public" virt="virtual"><scope>wxBitmap</scope><name>GetDepth</name></member>
+      <member refid="classwx_bitmap_1af5acce4a660c9bfe0bfe363e1b183e42" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>GetHandlers</name></member>
+      <member refid="classwx_bitmap_1a43fa1cfa77a428259d68e6a237aaeba2" prot="public" virt="virtual"><scope>wxBitmap</scope><name>GetHeight</name></member>
+      <member refid="classwx_bitmap_1ac2dc7d543479e959aa820a8f20dc8037" prot="public" virt="virtual"><scope>wxBitmap</scope><name>GetMask</name></member>
+      <member refid="classwx_bitmap_1aaa9cfa654deb84237cbcaf9757d2deaa" prot="public" virt="virtual"><scope>wxBitmap</scope><name>GetPalette</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>GetRefData</name></member>
+      <member refid="classwx_bitmap_1ac1bba3f3bca9b16db5545d1b3f2df40a" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>GetSize</name></member>
+      <member refid="classwx_bitmap_1a8745c687705511f1432d9f36ad26f95b" prot="public" virt="virtual"><scope>wxBitmap</scope><name>GetSubBitmap</name></member>
+      <member refid="classwx_bitmap_1a513b5dc67c3ffa7c9a6a5aacbc5ed0f2" prot="public" virt="virtual"><scope>wxBitmap</scope><name>GetWidth</name></member>
+      <member refid="classwx_bitmap_1ac2626d4a4ddca5fa54756d7f942c96a1" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>InitStandardHandlers</name></member>
+      <member refid="classwx_bitmap_1a228a76708d605d22ed82c889f15859a4" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>InsertHandler</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>IsKindOf</name></member>
+      <member refid="classwx_bitmap_1ab825460a217d250db53df0c9ca293068" prot="public" virt="virtual"><scope>wxBitmap</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>IsSameAs</name></member>
+      <member refid="classwx_bitmap_1ab4d271d200338e9274cebfee474fbd7f" prot="public" virt="virtual"><scope>wxBitmap</scope><name>LoadFile</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxBitmap</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>Ref</name></member>
+      <member refid="classwx_bitmap_1a0316baef61f8f9cc3ba05bd8e52f1670" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>RemoveHandler</name></member>
+      <member refid="classwx_bitmap_1a48617712dd0f5a6a51bb1897a49ae273" prot="public" virt="virtual"><scope>wxBitmap</scope><name>SaveFile</name></member>
+      <member refid="classwx_bitmap_1ac2d3b023cf64f90fa1257eb874ed015e" prot="public" virt="virtual"><scope>wxBitmap</scope><name>SetDepth</name></member>
+      <member refid="classwx_bitmap_1a0091921ee85f7444e846e6183ec64909" prot="public" virt="virtual"><scope>wxBitmap</scope><name>SetHeight</name></member>
+      <member refid="classwx_bitmap_1a93ca840fdf8cd761e7ad419a90626ac4" prot="public" virt="virtual"><scope>wxBitmap</scope><name>SetMask</name></member>
+      <member refid="classwx_bitmap_1a57d5e5389c7603ecb3edf822bc5eaf9c" prot="public" virt="virtual"><scope>wxBitmap</scope><name>SetPalette</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>SetRefData</name></member>
+      <member refid="classwx_bitmap_1a82c54a43db80f31c9ff70b0e18a1d972" prot="public" virt="virtual"><scope>wxBitmap</scope><name>SetWidth</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>UnShare</name></member>
+      <member refid="classwx_bitmap_1a5b4b1b408108b78cdbfd325b03c903b7" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxBitmap</name></member>
+      <member refid="classwx_bitmap_1abfaa21ec563a64ea913af918150db900" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxBitmap</name></member>
+      <member refid="classwx_bitmap_1a9b34f9ec18dc652163bc3153a067e6c7" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxBitmap</name></member>
+      <member refid="classwx_bitmap_1a3bb19e8d368d6565f52a9c1294d80d7a" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxBitmap</name></member>
+      <member refid="classwx_bitmap_1a2a73d89860df03b474086a7db694527d" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxBitmap</name></member>
+      <member refid="classwx_bitmap_1a0b750963aa91e021dfa222138d1678ed" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxBitmap</name></member>
+      <member refid="classwx_bitmap_1af7c12dde97793393d6ef19e0dda39b1b" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxBitmap</name></member>
+      <member refid="classwx_bitmap_1a9855ffc55043187e4cff075aeefbaaf8" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxBitmap</name></member>
+      <member refid="classwx_g_d_i_object_1a20ac442e0d24cf6250d7bd45f0d968d5" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxGDIObject</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxBitmap</scope><name>wxObject</name></member>
+      <member refid="classwx_bitmap_1a6b5f4ed6a11ac208fe6ea45b4bdb5298" prot="public" virt="virtual"><scope>wxBitmap</scope><name>~wxBitmap</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxBitmap</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="clipbrd_8h" kind="file">
+    <compoundname>clipbrd.h</compoundname>
+    <innerclass refid="classwx_clipboard" prot="public">wxClipboard</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" prot="public" static="no">
+        <name>wxTheClipboard</name>
+        <briefdescription>
+<para>The backwards compatible access macro that returns the global clipboard object pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clipbrd.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clipbrd.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/clipbrd.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_notify_event" kind="class" prot="public">
+    <compoundname>wxNotifyEvent</compoundname>
+    <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
+    <derivedcompoundref refid="classwx_aui_tool_bar_event" prot="public" virt="non-virtual">wxAuiToolBarEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_book_ctrl_event" prot="public" virt="non-virtual">wxBookCtrlEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_data_view_event" prot="public" virt="non-virtual">wxDataViewEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_grid_event" prot="public" virt="non-virtual">wxGridEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_grid_range_select_event" prot="public" virt="non-virtual">wxGridRangeSelectEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_grid_size_event" prot="public" virt="non-virtual">wxGridSizeEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_header_ctrl_event" prot="public" virt="non-virtual">wxHeaderCtrlEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_list_event" prot="public" virt="non-virtual">wxListEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_media_event" prot="public" virt="non-virtual">wxMediaEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_ribbon_bar_event" prot="public" virt="non-virtual">wxRibbonBarEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_rich_text_event" prot="public" virt="non-virtual">wxRichTextEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_spin_double_event" prot="public" virt="non-virtual">wxSpinDoubleEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_spin_event" prot="public" virt="non-virtual">wxSpinEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_splitter_event" prot="public" virt="non-virtual">wxSplitterEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_tree_event" prot="public" virt="non-virtual">wxTreeEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_tree_list_event" prot="public" virt="non-virtual">wxTreeListEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_web_view_event" prot="public" virt="non-virtual">wxWebViewEvent</derivedcompoundref>
+    <derivedcompoundref refid="classwx_wizard_event" prot="public" virt="non-virtual">wxWizardEvent</derivedcompoundref>
+    <includes local="no">wx/event.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_notify_event_1a4c97324fca04afe13beaa8a8a307ec7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxNotifyEvent::wxNotifyEvent</definition>
+        <argsstring>(wxEventType eventType=wxEVT_NULL, int id=0)</argsstring>
+        <name>wxNotifyEvent</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>eventType</declname>
+          <defval><ref refid="group__group__funcmacro__events_1ga310bc3f7977ae79ac1198c7a287dbffe" kindref="member">wxEVT_NULL</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor (used internally by wxWidgets only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3095"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxNotifyEvent::Allow</definition>
+        <argsstring>()</argsstring>
+        <name>Allow</name>
+        <briefdescription>
+<para>This is the opposite of <ref refid="classwx_notify_event_1a49e4502414a11e273f51a34a21d2acd3" kindref="member">Veto()</ref>: it explicitly allows the event to be processed. </para>        </briefdescription>
+        <detaileddescription>
+<para>For most events it is not necessary to call this method as the events are allowed anyhow but some are forbidden by default (this will be mentioned in the corresponding event description). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3103"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notify_event_1a47481911751fbf8c21b7e850c93d3862" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxNotifyEvent::IsAllowed</definition>
+        <argsstring>() const </argsstring>
+        <name>IsAllowed</name>
+        <briefdescription>
+<para>Returns true if the change is allowed (<ref refid="classwx_notify_event_1a49e4502414a11e273f51a34a21d2acd3" kindref="member">Veto()</ref> hasn&apos;t been called) or false otherwise (if it was). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_notify_event_1a49e4502414a11e273f51a34a21d2acd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxNotifyEvent::Veto</definition>
+        <argsstring>()</argsstring>
+        <name>Veto</name>
+        <briefdescription>
+<para>Prevents the change announced by this event from happening. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is in general a good idea to notify the user about the reasons for vetoing the change because otherwise the applications behaviour (which just refuses to do what the user wants) might be quite surprising. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is not used by the event handlers by itself, but is a base class for other event classes (such as <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref>). </para>    </briefdescription>
+    <detaileddescription>
+<para>It (or an object of a derived class) is sent when the controls state is being changed and allows the program to <ref refid="classwx_notify_event_1a49e4502414a11e273f51a34a21d2acd3" kindref="member">wxNotifyEvent::Veto()</ref> this change if it wants to prevent it from happening.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7986">
+        <label>wxRibbonBarEvent</label>
+        <link refid="classwx_ribbon_bar_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7975">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7979">
+        <label>wxDataViewEvent</label>
+        <link refid="classwx_data_view_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7973">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="7974" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7982">
+        <label>wxGridSizeEvent</label>
+        <link refid="classwx_grid_size_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7992">
+        <label>wxTreeListEvent</label>
+        <link refid="classwx_tree_list_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7985">
+        <label>wxMediaEvent</label>
+        <link refid="classwx_media_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7984">
+        <label>wxListEvent</label>
+        <link refid="classwx_list_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7977">
+        <label>wxBookCtrlEvent</label>
+        <link refid="classwx_book_ctrl_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7990">
+        <label>wxSplitterEvent</label>
+        <link refid="classwx_splitter_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7994">
+        <label>wxWizardEvent</label>
+        <link refid="classwx_wizard_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7988">
+        <label>wxSpinDoubleEvent</label>
+        <link refid="classwx_spin_double_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7980">
+        <label>wxGridEvent</label>
+        <link refid="classwx_grid_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7993">
+        <label>wxWebViewEvent</label>
+        <link refid="classwx_web_view_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7972">
+        <label>wxNotifyEvent</label>
+        <link refid="classwx_notify_event"/>
+        <childnode refid="7973" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7981">
+        <label>wxGridRangeSelectEvent</label>
+        <link refid="classwx_grid_range_select_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7989">
+        <label>wxSpinEvent</label>
+        <link refid="classwx_spin_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7976">
+        <label>wxAuiToolBarEvent</label>
+        <link refid="classwx_aui_tool_bar_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7983">
+        <label>wxHeaderCtrlEvent</label>
+        <link refid="classwx_header_ctrl_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7978">
+        <label>wxAuiNotebookEvent</label>
+        <link refid="classwx_aui_notebook_event"/>
+        <childnode refid="7977" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7987">
+        <label>wxRichTextEvent</label>
+        <link refid="classwx_rich_text_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7991">
+        <label>wxTreeEvent</label>
+        <link refid="classwx_tree_event"/>
+        <childnode refid="7972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7974">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="7975" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7998">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7999" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7996">
+        <label>wxCommandEvent</label>
+        <link refid="classwx_command_event"/>
+        <childnode refid="7997" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7995">
+        <label>wxNotifyEvent</label>
+        <link refid="classwx_notify_event"/>
+        <childnode refid="7996" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7997">
+        <label>wxEvent</label>
+        <link refid="classwx_event"/>
+        <childnode refid="7998" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7999">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3090" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3089" bodyend="3119"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxNotifyEvent</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>Allow</name></member>
+      <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxNotifyEvent</scope><name>Clone</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxNotifyEvent</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxNotifyEvent</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxNotifyEvent</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_command_event_1ae23c23fb440b31f32498dbe1b54faf32" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetClientData</name></member>
+      <member refid="classwx_command_event_1a6aba95aef4930c03fbba5808b395c93f" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetClientObject</name></member>
+      <member refid="classwx_event_1a525e5c576e64090af493cb81db2da59b" prot="public" virt="virtual"><scope>wxNotifyEvent</scope><name>GetEventCategory</name></member>
+      <member refid="classwx_event_1abdc74e95c8c2f32f2cc2bd84b88985ee" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetEventObject</name></member>
+      <member refid="classwx_event_1ac1e62dc3000d4bff0ebbd90a3d290695" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetEventType</name></member>
+      <member refid="classwx_command_event_1aadd8fc10e9e32755f7bca503fe10f5fc" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetExtraLong</name></member>
+      <member refid="classwx_event_1ac732828ac14cfc289d798a4fea437246" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetId</name></member>
+      <member refid="classwx_command_event_1abaf0dde08fd04018feba4b458b757a7f" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetInt</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetRefData</name></member>
+      <member refid="classwx_command_event_1a3e16380f20769b1ed4053c69fe614b13" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetSelection</name></member>
+      <member refid="classwx_event_1a448d5ef08f617a3ae316235fcf804377" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetSkipped</name></member>
+      <member refid="classwx_command_event_1a24323d78936e5f6cd7f4780371f373e0" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetString</name></member>
+      <member refid="classwx_event_1a8a42d5b35d442052b58c53077ff4ae60" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>GetTimestamp</name></member>
+      <member refid="classwx_notify_event_1a47481911751fbf8c21b7e850c93d3862" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>IsAllowed</name></member>
+      <member refid="classwx_command_event_1a787f616f732b35c6ed30ab10b74147e4" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>IsChecked</name></member>
+      <member refid="classwx_event_1ad70c9cfaf0d626c1115b2d42ea047c2d" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>IsCommandEvent</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>IsSameAs</name></member>
+      <member refid="classwx_command_event_1a4bb9cda53263b6c666ce2ab7159203f1" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>IsSelection</name></member>
+      <member refid="classwx_event_1ac81911194f1f59e1454c0397b87975d4" prot="protected" virt="non-virtual"><scope>wxNotifyEvent</scope><name>m_propagationLevel</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxNotifyEvent</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>Ref</name></member>
+      <member refid="classwx_event_1a0acb5c75f6e67b8822ad8ba3c5bdc4fe" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>ResumePropagation</name></member>
+      <member refid="classwx_command_event_1a1778d16766134e08cafcdb49b06855ce" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetClientData</name></member>
+      <member refid="classwx_command_event_1a752e5a0fb8992b062c4dec6866171586" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetClientObject</name></member>
+      <member refid="classwx_event_1a3460217d04c36393ab868ba453fde13d" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetEventObject</name></member>
+      <member refid="classwx_event_1aa29fb7459d64602e09837fea1e516d27" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetEventType</name></member>
+      <member refid="classwx_command_event_1a13ac3c581b99d110bac2c6b74803d2df" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetExtraLong</name></member>
+      <member refid="classwx_event_1ab9973f687bfa8a60318d8d9bd629d0d4" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetId</name></member>
+      <member refid="classwx_command_event_1aeaed91ffb1d02f07d7ea40f029f95a7c" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetInt</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetRefData</name></member>
+      <member refid="classwx_command_event_1a06ca56ac6680fe3b3178d8abd913d450" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetString</name></member>
+      <member refid="classwx_event_1ad4380dff3144a986cb960473051a1d8d" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>SetTimestamp</name></member>
+      <member refid="classwx_event_1ad265ef226445cb6b72a2697dd9d3b406" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>ShouldPropagate</name></member>
+      <member refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>Skip</name></member>
+      <member refid="classwx_event_1a060a7d222404daff4d3cef30cddeaae3" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>StopPropagation</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>UnShare</name></member>
+      <member refid="classwx_notify_event_1a49e4502414a11e273f51a34a21d2acd3" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>Veto</name></member>
+      <member refid="classwx_command_event_1aad941347872cd71fedcfc765fae7b2f7" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>wxCommandEvent</name></member>
+      <member refid="classwx_event_1aaf2a5cf056d006859cea36689ba13d36" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>wxEvent</name></member>
+      <member refid="classwx_notify_event_1a4c97324fca04afe13beaa8a8a307ec7b" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>wxNotifyEvent</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxNotifyEvent</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxNotifyEvent</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

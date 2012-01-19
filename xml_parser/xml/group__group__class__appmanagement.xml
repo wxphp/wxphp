@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__appmanagement" kind="group">
+    <compoundname>group_class_appmanagement</compoundname>
+    <title>Application and Process Management</title>
+    <innerclass refid="classwx_app_console" prot="public">wxAppConsole</innerclass>
+    <innerclass refid="classwx_app" prot="public">wxApp</innerclass>
+    <innerclass refid="classwx_cmd_line_parser" prot="public">wxCmdLineParser</innerclass>
+    <innerclass refid="classwx_dynamic_library_details" prot="public">wxDynamicLibraryDetails</innerclass>
+    <innerclass refid="classwx_dynamic_library" prot="public">wxDynamicLibrary</innerclass>
+    <innerclass refid="classwx_event_loop_base" prot="public">wxEventLoopBase</innerclass>
+    <innerclass refid="classwx_event_loop_activator" prot="public">wxEventLoopActivator</innerclass>
+    <innerclass refid="classwx_initializer" prot="public">wxInitializer</innerclass>
+    <innerclass refid="classwx_module" prot="public">wxModule</innerclass>
+    <innerclass refid="classwx_process" prot="public">wxProcess</innerclass>
+    <innerclass refid="classwx_single_instance_checker" prot="public">wxSingleInstanceChecker</innerclass>
+    <briefdescription>
+<para>The classes in this section represent the application (see <ref refid="classwx_app" kindref="compound">wxApp</ref>) or parts of it (e.g. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref>, <ref refid="classwx_module" kindref="compound">wxModule</ref>). They can be used for initialization/shutdown of the application itself.</para><para>Related macros/global-functions group: <ref refid="group__group__funcmacro__appinitterm" kindref="compound">Application Initialization and Termination</ref>. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

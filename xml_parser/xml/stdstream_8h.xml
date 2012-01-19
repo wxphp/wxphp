@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="stdstream_8h" kind="file">
+    <compoundname>stdstream.h</compoundname>
+    <innerclass refid="classwx_std_input_stream_buffer" prot="public">wxStdInputStreamBuffer</innerclass>
+    <innerclass refid="classwx_std_input_stream" prot="public">wxStdInputStream</innerclass>
+    <innerclass refid="classwx_std_output_stream_buffer" prot="public">wxStdOutputStreamBuffer</innerclass>
+    <innerclass refid="classwx_std_output_stream" prot="public">wxStdOutputStream</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdstream.h"/>
+  </compounddef>
+</doxygen>

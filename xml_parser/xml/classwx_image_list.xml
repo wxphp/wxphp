@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_image_list" kind="class" prot="public">
+    <compoundname>wxImageList</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/imaglist.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_image_list_1a91cdd6895654c2043d51bf31bc370d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxImageList::wxImageList</definition>
+        <argsstring>()</argsstring>
+        <name>wxImageList</name>
+        <briefdescription>
+<para>Default ctor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a7c99503e0d851e8d416204325014901a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxImageList::wxImageList</definition>
+        <argsstring>(int width, int height, bool mask=true, int initialCount=1)</argsstring>
+        <name>wxImageList</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mask</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialCount</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Constructor specifying the image size, whether image masks should be created, and the initial size of the list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the images in the list. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the images in the list. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if masks should be created for all images. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial size of the list.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_image_list_1a03b4ba6c8a868eff25f3d20cb3499673" kindref="member">Create()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a697f268509e3a8d45da7506349b7533d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxImageList::Add</definition>
+        <argsstring>(const wxBitmap &amp;bitmap, const wxBitmap &amp;mask=wxNullBitmap)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>mask</declname>
+          <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
+        </param>
+        <briefdescription>
+<para>Adds a new image or images using a bitmap and optional mask bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bitmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap representing the opaque areas of the image. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Monochrome mask bitmap, representing the transparent areas of the image.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new zero-based image index.</para></simplesect>
+<simplesect kind="remark"><para>The original bitmap or icon is not affected by the <ref refid="classwx_image_list_1a697f268509e3a8d45da7506349b7533d" kindref="member">Add()</ref> operation, and can be deleted afterwards. If the bitmap is wider than the images in the list, then the bitmap will automatically be split into smaller images, each matching the dimensions of the image list. This does not apply when adding icons. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a2022beccd2564ee2be79b273246b50a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxImageList::Add</definition>
+        <argsstring>(const wxBitmap &amp;bitmap, const wxColour &amp;maskColour)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>maskColour</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new image or images using a bitmap and mask colour. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bitmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap representing the opaque areas of the image. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maskColour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Colour indicating which parts of the image are transparent.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new zero-based image index.</para></simplesect>
+<simplesect kind="remark"><para>The original bitmap or icon is not affected by the <ref refid="classwx_image_list_1a697f268509e3a8d45da7506349b7533d" kindref="member">Add()</ref> operation, and can be deleted afterwards. If the bitmap is wider than the images in the list, then the bitmap will automatically be split into smaller images, each matching the dimensions of the image list. This does not apply when adding icons. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a5cdf301d2c4ec6d074816a7566d6d7c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxImageList::Add</definition>
+        <argsstring>(const wxIcon &amp;icon)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <declname>icon</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new image using an icon. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>icon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Icon to use as the image.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new zero-based image index.</para></simplesect>
+<simplesect kind="remark"><para>The original bitmap or icon is not affected by the <ref refid="classwx_image_list_1a697f268509e3a8d45da7506349b7533d" kindref="member">Add()</ref> operation, and can be deleted afterwards. If the bitmap is wider than the images in the list, then the bitmap will automatically be split into smaller images, each matching the dimensions of the image list. This does not apply when adding icons.</para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a03b4ba6c8a868eff25f3d20cb3499673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxImageList::Create</definition>
+        <argsstring>(int width, int height, bool mask=true, int initialCount=1)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mask</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialCount</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the list. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_image_list_1a91cdd6895654c2043d51bf31bc370d90" kindref="member">wxImageList()</ref> for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1aca7da30ce467d74a5e9037ad99ec3287" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxImageList::Draw</definition>
+        <argsstring>(int index, wxDC &amp;dc, int x, int y, int flags=wxIMAGELIST_DRAW_NORMAL, bool solidBackground=false)</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxIMAGELIST_DRAW_NORMAL</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>solidBackground</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Draws a specified image onto a device context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image index, starting from zero. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device context to draw on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X position on the device context. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y position on the device context. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>How to draw the image. A bitlist of a selection of the following:<itemizedlist>
+<listitem><para>wxIMAGELIST_DRAW_NORMAL: Draw the image normally.</para></listitem><listitem><para>wxIMAGELIST_DRAW_TRANSPARENT: Draw the image with transparency.</para></listitem><listitem><para>wxIMAGELIST_DRAW_SELECTED: Draw the image in selected state.</para></listitem><listitem><para>wxIMAGELIST_DRAW_FOCUSED: Draw the image in a focused state. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>solidBackground</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>For optimisation - drawing can be faster if the function is told that the background is solid. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a088dccbd280d249daf5f013740b8375e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
+        <definition>wxBitmap wxImageList::GetBitmap</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>GetBitmap</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the bitmap corresponding to the given index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a61e605604d1c176bee65ee772aae861c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
+        <definition>wxIcon wxImageList::GetIcon</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>GetIcon</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the icon corresponding to the given index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1ad98e6cb815e803464f228a79dddd0f2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxImageList::GetImageCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetImageCount</name>
+        <briefdescription>
+<para>Returns the number of images in the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a968cbb92b379df39dd3ce64bf0cd94cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxImageList::GetSize</definition>
+        <argsstring>(int index, int &amp;width, int &amp;height) const </argsstring>
+        <name>GetSize</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the size of the images in the list. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently, the <emphasis>index</emphasis> parameter is ignored as all images in the list have the same size.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>currently unused, should be 0 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>receives the width of the images in the list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>receives the height of the images in the list</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the function succeeded, false if it failed (for example, if the image list was not yet initialized). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a70e5bc2c695d3bdd1a3a151c8774b9ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxImageList::Remove</definition>
+        <argsstring>(int index)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Removes the image at the given position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1a9de067947c75fc53798541cad5d6ebce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxImageList::RemoveAll</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveAll</name>
+        <briefdescription>
+<para>Removes all the images in the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1ada78532ad344127e0917d363a34783a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxImageList::Replace</definition>
+        <argsstring>(int index, const wxBitmap &amp;bitmap, const wxBitmap &amp;mask=wxNullBitmap)</argsstring>
+        <name>Replace</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>mask</declname>
+          <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
+        </param>
+        <briefdescription>
+<para>Replaces the existing image with the new image. </para>        </briefdescription>
+        <detaileddescription>
+<para>Windows only.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the bitmap to be replaced. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap representing the opaque areas of the image. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Monochrome mask bitmap, representing the transparent areas of the image.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the replacement was successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>The original bitmap or icon is not affected by the <ref refid="classwx_image_list_1ada78532ad344127e0917d363a34783a4" kindref="member">Replace()</ref> operation, and can be deleted afterwards. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_image_list_1af003aa28ad738528ef15d873e8e96756" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxImageList::Replace</definition>
+        <argsstring>(int index, const wxIcon &amp;icon)</argsstring>
+        <name>Replace</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
+          <declname>icon</declname>
+        </param>
+        <briefdescription>
+<para>Replaces the existing image with the new image. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the bitmap to be replaced. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>icon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Icon to use as the image.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the replacement was successful, false otherwise.</para></simplesect>
+<simplesect kind="remark"><para>The original bitmap or icon is not affected by the <ref refid="classwx_image_list_1ada78532ad344127e0917d363a34783a4" kindref="member">Replace()</ref> operation, and can be deleted afterwards.</para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="233"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classwx_image_list" kindref="compound">wxImageList</ref> contains a list of images, which are stored in an unspecified form. </para>    </briefdescription>
+    <detaileddescription>
+<para>Images can have masks for transparent drawing, and can be made from a variety of sources including bitmaps and icons.</para><para><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> is used principally in conjunction with <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> and <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> classes.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7251">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7250">
+        <label>wxImageList</label>
+        <link refid="classwx_image_list"/>
+        <childnode refid="7251" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7253">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7254" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7252">
+        <label>wxImageList</label>
+        <link refid="classwx_image_list"/>
+        <childnode refid="7253" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7254">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="43" bodyend="234"/>
+    <listofallmembers>
+      <member refid="classwx_image_list_1a697f268509e3a8d45da7506349b7533d" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Add</name></member>
+      <member refid="classwx_image_list_1a2022beccd2564ee2be79b273246b50a8" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Add</name></member>
+      <member refid="classwx_image_list_1a5cdf301d2c4ec6d074816a7566d6d7c2" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Add</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxImageList</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxImageList</scope><name>CloneRefData</name></member>
+      <member refid="classwx_image_list_1a03b4ba6c8a868eff25f3d20cb3499673" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Create</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxImageList</scope><name>CreateRefData</name></member>
+      <member refid="classwx_image_list_1aca7da30ce467d74a5e9037ad99ec3287" prot="public" virt="virtual"><scope>wxImageList</scope><name>Draw</name></member>
+      <member refid="classwx_image_list_1a088dccbd280d249daf5f013740b8375e" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>GetBitmap</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxImageList</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_image_list_1a61e605604d1c176bee65ee772aae861c" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>GetIcon</name></member>
+      <member refid="classwx_image_list_1ad98e6cb815e803464f228a79dddd0f2b" prot="public" virt="virtual"><scope>wxImageList</scope><name>GetImageCount</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>GetRefData</name></member>
+      <member refid="classwx_image_list_1a968cbb92b379df39dd3ce64bf0cd94cb" prot="public" virt="virtual"><scope>wxImageList</scope><name>GetSize</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxImageList</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Ref</name></member>
+      <member refid="classwx_image_list_1a70e5bc2c695d3bdd1a3a151c8774b9ee" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Remove</name></member>
+      <member refid="classwx_image_list_1a9de067947c75fc53798541cad5d6ebce" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>RemoveAll</name></member>
+      <member refid="classwx_image_list_1ada78532ad344127e0917d363a34783a4" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Replace</name></member>
+      <member refid="classwx_image_list_1af003aa28ad738528ef15d873e8e96756" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>Replace</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>UnShare</name></member>
+      <member refid="classwx_image_list_1a91cdd6895654c2043d51bf31bc370d90" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>wxImageList</name></member>
+      <member refid="classwx_image_list_1a7c99503e0d851e8d416204325014901a" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>wxImageList</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxImageList</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxImageList</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

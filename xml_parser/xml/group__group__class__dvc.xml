@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__dvc" kind="group">
+    <compoundname>group_class_dvc</compoundname>
+    <title>wxDataViewCtrl Related Classes</title>
+    <innerclass refid="classwx_data_view_model" prot="public">wxDataViewModel</innerclass>
+    <innerclass refid="classwx_data_view_list_model" prot="public">wxDataViewListModel</innerclass>
+    <innerclass refid="classwx_data_view_index_list_model" prot="public">wxDataViewIndexListModel</innerclass>
+    <innerclass refid="classwx_data_view_virtual_list_model" prot="public">wxDataViewVirtualListModel</innerclass>
+    <innerclass refid="classwx_data_view_item_attr" prot="public">wxDataViewItemAttr</innerclass>
+    <innerclass refid="classwx_data_view_item" prot="public">wxDataViewItem</innerclass>
+    <innerclass refid="classwx_data_view_ctrl" prot="public">wxDataViewCtrl</innerclass>
+    <innerclass refid="classwx_data_view_model_notifier" prot="public">wxDataViewModelNotifier</innerclass>
+    <innerclass refid="classwx_data_view_renderer" prot="public">wxDataViewRenderer</innerclass>
+    <innerclass refid="classwx_data_view_text_renderer" prot="public">wxDataViewTextRenderer</innerclass>
+    <innerclass refid="classwx_data_view_icon_text_renderer" prot="public">wxDataViewIconTextRenderer</innerclass>
+    <innerclass refid="classwx_data_view_progress_renderer" prot="public">wxDataViewProgressRenderer</innerclass>
+    <innerclass refid="classwx_data_view_spin_renderer" prot="public">wxDataViewSpinRenderer</innerclass>
+    <innerclass refid="classwx_data_view_toggle_renderer" prot="public">wxDataViewToggleRenderer</innerclass>
+    <innerclass refid="classwx_data_view_choice_renderer" prot="public">wxDataViewChoiceRenderer</innerclass>
+    <innerclass refid="classwx_data_view_date_renderer" prot="public">wxDataViewDateRenderer</innerclass>
+    <innerclass refid="classwx_data_view_custom_renderer" prot="public">wxDataViewCustomRenderer</innerclass>
+    <innerclass refid="classwx_data_view_bitmap_renderer" prot="public">wxDataViewBitmapRenderer</innerclass>
+    <innerclass refid="classwx_data_view_column" prot="public">wxDataViewColumn</innerclass>
+    <innerclass refid="classwx_data_view_list_ctrl" prot="public">wxDataViewListCtrl</innerclass>
+    <innerclass refid="classwx_data_view_tree_ctrl" prot="public">wxDataViewTreeCtrl</innerclass>
+    <innerclass refid="classwx_data_view_list_store" prot="public">wxDataViewListStore</innerclass>
+    <innerclass refid="classwx_data_view_tree_store" prot="public">wxDataViewTreeStore</innerclass>
+    <innerclass refid="classwx_data_view_icon_text" prot="public">wxDataViewIconText</innerclass>
+    <innerclass refid="classwx_data_view_event" prot="public">wxDataViewEvent</innerclass>
+    <briefdescription>
+<para>These are all classes used or provided for use with <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

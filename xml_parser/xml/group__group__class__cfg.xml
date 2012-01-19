@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__cfg" kind="group">
+    <compoundname>group_class_cfg</compoundname>
+    <title>Application and System configuration</title>
+    <innerclass refid="classwx_app_traits" prot="public">wxAppTraits</innerclass>
+    <innerclass refid="classwx_config_base" prot="public">wxConfigBase</innerclass>
+    <innerclass refid="classwx_config_path_changer" prot="public">wxConfigPathChanger</innerclass>
+    <innerclass refid="classwx_display" prot="public">wxDisplay</innerclass>
+    <innerclass refid="classwx_file_config" prot="public">wxFileConfig</innerclass>
+    <innerclass refid="classwx_font_mapper" prot="public">wxFontMapper</innerclass>
+    <innerclass refid="classwx_locale" prot="public">wxLocale</innerclass>
+    <innerclass refid="classwx_mime_types_manager" prot="public">wxMimeTypesManager</innerclass>
+    <innerclass refid="classwx_reg_config" prot="public">wxRegConfig</innerclass>
+    <innerclass refid="classwx_reg_key" prot="public">wxRegKey</innerclass>
+    <innerclass refid="classwx_platform_info" prot="public">wxPlatformInfo</innerclass>
+    <innerclass refid="classwx_system_settings" prot="public">wxSystemSettings</innerclass>
+    <innerclass refid="classwx_system_options" prot="public">wxSystemOptions</innerclass>
+    <innerclass refid="structwx_video_mode" prot="public">wxVideoMode</innerclass>
+    <innerclass refid="classwx_id_manager" prot="public">wxIdManager</innerclass>
+    <innerclass refid="classwx_x_locale" prot="public">wxXLocale</innerclass>
+    <briefdescription>
+<para>The classes in this section are used to handle application-wide settings and system-wide settings. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

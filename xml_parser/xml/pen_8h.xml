@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="pen_8h" kind="file">
+    <compoundname>pen.h</compoundname>
+    <innerclass refid="classwx_pen" prot="public">wxPen</innerclass>
+    <innerclass refid="classwx_pen_list" prot="public">wxPenList</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="pen_8h_1aebe64277219894a55d6b963607ad5f54" prot="public" static="no">
+        <name>wxPenStyle</name>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a8151bceaf29ef4c55d9ee8940608f785" prot="public">
+          <name>wxPENSTYLE_INVALID</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a133ea384ff4d033977dfe59627b4cfce" prot="public">
+          <name>wxPENSTYLE_SOLID</name>
+          <briefdescription>
+<para>Solid style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a05e8c1851a5e8c26abcdf44d34758911" prot="public">
+          <name>wxPENSTYLE_DOT</name>
+          <briefdescription>
+<para>Dotted style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a1ff40e63a0c8337c7bd9db688846c001" prot="public">
+          <name>wxPENSTYLE_LONG_DASH</name>
+          <briefdescription>
+<para>Long dashed style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54aeb7bf7eabb2ea7a04c3e60c63d7d71d1" prot="public">
+          <name>wxPENSTYLE_SHORT_DASH</name>
+          <briefdescription>
+<para>Short dashed style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a306f285087919cc6632c7483a874efa1" prot="public">
+          <name>wxPENSTYLE_DOT_DASH</name>
+          <briefdescription>
+<para>Dot and dash style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54ad41a16843519774caccae62b9c0a6c02" prot="public">
+          <name>wxPENSTYLE_USER_DASH</name>
+          <briefdescription>
+<para>Use the user dashes: see <ref refid="classwx_pen_1a6f4471824d023b98e5d884b00535b573" kindref="member">wxPen::SetDashes</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a8b23757682a1b5683bcca4c73bf8b7b6" prot="public">
+          <name>wxPENSTYLE_TRANSPARENT</name>
+          <briefdescription>
+<para>No pen is used. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54aae93043e84175afc078759e847cf8011" prot="public">
+          <name>wxPENSTYLE_STIPPLE_MASK_OPAQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="todo_1_todo000043"><xreftitle>Todo</xreftitle><xrefdescription><para>WHAT&apos;s this? </para></xrefdescription></xrefsect></para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a4fb547c2970454366e99444d4cee10bf" prot="public">
+          <name>wxPENSTYLE_STIPPLE_MASK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="todo_1_todo000044"><xreftitle>Todo</xreftitle><xrefdescription><para>WHAT&apos;s this? </para></xrefdescription></xrefsect></para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a3a3987132ab682f325c1050dd4bee493" prot="public">
+          <name>wxPENSTYLE_STIPPLE</name>
+          <briefdescription>
+<para>Use the stipple bitmap. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a5488c55dd1794fa20f3cfc1ebe3397e4" prot="public">
+          <name>wxPENSTYLE_BDIAGONAL_HATCH</name>
+          <briefdescription>
+<para>Backward diagonal hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a3c9dc9425682ea195436397cd61c7a60" prot="public">
+          <name>wxPENSTYLE_CROSSDIAG_HATCH</name>
+          <briefdescription>
+<para>Cross-diagonal hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54afa4dc6e8309ca833f80edfb6c2638251" prot="public">
+          <name>wxPENSTYLE_FDIAGONAL_HATCH</name>
+          <briefdescription>
+<para>Forward diagonal hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54ae7a27380a428c7746b9fa2cac2a57cc8" prot="public">
+          <name>wxPENSTYLE_CROSS_HATCH</name>
+          <briefdescription>
+<para>Cross hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a0c794a55127cbf50e9c80e7cb999e86d" prot="public">
+          <name>wxPENSTYLE_HORIZONTAL_HATCH</name>
+          <briefdescription>
+<para>Horizontal hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54ae74065494693e4f0a14fb325afbce7ca" prot="public">
+          <name>wxPENSTYLE_VERTICAL_HATCH</name>
+          <briefdescription>
+<para>Vertical hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a99055f3ec7a91c059a93af91f2125d2f" prot="public">
+          <name>wxPENSTYLE_FIRST_HATCH</name>
+          <initializer> wxPENSTYLE_BDIAGONAL_HATCH</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a3ec7ffdcfd1be3742995a00feb4e8e1c" prot="public">
+          <name>wxPENSTYLE_LAST_HATCH</name>
+          <initializer> wxPENSTYLE_VERTICAL_HATCH</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The possible styles for a <ref refid="classwx_pen" kindref="compound">wxPen</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that hatched pen styles are not supported by X11-based ports, including wxGTK. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="15" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="enum" id="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4" prot="public" static="no">
+        <name>wxPenJoin</name>
+        <enumvalue id="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4ab2c2eb26c13c6d24def04a784d1e3b49" prot="public">
+          <name>wxJOIN_INVALID</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4afe52f096a52ffe932545b7b3c6aadc30" prot="public">
+          <name>wxJOIN_BEVEL</name>
+          <initializer> 120</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4a268ff265ae9918408a090267824e20d6" prot="public">
+          <name>wxJOIN_MITER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4a72f9cc39b6dd7296b529ddfbc24a9e33" prot="public">
+          <name>wxJOIN_ROUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The possible join values of a <ref refid="classwx_pen" kindref="compound">wxPen</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000041"><xreftitle>Todo</xreftitle><xrefdescription><para>use wxPENJOIN_ prefix </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="76" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="enum" id="pen_8h_1a7d4a9e379451a8d249239543ad78af3a" prot="public" static="no">
+        <name>wxPenCap</name>
+        <enumvalue id="pen_8h_1a7d4a9e379451a8d249239543ad78af3aac7727c2b3001e5f748966f2668454c56" prot="public">
+          <name>wxCAP_INVALID</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1a7d4a9e379451a8d249239543ad78af3aaf6ed4ea8b553596da41dc2ae2f0bc141" prot="public">
+          <name>wxCAP_ROUND</name>
+          <initializer> 130</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1a7d4a9e379451a8d249239543ad78af3aa89b52188321d7f0aad8e7ba43d66ef2c" prot="public">
+          <name>wxCAP_PROJECTING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pen_8h_1a7d4a9e379451a8d249239543ad78af3aae9f86258540a0e93b9ad8961dadd64d0" prot="public">
+          <name>wxCAP_BUTT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The possible cap values of a <ref refid="classwx_pen" kindref="compound">wxPen</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000042"><xreftitle>Todo</xreftitle><xrefdescription><para>use wxPENCAP_ prefix </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="92" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="91" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="pen_8h_1a4dbfd18a818b95630453f3d755a1c95d" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref></type>
+        <definition>wxPen wxNullPen</definition>
+        <argsstring></argsstring>
+        <name>wxNullPen</name>
+        <briefdescription>
+<para>An empty pen. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_pen_1ad36b523a05e5dc6f26cedcbe4e09e513" kindref="member">wxPen::IsOk()</ref> always returns false for this object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a62930a76d6d75371553b90661f8d9d30" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxRED_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxRED_PEN</name>
+        <briefdescription>
+<para>Red pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="407" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a40815520d399c003f4b17dd1d8a24142" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxBLUE_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxBLUE_PEN</name>
+        <briefdescription>
+<para>Blue pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="414" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a4b1692630dc023b9900f2d507da34735" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxCYAN_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxCYAN_PEN</name>
+        <briefdescription>
+<para>Cyan pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="421" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a3cbf557f3d9825283a92dcb40bc2e20a" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxGREEN_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxGREEN_PEN</name>
+        <briefdescription>
+<para>Green pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="428" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a787768c16bb3ca4bba95f850e1a737d6" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxYELLOW_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxYELLOW_PEN</name>
+        <briefdescription>
+<para>Yellow pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="435" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a845a77278b675303c61858c18c2bb91b" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxBLACK_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxBLACK_PEN</name>
+        <briefdescription>
+<para>Black pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="442" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a2673a1627fe81e99a5b69ddacaecee2b" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxWHITE_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxWHITE_PEN</name>
+        <briefdescription>
+<para>White pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="449" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1afa8342d5885d1b1adf1fabd18a97ac58" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxTRANSPARENT_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxTRANSPARENT_PEN</name>
+        <briefdescription>
+<para>Transparent pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="456" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1ae1d7305927b56df235753d543ec02b2d" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxBLACK_DASHED_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxBLACK_DASHED_PEN</name>
+        <briefdescription>
+<para>Black dashed pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color and for the <computeroutput>wxPENSTYLE_SHORT_DASH</computeroutput> it has all standard attributes (1-pixel width, <computeroutput>wxCAP_ROUND</computeroutput> style, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="463" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a63955d74842289709ca0d7adc2c63e51" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxGREY_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxGREY_PEN</name>
+        <briefdescription>
+<para>Grey pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="470" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="470" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a0af84a9a68b2cb4d4d3f0a600da0b264" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxMEDIUM_GREY_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxMEDIUM_GREY_PEN</name>
+        <briefdescription>
+<para>Medium-grey pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="477" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a7ae1733b4203165aba05a5b53476e9c3" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
+        <definition>wxPen* wxLIGHT_GREY_PEN</definition>
+        <argsstring></argsstring>
+        <name>wxLIGHT_GREY_PEN</name>
+        <briefdescription>
+<para>Light-grey pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="484" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="pen_8h_1a9eb4c70a69dd5c289c6c53b0da13f48b" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_pen_list" kindref="compound">wxPenList</ref> *</type>
+        <definition>wxPenList* wxThePenList</definition>
+        <argsstring></argsstring>
+        <name>wxThePenList</name>
+        <briefdescription>
+<para>The global list of <ref refid="classwx_pen" kindref="compound">wxPen</ref> objects ready to be re-used (for better performances). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="554" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="554" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h"/>
+  </compounddef>
+</doxygen>

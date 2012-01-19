@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_u_r_l_data_object" kind="class" prot="public">
+    <compoundname>wxURLDataObject</compoundname>
+    <basecompoundref refid="classwx_text_data_object" prot="public" virt="non-virtual">wxTextDataObject</basecompoundref>
+    <includes local="no">wx/dataobj.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_u_r_l_data_object_1a57104fc32eb66f8fa666b1f2799631d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxURLDataObject::wxURLDataObject</definition>
+        <argsstring>(const wxString &amp;url=wxEmptyString)</argsstring>
+        <name>wxURLDataObject</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructor, may be used to initialize the URL. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>url</emphasis> is empty, <ref refid="classwx_u_r_l_data_object_1a6eb3ac7f0aea65eb54d005b91181bed2" kindref="member">SetURL()</ref> can be used later. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="674"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_data_object_1ad3359959cc67b7e8d7610959952c6f8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxURLDataObject::GetURL</definition>
+        <argsstring>() const </argsstring>
+        <name>GetURL</name>
+        <briefdescription>
+<para>Returns the URL stored by this object, as a string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="679"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_data_object_1a6eb3ac7f0aea65eb54d005b91181bed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxURLDataObject::SetURL</definition>
+        <argsstring>(const wxString &amp;url)</argsstring>
+        <name>SetURL</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>Sets the URL stored by this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="684"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_u_r_l_data_object" kindref="compound">wxURLDataObject</ref> is a <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> containing an URL and can be used e.g. </para>    </briefdescription>
+    <detaileddescription>
+<para>when you need to put an URL on or retrieve it from the clipboard:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clipbrd_8h_1a7981f5d50a36729858d8356aac6e77eb" kindref="member" tooltip="The backwards compatible access macro that returns the global clipboard object pointer...">wxTheClipboard</ref>-&gt;SetData(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_u_r_l_data_object_1a57104fc32eb66f8fa666b1f2799631d5" kindref="member" tooltip="Constructor, may be used to initialize the URL.">wxURLDataObject</ref>(url));</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>This class is derived from <ref refid="classwx_data_object_composite" kindref="compound">wxDataObjectComposite</ref> on Windows rather than <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref> on all other platforms.</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11213">
+        <label>wxURLDataObject</label>
+        <link refid="classwx_u_r_l_data_object"/>
+        <childnode refid="11214" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11216">
+        <label>wxDataObject</label>
+        <link refid="classwx_data_object"/>
+      </node>
+      <node id="11214">
+        <label>wxTextDataObject</label>
+        <link refid="classwx_text_data_object"/>
+        <childnode refid="11215" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11215">
+        <label>wxDataObjectSimple</label>
+        <link refid="classwx_data_object_simple"/>
+        <childnode refid="11216" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11217">
+        <label>wxURLDataObject</label>
+        <link refid="classwx_u_r_l_data_object"/>
+        <childnode refid="11218" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11220">
+        <label>wxDataObject</label>
+        <link refid="classwx_data_object"/>
+      </node>
+      <node id="11218">
+        <label>wxTextDataObject</label>
+        <link refid="classwx_text_data_object"/>
+        <childnode refid="11219" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11219">
+        <label>wxDataObjectSimple</label>
+        <link refid="classwx_data_object_simple"/>
+        <childnode refid="11220" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="668" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="667" bodyend="685"/>
+    <listofallmembers>
+      <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>Both</name></member>
+      <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692ef" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>Direction</name></member>
+      <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efac7de2bf89290f75553da7f3cb8fa5397" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>Get</name></member>
+      <member refid="classwx_text_data_object_1a6ef0b55724e5376e86552db82461c004" prot="public" virt="pure-virtual"><scope>wxURLDataObject</scope><name>GetAllFormats</name></member>
+      <member refid="classwx_data_object_simple_1a20585d2b354e24e5f7b0f4f559f50594" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetDataHere</name></member>
+      <member refid="classwx_data_object_1aa48761390b25d797d4cad393db752568" prot="public" virt="pure-virtual" ambiguityscope="wxDataObject::"><scope>wxURLDataObject</scope><name>GetDataHere</name></member>
+      <member refid="classwx_data_object_simple_1aac4311ab34deb1028d471c6a435574ff" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetDataSize</name></member>
+      <member refid="classwx_data_object_1a10674c65e59f08ba318f942e410b8627" prot="public" virt="pure-virtual" ambiguityscope="wxDataObject::"><scope>wxURLDataObject</scope><name>GetDataSize</name></member>
+      <member refid="classwx_text_data_object_1a73b44708bbca270fb80dbf2ca267488e" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>GetFormat</name></member>
+      <member refid="classwx_text_data_object_1ab1a9ad66f48fed3e8eeea799d798eb95" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetFormatCount</name></member>
+      <member refid="classwx_data_object_1a3f82815810bf4dcc34e1a5783c9b8a62" prot="public" virt="pure-virtual" ambiguityscope="wxDataObjectSimple::"><scope>wxURLDataObject</scope><name>GetFormatCount</name></member>
+      <member refid="classwx_data_object_1a47570ed6123bbebec195a2b7f843103c" prot="public" virt="pure-virtual"><scope>wxURLDataObject</scope><name>GetPreferredFormat</name></member>
+      <member refid="classwx_text_data_object_1a6b43294c05885cc8981b37f3c42815bd" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetText</name></member>
+      <member refid="classwx_text_data_object_1a15a488fff1040695932831cbf91dc5c8" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetTextLength</name></member>
+      <member refid="classwx_u_r_l_data_object_1ad3359959cc67b7e8d7610959952c6f8f" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>GetURL</name></member>
+      <member refid="classwx_data_object_1aaedc05373d1e6822c9795f57d8200b72" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>IsSupported</name></member>
+      <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa2ab9d7f173f2d17dc8ee7324ed3410b6" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>Set</name></member>
+      <member refid="classwx_data_object_simple_1a064b6e42ceb86247318e7ab62bb47442" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>SetData</name></member>
+      <member refid="classwx_data_object_1ab73fa5f1cb933c67df20ddb1fad99071" prot="public" virt="virtual" ambiguityscope="wxDataObject::"><scope>wxURLDataObject</scope><name>SetData</name></member>
+      <member refid="classwx_data_object_simple_1adf9d889c7fcc7e05cb6253b3b1e3cb0f" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>SetFormat</name></member>
+      <member refid="classwx_text_data_object_1ac6754f3ad536bd0fa99928604ec48e7a" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>SetText</name></member>
+      <member refid="classwx_u_r_l_data_object_1a6eb3ac7f0aea65eb54d005b91181bed2" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>SetURL</name></member>
+      <member refid="classwx_data_object_1aa910d21b55e45638567f770aa71a44da" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>wxDataObject</name></member>
+      <member refid="classwx_data_object_simple_1ad246b285dd2f414f4b13a4d794bf602d" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>wxDataObjectSimple</name></member>
+      <member refid="classwx_text_data_object_1a1d1c7457cb2b89f2df0a11129344c078" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>wxTextDataObject</name></member>
+      <member refid="classwx_u_r_l_data_object_1a57104fc32eb66f8fa666b1f2799631d5" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>wxURLDataObject</name></member>
+      <member refid="classwx_data_object_1a392665fe790cd29de240223b5bd2936c" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>~wxDataObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="richtextformatdlg_8h" kind="file">
+    <compoundname>richtextformatdlg.h</compoundname>
+    <innerclass refid="classwx_rich_text_formatting_dialog_factory" prot="public">wxRichTextFormattingDialogFactory</innerclass>
+    <innerclass refid="classwx_rich_text_formatting_dialog" prot="public">wxRichTextFormattingDialog</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="richtextformatdlg_8h_1af112f795b3c2a3036a8c1538cd7790fb" prot="public" static="no">
+        <name>wxRICHTEXT_FORMAT_STYLE_EDITOR</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextformatdlg_8h_1ae7c69047f35ccd4d1d809bfdc19c1fab" prot="public" static="no">
+        <name>wxRICHTEXT_FORMAT_FONT</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="85" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextformatdlg_8h_1a7c9d967375c05a62aad0c65c311033cf" prot="public" static="no">
+        <name>wxRICHTEXT_FORMAT_TABS</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="86" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextformatdlg_8h_1ab4f62de66b0a8bfa9d94bc0f8078355b" prot="public" static="no">
+        <name>wxRICHTEXT_FORMAT_BULLETS</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="87" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="richtextformatdlg_8h_1a8e68935aaadb92e4d9804f0bf099d9e0" prot="public" static="no">
+        <name>wxRICHTEXT_FORMAT_INDENTS_SPACING</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="88" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h"/>
+  </compounddef>
+</doxygen>

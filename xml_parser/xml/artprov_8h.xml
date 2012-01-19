@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="artprov_8h" kind="file">
+    <compoundname>artprov.h</compoundname>
+    <innerclass refid="classwx_art_provider" prot="public">wxArtProvider</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" prot="public" static="no">
+        <type>class <ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>typedef class wxString wxArtClient</definition>
+        <argsstring></argsstring>
+        <name>wxArtClient</name>
+        <briefdescription>
+<para>This type identifies the client of the art objects requested to <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" prot="public" static="no">
+        <type>class <ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>typedef class wxString wxArtID</definition>
+        <argsstring></argsstring>
+        <name>wxArtID</name>
+        <briefdescription>
+<para>This type identifies a specific art object which can be requested to <ref refid="classwx_art_provider" kindref="compound">wxArtProvider</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h"/>
+  </compounddef>
+</doxygen>

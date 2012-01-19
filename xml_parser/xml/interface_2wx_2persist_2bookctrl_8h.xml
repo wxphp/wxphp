@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2persist_2bookctrl_8h" kind="file">
+    <compoundname>bookctrl.h</compoundname>
+    <innerclass refid="classwx_persistent_book_ctrl" prot="public">wxPersistentBookCtrl</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="interface_2wx_2persist_2bookctrl_8h_1a8b21681a5cb6009c8acb05f474ca1899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_persistent_object" kindref="compound">wxPersistentObject</ref> *</type>
+        <definition>wxPersistentObject* wxCreatePersistentObject</definition>
+        <argsstring>(wxBookCtrlBase *book)</argsstring>
+        <name>wxCreatePersistentObject</name>
+        <param>
+          <type><ref refid="classwx_book_ctrl_base" kindref="compound">wxBookCtrlBase</ref> *</type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+<para>Overload allowing persistence adapter creation for wxBookCtrlBase-derived objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h"/>
+  </compounddef>
+</doxygen>

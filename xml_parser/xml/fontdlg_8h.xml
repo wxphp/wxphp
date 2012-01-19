@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="fontdlg_8h" kind="file">
+    <compoundname>fontdlg.h</compoundname>
+    <innerclass refid="classwx_font_dialog" prot="public">wxFontDialog</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga0155cfe569b5e6359b4b78c7b2312b1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>wxFont wxGetFontFromUser</definition>
+        <argsstring>(wxWindow *parent, const wxFont &amp;fontInit, const wxString &amp;caption=wxEmptyString)</argsstring>
+        <name>wxGetFontFromUser</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>fontInit</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Shows the font selection dialog and returns the font selected by user or invalid font (use <ref refid="classwx_font_1a3ea0ba08b44ea25a2c52cf18efb6856e" kindref="member">wxFont::IsOk()</ref> to test whether a font is valid) if the dialog was cancelled. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parent window for the font selection dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fontInit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If given, this will be the font initially selected in the dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caption</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If given, this will be used for the dialog caption.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Include file: <verbatim>#include &lt;wx/fontdlg.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdlg.h" line="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontdlg.h"/>
+  </compounddef>
+</doxygen>

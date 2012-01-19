@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_stop_watch" kind="class" prot="public">
+    <compoundname>wxStopWatch</compoundname>
+    <includes local="no">wx/stopwatch.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_stop_watch_1a0297f4fa4a2bc6b9ffc25219b93ff869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxStopWatch::wxStopWatch</definition>
+        <argsstring>()</argsstring>
+        <name>wxStopWatch</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This starts the stop watch. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stopwatch.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_stop_watch_1a6c99e7590ec82169918d41328142f829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxStopWatch::Pause</definition>
+        <argsstring>()</argsstring>
+        <name>Pause</name>
+        <briefdescription>
+<para>Pauses the stop watch. </para>        </briefdescription>
+        <detaileddescription>
+<para>Call <ref refid="classwx_stop_watch_1ae7059b8ce649c52af5f94d5d85bff78a" kindref="member">Resume()</ref> to resume time measuring again.</para><para>If this method is called several times, <computeroutput><ref refid="classwx_stop_watch_1ae7059b8ce649c52af5f94d5d85bff78a" kindref="member">Resume()</ref></computeroutput> must be called the same number of times to really resume the stop watch. You may, however, call <ref refid="classwx_stop_watch_1a8c0825d3efd859547b47761e57089b5f" kindref="member">Start()</ref> to resume it unconditionally. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stopwatch.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_stop_watch_1ae7059b8ce649c52af5f94d5d85bff78a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxStopWatch::Resume</definition>
+        <argsstring>()</argsstring>
+        <name>Resume</name>
+        <briefdescription>
+<para>Resumes the stop watch which had been paused with <ref refid="classwx_stop_watch_1a6c99e7590ec82169918d41328142f829" kindref="member">Pause()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stopwatch.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_stop_watch_1a8c0825d3efd859547b47761e57089b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxStopWatch::Start</definition>
+        <argsstring>(long milliseconds=0)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>long</type>
+          <declname>milliseconds</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>(Re)starts the stop watch with a given initial value. </para>        </briefdescription>
+        <detaileddescription>
+<para>The stopwatch will always be running after calling <ref refid="classwx_stop_watch_1a8c0825d3efd859547b47761e57089b5f" kindref="member">Start()</ref>, even if <ref refid="classwx_stop_watch_1a6c99e7590ec82169918d41328142f829" kindref="member">Pause()</ref> had been called before and even if it had been called multiple times. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stopwatch.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_stop_watch_1aa80ff19ed90b2b99c879ec9ea3e7a71d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxStopWatch::Time</definition>
+        <argsstring>() const </argsstring>
+        <name>Time</name>
+        <briefdescription>
+<para>Returns the time in milliseconds since the start (or restart) or the last call of <ref refid="classwx_stop_watch_1a6c99e7590ec82169918d41328142f829" kindref="member">Pause()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_stop_watch_1ab80191c8153ce08823c31b116feea122" kindref="member">TimeInMicro()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stopwatch.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_stop_watch_1ab80191c8153ce08823c31b116feea122" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxStopWatch::TimeInMicro</definition>
+        <argsstring>() const </argsstring>
+        <name>TimeInMicro</name>
+        <briefdescription>
+<para>Returns elapsed time in microseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is similar to <ref refid="classwx_stop_watch_1aa80ff19ed90b2b99c879ec9ea3e7a71d" kindref="member">Time()</ref> but returns the elapsed time in microseconds and not milliseconds. Notice that not all platforms really can measure times with this precision.</para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stopwatch.h" line="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classwx_stop_watch" kindref="compound">wxStopWatch</ref> class allow you to measure time intervals. </para>    </briefdescription>
+    <detaileddescription>
+<para>For example, you may use it to measure the time elapsed by some function:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_stop_watch" kindref="compound" tooltip="The wxStopWatch class allow you to measure time intervals.">wxStopWatch</ref><sp/>sw;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CallLongRunningFunction();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member" tooltip="For all normal, informational messages.">wxLogMessage</ref>(</highlight><highlight class="stringliteral">&quot;The<sp/>long<sp/>running<sp/>function<sp/>took<sp/>%ldms<sp/>to<sp/>execute&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sw.<ref refid="classwx_stop_watch_1aa80ff19ed90b2b99c879ec9ea3e7a71d" kindref="member" tooltip="Returns the time in milliseconds since the start (or restart) or the last call of...">Time</ref>());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sw.<ref refid="classwx_stop_watch_1a6c99e7590ec82169918d41328142f829" kindref="member" tooltip="Pauses the stop watch.">Pause</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>stopwatch<sp/>is<sp/>stopped<sp/>now<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sw.<ref refid="classwx_stop_watch_1ae7059b8ce649c52af5f94d5d85bff78a" kindref="member" tooltip="Resumes the stop watch which had been paused with Pause().">Resume</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CallLongRunningFunction();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member" tooltip="For all normal, informational messages.">wxLogMessage</ref>(</highlight><highlight class="stringliteral">&quot;And<sp/>calling<sp/>it<sp/>twice<sp/>took<sp/>$ldms<sp/>in<sp/>all&quot;</highlight><highlight class="normal">,<sp/>sw.<ref refid="classwx_stop_watch_1aa80ff19ed90b2b99c879ec9ea3e7a71d" kindref="member" tooltip="Returns the time in milliseconds since the start (or restart) or the last call of...">Time</ref>());</highlight></codeline>
+</programlisting></para><para>Since wxWidgets 2.9.3 this class uses <computeroutput>QueryPerformanceCounter()</computeroutput> function under MSW to measure the elapsed time. It provides higher precision than the usual timer functions but can suffer from bugs in its implementation in some Windows XP versions. If you encounter such problems, installing a Microsoft hot fix from <ulink url="http://support.microsoft.com/?id=896256">http://support.microsoft.com/?id=896256</ulink> could be necessary.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="classwx_timer" kindref="compound">wxTimer</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stopwatch.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stopwatch.h" bodystart="40" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classwx_stop_watch_1a6c99e7590ec82169918d41328142f829" prot="public" virt="non-virtual"><scope>wxStopWatch</scope><name>Pause</name></member>
+      <member refid="classwx_stop_watch_1ae7059b8ce649c52af5f94d5d85bff78a" prot="public" virt="non-virtual"><scope>wxStopWatch</scope><name>Resume</name></member>
+      <member refid="classwx_stop_watch_1a8c0825d3efd859547b47761e57089b5f" prot="public" virt="non-virtual"><scope>wxStopWatch</scope><name>Start</name></member>
+      <member refid="classwx_stop_watch_1aa80ff19ed90b2b99c879ec9ea3e7a71d" prot="public" virt="non-virtual"><scope>wxStopWatch</scope><name>Time</name></member>
+      <member refid="classwx_stop_watch_1ab80191c8153ce08823c31b116feea122" prot="public" virt="non-virtual"><scope>wxStopWatch</scope><name>TimeInMicro</name></member>
+      <member refid="classwx_stop_watch_1a0297f4fa4a2bc6b9ffc25219b93ff869" prot="public" virt="non-virtual"><scope>wxStopWatch</scope><name>wxStopWatch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

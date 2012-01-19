@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_property_grid_page" kind="class" prot="public">
+    <compoundname>wxPropertyGridPage</compoundname>
+    <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
+    <basecompoundref refid="classwx_property_grid_interface" prot="public" virt="non-virtual">wxPropertyGridInterface</basecompoundref>
+    <includes local="no">wx/propgrid/manager.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classwx_property_grid_page_1a741133900c0c24345ec97cd64f2a4979" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class wxPropertyGridManager</definition>
+        <argsstring></argsstring>
+        <name>wxPropertyGridManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_property_grid_page_1ac3e580bf5a3e173ff8e2250b5df9ce52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPropertyGridPage::wxPropertyGridPage</definition>
+        <argsstring>()</argsstring>
+        <name>wxPropertyGridPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1a51af551484cb8785e2fe8664b4e28775" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxPropertyGridPage::~wxPropertyGridPage</definition>
+        <argsstring>()</argsstring>
+        <name>~wxPropertyGridPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1a702b0d8cd205cf29c8888e80e3e426a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPropertyGridPage::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="classwx_property_grid_interface_1a787e4282dbb85994af0e29a948efa98c">Clear</reimplements>
+        <briefdescription>
+<para>Deletes all properties on page. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1a97fdd418c9e8727e1800428e30c6164c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxPropertyGridPage::FitColumns</definition>
+        <argsstring>()</argsstring>
+        <name>FitColumns</name>
+        <briefdescription>
+<para>Reduces column sizes to minimum possible that contents are still visibly (naturally some margin space will be applied as well). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns minimum size for the page to still display everything.</para></simplesect>
+<simplesect kind="remark"><para>This function only works properly if size of containing grid was already fairly large.</para></simplesect>
+Note that you can also get calculated column widths by calling GetColumnWidth() immediately after this function returns. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1a4a66eb036e9bd5592904446f991a013b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPropertyGridPage::GetIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>GetIndex</name>
+        <briefdescription>
+<para>Returns page index in manager;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1ac2d74a899d99af4182a307af41be42b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
+        <definition>wxPGProperty* wxPropertyGridPage::GetRoot</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRoot</name>
+        <briefdescription>
+<para>Returns &quot;root property&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para>It does not have name, etc. and it is not visible. It is only useful for accessing its children. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1a7309da21cd3a505fb6fe53cd36cff677" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPropertyGridPage::GetSplitterPosition</definition>
+        <argsstring>(int col=0) const </argsstring>
+        <name>GetSplitterPosition</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Returns x-coordinate position of splitter on a page. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1a8662f6cd2fd234a959493e4a3c693d2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPropertyGridPage::GetToolId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetToolId</name>
+        <briefdescription>
+<para>Returns id of the tool bar item that represents this page on wxPropertyGridManager&apos;s <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1aada6353fdf4ff5e1d2196001f2404283" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPropertyGridPage::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Do any member initialization in this method. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>- Called every time the page is added into a manager.<itemizedlist>
+<listitem><para>You can add properties to the page here. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1a21a33aea3b2c498c0cf63a79c70952ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxPropertyGridPage::IsHandlingAllEvents</definition>
+        <argsstring>() const </argsstring>
+        <name>IsHandlingAllEvents</name>
+        <briefdescription>
+<para>Return false here to indicate unhandled events should be propagated to manager&apos;s parent, as normal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1ab60f9672f417f1f124d7e777185a9263" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPropertyGridPage::OnShow</definition>
+        <argsstring>()</argsstring>
+        <name>OnShow</name>
+        <briefdescription>
+<para>Called every time page is about to be shown. </para>        </briefdescription>
+        <detaileddescription>
+<para>Useful, for instance, creating properties just-in-time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1ac66be7baa5683eddb727d75dfddabd88" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPropertyGridPage::RefreshProperty</definition>
+        <argsstring>(wxPGProperty *p)</argsstring>
+        <name>RefreshProperty</name>
+        <param>
+          <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Refreshes given property on page. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_property_grid_page_1a487917dd83814af6d6023280b8589fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPropertyGridPage::SetSplitterPosition</definition>
+        <argsstring>(int splitterPos, int col=0)</argsstring>
+        <name>SetSplitterPosition</name>
+        <param>
+          <type>int</type>
+          <declname>splitterPos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Sets splitter position on page. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>Splitter position cannot exceed grid size, and therefore setting it during form creation may fail as initial grid size is often smaller than desired splitter position, especially when sizers are being used. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Holder of property grid page information. </para>    </briefdescription>
+    <detaileddescription>
+<para>You can subclass this and give instance in <ref refid="classwx_property_grid_manager_1aea73aeb92bf18ba189198820f5341f7c" kindref="member">wxPropertyGridManager::AddPage</ref>. It inherits from <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> and can be used to process events specific to this page (id of events will still be same as manager&apos;s). If you don&apos;t want to use it to process all events of the page, you need to return false in the derived <ref refid="classwx_property_grid_page_1a21a33aea3b2c498c0cf63a79c70952ef" kindref="member">wxPropertyGridPage::IsHandlingAllEvents</ref>.</para><para>Please note that <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> lacks many non-const property manipulation functions found in <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>. Please use parent manager (m_manager member variable) when needed.</para><para>Please note that most member functions are inherited and as such not documented on this page. This means you will probably also want to read <ref refid="classwx_property_grid_interface" kindref="compound">wxPropertyGridInterface</ref> class reference.</para><sect1 id="classwx_property_grid_page_1propgridpage_event_handling">
+<title>Event Handling</title>
+<para><ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref> receives events emitted by its <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref>, but only those events that are specific to that page. If <ref refid="classwx_property_grid_page" kindref="compound">wxPropertyGridPage</ref>:: IsHandlingAllEvents returns false, then unhandled events are sent to the manager&apos;s parent, as usual.</para><para>See <ref refid="classwx_property_grid_1propgrid_event_handling" kindref="member">wxPropertyGrid Event Handling</ref> for more information.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para></sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="8912">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="8911">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8912" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8913" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8913">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8910">
+        <label>wxPropertyGridPage</label>
+        <link refid="classwx_property_grid_page"/>
+        <childnode refid="8911" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8914" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8914">
+        <label>wxPropertyGridInterface</label>
+        <link refid="classwx_property_grid_interface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8917">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8918" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8916">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="8917" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8919" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8919">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="8915">
+        <label>wxPropertyGridPage</label>
+        <link refid="classwx_property_grid_page"/>
+        <childnode refid="8916" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8920" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8920">
+        <label>wxPropertyGridInterface</label>
+        <link refid="classwx_property_grid_interface"/>
+      </node>
+      <node id="8918">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" line="42" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/manager.h" bodystart="40" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>AddFilter</name></member>
+      <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aea19c3af2d76e93bca4d687865b1ea27f4" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>AllStates</name></member>
+      <member refid="classwx_property_grid_interface_1a8496963f469db86941157f8ce67896c4" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Append</name></member>
+      <member refid="classwx_property_grid_interface_1a7ae5812ea47c050f981aec0b8ccbe83e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>AppendIn</name></member>
+      <member refid="classwx_property_grid_interface_1a4917f17cd9f415db313942157788e8bf" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>BeginAddChildren</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Bind</name></member>
+      <member refid="classwx_property_grid_interface_1a03e60ec606ffc2a9e1ea944f832ba4d4" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ChangePropertyValue</name></member>
+      <member refid="classwx_property_grid_page_1a702b0d8cd205cf29c8888e80e3e426a4" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>Clear</name></member>
+      <member refid="classwx_property_grid_interface_1a52aca4e7bbec0d9ac775ad4b5492544e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ClearModifiedStatus</name></member>
+      <member refid="classwx_property_grid_interface_1ad9630e6b319fafefcfac15c1060278dd" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ClearSelection</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPropertyGridPage</scope><name>CloneRefData</name></member>
+      <member refid="classwx_property_grid_interface_1adc64e1889b8be3f775f34e9c91087596" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Collapse</name></member>
+      <member refid="classwx_property_grid_interface_1a3acfb29c90820199472ee16d8be40cf2" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>CollapseAll</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Connect</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxPropertyGridPage</scope><name>CreateRefData</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_property_grid_interface_1ad7f72b604efa4854a673ebb722b26c94" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>DeleteProperty</name></member>
+      <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aea0619889c5d768946557ac361b5fff7e5" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>DescBoxState</name></member>
+      <member refid="classwx_property_grid_interface_1ac2b62fc91927b5b4f9e9a95eebbb26d1" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>DisableProperty</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Disconnect</name></member>
+      <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19ae" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>EditableStateFlags</name></member>
+      <member refid="classwx_property_grid_interface_1a7718a5497b7e5211d847b5a8134bc2ab" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>EditorValidate</name></member>
+      <member refid="classwx_property_grid_interface_1ab46cadeb40c717d902daef74005431bf" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>EnableProperty</name></member>
+      <member refid="classwx_property_grid_interface_1a1715d4804457f8b44e9382b3127b0140" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>EndAddChildren</name></member>
+      <member refid="classwx_property_grid_interface_1a9e37a22d7a60feb41f724119678b663e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Expand</name></member>
+      <member refid="classwx_property_grid_interface_1a678020610f0af4140eda4726cd89d728" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ExpandAll</name></member>
+      <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aeaa59cf2646aedbb9c00aeb8754b11610b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ExpandedState</name></member>
+      <member refid="classwx_property_grid_page_1a97fdd418c9e8727e1800428e30c6164c" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>FitColumns</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetClientObject</name></member>
+      <member refid="classwx_property_grid_interface_1ac39b51cf43d0dd8cc9b6cf4d54119da8" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetColumnProportion</name></member>
+      <member refid="classwx_property_grid_interface_1ac79128278621fc7878c4cbe5340bbc1f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetEditorByName</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_property_grid_interface_1a408afe75901ecc8092fba0abd3ec1750" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetFirst</name></member>
+      <member refid="classwx_property_grid_interface_1abf1d15cc10bf6c37aeaf84dfc390d743" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetFirstChild</name></member>
+      <member refid="classwx_property_grid_page_1a4a66eb036e9bd5592904446f991a013b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetIndex</name></member>
+      <member refid="classwx_property_grid_interface_1a41ab8661411082563c8191f614f91007" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetIterator</name></member>
+      <member refid="classwx_property_grid_interface_1acc9bc495b14420b8c87506b8914fc4f9" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetIterator</name></member>
+      <member refid="classwx_property_grid_interface_1acef8d8a08d18b0f78a29d52c96c85d8d" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetIterator</name></member>
+      <member refid="classwx_property_grid_interface_1a081cfe3d6c48372981f38a134594dff2" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetIterator</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_property_grid_interface_1a16e7c98c641c293be0f5bfd569b7c097" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertiesWithFlag</name></member>
+      <member refid="classwx_property_grid_interface_1a41c6a2d0535f4fce0cb8c351ae324667" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetProperty</name></member>
+      <member refid="classwx_property_grid_interface_1ab982d81a75a957158473a468e265b314" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyAttribute</name></member>
+      <member refid="classwx_property_grid_interface_1a9470a7b6978212358409e47c5b862832" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyBackgroundColour</name></member>
+      <member refid="classwx_property_grid_interface_1ab65c6edc3921c9feb18868398261634f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyByLabel</name></member>
+      <member refid="classwx_property_grid_interface_1ac5723b61ae48d373671343e774632ed3" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyByName</name></member>
+      <member refid="classwx_property_grid_interface_1a96e5b736b9598a307282a6c9e35ee2bc" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyByName</name></member>
+      <member refid="classwx_property_grid_interface_1a761a3de09cb1483d83b6a8f603144f87" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyCategory</name></member>
+      <member refid="classwx_property_grid_interface_1a69d52777f04e6f2aea99e1d969b8f708" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyClientData</name></member>
+      <member refid="classwx_property_grid_interface_1aade92682f7b251d97d3ec2b53bba1e18" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyEditor</name></member>
+      <member refid="classwx_property_grid_interface_1ac1bb46f25b7e2c4f66e386d5961aeba3" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyHelpString</name></member>
+      <member refid="classwx_property_grid_interface_1a5938a486c4704ff1e5554c92afc582b8" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyImage</name></member>
+      <member refid="classwx_property_grid_interface_1a74f0ff31b45b8ea24d37d7e219de28f1" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyLabel</name></member>
+      <member refid="classwx_property_grid_interface_1ab107b3f96a158e498f648888149b3bf4" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyName</name></member>
+      <member refid="classwx_property_grid_interface_1a8faf37918f55abf39788b48c75505635" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyTextColour</name></member>
+      <member refid="classwx_property_grid_interface_1a5fa00509e8d8afde8462a64509ba5682" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValidator</name></member>
+      <member refid="classwx_property_grid_interface_1aa1164652240e4b157ce5250769af537e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1aa464c5932add72e06c8022ac2277709c" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsArrayInt</name></member>
+      <member refid="classwx_property_grid_interface_1afbb1de85a87a1d20fbf70054a144ec19" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsArrayString</name></member>
+      <member refid="classwx_property_grid_interface_1a0ac35a786a34eddc9d006a23110fcb61" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsBool</name></member>
+      <member refid="classwx_property_grid_interface_1a254a437531a9edc4509b485054e9a97b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsDateTime</name></member>
+      <member refid="classwx_property_grid_interface_1a7a75d55eb01cc869cae75fa1cffeac44" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsDouble</name></member>
+      <member refid="classwx_property_grid_interface_1a3c72f929f0f28f6477faaf6e05bfc210" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsInt</name></member>
+      <member refid="classwx_property_grid_interface_1a2bf4b075b0b25c504a9c78a5b13fe033" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsLong</name></member>
+      <member refid="classwx_property_grid_interface_1a0dc9044f30292c40659e09c28b9b0ee8" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsLongLong</name></member>
+      <member refid="classwx_property_grid_interface_1a42537d846f644d3e8cfdb89bd37d9650" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsString</name></member>
+      <member refid="classwx_property_grid_interface_1aa4eb719d3b547bf64b2a5e297ec7bc2d" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsULong</name></member>
+      <member refid="classwx_property_grid_interface_1a573c609faf91311707b7227f1ec63acb" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValueAsULongLong</name></member>
+      <member refid="classwx_property_grid_interface_1a1abce6843caee96faaeeee952f970105" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetPropertyValues</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetRefData</name></member>
+      <member refid="classwx_property_grid_page_1ac2d74a899d99af4182a307af41be42b8" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetRoot</name></member>
+      <member refid="classwx_property_grid_interface_1a49ccd0da1d0f4a68004e1a174bf5f998" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetSelectedProperties</name></member>
+      <member refid="classwx_property_grid_interface_1a302ae0ff624d48131544f6010373e599" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetSelection</name></member>
+      <member refid="classwx_property_grid_page_1a7309da21cd3a505fb6fe53cd36cff677" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetSplitterPosition</name></member>
+      <member refid="classwx_property_grid_page_1a8662f6cd2fd234a959493e4a3c693d2e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>GetToolId</name></member>
+      <member refid="classwx_property_grid_interface_1a96a1c13733c0a83d7b509fd7a9e9a61a" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>GetVIterator</name></member>
+      <member refid="classwx_property_grid_interface_1aac3d5502e764989ed8b031a3d75b8814" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>HideProperty</name></member>
+      <member refid="classwx_property_grid_page_1aada6353fdf4ff5e1d2196001f2404283" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>Init</name></member>
+      <member refid="classwx_property_grid_interface_1a38bd0419a578467da07d01aef288848d" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>InitAllTypeHandlers</name></member>
+      <member refid="classwx_property_grid_interface_1aed2f5e12acc0bc460c2295ac1564b735" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Insert</name></member>
+      <member refid="classwx_property_grid_interface_1af6ced8d055116ef38522b868ac62f229" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Insert</name></member>
+      <member refid="classwx_property_grid_page_1a21a33aea3b2c498c0cf63a79c70952ef" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>IsHandlingAllEvents</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsKindOf</name></member>
+      <member refid="classwx_property_grid_interface_1a7dc38b7ce9ba010c49d63935328097b8" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsPropertyCategory</name></member>
+      <member refid="classwx_property_grid_interface_1ab9ca28beec8a1da397ca984926d1186d" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsPropertyEnabled</name></member>
+      <member refid="classwx_property_grid_interface_1aa3677cf3904d78407f5d60af032760d8" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsPropertyExpanded</name></member>
+      <member refid="classwx_property_grid_interface_1ae2640335c9e3e0071bac8a473ba3bf2a" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsPropertyModified</name></member>
+      <member refid="classwx_property_grid_interface_1a60c2e3e8cbf8788f30189ce3b754b465" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>IsPropertySelected</name></member>
+      <member refid="classwx_property_grid_interface_1a2005aa0ab6855cc4c4ecee816f97f791" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsPropertyShown</name></member>
+      <member refid="classwx_property_grid_interface_1a71187c9c857cd578e167ff78d544e229" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsPropertyValueUnspecified</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsSameAs</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_property_grid_interface_1aac3d13601fb3a97f531b86923b20d5ff" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>LimitPropertyEditing</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>m_refData</name></member>
+      <member refid="classwx_property_grid_page_1ab60f9672f417f1f124d7e777185a9263" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>OnShow</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>operator new</name></member>
+      <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aea37f63cb4a3bca8249c62a09dc6d973ff" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>PageState</name></member>
+      <member refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_evt_handler_1a6f643dbdcf8e914ae1c8b70dd305e6f2" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>QueueEvent</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Ref</name></member>
+      <member refid="classwx_property_grid_page_1ac66be7baa5683eddb727d75dfddabd88" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>RefreshProperty</name></member>
+      <member refid="classwx_property_grid_interface_1a330dc911b08378e967955f8a6a938612" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>RegisterAdditionalEditors</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_property_grid_interface_1a48485b2134b49f0bfb9adeb744d5c1a5" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>RemoveProperty</name></member>
+      <member refid="classwx_property_grid_interface_1ac0b507d04a4420f3aa8fec0c38e99cd1" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ReplaceProperty</name></member>
+      <member refid="classwx_property_grid_interface_1aceb7f1ca6c7079c075d9876b94a2cb0f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>RestoreEditableState</name></member>
+      <member refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_property_grid_interface_1a09dcfdf53629918183615627957afe39" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SaveEditableState</name></member>
+      <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aeaae0ce13a64f1cdf3e208e2ede6615d66" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>ScrollPosState</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aeacf359fdb91a019696f4cd34644e624f3" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SelectionState</name></member>
+      <member refid="classwx_property_grid_interface_1ac02e6f40e5c5138a40c99a4f7b98100b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetBoolChoices</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetClientObject</name></member>
+      <member refid="classwx_property_grid_interface_1a5df440361d9e85f3a48d79d7b45667e1" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetColumnProportion</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_property_grid_interface_1a129a37f9d87a2a08516772de9860432d" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyAttribute</name></member>
+      <member refid="classwx_property_grid_interface_1a9ae755985b70254e3e8a27a629c3fead" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyAttributeAll</name></member>
+      <member refid="classwx_property_grid_interface_1a5727a38c6fa10713bac1b4fe6e90991c" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyBackgroundColour</name></member>
+      <member refid="classwx_property_grid_interface_1afd6721e817062d6c9dbb522334c029a0" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyCell</name></member>
+      <member refid="classwx_property_grid_interface_1ab65193f9761bc7b63141ff115db00efd" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyClientData</name></member>
+      <member refid="classwx_property_grid_interface_1a1a8b70c4e648dee652525c1bcb1d63e6" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyColoursToDefault</name></member>
+      <member refid="classwx_property_grid_interface_1aff961af9dd2787fb97f510ea5ce46407" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyEditor</name></member>
+      <member refid="classwx_property_grid_interface_1a7155520a900a212c6ba48924a0398817" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyEditor</name></member>
+      <member refid="classwx_property_grid_interface_1a5793ea3ef9afa47fe2c1c5bf437dd583" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyHelpString</name></member>
+      <member refid="classwx_property_grid_interface_1a88befed8aa91d5c6e62844da2166bb3c" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyImage</name></member>
+      <member refid="classwx_property_grid_interface_1ad7cc77546762cc92e69078d6ac161c63" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyLabel</name></member>
+      <member refid="classwx_property_grid_interface_1a51ae4dc2d3732d6e681c5a474abc0da9" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyMaxLength</name></member>
+      <member refid="classwx_property_grid_interface_1af7b3c2349b7293076a223720274921e5" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyName</name></member>
+      <member refid="classwx_property_grid_interface_1af5442c56a869f8f03c530a0d34555cd2" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyReadOnly</name></member>
+      <member refid="classwx_property_grid_interface_1ab2249b7bb57055b3620cb180956353db" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyTextColour</name></member>
+      <member refid="classwx_property_grid_interface_1ad83fe8ad87751101316345a14133c45f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValidator</name></member>
+      <member refid="classwx_property_grid_interface_1aa652e127ce0c9d4e80821cbdcfe4983c" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a7f13128f8275004348ec252bdad097b8" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1afc31048af8214a81b9fc24daaa13b56e" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1ab3c7f74d260993c2bb679c37dc7ae69b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a4d2cbc3ea3d92c59e87372f4a05cba99" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a63730146d50d376c6e8cce75a88180c4" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a5be36e8a366457d8d8000ec73554eb10" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1ac14f033b18667d9965776c2d19dd7bb9" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a44f390c4041e9c84cc74f078e2c65fec" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1aad1fe3813ff98b201bd77071156994f1" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a2682d90e94b61601f6402bf930a98f1c" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a51719a02370c475b2c61f32cd7b32ea0" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a07d4eb7ae9fc0014cc72bb320e36fa4f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValue</name></member>
+      <member refid="classwx_property_grid_interface_1a85caa9196b0278e844df1af5f12c800b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValues</name></member>
+      <member refid="classwx_property_grid_interface_1a59408c331ac19855ce3b55ff26f82a38" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValues</name></member>
+      <member refid="classwx_property_grid_interface_1a26e16b29e987c5f3b6782e80b23dc956" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValueString</name></member>
+      <member refid="classwx_property_grid_interface_1ad0354321e04ed670c1d4904ef68f9ea0" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetPropertyValueUnspecified</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetRefData</name></member>
+      <member refid="classwx_property_grid_page_1a487917dd83814af6d6023280b8589fec" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetSplitterPosition</name></member>
+      <member refid="classwx_property_grid_interface_1ade72c97a047aa409dc7429010f640bb6" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SetValidationFailureBehavior</name></member>
+      <member refid="classwx_property_grid_interface_1a68c73043fc89e18169207c0cee737852" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Sort</name></member>
+      <member refid="classwx_property_grid_interface_1a5e99b4ebcbdc6ee1c59d8284df0bfa8f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SortChildren</name></member>
+      <member refid="classwx_property_grid_interface_1acd38be5728243d99365e0f371b6c19aea1cc473f6d94d75e3e97159ccd4a325d3" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>SplitterPosState</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxPropertyGridPage</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxPropertyGridPage</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>UnShare</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>wxObject</name></member>
+      <member refid="classwx_property_grid_page_1a741133900c0c24345ec97cd64f2a4979" prot="private" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>wxPropertyGridManager</name></member>
+      <member refid="classwx_property_grid_page_1ac3e580bf5a3e173ff8e2250b5df9ce52" prot="public" virt="non-virtual"><scope>wxPropertyGridPage</scope><name>wxPropertyGridPage</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>~wxObject</name></member>
+      <member refid="classwx_property_grid_interface_1a42cd83135362d4de8db6d5de968cd2ab" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>~wxPropertyGridInterface</name></member>
+      <member refid="classwx_property_grid_page_1a51af551484cb8785e2fe8664b4e28775" prot="public" virt="virtual"><scope>wxPropertyGridPage</scope><name>~wxPropertyGridPage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_item_container" kind="class" prot="public">
+    <compoundname>wxItemContainer</compoundname>
+    <basecompoundref refid="classwx_item_container_immutable" prot="public" virt="non-virtual">wxItemContainerImmutable</basecompoundref>
+    <derivedcompoundref refid="classwx_combo_box" prot="public" virt="non-virtual">wxComboBox</derivedcompoundref>
+    <derivedcompoundref refid="classwx_control_with_items" prot="public" virt="non-virtual">wxControlWithItems</derivedcompoundref>
+    <derivedcompoundref refid="classwx_simple_html_list_box" prot="public" virt="non-virtual">wxSimpleHtmlListBox</derivedcompoundref>
+    <includes local="no">wx/ctrlsub.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_item_container_1a8fdc0090e3eabc762ff0e49e925f8bc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(const wxString &amp;item)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Appends item into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to add.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the newly inserted item. Note that this may be different from the last one if the control is sorted (e.g. has <computeroutput>wxLB_SORT</computeroutput> or <computeroutput>wxCB_SORT</computeroutput> style). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a97d16e94976e21abf796cc6e0c8c0fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(const wxString &amp;item, void *clientData)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Appends item into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to client data to associate with the new item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the newly inserted item. Note that this may be different from the last one if the control is sorted (e.g. has <computeroutput>wxLB_SORT</computeroutput> or <computeroutput>wxCB_SORT</computeroutput> style). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a8cb993082012406873ac3ef1b91774f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(const wxString &amp;item, wxClientData *clientData)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Appends item into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to client data to associate with the new item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the newly inserted item. Note that this may be different from the last one if the control is sorted (e.g. has <computeroutput>wxLB_SORT</computeroutput> or <computeroutput>wxCB_SORT</computeroutput> style). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a4c8560213df6b6e7467437c9cff5cc0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(const wxArrayString &amp;items)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+<para>Appends several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a4de5b5afbf2aebe2ee29c11d009fbe75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(const wxArrayString &amp;items, void **clientData)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Appends several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of the same size as <emphasis>items</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1ada2c60d0621a4a2d62a50345778e13f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(const wxArrayString &amp;items, wxClientData **clientData)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Appends several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of the same size as <emphasis>items</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1ab75a452e13a6b21e32caae829a026515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(unsigned int n, const wxString *items)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+<para>Appends several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a87fe2b791693f23475b77ffb037a7766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(unsigned int n, const wxString *items, void **clientData)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Appends several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of size <emphasis>n</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1ab328ab2886486b545f03daa667308a63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Append</definition>
+        <argsstring>(unsigned int n, const wxString *items, wxClientData **clientData)</argsstring>
+        <name>Append</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Appends several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of size <emphasis>n</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="330"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_item_container_1a16be5a072a0fe8f9d90e19c8cfe22139" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* wxItemContainer::GetClientData</definition>
+        <argsstring>(unsigned int n) const </argsstring>
+        <name>GetClientData</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns a pointer to the client data associated with the given item (if any). </para>        </briefdescription>
+        <detaileddescription>
+<para>It is an error to call this function for a control which doesn&apos;t have untyped client data at all although it is OK to call it even if the given item doesn&apos;t have any client data associated with it (but other items do).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based position of the item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the client data, or NULL if not present. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="414"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a4298e30787423ecdca2eb0171e7fb98c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
+        <definition>wxClientData* wxItemContainer::GetClientObject</definition>
+        <argsstring>(unsigned int n) const </argsstring>
+        <name>GetClientObject</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns a pointer to the client data associated with the given item (if any). </para>        </briefdescription>
+        <detaileddescription>
+<para>It is an error to call this function for a control which doesn&apos;t have typed client data at all although it is OK to call it even if the given item doesn&apos;t have any client data associated with it (but other items do).</para><para>Notice that the returned pointer is still owned by the control and will be deleted by it, use <ref refid="classwx_item_container_1a5f8a63ddcc72ff3504389f7df19b5dd3" kindref="member">DetachClientObject()</ref> if you want to remove the pointer from the control.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based position of the item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the client data, or NULL if not present. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="432"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a4316a72acaf30acf9d2c9c457e16a8d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::SetClientData</definition>
+        <argsstring>(unsigned int n, void *data)</argsstring>
+        <name>SetClientData</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Associates the given untyped client data pointer with the given item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that it is an error to call this function if any typed client data pointers had been associated with the control items before.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based item index. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client data to associate with the item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="444"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1ae0a26343071841e8d1139642a0081d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::SetClientObject</definition>
+        <argsstring>(unsigned int n, wxClientData *data)</argsstring>
+        <name>SetClientObject</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Associates the given typed client data pointer with the given item: the <emphasis>data</emphasis> object will be deleted when the item is deleted (either explicitly by using <ref refid="classwx_item_container_1a0e8379f41e9d7b912564000828140a19" kindref="member">Delete()</ref> or implicitly when the control itself is destroyed). </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that it is an error to call this function if any untyped client data pointers had been associated with the control items before.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based item index. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client data to associate with the item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="459"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_item_container_1a8844cacec8509fe6e637c6f85eb8b395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(const wxString &amp;item, unsigned int pos)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Inserts item into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert item before, zero based.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the newly inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a6540ebe5868badb8ff7ac4975c054309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(const wxString &amp;item, unsigned int pos, void *clientData)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Inserts item into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert item before, zero based. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to client data to associate with the new item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the newly inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="491"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a3ecaaa4bc63315056ff7fb4894866b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(const wxString &amp;item, unsigned int pos, wxClientData *clientData)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Inserts item into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert item before, zero based. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to client data to associate with the new item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the newly inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="507"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1abd876bdf2d3b5aaf577808c0520f78e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(const wxArrayString &amp;items, unsigned int pos)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Inserts several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than inserting them one by one if you need to insert a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert the items before, zero based. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the last inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="522"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1aa5b5f6059ef10221c521da9587269192" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(const wxArrayString &amp;items, unsigned int pos, void **clientData)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Inserts several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than inserting them one by one if you need to insert a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert the items before, zero based. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of the same size as <emphasis>items</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the last inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="541"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a9b15c918cc24743b9af994a48ee0cad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(const wxArrayString &amp;items, unsigned int pos, wxClientData **clientData)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Inserts several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than inserting them one by one if you need to insert a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert the items before, zero based. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of the same size as <emphasis>items</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the last inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="560"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a3faa9e4006d69dffd0ecb71088beb24c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(unsigned int n, const wxString *items, unsigned int pos)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Inserts several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than inserting them one by one if you need to insert a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert the items before, zero based. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the last inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="578"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a109dfe5f94135d8d16445ee72834d1b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(unsigned int n, const wxString *items, unsigned int pos, void **clientData)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Inserts several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than inserting them one by one if you need to insert a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert the new items before, zero based. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of size <emphasis>n</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the last inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="600"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1ad2bc86a398c44f6ab6d3d6f64d946c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxItemContainer::Insert</definition>
+        <argsstring>(unsigned int n, const wxString *items, unsigned int pos, wxClientData **clientData)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Inserts several items at once into the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than inserting them one by one if you need to insert a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert the new items before, zero based. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of size <emphasis>n</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return value is the index of the last inserted item. If the insertion failed for some reason, -1 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="622"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_item_container_1a0758ff813749b9dfe4d8c4975778f40d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::Set</definition>
+        <argsstring>(const wxArrayString &amp;items)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+<para>Replaces the current control contents with the given items. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="635"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a913f1901456fc75a45558775f967a2ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::Set</definition>
+        <argsstring>(const wxArrayString &amp;items, void **clientData)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Replaces the current control contents with the given items. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of the same size as <emphasis>items</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="649"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1aa49e05430329dc56a15b2f75fc7cd05c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::Set</definition>
+        <argsstring>(const wxArrayString &amp;items, wxClientData **clientData)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Replaces the current control contents with the given items. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings to insert. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of the same size as <emphasis>items</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="663"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1af5759464c9fd1396ed9b86a9d1242d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::Set</definition>
+        <argsstring>(unsigned int n, const wxString *items)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+<para>Replaces the current control contents with the given items. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="676"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1aac979e6201e45b121f226389e29fd68a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::Set</definition>
+        <argsstring>(unsigned int n, const wxString *items, void **clientData)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Replaces the current control contents with the given items. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of size <emphasis>n</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="692"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a3a1dab2066917e84f46c57b27fb4f258" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::Set</definition>
+        <argsstring>(unsigned int n, const wxString *items, wxClientData **clientData)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> **</type>
+          <declname>clientData</declname>
+        </param>
+        <briefdescription>
+<para>Replaces the current control contents with the given items. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that calling this method is usually much faster than appending them one by one if you need to add a lot of items.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of items in the <emphasis>items</emphasis> array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of strings of size <emphasis>n</emphasis>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of client data pointers of size <emphasis>n</emphasis> to associate with the new items. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="708"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_item_container_1aea621d4fdfbc3a06bf24dcc97304e2c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Removes all items from the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_item_container_1aea621d4fdfbc3a06bf24dcc97304e2c1" kindref="member">Clear()</ref> also deletes the client data of the existing items if it is owned by the control. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="338"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a0e8379f41e9d7b912564000828140a19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainer::Delete</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Deletes an item from the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>The client data associated with the item will be also deleted if it is owned by the control. Note that it is an error (signalled by an assert failure in debug builds) to remove an item with the index negative or greater or equal than the number of items in the control.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based item index.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_item_container_1aea621d4fdfbc3a06bf24dcc97304e2c1" kindref="member">Clear()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a5f8a63ddcc72ff3504389f7df19b5dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
+        <definition>wxClientData* wxItemContainer::DetachClientObject</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>DetachClientObject</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the client object associated with the given item and transfers its ownership to the caller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method, unlike <ref refid="classwx_item_container_1a4298e30787423ecdca2eb0171e7fb98c" kindref="member">GetClientObject()</ref>, expects the caller to delete the returned pointer. It also replaces the internally stored pointer with NULL, i.e. completely detaches the client object pointer from the control.</para><para>It&apos;s an error to call this method unless <ref refid="classwx_item_container_1a900b5089f2c284ce7f49995ac4cd1a1e" kindref="member">HasClientObjectData()</ref> returns true.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based item index. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The associated client object pointer to be deleted by caller or NULL.</para></simplesect>
+<simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="375"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a1be770286ad65ced7ba31b5cb4bbc5f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxItemContainer::HasClientData</definition>
+        <argsstring>() const </argsstring>
+        <name>HasClientData</name>
+        <briefdescription>
+<para>Returns true, if either untyped data (<computeroutput>void*</computeroutput>) or object data (wxClientData*) is associated with the items of the control. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1a900b5089f2c284ce7f49995ac4cd1a1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxItemContainer::HasClientObjectData</definition>
+        <argsstring>() const </argsstring>
+        <name>HasClientObjectData</name>
+        <briefdescription>
+<para>Returns true, if object data is associated with the items of the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Object data pointers have the type <computeroutput>wxClientData*</computeroutput> instead of <computeroutput>void*</computeroutput> and, importantly, are owned by the control, i.e. will be deleted by it, unlike their untyped counterparts. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_1af72624c57f89d9209c8ed6ff1c51d6cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxItemContainer::HasClientUntypedData</definition>
+        <argsstring>() const </argsstring>
+        <name>HasClientUntypedData</name>
+        <briefdescription>
+<para>Returns true, if untyped data (<computeroutput>void*</computeroutput>) is associated with the items of the control. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="397"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is an abstract base class for some wxWidgets controls which contain several items such as <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_check_list_box" kindref="compound">wxCheckListBox</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> or <ref refid="classwx_choice" kindref="compound">wxChoice</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>It defines an interface which is implemented by all controls which have string subitems each of which may be selected.</para><para><ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> extends <ref refid="classwx_item_container_immutable" kindref="compound">wxItemContainerImmutable</ref> interface with methods for adding/removing items.</para><para>It defines the methods for accessing the controls items and although each of the derived classes implements them differently, they still all conform to the same interface.</para><para>The items in a <ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> have (non-empty) string labels and, optionally, client data associated with them. Client data may be of two different kinds: either simple untyped (<computeroutput>void</computeroutput> *) pointers which are simply stored by the control but not used in any way by it, or typed pointers (wxClientData*) which are owned by the control meaning that the typed client data (and only it) will be deleted when an item is deleted using <ref refid="classwx_item_container_1a0e8379f41e9d7b912564000828140a19" kindref="member">Delete()</ref> or the entire control is cleared using <ref refid="classwx_item_container_1aea621d4fdfbc3a06bf24dcc97304e2c1" kindref="member">Clear()</ref>, which also happens when it is destroyed.</para><para>Finally note that in the same control all items must have client data of the same type (typed or untyped), if any. This type is determined by the first call to <ref refid="classwx_item_container_1a8fdc0090e3eabc762ff0e49e925f8bc4" kindref="member">Append()</ref> (the version with client data pointer) or <ref refid="classwx_item_container_1a4316a72acaf30acf9d2c9c457e16a8d9" kindref="member">SetClientData()</ref>.</para><para>Note that this is not a control, it&apos;s a mixin interface that classes have to derive from in addition to <ref refid="classwx_control" kindref="compound">wxControl</ref> or <ref refid="classwx_window" kindref="compound">wxWindow</ref>. Convenience class <ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref> is provided for this purpose.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref>, <ref refid="classwx_item_container_immutable" kindref="compound">wxItemContainerImmutable</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7329">
+        <label>wxItemContainer</label>
+        <link refid="classwx_item_container"/>
+        <childnode refid="7330" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7335">
+        <label>wxListBox</label>
+        <link refid="classwx_list_box"/>
+        <childnode refid="7333" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7338">
+        <label>wxSimpleHtmlListBox</label>
+        <link refid="classwx_simple_html_list_box"/>
+        <childnode refid="7329" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7332">
+        <label>wxBitmapComboBox</label>
+        <link refid="classwx_bitmap_combo_box"/>
+        <childnode refid="7331" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7336">
+        <label>wxCheckListBox</label>
+        <link refid="classwx_check_list_box"/>
+        <childnode refid="7335" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7337">
+        <label>wxRearrangeList</label>
+        <link refid="classwx_rearrange_list"/>
+        <childnode refid="7336" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7334">
+        <label>wxChoice</label>
+        <link refid="classwx_choice"/>
+        <childnode refid="7333" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7331">
+        <label>wxComboBox</label>
+        <link refid="classwx_combo_box"/>
+        <childnode refid="7329" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7333">
+        <label>wxControlWithItems</label>
+        <link refid="classwx_control_with_items"/>
+        <childnode refid="7329" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7330">
+        <label>wxItemContainerImmutable</label>
+        <link refid="classwx_item_container_immutable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7339">
+        <label>wxItemContainer</label>
+        <link refid="classwx_item_container"/>
+        <childnode refid="7340" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7340">
+        <label>wxItemContainerImmutable</label>
+        <link refid="classwx_item_container_immutable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" bodystart="198" bodyend="710"/>
+    <listofallmembers>
+      <member refid="classwx_item_container_1a8fdc0090e3eabc762ff0e49e925f8bc4" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1a97d16e94976e21abf796cc6e0c8c0fd0" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1a8cb993082012406873ac3ef1b91774f5" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1a4c8560213df6b6e7467437c9cff5cc0e" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1a4de5b5afbf2aebe2ee29c11d009fbe75" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1ada2c60d0621a4a2d62a50345778e13f3" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1ab75a452e13a6b21e32caae829a026515" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1a87fe2b791693f23475b77ffb037a7766" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1ab328ab2886486b545f03daa667308a63" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Append</name></member>
+      <member refid="classwx_item_container_1aea621d4fdfbc3a06bf24dcc97304e2c1" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Clear</name></member>
+      <member refid="classwx_item_container_1a0e8379f41e9d7b912564000828140a19" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Delete</name></member>
+      <member refid="classwx_item_container_1a5f8a63ddcc72ff3504389f7df19b5dd3" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>DetachClientObject</name></member>
+      <member refid="classwx_item_container_immutable_1af4a1bcdae92a7fe0367dc25a73e669bb" prot="public" virt="virtual"><scope>wxItemContainer</scope><name>FindString</name></member>
+      <member refid="classwx_item_container_1a16be5a072a0fe8f9d90e19c8cfe22139" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>GetClientData</name></member>
+      <member refid="classwx_item_container_1a4298e30787423ecdca2eb0171e7fb98c" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>GetClientObject</name></member>
+      <member refid="classwx_item_container_immutable_1a173bdb9c72977d524f524fcd02521f61" prot="public" virt="pure-virtual"><scope>wxItemContainer</scope><name>GetCount</name></member>
+      <member refid="classwx_item_container_immutable_1a18a7cb1a652772d5cb8adc52be1efea0" prot="public" virt="pure-virtual"><scope>wxItemContainer</scope><name>GetSelection</name></member>
+      <member refid="classwx_item_container_immutable_1a30e9fe62bd51415d9af2a9c6f19ec8f7" prot="public" virt="pure-virtual"><scope>wxItemContainer</scope><name>GetString</name></member>
+      <member refid="classwx_item_container_immutable_1a1468727e7ce4194b3c4edd05cc1336ec" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>GetStrings</name></member>
+      <member refid="classwx_item_container_immutable_1ad4e81fb20f75c3cd6b277ed639087e28" prot="public" virt="virtual"><scope>wxItemContainer</scope><name>GetStringSelection</name></member>
+      <member refid="classwx_item_container_1a1be770286ad65ced7ba31b5cb4bbc5f7" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>HasClientData</name></member>
+      <member refid="classwx_item_container_1a900b5089f2c284ce7f49995ac4cd1a1e" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>HasClientObjectData</name></member>
+      <member refid="classwx_item_container_1af72624c57f89d9209c8ed6ff1c51d6cb" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>HasClientUntypedData</name></member>
+      <member refid="classwx_item_container_1a8844cacec8509fe6e637c6f85eb8b395" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_1a6540ebe5868badb8ff7ac4975c054309" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_1a3ecaaa4bc63315056ff7fb4894866b9e" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_1abd876bdf2d3b5aaf577808c0520f78e4" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_1aa5b5f6059ef10221c521da9587269192" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_1a9b15c918cc24743b9af994a48ee0cad6" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_1a3faa9e4006d69dffd0ecb71088beb24c" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_1a109dfe5f94135d8d16445ee72834d1b9" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_1ad2bc86a398c44f6ab6d3d6f64d946c70" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Insert</name></member>
+      <member refid="classwx_item_container_immutable_1a32c254e4cd1a6090377e0504e230bb88" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>IsEmpty</name></member>
+      <member refid="classwx_item_container_immutable_1abcc0d37a2a7f29d5c54cfa5252571d61" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Select</name></member>
+      <member refid="classwx_item_container_1a0758ff813749b9dfe4d8c4975778f40d" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1a913f1901456fc75a45558775f967a2ce" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1aa49e05430329dc56a15b2f75fc7cd05c" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1af5759464c9fd1396ed9b86a9d1242d30" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1aac979e6201e45b121f226389e29fd68a" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1a3a1dab2066917e84f46c57b27fb4f258" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>Set</name></member>
+      <member refid="classwx_item_container_1a4316a72acaf30acf9d2c9c457e16a8d9" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>SetClientData</name></member>
+      <member refid="classwx_item_container_1ae0a26343071841e8d1139642a0081d9f" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>SetClientObject</name></member>
+      <member refid="classwx_item_container_immutable_1aea97d8ee51e7af5e06befd5f8c9d793b" prot="public" virt="pure-virtual"><scope>wxItemContainer</scope><name>SetSelection</name></member>
+      <member refid="classwx_item_container_immutable_1a1daf356c330bac2d7a93c5b3de8fbabf" prot="public" virt="pure-virtual"><scope>wxItemContainer</scope><name>SetString</name></member>
+      <member refid="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>SetStringSelection</name></member>
+      <member refid="classwx_item_container_immutable_1ae70470db41f14f56b610bc30098ebce4" prot="public" virt="non-virtual"><scope>wxItemContainer</scope><name>wxItemContainerImmutable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

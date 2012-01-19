@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="headerctrl_8h" kind="file">
+    <compoundname>headerctrl.h</compoundname>
+    <innerclass refid="classwx_header_ctrl" prot="public">wxHeaderCtrl</innerclass>
+    <innerclass refid="classwx_header_ctrl_simple" prot="public">wxHeaderCtrlSimple</innerclass>
+    <innerclass refid="classwx_header_ctrl_event" prot="public">wxHeaderCtrlEvent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/headerctrl.h"/>
+  </compounddef>
+</doxygen>

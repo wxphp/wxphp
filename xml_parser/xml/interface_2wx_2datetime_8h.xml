@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2datetime_8h" kind="file">
+    <compoundname>datetime.h</compoundname>
+    <innerclass refid="classwx_date_time" prot="public">wxDateTime</innerclass>
+    <innerclass refid="structwx_date_time_1_1_tm" prot="public">wxDateTime::Tm</innerclass>
+    <innerclass refid="classwx_date_time_work_days" prot="public">wxDateTimeWorkDays</innerclass>
+    <innerclass refid="classwx_date_span" prot="public">wxDateSpan</innerclass>
+    <innerclass refid="classwx_time_span" prot="public">wxTimeSpan</innerclass>
+    <innerclass refid="classwx_date_time_holiday_authority" prot="public">wxDateTimeHolidayAuthority</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="interface_2wx_2datetime_8h_1ad06d2c408599c48fd9bb17804188bf96" prot="public" static="no">
+        <name>wxInvalidDateTime</name>
+        <initializer><ref refid="interface_2wx_2datetime_8h_1ade74a40ef749abadb7c5338e2c9a9321" kindref="member">wxDefaultDateTime</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1505" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1505" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="interface_2wx_2datetime_8h_1ade74a40ef749abadb7c5338e2c9a9321" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
+        <definition>const wxDateTime wxDefaultDateTime</definition>
+        <argsstring></argsstring>
+        <name>wxDefaultDateTime</name>
+        <briefdescription>
+<para>Global instance of an empty <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000022"><xreftitle>Todo</xreftitle><xrefdescription><para>Would it be better to rename this wxNullDateTime so it&apos;s consistent with the rest of the &quot;empty/invalid/null&quot; global objects? </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1500" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1500" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h"/>
+  </compounddef>
+</doxygen>

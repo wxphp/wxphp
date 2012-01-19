@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="gallery_8h" kind="file">
+    <compoundname>gallery.h</compoundname>
+    <innerclass refid="classwx_ribbon_gallery" prot="public">wxRibbonGallery</innerclass>
+    <innerclass refid="classwx_ribbon_gallery_event" prot="public">wxRibbonGalleryEvent</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="gallery_8h_1a5f74710c9dd8307b9f67ff4972c9c5c0" prot="public" static="no">
+        <name>wxRibbonGalleryButtonState</name>
+        <enumvalue id="gallery_8h_1a5f74710c9dd8307b9f67ff4972c9c5c0ae9a8b2a8466cdf5dd4c977bb292c26ba" prot="public">
+          <name>wxRIBBON_GALLERY_BUTTON_NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gallery_8h_1a5f74710c9dd8307b9f67ff4972c9c5c0a3ba7c81beecec564f306f92c199b44d3" prot="public">
+          <name>wxRIBBON_GALLERY_BUTTON_HOVERED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gallery_8h_1a5f74710c9dd8307b9f67ff4972c9c5c0aed51d9f8af7c5820f0d877ec9293dbf4" prot="public">
+          <name>wxRIBBON_GALLERY_BUTTON_ACTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gallery_8h_1a5f74710c9dd8307b9f67ff4972c9c5c0a34e3a12de3beaf4a633c6cf50c341089" prot="public">
+          <name>wxRIBBON_GALLERY_BUTTON_DISABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" bodystart="9" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h"/>
+  </compounddef>
+</doxygen>

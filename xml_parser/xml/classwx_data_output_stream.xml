@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_data_output_stream" kind="class" prot="public">
+    <compoundname>wxDataOutputStream</compoundname>
+    <includes local="no">wx/datstrm.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_data_output_stream_1a7fb37c717609de9f339321d186afe547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDataOutputStream::wxDataOutputStream</definition>
+        <argsstring>(wxOutputStream &amp;stream, const wxMBConv &amp;conv=wxConvUTF8)</argsstring>
+        <name>wxDataOutputStream</name>
+        <param>
+          <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> &amp;</type>
+          <declname>conv</declname>
+          <defval>wxConvUTF8</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a datastream object from an output stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only write methods will be available.</para><para>Note that the <emphasis>conv</emphasis> parameter is only available in Unicode builds of wxWidgets.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Charset conversion object used to encoding Unicode strings before writing them to the stream in Unicode mode (see <ref refid="classwx_data_output_stream_1ad59954476921dd0f4a480e4d212ed61a" kindref="member">WriteString()</ref> for a detailed description). Note that you must not destroy <emphasis>conv</emphasis> before you destroy this <ref refid="classwx_data_output_stream" kindref="compound">wxDataOutputStream</ref> instance! It is recommended to use the default value (UTF-8). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a8373bef51ad9b57f635ad6d66055ef65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDataOutputStream::~wxDataOutputStream</definition>
+        <argsstring>()</argsstring>
+        <name>~wxDataOutputStream</name>
+        <briefdescription>
+<para>Destroys the <ref refid="classwx_data_output_stream" kindref="compound">wxDataOutputStream</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a2e81f24ae13610bcc4adc566946a47d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::BigEndianOrdered</definition>
+        <argsstring>(bool be_order)</argsstring>
+        <name>BigEndianOrdered</name>
+        <param>
+          <type>bool</type>
+          <declname>be_order</declname>
+        </param>
+        <briefdescription>
+<para>If <emphasis>be_order</emphasis> is true, all data will be written in big-endian order, e.g. </para>        </briefdescription>
+        <detaileddescription>
+<para>for reading on a Sparc or from Java-Streams (which always use big-endian order), otherwise data will be written in little-endian order. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1ac77976709d7884b21d5afcab6857f53b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> *</type>
+        <definition>wxMBConv* wxDataOutputStream::GetConv</definition>
+        <argsstring>() const </argsstring>
+        <name>GetConv</name>
+        <briefdescription>
+<para>Returns the current text conversion class used for writing strings. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a3e585f43a9c1127d93316c5b9d1b3da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::SetConv</definition>
+        <argsstring>(const wxMBConv &amp;conv)</argsstring>
+        <name>SetConv</name>
+        <param>
+          <type>const <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> &amp;</type>
+          <declname>conv</declname>
+        </param>
+        <briefdescription>
+<para>Sets the text conversion class used for writing strings. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a51e3e2bafdd4023dfa216c27993603f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::Write8</definition>
+        <argsstring>(wxUint8 i8)</argsstring>
+        <name>Write8</name>
+        <param>
+          <type><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member">wxUint8</ref></type>
+          <declname>i8</declname>
+        </param>
+        <briefdescription>
+<para>Writes the single byte <emphasis>i8</emphasis> to the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1af5edf80d17cf04c0de64b3cf45c8e4be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::Write8</definition>
+        <argsstring>(const wxUint8 *buffer, size_t size)</argsstring>
+        <name>Write8</name>
+        <param>
+          <type>const <ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member">wxUint8</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes an array of bytes to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>The amount of bytes to write is specified with the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a71b069b0ae19f613c1f14214790c7f62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::Write16</definition>
+        <argsstring>(wxUint16 i16)</argsstring>
+        <name>Write16</name>
+        <param>
+          <type><ref refid="defs_8h_1a8e9363c460a79dd550df544fab96e16d" kindref="member">wxUint16</ref></type>
+          <declname>i16</declname>
+        </param>
+        <briefdescription>
+<para>Writes the 16 bit unsigned integer <emphasis>i16</emphasis> to the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a7f9993d71c30a18cc75daa82d1bbd7f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::Write16</definition>
+        <argsstring>(const wxUint16 *buffer, size_t size)</argsstring>
+        <name>Write16</name>
+        <param>
+          <type>const <ref refid="defs_8h_1a8e9363c460a79dd550df544fab96e16d" kindref="member">wxUint16</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes an array of 16 bit unsigned integer to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>The amount of 16 bit unsigned integer to write is specified with the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a8ed33d4489e1c9e477b3ebd4cba17e0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::Write32</definition>
+        <argsstring>(wxUint32 i32)</argsstring>
+        <name>Write32</name>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>i32</declname>
+        </param>
+        <briefdescription>
+<para>Writes the 32 bit unsigned integer <emphasis>i32</emphasis> to the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1acd99b68c389f6d8bd0f9dfb09a53ed87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::Write32</definition>
+        <argsstring>(const wxUint32 *buffer, size_t size)</argsstring>
+        <name>Write32</name>
+        <param>
+          <type>const <ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes an array of 32 bit unsigned integer to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>The amount of 32 bit unsigned integer to write is specified with the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1ab603dcaeb8a41c109d95799a7e44dc0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::Write64</definition>
+        <argsstring>(wxUint64 i64)</argsstring>
+        <name>Write64</name>
+        <param>
+          <type><ref refid="defs_8h_1a356b5511a759210b8138b6433ed8b1fc" kindref="member">wxUint64</ref></type>
+          <declname>i64</declname>
+        </param>
+        <briefdescription>
+<para>Writes the 64 bit unsigned integer <emphasis>i64</emphasis> to the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1ab79689966c8f09118c5fdfbcf98f90c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::Write64</definition>
+        <argsstring>(const wxUint64 *buffer, size_t size)</argsstring>
+        <name>Write64</name>
+        <param>
+          <type>const <ref refid="defs_8h_1a356b5511a759210b8138b6433ed8b1fc" kindref="member">wxUint64</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes an array of 64 bit unsigned integer to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>The amount of 64 bit unsigned integer to write is specified with the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a50552c83b609bf4dbad82ff27db6b61c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::WriteDouble</definition>
+        <argsstring>(double f)</argsstring>
+        <name>WriteDouble</name>
+        <param>
+          <type>double</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Writes the double <emphasis>f</emphasis> to the stream using the IEEE format. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1a6c7a2a4f07cc05b391cf0fe8a726fba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::WriteDouble</definition>
+        <argsstring>(const double *buffer, size_t size)</argsstring>
+        <name>WriteDouble</name>
+        <param>
+          <type>const double *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes an array of double to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>The amount of double to write is specified with the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_output_stream_1ad59954476921dd0f4a480e4d212ed61a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataOutputStream::WriteString</definition>
+        <argsstring>(const wxString &amp;string)</argsstring>
+        <name>WriteString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Writes <emphasis>string</emphasis> to the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>Actually, this method writes the size of the string before writing <emphasis>string</emphasis> itself.</para><para>In ANSI build of wxWidgets, the string is written to the stream in exactly same way it is represented in memory. In Unicode build, however, the string is first converted to multibyte representation with <emphasis>conv</emphasis> object passed to stream&apos;s constructor (consequently, ANSI applications can read data written by Unicode application, as long as they agree on encoding) and this representation is written to the stream. UTF-8 is used by default. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class provides functions that write binary data types in a portable way. </para>    </briefdescription>
+    <detaileddescription>
+<para>Data can be written in either big-endian or little-endian format, little-endian being the default on all architectures.</para><para>If you want to write data to text files (or streams) use <ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> instead.</para><para>The &quot;&lt;&lt;&quot; operator is overloaded and you can use this class like a standard C++ iostream. See <ref refid="classwx_data_input_stream" kindref="compound">wxDataInputStream</ref> for its usage and caveats.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_input_stream" kindref="compound">wxDataInputStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" bodystart="27" bodyend="135"/>
+    <listofallmembers>
+      <member refid="classwx_data_output_stream_1a2e81f24ae13610bcc4adc566946a47d1" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>BigEndianOrdered</name></member>
+      <member refid="classwx_data_output_stream_1ac77976709d7884b21d5afcab6857f53b" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>GetConv</name></member>
+      <member refid="classwx_data_output_stream_1a3e585f43a9c1127d93316c5b9d1b3da8" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>SetConv</name></member>
+      <member refid="classwx_data_output_stream_1a71b069b0ae19f613c1f14214790c7f62" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>Write16</name></member>
+      <member refid="classwx_data_output_stream_1a7f9993d71c30a18cc75daa82d1bbd7f9" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>Write16</name></member>
+      <member refid="classwx_data_output_stream_1a8ed33d4489e1c9e477b3ebd4cba17e0b" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>Write32</name></member>
+      <member refid="classwx_data_output_stream_1acd99b68c389f6d8bd0f9dfb09a53ed87" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>Write32</name></member>
+      <member refid="classwx_data_output_stream_1ab603dcaeb8a41c109d95799a7e44dc0f" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>Write64</name></member>
+      <member refid="classwx_data_output_stream_1ab79689966c8f09118c5fdfbcf98f90c0" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>Write64</name></member>
+      <member refid="classwx_data_output_stream_1a51e3e2bafdd4023dfa216c27993603f0" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>Write8</name></member>
+      <member refid="classwx_data_output_stream_1af5edf80d17cf04c0de64b3cf45c8e4be" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>Write8</name></member>
+      <member refid="classwx_data_output_stream_1a50552c83b609bf4dbad82ff27db6b61c" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>WriteDouble</name></member>
+      <member refid="classwx_data_output_stream_1a6c7a2a4f07cc05b391cf0fe8a726fba5" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>WriteDouble</name></member>
+      <member refid="classwx_data_output_stream_1ad59954476921dd0f4a480e4d212ed61a" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>WriteString</name></member>
+      <member refid="classwx_data_output_stream_1a7fb37c717609de9f339321d186afe547" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>wxDataOutputStream</name></member>
+      <member refid="classwx_data_output_stream_1a8373bef51ad9b57f635ad6d66055ef65" prot="public" virt="non-virtual"><scope>wxDataOutputStream</scope><name>~wxDataOutputStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

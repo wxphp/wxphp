@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_client" kind="class" prot="public">
+    <compoundname>wxClient</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/ipc.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_client_1a695f699788030c561c56972406e8ff6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxClient::wxClient</definition>
+        <argsstring>()</argsstring>
+        <name>wxClient</name>
+        <briefdescription>
+<para>Constructs a client object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_client_1a6ca1cef89e834a724d34edf9872f545d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
+        <definition>wxConnectionBase* wxClient::MakeConnection</definition>
+        <argsstring>(const wxString &amp;host, const wxString &amp;service, const wxString &amp;topic)</argsstring>
+        <name>MakeConnection</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>service</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Tries to make a connection with a server by host (machine name under UNIX - use &apos;localhost&apos; for same machine; ignored when using native DDE in Windows), service name and topic string. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the server allows a connection, a <ref refid="classwx_connection" kindref="compound">wxConnection</ref> object will be returned. The type of <ref refid="classwx_connection" kindref="compound">wxConnection</ref> returned can be altered by overriding the <ref refid="classwx_client_1a71328614681f8f50de8a561b5dcfbbde" kindref="member">OnMakeConnection()</ref> member to return your own derived connection object.</para><para>Under Unix, the service name may be either an integer port identifier in which case an Internet domain socket will be used for the communications, or a valid file name (which shouldn&apos;t exist and will be deleted afterwards) in which case a Unix domain socket is created.</para><para><simplesect kind="note"><para>Using Internet domain sockets is extremely insecure for IPC as there is absolutely no access control for them, use Unix domain sockets whenever possible! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_client_1a71328614681f8f50de8a561b5dcfbbde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
+        <definition>wxConnectionBase* wxClient::OnMakeConnection</definition>
+        <argsstring>()</argsstring>
+        <name>OnMakeConnection</name>
+        <briefdescription>
+<para>Called by <ref refid="classwx_client_1a6ca1cef89e834a724d34edf9872f545d" kindref="member">MakeConnection()</ref>, by default this simply returns a new <ref refid="classwx_connection" kindref="compound">wxConnection</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Override this method to return a <ref refid="classwx_connection" kindref="compound">wxConnection</ref> descendant customised for the application.</para><para>The advantage of deriving your own connection class is that it will enable you to intercept messages initiated by the server, such as <ref refid="classwx_connection_1a9dddf8014802c9643378b9bdb34bfc48" kindref="member">wxConnection::OnAdvise</ref>. You may also want to store application-specific data in instances of the new class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_client_1a532e7914e2e5aa79ef770521e0257108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxClient::ValidHost</definition>
+        <argsstring>(const wxString &amp;host)</argsstring>
+        <name>ValidHost</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>host</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this is a valid host name, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para>This always returns true under MS Windows. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="306"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classwx_client" kindref="compound">wxClient</ref> object represents the client part of a client-server DDE-like (Dynamic Data Exchange) conversation. </para>    </briefdescription>
+    <detaileddescription>
+<para>The actual DDE-based implementation using <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref> is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, which has the same API.</para><para>To create a client which can communicate with a suitable server, you need to derive a class from <ref refid="classwx_connection" kindref="compound">wxConnection</ref> and another from <ref refid="classwx_client" kindref="compound">wxClient</ref>. The custom <ref refid="classwx_connection" kindref="compound">wxConnection</ref> class will intercept communications in a &apos;conversation&apos; with a server, and the custom <ref refid="classwx_client" kindref="compound">wxClient</ref> is required so that a user-overridden <ref refid="classwx_client_1a71328614681f8f50de8a561b5dcfbbde" kindref="member">wxClient::OnMakeConnection</ref> member can return a <ref refid="classwx_connection" kindref="compound">wxConnection</ref> of the required class, when a connection is made.</para><para>Look at the IPC sample and the <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> for an example of how to do this.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_server" kindref="compound">wxServer</ref>, <ref refid="classwx_connection" kindref="compound">wxConnection</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4780">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="4779">
+        <label>wxClient</label>
+        <link refid="classwx_client"/>
+        <childnode refid="4780" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4782">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4783" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4781">
+        <label>wxClient</label>
+        <link refid="classwx_client"/>
+        <childnode refid="4782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4783">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="260" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" bodystart="259" bodyend="307"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxClient</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxClient</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxClient</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxClient</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxClient</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxClient</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxClient</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxClient</scope><name>m_refData</name></member>
+      <member refid="classwx_client_1a6ca1cef89e834a724d34edf9872f545d" prot="public" virt="non-virtual"><scope>wxClient</scope><name>MakeConnection</name></member>
+      <member refid="classwx_client_1a71328614681f8f50de8a561b5dcfbbde" prot="public" virt="non-virtual"><scope>wxClient</scope><name>OnMakeConnection</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxClient</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxClient</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxClient</scope><name>Ref</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxClient</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxClient</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxClient</scope><name>UnShare</name></member>
+      <member refid="classwx_client_1a532e7914e2e5aa79ef770521e0257108" prot="public" virt="non-virtual"><scope>wxClient</scope><name>ValidHost</name></member>
+      <member refid="classwx_client_1a695f699788030c561c56972406e8ff6d" prot="public" virt="non-virtual"><scope>wxClient</scope><name>wxClient</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxClient</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxClient</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxClient</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

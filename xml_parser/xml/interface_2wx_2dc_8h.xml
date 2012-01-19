@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2dc_8h" kind="file">
+    <compoundname>dc.h</compoundname>
+    <innerclass refid="structwx_font_metrics" prot="public">wxFontMetrics</innerclass>
+    <innerclass refid="classwx_d_c" prot="public">wxDC</innerclass>
+    <innerclass refid="classwx_d_c_clipper" prot="public">wxDCClipper</innerclass>
+    <innerclass refid="classwx_d_c_brush_changer" prot="public">wxDCBrushChanger</innerclass>
+    <innerclass refid="classwx_d_c_pen_changer" prot="public">wxDCPenChanger</innerclass>
+    <innerclass refid="classwx_d_c_text_colour_changer" prot="public">wxDCTextColourChanger</innerclass>
+    <innerclass refid="classwx_d_c_font_changer" prot="public">wxDCFontChanger</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54" prot="public" static="no">
+        <name>wxRasterOperationMode</name>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a8f005e663895d1fea613f20e14df4fd5" prot="public">
+          <name>wxCLEAR</name>
+          <briefdescription>
+<para>0 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54ac5ab8ec94e28270521d8dc25f62e4e05" prot="public">
+          <name>wxXOR</name>
+          <briefdescription>
+<para><emphasis>src</emphasis> XOR <emphasis>dst</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54ad971f978f098cbd4a12187c21db19559" prot="public">
+          <name>wxINVERT</name>
+          <briefdescription>
+<para>NOT <emphasis>dst</emphasis>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a541808f1cda9ff5a45491e539bd610f9" prot="public">
+          <name>wxOR_REVERSE</name>
+          <briefdescription>
+<para><emphasis>src</emphasis> OR (NOT <emphasis>dst</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a8f73781916cb071240ea7163241a29a5" prot="public">
+          <name>wxAND_REVERSE</name>
+          <briefdescription>
+<para><emphasis>src</emphasis> AND (NOT <emphasis>dst</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a42adf0b5dc2b539faec99078b4377164" prot="public">
+          <name>wxCOPY</name>
+          <briefdescription>
+<para><emphasis>src</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a9738f5237511d892b6cf95d1f9012fd2" prot="public">
+          <name>wxAND</name>
+          <briefdescription>
+<para><emphasis>src</emphasis> AND <emphasis>dst</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54ac6efb5649188619fadca4fd669876dc6" prot="public">
+          <name>wxAND_INVERT</name>
+          <briefdescription>
+<para>(NOT <emphasis>src</emphasis>) AND <emphasis>dst</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a8e047e52fd67b3030c5ab1f01f666661" prot="public">
+          <name>wxNO_OP</name>
+          <briefdescription>
+<para><emphasis>dst</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a0aa257541c9754086a20761dc3f21049" prot="public">
+          <name>wxNOR</name>
+          <briefdescription>
+<para>(NOT <emphasis>src</emphasis>) AND (NOT <emphasis>dst</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a7f16f76eafc2052be17416ffca1fb7fe" prot="public">
+          <name>wxEQUIV</name>
+          <briefdescription>
+<para>(NOT <emphasis>src</emphasis>) XOR <emphasis>dst</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a8ef611956521eb483596f9fac85e7b8c" prot="public">
+          <name>wxSRC_INVERT</name>
+          <briefdescription>
+<para>(NOT <emphasis>src</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54af74e8d18e62b3c82a9037a578c464e85" prot="public">
+          <name>wxOR_INVERT</name>
+          <briefdescription>
+<para>(NOT <emphasis>src</emphasis>) OR <emphasis>dst</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54a3de3761821fd620a6b9308300b77ac44" prot="public">
+          <name>wxNAND</name>
+          <briefdescription>
+<para>(NOT <emphasis>src</emphasis>) OR (NOT <emphasis>dst</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54aaf3c746584fd5f832aff2eb58e49670f" prot="public">
+          <name>wxOR</name>
+          <briefdescription>
+<para><emphasis>src</emphasis> OR <emphasis>dst</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54aa3f7da1f1a7f5e105e47568b73d885b6" prot="public">
+          <name>wxSET</name>
+          <briefdescription>
+<para>1 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Logical raster operations which can be used with <ref refid="classwx_d_c_1aae8adce8cf260bf703b8e76784bd577d" kindref="member">wxDC::SetLogicalFunction</ref> and some other <ref refid="classwx_d_c" kindref="compound">wxDC</ref> functions (e.g. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">wxDC::Blit</ref> and <ref refid="classwx_d_c_1a82801167a35e747218c49aa2161ae4bf" kindref="member">wxDC::StretchBlit</ref>).</para><para>The description of the values below refer to how a generic <emphasis>src</emphasis> source pixel and the corresponding <emphasis>dst</emphasis> destination pixel gets combined together to produce the final pixel. E.g. <computeroutput>wxCLEAR</computeroutput> and <computeroutput>wxSET</computeroutput> completely ignore the source and the destination pixel and always put zeroes or ones in the final surface. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="19" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2dc_8h_1a7ad228eb95f51d70574644e99d07dc8c" prot="public" static="no">
+        <name>wxFloodFillStyle</name>
+        <enumvalue id="interface_2wx_2dc_8h_1a7ad228eb95f51d70574644e99d07dc8ca7f2a8f896e5c592b1eb96174bc9a9a8a" prot="public">
+          <name>wxFLOOD_SURFACE</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>The flooding occurs until a colour other than the given colour is encountered. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a7ad228eb95f51d70574644e99d07dc8ca09bb0b5b9d73679dedbb625f6ef76705" prot="public">
+          <name>wxFLOOD_BORDER</name>
+          <briefdescription>
+<para>The area to be flooded is bounded by the given colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flood styles used by <ref refid="classwx_d_c_1af510e22ffc274d3d3b29659941f2b5a9" kindref="member">wxDC::FloodFill</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="42" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2dc_8h_1a5a641b839b9ac2ff94514d0596f6e20a" prot="public" static="no">
+        <name>wxMappingMode</name>
+        <enumvalue id="interface_2wx_2dc_8h_1a5a641b839b9ac2ff94514d0596f6e20aa7cb493f78fed283bdc4d3e0797400df6" prot="public">
+          <name>wxMM_TEXT</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Each logical unit is 1 device pixel. </para>          </briefdescription>
+          <detaileddescription>
+<para>This is the default mapping mode for all wxDC-derived classes. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a5a641b839b9ac2ff94514d0596f6e20aa387ebb6268241caa73737c4e8f064cd1" prot="public">
+          <name>wxMM_METRIC</name>
+          <briefdescription>
+<para>Each logical unit is 1 millimeter. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a5a641b839b9ac2ff94514d0596f6e20aaa4d962dc57fdc20b940fa3a0825d2ca0" prot="public">
+          <name>wxMM_LOMETRIC</name>
+          <briefdescription>
+<para>Each logical unit is 1/10 of a millimeter. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a5a641b839b9ac2ff94514d0596f6e20aaf67712afdcaeeffdac19b89b89d1a273" prot="public">
+          <name>wxMM_TWIPS</name>
+          <briefdescription>
+<para>Each logical unit is 1/20 of a <emphasis>&quot;printer point&quot;</emphasis>, or 1/1440 of an inch (also known as &quot;twip&quot;). </para>          </briefdescription>
+          <detaileddescription>
+<para>Equivalent to about 17.64 micrometers. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dc_8h_1a5a641b839b9ac2ff94514d0596f6e20aa27897f0ca48b486a4f63bc5c17ecc1b5" prot="public">
+          <name>wxMM_POINTS</name>
+          <briefdescription>
+<para>Each logical unit is a <emphasis>&quot;printer point&quot;</emphasis> i.e. </para>          </briefdescription>
+          <detaileddescription>
+<para>1/72 of an inch. Equivalent to about 353 micrometers. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The mapping used to transform <emphasis>logical</emphasis> units to <emphasis>device</emphasis> units. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_d_c_1aa07ef94e2f3af5b64345c3f94333e86e" kindref="member">wxDC::SetMapMode</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="55" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h"/>
+  </compounddef>
+</doxygen>

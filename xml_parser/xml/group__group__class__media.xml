@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__media" kind="group">
+    <compoundname>group_class_media</compoundname>
+    <title>Multimedia</title>
+    <innerclass refid="classwx_media_ctrl" prot="public">wxMediaCtrl</innerclass>
+    <innerclass refid="classwx_sound" prot="public">wxSound</innerclass>
+    <briefdescription>
+<para>Classes for showing multimedia contents. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_config_path_changer" kind="class" prot="public">
+    <compoundname>wxConfigPathChanger</compoundname>
+    <includes local="no">wx/config.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_config_path_changer_1a60bd80a11d785b8ca7c4cb9fb97dd6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxConfigPathChanger::wxConfigPathChanger</definition>
+        <argsstring>(const wxConfigBase *pContainer, const wxString &amp;strEntry)</argsstring>
+        <name>wxConfigPathChanger</name>
+        <param>
+          <type>const <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> *</type>
+          <declname>pContainer</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>strEntry</declname>
+        </param>
+        <briefdescription>
+<para>Changes the path of the given <ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> object so that the key <emphasis>strEntry</emphasis> is accessible (for read or write). </para>        </briefdescription>
+        <detaileddescription>
+<para>In other words, the ctor uses <ref refid="classwx_config_base_1ad290d3fe7fad4f39a4bb2959db89b379" kindref="member">wxConfigBase::SetPath()</ref> with everything which precedes the last slash of <emphasis>strEntry</emphasis>, so that: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_config_path_changer_1a60bd80a11d785b8ca7c4cb9fb97dd6a9" kindref="member" tooltip="Changes the path of the given wxConfigBase object so that the key strEntry is accessible...">wxConfigPathChanger</ref>(<ref refid="classwx_config_base_1a61bfb04c1c133190b3e851b252ed1c60" kindref="member" tooltip="Get the current config object.">wxConfigBase::Get</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;/MyProgram/SomeKeyName&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> has the same effect of: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_config_path_changer_1a60bd80a11d785b8ca7c4cb9fb97dd6a9" kindref="member" tooltip="Changes the path of the given wxConfigBase object so that the key strEntry is accessible...">wxConfigPathChanger</ref>(<ref refid="classwx_config_base_1a61bfb04c1c133190b3e851b252ed1c60" kindref="member" tooltip="Get the current config object.">wxConfigBase::Get</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;/MyProgram/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="948"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_path_changer_1a09ab9763983e12e69a03c45c68e39a4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxConfigPathChanger::~wxConfigPathChanger</definition>
+        <argsstring>()</argsstring>
+        <name>~wxConfigPathChanger</name>
+        <briefdescription>
+<para>Restores the path selected, inside the wxConfig object passed to the ctor, to the path which was selected when the <ref refid="classwx_config_path_changer" kindref="compound">wxConfigPathChanger</ref> ctor was called. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="954"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_path_changer_1ac822f3e59e19bf8fd764dee3b60b2a24" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxConfigPathChanger::Name</definition>
+        <argsstring>() const </argsstring>
+        <name>Name</name>
+        <briefdescription>
+<para>Returns the name of the key which was passed to the ctor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The &quot;name&quot; is just anything which follows the last slash of the string given to the ctor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="960" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" bodystart="960" bodyend="960"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_config_path_changer_1ad5fb2a36e44d511dba8a575667c4ff1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxConfigPathChanger::UpdateIfDeleted</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateIfDeleted</name>
+        <briefdescription>
+<para>This method must be called if the original path inside the wxConfig object (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>the current path at the moment of creation of this <ref refid="classwx_config_path_changer" kindref="compound">wxConfigPathChanger</ref> object) could have been deleted, thus preventing <ref refid="classwx_config_path_changer" kindref="compound">wxConfigPathChanger</ref> from restoring the not existing (any more) path.</para><para>If the original path doesn&apos;t exist any more, the path will be restored to the deepest still existing component of the old path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="971"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A handy little class which changes the current path in a wxConfig object and restores it in dtor. </para>    </briefdescription>
+    <detaileddescription>
+<para>Declaring a local variable of this type, it&apos;s possible to work in a specific directory and ensure that the path is automatically restored when the function returns.</para><para>For example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>function<sp/>loads<sp/>somes<sp/>settings<sp/>from<sp/>the<sp/>given<sp/>wxConfig<sp/>object;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>path<sp/>selected<sp/>inside<sp/>it<sp/>is<sp/>left<sp/>unchanged</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LoadMySettings(<ref refid="classwx_config_base" kindref="compound" tooltip="wxConfigBase defines the basic interface of all config classes.">wxConfigBase</ref>*<sp/>cfg)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_config_path_changer" kindref="compound" tooltip="A handy little class which changes the current path in a wxConfig object and restores...">wxConfigPathChanger</ref><sp/>changer(cfg,<sp/></highlight><highlight class="stringliteral">&quot;/Foo/Data/SomeString&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>str;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!config-&gt;<ref refid="classwx_config_base_1af89fb6c338f200bec028480ac0f3b1d8" kindref="member" tooltip="Read a string from the key, returning true if the value was read.">Read</ref>(</highlight><highlight class="stringliteral">&quot;SomeString&quot;</highlight><highlight class="normal">,<sp/>&amp;str)<sp/>)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>read<sp/>SomeString!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>without<sp/>wxConfigPathChanger<sp/>it<sp/>would<sp/>be<sp/>easy<sp/>to<sp/>forget<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>set<sp/>the<sp/>old<sp/>path<sp/>back<sp/>into<sp/>the<sp/>wxConfig<sp/>object<sp/>before<sp/>this<sp/>return!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>something<sp/>useful<sp/>with<sp/>SomeString...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>again:<sp/>wxConfigPathChanger<sp/>dtor<sp/>will<sp/>restore<sp/>the<sp/>original<sp/>wxConfig<sp/>path</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" line="931" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/config.h" bodystart="930" bodyend="972"/>
+    <listofallmembers>
+      <member refid="classwx_config_path_changer_1ac822f3e59e19bf8fd764dee3b60b2a24" prot="public" virt="non-virtual"><scope>wxConfigPathChanger</scope><name>Name</name></member>
+      <member refid="classwx_config_path_changer_1ad5fb2a36e44d511dba8a575667c4ff1f" prot="public" virt="non-virtual"><scope>wxConfigPathChanger</scope><name>UpdateIfDeleted</name></member>
+      <member refid="classwx_config_path_changer_1a60bd80a11d785b8ca7c4cb9fb97dd6a9" prot="public" virt="non-virtual"><scope>wxConfigPathChanger</scope><name>wxConfigPathChanger</name></member>
+      <member refid="classwx_config_path_changer_1a09ab9763983e12e69a03c45c68e39a4e" prot="public" virt="non-virtual"><scope>wxConfigPathChanger</scope><name>~wxConfigPathChanger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

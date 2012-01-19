@@ -1,0 +1,728 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="settings_8h" kind="file">
+    <compoundname>settings.h</compoundname>
+    <innerclass refid="classwx_system_settings" prot="public">wxSystemSettings</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="settings_8h_1ac542cdc9950a6cf3b7a42f7e77ada05b" prot="public" static="no">
+        <name>wxSystemFont</name>
+        <enumvalue id="settings_8h_1ac542cdc9950a6cf3b7a42f7e77ada05ba78d6dbbe23e1d914e2c2c0c690e940d0" prot="public">
+          <name>wxSYS_OEM_FIXED_FONT</name>
+          <initializer> 10</initializer>
+          <briefdescription>
+<para>Original equipment manufacturer dependent fixed-pitch font. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1ac542cdc9950a6cf3b7a42f7e77ada05ba4e3d146a6231a196e1d5af0909cbc0e5" prot="public">
+          <name>wxSYS_ANSI_FIXED_FONT</name>
+          <briefdescription>
+<para>Windows fixed-pitch (monospaced) font. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1ac542cdc9950a6cf3b7a42f7e77ada05ba29ec9026e80dbe1354f36fb22b342b9d" prot="public">
+          <name>wxSYS_ANSI_VAR_FONT</name>
+          <briefdescription>
+<para>Windows variable-pitch (proportional) font. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1ac542cdc9950a6cf3b7a42f7e77ada05ba3f72096ae306d88b0832b3288a68efac" prot="public">
+          <name>wxSYS_SYSTEM_FONT</name>
+          <briefdescription>
+<para>System font. </para>          </briefdescription>
+          <detaileddescription>
+<para>By default, the system uses the system font to draw menus, dialog box controls, and text. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1ac542cdc9950a6cf3b7a42f7e77ada05bac9bb83524681ce0d5a757853fe5eb8e4" prot="public">
+          <name>wxSYS_DEVICE_DEFAULT_FONT</name>
+          <briefdescription>
+<para>Device-dependent font (Windows NT and later only). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1ac542cdc9950a6cf3b7a42f7e77ada05bad6e70f8ce1b2f8814cfee46a6036b3e6" prot="public">
+          <name>wxSYS_DEFAULT_GUI_FONT</name>
+          <briefdescription>
+<para>Default font for user interface objects such as menus and dialog boxes. </para>          </briefdescription>
+          <detaileddescription>
+<para>Note that with modern GUIs nothing guarantees that the same font is used for all GUI elements, so some controls might use a different font by default. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible values for <ref refid="classwx_system_settings_1a8ca19381cf14a21063ccadfed5ad4ad8" kindref="member">wxSystemSettings::GetFont()</ref> parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para>These values map 1:1 the native values supported by the Windows&apos; <computeroutput>GetStockObject</computeroutput> function. Note that other ports (other than wxMSW) will try to provide meaningful fonts but they usually map the same font to various <computeroutput>wxSYS_*_FONT</computeroutput> values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="17" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24b" prot="public" static="no">
+        <name>wxSystemColour</name>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba1c7f82d42f388b8d7ed13b5f9efda49d" prot="public">
+          <name>wxSYS_COLOUR_SCROLLBAR</name>
+          <briefdescription>
+<para>The scrollbar grey area. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba0a826a0fd36e5fe1e68cc21805a2ad57" prot="public">
+          <name>wxSYS_COLOUR_DESKTOP</name>
+          <briefdescription>
+<para>The desktop colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bae85b86481318c5a1b178d62628a9f7a2" prot="public">
+          <name>wxSYS_COLOUR_ACTIVECAPTION</name>
+          <briefdescription>
+<para>Active window caption colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baa7dc15bf8d6f84484a15840e86e09824" prot="public">
+          <name>wxSYS_COLOUR_INACTIVECAPTION</name>
+          <briefdescription>
+<para>Inactive window caption colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bacf5a4c17b52fbb8d373dfa7e69925ea5" prot="public">
+          <name>wxSYS_COLOUR_MENU</name>
+          <briefdescription>
+<para>Menu background colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba4a6145d1d56adfaa209f03df43a34f63" prot="public">
+          <name>wxSYS_COLOUR_WINDOW</name>
+          <briefdescription>
+<para>Window background colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba666dabf12efc0eb88272d96f7c3b853e" prot="public">
+          <name>wxSYS_COLOUR_WINDOWFRAME</name>
+          <briefdescription>
+<para>Window frame colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba91bcca87f6805f81496112584e1767d4" prot="public">
+          <name>wxSYS_COLOUR_MENUTEXT</name>
+          <briefdescription>
+<para>Colour of the text used in the menus. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bace35f72a81c7637300f3da1f8012c583" prot="public">
+          <name>wxSYS_COLOUR_WINDOWTEXT</name>
+          <briefdescription>
+<para>Colour of the text used in generic windows. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba3e38d5fb7129e4ad17ee2937192ba5a0" prot="public">
+          <name>wxSYS_COLOUR_CAPTIONTEXT</name>
+          <briefdescription>
+<para>Colour of the text used in captions, size boxes and scrollbar arrow boxes. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bae41136e166a23a292a4d44d195324f97" prot="public">
+          <name>wxSYS_COLOUR_ACTIVEBORDER</name>
+          <briefdescription>
+<para>Active window border colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24badc09939e6a5c5e9879e7274a9f54715e" prot="public">
+          <name>wxSYS_COLOUR_INACTIVEBORDER</name>
+          <briefdescription>
+<para>Inactive window border colour. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba85e1dba99f7b8220dbcc73bbfa00844d" prot="public">
+          <name>wxSYS_COLOUR_APPWORKSPACE</name>
+          <briefdescription>
+<para>Background colour for MDI applications. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba0b6915f6847f8f86598f4eb986fe24d5" prot="public">
+          <name>wxSYS_COLOUR_HIGHLIGHT</name>
+          <briefdescription>
+<para>Colour of item(s) selected in a control. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baf03756c4c6e17ca2b944596f19f7e237" prot="public">
+          <name>wxSYS_COLOUR_HIGHLIGHTTEXT</name>
+          <briefdescription>
+<para>Colour of the text of item(s) selected in a control. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baf5d1063dd6aca8a0021c148052ffc0ab" prot="public">
+          <name>wxSYS_COLOUR_BTNFACE</name>
+          <briefdescription>
+<para>Face shading colour on push buttons. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baf7dc0018b0b7292cf4e5b5f19a8a01df" prot="public">
+          <name>wxSYS_COLOUR_BTNSHADOW</name>
+          <briefdescription>
+<para>Edge shading colour on push buttons. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba7f3c0aeda5ae44ce0f9ce8bfcedc19f3" prot="public">
+          <name>wxSYS_COLOUR_GRAYTEXT</name>
+          <briefdescription>
+<para>Colour of greyed (disabled) text. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bad81af29184ff7f5eb1e4cd47c9590a7d" prot="public">
+          <name>wxSYS_COLOUR_BTNTEXT</name>
+          <briefdescription>
+<para>Colour of the text on push buttons. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba69be02131f9e34206574f4cd6ca8953d" prot="public">
+          <name>wxSYS_COLOUR_INACTIVECAPTIONTEXT</name>
+          <briefdescription>
+<para>Colour of the text in active captions. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bab9ac91b056df02e6f8a465525a6ee3d9" prot="public">
+          <name>wxSYS_COLOUR_BTNHIGHLIGHT</name>
+          <briefdescription>
+<para>Highlight colour for buttons. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baf73bd4af00d430bcd52e405195be1821" prot="public">
+          <name>wxSYS_COLOUR_3DDKSHADOW</name>
+          <briefdescription>
+<para>Dark shadow colour for three-dimensional display elements. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baa3734cddf7ae13cb18ae8bf72d2d3093" prot="public">
+          <name>wxSYS_COLOUR_3DLIGHT</name>
+          <briefdescription>
+<para>Light colour for three-dimensional display elements. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bafb0da4fbb7acecd4c6f4161e9b7dafe5" prot="public">
+          <name>wxSYS_COLOUR_INFOTEXT</name>
+          <briefdescription>
+<para>Text colour for tooltip controls. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba38968e9c22c199fbe0176937058114ed" prot="public">
+          <name>wxSYS_COLOUR_INFOBK</name>
+          <briefdescription>
+<para>Background colour for tooltip controls. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baa6e98b5d400794231bbe73a128ebe666" prot="public">
+          <name>wxSYS_COLOUR_LISTBOX</name>
+          <briefdescription>
+<para>Background colour for list-like controls. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baa12ed4539d0760ea39dd5535645ebbe3" prot="public">
+          <name>wxSYS_COLOUR_HOTLIGHT</name>
+          <briefdescription>
+<para>Colour for a hyperlink or hot-tracked item. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bac52e747cf0f66e55ac80d2772695b1a4" prot="public">
+          <name>wxSYS_COLOUR_GRADIENTACTIVECAPTION</name>
+          <briefdescription>
+<para>Right side colour in the color gradient of an active window&apos;s title bar. </para>          </briefdescription>
+          <detaileddescription>
+<para><computeroutput>wxSYS_COLOUR_ACTIVECAPTION</computeroutput> specifies the left side color. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bacd0a1c840d7761a9ac9465e163b8ddfb" prot="public">
+          <name>wxSYS_COLOUR_GRADIENTINACTIVECAPTION</name>
+          <briefdescription>
+<para>Right side colour in the color gradient of an inactive window&apos;s title bar. </para>          </briefdescription>
+          <detaileddescription>
+<para><computeroutput>wxSYS_COLOUR_INACTIVECAPTION</computeroutput> specifies the left side color. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba6df98d638e9540ce92b22bbc13002ea7" prot="public">
+          <name>wxSYS_COLOUR_MENUHILIGHT</name>
+          <briefdescription>
+<para>The colour used to highlight menu items when the menu appears as a flat menu. </para>          </briefdescription>
+          <detaileddescription>
+<para>The highlighted menu item is outlined with <computeroutput>wxSYS_COLOUR_HIGHLIGHT</computeroutput>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba46da5f4600b1038981b9fa35b68f35e6" prot="public">
+          <name>wxSYS_COLOUR_MENUBAR</name>
+          <briefdescription>
+<para>The background colour for the menu bar when menus appear as flat menus. </para>          </briefdescription>
+          <detaileddescription>
+<para>However, <computeroutput>wxSYS_COLOUR_MENU</computeroutput> continues to specify the background color of the menu popup. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baf404638957ddcc2e9764dcf36b275901" prot="public">
+          <name>wxSYS_COLOUR_LISTBOXTEXT</name>
+          <briefdescription>
+<para>Text colour for list-like controls. </para>          </briefdescription>
+          <detaileddescription>
+<para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba96bcbb42db0cc7f0ed6e772e8a32b3d9" prot="public">
+          <name>wxSYS_COLOUR_LISTBOXHIGHLIGHTTEXT</name>
+          <briefdescription>
+<para>Text colour for the unfocused selection of list-like controls. </para>          </briefdescription>
+          <detaileddescription>
+<para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba8bc7496a3ab8af03e666d394861055ac" prot="public">
+          <name>wxSYS_COLOUR_BACKGROUND</name>
+          <initializer> wxSYS_COLOUR_DESKTOP</initializer>
+          <briefdescription>
+<para>Synonym for <computeroutput>wxSYS_COLOUR_DESKTOP</computeroutput>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baf09fdd41cff099739e185c27be98f85c" prot="public">
+          <name>wxSYS_COLOUR_3DFACE</name>
+          <initializer> wxSYS_COLOUR_BTNFACE</initializer>
+          <briefdescription>
+<para>Synonym for <computeroutput>wxSYS_COLOUR_BTNFACE</computeroutput>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24baae27f1720e6257578d8bdcb7073a7686" prot="public">
+          <name>wxSYS_COLOUR_3DSHADOW</name>
+          <initializer> wxSYS_COLOUR_BTNSHADOW</initializer>
+          <briefdescription>
+<para>Synonym for <computeroutput>wxSYS_COLOUR_BTNSHADOW</computeroutput>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba7d21ce34d7dafcf9b7dca889ac93239a" prot="public">
+          <name>wxSYS_COLOUR_BTNHILIGHT</name>
+          <initializer> wxSYS_COLOUR_BTNHIGHLIGHT</initializer>
+          <briefdescription>
+<para>Synonym for <computeroutput>wxSYS_COLOUR_BTNHIGHLIGHT</computeroutput>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bafa12cc8b994fee84665e0012ae9cf1d8" prot="public">
+          <name>wxSYS_COLOUR_3DHIGHLIGHT</name>
+          <initializer> wxSYS_COLOUR_BTNHIGHLIGHT</initializer>
+          <briefdescription>
+<para>Synonym for <computeroutput>wxSYS_COLOUR_BTNHIGHLIGHT</computeroutput>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24ba3c4f0ec197e13724dd36dccd429efb2c" prot="public">
+          <name>wxSYS_COLOUR_3DHILIGHT</name>
+          <initializer> wxSYS_COLOUR_BTNHIGHLIGHT</initializer>
+          <briefdescription>
+<para>Synonym for <computeroutput>wxSYS_COLOUR_BTNHIGHLIGHT</computeroutput>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a44ad26cbd8d579d1b7eff7015c8bd24bafa998c9ef04187b207bd47b8bd66b317" prot="public">
+          <name>wxSYS_COLOUR_FRAMEBK</name>
+          <initializer> wxSYS_COLOUR_BTNFACE</initializer>
+          <briefdescription>
+<para>Synonym for <computeroutput>wxSYS_COLOUR_BTNFACE</computeroutput>. </para>          </briefdescription>
+          <detaileddescription>
+<para>On wxMSW this colour should be used as the background colour of wxFrames which are used as containers of controls; this is in fact the same colour used for the borders of controls like e.g. <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref> or for the background of e.g. <ref refid="classwx_panel" kindref="compound">wxPanel</ref>.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible values for <ref refid="classwx_system_settings_1ab252414b60f16a233bc17df2a19bd804" kindref="member">wxSystemSettings::GetColour()</ref> parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para>These values map 1:1 the native values supported by the Windows&apos; <computeroutput>GetSysColor</computeroutput> function. Note that other ports (other than wxMSW) will try to provide meaningful colours but they usually map the same colour to various <computeroutput>wxSYS_COLOUR_*</computeroutput> values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="51" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="enum" id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26" prot="public" static="no">
+        <name>wxSystemMetric</name>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a951752e81420b4a801260865494ee71b" prot="public">
+          <name>wxSYS_MOUSE_BUTTONS</name>
+          <briefdescription>
+<para>Number of buttons on mouse, or zero if no mouse was installed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a2aa2f16d2b82c0439ff498ac6f273cc4" prot="public">
+          <name>wxSYS_BORDER_X</name>
+          <briefdescription>
+<para>Width of single border. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a2a0c26e2f9d4a4df7c3843aad57ffd48" prot="public">
+          <name>wxSYS_BORDER_Y</name>
+          <briefdescription>
+<para>Height of single border. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a6809d3e67b9865f36a29fd038dffa08b" prot="public">
+          <name>wxSYS_CURSOR_X</name>
+          <briefdescription>
+<para>Width of cursor. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a2bd9e682bd34245ae528fe093a21a9a5" prot="public">
+          <name>wxSYS_CURSOR_Y</name>
+          <briefdescription>
+<para>Height of cursor. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26abe84be82b9dca9c093e03d7a0d5ac4ad" prot="public">
+          <name>wxSYS_DCLICK_X</name>
+          <briefdescription>
+<para>Width in pixels of rectangle within which two successive mouse clicks must fall to generate a double-click. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26ab601848d7a528dc2ab5fc516adb16ed2" prot="public">
+          <name>wxSYS_DCLICK_Y</name>
+          <briefdescription>
+<para>Height in pixels of rectangle within which two successive mouse clicks must fall to generate a double-click. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26ab1c07936d0c1c7f3d249fb57edafc029" prot="public">
+          <name>wxSYS_DCLICK_MSEC</name>
+          <briefdescription>
+<para>Maximal time, in milliseconds, which may pass between subsequent clicks for a double click to be generated. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a1e4deb37a2b1b36841fe0908efcac26b" prot="public">
+          <name>wxSYS_DRAG_X</name>
+          <briefdescription>
+<para>Width in pixels of a rectangle centered on a drag point to allow for limited movement of the mouse pointer before a drag operation begins. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26aff0861cf9f3c4847b6d4bfadfbb94718" prot="public">
+          <name>wxSYS_DRAG_Y</name>
+          <briefdescription>
+<para>Height in pixels of a rectangle centered on a drag point to allow for limited movement of the mouse pointer before a drag operation begins. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a89afbf474a43033094ec73cafc0a2cc4" prot="public">
+          <name>wxSYS_EDGE_X</name>
+          <briefdescription>
+<para>Width of a 3D border, in pixels. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a8e1c1efa7ab85f4227f5de45ef9f13ba" prot="public">
+          <name>wxSYS_EDGE_Y</name>
+          <briefdescription>
+<para>Height of a 3D border, in pixels. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a0ccc12e6e54d01a090c9de860075b5db" prot="public">
+          <name>wxSYS_HSCROLL_ARROW_X</name>
+          <briefdescription>
+<para>Width of arrow bitmap on horizontal scrollbar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a17217a0e8b43b796190c8a6b311922d3" prot="public">
+          <name>wxSYS_HSCROLL_ARROW_Y</name>
+          <briefdescription>
+<para>Height of arrow bitmap on horizontal scrollbar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a161e4efc8c5b0d2e7a0e2cb4da0bba3d" prot="public">
+          <name>wxSYS_HTHUMB_X</name>
+          <briefdescription>
+<para>Width of horizontal scrollbar thumb. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a8228e51667c2c7d9e6f353721705c784" prot="public">
+          <name>wxSYS_ICON_X</name>
+          <briefdescription>
+<para>The default width of an icon. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a8b704f976e48d465b71b3d4b55690e6c" prot="public">
+          <name>wxSYS_ICON_Y</name>
+          <briefdescription>
+<para>The default height of an icon. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a13a1ba24cbf346f74b404788a3f4e3cf" prot="public">
+          <name>wxSYS_ICONSPACING_X</name>
+          <briefdescription>
+<para>Width of a grid cell for items in large icon view, in pixels. Each item fits into a rectangle of this size when arranged. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a4a6b773670fbad735089fb29cc264f38" prot="public">
+          <name>wxSYS_ICONSPACING_Y</name>
+          <briefdescription>
+<para>Height of a grid cell for items in large icon view, in pixels. Each item fits into a rectangle of this size when arranged. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a9be0575091881566f26dbf0951ffe80d" prot="public">
+          <name>wxSYS_WINDOWMIN_X</name>
+          <briefdescription>
+<para>Minimum width of a window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a7aa6f1018ce2c194fc100c3d21260c93" prot="public">
+          <name>wxSYS_WINDOWMIN_Y</name>
+          <briefdescription>
+<para>Minimum height of a window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a0c35d2ab1c26e7c567a5ee00192979d7" prot="public">
+          <name>wxSYS_SCREEN_X</name>
+          <briefdescription>
+<para>Width of the screen in pixels. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26acb50bbe30da9a8792f569736dec45114" prot="public">
+          <name>wxSYS_SCREEN_Y</name>
+          <briefdescription>
+<para>Height of the screen in pixels. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26acd4af56f62201b0d7d750834028eec36" prot="public">
+          <name>wxSYS_FRAMESIZE_X</name>
+          <briefdescription>
+<para>Width of the window frame for a wxTHICK_FRAME window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26ac26a690c82ed925bb234feeb302da26b" prot="public">
+          <name>wxSYS_FRAMESIZE_Y</name>
+          <briefdescription>
+<para>Height of the window frame for a wxTHICK_FRAME window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a13ded899b152e5518f728452e23c5a21" prot="public">
+          <name>wxSYS_SMALLICON_X</name>
+          <briefdescription>
+<para>Recommended width of a small icon (in window captions, and small icon view). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26afa36d2556c6a3fcc185163215bcb8567" prot="public">
+          <name>wxSYS_SMALLICON_Y</name>
+          <briefdescription>
+<para>Recommended height of a small icon (in window captions, and small icon view). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a5b66685d3b9e8318461b9fa72505116c" prot="public">
+          <name>wxSYS_HSCROLL_Y</name>
+          <briefdescription>
+<para>Height of horizontal scrollbar in pixels. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a57c5d05c4af55e99ebc89fb8d00fe688" prot="public">
+          <name>wxSYS_VSCROLL_X</name>
+          <briefdescription>
+<para>Width of vertical scrollbar in pixels. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a11cd8d16657a662977914c363ab24efc" prot="public">
+          <name>wxSYS_VSCROLL_ARROW_X</name>
+          <briefdescription>
+<para>Width of arrow bitmap on a vertical scrollbar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a4217ca36aacb1ce5635bffb10884eaf2" prot="public">
+          <name>wxSYS_VSCROLL_ARROW_Y</name>
+          <briefdescription>
+<para>Height of arrow bitmap on a vertical scrollbar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26ad6b4583bb7a5a57ef44a0220830a6d1e" prot="public">
+          <name>wxSYS_VTHUMB_Y</name>
+          <briefdescription>
+<para>Height of vertical scrollbar thumb. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26abc52edcff5b3d5a3e0d9fd745e37946a" prot="public">
+          <name>wxSYS_CAPTION_Y</name>
+          <briefdescription>
+<para>Height of normal caption area. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a43d012c658cd8434901b967eeb80dc92" prot="public">
+          <name>wxSYS_MENU_Y</name>
+          <briefdescription>
+<para>Height of single-line menu bar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26afa0f12d1ce7be4d703f569868d81ea96" prot="public">
+          <name>wxSYS_NETWORK_PRESENT</name>
+          <briefdescription>
+<para>1 if there is a network present, 0 otherwise. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a571360d675fcc02011b29ab3ff325936" prot="public">
+          <name>wxSYS_PENWINDOWS_PRESENT</name>
+          <briefdescription>
+<para>1 if PenWindows is installed, 0 otherwise. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a942b5e92c043ef191049c3ea8b575c0e" prot="public">
+          <name>wxSYS_SHOW_SOUNDS</name>
+          <briefdescription>
+<para>Non-zero if the user requires an application to present information visually in situations where it would otherwise present the information only in audible form; zero otherwise. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26a0f112adbb70fc59d03dd41ed29e5bea6" prot="public">
+          <name>wxSYS_SWAP_BUTTONS</name>
+          <briefdescription>
+<para>Non-zero if the meanings of the left and right mouse buttons are swapped; zero otherwise. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a0f2b19d7a3717cdbef5a04cb05ab8f26ab1c07936d0c1c7f3d249fb57edafc029" prot="public">
+          <name>wxSYS_DCLICK_MSEC</name>
+          <briefdescription>
+<para>Maximal time, in milliseconds, which may pass between subsequent clicks for a double click to be generated. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible values for <ref refid="classwx_system_settings_1aa18e3b5794dc4193c4b0668d28d4933a" kindref="member">wxSystemSettings::GetMetric()</ref> index parameter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="154" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="enum" id="settings_8h_1afc464d07a27e1c7ebf406a1321167bf5" prot="public" static="no">
+        <name>wxSystemFeature</name>
+        <enumvalue id="settings_8h_1afc464d07a27e1c7ebf406a1321167bf5a6eaab93297fba76849a316b2c0d86e04" prot="public">
+          <name>wxSYS_CAN_DRAW_FRAME_DECORATIONS</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1afc464d07a27e1c7ebf406a1321167bf5a946d153f53ff9daabf2097afb0d64ca1" prot="public">
+          <name>wxSYS_CAN_ICONIZE_FRAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1afc464d07a27e1c7ebf406a1321167bf5ae49914f3b3d6274eda407d83d541a517" prot="public">
+          <name>wxSYS_TABLET_PRESENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible values for <ref refid="classwx_system_settings_1a9e695a03bc8e3127b8a45f24ebf7c297" kindref="member">wxSystemSettings::HasFeature()</ref> parameter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="203" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="202" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="enum" id="settings_8h_1a805b469950075040f8fc4925d6507419" prot="public" static="no">
+        <name>wxSystemScreenType</name>
+        <enumvalue id="settings_8h_1a805b469950075040f8fc4925d6507419aa0c386fefcf9d23c4033f189e16c5331" prot="public">
+          <name>wxSYS_SCREEN_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Undefined screen type. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a805b469950075040f8fc4925d6507419a2bc752c08c17f86df2d8a7b966517b73" prot="public">
+          <name>wxSYS_SCREEN_TINY</name>
+          <briefdescription>
+<para>Tiny screen, less than 320x240. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a805b469950075040f8fc4925d6507419aaee7c8024bb748869912a13f0496ec2e" prot="public">
+          <name>wxSYS_SCREEN_PDA</name>
+          <briefdescription>
+<para>PDA screen, 320x240 or more but less than 640x480. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a805b469950075040f8fc4925d6507419af0172ebde103b52a8f637f81638b05e6" prot="public">
+          <name>wxSYS_SCREEN_SMALL</name>
+          <briefdescription>
+<para>Small screen, 640x480 or more but less than 800x600. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="settings_8h_1a805b469950075040f8fc4925d6507419a2aba4081e69d4fb96f33d81c7fc4f0f7" prot="public">
+          <name>wxSYS_SCREEN_DESKTOP</name>
+          <briefdescription>
+<para>Desktop screen, 800x600 or more. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Values for different screen designs. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_system_settings_1af8a2e5d2411eb520b8dad5fc5e9a1a7a" kindref="member">wxSystemSettings::GetScreenType()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" line="213" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h" bodystart="212" bodyend="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/settings.h"/>
+  </compounddef>
+</doxygen>
