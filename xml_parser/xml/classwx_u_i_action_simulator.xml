@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_u_i_action_simulator" kind="class" prot="public">
+    <compoundname>wxUIActionSimulator</compoundname>
+    <includes local="no">wx/uiaction.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1aa0f66cea40a642075482e06ccf2b75cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUIActionSimulator::wxUIActionSimulator</definition>
+        <argsstring>()</argsstring>
+        <name>wxUIActionSimulator</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1a810d21924e14cb66205e4a921f711e5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::MouseMove</definition>
+        <argsstring>(long x, long y)</argsstring>
+        <name>MouseMove</name>
+        <param>
+          <type>long</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Move the mouse to the specified coordinates. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x coordinate to move to, in screen coordinates.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y coordinate to move to, in screen coordinates. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1aca7da1cd2fe227f2b1a85cfe8aef828b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::MouseMove</definition>
+        <argsstring>(const wxPoint &amp;point)</argsstring>
+        <name>MouseMove</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Move the mouse to the specified coordinates. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point to move to, in screen coordinates. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1a9ddaf261490d1a71f723e713184424a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::MouseDown</definition>
+        <argsstring>(int button=wxMOUSE_BTN_LEFT)</argsstring>
+        <name>MouseDown</name>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+          <defval>wxMOUSE_BTN_LEFT</defval>
+        </param>
+        <briefdescription>
+<para>Press a mouse button. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Button to press. Valid constants are <computeroutput>wxMOUSE_BTN_LEFT</computeroutput>, <computeroutput>wxMOUSE_BTN_MIDDLE</computeroutput>, and <computeroutput>wxMOUSE_BTN_RIGHT</computeroutput>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1a84bb2f01cfc044d682cbadd9efb9846f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::MouseUp</definition>
+        <argsstring>(int button=wxMOUSE_BTN_LEFT)</argsstring>
+        <name>MouseUp</name>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+          <defval>wxMOUSE_BTN_LEFT</defval>
+        </param>
+        <briefdescription>
+<para>Release a mouse button. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Button to press. See <ref refid="classwx_u_i_action_simulator_1a9ddaf261490d1a71f723e713184424a1" kindref="member">wxUIActionSimulator::MouseDown</ref> for a list of valid constants. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1a9b1c032466a935687c5e68d6eb77bcc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::MouseClick</definition>
+        <argsstring>(int button=wxMOUSE_BTN_LEFT)</argsstring>
+        <name>MouseClick</name>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+          <defval>wxMOUSE_BTN_LEFT</defval>
+        </param>
+        <briefdescription>
+<para>Click a mouse button. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Button to press. See <ref refid="classwx_u_i_action_simulator_1a9ddaf261490d1a71f723e713184424a1" kindref="member">wxUIActionSimulator::MouseDown</ref> for a list of valid constants. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1aee0c2122c457fbd25bebb37e1f87e436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::MouseDblClick</definition>
+        <argsstring>(int button=wxMOUSE_BTN_LEFT)</argsstring>
+        <name>MouseDblClick</name>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+          <defval>wxMOUSE_BTN_LEFT</defval>
+        </param>
+        <briefdescription>
+<para>Double-click a mouse button. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Button to press. See <ref refid="classwx_u_i_action_simulator_1a9ddaf261490d1a71f723e713184424a1" kindref="member">wxUIActionSimulator::MouseDown</ref> for a list of valid constants. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1a9365e46a8500daac15eadbbdc7c6fb9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::MouseDragDrop</definition>
+        <argsstring>(long x1, long y1, long x2, long y2, int button=wxMOUSE_BTN_LEFT)</argsstring>
+        <name>MouseDragDrop</name>
+        <param>
+          <type>long</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+          <defval>wxMOUSE_BTN_LEFT</defval>
+        </param>
+        <briefdescription>
+<para>Perform a drag and drop operation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x start coordinate, in screen coordinates.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y start coordinate, in screen coordinates.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x destination coordinate, in screen coordinates.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y destination coordinate, in screen coordinates.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Button to press. See <ref refid="classwx_u_i_action_simulator_1a9ddaf261490d1a71f723e713184424a1" kindref="member">wxUIActionSimulator::MouseDown</ref> for a list of valid constants. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1aabcdc7be926c32bd5b68b75f16c0fcb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::KeyDown</definition>
+        <argsstring>(int keycode, int modifiers=wxMOD_NONE)</argsstring>
+        <name>KeyDown</name>
+        <param>
+          <type>int</type>
+          <declname>keycode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>modifiers</declname>
+          <defval>wxMOD_NONE</defval>
+        </param>
+        <briefdescription>
+<para>Press a key. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you are using modifiers then it needs to be paired with an identical KeyUp or the modifiers will not be released (MSW and OSX).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keycode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to operate on, as an integer. It is interpreted as a wxKeyCode.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>modifiers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of <ref refid="defs_8h_1a5b81968ab866f5874cabc504490ae5cd" kindref="member">wxKeyModifier</ref> flags to be pressed with the given keycode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1a7f08822c577ff59c7a04064285b12db1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::KeyUp</definition>
+        <argsstring>(int keycode, int modifiers=wxMOD_NONE)</argsstring>
+        <name>KeyUp</name>
+        <param>
+          <type>int</type>
+          <declname>keycode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>modifiers</declname>
+          <defval>wxMOD_NONE</defval>
+        </param>
+        <briefdescription>
+<para>Release a key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keycode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to operate on, as an integer. It is interpreted as a wxKeyCode.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>modifiers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of <ref refid="defs_8h_1a5b81968ab866f5874cabc504490ae5cd" kindref="member">wxKeyModifier</ref> flags to be pressed with the given keycode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1a573e464dc75d6168564a6372f6b9aa21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::Char</definition>
+        <argsstring>(int keycode, int modifiers=wxMOD_NONE)</argsstring>
+        <name>Char</name>
+        <param>
+          <type>int</type>
+          <declname>keycode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>modifiers</declname>
+          <defval>wxMOD_NONE</defval>
+        </param>
+        <briefdescription>
+<para>Press and release a key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keycode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to operate on, as an integer. It is interpreted as a wxKeyCode.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>modifiers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of <ref refid="defs_8h_1a5b81968ab866f5874cabc504490ae5cd" kindref="member">wxKeyModifier</ref> flags to be pressed with the given keycode. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_i_action_simulator_1af8daaf3d87f184e2dec185b820eab9b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUIActionSimulator::Text</definition>
+        <argsstring>(const wxString &amp;text)</argsstring>
+        <name>Text</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Emulate typing in the keys representing the given string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently only the ASCII letters, digits and characters for the definition of numbers (i.e. characters <computeroutput>a-z</computeroutput> <computeroutput>A-Z</computeroutput> <computeroutput>0-9</computeroutput> <computeroutput>+</computeroutput> <computeroutput>-</computeroutput> <computeroutput></computeroutput>. <computeroutput></computeroutput>, <computeroutput>&apos;space&apos;</computeroutput>) are supported.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to type. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_u_i_action_simulator" kindref="compound">wxUIActionSimulator</ref> is a class used to simulate user interface actions such as a mouse click or a key press. </para>    </briefdescription>
+    <detaileddescription>
+<para>Common usage for this class would be to provide playback and record (aka macro recording) functionality for users, or to drive unit tests by simulating user sessions.</para><para>See the <ref refid="page__samples_1page_samples_uiaction" kindref="member">wxUIActionSimulator Sample</ref> for an example of using this class.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uiaction.h" bodystart="26" bodyend="159"/>
+    <listofallmembers>
+      <member refid="classwx_u_i_action_simulator_1a573e464dc75d6168564a6372f6b9aa21" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>Char</name></member>
+      <member refid="classwx_u_i_action_simulator_1aabcdc7be926c32bd5b68b75f16c0fcb8" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>KeyDown</name></member>
+      <member refid="classwx_u_i_action_simulator_1a7f08822c577ff59c7a04064285b12db1" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>KeyUp</name></member>
+      <member refid="classwx_u_i_action_simulator_1a9b1c032466a935687c5e68d6eb77bcc5" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>MouseClick</name></member>
+      <member refid="classwx_u_i_action_simulator_1aee0c2122c457fbd25bebb37e1f87e436" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>MouseDblClick</name></member>
+      <member refid="classwx_u_i_action_simulator_1a9ddaf261490d1a71f723e713184424a1" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>MouseDown</name></member>
+      <member refid="classwx_u_i_action_simulator_1a9365e46a8500daac15eadbbdc7c6fb9d" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>MouseDragDrop</name></member>
+      <member refid="classwx_u_i_action_simulator_1a810d21924e14cb66205e4a921f711e5a" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>MouseMove</name></member>
+      <member refid="classwx_u_i_action_simulator_1aca7da1cd2fe227f2b1a85cfe8aef828b" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>MouseMove</name></member>
+      <member refid="classwx_u_i_action_simulator_1a84bb2f01cfc044d682cbadd9efb9846f" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>MouseUp</name></member>
+      <member refid="classwx_u_i_action_simulator_1af8daaf3d87f184e2dec185b820eab9b3" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>Text</name></member>
+      <member refid="classwx_u_i_action_simulator_1aa0f66cea40a642075482e06ccf2b75cb" prot="public" virt="non-virtual"><scope>wxUIActionSimulator</scope><name>wxUIActionSimulator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="filectrl_8h" kind="file">
+    <compoundname>filectrl.h</compoundname>
+    <innerclass refid="classwx_file_ctrl" prot="public">wxFileCtrl</innerclass>
+    <innerclass refid="classwx_file_ctrl_event" prot="public">wxFileCtrlEvent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h"/>
+  </compounddef>
+</doxygen>

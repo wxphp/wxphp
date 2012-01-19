@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_region_iterator" kind="class" prot="public">
+    <compoundname>wxRegionIterator</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/region.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_region_iterator_1a1a2d17672c9585f86e26b8ee054e08e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegionIterator::wxRegionIterator</definition>
+        <argsstring>()</argsstring>
+        <name>wxRegionIterator</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1a01b1845c8ecb190d244dfcc97d358f99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegionIterator::wxRegionIterator</definition>
+        <argsstring>(const wxRegion &amp;region)</argsstring>
+        <name>wxRegionIterator</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Creates an iterator object given a region. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1acb32f4131e3f9c840c8abbfb788246e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>wxCoord wxRegionIterator::GetH</definition>
+        <argsstring>() const </argsstring>
+        <name>GetH</name>
+        <briefdescription>
+<para>An alias for <ref refid="classwx_region_iterator_1ae62d97b9d83714459f2b9dba9e36b24c" kindref="member">GetHeight()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1ae62d97b9d83714459f2b9dba9e36b24c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>wxCoord wxRegionIterator::GetHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+<para>Returns the height value for the current region. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1a7e73dbdb26cbe0c8930563db7959d3c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
+        <definition>wxRect wxRegionIterator::GetRect</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRect</name>
+        <briefdescription>
+<para>Returns the current rectangle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1af2797ec0ccb37e11815dde6bf0811c1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>wxCoord wxRegionIterator::GetW</definition>
+        <argsstring>() const </argsstring>
+        <name>GetW</name>
+        <briefdescription>
+<para>An alias for <ref refid="classwx_region_iterator_1ae7e0965dbd12b696a18a7d19857fd52a" kindref="member">GetWidth()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1ae7e0965dbd12b696a18a7d19857fd52a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>wxCoord wxRegionIterator::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Returns the width value for the current region. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1af2477ab14d5faef3d8a6dbc21d196ec2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>wxCoord wxRegionIterator::GetX</definition>
+        <argsstring>() const </argsstring>
+        <name>GetX</name>
+        <briefdescription>
+<para>Returns the x value for the current region. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1a43fdf4f1881f8951da4a376450384cb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+        <definition>wxCoord wxRegionIterator::GetY</definition>
+        <argsstring>() const </argsstring>
+        <name>GetY</name>
+        <briefdescription>
+<para>Returns the y value for the current region. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1ab95ced61c34b5d54ea22778337cf5807" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegionIterator::HaveRects</definition>
+        <argsstring>() const </argsstring>
+        <name>HaveRects</name>
+        <briefdescription>
+<para>Returns true if there are still some rectangles; otherwise returns false. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1ac2facb5b4ea2c8188c43474350207fea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRegionIterator::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+<para>Resets the iterator to the beginning of the rectangles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1a147ea0f4fcce9b5662925e6b6ffc92f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRegionIterator::Reset</definition>
+        <argsstring>(const wxRegion &amp;region)</argsstring>
+        <name>Reset</name>
+        <param>
+          <type>const <ref refid="classwx_region" kindref="compound">wxRegion</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Resets the iterator to the given region. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1a36247eb18c3e25f805ff1bc78cf1183b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_region_iterator" kindref="compound">wxRegionIterator</ref> &amp;</type>
+        <definition>wxRegionIterator&amp; wxRegionIterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+<para>Increment operator. </para>        </briefdescription>
+        <detaileddescription>
+<para>Increments the iterator to the next region.</para><para><bold>wxPython Note:</bold> A wxPython alias for this operator is called Next. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_region_iterator_1a3ac0e883319a2e07357365297d6dcbe0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegionIterator::operator bool</definition>
+        <argsstring>() const </argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+<para>Returns true if there are still some rectangles; otherwise returns false. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can use this to test the iterator object as if it were of type <computeroutput>bool</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used to iterate through the rectangles in a region, typically when examining the damaged regions of a window within an OnPaint call. </para>    </briefdescription>
+    <detaileddescription>
+<para>To use it, construct an iterator object on the stack and loop through the regions, testing the object and incrementing the iterator at the end of the loop.</para><para>See <ref refid="classwx_paint_event" kindref="compound">wxPaintEvent</ref> for an example of use.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="region_8h_1a0e08242adcd1d3280b44543545b0a3ef" kindref="member">wxNullRegion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_paint_event" kindref="compound">wxPaintEvent</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9062">
+        <label>wxRegionIterator</label>
+        <link refid="classwx_region_iterator"/>
+        <childnode refid="9063" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9063">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9064">
+        <label>wxRegionIterator</label>
+        <link refid="classwx_region_iterator"/>
+        <childnode refid="9065" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9065">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9066" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9066">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/region.h" bodystart="54" bodyend="131"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRegionIterator</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRegionIterator</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRegionIterator</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRegionIterator</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_region_iterator_1acb32f4131e3f9c840c8abbfb788246e7" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>GetH</name></member>
+      <member refid="classwx_region_iterator_1ae62d97b9d83714459f2b9dba9e36b24c" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>GetHeight</name></member>
+      <member refid="classwx_region_iterator_1a7e73dbdb26cbe0c8930563db7959d3c9" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>GetRect</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>GetRefData</name></member>
+      <member refid="classwx_region_iterator_1af2797ec0ccb37e11815dde6bf0811c1a" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>GetW</name></member>
+      <member refid="classwx_region_iterator_1ae7e0965dbd12b696a18a7d19857fd52a" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>GetWidth</name></member>
+      <member refid="classwx_region_iterator_1af2477ab14d5faef3d8a6dbc21d196ec2" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>GetX</name></member>
+      <member refid="classwx_region_iterator_1a43fdf4f1881f8951da4a376450384cb4" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>GetY</name></member>
+      <member refid="classwx_region_iterator_1ab95ced61c34b5d54ea22778337cf5807" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>HaveRects</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRegionIterator</scope><name>m_refData</name></member>
+      <member refid="classwx_region_iterator_1a3ac0e883319a2e07357365297d6dcbe0" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>operator bool</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>operator new</name></member>
+      <member refid="classwx_region_iterator_1a36247eb18c3e25f805ff1bc78cf1183b" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>operator++</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>Ref</name></member>
+      <member refid="classwx_region_iterator_1ac2facb5b4ea2c8188c43474350207fea" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>Reset</name></member>
+      <member refid="classwx_region_iterator_1a147ea0f4fcce9b5662925e6b6ffc92f3" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>Reset</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>wxObject</name></member>
+      <member refid="classwx_region_iterator_1a1a2d17672c9585f86e26b8ee054e08e5" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>wxRegionIterator</name></member>
+      <member refid="classwx_region_iterator_1a01b1845c8ecb190d244dfcc97d358f99" prot="public" virt="non-virtual"><scope>wxRegionIterator</scope><name>wxRegionIterator</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxRegionIterator</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

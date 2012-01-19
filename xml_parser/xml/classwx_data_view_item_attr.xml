@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_data_view_item_attr" kind="class" prot="public">
+    <compoundname>wxDataViewItemAttr</compoundname>
+    <includes local="no">wx/dataview.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_data_view_item_attr_1a730aee09cf5b3d45db8dcae8ffc48fde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDataViewItemAttr::wxDataViewItemAttr</definition>
+        <argsstring>()</argsstring>
+        <name>wxDataViewItemAttr</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_item_attr_1a77799bbfeb4a2d6d2b8dfe1eed63d6b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataViewItemAttr::SetBold</definition>
+        <argsstring>(bool set)</argsstring>
+        <name>SetBold</name>
+        <param>
+          <type>bool</type>
+          <declname>set</declname>
+        </param>
+        <briefdescription>
+<para>Call this to indicate that the item shall be displayed in bold text. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="576"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_item_attr_1a4dc2d65d49bf66f6eb82abeae3bdc2c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataViewItemAttr::SetColour</definition>
+        <argsstring>(const wxColour &amp;colour)</argsstring>
+        <name>SetColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Call this to indicate that the item shall be displayed with that colour. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="581"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_item_attr_1a4b97a2a572ed409ee487a5a01f550724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataViewItemAttr::SetItalic</definition>
+        <argsstring>(bool set)</argsstring>
+        <name>SetItalic</name>
+        <param>
+          <type>bool</type>
+          <declname>set</declname>
+        </param>
+        <briefdescription>
+<para>Call this to indicate that the item shall be displayed in italic text. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="586"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used to indicate to a <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> that a certain item (see <ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref>) has extra font attributes for its renderer. </para>    </briefdescription>
+    <detaileddescription>
+<para>For this, it is required to override <ref refid="classwx_data_view_model_1aa90d4fbc48f42f3c2565a3843dd4c71b" kindref="member">wxDataViewModel::GetAttr</ref>.</para><para>Attributes are currently only supported by wxDataViewTextRendererText.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="566" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="565" bodyend="587"/>
+    <listofallmembers>
+      <member refid="classwx_data_view_item_attr_1a77799bbfeb4a2d6d2b8dfe1eed63d6b8" prot="public" virt="non-virtual"><scope>wxDataViewItemAttr</scope><name>SetBold</name></member>
+      <member refid="classwx_data_view_item_attr_1a4dc2d65d49bf66f6eb82abeae3bdc2c1" prot="public" virt="non-virtual"><scope>wxDataViewItemAttr</scope><name>SetColour</name></member>
+      <member refid="classwx_data_view_item_attr_1a4b97a2a572ed409ee487a5a01f550724" prot="public" virt="non-virtual"><scope>wxDataViewItemAttr</scope><name>SetItalic</name></member>
+      <member refid="classwx_data_view_item_attr_1a730aee09cf5b3d45db8dcae8ffc48fde" prot="public" virt="non-virtual"><scope>wxDataViewItemAttr</scope><name>wxDataViewItemAttr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

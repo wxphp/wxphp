@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_translations_loader" kind="class" prot="public">
+    <compoundname>wxTranslationsLoader</compoundname>
+    <derivedcompoundref refid="classwx_file_translations_loader" prot="public" virt="non-virtual">wxFileTranslationsLoader</derivedcompoundref>
+    <derivedcompoundref refid="classwx_resource_translations_loader" prot="public" virt="non-virtual">wxResourceTranslationsLoader</derivedcompoundref>
+    <includes local="no">wx/translation.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_translations_loader_1ab5d87579eb5b0246a3290afdc288ef98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>wxTranslationsLoader::wxTranslationsLoader</definition>
+        <argsstring>()</argsstring>
+        <name>wxTranslationsLoader</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="257" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" bodystart="257" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_loader_1a7a7a55b049de7ecd7db63a613475a8ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_msg_catalog" kindref="compound">wxMsgCatalog</ref> *</type>
+        <definition>virtual wxMsgCatalog* wxTranslationsLoader::LoadCatalog</definition>
+        <argsstring>(const wxString &amp;domain, const wxString &amp;lang)=0</argsstring>
+        <name>LoadCatalog</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+<para>Called to load requested catalog. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the catalog is found, <ref refid="classwx_translations_loader_1a7a7a55b049de7ecd7db63a613475a8ee" kindref="member">LoadCatalog()</ref> should create <ref refid="classwx_msg_catalog" kindref="compound">wxMsgCatalog</ref> instance with its data and return it. The caller will take ownership of the catalog.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Domain to load. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lang</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Language to look for. This is &quot;canonical name&quot; (see <ref refid="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" kindref="member">wxLocale::GetCanonicalName()</ref>), i.e. ISO 639 code, possibly combined with country code or additional modifiers (e.g. &quot;fr&quot;, &quot;en_GB&quot; or &quot;ca@valencia&quot;).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Loaded catalog or NULL on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_translations_loader_1aa02efbe41b86a4b3b8bc551a323b42fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
+        <definition>virtual wxArrayString wxTranslationsLoader::GetAvailableTranslations</definition>
+        <argsstring>(const wxString &amp;domain) const =0</argsstring>
+        <name>GetAvailableTranslations</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Implements <ref refid="classwx_translations_1a2f88b45d68673e72324713142be95557" kindref="member">wxTranslations::GetAvailableTranslations()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="281"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstraction of translations discovery and loading. </para>    </briefdescription>
+    <detaileddescription>
+<para>This interface makes it possible to override wxWidgets&apos; default catalogs loading mechanism and load MO files from locations other than the filesystem (e.g. embed them in executable).</para><para>Implementations must implement the <ref refid="classwx_translations_loader_1a7a7a55b049de7ecd7db63a613475a8ee" kindref="member">LoadCatalog()</ref> method.</para><para><simplesect kind="see"><para><ref refid="classwx_file_translations_loader" kindref="compound">wxFileTranslationsLoader</ref>, <ref refid="classwx_resource_translations_loader" kindref="compound">wxResourceTranslationsLoader</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11107">
+        <label>wxFileTranslationsLoader</label>
+        <link refid="classwx_file_translations_loader"/>
+        <childnode refid="11106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11108">
+        <label>wxResourceTranslationsLoader</label>
+        <link refid="classwx_resource_translations_loader"/>
+        <childnode refid="11106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11106">
+        <label>wxTranslationsLoader</label>
+        <link refid="classwx_translations_loader"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="254" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" bodystart="253" bodyend="282"/>
+    <listofallmembers>
+      <member refid="classwx_translations_loader_1aa02efbe41b86a4b3b8bc551a323b42fb" prot="public" virt="pure-virtual"><scope>wxTranslationsLoader</scope><name>GetAvailableTranslations</name></member>
+      <member refid="classwx_translations_loader_1a7a7a55b049de7ecd7db63a613475a8ee" prot="public" virt="pure-virtual"><scope>wxTranslationsLoader</scope><name>LoadCatalog</name></member>
+      <member refid="classwx_translations_loader_1ab5d87579eb5b0246a3290afdc288ef98" prot="public" virt="non-virtual"><scope>wxTranslationsLoader</scope><name>wxTranslationsLoader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

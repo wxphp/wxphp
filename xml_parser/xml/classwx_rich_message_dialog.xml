@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_rich_message_dialog" kind="class" prot="public">
+    <compoundname>wxRichMessageDialog</compoundname>
+    <includes local="no">wx/richmsgdlg.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_rich_message_dialog_1aa154aa6915571036dc6c0e7cbfeba3be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRichMessageDialog::wxRichMessageDialog</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;message, const wxString &amp;caption=wxMessageBoxCaptionStr, long style=wxOK|wxCENTRE, const wxPoint &amp;pos=wxDefaultPosition)</argsstring>
+        <name>wxRichMessageDialog</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+          <defval>wxMessageBoxCaptionStr</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>style</declname>
+          <defval>wxOK|wxCENTRE</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+          <defval><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructor specifying the rich message dialog properties. </para>        </briefdescription>
+        <detaileddescription>
+<para>Works just like the constructor for <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_message_dialog_1aa382f6767ac0019cee3c6c914384dc77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichMessageDialog::ShowCheckBox</definition>
+        <argsstring>(const wxString &amp;checkBoxText, bool checked=false)</argsstring>
+        <name>ShowCheckBox</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>checkBoxText</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Shows a checkbox with a given label or hides it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checkBoxText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the parameter is non-empty a checkbox will be shown with that label, otherwise it will be hidden. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial state of the checkbox. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_message_dialog_1a28eb692d8aa85a99c1865b9ca8920057" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxRichMessageDialog::GetCheckBoxText</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCheckBoxText</name>
+        <briefdescription>
+<para>Retrieves the label for the checkbox. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The label for the checkbox, will be the empty string if no checkbox is used. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_message_dialog_1a10fc469a0b5d22041d0352646348754d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichMessageDialog::ShowDetailedText</definition>
+        <argsstring>(const wxString &amp;detailedText)</argsstring>
+        <name>ShowDetailedText</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>detailedText</declname>
+        </param>
+        <briefdescription>
+<para>Shows or hides a detailed text and an expander that is used to show or hide the detailed text. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>detailedText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The detailed text that can be expanded when the dialog is shown, if empty no detailed text will be used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_message_dialog_1a2e5ad4dabc7a9486c4134b13130c1571" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxRichMessageDialog::GetDetailedText</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDetailedText</name>
+        <briefdescription>
+<para>Retrieves the detailed text. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The detailed text or empty if detailed text is not used. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_message_dialog_1a72649d6bd600bbb7c09fb5b0d0d95291" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichMessageDialog::IsCheckBoxChecked</definition>
+        <argsstring>() const </argsstring>
+        <name>IsCheckBoxChecked</name>
+        <briefdescription>
+<para>Retrieves the state of the checkbox. </para>        </briefdescription>
+        <detaileddescription>
+<para>If this method is called before showing the dialog, the initial value of the checkbox, as set by <ref refid="classwx_rich_message_dialog_1aa382f6767ac0019cee3c6c914384dc77" kindref="member">ShowCheckBox()</ref> is used. If it is called after calling <ref refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" kindref="member">wxDialog::ShowModal()</ref>, the value set by the user is returned.</para><para><simplesect kind="return"><para>true if the checkbox is checked or false if not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_message_dialog_1a3d34a8f0e44933109fae02c81df5cf34" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxRichMessageDialog::ShowModal</definition>
+        <argsstring>()</argsstring>
+        <name>ShowModal</name>
+        <briefdescription>
+<para>Shows the dialog, returning one of wxID_OK, wxID_CANCEL, wxID_YES, wxID_NO. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_rich_message_dialog_1a72649d6bd600bbb7c09fb5b0d0d95291" kindref="member">IsCheckBoxChecked()</ref> can be called afterwards to retrieve the value of the check box if one was used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Extension of <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref> with additional functionality. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class adds the possibility of using a checkbox (that is especially useful for implementing the &quot;Don&apos;t ask me again&quot; kind of dialogs) and an extra explanatory text which is initially collapsed and not shown to the user but can be expanded to show more information.</para><para>Notice that currently the native dialog is used only under MSW when using Vista or later Windows version. Elsewhere, or for older versions of Windows, a generic implementation which is less familiar to the users is used. Because of this it&apos;s recommended to use this class only if you do need its extra functionality and use <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref> which does have native implementation under all platforms otherwise. However if you do need to put e.g. a checkbox in a dialog, you should definitely consider using this class instead of using your own custom dialog because it will have much better appearance at least under recent Windows versions.</para><para>To use this class, you need to create the dialog object and call <ref refid="classwx_rich_message_dialog_1aa382f6767ac0019cee3c6c914384dc77" kindref="member">ShowCheckBox()</ref> and/or <ref refid="classwx_rich_message_dialog_1a10fc469a0b5d22041d0352646348754d" kindref="member">ShowDetailedText()</ref> to configure its contents. Other than that, it is used in exactly the same way as <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref> and supports all the styles supported by it. In particular, <ref refid="classwx_rich_message_dialog_1a3d34a8f0e44933109fae02c81df5cf34" kindref="member">ShowModal()</ref> return value is the same as for <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref>. The only difference is that you need to use <ref refid="classwx_rich_message_dialog_1a72649d6bd600bbb7c09fb5b0d0d95291" kindref="member">IsCheckBoxChecked()</ref> to examine the checkbox value if you had called <ref refid="classwx_rich_message_dialog_1aa382f6767ac0019cee3c6c914384dc77" kindref="member">ShowCheckBox()</ref>.</para><para>Here is a simple example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::ShowDialog()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>...<sp/>shouldn</highlight><highlight class="stringliteral">&apos;t<sp/>show<sp/>this<sp/>dialog<sp/>again<sp/>...<sp/>)</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return;</highlight></codeline>
+<codeline><highlight class="stringliteral"></highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxRichMessageDialog<sp/>dlg(this,<sp/>&quot;Welcome<sp/>to<sp/>my<sp/>wonderful<sp/>program!&quot;);</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.ShowCheckBox(&quot;Don&apos;</highlight><highlight class="normal">t<sp/>show<sp/>welcome<sp/>dialog<sp/>again</highlight><highlight class="stringliteral">&quot;);</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.ShowModal();<sp/>//<sp/>return<sp/>value<sp/>ignored<sp/>as<sp/>we<sp/>have<sp/>&quot;</highlight><highlight class="normal">Ok</highlight><highlight class="stringliteral">&quot;<sp/>only<sp/>anyhow</highlight></codeline>
+<codeline><highlight class="stringliteral"></highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(<sp/>dlg.IsCheckBoxChecked()<sp/>)</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>make<sp/>sure<sp/>we<sp/>won&apos;t<sp/>show<sp/>it<sp/>again<sp/>the<sp/>next<sp/>time<sp/>...</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview__cmndlg_1overview_cmndlg_msg" kindref="member">wxMessageDialog Overview</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" bodystart="60" bodyend="131"/>
+    <listofallmembers>
+      <member refid="classwx_rich_message_dialog_1a28eb692d8aa85a99c1865b9ca8920057" prot="public" virt="non-virtual"><scope>wxRichMessageDialog</scope><name>GetCheckBoxText</name></member>
+      <member refid="classwx_rich_message_dialog_1a2e5ad4dabc7a9486c4134b13130c1571" prot="public" virt="non-virtual"><scope>wxRichMessageDialog</scope><name>GetDetailedText</name></member>
+      <member refid="classwx_rich_message_dialog_1a72649d6bd600bbb7c09fb5b0d0d95291" prot="public" virt="non-virtual"><scope>wxRichMessageDialog</scope><name>IsCheckBoxChecked</name></member>
+      <member refid="classwx_rich_message_dialog_1aa382f6767ac0019cee3c6c914384dc77" prot="public" virt="non-virtual"><scope>wxRichMessageDialog</scope><name>ShowCheckBox</name></member>
+      <member refid="classwx_rich_message_dialog_1a10fc469a0b5d22041d0352646348754d" prot="public" virt="non-virtual"><scope>wxRichMessageDialog</scope><name>ShowDetailedText</name></member>
+      <member refid="classwx_rich_message_dialog_1a3d34a8f0e44933109fae02c81df5cf34" prot="public" virt="virtual"><scope>wxRichMessageDialog</scope><name>ShowModal</name></member>
+      <member refid="classwx_rich_message_dialog_1aa154aa6915571036dc6c0e7cbfeba3be" prot="public" virt="non-virtual"><scope>wxRichMessageDialog</scope><name>wxRichMessageDialog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

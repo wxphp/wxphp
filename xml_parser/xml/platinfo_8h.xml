@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="platinfo_8h" kind="file">
+    <compoundname>platinfo.h</compoundname>
+    <innerclass refid="structwx_linux_distribution_info" prot="public">wxLinuxDistributionInfo</innerclass>
+    <innerclass refid="classwx_platform_info" prot="public">wxPlatformInfo</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" prot="public" static="no">
+        <name>wxOperatingSystemId</name>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda37e59b547f387feb0b6dc8dbd061cdcc" prot="public">
+          <name>wxOS_UNKNOWN</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>returned on error </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda9ce1508c1674f7d6b886e30c6dd1ec44" prot="public">
+          <name>wxOS_MAC_OS</name>
+          <initializer> 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+<para>Apple Mac OS 8/9/X with Mac paths. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda0163adee8ed46640ac979db8d4123601" prot="public">
+          <name>wxOS_MAC_OSX_DARWIN</name>
+          <initializer> 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+<para>Apple Mac OS X with Unix paths. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda4f66509baa2720b80e071c3570871dec" prot="public">
+          <name>wxOS_MAC</name>
+          <initializer> wxOS_MAC_OS|wxOS_MAC_OSX_DARWIN</initializer>
+          <briefdescription>
+<para>A combination of all <computeroutput>wxOS_MAC_*</computeroutput> values previously listed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda511ef24f79be175ea9e724bd40db7c99" prot="public">
+          <name>wxOS_WINDOWS_9X</name>
+          <initializer> 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+<para>Windows 9x family (95/98/ME). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda0a70b97d5d09cd90c13d85a3be837d72" prot="public">
+          <name>wxOS_WINDOWS_NT</name>
+          <initializer> 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+<para>Windows NT family (NT/2000/XP/Vista/7). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda1072e1d66534e81eb2914a4ec92af483" prot="public">
+          <name>wxOS_WINDOWS_MICRO</name>
+          <initializer> 1 &lt;&lt; 4</initializer>
+          <briefdescription>
+<para>MicroWindows. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda74f523ea86b3b39d347050aa4b2b6e8e" prot="public">
+          <name>wxOS_WINDOWS_CE</name>
+          <initializer> 1 &lt;&lt; 5</initializer>
+          <briefdescription>
+<para>Windows CE (Window Mobile). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fdaded2828e1f46da9179425ce8c0f47f03" prot="public">
+          <name>wxOS_WINDOWS</name>
+          <initializer> wxOS_WINDOWS_9X       |
+                    wxOS_WINDOWS_NT      |
+                    wxOS_WINDOWS_MICRO   |
+                    wxOS_WINDOWS_CE</initializer>
+          <briefdescription>
+<para>A combination of all <computeroutput>wxOS_WINDOWS_*</computeroutput> values previously listed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fdaa937088ecf56f964ea112f109851e52b" prot="public">
+          <name>wxOS_UNIX_LINUX</name>
+          <initializer> 1 &lt;&lt; 6</initializer>
+          <briefdescription>
+<para>Linux. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda4545daf28a87cc6f1472142c3a615fb4" prot="public">
+          <name>wxOS_UNIX_FREEBSD</name>
+          <initializer> 1 &lt;&lt; 7</initializer>
+          <briefdescription>
+<para>FreeBSD. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda9f4f4b9897e101c533dd6f2c59b0059c" prot="public">
+          <name>wxOS_UNIX_OPENBSD</name>
+          <initializer> 1 &lt;&lt; 8</initializer>
+          <briefdescription>
+<para>OpenBSD. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda65b4f7b0e7055d960f2447ef555f2dd5" prot="public">
+          <name>wxOS_UNIX_NETBSD</name>
+          <initializer> 1 &lt;&lt; 9</initializer>
+          <briefdescription>
+<para>NetBSD. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda79b79af564c6eb2f52bccabacb4a363a" prot="public">
+          <name>wxOS_UNIX_SOLARIS</name>
+          <initializer> 1 &lt;&lt; 10</initializer>
+          <briefdescription>
+<para>SunOS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fdab4f631e9f1259cea6116a0aa51a33da1" prot="public">
+          <name>wxOS_UNIX_AIX</name>
+          <initializer> 1 &lt;&lt; 11</initializer>
+          <briefdescription>
+<para>AIX. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda419dc0df71b1c708c28a87ceaef55ebc" prot="public">
+          <name>wxOS_UNIX_HPUX</name>
+          <initializer> 1 &lt;&lt; 12</initializer>
+          <briefdescription>
+<para>HP/UX. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda563c0278e0e7341bfb3b505fee8d3827" prot="public">
+          <name>wxOS_UNIX</name>
+          <initializer> wxOS_UNIX_LINUX     |
+                wxOS_UNIX_FREEBSD   |
+                wxOS_UNIX_OPENBSD   |
+                wxOS_UNIX_NETBSD    |
+                wxOS_UNIX_SOLARIS   |
+                wxOS_UNIX_AIX       |
+                wxOS_UNIX_HPUX</initializer>
+          <briefdescription>
+<para>A combination of all <computeroutput>wxOS_UNIX_*</computeroutput> values previously listed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda9ce15c0e96d0b30ab92c558310d3f086" prot="public">
+          <name>wxOS_DOS</name>
+          <initializer> 1 &lt;&lt; 15</initializer>
+          <briefdescription>
+<para>Microsoft DOS. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fda812e59799c1a161a70b8cbebb45af159" prot="public">
+          <name>wxOS_OS2</name>
+          <initializer> 1 &lt;&lt; 16</initializer>
+          <briefdescription>
+<para>OS/2. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The following are the operating systems which are recognized by wxWidgets and whose version can be detected at run-time. </para>        </briefdescription>
+        <detaileddescription>
+<para>The values of the constants are chosen so that they can be combined as flags; this allows to check for operating system families like e.g. <computeroutput>wxOS_MAC</computeroutput> and <computeroutput>wxOS_UNIX</computeroutput>.</para><para>Note that you can obtain more detailed informations about the current OS version in use by checking the major and minor version numbers returned by <ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref> or by <ref refid="classwx_platform_info_1ab95e9c7889ae224744cce280d84fe01a" kindref="member">wxPlatformInfo::GetOSMajorVersion()</ref>, <ref refid="classwx_platform_info_1aa9bc289303d4e13ad9f186d738e1d528" kindref="member">wxPlatformInfo::GetOSMinorVersion()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="22" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="enum" id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" prot="public" static="no">
+        <name>wxPortId</name>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba64bbe5e1aa09528aa5c7b3a835851104" prot="public">
+          <name>wxPORT_UNKNOWN</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>returned on error </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba38248c68c00e85f694ff4e2e52249e44" prot="public">
+          <name>wxPORT_BASE</name>
+          <initializer> 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+<para>wxBase, no native toolkit used </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba5ca5aae9db5c1df30a526e62f9f75539" prot="public">
+          <name>wxPORT_MSW</name>
+          <initializer> 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+<para>wxMSW, native toolkit is Windows API </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757bac0bede7642c05b5696bb07565935df1f" prot="public">
+          <name>wxPORT_MOTIF</name>
+          <initializer> 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+<para>wxMotif, using [Open]Motif or Lesstif </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba3172c70756db25c4d36e72d4caa6ee27" prot="public">
+          <name>wxPORT_GTK</name>
+          <initializer> 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+<para>wxGTK, using GTK+ 1.x, 2.x, GPE or Maemo </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757baa4506a0e59a94311f4fe1e978a4fd11e" prot="public">
+          <name>wxPORT_MGL</name>
+          <initializer> 1 &lt;&lt; 4</initializer>
+          <briefdescription>
+<para>wxMGL, using wxUniversal </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757baad25da0e67bfa8d79e569f0772e6de29" prot="public">
+          <name>wxPORT_X11</name>
+          <initializer> 1 &lt;&lt; 5</initializer>
+          <briefdescription>
+<para>wxX11, using wxUniversal </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757bada576bcb2049081bbb141abc28598bd5" prot="public">
+          <name>wxPORT_OS2</name>
+          <initializer> 1 &lt;&lt; 6</initializer>
+          <briefdescription>
+<para>wxOS2, using OS/2 Presentation Manager </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba4593db0a158d91759825dfe209568d95" prot="public">
+          <name>wxPORT_MAC</name>
+          <initializer> 1 &lt;&lt; 7</initializer>
+          <briefdescription>
+<para>wxMac, using Carbon or Classic Mac API </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba3e27ce45c3415973c8ef032d9d06024f" prot="public">
+          <name>wxPORT_COCOA</name>
+          <initializer> 1 &lt;&lt; 8</initializer>
+          <briefdescription>
+<para>wxCocoa, using Cocoa NextStep/Mac API </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba791f6ceb0243051814d1a6e85cdbd577" prot="public">
+          <name>wxPORT_WINCE</name>
+          <initializer> 1 &lt;&lt; 9</initializer>
+          <briefdescription>
+<para>wxWinCE, toolkit is WinCE SDK API </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba704658cdc4f7e75100add2147ad10a1b" prot="public">
+          <name>wxPORT_PALMOS</name>
+          <initializer> 1 &lt;&lt; 10</initializer>
+          <briefdescription>
+<para>wxPalmOS, toolkit is PalmOS API </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757ba18244a3980773d7bed125a950ee195e0" prot="public">
+          <name>wxPORT_DFB</name>
+          <initializer> 1 &lt;&lt; 11</initializer>
+          <briefdescription>
+<para>wxDFB, using wxUniversal </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The list of wxWidgets ports. </para>        </briefdescription>
+        <detaileddescription>
+<para>Some of them can be used with more than a single (native) toolkit; e.g. wxWinCE port sources can be used with smartphones, pocket PCs and handheld devices SDKs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="72" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="71" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="enum" id="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4c" prot="public" static="no">
+        <name>wxArchitecture</name>
+        <enumvalue id="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4cae7ac7377ceddffaaf8679b4b52846e40" prot="public">
+          <name>wxARCH_INVALID</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+<para>returned on error </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4ca00ced61a0348a34c2e634cbd2279f9e7" prot="public">
+          <name>wxARCH_32</name>
+          <briefdescription>
+<para>32 bit </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4ca82b5599fda0c55997b6c7c098dad3076" prot="public">
+          <name>wxARCH_64</name>
+          <briefdescription>
+<para>64 bit </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4ca0996e4c4818e45a987a6926f9b8df504" prot="public">
+          <name>wxARCH_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The architecture of the operating system (regardless of the build environment of wxWidgets library - see <ref refid="group__group__funcmacro__networkuseros_1ga56083f0f3875e40b13aa6094e283584e" kindref="member">wxIsPlatform64Bit()</ref> documentation for more info). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="97" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="96" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="enum" id="platinfo_8h_1a604702957b3c219643e1c989766f7047" prot="public" static="no">
+        <name>wxEndianness</name>
+        <enumvalue id="platinfo_8h_1a604702957b3c219643e1c989766f7047a456ce2a2b1b546b606895acc17694e67" prot="public">
+          <name>wxENDIAN_INVALID</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+<para>returned on error </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a604702957b3c219643e1c989766f7047a8910b0fee584efcb3d74d0f1f45005ec" prot="public">
+          <name>wxENDIAN_BIG</name>
+          <briefdescription>
+<para>4321 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a604702957b3c219643e1c989766f7047ab0e4f29f23c7e6266ae7e19de2904c74" prot="public">
+          <name>wxENDIAN_LITTLE</name>
+          <briefdescription>
+<para>1234 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a604702957b3c219643e1c989766f7047a4f61dbc4d1c734047bd6ad18c016f79b" prot="public">
+          <name>wxENDIAN_PDP</name>
+          <briefdescription>
+<para>3412 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="platinfo_8h_1a604702957b3c219643e1c989766f7047af5250e1c2f9cef8012aa17a8ed8a229e" prot="public">
+          <name>wxENDIAN_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The endian-ness of the machine. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="110" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h"/>
+  </compounddef>
+</doxygen>

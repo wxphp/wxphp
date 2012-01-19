@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dataview_8h" kind="file">
+    <compoundname>dataview.h</compoundname>
+    <innerclass refid="classwx_data_view_model" prot="public">wxDataViewModel</innerclass>
+    <innerclass refid="classwx_data_view_list_model" prot="public">wxDataViewListModel</innerclass>
+    <innerclass refid="classwx_data_view_index_list_model" prot="public">wxDataViewIndexListModel</innerclass>
+    <innerclass refid="classwx_data_view_virtual_list_model" prot="public">wxDataViewVirtualListModel</innerclass>
+    <innerclass refid="classwx_data_view_item_attr" prot="public">wxDataViewItemAttr</innerclass>
+    <innerclass refid="classwx_data_view_item" prot="public">wxDataViewItem</innerclass>
+    <innerclass refid="classwx_data_view_ctrl" prot="public">wxDataViewCtrl</innerclass>
+    <innerclass refid="classwx_data_view_model_notifier" prot="public">wxDataViewModelNotifier</innerclass>
+    <innerclass refid="classwx_data_view_renderer" prot="public">wxDataViewRenderer</innerclass>
+    <innerclass refid="classwx_data_view_text_renderer" prot="public">wxDataViewTextRenderer</innerclass>
+    <innerclass refid="classwx_data_view_icon_text_renderer" prot="public">wxDataViewIconTextRenderer</innerclass>
+    <innerclass refid="classwx_data_view_progress_renderer" prot="public">wxDataViewProgressRenderer</innerclass>
+    <innerclass refid="classwx_data_view_spin_renderer" prot="public">wxDataViewSpinRenderer</innerclass>
+    <innerclass refid="classwx_data_view_toggle_renderer" prot="public">wxDataViewToggleRenderer</innerclass>
+    <innerclass refid="classwx_data_view_choice_renderer" prot="public">wxDataViewChoiceRenderer</innerclass>
+    <innerclass refid="classwx_data_view_date_renderer" prot="public">wxDataViewDateRenderer</innerclass>
+    <innerclass refid="classwx_data_view_custom_renderer" prot="public">wxDataViewCustomRenderer</innerclass>
+    <innerclass refid="classwx_data_view_bitmap_renderer" prot="public">wxDataViewBitmapRenderer</innerclass>
+    <innerclass refid="classwx_data_view_column" prot="public">wxDataViewColumn</innerclass>
+    <innerclass refid="classwx_data_view_list_ctrl" prot="public">wxDataViewListCtrl</innerclass>
+    <innerclass refid="classwx_data_view_tree_ctrl" prot="public">wxDataViewTreeCtrl</innerclass>
+    <innerclass refid="classwx_data_view_list_store" prot="public">wxDataViewListStore</innerclass>
+    <innerclass refid="classwx_data_view_tree_store" prot="public">wxDataViewTreeStore</innerclass>
+    <innerclass refid="classwx_data_view_icon_text" prot="public">wxDataViewIconText</innerclass>
+    <innerclass refid="classwx_data_view_event" prot="public">wxDataViewEvent</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dataview_8h_1a8dc9a6d10592e37e6c117a92729f205b" prot="public" static="no">
+        <name>wxDVC_DEFAULT_RENDERER_SIZE</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="639" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1af83b7e09f249047a58f92d705936736b" prot="public" static="no">
+        <name>wxDVC_DEFAULT_WIDTH</name>
+        <initializer>80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="642" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1aa168b03bd1e4e0cc16f210ca9ed15a84" prot="public" static="no">
+        <name>wxDVC_TOGGLE_DEFAULT_WIDTH</name>
+        <initializer>30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="645" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1add69dc9e5372e241bd1ee7b82a878301" prot="public" static="no">
+        <name>wxDVC_DEFAULT_MINWIDTH</name>
+        <initializer>30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="648" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1a77ad20c54ebb9682cd3cbd1f7c90affe" prot="public" static="no">
+        <name>wxDVR_DEFAULT_ALIGNMENT</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="652" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1a075415db603ace41f4473303993cbc6b" prot="public" static="no">
+        <name>wxDV_SINGLE</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="654" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1aceddbd4f590643b3ac64c8c4df2160de" prot="public" static="no">
+        <name>wxDV_MULTIPLE</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="655" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1a11a8b6d5101172dc8acea83252cf9afd" prot="public" static="no">
+        <name>wxDV_NO_HEADER</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="657" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="657" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1ad8cd4bc7d60556cfef1d80d0601d0873" prot="public" static="no">
+        <name>wxDV_HORIZ_RULES</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1a7253326651fe62affaea492a1028e20d" prot="public" static="no">
+        <name>wxDV_VERT_RULES</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="659" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1ad5b809360b4fcaf1eb5ad286b5b69981" prot="public" static="no">
+        <name>wxDV_ROW_LINES</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="661" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="661" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dataview_8h_1aacd67b2eb820758743de2aa3ec434e53" prot="public" static="no">
+        <name>wxDV_VARIABLE_LINE_HEIGHT</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="662" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="662" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dataview_8h_1a82ea89fa957cf47b29e59799429bda7e" prot="public" static="no">
+        <name>wxDataViewCellMode</name>
+        <enumvalue id="dataview_8h_1a82ea89fa957cf47b29e59799429bda7eade831fcdedc84d6ed5a03f8548f777e9" prot="public">
+          <name>wxDATAVIEW_CELL_INERT</name>
+          <briefdescription>
+<para>The cell only displays information and cannot be manipulated or otherwise interacted with in any way. </para>          </briefdescription>
+          <detaileddescription>
+<para>Note that this doesn&apos;t mean that the row being drawn can&apos;t be selected, just that a particular element of it cannot be individually modified. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dataview_8h_1a82ea89fa957cf47b29e59799429bda7ea2c376841929158b551b6563868451cc8" prot="public">
+          <name>wxDATAVIEW_CELL_ACTIVATABLE</name>
+          <briefdescription>
+<para>Indicates that the cell can be <emphasis>activated</emphasis> by clicking it or using keyboard. </para>          </briefdescription>
+          <detaileddescription>
+<para>Activating a cell is an alternative to showing inline editor when the value can be edited in a simple way that doesn&apos;t warrant full editor control. The most typical use of cell activation is toggling the checkbox in <ref refid="classwx_data_view_toggle_renderer" kindref="compound">wxDataViewToggleRenderer</ref>; others would be e.g. an embedded volume slider or a five-star rating column.</para><para>The exact means of activating a cell are platform-dependent, but they are usually similar to those used for inline editing of values. Typically, a cell would be activated by Space or Enter keys or by left mouse click.</para><para><simplesect kind="note"><para>Do not confuse this with item activation in <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> and the wxEVT_COMMAND_DATAVIEW_ITEM_ACTIVATED event. That one is used for activating the item (or, to put it differently, the entire row) similarly to analogous messages in <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> and <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>, and the effect differs (play a song, open a file etc.). Cell activation, on the other hand, is all about interacting with the individual cell.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_data_view_custom_renderer_1a76e85467c89adae6612236d803a552fc" kindref="member">wxDataViewCustomRenderer::ActivateCell()</ref> </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dataview_8h_1a82ea89fa957cf47b29e59799429bda7ea51b9b1db1a9ec58a0d7e9d6584289530" prot="public">
+          <name>wxDATAVIEW_CELL_EDITABLE</name>
+          <briefdescription>
+<para>Indicates that the user can edit the data in-place in an inline editor control that will show up when the user wants to edit the cell. </para>          </briefdescription>
+          <detaileddescription>
+<para>A typical example of this behaviour is changing the filename in a file managers.</para><para>Editing is typically triggered by slowly double-clicking the cell or by a platform-dependent keyboard shortcut (F2 is typical on Windows, Space and/or Enter is common elsewhere and supported on Windows too).</para><para><simplesect kind="see"><para><ref refid="classwx_data_view_custom_renderer_1a4fb670400e9c1a430a6d28231a3c6d4f" kindref="member">wxDataViewCustomRenderer::CreateEditorCtrl()</ref> </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The mode of a data-view cell; see <ref refid="classwx_data_view_renderer" kindref="compound">wxDataViewRenderer</ref> for more info. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1338" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1337" bodyend="1389"/>
+      </memberdef>
+      <memberdef kind="enum" id="dataview_8h_1ac165875cd54c065f2aebcc7cd795ff6e" prot="public" static="no">
+        <name>wxDataViewCellRenderState</name>
+        <enumvalue id="dataview_8h_1ac165875cd54c065f2aebcc7cd795ff6ea901ff1cb18fa421b426fa3398a3bc468" prot="public">
+          <name>wxDATAVIEW_CELL_SELECTED</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dataview_8h_1ac165875cd54c065f2aebcc7cd795ff6eab5e63e28214e2850d175f11a2c7cf6d8" prot="public">
+          <name>wxDATAVIEW_CELL_PRELIT</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dataview_8h_1ac165875cd54c065f2aebcc7cd795ff6ea2a96a1f09f25ea96cb373aa494c895a6" prot="public">
+          <name>wxDATAVIEW_CELL_INSENSITIVE</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dataview_8h_1ac165875cd54c065f2aebcc7cd795ff6ea51813c4f6b46ee5f9031ed2ad40fff9a" prot="public">
+          <name>wxDATAVIEW_CELL_FOCUSED</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The values of this enum controls how a <ref refid="classwx_data_view_renderer" kindref="compound">wxDataViewRenderer</ref> should display its contents in a cell. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1396" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1395" bodyend="1401"/>
+      </memberdef>
+      <memberdef kind="enum" id="dataview_8h_1a156305189c948da3fa8fa0268d9774f9" prot="public" static="no">
+        <name>wxDataViewColumnFlags</name>
+        <enumvalue id="dataview_8h_1a156305189c948da3fa8fa0268d9774f9ac590d7a142905fffb2be2bffa6886d0e" prot="public">
+          <name>wxDATAVIEW_COL_RESIZABLE</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dataview_8h_1a156305189c948da3fa8fa0268d9774f9ae1a7946f401d393c6eaa335482619504" prot="public">
+          <name>wxDATAVIEW_COL_SORTABLE</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dataview_8h_1a156305189c948da3fa8fa0268d9774f9acb2e005db80b272dd4ba64a469f71541" prot="public">
+          <name>wxDATAVIEW_COL_REORDERABLE</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dataview_8h_1a156305189c948da3fa8fa0268d9774f9aa5a46c5e8190a25c3bc3e14bfad20810" prot="public">
+          <name>wxDATAVIEW_COL_HIDDEN</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The flags used by <ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can be combined together. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1930" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1929" bodyend="1935"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dataview_8h_1a46b9d972e519848e8bf997a54574f363" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_SELECTION_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_SELECTION_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="666" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="666" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a1b7039f39f9298e3a7ad70d09aee6657" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_ACTIVATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_ACTIVATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="668" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a2cbdc1d81b3ad03fea634715e581c20f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_COLLAPSING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_COLLAPSING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="669" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1aa5fc64d7050cc3c4c3664528a96a67e3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_COLLAPSED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_COLLAPSED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="670" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1ac47619f9b5b29071fdbd3a6958817b4d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_EXPANDING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_EXPANDING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="671" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="671" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a703104aa71ac0eedaabbc2145d88d681" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_EXPANDED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_EXPANDED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="672" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="672" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1abc257b056d241eb57b6abadf68e4e4cd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_START_EDITING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_START_EDITING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="673" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a99343f534abaff4ef0534c578182fa3b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_EDITING_STARTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_EDITING_STARTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="674" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1af091e33ef1a85393af309a4aab4e9f5c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_EDITING_DONE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_EDITING_DONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="675" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a6f4e755bc3384c416a56dcc392774986" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_VALUE_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_VALUE_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="676" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1aebbf3e6559b2e436d832be7bbbfe1106" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_CONTEXT_MENU</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_CONTEXT_MENU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="678" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a2eea2002f949432eb38fb1cec2e96e69" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_COLUMN_HEADER_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_COLUMN_HEADER_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="680" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1ad86749180ed3a98458348eda6ade8f53" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_COLUMN_HEADER_RIGHT_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_COLUMN_HEADER_RIGHT_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="681" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="681" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a3898581281b3c2804976ab287bd1de47" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_COLUMN_SORTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_COLUMN_SORTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="682" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="682" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a3e938fdcc012e53f3ff27d393d8a58ea" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_COLUMN_REORDERED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_COLUMN_REORDERED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="683" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="683" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1a90a3b154bfdb827bf5e82e0bc285c9e8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_CACHE_HINT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_CACHE_HINT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="684" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="684" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1aee4f85a4533c810282e5a831738976be" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_BEGIN_DRAG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_BEGIN_DRAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="686" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="686" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1ab06b6817c66a319c737c447392b83b74" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_DROP_POSSIBLE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_DROP_POSSIBLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="687" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="687" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dataview_8h_1ad07bd5e73afb2af6e29feaa0a151cc93" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_DATAVIEW_ITEM_DROP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_DATAVIEW_ITEM_DROP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="688" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="688" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h"/>
+  </compounddef>
+</doxygen>

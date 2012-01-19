@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="treebase_8h" kind="file">
+    <compoundname>treebase.h</compoundname>
+    <innerclass refid="classwx_tree_item_id" prot="public">wxTreeItemId</innerclass>
+    <innerclass refid="classwx_tree_item_data" prot="public">wxTreeItemData</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="treebase_8h_1a61d3d0f9fa2ce703a3cb216f617dd964" prot="public" static="no">
+        <name>wxTreeItemIcon</name>
+        <enumvalue id="treebase_8h_1a61d3d0f9fa2ce703a3cb216f617dd964ae7af51423ccd60119ad2ae3f158f0c19" prot="public">
+          <name>wxTreeItemIcon_Normal</name>
+          <briefdescription>
+<para>To get/set the item image for when the item is <bold>not</bold> selected and <bold>not</bold> expanded. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="treebase_8h_1a61d3d0f9fa2ce703a3cb216f617dd964ad75a00cb9f2c06164b60048ebd80ac8e" prot="public">
+          <name>wxTreeItemIcon_Selected</name>
+          <briefdescription>
+<para>To get/set the item image for when the item is <bold>selected</bold> and <bold>not</bold> expanded. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="treebase_8h_1a61d3d0f9fa2ce703a3cb216f617dd964a272dc4e7bb41739dcc29d270848a6e1b" prot="public">
+          <name>wxTreeItemIcon_Expanded</name>
+          <briefdescription>
+<para>To get/set the item image for when the item is <bold>not</bold> selected and <bold>expanded</bold>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="treebase_8h_1a61d3d0f9fa2ce703a3cb216f617dd964aa47ea76e347bfe5a101119b3d7a3dec5" prot="public">
+          <name>wxTreeItemIcon_SelectedExpanded</name>
+          <briefdescription>
+<para>To get/set the item image for when the item is <bold>selected</bold> and <bold>expanded</bold>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="treebase_8h_1a61d3d0f9fa2ce703a3cb216f617dd964a3fbe90050a36befcfb62149914b60697" prot="public">
+          <name>wxTreeItemIcon_Max</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Indicates which type to associate an image with a <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> item. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl_1a44a94930420afe792e616a0127678ac0" kindref="member">wxTreeCtrl::GetItemImage()</ref>, <ref refid="classwx_tree_ctrl_1aab11b22f08ca5dd75919d8cbf3e902ff" kindref="member">wxTreeCtrl::SetItemImage()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" line="118" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" bodystart="117" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h"/>
+  </compounddef>
+</doxygen>

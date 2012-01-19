@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="fdrepdlg_8h" kind="file">
+    <compoundname>fdrepdlg.h</compoundname>
+    <innerclass refid="classwx_find_replace_data" prot="public">wxFindReplaceData</innerclass>
+    <innerclass refid="classwx_find_replace_dialog" prot="public">wxFindReplaceDialog</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5" prot="public" static="no">
+        <name>wxFindReplaceFlags</name>
+        <enumvalue id="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5aa63c8e1e42268d0873dfd207fdeca024" prot="public">
+          <name>wxFR_DOWN</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>downward search/replace selected (otherwise - upwards) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5a17e19bec79be051126e1a2377f54bbde" prot="public">
+          <name>wxFR_WHOLEWORD</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>whole word search/replace selected </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5abcf9a0f0266a762b156e40965904ca74" prot="public">
+          <name>wxFR_MATCHCASE</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+<para>case sensitive search/replace selected (otherwise - case insensitive) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>See wxFindDialogEvent::GetFlags(). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" bodystart="13" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="fdrepdlg_8h_1af7c50d2e563bacf8d46084c1aa78a388" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5" kindref="member">wxFindReplaceFlags</ref></type>
+        <definition>enum wxFindReplaceFlags
+     wxFR_REPLACEDIALOG</definition>
+        <argsstring></argsstring>
+        <name>wxFR_REPLACEDIALOG</name>
+        <briefdescription>
+<para>See wxFindDialogEvent::GetFlags(). </para>        </briefdescription>
+        <detaileddescription>
+<para>These flags can be specified in <ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref> ctor or Create(): replace dialog (otherwise find dialog) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="32"/>
+      </memberdef>
+      <memberdef kind="variable" id="fdrepdlg_8h_1a64fea815af61745bff7e388a1a1d03e0" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5" kindref="member">wxFindReplaceFlags</ref></type>
+        <definition>enum wxFindReplaceFlags
+     wxFR_NOUPDOWN</definition>
+        <argsstring></argsstring>
+        <name>wxFR_NOUPDOWN</name>
+        <briefdescription>
+<para>don&apos;t allow changing the search direction </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="35"/>
+      </memberdef>
+      <memberdef kind="variable" id="fdrepdlg_8h_1a4efe2d9c8b0bf1254736627fec23bfb4" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5" kindref="member">wxFindReplaceFlags</ref></type>
+        <definition>enum wxFindReplaceFlags
+     wxFR_NOMATCHCASE</definition>
+        <argsstring></argsstring>
+        <name>wxFR_NOMATCHCASE</name>
+        <briefdescription>
+<para>don&apos;t allow case sensitive searching </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="38"/>
+      </memberdef>
+      <memberdef kind="variable" id="fdrepdlg_8h_1af08c5c5e33850261f6ffb8827208f1b4" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="fdrepdlg_8h_1ad68c78e0d022740326233196fbf2d6a5" kindref="member">wxFindReplaceFlags</ref></type>
+        <definition>enum wxFindReplaceFlags
+     wxFR_NOWHOLEWORD</definition>
+        <argsstring></argsstring>
+        <name>wxFR_NOWHOLEWORD</name>
+        <briefdescription>
+<para>don&apos;t allow whole word searching </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h"/>
+  </compounddef>
+</doxygen>

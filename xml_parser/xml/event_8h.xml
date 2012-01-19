@@ -1,0 +1,2116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="event_8h" kind="file">
+    <compoundname>event.h</compoundname>
+    <innerclass refid="classwx_event" prot="public">wxEvent</innerclass>
+    <innerclass refid="classwx_event_blocker" prot="public">wxEventBlocker</innerclass>
+    <innerclass refid="classwx_propagation_disabler" prot="public">wxPropagationDisabler</innerclass>
+    <innerclass refid="classwx_propagate_once" prot="public">wxPropagateOnce</innerclass>
+    <innerclass refid="classwx_evt_handler" prot="public">wxEvtHandler</innerclass>
+    <innerclass refid="classwx_key_event" prot="public">wxKeyEvent</innerclass>
+    <innerclass refid="classwx_joystick_event" prot="public">wxJoystickEvent</innerclass>
+    <innerclass refid="classwx_scroll_win_event" prot="public">wxScrollWinEvent</innerclass>
+    <innerclass refid="classwx_sys_colour_changed_event" prot="public">wxSysColourChangedEvent</innerclass>
+    <innerclass refid="classwx_window_create_event" prot="public">wxWindowCreateEvent</innerclass>
+    <innerclass refid="classwx_paint_event" prot="public">wxPaintEvent</innerclass>
+    <innerclass refid="classwx_maximize_event" prot="public">wxMaximizeEvent</innerclass>
+    <innerclass refid="classwx_update_u_i_event" prot="public">wxUpdateUIEvent</innerclass>
+    <innerclass refid="classwx_clipboard_text_event" prot="public">wxClipboardTextEvent</innerclass>
+    <innerclass refid="classwx_mouse_event" prot="public">wxMouseEvent</innerclass>
+    <innerclass refid="classwx_drop_files_event" prot="public">wxDropFilesEvent</innerclass>
+    <innerclass refid="classwx_command_event" prot="public">wxCommandEvent</innerclass>
+    <innerclass refid="classwx_activate_event" prot="public">wxActivateEvent</innerclass>
+    <innerclass refid="classwx_context_menu_event" prot="public">wxContextMenuEvent</innerclass>
+    <innerclass refid="classwx_erase_event" prot="public">wxEraseEvent</innerclass>
+    <innerclass refid="classwx_focus_event" prot="public">wxFocusEvent</innerclass>
+    <innerclass refid="classwx_child_focus_event" prot="public">wxChildFocusEvent</innerclass>
+    <innerclass refid="classwx_mouse_capture_lost_event" prot="public">wxMouseCaptureLostEvent</innerclass>
+    <innerclass refid="classwx_display_changed_event" prot="public">wxDisplayChangedEvent</innerclass>
+    <innerclass refid="classwx_palette_changed_event" prot="public">wxPaletteChangedEvent</innerclass>
+    <innerclass refid="classwx_query_new_palette_event" prot="public">wxQueryNewPaletteEvent</innerclass>
+    <innerclass refid="classwx_notify_event" prot="public">wxNotifyEvent</innerclass>
+    <innerclass refid="classwx_thread_event" prot="public">wxThreadEvent</innerclass>
+    <innerclass refid="classwx_help_event" prot="public">wxHelpEvent</innerclass>
+    <innerclass refid="classwx_scroll_event" prot="public">wxScrollEvent</innerclass>
+    <innerclass refid="classwx_idle_event" prot="public">wxIdleEvent</innerclass>
+    <innerclass refid="classwx_init_dialog_event" prot="public">wxInitDialogEvent</innerclass>
+    <innerclass refid="classwx_window_destroy_event" prot="public">wxWindowDestroyEvent</innerclass>
+    <innerclass refid="classwx_navigation_key_event" prot="public">wxNavigationKeyEvent</innerclass>
+    <innerclass refid="classwx_mouse_capture_changed_event" prot="public">wxMouseCaptureChangedEvent</innerclass>
+    <innerclass refid="classwx_close_event" prot="public">wxCloseEvent</innerclass>
+    <innerclass refid="classwx_menu_event" prot="public">wxMenuEvent</innerclass>
+    <innerclass refid="classwx_show_event" prot="public">wxShowEvent</innerclass>
+    <innerclass refid="classwx_iconize_event" prot="public">wxIconizeEvent</innerclass>
+    <innerclass refid="classwx_move_event" prot="public">wxMoveEvent</innerclass>
+    <innerclass refid="classwx_size_event" prot="public">wxSizeEvent</innerclass>
+    <innerclass refid="classwx_set_cursor_event" prot="public">wxSetCursorEvent</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group__funcmacro__events_1ga09ec1d095bee3085c1cb31459b46bc00" prot="public" static="no">
+        <name>wxDEFINE_EVENT</name>
+        <param><defname>name</defname></param>
+        <param><defname>cls</defname></param>
+        <initializer>const wxEventTypeTag&lt; cls &gt; name(wxNewEventType())</initializer>
+        <briefdescription>
+<para>Define a new event type associated with the specified event class. </para>        </briefdescription>
+        <detaileddescription>
+<para>This macro defines a new unique event type <emphasis>name</emphasis> associated with the event class <emphasis>cls</emphasis>.</para><para>For example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga09ec1d095bee3085c1cb31459b46bc00" kindref="member" tooltip="Define a new event type associated with the specified event class.">wxDEFINE_EVENT</ref>(MY_COMMAND_EVENT,<sp/><ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyCustomEvent<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref><sp/>{<sp/>...<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga09ec1d095bee3085c1cb31459b46bc00" kindref="member" tooltip="Define a new event type associated with the specified event class.">wxDEFINE_EVENT</ref>(MY_CUSTOM_EVENT,<sp/>MyCustomEvent);</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__events_1ga767b12d37f7370bc5f6b3d62340f3ef8" kindref="member">wxDECLARE_EVENT()</ref>, <ref refid="overview__events_1overview_events_custom" kindref="member">Custom Event Summary</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4196" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1ga767b12d37f7370bc5f6b3d62340f3ef8" prot="public" static="no">
+        <name>wxDECLARE_EVENT</name>
+        <param><defname>name</defname></param>
+        <param><defname>cls</defname></param>
+        <initializer>wxDECLARE_EXPORTED_EVENT(wxEMPTY_PARAMETER_VALUE, name, cls)</initializer>
+        <briefdescription>
+<para>Declares a custom event type. </para>        </briefdescription>
+        <detaileddescription>
+<para>This macro declares a variable called <emphasis>name</emphasis> which must be defined elsewhere using <ref refid="group__group__funcmacro__events_1ga09ec1d095bee3085c1cb31459b46bc00" kindref="member">wxDEFINE_EVENT()</ref>.</para><para>The class <emphasis>cls</emphasis> must be the wxEvent-derived class associated with the events of this type and its full declaration must be visible from the point of use of this macro.</para><para>For example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga767b12d37f7370bc5f6b3d62340f3ef8" kindref="member" tooltip="Declares a custom event type.">wxDECLARE_EVENT</ref>(MY_COMMAND_EVENT,<sp/><ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyCustomEvent<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref><sp/>{<sp/>...<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga767b12d37f7370bc5f6b3d62340f3ef8" kindref="member" tooltip="Declares a custom event type.">wxDECLARE_EVENT</ref>(MY_CUSTOM_EVENT,<sp/>MyCustomEvent);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1gad06be42e4272f402b789f3089783656a" prot="public" static="no">
+        <name>wxDECLARE_EXPORTED_EVENT</name>
+        <param><defname>expdecl</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>cls</defname></param>
+        <initializer>extern const expdecl wxEventTypeTag&lt; cls &gt; name;</initializer>
+        <briefdescription>
+<para>Variant of <ref refid="group__group__funcmacro__events_1ga767b12d37f7370bc5f6b3d62340f3ef8" kindref="member">wxDECLARE_EVENT()</ref> used for event types defined inside a shared library. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is mostly used by wxWidgets internally, e.g. <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1gad06be42e4272f402b789f3089783656a" kindref="member" tooltip="Variant of wxDECLARE_EVENT() used for event types defined inside a shared library...">wxDECLARE_EXPORTED_EVENT</ref>(WXDLLIMPEXP_CORE,<sp/><ref refid="group__group__funcmacro__events_1gad4219768fc12379d138fc7dbba84118a" kindref="member">wxEVT_COMMAND_BUTTON_CLICKED</ref>,<sp/><ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4229" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1gaca944d76c68b31cf44fb62f25642ad00" prot="public" static="no">
+        <name>wxEVENT_HANDLER_CAST</name>
+        <param><defname>functype</defname></param>
+        <param><defname>func</defname></param>
+        <initializer>(&amp;func)</initializer>
+        <briefdescription>
+<para>Helper macro for definition of custom event table macros. </para>        </briefdescription>
+        <detaileddescription>
+<para>This macro must only be used if wxEVENTS_COMPATIBILITY_2_8 is 1, otherwise it is better and more clear to just use the address of the function directly as this is all this macro does in this case. However it needs to explicitly cast <emphasis>func</emphasis> to <emphasis>functype</emphasis>, which is the type of <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> member function taking the custom event argument when wxEVENTS_COMPATIBILITY_2_8 is 0.</para><para>See wx__DECLARE_EVT0 for an example of use.</para><para><simplesect kind="see"><para><ref refid="overview__events_1overview_events_custom_ownclass" kindref="member">Defining Your Own Event Class</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4245" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1gaee448cacb63b838872c78f553c07651e" prot="public" static="no">
+        <name>wx__DECLARE_EVT1</name>
+        <param><defname>evt</defname></param>
+        <param><defname>id</defname></param>
+        <param><defname>fn</defname></param>
+        <initializer>wx__DECLARE_EVT2(evt, id, wxID_ANY, fn)</initializer>
+        <briefdescription>
+<para>This macro is used to define event table macros for handling custom events. </para>        </briefdescription>
+        <detaileddescription>
+<para>Example of use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyEvent<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref><sp/>{<sp/>...<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>note<sp/>that<sp/>this<sp/>is<sp/>not<sp/>necessary<sp/>unless<sp/>using<sp/>old<sp/>compilers:<sp/>for<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reasonably<sp/>new<sp/>ones<sp/>just<sp/>use<sp/>&amp;func<sp/>instead<sp/>of<sp/>MyEventHandler(func)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(<ref refid="classwx_evt_handler" kindref="compound" tooltip="A class that can handle events from the windowing system.">wxEvtHandler</ref>::*MyEventFunction)(MyEvent&amp;);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>MyEventHandler(func)<sp/>wxEVENT_HANDLER_CAST(MyEventFunction,<sp/>func)</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga09ec1d095bee3085c1cb31459b46bc00" kindref="member" tooltip="Define a new event type associated with the specified event class.">wxDEFINE_EVENT</ref>(MY_EVENT_TYPE,<sp/>MyEvent);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>EVT_MY(id,<sp/>func)<sp/>\</highlight></codeline>
+<codeline><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wx__DECLARE_EVT1(MY_EVENT_TYPE,<sp/>id,<sp/>MyEventHandler(func))</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" kindref="member" tooltip="Use this macro in a source file to start listing static event handlers for a specific...">wxBEGIN_EVENT_TABLE</ref>(MyFrame,<sp/><ref refid="classwx_frame" kindref="compound" tooltip="A frame is a window whose size and position can (usually) be changed by the user...">wxFrame</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVT_MY(wxID_ANY,<sp/>MyFrame::OnMyEvent)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" kindref="member" tooltip="Use this macro in a source file to end listing static event handlers for a specific...">wxEND_EVENT_TABLE</ref>()</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event type to handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of events to handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler method. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4280" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1ga369f078d0729212e294fc49c0fe6cdbd" prot="public" static="no">
+        <name>wx__DECLARE_EVT2</name>
+        <param><defname>evt</defname></param>
+        <param><defname>id1</defname></param>
+        <param><defname>id2</defname></param>
+        <param><defname>fn</defname></param>
+        <initializer>DECLARE_EVENT_TABLE_ENTRY(evt, id1, id2, fn, NULL),</initializer>
+        <briefdescription>
+<para>Generalized version of the <ref refid="group__group__funcmacro__events_1gaee448cacb63b838872c78f553c07651e" kindref="member">wx__DECLARE_EVT1()</ref> macro taking a range of IDs instead of a single one. </para>        </briefdescription>
+        <detaileddescription>
+<para>Argument <emphasis>id1</emphasis> is the first identifier of the range, <emphasis>id2</emphasis> is the second identifier of the range. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4289" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1ga2c552f7107a3dfcafbc287bc873c3cad" prot="public" static="no">
+        <name>wx__DECLARE_EVT0</name>
+        <param><defname>evt</defname></param>
+        <param><defname>fn</defname></param>
+        <initializer>wx__DECLARE_EVT1(evt, wxID_ANY, fn)</initializer>
+        <briefdescription>
+<para>Simplified version of the <ref refid="group__group__funcmacro__events_1gaee448cacb63b838872c78f553c07651e" kindref="member">wx__DECLARE_EVT1()</ref> macro, to be used when the event type must be handled regardless of the ID associated with the specific event instances. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4297" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1gab6eca03fad44ec10b75d3cb82e9219e3" prot="public" static="no">
+        <name>wxDECLARE_EVENT_TABLE</name>
+        <param></param>
+        <briefdescription>
+<para>Use this macro inside a class declaration to declare a <emphasis>static</emphasis> event table for that class. </para>        </briefdescription>
+        <detaileddescription>
+<para>In the implementation file you&apos;ll need to use the <ref refid="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" kindref="member">wxBEGIN_EVENT_TABLE()</ref> and the <ref refid="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" kindref="member">wxEND_EVENT_TABLE()</ref> macros, plus some additional <computeroutput>EVT_xxx</computeroutput> macro to capture events.</para><para>Note that this macro requires a final semicolon.</para><para><simplesect kind="see"><para><ref refid="overview__events_1overview_events_eventtables" kindref="member">Event Handling with Event Tables</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4311" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" prot="public" static="no">
+        <name>wxBEGIN_EVENT_TABLE</name>
+        <param><defname>theClass</defname></param>
+        <param><defname>baseClass</defname></param>
+        <briefdescription>
+<para>Use this macro in a source file to start listing <emphasis>static</emphasis> event handlers for a specific class. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use <ref refid="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" kindref="member">wxEND_EVENT_TABLE()</ref> to terminate the event-declaration block.</para><para><simplesect kind="see"><para><ref refid="overview__events_1overview_events_eventtables" kindref="member">Event Handling with Event Tables</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4321" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" prot="public" static="no">
+        <name>wxEND_EVENT_TABLE</name>
+        <param></param>
+        <briefdescription>
+<para>Use this macro in a source file to end listing <emphasis>static</emphasis> event handlers for a specific class. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use <ref refid="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" kindref="member">wxBEGIN_EVENT_TABLE()</ref> to start the event-declaration block.</para><para><simplesect kind="see"><para><ref refid="overview__events_1overview_events_eventtables" kindref="member">Event Handling with Event Tables</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4331" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4331" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="event_8h_1aeac8cc6725b12c89831df69f59d7746f" prot="public" static="no">
+        <name>wxEventPropagation</name>
+        <enumvalue id="event_8h_1aeac8cc6725b12c89831df69f59d7746fa72c16cae37081d99022fed8734f83fbd" prot="public">
+          <name>wxEVENT_PROPAGATE_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>don&apos;t propagate it at all </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1aeac8cc6725b12c89831df69f59d7746faad1403757b08f981dbf581ddac4b0e9c" prot="public">
+          <name>wxEVENT_PROPAGATE_MAX</name>
+          <initializer> INT_MAX</initializer>
+          <briefdescription>
+<para>propagate it until it is processed </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The predefined constants for the number of times we propagate event upwards window child-parent chain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="14" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="enum" id="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7d" prot="public" static="no">
+        <name>wxEventCategory</name>
+        <enumvalue id="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7da87c188f7f7ce0ffcf7bf6632d694b997" prot="public">
+          <name>wxEVT_CATEGORY_UI</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>This is the category for those events which are generated to update the appearance of the GUI but which (usually) do not comport data processing, i.e. </para>          </briefdescription>
+          <detaileddescription>
+<para>which do not provide input or output data (e.g. size events, scroll events, etc). They are events NOT directly generated by the user&apos;s input devices. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7da84acca6e98d4d74654c7cc4fb57df0da" prot="public">
+          <name>wxEVT_CATEGORY_USER_INPUT</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>This category groups those events which are generated directly from the user through input devices like mouse and keyboard and usually result in data to be processed from the application (e.g. </para>          </briefdescription>
+          <detaileddescription>
+<para>mouse clicks, key presses, etc). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7daff2b0a0c5bbbcea4ba0aa3e9582f9cec" prot="public">
+          <name>wxEVT_CATEGORY_SOCKET</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+<para>This category is for <ref refid="classwx_socket_event" kindref="compound">wxSocketEvent</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7dadd77d422b34851d5e2f23b074c5a4865" prot="public">
+          <name>wxEVT_CATEGORY_TIMER</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+<para>This category is for <ref refid="classwx_timer_event" kindref="compound">wxTimerEvent</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7da9a1ca50743e1529454642b62c8bb4fde" prot="public">
+          <name>wxEVT_CATEGORY_THREAD</name>
+          <initializer> 16</initializer>
+          <briefdescription>
+<para>This category is for any event used to send notifications from the secondary threads to the main one or in general for notifications among different threads (which may or may not be user-generated). </para>          </briefdescription>
+          <detaileddescription>
+<para>See e.g. <ref refid="classwx_thread_event" kindref="compound">wxThreadEvent</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7da8503dcfaf5c6437b3c5c4391ca8b66eb" prot="public">
+          <name>wxEVT_CATEGORY_ALL</name>
+          <initializer>
+        wxEVT_CATEGORY_UI|wxEVT_CATEGORY_USER_INPUT|wxEVT_CATEGORY_SOCKET| 
+        wxEVT_CATEGORY_TIMER|wxEVT_CATEGORY_THREAD</initializer>
+          <briefdescription>
+<para>This mask is used in <ref refid="classwx_event_loop_base_1afb5ed08160c7e6b1364170af6115af55" kindref="member">wxEventLoopBase::YieldFor</ref> to specify that all event categories should be processed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The different categories for a <ref refid="classwx_event" kindref="compound">wxEvent</ref>; see <ref refid="classwx_event_1a525e5c576e64090af493cb81db2da59b" kindref="member">wxEvent::GetEventCategory</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>They are used as OR-combinable flags by <ref refid="classwx_event_loop_base_1afb5ed08160c7e6b1364170af6115af55" kindref="member">wxEventLoopBase::YieldFor</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="28" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="enum" id="event_8h_1a20f17bd5262af79da603671677288b8d" prot="public" static="no">
+        <name>wxKeyCategoryFlags</name>
+        <enumvalue id="event_8h_1a20f17bd5262af79da603671677288b8daa37e735a77407ddb8e3d9c1cd2f8cc35" prot="public">
+          <name>WXK_CATEGORY_ARROW</name>
+          <briefdescription>
+<para>arrow keys, on and off numeric keypads </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a20f17bd5262af79da603671677288b8da8d6bf7ec951a13fc80eb16e98563b5af" prot="public">
+          <name>WXK_CATEGORY_PAGING</name>
+          <briefdescription>
+<para>page up and page down keys, on and off numeric keypads </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a20f17bd5262af79da603671677288b8dadee0036541b81c88504dc666265d3868" prot="public">
+          <name>WXK_CATEGORY_JUMP</name>
+          <briefdescription>
+<para>home and end keys, on and off numeric keypads </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a20f17bd5262af79da603671677288b8da0c8f7579f5e6c49d947c17d92e06a04d" prot="public">
+          <name>WXK_CATEGORY_TAB</name>
+          <briefdescription>
+<para>tab key, on and off numeric keypads </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a20f17bd5262af79da603671677288b8da46d90d8c9c56cb1bb54f22a466bfd9fa" prot="public">
+          <name>WXK_CATEGORY_CUT</name>
+          <briefdescription>
+<para>backspace and delete keys, on and off numeric keypads </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a20f17bd5262af79da603671677288b8da6365d9306ea86e2dc9fbc25d1b699773" prot="public">
+          <name>WXK_CATEGORY_NAVIGATION</name>
+          <briefdescription>
+<para>union of WXK_CATEGORY_ARROW, WXK_CATEGORY_PAGING, and WXK_CATEGORY_JUMP categories </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags for categories of keys. </para>        </briefdescription>
+        <detaileddescription>
+<para>These values are used by <ref refid="classwx_key_event_1adba49d426004d179fa3f6fa0faa0d1ca" kindref="member">wxKeyEvent::IsKeyInCategory()</ref>. They may be combined via the bitwise operators |, &amp;, and ~.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1215" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1214" bodyend="1233"/>
+      </memberdef>
+      <memberdef kind="enum" id="event_8h_1afd2fee4ca28a8255a68a0b06970aae9b" prot="public" static="no">
+        <name>wxUpdateUIMode</name>
+        <enumvalue id="event_8h_1afd2fee4ca28a8255a68a0b06970aae9ba336c7a9a9d59022f978e2424195f2d97" prot="public">
+          <name>wxUPDATE_UI_PROCESS_ALL</name>
+          <briefdescription>
+<para>Send UI update events to all windows. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1afd2fee4ca28a8255a68a0b06970aae9ba59fbb754122d47b00fcebe116e0f29f6" prot="public">
+          <name>wxUPDATE_UI_PROCESS_SPECIFIED</name>
+          <briefdescription>
+<para>Send UI update events to windows that have the wxWS_EX_PROCESS_UI_UPDATES flag specified. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The possibles modes to pass to <ref refid="classwx_update_u_i_event_1ab3a94b31cf5c72ae84ffa8b7cc1777e7" kindref="member">wxUpdateUIEvent::SetMode()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1929" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1928" bodyend="1936"/>
+      </memberdef>
+      <memberdef kind="enum" id="event_8h_1af8b16f71b9b38095fe9f7f6244665a80" prot="public" static="no">
+        <name>wxIdleMode</name>
+        <enumvalue id="event_8h_1af8b16f71b9b38095fe9f7f6244665a80ae494873c0ee141ace0e0718757850d73" prot="public">
+          <name>wxIDLE_PROCESS_ALL</name>
+          <briefdescription>
+<para>Send idle events to all windows. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1af8b16f71b9b38095fe9f7f6244665a80afa7a1f0a8f2c38a4797812e3eb86db22" prot="public">
+          <name>wxIDLE_PROCESS_SPECIFIED</name>
+          <briefdescription>
+<para>Send idle events to windows that have the wxWS_EX_PROCESS_IDLE flag specified. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>See <ref refid="classwx_idle_event_1a655610b1a5a1c668efc7d475313af2e3" kindref="member">wxIdleEvent::SetMode()</ref> for more info. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3430" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3429" bodyend="3436"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int wxEventType</definition>
+        <argsstring></argsstring>
+        <name>wxEventType</name>
+        <briefdescription>
+<para>A value uniquely identifying the type of the event. </para>        </briefdescription>
+        <detaileddescription>
+<para>The values of this type should only be created using <ref refid="group__group__funcmacro__events_1gac49cbd62a66ace1c0cc61eec8bd66f0c" kindref="member">wxNewEventType()</ref>.</para><para>See the macro DEFINE_EVENT_TYPE() for more info.</para><para><simplesect kind="see"><para><ref refid="overview__events_1overview_events_introduction" kindref="member">Introduction to Events</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4161" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga310bc3f7977ae79ac1198c7a287dbffe" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_NULL</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_NULL</name>
+        <briefdescription>
+<para>A special event type usually used to indicate that some <ref refid="classwx_event" kindref="compound">wxEvent</ref> has yet no type assigned. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4167" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga2d2da4a0bbb3b8e3a7d75654bd10b0b5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_ANY</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_ANY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4169" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gad4219768fc12379d138fc7dbba84118a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_BUTTON_CLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_BUTTON_CLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4365" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaa048f91c476dc448f2846d05a5a8bf59" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_CHECKBOX_CLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_CHECKBOX_CLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4366" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga7725fd29757ad181877e6a1dd4381a65" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_CHOICE_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_CHOICE_SELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4367" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga52b5836f0a0eb8b7e2c023af9f1bf9a1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LISTBOX_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LISTBOX_SELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4368" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga68b084a489d0fa719f9a78832048e6a4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LISTBOX_DOUBLECLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LISTBOX_DOUBLECLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4369" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga1400c0c6b63be0b9635bfc3f16e74ae2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_CHECKLISTBOX_TOGGLED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_CHECKLISTBOX_TOGGLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4370" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga5705afbf2885acba094565982b5f6407" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_MENU_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_MENU_SELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4371" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga4cedec3f49122698810b04d537d4a9dd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_SLIDER_UPDATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_SLIDER_UPDATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4372" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga20697e76a75c0a16d0b0325e9a42d06c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_RADIOBOX_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_RADIOBOX_SELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4373" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaa6be89bff25192bad44d9c412ff23819" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_RADIOBUTTON_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_RADIOBUTTON_SELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4374" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gae8788b80fcbd01211dbdea5567aea72f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_SCROLLBAR_UPDATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_SCROLLBAR_UPDATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4375" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga526a37ad39631d7f43d9bb5c36478495" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_VLBOX_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_VLBOX_SELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4376" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga17bcb28ff96b79c53ccf3843e72ba5a5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_COMBOBOX_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_COMBOBOX_SELECTED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4377" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaa45272aa550ed2230658e3ba266adc1f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TOOL_RCLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TOOL_RCLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4378" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaf559ba0a2bb2ed212f6e3045e19a3e1e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TOOL_DROPDOWN_CLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TOOL_DROPDOWN_CLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4379" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga35bafed45e064a7f52d9b905db5dd683" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TOOL_ENTER</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TOOL_ENTER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4380" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga64cca189be841809279f68c2d6253698" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_COMBOBOX_DROPDOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_COMBOBOX_DROPDOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4381" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga15c7588be440f6e9498186fc2ee97071" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_COMBOBOX_CLOSEUP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_COMBOBOX_CLOSEUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4382" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaaeb89fb4f0db5dec9ea914f39dd9b531" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_THREAD</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_THREAD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4383" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga10999d004415d560fe30f363cee9246f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_LEFT_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_LEFT_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4384" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga4df8cdfc22ea062a624bf28f0193a70d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_LEFT_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_LEFT_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4385" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gadcdbd260dfb5df127809a358aea183e2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MIDDLE_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MIDDLE_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4386" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga38c0a3d5642bffda5aea8b80def01265" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MIDDLE_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MIDDLE_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4387" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga65464559cc790e98a45bcb0b3c82a615" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_RIGHT_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_RIGHT_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4388" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga6fe155943290a9b9058019df13a67ab1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_RIGHT_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_RIGHT_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4389" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga0102a39d25aef78e0c09d0491802df51" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MOTION</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MOTION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4390" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga50eb868f69f96228a518651645a44798" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_ENTER_WINDOW</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_ENTER_WINDOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4391" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga51a2a26e560dade6d24f3f464a24fd73" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_LEAVE_WINDOW</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_LEAVE_WINDOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4392" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga50c0561f5b1e2c99f7f17ecb46f0b3bf" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_LEFT_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_LEFT_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4393" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga3e3f53dd069925e1a380dd3466b687c0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MIDDLE_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MIDDLE_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4394" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gac281b82d10b2a360dec50a7630faedba" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_RIGHT_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_RIGHT_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4395" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga086a581d47e4080a6d5fce51a8dbe4c1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SET_FOCUS</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SET_FOCUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4396" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gac256d5a0ce1c16f9166574d346cff1ea" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_KILL_FOCUS</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_KILL_FOCUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4397" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga1e030f807fbbc7cb484a996ee7474f18" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CHILD_FOCUS</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CHILD_FOCUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4398" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga142748dac3ef6834cd07905cf4250287" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MOUSEWHEEL</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MOUSEWHEEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4399" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga40d495b7ecdf848c83b78ac82b875831" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_AUX1_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_AUX1_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaa8e5b24c29c90120724fec044e65a4cf" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_AUX1_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_AUX1_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4401" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga64f59d4824a14660525940269789a504" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_AUX1_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_AUX1_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4402" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga0b05c98f7a9a02145a2897ef81beeb79" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_AUX2_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_AUX2_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4403" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga6a980cc1dbee3a9e9ebd143ab034d92a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_AUX2_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_AUX2_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4404" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga8c84b8f7f567774848e6186f3152cf43" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_AUX2_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_AUX2_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4405" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaca55396d484ecebe5d2c350ad5970277" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CHAR</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CHAR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4406" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaabd9bb68b0a3c847647e7cf9cea94661" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CHAR_HOOK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CHAR_HOOK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4407" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gab346a6871a876295b2ac0c68c4854f1d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_NAVIGATION_KEY</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_NAVIGATION_KEY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4408" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gabeaf4675d783be0ed3702588b9a72e5b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_KEY_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_KEY_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4409" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga31b7b8506344e455922a3ff16eeb21be" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_KEY_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_KEY_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4410" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga1b2368bdc96ea9da8e882c5ac59d2194" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_HOTKEY</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_HOTKEY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4411" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga5d644901ac199778191dae39c9d87ad6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SET_CURSOR</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SET_CURSOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4412" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga436128df516d84d9f851031fbf3f4e1b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_TOP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_TOP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4413" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga196c3cb4acb930435c85a1debcf6a725" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_BOTTOM</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_BOTTOM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4414" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga77275ccff1a34eb358a7f81fffd6cd82" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_LINEUP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_LINEUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4415" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaea20763256909ff7b3b7e26775eca0b2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_LINEDOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_LINEDOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4416" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gacc15771379e129a4059f6747c2d8e9b4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_PAGEUP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_PAGEUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4417" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gae4fd62ed70e9342a0c31ee964e37f421" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_PAGEDOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_PAGEDOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4418" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga405be6bc2a927832af949ad97a2d70a7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_THUMBTRACK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_THUMBTRACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4419" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga05b86ae42912553781cfd933395035e4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_THUMBRELEASE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_THUMBRELEASE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4420" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga81d7671036c522e9f973daa460d37c86" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLL_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLL_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4421" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga75597c673c6cf786a7f5b25feae1844d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SPIN_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SPIN_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4422" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gac7cf86e7878b5c77390373328e461f93" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SPIN_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SPIN_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4423" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gad24c0c20f15febc65971d064f4d6fa54" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SPIN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SPIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4424" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaedf425dd42f63b2453b0c594f0177fff" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLLWIN_TOP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLLWIN_TOP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4425" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga97f07efd73fe382a694a242d736f52b1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLLWIN_BOTTOM</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLLWIN_BOTTOM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4426" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga2deb86c6a680cd59c2cc555fc755e23d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLLWIN_LINEUP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLLWIN_LINEUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4427" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga8ee7c6a641fc037b9cf5fe6c1cd3c419" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLLWIN_LINEDOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLLWIN_LINEDOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4428" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga3283ebc3c80fbdce90114be4caa75278" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLLWIN_PAGEUP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLLWIN_PAGEUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4429" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga54c21c8d52758c534e4063daa8ad2d69" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLLWIN_PAGEDOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLLWIN_PAGEDOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4430" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaa704bc616fd8d73b16dcaa79e46013bd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLLWIN_THUMBTRACK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLLWIN_THUMBTRACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4431" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga03b625755bc271a5d5cfbe09a8d4f569" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SCROLLWIN_THUMBRELEASE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SCROLLWIN_THUMBRELEASE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4432" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaf37d029552178f4b2994b19765bee234" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SIZE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SIZE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4433" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gade0275585d74784e5a7ca6baac6bc921" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MOVE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MOVE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4434" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga6f50fe24e66533200b95025fb9a812a2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CLOSE_WINDOW</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CLOSE_WINDOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4435" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga97733a4f8b8d9223c1b362b1f00d51b9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_END_SESSION</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_END_SESSION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4436" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga9bc6a1afecf58a33d50066bb1379b645" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_QUERY_END_SESSION</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_QUERY_END_SESSION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4437" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga854342a6f89abb23a7f0720e529d8f2c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_ACTIVATE_APP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_ACTIVATE_APP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4438" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gad98d3ca1e118c5aaca40e24935448040" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_ACTIVATE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_ACTIVATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4439" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gad759c03ad82e147709ce9be36e21146b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CREATE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CREATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4440" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga27688726d7457bc71213c05f9dd29faa" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_DESTROY</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_DESTROY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4441" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga42f754d82b0c87a875b4acc004eb4185" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SHOW</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SHOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4442" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga420af6184c0cc43a24717843ceaaaab3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_ICONIZE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_ICONIZE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4443" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gab3c29cb0bfda6dfa6c72a93a099f299e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MAXIMIZE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MAXIMIZE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4444" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga263e6f7bd891203c33981ce7ab755bb7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MOUSE_CAPTURE_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MOUSE_CAPTURE_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4445" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga8504d1733f17ae49c01e0d3f61433b9a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MOUSE_CAPTURE_LOST</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MOUSE_CAPTURE_LOST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4446" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga5fdd4de09a448bc5778deaa53f4d2f0c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_PAINT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_PAINT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4447" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaa112536b59c9d8217dd595b10afe99a0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_ERASE_BACKGROUND</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_ERASE_BACKGROUND</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4448" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gad243a899d86bc3d750caca6f60732120" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_NC_PAINT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_NC_PAINT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4449" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga06fd6390cee153701e5e533478f3f977" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MENU_OPEN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MENU_OPEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4450" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga00e838f1750231487ef10536e0bbef95" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MENU_CLOSE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MENU_CLOSE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4451" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaaa6d83bd5f2579c1917a9c39bd3a3ac0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MENU_HIGHLIGHT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MENU_HIGHLIGHT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4452" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gafe90199d4305e7a963d9950cca377b7b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_CONTEXT_MENU</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_CONTEXT_MENU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4453" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga17a22265aaa85d7f8ae65fe0756bd869" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SYS_COLOUR_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SYS_COLOUR_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4454" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga756c23872504db302554355ba60da3f9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_DISPLAY_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_DISPLAY_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4455" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga06d49eaef0b84634c962b0349e55a3cb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_QUERY_NEW_PALETTE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_QUERY_NEW_PALETTE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4456" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga0cdb07ea7f124389922db8838c14438b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_PALETTE_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_PALETTE_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4457" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga3b26a116855fc1ea4a3d20d78614bf2f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_JOY_BUTTON_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_JOY_BUTTON_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4458" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4458" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gad51461711d8a45cf2e8bbf3b807a0e33" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_JOY_BUTTON_UP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_JOY_BUTTON_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4459" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4459" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga4effdd29ea1bfb09f1720c67ec3e84f7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_JOY_MOVE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_JOY_MOVE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4460" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4460" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga53adfd13ca9d8c5dadfbfa9a77838498" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_JOY_ZMOVE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_JOY_ZMOVE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4461" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4461" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaa28fa0e1c41881b2c44003f3c84d0b39" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_DROP_FILES</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_DROP_FILES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4462" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga38ac2ba7430629bf405ebe7deb0e5e82" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_INIT_DIALOG</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_INIT_DIALOG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4463" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gacb83e5d9e85237e8ab95ea444f9f2ac6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_IDLE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_IDLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4464" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4464" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga4ee00b80b87c47cf6e730514d903d8f0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_UPDATE_UI</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_UPDATE_UI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4465" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4465" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga7afee7754797755107e322c819317bed" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_SIZING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_SIZING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4466" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga8bd6f5caef60dc86a6ea90e668e04b0b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MOVING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MOVING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4467" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga86f01e5e0825ad7f4d647dc4fd7e57f2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MOVE_START</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MOVE_START</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4468" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga8949908f357e73317d27390467537989" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_MOVE_END</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_MOVE_END</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4469" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4469" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gae36d762b380e59f41e33c08c4c672d41" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_HIBERNATE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_HIBERNATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4470" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4470" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga6d2b30ebe97bc55b33edf0d2d3e0fbc4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TEXT_COPY</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TEXT_COPY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4471" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4471" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga8ffb0483f1377a675a59d9b6f5732b12" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TEXT_CUT</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TEXT_CUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4472" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga89331e7bed17ad7a91a82382245ff208" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TEXT_PASTE</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TEXT_PASTE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4473" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga1a5a9c30e228d1a1244efc2830cc90c6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LEFT_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LEFT_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4474" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4474" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga0b20eb3f82d79f642172f73d9697c432" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_LEFT_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_LEFT_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4475" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gad4f6ce79e652b882d1774dc01790561c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_RIGHT_CLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_RIGHT_CLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4476" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4476" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga09190359730ba0ac615ceaa0b2c22e06" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_RIGHT_DCLICK</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_RIGHT_DCLICK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4477" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga93f0d1df8acc3b8aa81d94c50f0baf61" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_SET_FOCUS</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_SET_FOCUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4478" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gaa01e81877102588804da9792295ae48e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_KILL_FOCUS</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_KILL_FOCUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4479" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1gace9f552c8e93112def2e4c3f91288bd4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_ENTER</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_ENTER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4480" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga5cb8b1c95e5ba7a0c6ad0887f3a6cdbc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_HELP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_HELP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4481" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga75ad6a4c777769e1f5e783e63e7b7036" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_DETAILED_HELP</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_DETAILED_HELP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4482" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga97aa55789599be3be897fdb8fa9e3fed" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TEXT_UPDATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TEXT_UPDATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4483" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga5aa2f5872e2e85ff8d4d09f6f4b36793" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_TOOL_CLICKED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_TOOL_CLICKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4484" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__funcmacro__events_1ga827e9097f81696f3b87f52c1eb148a28" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_WINDOW_MODAL_DIALOG_CLOSED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_WINDOW_MODAL_DIALOG_CLOSED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4485" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4485" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__events_1gac49cbd62a66ace1c0cc61eec8bd66f0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxNewEventType</definition>
+        <argsstring>()</argsstring>
+        <name>wxNewEventType</name>
+        <briefdescription>
+<para>Generates a new unique event type. </para>        </briefdescription>
+        <detaileddescription>
+<para>Usually this function is only used by <ref refid="group__group__funcmacro__events_1ga09ec1d095bee3085c1cb31459b46bc00" kindref="member">wxDEFINE_EVENT()</ref> and not called directly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__events_1ga0cf60a1ad3a5f1e659f7ae591570f58d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPostEvent</definition>
+        <argsstring>(wxEvtHandler *dest, const wxEvent &amp;event)</argsstring>
+        <name>wxPostEvent</name>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>In a GUI application, this function posts <emphasis>event</emphasis> to the specified <emphasis>dest</emphasis> object using <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Otherwise, it dispatches <emphasis>event</emphasis> immediately using <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">wxEvtHandler::ProcessEvent()</ref>. See the respective documentation for details (and caveats). Because of limitation of <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent()</ref> this function is not thread-safe for event objects having <ref refid="classwx_string" kindref="compound">wxString</ref> fields, use <ref refid="group__group__funcmacro__events_1gae921d7bd0e52fedbf3f253d2c408bce1" kindref="member">wxQueueEvent()</ref> instead.</para><para>Include file: <verbatim>#include &lt;wx/event.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4345"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__events_1gae921d7bd0e52fedbf3f253d2c408bce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxQueueEvent</definition>
+        <argsstring>(wxEvtHandler *dest, wxEvent *event)</argsstring>
+        <name>wxQueueEvent</name>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Queue an event for processing on the given object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a wrapper around <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">wxEvtHandler::QueueEvent()</ref>, see its documentation for more details.</para><para>Include file: <verbatim>#include &lt;wx/event.h&gt; </verbatim></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object to queue the event on, can&apos;t be <computeroutput>NULL</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The heap-allocated and non-<computeroutput>NULL</computeroutput> event to queue, the function takes ownership of it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4361"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h"/>
+  </compounddef>
+</doxygen>

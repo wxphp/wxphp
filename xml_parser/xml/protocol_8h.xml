@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="protocol_8h" kind="file">
+    <compoundname>protocol.h</compoundname>
+    <innerclass refid="classwx_protocol" prot="public">wxProtocol</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087" prot="public" static="no">
+        <name>wxProtocolError</name>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087ae1bfee8a0b2b5e66b49105029b6be99e" prot="public">
+          <name>wxPROTO_NOERR</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>No error. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087a428547dde69e6d06f6e57992da6b2f2d" prot="public">
+          <name>wxPROTO_NETERR</name>
+          <briefdescription>
+<para>A generic network error occurred. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087abcfeed2579835de37ab70881e0622a51" prot="public">
+          <name>wxPROTO_PROTERR</name>
+          <briefdescription>
+<para>An error occurred during negotiation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087a33f46b98bfbc4e9a4089ceda5282e101" prot="public">
+          <name>wxPROTO_CONNERR</name>
+          <briefdescription>
+<para>The client failed to connect the server. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087ab92161fbc6b1cb3182aed06a4f11a100" prot="public">
+          <name>wxPROTO_INVVAL</name>
+          <briefdescription>
+<para>Invalid value. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087a31b4c3af9317f0c9d6ffc03f176b3246" prot="public">
+          <name>wxPROTO_NOHNDLR</name>
+          <briefdescription>
+<para>Not currently used. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087ad3d7264a2efbbf59d7aa88599424a057" prot="public">
+          <name>wxPROTO_NOFILE</name>
+          <briefdescription>
+<para>The remote file doesn&apos;t exist. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087a2c16a9dd721324b14c979bc64e2531e0" prot="public">
+          <name>wxPROTO_ABRT</name>
+          <briefdescription>
+<para>Last action aborted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087a759de82a01b9ab48cbf2a71170430c9a" prot="public">
+          <name>wxPROTO_RCNCT</name>
+          <briefdescription>
+<para>An error occurred during reconnection. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087a6b9e6e680dc6baab8539f597eab20ce2" prot="public">
+          <name>wxPROTO_STREAMING</name>
+          <briefdescription>
+<para>Someone tried to send a command during a transfer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Error values returned by <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" bodystart="12" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h"/>
+  </compounddef>
+</doxygen>

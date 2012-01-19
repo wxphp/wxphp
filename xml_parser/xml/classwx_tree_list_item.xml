@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_tree_list_item" kind="class" prot="public">
+    <compoundname>wxTreeListItem</compoundname>
+    <includes local="no">wx/treelist.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_tree_list_item_1ae2de6943754cad1454ab8d797bc3ada0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTreeListItem::wxTreeListItem</definition>
+        <argsstring>()</argsstring>
+        <name>wxTreeListItem</name>
+        <briefdescription>
+<para>Only the default constructor is publicly accessible. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default constructing a <ref refid="classwx_tree_list_item" kindref="compound">wxTreeListItem</ref> creates an invalid item. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tree_list_item_1a61666cb8d9e60edbb723cda61a51283a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxTreeListItem::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Return true if the item is valid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Unique identifier of an item in <ref refid="classwx_tree_list_ctrl" kindref="compound">wxTreeListCtrl</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is an opaque class which can&apos;t be used by the application in any other way than receiving or passing it to <ref refid="classwx_tree_list_ctrl" kindref="compound">wxTreeListCtrl</ref> and checking for validity.</para><para><simplesect kind="see"><para><ref refid="classwx_tree_list_ctrl" kindref="compound">wxTreeListCtrl</ref></para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" bodystart="25" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classwx_tree_list_item_1a61666cb8d9e60edbb723cda61a51283a" prot="public" virt="non-virtual"><scope>wxTreeListItem</scope><name>IsOk</name></member>
+      <member refid="classwx_tree_list_item_1ae2de6943754cad1454ab8d797bc3ada0" prot="public" virt="non-virtual"><scope>wxTreeListItem</scope><name>wxTreeListItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

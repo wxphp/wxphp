@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_pixel_data" kind="class" prot="public">
+    <compoundname>wxPixelData</compoundname>
+    <includes local="no">wx/rawbmp.h</includes>
+    <innerclass refid="classwx_pixel_data_1_1_iterator" prot="public">wxPixelData::Iterator</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class Image</type>
+      </param>
+      <param>
+        <type>class PixelFormat</type>
+        <defval>wxPixelFormatFor&lt;Image&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classwx_pixel_data_1a6757aaacf6f5103a7046707b26f0f406" prot="public" static="no">
+        <type>Image</type>
+        <definition>typedef Image wxPixelData&lt; Image, PixelFormat &gt;::ImageType</definition>
+        <argsstring></argsstring>
+        <name>ImageType</name>
+        <briefdescription>
+<para>The type of the class we&apos;re working with. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_pixel_data_1ad451c659eebc85b4d6062b0bf5adcb52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPixelData&lt; Image, PixelFormat &gt;::wxPixelData</definition>
+        <argsstring>(Image &amp;image)</argsstring>
+        <name>wxPixelData</name>
+        <param>
+          <type>Image &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>Create pixel data object representing the entire image. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1abc868145e077e1aa6431e18392c3127a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPixelData&lt; Image, PixelFormat &gt;::wxPixelData</definition>
+        <argsstring>(Image &amp;i, const wxRect &amp;rect)</argsstring>
+        <name>wxPixelData</name>
+        <param>
+          <type>Image &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Create pixel data object representing the area of the image defined by <emphasis>rect</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1a068af31f567fa8b20397ab13ec4bf491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPixelData&lt; Image, PixelFormat &gt;::wxPixelData</definition>
+        <argsstring>(Image &amp;i, const wxPoint &amp;pt, const wxSize &amp;sz)</argsstring>
+        <name>wxPixelData</name>
+        <param>
+          <type>Image &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+<para>Create pixel data object representing the area of the image defined by <emphasis>pt</emphasis> and <emphasis>sz</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1a2e8e54542cbaab3b3ca9a89bf5b4a64c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPixelData&lt; Image, PixelFormat &gt;::operator bool</definition>
+        <argsstring>() const </argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+<para>Return true of if we could get access to bitmap data successfully. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1aa121b3c3f5f217afcc7799cdb965b114" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_pixel_data_1_1_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator wxPixelData&lt; Image, PixelFormat &gt;::GetPixels</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPixels</name>
+        <briefdescription>
+<para>Return the iterator pointing to the origin of the image. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1ae70c17cb338cbee78655a26e8c0ec75d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+        <definition>wxPoint wxPixelData&lt; Image, PixelFormat &gt;::GetOrigin</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOrigin</name>
+        <briefdescription>
+<para>Returns origin of the rectangular region this <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> represents. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1ada3a03361a1410251ca9e94ef380d53b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPixelData&lt; Image, PixelFormat &gt;::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Return width of the region this <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> represents. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1af5649967c3f27e1e107e0aced23d29f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPixelData&lt; Image, PixelFormat &gt;::GetHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+<para>Return height of the region this <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> represents. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1ae017e22a68a694662f42a9e0a799d91b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxPixelData&lt; Image, PixelFormat &gt;::GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+<para>Return the area which this <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref> represents in the image. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1a734c1707b37d44ea0d161ac686240265" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPixelData&lt; Image, PixelFormat &gt;::GetRowStride</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRowStride</name>
+        <briefdescription>
+<para>Return the distance between two rows. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="132"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class template with ready to use implementations for getting direct and efficient access to wxBitmap&apos;s internal data and wxImage&apos;s internal data through a standard interface. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is possible to extend this class (interface) to other types of image content.</para><para>Implemented on Windows, GTK+ and OS X: <itemizedlist>
+<listitem><para>wxNativePixelData: Class to access to wxBitmap&apos;s internal data without alpha channel (RGB). </para></listitem>
+<listitem><para>wxAlphaPixelData: Class to access to wxBitmap&apos;s internal data with alpha channel (RGBA).</para></listitem>
+</itemizedlist>
+Implemented everywhere: <itemizedlist>
+<listitem><para>wxImagePixelData: Class to access to wxImage&apos;s internal data with alpha channel (RGBA).</para></listitem>
+</itemizedlist>
+Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_bitmap" kindref="compound" tooltip="This class encapsulates the concept of a platform-dependent bitmap, either monochrome...">wxBitmap</ref><sp/>bmp;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxNativePixelData<sp/>data(bmp);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!data<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...<sp/>raw<sp/>access<sp/>to<sp/>bitmap<sp/>data<sp/>unavailable,<sp/>do<sp/>something<sp/>else<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>data.GetWidth()<sp/>&lt;<sp/>20<sp/>||<sp/>data.GetHeight()<sp/>&lt;<sp/>20<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...<sp/>complain:<sp/>the<sp/>bitmap<sp/>it<sp/>too<sp/>small<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wxNativePixelData::Iterator<sp/>p(data);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>draw<sp/>a<sp/>(10,<sp/>10)-(20,<sp/>20)<sp/>rect<sp/>manually<sp/>using<sp/>the<sp/>given<sp/>r,<sp/>g,<sp/>b</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>p.Offset(data,<sp/>10,<sp/>10);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/>10;<sp/>++y<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxNativePixelData::Iterator<sp/>rowStart<sp/>=<sp/>p;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>10;<sp/>++x,<sp/>++p<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.Red()<sp/>=<sp/>r;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.Green()<sp/>=<sp/>g;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.Blue()<sp/>=<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/>rowStart;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.OffsetY(data,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_image" kindref="compound">wxImage</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" bodystart="72" bodyend="213"/>
+    <listofallmembers>
+      <member refid="classwx_pixel_data_1af5649967c3f27e1e107e0aced23d29f4" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>GetHeight</name></member>
+      <member refid="classwx_pixel_data_1ae70c17cb338cbee78655a26e8c0ec75d" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>GetOrigin</name></member>
+      <member refid="classwx_pixel_data_1aa121b3c3f5f217afcc7799cdb965b114" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>GetPixels</name></member>
+      <member refid="classwx_pixel_data_1a734c1707b37d44ea0d161ac686240265" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>GetRowStride</name></member>
+      <member refid="classwx_pixel_data_1ae017e22a68a694662f42a9e0a799d91b" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>GetSize</name></member>
+      <member refid="classwx_pixel_data_1ada3a03361a1410251ca9e94ef380d53b" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>GetWidth</name></member>
+      <member refid="classwx_pixel_data_1a6757aaacf6f5103a7046707b26f0f406" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>ImageType</name></member>
+      <member refid="classwx_pixel_data_1a2e8e54542cbaab3b3ca9a89bf5b4a64c" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>operator bool</name></member>
+      <member refid="classwx_pixel_data_1ad451c659eebc85b4d6062b0bf5adcb52" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>wxPixelData</name></member>
+      <member refid="classwx_pixel_data_1abc868145e077e1aa6431e18392c3127a" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>wxPixelData</name></member>
+      <member refid="classwx_pixel_data_1a068af31f567fa8b20397ab13ec4bf491" prot="public" virt="non-virtual"><scope>wxPixelData</scope><name>wxPixelData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

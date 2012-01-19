@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_message_output" kind="class" prot="public">
+    <compoundname>wxMessageOutput</compoundname>
+    <derivedcompoundref refid="classwx_message_output_message_box" prot="public" virt="non-virtual">wxMessageOutputMessageBox</derivedcompoundref>
+    <derivedcompoundref refid="classwx_message_output_stderr" prot="public" virt="non-virtual">wxMessageOutputStderr</derivedcompoundref>
+    <includes local="no">wx/msgout.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_message_output_1aff0387f83c5ee4db7cf26b909e1057e7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_message_output" kindref="compound">wxMessageOutput</ref> *</type>
+        <definition>static wxMessageOutput* wxMessageOutput::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <briefdescription>
+<para>Return the global message output object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This object is never NULL while the program is running but may be NULL during initialization (before <ref refid="classwx_app" kindref="compound">wxApp</ref> object is instantiated) or shutdown.(after <ref refid="classwx_app" kindref="compound">wxApp</ref> destruction).</para><para><simplesect kind="see"><para><ref refid="classwx_app_traits_1a53c3290baa711f24d9fcf4883b3363a4" kindref="member">wxAppTraits::CreateMessageOutput()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_message_output_1ac8a0f8cc3ff1c0582d7e3e3f490e7e0b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_message_output" kindref="compound">wxMessageOutput</ref> *</type>
+        <definition>static wxMessageOutput* wxMessageOutput::Set</definition>
+        <argsstring>(wxMessageOutput *msgout)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="classwx_message_output" kindref="compound">wxMessageOutput</ref> *</type>
+          <declname>msgout</declname>
+        </param>
+        <briefdescription>
+<para>Sets the global message output object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Using this function may be a simpler alternative to changing the message output object used for your program than overriding <ref refid="classwx_app_traits_1a53c3290baa711f24d9fcf4883b3363a4" kindref="member">wxAppTraits::CreateMessageOutput()</ref>.</para><para>Remember to delete the returned pointer or restore it later with another call to <ref refid="classwx_message_output_1ac8a0f8cc3ff1c0582d7e3e3f490e7e0b" kindref="member">Set()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="64"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMessageOutput::Printf</definition>
+        <argsstring>(const wxString &amp;format,...)</argsstring>
+        <name>Printf</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Output a message. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function uses the same conventions as standard <computeroutput>printf()</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_message_output_1ae8b0b6734006e716bd80fd053a7b4e4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxMessageOutput::Output</definition>
+        <argsstring>(const wxString &amp;str)=0</argsstring>
+        <name>Output</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Method called by <ref refid="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" kindref="member">Printf()</ref> to really output the text. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is overridden in various derived classes and is also the one you should override if you implement a custom message output object.</para><para>It may also be called directly instead of <ref refid="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" kindref="member">Printf()</ref>. This is especially useful when outputting a user-defined string because it can be simply called with this string instead of using <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msgout.Printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>str);</highlight></codeline>
+</programlisting> (notice that passing user-defined string to <ref refid="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" kindref="member">Printf()</ref> directly is, of course, a security risk). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple class allowing to write strings to various output channels. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classwx_message_output" kindref="compound">wxMessageOutput</ref> is a low-level class and doesn&apos;t provide any of the conveniences of <ref refid="classwx_log" kindref="compound">wxLog</ref>. It simply allows to write a message to some output channel: usually file or standard error but possibly also a message box. While use of <ref refid="classwx_log" kindref="compound">wxLog</ref> and related functions is preferable in many cases sometimes this simple interface may be more convenient.</para><para>This class itself is an abstract base class for various concrete derived classes:<itemizedlist>
+<listitem><para><ref refid="classwx_message_output_stderr" kindref="compound">wxMessageOutputStderr</ref></para></listitem><listitem><para><ref refid="classwx_message_output_best" kindref="compound">wxMessageOutputBest</ref></para></listitem><listitem><para><ref refid="classwx_message_output_message_box" kindref="compound">wxMessageOutputMessageBox</ref></para></listitem><listitem><para>wxMessageOutputLog</para></listitem></itemizedlist>
+</para><para>It also provides access to the global message output object which is created by <ref refid="classwx_app_traits_1a53c3290baa711f24d9fcf4883b3363a4" kindref="member">wxAppTraits::CreateMessageOutput()</ref> which creates an object of class <ref refid="classwx_message_output_stderr" kindref="compound">wxMessageOutputStderr</ref> in console applications and <ref refid="classwx_message_output_best" kindref="compound">wxMessageOutputBest</ref> in the GUI ones but may be overridden in user-defined traits class.</para><para>Example of using this class: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_message_output_debug" kindref="compound" tooltip="Output messages to the system debug output channel.">wxMessageOutputDebug</ref>().Printf(</highlight><highlight class="stringliteral">&quot;name=%s,<sp/>preparing<sp/>to<sp/>greet...&quot;</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_message_output_1aff0387f83c5ee4db7cf26b909e1057e7" kindref="member" tooltip="Return the global message output object.">wxMessageOutput::Get</ref>()-&gt;<ref refid="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" kindref="member" tooltip="Output a message.">Printf</ref>(</highlight><highlight class="stringliteral">&quot;Hello,<sp/>%s!&quot;</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7747">
+        <label>wxMessageOutputStderr</label>
+        <link refid="classwx_message_output_stderr"/>
+        <childnode refid="7745" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7745">
+        <label>wxMessageOutput</label>
+        <link refid="classwx_message_output"/>
+      </node>
+      <node id="7748">
+        <label>wxMessageOutputBest</label>
+        <link refid="classwx_message_output_best"/>
+        <childnode refid="7747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7749">
+        <label>wxMessageOutputDebug</label>
+        <link refid="classwx_message_output_debug"/>
+        <childnode refid="7747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7746">
+        <label>wxMessageOutputMessageBox</label>
+        <link refid="classwx_message_output_message_box"/>
+        <childnode refid="7745" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" bodystart="40" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classwx_message_output_1aff0387f83c5ee4db7cf26b909e1057e7" prot="public" virt="non-virtual"><scope>wxMessageOutput</scope><name>Get</name></member>
+      <member refid="classwx_message_output_1ae8b0b6734006e716bd80fd053a7b4e4d" prot="public" virt="pure-virtual"><scope>wxMessageOutput</scope><name>Output</name></member>
+      <member refid="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" prot="public" virt="non-virtual"><scope>wxMessageOutput</scope><name>Printf</name></member>
+      <member refid="classwx_message_output_1ac8a0f8cc3ff1c0582d7e3e3f490e7e0b" prot="public" virt="non-virtual"><scope>wxMessageOutput</scope><name>Set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

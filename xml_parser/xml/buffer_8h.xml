@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="buffer_8h" kind="file">
+    <compoundname>buffer.h</compoundname>
+    <innerclass refid="classwx_scoped_char_type_buffer" prot="public">wxScopedCharTypeBuffer</innerclass>
+    <innerclass refid="classwx_char_type_buffer" prot="public">wxCharTypeBuffer</innerclass>
+    <innerclass refid="classwx_char_buffer" prot="public">wxCharBuffer</innerclass>
+    <innerclass refid="classwx_w_char_buffer" prot="public">wxWCharBuffer</innerclass>
+    <innerclass refid="classwx_memory_buffer" prot="public">wxMemoryBuffer</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="buffer_8h_1a76c552ab140910c2abd59a2a6a69a724" prot="public" static="no">
+        <type><ref refid="classwx_scoped_char_type_buffer" kindref="compound">wxScopedCharTypeBuffer</ref>&lt; char &gt;</type>
+        <definition>typedef wxScopedCharTypeBuffer&lt;char&gt; wxScopedCharBuffer</definition>
+        <argsstring></argsstring>
+        <name>wxScopedCharBuffer</name>
+        <briefdescription>
+<para>Scoped char buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="116" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="buffer_8h_1a77c79c5a29d2d739b6410897d008843e" prot="public" static="no">
+        <type><ref refid="classwx_scoped_char_type_buffer" kindref="compound">wxScopedCharTypeBuffer</ref>&lt; wchar_t &gt;</type>
+        <definition>typedef wxScopedCharTypeBuffer&lt;wchar_t&gt; wxScopedWCharBuffer</definition>
+        <argsstring></argsstring>
+        <name>wxScopedWCharBuffer</name>
+        <briefdescription>
+<para>Scoped wchar_t buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="119" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h"/>
+  </compounddef>
+</doxygen>

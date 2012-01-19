@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_c_s_conv" kind="class" prot="public">
+    <compoundname>wxCSConv</compoundname>
+    <basecompoundref refid="classwx_m_b_conv" prot="public" virt="non-virtual">wxMBConv</basecompoundref>
+    <includes local="no">wx/strconv.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_c_s_conv_1a32cceb7ebd16dc440f161a5049c14bd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCSConv::wxCSConv</definition>
+        <argsstring>(const wxString &amp;charset)</argsstring>
+        <name>wxCSConv</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>charset</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can specify the name of the character set you want to convert from/to. If the character set name is not recognized, ISO 8859-1 is used as fall back, use <ref refid="classwx_c_s_conv_1a644589a9f626556ab0c715b0cbef1dc4" kindref="member">IsOk()</ref> to test for this.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>charset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the encoding, shouldn&apos;t be empty. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_c_s_conv_1a9bef78f02754fca9414fbe43cfff0c95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCSConv::wxCSConv</definition>
+        <argsstring>(wxFontEncoding encoding)</argsstring>
+        <name>wxCSConv</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encoding</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can specify an encoding constant for the character set you want to convert from/to. Use <ref refid="classwx_c_s_conv_1a644589a9f626556ab0c715b0cbef1dc4" kindref="member">IsOk()</ref> after construction to check whether the encoding is supported by the current system.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>encoding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any valid (i.e. not wxFONTENCODING_MAX) font encoding. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="465"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_c_s_conv_1a644589a9f626556ab0c715b0cbef1dc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxCSConv::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the charset (or the encoding) given at constructor is really available to use. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false if ISO 8859-1 will be used instead.</para><para>Note this does not mean that a given string will be correctly converted. A malformed string may still make conversion functions return <computeroutput>wxCONV_FAILED</computeroutput>.</para><para><simplesect kind="since"><para>2.8.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="479"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class converts between any character set supported by the system and Unicode. </para>    </briefdescription>
+    <detaileddescription>
+<para>Please notice that this class uses system-provided conversion functions, e.g. <computeroutput>MultiByteToWideChar()</computeroutput> and <computeroutput>WideCharToMultiByte()</computeroutput> under MSW and <computeroutput>iconv(3)</computeroutput> under Unix systems and as such may support different encodings and different encoding names on different platforms (although all relatively common encodings are supported should be supported everywhere).</para><para>It has one predefined instance, <bold>wxConvLocal</bold>, for the default user character set.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref>, <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>, <ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5209">
+        <label>wxCSConv</label>
+        <link refid="classwx_c_s_conv"/>
+        <childnode refid="5210" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5210">
+        <label>wxMBConv</label>
+        <link refid="classwx_m_b_conv"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5211">
+        <label>wxCSConv</label>
+        <link refid="classwx_c_s_conv"/>
+        <childnode refid="5212" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5212">
+        <label>wxMBConv</label>
+        <link refid="classwx_m_b_conv"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="443" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" bodystart="442" bodyend="480"/>
+    <listofallmembers>
+      <member refid="classwx_m_b_conv_1ae6fd1020a2c7c82191c4822682e80d05" prot="public" virt="pure-virtual"><scope>wxCSConv</scope><name>Clone</name></member>
+      <member refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cMB2WC</name></member>
+      <member refid="classwx_m_b_conv_1aced3961b0bdad13f390343b2b70d49b1" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cMB2WC</name></member>
+      <member refid="classwx_m_b_conv_1a62b723fea6758812e786a3ec5797f8ba" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cMB2WX</name></member>
+      <member refid="classwx_m_b_conv_1af8632260d14b0afcba0f2bc524ca2134" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cMB2WX</name></member>
+      <member refid="classwx_m_b_conv_1a496c808fc769800659e5de1a74115a54" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cWC2MB</name></member>
+      <member refid="classwx_m_b_conv_1a34d1ea0725e5001e4f74a5dbf5c81c4f" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cWC2MB</name></member>
+      <member refid="classwx_m_b_conv_1a9bcb820aebfdd3d3e50a929b01c52f8d" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cWC2WX</name></member>
+      <member refid="classwx_m_b_conv_1ac6c7885e9186d5ce2786b49169c872f1" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cWC2WX</name></member>
+      <member refid="classwx_m_b_conv_1a15f4266aa96806bb5eebc9b1c4eaff05" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cWX2MB</name></member>
+      <member refid="classwx_m_b_conv_1a3bbb71a7814c12dac290f6b61a3acc15" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cWX2MB</name></member>
+      <member refid="classwx_m_b_conv_1ae08f0764f8acb6b075846c8bf126f57b" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cWX2WC</name></member>
+      <member refid="classwx_m_b_conv_1ab4eec03d83e532986aca1e41ad472bb8" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cWX2WC</name></member>
+      <member refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" prot="public" virt="virtual"><scope>wxCSConv</scope><name>FromWChar</name></member>
+      <member refid="classwx_m_b_conv_1a9d22d211135f265ed018e103590a61f0" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>GetMaxMBNulLen</name></member>
+      <member refid="classwx_m_b_conv_1a2d6590cbcc686be76a9c4f1c071ff99f" prot="public" virt="virtual"><scope>wxCSConv</scope><name>GetMBNulLen</name></member>
+      <member refid="classwx_c_s_conv_1a644589a9f626556ab0c715b0cbef1dc4" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>IsOk</name></member>
+      <member refid="classwx_m_b_conv_1a79d63eff51836148157c986943835742" prot="public" virt="virtual"><scope>wxCSConv</scope><name>MB2WC</name></member>
+      <member refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" prot="public" virt="virtual"><scope>wxCSConv</scope><name>ToWChar</name></member>
+      <member refid="classwx_m_b_conv_1a537a0f90ab4738e3e9be58d9a77b71b1" prot="public" virt="virtual"><scope>wxCSConv</scope><name>WC2MB</name></member>
+      <member refid="classwx_c_s_conv_1a32cceb7ebd16dc440f161a5049c14bd8" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>wxCSConv</name></member>
+      <member refid="classwx_c_s_conv_1a9bef78f02754fca9414fbe43cfff0c95" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>wxCSConv</name></member>
+      <member refid="classwx_m_b_conv_1ab2348d20301679ce0cf5c565446b0080" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>wxMBConv</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

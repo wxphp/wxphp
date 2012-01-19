@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_stream_to_text_redirector" kind="class" prot="public">
+    <compoundname>wxStreamToTextRedirector</compoundname>
+    <includes local="no">wx/textctrl.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_stream_to_text_redirector_1aaf6717267c8638d0ade7fe5ae143cae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxStreamToTextRedirector::wxStreamToTextRedirector</definition>
+        <argsstring>(wxTextCtrl *text, ostream *ostr)</argsstring>
+        <name>wxStreamToTextRedirector</name>
+        <param>
+          <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>ostr</declname>
+        </param>
+        <briefdescription>
+<para>The constructor starts redirecting output sent to <emphasis>ostr</emphasis> or <emphasis>cout</emphasis> for the default parameter value to the text control <emphasis>text</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text control to append output too, must be non-NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ostr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The C++ stream to redirect, cout is used if it is NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1575"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_stream_to_text_redirector_1a7e2cac14100ba43aea4acee1a747854c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxStreamToTextRedirector::~wxStreamToTextRedirector</definition>
+        <argsstring>()</argsstring>
+        <name>~wxStreamToTextRedirector</name>
+        <briefdescription>
+<para>When a <ref refid="classwx_stream_to_text_redirector" kindref="compound">wxStreamToTextRedirector</ref> object is destroyed, the redirection is ended and any output sent to the C++ ostream which had been specified at the time of the object construction will go to its original destination. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1582"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class can be used to (temporarily) redirect all output sent to a C++ ostream object to a <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> instead. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Some compilers and/or build configurations don&apos;t support multiply inheriting <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> from <computeroutput>std::streambuf</computeroutput> in which case this class is not compiled in. You also must have <computeroutput>wxUSE_STD_IOSTREAM</computeroutput> option on (i.e. set to 1) in your <computeroutput>setup.h</computeroutput> to be able to use it. Under Unix, specify <computeroutput>--enable-std_iostreams</computeroutput> switch when running configure for this.</para></simplesect>
+Example of usage:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref>*<sp/>text<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref>(...);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_stream_to_text_redirector" kindref="compound" tooltip="This class can be used to (temporarily) redirect all output sent to a C++ ostream...">wxStreamToTextRedirector</ref><sp/>redirect(text);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>goes<sp/>to<sp/>the<sp/>text<sp/>control</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Hello,<sp/>text!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>goes<sp/>somewhere<sp/>else,<sp/>presumably<sp/>to<sp/>stdout</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Hello,<sp/>console!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" line="1564" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textctrl.h" bodystart="1563" bodyend="1583"/>
+    <listofallmembers>
+      <member refid="classwx_stream_to_text_redirector_1aaf6717267c8638d0ade7fe5ae143cae0" prot="public" virt="non-virtual"><scope>wxStreamToTextRedirector</scope><name>wxStreamToTextRedirector</name></member>
+      <member refid="classwx_stream_to_text_redirector_1a7e2cac14100ba43aea4acee1a747854c" prot="public" virt="non-virtual"><scope>wxStreamToTextRedirector</scope><name>~wxStreamToTextRedirector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

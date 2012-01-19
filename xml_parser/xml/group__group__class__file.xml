@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__file" kind="group">
+    <compoundname>group_class_file</compoundname>
+    <title>File Handling</title>
+    <innerclass refid="classwx_dir_traverser" prot="public">wxDirTraverser</innerclass>
+    <innerclass refid="classwx_dir" prot="public">wxDir</innerclass>
+    <innerclass refid="classwx_f_file" prot="public">wxFFile</innerclass>
+    <innerclass refid="classwx_temp_file" prot="public">wxTempFile</innerclass>
+    <innerclass refid="classwx_file" prot="public">wxFile</innerclass>
+    <innerclass refid="classwx_path_list" prot="public">wxPathList</innerclass>
+    <innerclass refid="classwx_file_name" prot="public">wxFileName</innerclass>
+    <innerclass refid="classwx_f_s_file" prot="public">wxFSFile</innerclass>
+    <innerclass refid="classwx_file_system_watcher" prot="public">wxFileSystemWatcher</innerclass>
+    <innerclass refid="classwx_standard_paths" prot="public">wxStandardPaths</innerclass>
+    <innerclass refid="classwx_text_file" prot="public">wxTextFile</innerclass>
+    <briefdescription>
+<para>wxWidgets has several small classes to work with disk files and directories. </para>    </briefdescription>
+    <detaileddescription>
+<para>Related Overviews: <ref refid="overview__file" kindref="compound">File Classes and Functions</ref></para><para>Related macros/global-functions group: <ref refid="group__group__funcmacro__file" kindref="compound">Files and Directories</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

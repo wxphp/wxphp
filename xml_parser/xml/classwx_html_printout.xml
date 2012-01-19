@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_html_printout" kind="class" prot="public">
+    <compoundname>wxHtmlPrintout</compoundname>
+    <basecompoundref refid="classwx_printout" prot="public" virt="non-virtual">wxPrintout</basecompoundref>
+    <includes local="no">wx/html/htmprint.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_html_printout_1a44c5b271d16e2e231755c4ca3f6ae651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHtmlPrintout::wxHtmlPrintout</definition>
+        <argsstring>(const wxString &amp;title=&quot;Printout&quot;)</argsstring>
+        <name>wxHtmlPrintout</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+          <defval>&quot;Printout&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="366"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_printout_1a651c760257e1518eb60e11bbe42235d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlPrintout::SetFonts</definition>
+        <argsstring>(const wxString &amp;normal_face, const wxString &amp;fixed_face, const int *sizes=NULL)</argsstring>
+        <name>SetFonts</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>normal_face</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fixed_face</declname>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>sizes</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This function sets font sizes and faces. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" kindref="member">wxHtmlWindow::SetFonts</ref> for detailed description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_printout_1a312c6639a9a81bb495b0ba2b497fa27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlPrintout::SetFooter</definition>
+        <argsstring>(const wxString &amp;footer, int pg=wxPAGE_ALL)</argsstring>
+        <name>SetFooter</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>footer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pg</declname>
+          <defval>wxPAGE_ALL</defval>
+        </param>
+        <briefdescription>
+<para>Set page footer. </para>        </briefdescription>
+        <detaileddescription>
+<para>The following macros can be used inside it:<itemizedlist>
+<listitem><para>@DATE@ is replaced by the current date in default format</para></listitem><listitem><para>@PAGENUM@ is replaced by page number</para></listitem><listitem><para>@PAGESCNT@ is replaced by total number of pages</para></listitem><listitem><para>@TIME@ is replaced by the current time in default format</para></listitem><listitem><para>@TITLE@ is replaced with the title of the document</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>footer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML text to be used as footer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of wxPAGE_ODD, wxPAGE_EVEN and wxPAGE_ALL constants. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_printout_1af21e5145232578a5117310dc5eed3108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlPrintout::SetHeader</definition>
+        <argsstring>(const wxString &amp;header, int pg=wxPAGE_ALL)</argsstring>
+        <name>SetHeader</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pg</declname>
+          <defval>wxPAGE_ALL</defval>
+        </param>
+        <briefdescription>
+<para>Set page header. </para>        </briefdescription>
+        <detaileddescription>
+<para>The following macros can be used inside it:<itemizedlist>
+<listitem><para>@DATE@ is replaced by the current date in default format</para></listitem><listitem><para>@PAGENUM@ is replaced by page number</para></listitem><listitem><para>@PAGESCNT@ is replaced by total number of pages</para></listitem><listitem><para>@TIME@ is replaced by the current time in default format</para></listitem><listitem><para>@TITLE@ is replaced with the title of the document</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML text to be used as header. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of wxPAGE_ODD, wxPAGE_EVEN and wxPAGE_ALL constants. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_printout_1adb4187f1d3ce0caa5a7c256952fe0189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlPrintout::SetHtmlFile</definition>
+        <argsstring>(const wxString &amp;htmlfile)</argsstring>
+        <name>SetHtmlFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>htmlfile</declname>
+        </param>
+        <briefdescription>
+<para>Prepare the class for printing this HTML <bold>file</bold>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The file may be located on any virtual file system or it may be normal file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_printout_1ac868e1967e343fc1921d9553f53ec02f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlPrintout::SetHtmlText</definition>
+        <argsstring>(const wxString &amp;html, const wxString &amp;basepath=wxEmptyString, bool isdir=true)</argsstring>
+        <name>SetHtmlText</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>html</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>basepath</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isdir</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Prepare the class for printing this HTML text. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>html</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML text. (NOT file!) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base directory (html string would be stored there if it was in file). It is used to determine path for loading images, for example. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isdir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>false if basepath is filename, true if it is directory name (see <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> for detailed explanation). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_printout_1a87e4ae45e436c3ba1791f01b4988f047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlPrintout::SetMargins</definition>
+        <argsstring>(float top=25.2, float bottom=25.2, float left=25.2, float right=25.2, float spaces=5)</argsstring>
+        <name>SetMargins</name>
+        <param>
+          <type>float</type>
+          <declname>top</declname>
+          <defval>25.2</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bottom</declname>
+          <defval>25.2</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>left</declname>
+          <defval>25.2</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>right</declname>
+          <defval>25.2</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>spaces</declname>
+          <defval>5</defval>
+        </param>
+        <briefdescription>
+<para>Sets margins in millimeters. </para>        </briefdescription>
+        <detaileddescription>
+<para>Defaults to 1 inch for margins and 0.5cm for space between text and header and/or footer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="441"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_html_printout_1a87bed268a20afa774dfd98e4d6d44167" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxHtmlPrintout::AddFilter</definition>
+        <argsstring>(wxHtmlFilter *filter)</argsstring>
+        <name>AddFilter</name>
+        <param>
+          <type><ref refid="classwx_html_filter" kindref="compound">wxHtmlFilter</ref> *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Adds a filter to the static list of filters for <ref refid="classwx_html_printout" kindref="compound">wxHtmlPrintout</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_html_filter" kindref="compound">wxHtmlFilter</ref> for further information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="372"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class serves as printout class for HTML documents. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref>, <ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7103">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7102">
+        <label>wxPrintout</label>
+        <link refid="classwx_printout"/>
+        <childnode refid="7103" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7101">
+        <label>wxHtmlPrintout</label>
+        <link refid="classwx_html_printout"/>
+        <childnode refid="7102" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7106">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7107" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7105">
+        <label>wxPrintout</label>
+        <link refid="classwx_printout"/>
+        <childnode refid="7106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7104">
+        <label>wxHtmlPrintout</label>
+        <link refid="classwx_html_printout"/>
+        <childnode refid="7105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7107">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="361" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" bodystart="360" bodyend="442"/>
+    <listofallmembers>
+      <member refid="classwx_html_printout_1a87bed268a20afa774dfd98e4d6d44167" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>AddFilter</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlPrintout</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHtmlPrintout</scope><name>CreateRefData</name></member>
+      <member refid="classwx_printout_1a19fa2e3cb6e4e9563a8d3da9551dad84" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>FitThisSizeToPage</name></member>
+      <member refid="classwx_printout_1a440ddf4f34d82578b8307296e44ec456" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>FitThisSizeToPageMargins</name></member>
+      <member refid="classwx_printout_1a94b4ce43d8a18bfe89a9c1abecb3fd64" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>FitThisSizeToPaper</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_printout_1a0d7807fc425779ab74953d51d6df8652" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetDC</name></member>
+      <member refid="classwx_printout_1a4a6c585035339f54eb442b67e81af6fb" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetLogicalPageMarginsRect</name></member>
+      <member refid="classwx_printout_1affa9d2b903b2b97471967cba1acd9017" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetLogicalPageRect</name></member>
+      <member refid="classwx_printout_1aaa3752179bf80207f5cc117b4ab3b258" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetLogicalPaperRect</name></member>
+      <member refid="classwx_printout_1a3fead3e929153c58b07f3c3521b9fdac" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>GetPageInfo</name></member>
+      <member refid="classwx_printout_1a4e3fac8f10527e6a964d8d0b7c7b748d" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetPageSizeMM</name></member>
+      <member refid="classwx_printout_1a6c8c759e3b617d842675fdd6e5bdc33c" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetPageSizePixels</name></member>
+      <member refid="classwx_printout_1a8da1832a8fd8570c88a65d3f2ccb7928" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetPaperRectPixels</name></member>
+      <member refid="classwx_printout_1aab85573418897ab2f0b5933f0cbf7905" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetPPIPrinter</name></member>
+      <member refid="classwx_printout_1ac743cd3e671020ee1d60296ad3425afc" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetPPIScreen</name></member>
+      <member refid="classwx_printout_1a270ebf6776a2d7c93e66fdae6116065d" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetPreview</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>GetRefData</name></member>
+      <member refid="classwx_printout_1a91b233541df8475aa69704bd3dbf7744" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>GetTitle</name></member>
+      <member refid="classwx_printout_1a7829a7066a496a14d677d4958e28079f" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>HasPage</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>IsKindOf</name></member>
+      <member refid="classwx_printout_1abcc8c9b2bb3dd63b1eff6a7b8327d291" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>IsPreview</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>m_refData</name></member>
+      <member refid="classwx_printout_1a3fa364935e551748a70a7126d22df728" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>MapScreenSizeToDevice</name></member>
+      <member refid="classwx_printout_1acb6a81daabfcfcf601a877bdc69fa46b" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>MapScreenSizeToPage</name></member>
+      <member refid="classwx_printout_1aa38f61997d6764e51468fd76078b241e" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>MapScreenSizeToPageMargins</name></member>
+      <member refid="classwx_printout_1a434261996b9cec78ee5cbc61bac9caf7" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>MapScreenSizeToPaper</name></member>
+      <member refid="classwx_printout_1a3d62cbdec3ac1675f46f9723327736b1" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>OffsetLogicalOrigin</name></member>
+      <member refid="classwx_printout_1ad278a98bfc9aa0a9a86a6e496c0f2432" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>OnBeginDocument</name></member>
+      <member refid="classwx_printout_1a1540fb73d528065729d438aa12c34851" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>OnBeginPrinting</name></member>
+      <member refid="classwx_printout_1a68a80cfbdc82c5239549c8eb6a6ce570" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>OnEndDocument</name></member>
+      <member refid="classwx_printout_1ab8a9b5306101a4fbfb25c6252756f6b8" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>OnEndPrinting</name></member>
+      <member refid="classwx_printout_1a68c588cbf1b17a85a88db4738260e01b" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>OnPreparePrinting</name></member>
+      <member refid="classwx_printout_1abac930e68b063cd609059fa9d96e7831" prot="public" virt="pure-virtual"><scope>wxHtmlPrintout</scope><name>OnPrintPage</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>Ref</name></member>
+      <member refid="classwx_html_printout_1a651c760257e1518eb60e11bbe42235d3" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>SetFonts</name></member>
+      <member refid="classwx_html_printout_1a312c6639a9a81bb495b0ba2b497fa27d" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>SetFooter</name></member>
+      <member refid="classwx_html_printout_1af21e5145232578a5117310dc5eed3108" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>SetHeader</name></member>
+      <member refid="classwx_html_printout_1adb4187f1d3ce0caa5a7c256952fe0189" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>SetHtmlFile</name></member>
+      <member refid="classwx_html_printout_1ac868e1967e343fc1921d9553f53ec02f" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>SetHtmlText</name></member>
+      <member refid="classwx_printout_1a35af267f145372f666f930680ebd4fcf" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>SetLogicalOrigin</name></member>
+      <member refid="classwx_html_printout_1a87e4ae45e436c3ba1791f01b4988f047" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>SetMargins</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>UnShare</name></member>
+      <member refid="classwx_html_printout_1a44c5b271d16e2e231755c4ca3f6ae651" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>wxHtmlPrintout</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>wxObject</name></member>
+      <member refid="classwx_printout_1a6e159637157497fb10aff6e368bd2817" prot="public" virt="non-virtual"><scope>wxHtmlPrintout</scope><name>wxPrintout</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>~wxObject</name></member>
+      <member refid="classwx_printout_1a2caf681beebfcfb9df6f3f62bdce626b" prot="public" virt="virtual"><scope>wxHtmlPrintout</scope><name>~wxPrintout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

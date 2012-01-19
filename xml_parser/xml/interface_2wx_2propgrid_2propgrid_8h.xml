@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2propgrid_2propgrid_8h" kind="file">
+    <compoundname>propgrid.h</compoundname>
+    <innerclass refid="classwx_p_g_validation_info" prot="public">wxPGValidationInfo</innerclass>
+    <innerclass refid="classwx_property_grid" prot="public">wxPropertyGrid</innerclass>
+    <innerclass refid="classwx_property_grid_event" prot="public">wxPropertyGridEvent</innerclass>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="define" id="interface_2wx_2propgrid_2propgrid_8h_1acf768b936525faa42392f653a3296eb4" prot="public" static="no">
+        <name>wxPG_DEFAULT_STYLE</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Combines various styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="200" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interface_2wx_2propgrid_2propgrid_8h_1a422babdd5ce8058435ed638fd1c486b0" prot="public" static="no">
+        <name>wxPGMAN_DEFAULT_STYLE</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Combines various styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="204" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8" prot="public" static="no">
+        <name>wxPG_WINDOW_STYLES</name>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a6bc5847c59e582bb9c3910ccb54d8635" prot="public">
+          <name>wxPG_AUTO_SORT</name>
+          <initializer> 0x00000010</initializer>
+          <briefdescription>
+<para>This will cause Sort() automatically after an item is added. </para>          </briefdescription>
+          <detaileddescription>
+<para>When inserting a lot of items in this mode, it may make sense to use Freeze() before operations and Thaw() afterwards to increase performance. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a520e1caebc8b15e44aabed8390640e33" prot="public">
+          <name>wxPG_HIDE_CATEGORIES</name>
+          <initializer> 0x00000020</initializer>
+          <briefdescription>
+<para>Categories are not initially shown (even if added). </para>          </briefdescription>
+          <detaileddescription>
+<para>IMPORTANT NOTE: If you do not plan to use categories, then this style will waste resources. This flag can also be changed using <ref refid="classwx_property_grid_1a69fd5ebd1012ee52f35721c824327278" kindref="member">wxPropertyGrid::EnableCategories</ref> method. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a2e454eabedc9a6b7c52f11dfd0e562dd" prot="public">
+          <name>wxPG_ALPHABETIC_MODE</name>
+          <initializer> (wxPG_HIDE_CATEGORIES|wxPG_AUTO_SORT)</initializer>
+          <briefdescription>
+<para>This style combines non-categoric mode and automatic sorting. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a9b4250bcee1b0c651e9b76b3b88bd68a" prot="public">
+          <name>wxPG_BOLD_MODIFIED</name>
+          <initializer> 0x00000040</initializer>
+          <briefdescription>
+<para>Modified values are shown in bold font. </para>          </briefdescription>
+          <detaileddescription>
+<para>Changing this requires Refresh() to show changes. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a998b9d55c606adb1010be7438286e3c5" prot="public">
+          <name>wxPG_SPLITTER_AUTO_CENTER</name>
+          <initializer> 0x00000080</initializer>
+          <briefdescription>
+<para>When <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> is resized, splitter moves to the center. </para>          </briefdescription>
+          <detaileddescription>
+<para>This behaviour stops once the user manually moves the splitter. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a318af188e0c029fbf3b244162928533b" prot="public">
+          <name>wxPG_TOOLTIPS</name>
+          <initializer> 0x00000100</initializer>
+          <briefdescription>
+<para>Display tool tips for cell text that cannot be shown completely. </para>          </briefdescription>
+          <detaileddescription>
+<para>If wxUSE_TOOLTIPS is 0, then this doesn&apos;t have any effect. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a5081b633c49cfe8fb025b10f561d9e36" prot="public">
+          <name>wxPG_HIDE_MARGIN</name>
+          <initializer> 0x00000200</initializer>
+          <briefdescription>
+<para>Disables margin and hides all expand/collapse buttons that would appear outside the margin (for sub-properties). </para>          </briefdescription>
+          <detaileddescription>
+<para>Toggling this style automatically expands all collapsed items. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8af03fbcc10246ac2b290f7b05e5ee6ab3" prot="public">
+          <name>wxPG_STATIC_SPLITTER</name>
+          <initializer> 0x00000400</initializer>
+          <briefdescription>
+<para>This style prevents user from moving the splitter. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8af2bad0b45016e8adfad7d838664451e3" prot="public">
+          <name>wxPG_STATIC_LAYOUT</name>
+          <initializer> (wxPG_HIDE_MARGIN|wxPG_STATIC_SPLITTER)</initializer>
+          <briefdescription>
+<para>Combination of other styles that make it impossible for user to modify the layout. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8af5bb6725aca2d195e0fa809d33a71d25" prot="public">
+          <name>wxPG_LIMITED_EDITING</name>
+          <initializer> 0x00000800</initializer>
+          <briefdescription>
+<para>Disables <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> based editors for properties which can be edited in another way. </para>          </briefdescription>
+          <detaileddescription>
+<para>Equals calling <ref refid="classwx_property_grid_interface_1aac3d13601fb3a97f531b86923b20d5ff" kindref="member">wxPropertyGrid::LimitPropertyEditing()</ref> for all added properties. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8a4c708718b58d1b4b61a8bb23be022ec4" prot="public">
+          <name>wxPG_TOOLBAR</name>
+          <initializer> 0x00001000</initializer>
+          <briefdescription>
+<para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> only: Show tool bar for mode and page selection. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8ae7a176f7037ce590e834bf62659a8326" prot="public">
+          <name>wxPG_DESCRIPTION</name>
+          <initializer> 0x00002000</initializer>
+          <briefdescription>
+<para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> only: Show adjustable text box showing description or help text, if available, for currently selected property. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a967b646b15085e115051d83a65ffdfe8acc571e4946f021638788edc51ce68b3f" prot="public">
+          <name>wxPG_NO_INTERNAL_BORDER</name>
+          <initializer> 0x00004000</initializer>
+          <briefdescription>
+<para><ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> only: don&apos;t show an internal border around the property grid. </para>          </briefdescription>
+          <detaileddescription>
+<para>Recommended if you use a header. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="interface_2wx_2propgrid_2propgrid_8h_1propgrid_window_styles">
+<title>wxPropertyGrid Window Styles</title>
+<para>SetWindowStyleFlag method can be used to modify some of these at run-time. </para></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="16" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="enum" id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6" prot="public" static="no">
+        <name>wxPG_EX_WINDOW_STYLES</name>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6a063bf43e95d2d3b24e073f8edeef8821" prot="public">
+          <name>wxPG_EX_INIT_NOCAT</name>
+          <initializer> 0x00001000</initializer>
+          <briefdescription>
+<para>NOTE: wxPG_EX_xxx are extra window styles and must be set using SetExtraStyle() member function. </para>          </briefdescription>
+          <detaileddescription>
+<para>Speeds up switching to wxPG_HIDE_CATEGORIES mode. Initially, if wxPG_HIDE_CATEGORIES is not defined, the non-categorized data storage is not activated, and switching the mode first time becomes somewhat slower. wxPG_EX_INIT_NOCAT activates the non-categorized data storage right away.</para><para>NOTE: If you do plan not switching to non-categoric mode, or if you don&apos;t plan to use categories at all, then using this style will result in waste of resources. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6a443aca3a5f6f899f70a84b5590d48b5b" prot="public">
+          <name>wxPG_EX_NO_FLAT_TOOLBAR</name>
+          <initializer> 0x00002000</initializer>
+          <briefdescription>
+<para>Extended window style that sets <ref refid="classwx_property_grid_manager" kindref="compound">wxPropertyGridManager</ref> tool bar to not use flat style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6aac731072cfa6c87a294cb684a1a2d5b6" prot="public">
+          <name>wxPG_EX_MODE_BUTTONS</name>
+          <initializer> 0x00008000</initializer>
+          <briefdescription>
+<para>Shows alphabetic/categoric mode buttons from tool bar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6aab51ec531320af974c83f1af88dd14b1" prot="public">
+          <name>wxPG_EX_HELP_AS_TOOLTIPS</name>
+          <initializer> 0x00010000</initializer>
+          <briefdescription>
+<para>Show property help strings as tool tips instead as text on the status bar. </para>          </briefdescription>
+          <detaileddescription>
+<para>You can set the help strings using SetPropertyHelpString member function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6a18c6e14dfad9993bf1b8e45e5ab9e86f" prot="public">
+          <name>wxPG_EX_NATIVE_DOUBLE_BUFFERING</name>
+          <initializer> 0x00080000</initializer>
+          <briefdescription>
+<para>Allows relying on native double-buffering. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6a3c4ec029826c396e4316f371bb891442" prot="public">
+          <name>wxPG_EX_AUTO_UNSPECIFIED_VALUES</name>
+          <initializer> 0x00200000</initializer>
+          <briefdescription>
+<para>Set this style to let user have ability to set values of properties to unspecified state. </para>          </briefdescription>
+          <detaileddescription>
+<para>Same as setting wxPG_PROP_AUTO_UNSPECIFIED for all properties. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6acf6fde818247b930c377b6371bece78b" prot="public">
+          <name>wxPG_EX_WRITEONLY_BUILTIN_ATTRIBUTES</name>
+          <initializer> 0x00400000</initializer>
+          <briefdescription>
+<para>If this style is used, built-in attributes (such as wxPG_FLOAT_PRECISION and wxPG_STRING_PASSWORD) are not stored into property&apos;s attribute storage (thus they are not readable). </para>          </briefdescription>
+          <detaileddescription>
+<para>Note that this option is global, and applies to all wxPG property containers. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6ae8f6908ee6c88e7d4ed26683e9ece0be" prot="public">
+          <name>wxPG_EX_HIDE_PAGE_BUTTONS</name>
+          <initializer> 0x01000000</initializer>
+          <briefdescription>
+<para>Hides page selection buttons from tool bar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6a570f15e25aa2d007a827e26bfebc1b5f" prot="public">
+          <name>wxPG_EX_MULTIPLE_SELECTION</name>
+          <initializer> 0x02000000</initializer>
+          <briefdescription>
+<para>Allows multiple properties to be selected by user (by pressing SHIFT when clicking on a property, or by dragging with left mouse button down). </para>          </briefdescription>
+          <detaileddescription>
+<para>You can get array of selected properties with <ref refid="classwx_property_grid_interface_1a49ccd0da1d0f4a68004e1a174bf5f998" kindref="member">wxPropertyGridInterface::GetSelectedProperties()</ref>. In multiple selection mode <ref refid="classwx_property_grid_interface_1a302ae0ff624d48131544f6010373e599" kindref="member">wxPropertyGridInterface::GetSelection()</ref> returns property which has editor active (usually the first one selected). Other useful member functions are ClearSelection(), AddToSelection() and RemoveFromSelection(). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6aaa0e72711f15d171d27449dccc8f32d8" prot="public">
+          <name>wxPG_EX_ENABLE_TLP_TRACKING</name>
+          <initializer> 0x04000000</initializer>
+          <briefdescription>
+<para>This enables top-level window tracking which allows <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> to notify the application of last-minute property value changes by user. </para>          </briefdescription>
+          <detaileddescription>
+<para>This style is not enabled by default because it may cause crashes when <ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> is used in with wxAUI or similar system.</para><para><simplesect kind="remark"><para>If you are not in fact using any system that may change wxPropertyGrid&apos;s top-level parent window on its own, then you are recommended to enable this style. </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6ab75ba2930da187508cbfafd81c8499b5" prot="public">
+          <name>wxPG_EX_NO_TOOLBAR_DIVIDER</name>
+          <initializer> 0x04000000</initializer>
+          <briefdescription>
+<para>Don&apos;t show divider above toolbar, on Windows. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1aeebee6f1621b080999ea22a5b76b00a6a8335f07263e84a00e7922d83d1b3aa09" prot="public">
+          <name>wxPG_EX_TOOLBAR_SEPARATOR</name>
+          <initializer> 0x08000000</initializer>
+          <briefdescription>
+<para>Show a separator below the toolbar. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Combines various styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="101" bodyend="196"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="enum" id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035e" prot="public" static="no">
+        <name>wxPG_VALIDATION_FAILURE_BEHAVIOR_FLAGS</name>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035ead2d679dfb2b9d9b7b3a0bedd130599c7" prot="public">
+          <name>wxPG_VFB_STAY_IN_PROPERTY</name>
+          <initializer> 0x01</initializer>
+          <briefdescription>
+<para>Prevents user from leaving property unless value is valid. </para>          </briefdescription>
+          <detaileddescription>
+<para>If this behaviour flag is not used, then value change is instead cancelled. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035ea8a5434967b7ab365106699c8b8eb729b" prot="public">
+          <name>wxPG_VFB_BEEP</name>
+          <initializer> 0x02</initializer>
+          <briefdescription>
+<para>Calls <ref refid="group__group__funcmacro__dialog_1ga3267f33060d2ae403862427acb758bab" kindref="member">wxBell()</ref> on validation failure. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035ea8233415ba54bde9851d5f6852a75fdd6" prot="public">
+          <name>wxPG_VFB_MARK_CELL</name>
+          <initializer> 0x04</initializer>
+          <briefdescription>
+<para>Cell with invalid value will be marked (with red colour). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035ea08faa22272068c52db70546cb7f81334" prot="public">
+          <name>wxPG_VFB_SHOW_MESSAGE</name>
+          <initializer> 0x08</initializer>
+          <briefdescription>
+<para>Display a text message explaining the situation. </para>          </briefdescription>
+          <detaileddescription>
+<para>To customize the way the message is displayed, you need to reimplement <ref refid="classwx_property_grid_1a6eff1187beba43109be7a12194b0bf2b" kindref="member">wxPropertyGrid::DoShowPropertyError()</ref> in a derived class. Default behaviour is to display the text on the top-level frame&apos;s status bar, if present, and otherwise using wxMessageBox. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035ea80db248a442ffa85dd5155d7eb325129" prot="public">
+          <name>wxPG_VFB_SHOW_MESSAGEBOX</name>
+          <initializer> 0x10</initializer>
+          <briefdescription>
+<para>Similar to wxPG_VFB_SHOW_MESSAGE, except always displays the message using wxMessageBox. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035eab0d3fce0d9c8b45259bd4f2ca6c95397" prot="public">
+          <name>wxPG_VFB_SHOW_MESSAGE_ON_STATUSBAR</name>
+          <initializer> 0x20</initializer>
+          <briefdescription>
+<para>Similar to wxPG_VFB_SHOW_MESSAGE, except always displays the message on the status bar (when present - you can reimplement <ref refid="classwx_property_grid_1a56a8acd3679b1906251057ecc95f2a74" kindref="member">wxPropertyGrid::GetStatusBar()</ref> in a derived class to specify this yourself). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a509a11f37ea5e56864e257cde913035ea2d35b64762dd395be8d9fc4bdde4f685" prot="public">
+          <name>wxPG_VFB_DEFAULT</name>
+          <initializer> wxPG_VFB_MARK_CELL |
+                                      wxPG_VFB_SHOW_MESSAGEBOX</initializer>
+          <briefdescription>
+<para>Defaults. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="interface_2wx_2propgrid_2propgrid_8h_1propgrid_vfbflags">
+<title>wxPropertyGrid Validation Failure behaviour Flags</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="216" bodyend="265"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="enum" id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0a" prot="public" static="no">
+        <name>wxPG_KEYBOARD_ACTIONS</name>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aad57a1786fd0990702f586963235fd1e0" prot="public">
+          <name>wxPG_ACTION_INVALID</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aa44d7740b93df1d29a130cddacdaefe0e" prot="public">
+          <name>wxPG_ACTION_NEXT_PROPERTY</name>
+          <briefdescription>
+<para>Select the next property. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aa154029364711711e9ebad2002f35ecb6" prot="public">
+          <name>wxPG_ACTION_PREV_PROPERTY</name>
+          <briefdescription>
+<para>Select the previous property. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aaeebc6da0da51b33728f80b22b356bb52" prot="public">
+          <name>wxPG_ACTION_EXPAND_PROPERTY</name>
+          <briefdescription>
+<para>Expand the selected property, if it has child items. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aac651d7af0ca9b61c09bc00c2ce23a7ac" prot="public">
+          <name>wxPG_ACTION_COLLAPSE_PROPERTY</name>
+          <briefdescription>
+<para>Collapse the selected property, if it has child items. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aa81557288979a810f7408553bc4d13f83" prot="public">
+          <name>wxPG_ACTION_CANCEL_EDIT</name>
+          <briefdescription>
+<para>Cancel and undo any editing done in the currently active property editor. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aae9909d01fad9d6f803805212e1cbadd2" prot="public">
+          <name>wxPG_ACTION_EDIT</name>
+          <briefdescription>
+<para>Move focus to the editor control of the currently selected property. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aa75946204944fc416964a57bef53e816c" prot="public">
+          <name>wxPG_ACTION_PRESS_BUTTON</name>
+          <briefdescription>
+<para>Causes editor&apos;s button (if any) to be pressed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2propgrid_2propgrid_8h_1a241dc2408e56a31edee6739e9b101b0aa11fcc0f877def0f9b8ff03bb5337b89a" prot="public">
+          <name>wxPG_ACTION_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="interface_2wx_2propgrid_2propgrid_8h_1propgrid_keyboard_actions">
+<title>wxPropertyGrid Action Identifiers</title>
+<para>These are used with <ref refid="classwx_property_grid_1af19463a573440f6bc928ceaa60a1e5e6" kindref="member">wxPropertyGrid::AddActionTrigger()</ref> and <ref refid="classwx_property_grid_1adb1e0d4270da795649f7e323b41f5a6b" kindref="member">wxPropertyGrid::ClearActionTriggers()</ref>. </para></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="321" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="320" bodyend="350"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="interface_2wx_2propgrid_2propgrid_8h_1ae6021bf370bb7766e513f49649dee232" prot="public" static="no">
+        <type><ref refid="defs_8h_1a02052a0390b909998c03fe2371d8e83e" kindref="member">wxByte</ref></type>
+        <definition>typedef wxByte wxPGVFBFlags</definition>
+        <argsstring></argsstring>
+        <name>wxPGVFBFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="270" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="interface_2wx_2propgrid_2propgrid_8h_1add392b8d6550141475e3efb953b0a20f" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* wxPGSortCallback)(wxPropertyGrid *propGrid, wxPGProperty *p1, wxPGProperty *p2)</definition>
+        <argsstring>)(wxPropertyGrid *propGrid, wxPGProperty *p1, wxPGProperty *p2)</argsstring>
+        <name>wxPGSortCallback</name>
+        <briefdescription>
+<para>This callback function is used for sorting properties. </para>        </briefdescription>
+        <detaileddescription>
+<para>Call <ref refid="classwx_property_grid_1ad413c2a9f94db90466bc9039f928afe6" kindref="member">wxPropertyGrid::SetSortFunction()</ref> to set it.</para><para>Sort function should return a value greater than 0 if position of p1 is after p2. So, for instance, when comparing property names, you can use following implementation:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MyPropertySortFunction(<ref refid="classwx_property_grid" kindref="compound" tooltip="wxPropertyGrid is a specialized grid for editing properties - in other words name...">wxPropertyGrid</ref>*<sp/>propGrid,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>p1,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_property" kindref="compound" tooltip="wxPGProperty is base class for all wxPropertyGrid properties.">wxPGProperty</ref>*<sp/>p2)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p1-&gt;<ref refid="classwx_p_g_property_1adc211e2a17cfaab3a1c7d4b6fd8788b6" kindref="member" tooltip="Returns property&amp;#39;s base name (ie.">GetBaseName</ref>().<ref refid="classwx_string_1addee33a9b9e21e4803bccdda8e362548" kindref="member">compare</ref>(<sp/>p2-&gt;<ref refid="classwx_p_g_property_1adc211e2a17cfaab3a1c7d4b6fd8788b6" kindref="member" tooltip="Returns property&amp;#39;s base name (ie.">GetBaseName</ref>()<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="374" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h"/>
+  </compounddef>
+</doxygen>

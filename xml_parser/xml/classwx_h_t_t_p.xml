@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_h_t_t_p" kind="class" prot="public">
+    <compoundname>wxHTTP</compoundname>
+    <basecompoundref refid="classwx_protocol" prot="public" virt="non-virtual">wxProtocol</basecompoundref>
+    <includes local="no">wx/protocol/http.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a85e43675edc71571813287df96b165bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxHTTP::Connect</definition>
+        <argsstring>(const wxString &amp;host)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>host</declname>
+        </param>
+        <briefdescription>
+<para>Connect to the HTTP server. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, connection is made to the port 80 of the specified <emphasis>host</emphasis>. You may connect to a non-default port by specifying it explicitly using the second overload.</para><para>Currently <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> only supports IPv4.</para><para>For the overload taking <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref>, the <emphasis>wait</emphasis> argument is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1aed7b691790b36a73d8b0d3ab64c975d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxHTTP::Connect</definition>
+        <argsstring>(const wxString &amp;host, unsigned short port)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Connect to the HTTP server. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, connection is made to the port 80 of the specified <emphasis>host</emphasis>. You may connect to a non-default port by specifying it explicitly using the second overload.</para><para>Currently <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> only supports IPv4.</para><para>For the overload taking <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref>, the <emphasis>wait</emphasis> argument is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a9697a75df07e36219114dbb02b5211b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxHTTP::Connect</definition>
+        <argsstring>(const wxSockAddress &amp;addr, bool wait)</argsstring>
+        <name>Connect</name>
+        <reimplements refid="classwx_socket_client_1a581cdb757cce6020c8caac1ddd74a599">Connect</reimplements>
+        <param>
+          <type>const <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref> &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wait</declname>
+        </param>
+        <briefdescription>
+<para>Connect to the HTTP server. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, connection is made to the port 80 of the specified <emphasis>host</emphasis>. You may connect to a non-default port by specifying it explicitly using the second overload.</para><para>Currently <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> only supports IPv4.</para><para>For the overload taking <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref>, the <emphasis>wait</emphasis> argument is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_h_t_t_p_1a5dca98fadf1e56deaacbc00a735f82d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHTTP::wxHTTP</definition>
+        <argsstring>()</argsstring>
+        <name>wxHTTP</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a062c2eb44cb5c94313c67588a42af83f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxHTTP::~wxHTTP</definition>
+        <argsstring>()</argsstring>
+        <name>~wxHTTP</name>
+        <briefdescription>
+<para>Destructor will close the connection if connected. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a1faf426ee158f85da4ae93486ca1b9d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxHTTP::GetHeader</definition>
+        <argsstring>(const wxString &amp;header) const </argsstring>
+        <name>GetHeader</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+<para>Returns the data attached with a field whose name is specified by <emphasis>header</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the field doesn&apos;t exist, it will return an empty string and not a NULL string.</para><para><simplesect kind="note"><para>The header is not case-sensitive, i.e. &quot;CONTENT-TYPE&quot; and &quot;content-type&quot; represent the same header. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a10939b192691ad1d619d9770116368bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+        <definition>virtual wxInputStream* wxHTTP::GetInputStream</definition>
+        <argsstring>(const wxString &amp;path)</argsstring>
+        <name>GetInputStream</name>
+        <reimplements refid="classwx_protocol_1a1adc6bb4d61c1ef993cc17006562acae">GetInputStream</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new input stream on the specified path. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that this stream is unseekable, i.e. SeekI() and TellI() methods shouldn&apos;t be used.</para><para>Note that you can still know the size of the file you are getting using <ref refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" kindref="member">wxStreamBase::GetSize()</ref>. However there is a limitation: in HTTP protocol, the size is not always specified so sometimes <computeroutput></computeroutput>(size_t)-1 can returned to indicate that the size is unknown. In such case, you may want to use <ref refid="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" kindref="member">wxInputStream::LastRead()</ref> method in a loop to get the total size.</para><para><simplesect kind="return"><para>Returns the initialized stream. You must delete it yourself once you don&apos;t use it anymore and this must be done before the <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> object itself is destroyed. The destructor closes the network connection. The next time you will try to get a file the network connection will have to be reestablished, but you don&apos;t have to take care of this since <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> reestablishes it automatically.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a43ad1c663124078842e51cd8b5a641d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHTTP::GetResponse</definition>
+        <argsstring>() const </argsstring>
+        <name>GetResponse</name>
+        <briefdescription>
+<para>Returns the HTTP response code returned by the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please refer to RFC 2616 for the list of responses. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1aea82189f5866ed3405f5a846c7218b6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHTTP::SetHeader</definition>
+        <argsstring>(const wxString &amp;header, const wxString &amp;h_data)</argsstring>
+        <name>SetHeader</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>h_data</declname>
+        </param>
+        <briefdescription>
+<para>It sets data of a field to be sent during the next request to the HTTP server. </para>        </briefdescription>
+        <detaileddescription>
+<para>The field name is specified by <emphasis>header</emphasis> and the content by <emphasis>h_data</emphasis>. This is a low level function and it assumes that you know what you are doing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a390fc182810a4610233a1e4d3ef72d4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxHTTP::GetCookie</definition>
+        <argsstring>(const wxString &amp;cookie) const </argsstring>
+        <name>GetCookie</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>cookie</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value of a cookie. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1aa5fb6a529d6f4db192e7a5af6fb31724" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHTTP::HasCookies</definition>
+        <argsstring>() const </argsstring>
+        <name>HasCookies</name>
+        <briefdescription>
+<para>Returns true if there were cookies. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_h_t_t_p_1a56c6d2d3729bf661cb31b2f6bda6bfff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHTTP::SetPostBuffer</definition>
+        <argsstring>(const wxString &amp;post_buf)</argsstring>
+        <name>SetPostBuffer</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>post_buf</declname>
+        </param>
+        <briefdescription>
+<para>Set the data to be posted to the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>If a non-empty string is passed to this method, the next request will be an HTTP <computeroutput>POST</computeroutput> instead of the default HTTP <computeroutput>GET</computeroutput> and the data from <emphasis>post_buf</emphasis> will be posted as the body of this request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> can be used to establish a connection to an HTTP server. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> can thus be used to create a (basic) HTTP <bold>client</bold>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7155">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="7156" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7156">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7154">
+        <label>wxSocketClient</label>
+        <link refid="classwx_socket_client"/>
+        <childnode refid="7155" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7152">
+        <label>wxHTTP</label>
+        <link refid="classwx_h_t_t_p"/>
+        <childnode refid="7153" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7153">
+        <label>wxProtocol</label>
+        <link refid="classwx_protocol"/>
+        <childnode refid="7154" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7160">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="7161" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7161">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7162" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7159">
+        <label>wxSocketClient</label>
+        <link refid="classwx_socket_client"/>
+        <childnode refid="7160" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7157">
+        <label>wxHTTP</label>
+        <link refid="classwx_h_t_t_p"/>
+        <childnode refid="7158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7158">
+        <label>wxProtocol</label>
+        <link refid="classwx_protocol"/>
+        <childnode refid="7159" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7162">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" bodystart="21" bodyend="120"/>
+    <listofallmembers>
+      <member refid="classwx_protocol_1a251f4c7e9d13fc23a863540bbbedd81b" prot="public" virt="pure-virtual"><scope>wxHTTP</scope><name>Abort</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHTTP</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHTTP</scope><name>CloneRefData</name></member>
+      <member refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" prot="public" virt="virtual"><scope>wxHTTP</scope><name>Close</name></member>
+      <member refid="classwx_h_t_t_p_1a85e43675edc71571813287df96b165bb" prot="public" virt="virtual"><scope>wxHTTP</scope><name>Connect</name></member>
+      <member refid="classwx_h_t_t_p_1aed7b691790b36a73d8b0d3ab64c975d8" prot="public" virt="virtual"><scope>wxHTTP</scope><name>Connect</name></member>
+      <member refid="classwx_h_t_t_p_1a9697a75df07e36219114dbb02b5211b8" prot="public" virt="virtual"><scope>wxHTTP</scope><name>Connect</name></member>
+      <member refid="classwx_socket_client_1a2167813338c94621a9ee0180524974a5" prot="public" virt="non-virtual" ambiguityscope="wxProtocol::"><scope>wxHTTP</scope><name>Connect</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHTTP</scope><name>CreateRefData</name></member>
+      <member refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Destroy</name></member>
+      <member refid="classwx_protocol_1a5b385ca23b57e99fd6ff41e455efe736" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>DetachLog</name></member>
+      <member refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Discard</name></member>
+      <member refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Error</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxHTTP</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_socket_base_1a9dd69ce31cb441c2c47e374256fabcc4" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>GetClientData</name></member>
+      <member refid="classwx_protocol_1a114954376b6de808141f6cd56bb972a9" prot="public" virt="virtual"><scope>wxHTTP</scope><name>GetContentType</name></member>
+      <member refid="classwx_h_t_t_p_1a390fc182810a4610233a1e4d3ef72d4f" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>GetCookie</name></member>
+      <member refid="classwx_protocol_1a06994af171fb3f497f384a4002dbfc3c" prot="public" virt="virtual"><scope>wxHTTP</scope><name>GetError</name></member>
+      <member refid="classwx_socket_base_1a1eecc8010fa40587623778cf9902e661" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>GetFlags</name></member>
+      <member refid="classwx_h_t_t_p_1a1faf426ee158f85da4ae93486ca1b9d6" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>GetHeader</name></member>
+      <member refid="classwx_h_t_t_p_1a10939b192691ad1d619d9770116368bf" prot="public" virt="virtual"><scope>wxHTTP</scope><name>GetInputStream</name></member>
+      <member refid="classwx_socket_base_1a1751b32af0172a30f544068100ba90d2" prot="public" virt="virtual"><scope>wxHTTP</scope><name>GetLocal</name></member>
+      <member refid="classwx_protocol_1ac258796f356769a4c66bce207f3ad7bc" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>GetLog</name></member>
+      <member refid="classwx_socket_base_1aae825b5309067c212640189d6ad7e993" prot="public" virt="virtual"><scope>wxHTTP</scope><name>GetPeer</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>GetRefData</name></member>
+      <member refid="classwx_h_t_t_p_1a43ad1c663124078842e51cd8b5a641d4" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>GetResponse</name></member>
+      <member refid="classwx_socket_base_1adb940bb2853901b4ea0b2840964f8e5b" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>GetTimeout</name></member>
+      <member refid="classwx_h_t_t_p_1aa5fb6a529d6f4db192e7a5af6fb31724" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>HasCookies</name></member>
+      <member refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Initialize</name></member>
+      <member refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>InterruptWait</name></member>
+      <member refid="classwx_socket_base_1a2d171f3eac0dbc9211f0032188d381ac" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>IsConnected</name></member>
+      <member refid="classwx_socket_base_1a6703a3dd7c15fcb2eff7c7baf0b886f5" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>IsData</name></member>
+      <member refid="classwx_socket_base_1ac5118b15195664969b7d914a045936f6" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>IsDisconnected</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>IsKindOf</name></member>
+      <member refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>IsSameAs</name></member>
+      <member refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>LastCount</name></member>
+      <member refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>LastError</name></member>
+      <member refid="classwx_protocol_1a99159e95daa826e4b74b229f652a3766" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>LogRequest</name></member>
+      <member refid="classwx_protocol_1a03c4ee18cd126eeec76fd79c016de2fb" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>LogResponse</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHTTP</scope><name>m_refData</name></member>
+      <member refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Notify</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>operator new</name></member>
+      <member refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Peek</name></member>
+      <member refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Read</name></member>
+      <member refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>ReadMsg</name></member>
+      <member refid="classwx_protocol_1a98f5d494d988353de194104bd7e83fe1" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Reconnect</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Ref</name></member>
+      <member refid="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>RestoreState</name></member>
+      <member refid="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SaveState</name></member>
+      <member refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetClientData</name></member>
+      <member refid="classwx_protocol_1ab1e5d1001c2a7b4c6cf50b8e26829985" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetDefaultTimeout</name></member>
+      <member refid="classwx_socket_base_1a09819e56d36638fb6b45bf3dd7ea8742" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetEventHandler</name></member>
+      <member refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetFlags</name></member>
+      <member refid="classwx_h_t_t_p_1aea82189f5866ed3405f5a846c7218b6e" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetHeader</name></member>
+      <member refid="classwx_socket_base_1a18b26d4201f86daf64c881433c68a1b3" prot="public" virt="virtual"><scope>wxHTTP</scope><name>SetLocal</name></member>
+      <member refid="classwx_protocol_1aad66b5f4dd52e5a34fe80ef44d4fab52" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetLog</name></member>
+      <member refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetNotify</name></member>
+      <member refid="classwx_protocol_1adde2801803a01311e8911e9f5c30607b" prot="public" virt="virtual"><scope>wxHTTP</scope><name>SetPassword</name></member>
+      <member refid="classwx_h_t_t_p_1a56c6d2d3729bf661cb31b2f6bda6bfff" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetPostBuffer</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetRefData</name></member>
+      <member refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>SetTimeout</name></member>
+      <member refid="classwx_protocol_1ab1f11044077ce6755e17eab0b0b461a1" prot="public" virt="virtual"><scope>wxHTTP</scope><name>SetUser</name></member>
+      <member refid="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Shutdown</name></member>
+      <member refid="classwx_socket_base_1a90d2aea95b10c68eee2656860d90e23e" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>ShutdownOutput</name></member>
+      <member refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Unread</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>UnShare</name></member>
+      <member refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Wait</name></member>
+      <member refid="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>WaitForLost</name></member>
+      <member refid="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>WaitForRead</name></member>
+      <member refid="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>WaitForWrite</name></member>
+      <member refid="classwx_socket_client_1a83c92e8c27a72c3610c9eb0b60e92d74" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>WaitOnConnect</name></member>
+      <member refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>Write</name></member>
+      <member refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>WriteMsg</name></member>
+      <member refid="classwx_h_t_t_p_1a5dca98fadf1e56deaacbc00a735f82d7" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>wxHTTP</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>wxObject</name></member>
+      <member refid="classwx_socket_base_1a3bf32997db6732a5b053d8d52b1173f0" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>wxSocketBase</name></member>
+      <member refid="classwx_socket_client_1a1eaa0a775aa619d4d04d48bd84a8212c" prot="public" virt="non-virtual"><scope>wxHTTP</scope><name>wxSocketClient</name></member>
+      <member refid="classwx_h_t_t_p_1a062c2eb44cb5c94313c67588a42af83f" prot="public" virt="virtual"><scope>wxHTTP</scope><name>~wxHTTP</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxHTTP</scope><name>~wxObject</name></member>
+      <member refid="classwx_socket_base_1a636e72242dd5550e84456c277ca31222" prot="public" virt="virtual"><scope>wxHTTP</scope><name>~wxSocketBase</name></member>
+      <member refid="classwx_socket_client_1a6e55d27056f3bf22b16b25d2fadb01ad" prot="public" virt="virtual"><scope>wxHTTP</scope><name>~wxSocketClient</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

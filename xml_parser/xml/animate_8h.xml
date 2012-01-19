@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="animate_8h" kind="file">
+    <compoundname>animate.h</compoundname>
+    <innerclass refid="classwx_animation_ctrl" prot="public">wxAnimationCtrl</innerclass>
+    <innerclass refid="classwx_animation" prot="public">wxAnimation</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="animate_8h_1a35e82d083076c53b78824576ee4e1717" prot="public" static="no">
+        <name>wxAnimationType</name>
+        <enumvalue id="animate_8h_1a35e82d083076c53b78824576ee4e1717a36aca46a8c26b451bcec1e146fb99b54" prot="public">
+          <name>wxANIMATION_TYPE_INVALID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="animate_8h_1a35e82d083076c53b78824576ee4e1717ab9c42ab7ef3aa3758c633697cda128f9" prot="public">
+          <name>wxANIMATION_TYPE_GIF</name>
+          <briefdescription>
+<para>represents an animated GIF file. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="animate_8h_1a35e82d083076c53b78824576ee4e1717aac06fa48ec2160c2541e4c74884ed316" prot="public">
+          <name>wxANIMATION_TYPE_ANI</name>
+          <briefdescription>
+<para>represents an ANI file. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="animate_8h_1a35e82d083076c53b78824576ee4e1717ae772ee7c4175f5c6b00c3d1f39857e56" prot="public">
+          <name>wxANIMATION_TYPE_ANY</name>
+          <briefdescription>
+<para>autodetect the filetype. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Supported animation types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" bodystart="12" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="animate_8h_1a511afb5aaf468a90108facf18c255ae4" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_animation" kindref="compound">wxAnimation</ref></type>
+        <definition>wxAnimation wxNullAnimation</definition>
+        <argsstring></argsstring>
+        <name>wxNullAnimation</name>
+        <briefdescription>
+<para>An empty animation object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="298" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h"/>
+  </compounddef>
+</doxygen>

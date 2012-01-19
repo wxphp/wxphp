@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="brush_8h" kind="file">
+    <compoundname>brush.h</compoundname>
+    <innerclass refid="classwx_brush" prot="public">wxBrush</innerclass>
+    <innerclass refid="classwx_brush_list" prot="public">wxBrushList</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="brush_8h_1aa8a41c365a383f785e379812dfd367ef" prot="public" static="no">
+        <name>wxBrushStyle</name>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efa35727018e20c5cc975872c9dd3c05f08" prot="public">
+          <name>wxBRUSHSTYLE_INVALID</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efad15f5a6c2ede88289ad608d3eb4c82d3" prot="public">
+          <name>wxBRUSHSTYLE_SOLID</name>
+          <initializer> wxSOLID</initializer>
+          <briefdescription>
+<para>Solid. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efabc87441be7aebf778339c27f2ae7ce46" prot="public">
+          <name>wxBRUSHSTYLE_TRANSPARENT</name>
+          <initializer> wxTRANSPARENT</initializer>
+          <briefdescription>
+<para>Transparent (no fill). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efaf506e844a067a943ffad42c87e6b603c" prot="public">
+          <name>wxBRUSHSTYLE_STIPPLE_MASK_OPAQUE</name>
+          <initializer> wxSTIPPLE_MASK_OPAQUE</initializer>
+          <briefdescription>
+<para>Uses a bitmap as a stipple; the mask is used for blitting monochrome using text foreground and background colors. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efa2e4afa1f267a1e62bdd922ae0fbd8fb4" prot="public">
+          <name>wxBRUSHSTYLE_STIPPLE_MASK</name>
+          <initializer> wxSTIPPLE_MASK</initializer>
+          <briefdescription>
+<para>Uses a bitmap as a stipple; mask is used for masking areas in the stipple bitmap. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efa97667fe8c86fe8b1963c0d42467f752e" prot="public">
+          <name>wxBRUSHSTYLE_STIPPLE</name>
+          <initializer> wxSTIPPLE</initializer>
+          <briefdescription>
+<para>Uses a bitmap as a stipple. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efa28f268751cacae22523bd7eed2722f0f" prot="public">
+          <name>wxBRUSHSTYLE_BDIAGONAL_HATCH</name>
+          <initializer> wxBDIAGONAL_HATCH</initializer>
+          <briefdescription>
+<para>Backward diagonal hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efae46d3428af221a3da97e3a92d90cd81d" prot="public">
+          <name>wxBRUSHSTYLE_CROSSDIAG_HATCH</name>
+          <initializer> wxCROSSDIAG_HATCH</initializer>
+          <briefdescription>
+<para>Cross-diagonal hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efae2de3f325cdee772965e9a5f55557337" prot="public">
+          <name>wxBRUSHSTYLE_FDIAGONAL_HATCH</name>
+          <initializer> wxFDIAGONAL_HATCH</initializer>
+          <briefdescription>
+<para>Forward diagonal hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efaaa444cd88984b07daf877613e9ea660d" prot="public">
+          <name>wxBRUSHSTYLE_CROSS_HATCH</name>
+          <initializer> wxCROSS_HATCH</initializer>
+          <briefdescription>
+<para>Cross hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efabc75d8e74d7ec584d515b4e0ed535cbf" prot="public">
+          <name>wxBRUSHSTYLE_HORIZONTAL_HATCH</name>
+          <initializer> wxHORIZONTAL_HATCH</initializer>
+          <briefdescription>
+<para>Horizontal hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efa49225d7206599b1e6cd35ba75d0fa9bf" prot="public">
+          <name>wxBRUSHSTYLE_VERTICAL_HATCH</name>
+          <initializer> wxVERTICAL_HATCH</initializer>
+          <briefdescription>
+<para>Vertical hatch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efa1d0bb5494fa49e6a4a71fada195ee7ee" prot="public">
+          <name>wxBRUSHSTYLE_FIRST_HATCH</name>
+          <initializer> wxFIRST_HATCH</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="brush_8h_1aa8a41c365a383f785e379812dfd367efa71a1e06158625f8a543559883dd0cef2" prot="public">
+          <name>wxBRUSHSTYLE_LAST_HATCH</name>
+          <initializer> wxLAST_HATCH</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The possible brush styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="12" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="brush_8h_1a9919a44109f2c6091c71aece17ca7013" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref></type>
+        <definition>wxBrush wxNullBrush</definition>
+        <argsstring></argsstring>
+        <name>wxNullBrush</name>
+        <briefdescription>
+<para>An empty brush. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_brush_1aafe8cee326d90dc7145968370153ba0a" kindref="member">wxBrush::IsOk()</ref> always returns false for this object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="267" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1a59deb993532ba47750c074a6539c557d" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxBLUE_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxBLUE_BRUSH</name>
+        <briefdescription>
+<para>Blue brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="274" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1aff6f39b67542f4a88437e9694b0a5deb" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxGREEN_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxGREEN_BRUSH</name>
+        <briefdescription>
+<para>Green brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="281" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1ac7945749352f1e4e03d841fd93f95b18" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxYELLOW_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxYELLOW_BRUSH</name>
+        <briefdescription>
+<para>Yellow brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="288" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1aae5659773c29d950f587fd01ac0b5649" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxWHITE_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxWHITE_BRUSH</name>
+        <briefdescription>
+<para>White brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="295" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1a69faad3dd0814b86866bd36d0963d598" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxBLACK_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxBLACK_BRUSH</name>
+        <briefdescription>
+<para>Black brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="302" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1a9fd61bfd0445d71e17e56d836098096f" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxGREY_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxGREY_BRUSH</name>
+        <briefdescription>
+<para>Grey brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="309" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1ad2ba01aad1dbd57e361a623b109a0dde" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxMEDIUM_GREY_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxMEDIUM_GREY_BRUSH</name>
+        <briefdescription>
+<para>Medium grey brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="316" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1a031a216a3113203ad79a534ebf2dafea" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxLIGHT_GREY_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxLIGHT_GREY_BRUSH</name>
+        <briefdescription>
+<para>Light grey brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="323" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1aa6cac71d7ee6ae54c3e6d2c87244d5b4" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxTRANSPARENT_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxTRANSPARENT_BRUSH</name>
+        <briefdescription>
+<para>Transparent brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="330" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1a84d6b55f9b1b70e1c5f36aad248c7968" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxCYAN_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxCYAN_BRUSH</name>
+        <briefdescription>
+<para>Cyan brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="337" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1a1556203b5244291d8c0a07e8e58f9ad2" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush" kindref="compound">wxBrush</ref> *</type>
+        <definition>wxBrush* wxRED_BRUSH</definition>
+        <argsstring></argsstring>
+        <name>wxRED_BRUSH</name>
+        <briefdescription>
+<para>Red brush. </para>        </briefdescription>
+        <detaileddescription>
+<para>Except for the color it has all standard attributes (<computeroutput>wxBRUSHSTYLE_SOLID</computeroutput>, no stipple bitmap, etc...). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="344" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="brush_8h_1acb7c7a277d9b428fc6cdfd97437d6ef8" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_brush_list" kindref="compound">wxBrushList</ref> *</type>
+        <definition>wxBrushList* wxTheBrushList</definition>
+        <argsstring></argsstring>
+        <name>wxTheBrushList</name>
+        <briefdescription>
+<para>The global <ref refid="classwx_brush_list" kindref="compound">wxBrushList</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" line="380" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/brush.h"/>
+  </compounddef>
+</doxygen>

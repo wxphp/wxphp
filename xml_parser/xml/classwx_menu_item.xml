@@ -1,0 +1,779 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_menu_item" kind="class" prot="public">
+    <compoundname>wxMenuItem</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/menuitem.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <description><para><anchor id="_1amgrpc9fd0bcb5385a65354c37f1bb504399d"/> </para></description>
+      <memberdef kind="function" id="classwx_menu_item_1a3e5d1a12cd2553241424368624685b90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+        <definition>wxColour&amp; wxMenuItem::GetBackgroundColour</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBackgroundColour</name>
+        <briefdescription>
+<para>Returns the background colour associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a26eefb7f49e3edca96e9f71cdb243b12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+        <definition>virtual const wxBitmap&amp; wxMenuItem::GetBitmap</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBitmap</name>
+        <briefdescription>
+<para>Returns the checked or unchecked bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1aad2b17eed2726df1d5d5752a40f536da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+        <definition>wxFont&amp; wxMenuItem::GetFont</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFont</name>
+        <briefdescription>
+<para>Returns the font associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a679c3f9a7bd66d82b3a148629fc6cc5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxMenuItem::GetHelp</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHelp</name>
+        <briefdescription>
+<para>Returns the help string associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1aec5349782813e4605158f8eeed9a92eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxMenuItem::GetId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetId</name>
+        <briefdescription>
+<para>Returns the menu item identifier. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxMenuItem::GetItemLabel</definition>
+        <argsstring>() const </argsstring>
+        <name>GetItemLabel</name>
+        <briefdescription>
+<para>Returns the text associated with the menu item including any accelerator characters that were passed to the constructor or <ref refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" kindref="member">SetItemLabel()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref>, <ref refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" kindref="member">GetLabelText()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxMenuItem::GetItemLabelText</definition>
+        <argsstring>() const </argsstring>
+        <name>GetItemLabelText</name>
+        <briefdescription>
+<para>Returns the text associated with the menu item, without any accelerator characters. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref>, <ref refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" kindref="member">GetLabelText()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a759fcdb50560600608446a2099e33d49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1abd0c640814a55e4adda3bce698646d2d" kindref="member">wxItemKind</ref></type>
+        <definition>wxItemKind wxMenuItem::GetKind</definition>
+        <argsstring>() const </argsstring>
+        <name>GetKind</name>
+        <briefdescription>
+<para>Returns the item kind, one of <computeroutput>wxITEM_SEPARATOR</computeroutput>, <computeroutput>wxITEM_NORMAL</computeroutput>, <computeroutput>wxITEM_CHECK</computeroutput> or <computeroutput>wxITEM_RADIO</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a97554b69d2ad5948b856b68bfa3e4824" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxMenuItem::GetLabel</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLabel</name>
+        <briefdescription>
+<para>Returns the text associated with the menu item without any accelerator characters it might contain. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000041"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref>.</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a22c16a54a88b192f62200bafd598628c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxMenuItem::GetMarginWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMarginWidth</name>
+        <briefdescription>
+<para>Gets the width of the menu item checkmark bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1aa749549977f23192c9d05c19d87ecbee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+        <definition>wxMenu* wxMenuItem::GetMenu</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMenu</name>
+        <briefdescription>
+<para>Returns the menu this menu item is in, or NULL if this menu item is not attached. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1aa1910ae1850b6dc659e008530e3ddb38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxMenuItem::GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+<para>Returns the text associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000042"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated. Please use <ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref> or <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> instead.</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref>, <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a517e8a2c8ce4427eb21999b8b378987b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+        <definition>wxMenu* wxMenuItem::GetSubMenu</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSubMenu</name>
+        <briefdescription>
+<para>Returns the submenu associated with the menu item, or NULL if there isn&apos;t one. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1af81fb6c07a980fc2d8314f0be6f38170" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxMenuItem::GetText</definition>
+        <argsstring>() const </argsstring>
+        <name>GetText</name>
+        <briefdescription>
+<para>Returns the text associated with the menu item, such as it was passed to the <ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> constructor, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>with any accelerator characters it may contain.</para><para><xrefsect id="deprecated_1_deprecated000043"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref>.</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_menu_item_1af8f7bb0c7ca8808047c3c97b564069ed" kindref="member">GetLabelFromText()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a62a0d8dabfec3d2ff25dc03bd7cb1b8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+        <definition>wxColour&amp; wxMenuItem::GetTextColour</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTextColour</name>
+        <briefdescription>
+<para>Returns the text colour associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="260"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Checkers</header>
+      <description><para><anchor id="_1amgrp30c12229f508b41cd680149dbdf88523"/> </para></description>
+      <memberdef kind="function" id="classwx_menu_item_1a66cea3a49d79e241c78443e22ce6e7c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMenuItem::IsCheckable</definition>
+        <argsstring>() const </argsstring>
+        <name>IsCheckable</name>
+        <briefdescription>
+<para>Returns true if the item is checkable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a629b1b82993b4f654b214cc90f427974" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxMenuItem::IsChecked</definition>
+        <argsstring>() const </argsstring>
+        <name>IsChecked</name>
+        <briefdescription>
+<para>Returns true if the item is checked. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a0ec10aa48da0e8d17f057834e791c7c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxMenuItem::IsEnabled</definition>
+        <argsstring>() const </argsstring>
+        <name>IsEnabled</name>
+        <briefdescription>
+<para>Returns true if the item is enabled. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1af717c39d2c08161b9b167a7c6ed1fe93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMenuItem::IsSeparator</definition>
+        <argsstring>() const </argsstring>
+        <name>IsSeparator</name>
+        <briefdescription>
+<para>Returns true if the item is a separator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a8b0f0c3f83c47e4f332c94abd406459f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMenuItem::IsSubMenu</definition>
+        <argsstring>() const </argsstring>
+        <name>IsSubMenu</name>
+        <briefdescription>
+<para>Returns true if the item is a submenu. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="294"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Setters</header>
+      <description><para><anchor id="_1amgrp6e47466b75bb957a603aa54c079ac8bf"/> </para></description>
+      <memberdef kind="function" id="classwx_menu_item_1a5a4462c00517c5d8470b99fd021c6a9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMenuItem::SetBackgroundColour</definition>
+        <argsstring>(const wxColour &amp;colour)</argsstring>
+        <name>SetBackgroundColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Sets the background colour associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a2b5d6bcb820b992b1e4709facbf6d4fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxMenuItem::SetBitmap</definition>
+        <argsstring>(const wxBitmap &amp;bmp, bool checked=true)</argsstring>
+        <name>SetBitmap</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Sets the bitmap for the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is equivalent to wxMenuItem::SetBitmaps(bmp, wxNullBitmap) if <emphasis>checked</emphasis> is true (default value) or SetBitmaps(wxNullBitmap, bmp) otherwise.</para><para>Notice that GTK+ uses a global setting called <computeroutput>gtk-menu-images</computeroutput> to determine if the images should be shown in the menus at all. If it is off (which is the case in e.g. Gnome 2.28 by default), no images will be shown, consistently with the native behaviour.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref>, <ref refid="page__port_1page_port_wxgtk" kindref="member">wxGTK</ref> ports.  <onlyfor>wxmsw,wxosx,wxgtk</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a62407ad793cb3ef9c59873349558ce5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMenuItem::SetBitmaps</definition>
+        <argsstring>(const wxBitmap &amp;checked, const wxBitmap &amp;unchecked=wxNullBitmap)</argsstring>
+        <name>SetBitmaps</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>checked</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>unchecked</declname>
+          <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
+        </param>
+        <briefdescription>
+<para>Sets the checked/unchecked bitmaps for the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>The first bitmap is also used as the single bitmap for uncheckable menu items.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a5deda3866e4308a965caa2fb78c1ca93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMenuItem::SetFont</definition>
+        <argsstring>(const wxFont &amp;font)</argsstring>
+        <name>SetFont</name>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Sets the font associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="342"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1af20e2cb1c73892e1c8e86e69b40d9040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMenuItem::SetHelp</definition>
+        <argsstring>(const wxString &amp;helpString)</argsstring>
+        <name>SetHelp</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>helpString</declname>
+        </param>
+        <briefdescription>
+<para>Sets the help string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxMenuItem::SetItemLabel</definition>
+        <argsstring>(const wxString &amp;label)</argsstring>
+        <name>SetItemLabel</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Sets the label associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that if the ID of this menu item corresponds to a stock ID, then it is not necessary to specify a label: wxWidgets will automatically use the stock item label associated with that ID. See the <ref refid="classwx_menu_item_1a6e9b0e1b786fa84250a42c88d84aed2b" kindref="member">constructor</ref> for more info.</para><para>The label string for the normal menu items (not separators) may include the accelerator which can be used to activate the menu item from keyboard. An accelerator key can be specified using the ampersand <computeroutput>&amp;</computeroutput> character. In order to embed an ampersand character in the menu item text, the ampersand must be doubled.</para><para>Optionally you can specify also an accelerator string appending a tab character <computeroutput>\t</computeroutput> followed by a valid key combination (e.g. <computeroutput>CTRL+V</computeroutput>). Its general syntax is any combination of <computeroutput>&quot;CTRL&quot;</computeroutput>, <computeroutput>&quot;ALT&quot;</computeroutput> and <computeroutput>&quot;SHIFT&quot;</computeroutput> strings (case doesn&apos;t matter) separated by either <computeroutput>&apos;-&apos;</computeroutput> or <computeroutput>&apos;+&apos;</computeroutput> characters and followed by the accelerator itself. The accelerator may be any alphanumeric character, any function key (from F1 to F12) or one of the special characters listed in the table below (again, case doesn&apos;t matter):<itemizedlist>
+<listitem><para><computeroutput>DEL</computeroutput> or <computeroutput>DELETE:</computeroutput> Delete key</para></listitem><listitem><para><computeroutput>BACK</computeroutput> : Backspace key</para></listitem><listitem><para><computeroutput>INS</computeroutput> or <computeroutput>INSERT:</computeroutput> Insert key</para></listitem><listitem><para><computeroutput>ENTER</computeroutput> or <computeroutput>RETURN:</computeroutput> Enter key</para></listitem><listitem><para><computeroutput>PGUP:</computeroutput> PageUp key</para></listitem><listitem><para><computeroutput>PGDN:</computeroutput> PageDown key</para></listitem><listitem><para><computeroutput>LEFT:</computeroutput> Left cursor arrow key</para></listitem><listitem><para><computeroutput>RIGHT:</computeroutput> Right cursor arrow key</para></listitem><listitem><para><computeroutput>UP:</computeroutput> Up cursor arrow key</para></listitem><listitem><para><computeroutput>DOWN:</computeroutput> Down cursor arrow key</para></listitem><listitem><para><computeroutput>HOME:</computeroutput> Home key</para></listitem><listitem><para><computeroutput>END:</computeroutput> End key</para></listitem><listitem><para><computeroutput>SPACE:</computeroutput> Space</para></listitem><listitem><para><computeroutput>TAB:</computeroutput> Tab key</para></listitem><listitem><para><computeroutput>ESC</computeroutput> or <computeroutput>ESCAPE:</computeroutput> Escape key (Windows only)</para></listitem></itemizedlist>
+</para><para>Examples:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_pMyMenuItem-&gt;SetItemLabel(</highlight><highlight class="stringliteral">&quot;My<sp/>&amp;item\tCTRL+I&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_pMyMenuItem2-&gt;SetItemLabel(</highlight><highlight class="stringliteral">&quot;Clean<sp/>&amp;&amp;<sp/>build\tF7&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_pMyMenuItem3-&gt;SetItemLabel(</highlight><highlight class="stringliteral">&quot;Simple<sp/>item&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_pMyMenuItem4-&gt;SetItemLabel(</highlight><highlight class="stringliteral">&quot;Item<sp/>with<sp/>&amp;accelerator&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref>, <ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1aac2257b03dd2485c72f9398ceb1a76cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMenuItem::SetMarginWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>SetMarginWidth</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Sets the width of the menu item checkmark bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a41fb81219430a81e7e2a668831868296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMenuItem::SetMenu</definition>
+        <argsstring>(wxMenu *menu)</argsstring>
+        <name>SetMenu</name>
+        <param>
+          <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+          <declname>menu</declname>
+        </param>
+        <briefdescription>
+<para>Sets the parent menu which will contain this menu item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="410"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1ab222651b8b47653d8890cd3469d5ff5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMenuItem::SetSubMenu</definition>
+        <argsstring>(wxMenu *menu)</argsstring>
+        <name>SetSubMenu</name>
+        <param>
+          <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+          <declname>menu</declname>
+        </param>
+        <briefdescription>
+<para>Sets the submenu of this menu item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a742aa5bb0d3faa020e7b3bd66e336499" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxMenuItem::SetText</definition>
+        <argsstring>(const wxString &amp;text)</argsstring>
+        <name>SetText</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Sets the text associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000044"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" kindref="member">SetItemLabel()</ref>.</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" kindref="member">SetItemLabel()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a695b5f2f1c2325ec01dba5cdd83dd3b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMenuItem::SetTextColour</definition>
+        <argsstring>(const wxColour &amp;colour)</argsstring>
+        <name>SetTextColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Sets the text colour associated with the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="431"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_menu_item_1a6e9b0e1b786fa84250a42c88d84aed2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMenuItem::wxMenuItem</definition>
+        <argsstring>(wxMenu *parentMenu=NULL, int id=wxID_SEPARATOR, const wxString &amp;text=wxEmptyString, const wxString &amp;helpString=wxEmptyString, wxItemKind kind=wxITEM_NORMAL, wxMenu *subMenu=NULL)</argsstring>
+        <name>wxMenuItem</name>
+        <param>
+          <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+          <declname>parentMenu</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>wxID_SEPARATOR</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>helpString</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1abd0c640814a55e4adda3bce698646d2d" kindref="member">wxItemKind</ref></type>
+          <declname>kind</declname>
+          <defval>wxITEM_NORMAL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+          <declname>subMenu</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Menu items can be standard, or &quot;stock menu items&quot;, or custom. For the standard menu items (such as commands to open a file, exit the program and so on, see <ref refid="page__stockitems" kindref="compound">Stock items</ref> for the full list) it is enough to specify just the stock ID and leave <emphasis>text</emphasis> and <emphasis>helpString</emphasis> empty. Some platforms (currently wxGTK only, and see the remark in <ref refid="classwx_menu_item_1a2b5d6bcb820b992b1e4709facbf6d4fb" kindref="member">SetBitmap()</ref> documentation) will also show standard bitmaps for stock menu items.</para><para>Leaving at least <emphasis>text</emphasis> empty for the stock menu items is actually strongly recommended as they will have appearance and keyboard interface (including standard accelerators) familiar to the user.</para><para>For the custom (non-stock) menu items, <emphasis>text</emphasis> must be specified and while <emphasis>helpString</emphasis> may be left empty, it&apos;s recommended to pass the item description (which is automatically shown by the library in the status bar when the menu item is selected) in this parameter.</para><para>Finally note that you can e.g. use a stock menu label without using its stock help string:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>all<sp/>stock<sp/>properties:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>helpMenu-&gt;Append(<ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba777a4075af4d1bfbbdb6ecfeaa9e8957" kindref="member">wxID_ABOUT</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>the<sp/>stock<sp/>label<sp/>and<sp/>the<sp/>stock<sp/>accelerator<sp/>but<sp/>not<sp/>the<sp/>stock<sp/>help<sp/>string:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>helpMenu-&gt;Append(<ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba777a4075af4d1bfbbdb6ecfeaa9e8957" kindref="member">wxID_ABOUT</ref>,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>custom<sp/>help<sp/>string&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>all<sp/>stock<sp/>properties<sp/>except<sp/>for<sp/>the<sp/>bitmap:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_menu_item" kindref="compound" tooltip="A menu item represents an item in a menu.">wxMenuItem</ref><sp/>*mymenu<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_menu_item_1a6e9b0e1b786fa84250a42c88d84aed2b" kindref="member" tooltip="Constructs a wxMenuItem object.">wxMenuItem</ref>(helpMenu,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba777a4075af4d1bfbbdb6ecfeaa9e8957" kindref="member">wxID_ABOUT</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mymenu-&gt;<ref refid="classwx_menu_item_1a2b5d6bcb820b992b1e4709facbf6d4fb" kindref="member" tooltip="Sets the bitmap for the menu item.">SetBitmap</ref>(<ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(wxART_WARNING));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>helpMenu-&gt;Append(mymenu);</highlight></codeline>
+</programlisting></para><para>that is, stock properties are set independently one from the other.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parentMenu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Menu that the menu item belongs to. Can be NULL if the item is going to be added to the menu later. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier for this menu item. May be <computeroutput>wxID_SEPARATOR</computeroutput>, in which case the given kind is ignored and taken to be <computeroutput>wxITEM_SEPARATOR</computeroutput> instead. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text for the menu item, as shown on the menu. See <ref refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" kindref="member">SetItemLabel()</ref> for more info. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>helpString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional help string that will be shown on the status bar. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>May be <computeroutput>wxITEM_SEPARATOR</computeroutput>, <computeroutput>wxITEM_NORMAL</computeroutput>, <computeroutput>wxITEM_CHECK</computeroutput> or <computeroutput>wxITEM_RADIO</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subMenu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-NULL, indicates that the menu item is a submenu. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a61df296959898555031e23d412508323" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxMenuItem::~wxMenuItem</definition>
+        <argsstring>()</argsstring>
+        <name>~wxMenuItem</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1afcfbb12e302c0528e55efcb1c6f5f7fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxMenuItem::Check</definition>
+        <argsstring>(bool check=true)</argsstring>
+        <name>Check</name>
+        <param>
+          <type>bool</type>
+          <declname>check</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Checks or unchecks the menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that this only works when the item is already appended to a menu. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1a1e399da82f486adea3893480bcf66b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxMenuItem::Enable</definition>
+        <argsstring>(bool enable=true)</argsstring>
+        <name>Enable</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Enables or disables the menu item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="126"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_menu_item_1af8f7bb0c7ca8808047c3c97b564069ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxMenuItem::GetLabelFromText</definition>
+        <argsstring>(const wxString &amp;text)</argsstring>
+        <name>GetLabelFromText</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000040"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated; please use <ref refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" kindref="member">GetLabelText()</ref> instead.</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" kindref="member">GetLabelText()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_menu_item_1afed23d53a97171076763385c93207fc0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxMenuItem::GetLabelText</definition>
+        <argsstring>(const wxString &amp;text)</argsstring>
+        <name>GetLabelText</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Strips all accelerator characters and mnemonics from the given <emphasis>text</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxMenuItem::GetLabelfromText(</highlight><highlight class="stringliteral">&quot;&amp;Hello\tCtrl-h&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>will return just <computeroutput>&quot;Hello&quot;</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" kindref="member">GetItemLabelText()</ref>, <ref refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" kindref="member">GetItemLabel()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A menu item represents an item in a menu. </para>    </briefdescription>
+    <detaileddescription>
+<para>Note that you usually don&apos;t have to deal with it directly as <ref refid="classwx_menu" kindref="compound">wxMenu</ref> methods usually construct an object of this class for you.</para><para>Also please note that the methods related to fonts and bitmaps are currently only implemented for Windows, Mac and GTK+.</para><para><heading level="2">Events emitted by this class</heading>
+</para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>&amp;<nonbreakablespace/>event) or void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_menu_event" kindref="compound">wxMenuEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
+<listitem><para>EVT_MENU(id,  func): Process a <computeroutput>wxEVT_COMMAND_MENU_SELECTED</computeroutput> command, which is generated by a menu item. This type of event is sent as <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>. </para></listitem>
+<listitem><para>EVT_MENU_RANGE(id1,  id2,  func): Process a <computeroutput>wxEVT_COMMAND_MENU_RANGE</computeroutput> command, which is generated by a range of menu items. This type of event is sent as <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref>. </para></listitem>
+<listitem><para>EVT_MENU_OPEN(func): A menu is about to be opened. On Windows, this is only sent once for each navigation of the menubar (up until all menus have closed). This type of event is sent as <ref refid="classwx_menu_event" kindref="compound">wxMenuEvent</ref>. </para></listitem>
+<listitem><para>EVT_MENU_CLOSE(func): A menu has been just closed. This type of event is sent as <ref refid="classwx_menu_event" kindref="compound">wxMenuEvent</ref>. </para></listitem>
+<listitem><para>EVT_MENU_HIGHLIGHT(id,  func): The menu item with the specified id has been highlighted: used to show help prompts in the status bar by <ref refid="classwx_frame" kindref="compound">wxFrame</ref> This type of event is sent as <ref refid="classwx_menu_event" kindref="compound">wxMenuEvent</ref>. </para></listitem>
+<listitem><para>EVT_MENU_HIGHLIGHT_ALL(func): A menu item has been highlighted, i.e. the currently selected menu item has changed. This type of event is sent as <ref refid="classwx_menu_event" kindref="compound">wxMenuEvent</ref>. </para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__menus" kindref="compound">Menus</ref></para><para><simplesect kind="see"><para><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref>, <ref refid="classwx_menu" kindref="compound">wxMenu</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7724">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7723">
+        <label>wxMenuItem</label>
+        <link refid="classwx_menu_item"/>
+        <childnode refid="7724" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7726">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7727" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7725">
+        <label>wxMenuItem</label>
+        <link refid="classwx_menu_item"/>
+        <childnode refid="7726" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7727">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/menuitem.h" bodystart="48" bodyend="434"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMenuItem</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_menu_item_1afcfbb12e302c0528e55efcb1c6f5f7fc" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>Check</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxMenuItem</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxMenuItem</scope><name>CreateRefData</name></member>
+      <member refid="classwx_menu_item_1a1e399da82f486adea3893480bcf66b21" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>Enable</name></member>
+      <member refid="classwx_menu_item_1a3e5d1a12cd2553241424368624685b90" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetBackgroundColour</name></member>
+      <member refid="classwx_menu_item_1a26eefb7f49e3edca96e9f71cdb243b12" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>GetBitmap</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_menu_item_1aad2b17eed2726df1d5d5752a40f536da" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetFont</name></member>
+      <member refid="classwx_menu_item_1a679c3f9a7bd66d82b3a148629fc6cc5c" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetHelp</name></member>
+      <member refid="classwx_menu_item_1aec5349782813e4605158f8eeed9a92eb" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetId</name></member>
+      <member refid="classwx_menu_item_1a6fde1e54cf3cecd90853f627fc4f4493" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>GetItemLabel</name></member>
+      <member refid="classwx_menu_item_1acfd765d248029f8c548dc700b03f6198" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>GetItemLabelText</name></member>
+      <member refid="classwx_menu_item_1a759fcdb50560600608446a2099e33d49" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetKind</name></member>
+      <member refid="classwx_menu_item_1a97554b69d2ad5948b856b68bfa3e4824" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetLabel</name></member>
+      <member refid="classwx_menu_item_1af8f7bb0c7ca8808047c3c97b564069ed" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetLabelFromText</name></member>
+      <member refid="classwx_menu_item_1afed23d53a97171076763385c93207fc0" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetLabelText</name></member>
+      <member refid="classwx_menu_item_1a22c16a54a88b192f62200bafd598628c" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetMarginWidth</name></member>
+      <member refid="classwx_menu_item_1aa749549977f23192c9d05c19d87ecbee" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetMenu</name></member>
+      <member refid="classwx_menu_item_1aa1910ae1850b6dc659e008530e3ddb38" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetName</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetRefData</name></member>
+      <member refid="classwx_menu_item_1a517e8a2c8ce4427eb21999b8b378987b" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetSubMenu</name></member>
+      <member refid="classwx_menu_item_1af81fb6c07a980fc2d8314f0be6f38170" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetText</name></member>
+      <member refid="classwx_menu_item_1a62a0d8dabfec3d2ff25dc03bd7cb1b8c" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>GetTextColour</name></member>
+      <member refid="classwx_menu_item_1a66cea3a49d79e241c78443e22ce6e7c1" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>IsCheckable</name></member>
+      <member refid="classwx_menu_item_1a629b1b82993b4f654b214cc90f427974" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>IsChecked</name></member>
+      <member refid="classwx_menu_item_1a0ec10aa48da0e8d17f057834e791c7c8" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>IsEnabled</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>IsSameAs</name></member>
+      <member refid="classwx_menu_item_1af717c39d2c08161b9b167a7c6ed1fe93" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>IsSeparator</name></member>
+      <member refid="classwx_menu_item_1a8b0f0c3f83c47e4f332c94abd406459f" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>IsSubMenu</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxMenuItem</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>Ref</name></member>
+      <member refid="classwx_menu_item_1a5a4462c00517c5d8470b99fd021c6a9d" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetBackgroundColour</name></member>
+      <member refid="classwx_menu_item_1a2b5d6bcb820b992b1e4709facbf6d4fb" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>SetBitmap</name></member>
+      <member refid="classwx_menu_item_1a62407ad793cb3ef9c59873349558ce5c" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetBitmaps</name></member>
+      <member refid="classwx_menu_item_1a5deda3866e4308a965caa2fb78c1ca93" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetFont</name></member>
+      <member refid="classwx_menu_item_1af20e2cb1c73892e1c8e86e69b40d9040" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetHelp</name></member>
+      <member refid="classwx_menu_item_1a8b0517fb35e3eada66b51568aa87f261" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>SetItemLabel</name></member>
+      <member refid="classwx_menu_item_1aac2257b03dd2485c72f9398ceb1a76cf" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetMarginWidth</name></member>
+      <member refid="classwx_menu_item_1a41fb81219430a81e7e2a668831868296" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetMenu</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetRefData</name></member>
+      <member refid="classwx_menu_item_1ab222651b8b47653d8890cd3469d5ff5a" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetSubMenu</name></member>
+      <member refid="classwx_menu_item_1a742aa5bb0d3faa020e7b3bd66e336499" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>SetText</name></member>
+      <member refid="classwx_menu_item_1a695b5f2f1c2325ec01dba5cdd83dd3b5" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>SetTextColour</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>UnShare</name></member>
+      <member refid="classwx_menu_item_1a6e9b0e1b786fa84250a42c88d84aed2b" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>wxMenuItem</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxMenuItem</scope><name>wxObject</name></member>
+      <member refid="classwx_menu_item_1a61df296959898555031e23d412508323" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>~wxMenuItem</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxMenuItem</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

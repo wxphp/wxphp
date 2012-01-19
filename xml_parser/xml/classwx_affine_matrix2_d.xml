@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_affine_matrix2_d" kind="class" prot="public">
+    <compoundname>wxAffineMatrix2D</compoundname>
+    <includes local="no">wx/affinematrix2d.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a326f3c8594e45625d3aacc450c1f73ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::IsEqual</definition>
+        <argsstring>(const wxAffineMatrix2DBase &amp;t)</argsstring>
+        <name>IsEqual</name>
+        <param>
+          <type>const wxAffineMatrix2DBase &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Check that this matrix is identical with . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The matrix compared with this. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a29dc480d927d2335f9522fba421809c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAffineMatrix2D::operator==</definition>
+        <argsstring>(const wxAffineMatrix2DBase &amp;t) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const wxAffineMatrix2DBase &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Check that this matrix is identical with . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The matrix compared with this. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="92"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a00fa188b54418b476d122e4de408dc27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxAffineMatrix2D::wxAffineMatrix2D</definition>
+        <argsstring>()</argsstring>
+        <name>wxAffineMatrix2D</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The matrix elements are initialize to the identity matrix. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1ae51d89ae56a82bf884e825209201647d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::Get</definition>
+        <argsstring>(wxMatrix2D *mat2D, wxPoint2DDouble *tr) const </argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="structwx_matrix2_d" kindref="compound">wxMatrix2D</ref> *</type>
+          <declname>mat2D</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> *</type>
+          <declname>tr</declname>
+        </param>
+        <briefdescription>
+<para>Get the component values of the matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat2D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rotational components of the matrix (upper 2 x 2), must be non-NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The translational components of the matrix, may be NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a6e21085ca5abbac3ce2bfb2b870f992c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::Set</definition>
+        <argsstring>(const wxMatrix2D &amp;mat2D, const wxPoint2DDouble &amp;tr)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>const <ref refid="structwx_matrix2_d" kindref="compound">wxMatrix2D</ref> &amp;</type>
+          <declname>mat2D</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>tr</declname>
+        </param>
+        <briefdescription>
+<para>Set all elements of this matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat2D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rotational components of the matrix (upper 2 x 2). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The translational components of the matrix. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1ae82abf146d6707e39e60b2f9e9f56322" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::Concat</definition>
+        <argsstring>(const wxAffineMatrix2DBase &amp;t)</argsstring>
+        <name>Concat</name>
+        <param>
+          <type>const wxAffineMatrix2DBase &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Concatenate this matrix with another one. </para>        </briefdescription>
+        <detaileddescription>
+<para>The parameter matrix is the multiplicand.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplicand.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>t.m_11<sp/><sp/>t.m_12<sp/><sp/>0<sp/>|<sp/><sp/><sp/>|<sp/>m_11<sp/><sp/>m_12<sp/><sp/><sp/>0<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>matrix&apos;<sp/>=<sp/>|<sp/>t.m_21<sp/><sp/>t.m_22<sp/><sp/>0<sp/>|<sp/>x<sp/>|<sp/>m_21<sp/><sp/>m_22<sp/><sp/><sp/>0<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>t.m_tx<sp/><sp/>t.m_ty<sp/><sp/>1<sp/>|<sp/><sp/><sp/>|<sp/>m_tx<sp/><sp/>m_ty<sp/><sp/><sp/>1<sp/>|</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1abf59729230f15f299c063863db09ce68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAffineMatrix2D::Invert</definition>
+        <argsstring>()</argsstring>
+        <name>Invert</name>
+        <briefdescription>
+<para>Invert this matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the matrix is not invertible, i.e. if its determinant is 0, returns false and doesn&apos;t modify it.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>m_11<sp/><sp/>m_12<sp/><sp/>0<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Invert<sp/><sp/><sp/><sp/>|<sp/>m_21<sp/><sp/>m_22<sp/><sp/>0<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>m_tx<sp/><sp/>m_ty<sp/><sp/>1<sp/>|</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a4f9dd0abd3ca895a8c8605f8a5d2ca05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAffineMatrix2D::IsIdentity</definition>
+        <argsstring>() const </argsstring>
+        <name>IsIdentity</name>
+        <briefdescription>
+<para>Check if this is the identity matrix. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a9e35e755fca41ca8bb7e7549d0b3a0ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAffineMatrix2D::operator!=</definition>
+        <argsstring>(const wxAffineMatrix2DBase &amp;t) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const wxAffineMatrix2DBase &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Check that this matrix differs from . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The matrix compared with this. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a08f03e2a7b5ce37e6dc60d91ba2c43ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::Translate</definition>
+        <argsstring>(wxDouble dx, wxDouble dy)</argsstring>
+        <name>Translate</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+<para>Add the translation to this matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The translation in x direction. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The translation in y direction. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a7e9647a33ba1e540505489724b22fb9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::Scale</definition>
+        <argsstring>(wxDouble xScale, wxDouble yScale)</argsstring>
+        <name>Scale</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>xScale</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>yScale</declname>
+        </param>
+        <briefdescription>
+<para>Add scaling to this matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xScale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scaling in x direction. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yScale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scaling in y direction. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a5bec8e0a74908b53c46dd67d8013837c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::Mirror</definition>
+        <argsstring>(int direction=wxHORIZONTAL)</argsstring>
+        <name>Mirror</name>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+          <defval>wxHORIZONTAL</defval>
+        </param>
+        <briefdescription>
+<para>Add mirroring to this matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction(s) used for mirroring. One of wxHORIZONTAL, wxVERTICAL or their combination wxBOTH. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a7538f95b81d70ec5c0be0c1040a08ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::Rotate</definition>
+        <argsstring>(wxDouble ccRadians)</argsstring>
+        <name>Rotate</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>ccRadians</declname>
+        </param>
+        <briefdescription>
+<para>Add counter clockwise rotation to this matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ccRadians</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rotation angle in radians. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1aad371443939e426e693a05befe2e3cd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble wxAffineMatrix2D::TransformPoint</definition>
+        <argsstring>(const wxPoint2DDouble &amp;p) const </argsstring>
+        <name>TransformPoint</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Applies this matrix to the point. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point receiving the transformations.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The point with the transformations applied. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1ac2fe105565117945524e1305152647e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::TransformPoint</definition>
+        <argsstring>(wxDouble *x, wxDouble *y) const </argsstring>
+        <name>TransformPoint</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1a47def85a019c68e7b672c34b3e2b8427" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
+        <definition>wxPoint2DDouble wxAffineMatrix2D::TransformDistance</definition>
+        <argsstring>(const wxPoint2DDouble &amp;p) const </argsstring>
+        <name>TransformDistance</name>
+        <param>
+          <type>const <ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Applies the linear part of this matrix, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>without translation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source receiving the transformations.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The source with the transformations applied. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_affine_matrix2_d_1ab024db742b913618e7138b846656c385" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAffineMatrix2D::TransformDistance</definition>
+        <argsstring>(wxDouble *dx, wxDouble *dy) const </argsstring>
+        <name>TransformDistance</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A 3x2 matrix representing an affine 2D transformation. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2d.h" bodystart="18" bodyend="161"/>
+    <listofallmembers>
+      <member refid="classwx_affine_matrix2_d_1ae82abf146d6707e39e60b2f9e9f56322" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>Concat</name></member>
+      <member refid="classwx_affine_matrix2_d_1ae51d89ae56a82bf884e825209201647d" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>Get</name></member>
+      <member refid="classwx_affine_matrix2_d_1abf59729230f15f299c063863db09ce68" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>Invert</name></member>
+      <member refid="classwx_affine_matrix2_d_1a326f3c8594e45625d3aacc450c1f73ba" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>IsEqual</name></member>
+      <member refid="classwx_affine_matrix2_d_1a4f9dd0abd3ca895a8c8605f8a5d2ca05" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>IsIdentity</name></member>
+      <member refid="classwx_affine_matrix2_d_1a5bec8e0a74908b53c46dd67d8013837c" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>Mirror</name></member>
+      <member refid="classwx_affine_matrix2_d_1a9e35e755fca41ca8bb7e7549d0b3a0ee" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>operator!=</name></member>
+      <member refid="classwx_affine_matrix2_d_1a29dc480d927d2335f9522fba421809c3" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>operator==</name></member>
+      <member refid="classwx_affine_matrix2_d_1a7538f95b81d70ec5c0be0c1040a08ec8" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>Rotate</name></member>
+      <member refid="classwx_affine_matrix2_d_1a7e9647a33ba1e540505489724b22fb9c" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>Scale</name></member>
+      <member refid="classwx_affine_matrix2_d_1a6e21085ca5abbac3ce2bfb2b870f992c" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>Set</name></member>
+      <member refid="classwx_affine_matrix2_d_1a47def85a019c68e7b672c34b3e2b8427" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>TransformDistance</name></member>
+      <member refid="classwx_affine_matrix2_d_1ab024db742b913618e7138b846656c385" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>TransformDistance</name></member>
+      <member refid="classwx_affine_matrix2_d_1aad371443939e426e693a05befe2e3cd3" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>TransformPoint</name></member>
+      <member refid="classwx_affine_matrix2_d_1ac2fe105565117945524e1305152647e1" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>TransformPoint</name></member>
+      <member refid="classwx_affine_matrix2_d_1a08f03e2a7b5ce37e6dc60d91ba2c43ab" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>Translate</name></member>
+      <member refid="classwx_affine_matrix2_d_1a00fa188b54418b476d122e4de408dc27" prot="public" virt="non-virtual"><scope>wxAffineMatrix2D</scope><name>wxAffineMatrix2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_wrap_sizer" kind="class" prot="public">
+    <compoundname>wxWrapSizer</compoundname>
+    <basecompoundref refid="classwx_box_sizer" prot="public" virt="non-virtual">wxBoxSizer</basecompoundref>
+    <includes local="no">wx/wrapsizer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_wrap_sizer_1a49f0eff212b41b84b7b4eebd98dac489" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWrapSizer::wxWrapSizer</definition>
+        <argsstring>(int orient=wxHORIZONTAL, int flags=wxWRAPSIZER_DEFAULT_FLAGS)</argsstring>
+        <name>wxWrapSizer</name>
+        <param>
+          <type>int</type>
+          <declname>orient</declname>
+          <defval>wxHORIZONTAL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxWRAPSIZER_DEFAULT_FLAGS</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for a <ref refid="classwx_wrap_sizer" kindref="compound">wxWrapSizer</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>orient</emphasis> determines the primary direction of the sizer (the most common case being <computeroutput>wxHORIZONTAL</computeroutput>). The flags parameter can be a combination of the values <computeroutput>wxEXTEND_LAST_ON_EACH_LINE</computeroutput> which will cause the last item on each line to use any remaining space on that line and <computeroutput>wxREMOVE_LEADING_SPACES</computeroutput> which removes any spacer elements from the beginning of a row.</para><para>Both of these flags are on by default. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_wrap_sizer_1a37961a3c5eb8f0393d035e899a17664c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxWrapSizer::InformFirstDirection</definition>
+        <argsstring>(int direction, int size, int availableOtherDir)</argsstring>
+        <name>InformFirstDirection</name>
+        <reimplements refid="classwx_sizer_1ad0cc504036ef6c3a9d670dc3c98df3a5">InformFirstDirection</reimplements>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>availableOtherDir</declname>
+        </param>
+        <briefdescription>
+<para>Not used by an application. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the mechanism by which sizers can inform sub-items of the first determined size component. The sub-item can then better determine its size requirements.</para><para>Returns true if the information was used (and the sub-item min size was updated). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_wrap_sizer_1af26c69849c7d91b7bb0976e6cfed90ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxWrapSizer::RecalcSizes</definition>
+        <argsstring>()</argsstring>
+        <name>RecalcSizes</name>
+        <reimplements refid="classwx_box_sizer_1ad5c32286716e5dfcc9fbaf9cd87a3080">RecalcSizes</reimplements>
+        <briefdescription>
+<para>Implements the calculation of a box sizer&apos;s dimensions and then sets the size of its children (calling <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">wxWindow::SetSize</ref> if the child is a window). </para>        </briefdescription>
+        <detaileddescription>
+<para>It is used internally only and must not be called by the user (call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> if you want to resize). Documented for information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_wrap_sizer_1adb0c0f62bae28636b1766bcd51689386" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxWrapSizer::CalcMin</definition>
+        <argsstring>()</argsstring>
+        <name>CalcMin</name>
+        <reimplements refid="classwx_box_sizer_1abbb06ed94dca0aef849fd0b95d76346e">CalcMin</reimplements>
+        <briefdescription>
+<para>Implements the calculation of a box sizer&apos;s minimal. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is used internally only and must not be called by the user. Documented for information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_wrap_sizer_1a504e4cf6668eea2a4b62b21f0bf576b2" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxWrapSizer::IsSpaceItem</definition>
+        <argsstring>(wxSizerItem *item) const </argsstring>
+        <name>IsSpaceItem</name>
+        <param>
+          <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Can be overridden in the derived classes to treat some normal items as spacers. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is used to determine whether the given <emphasis>item</emphasis> should be considered to be a spacer for the purposes of <computeroutput>wxREMOVE_LEADING_SPACES</computeroutput> implementation. By default only returns true for the real spacers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A wrap sizer lays out its items in a single line, like a box sizer -- as long as there is space available in that direction. </para>    </briefdescription>
+    <detaileddescription>
+<para>Once all available space in the primary direction has been used, a new line is added and items are added there.</para><para>So a wrap sizer has a primary orientation for adding items, and adds lines as needed in the secondary direction.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>, <ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview__sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11655">
+        <label>wxWrapSizer</label>
+        <link refid="classwx_wrap_sizer"/>
+        <childnode refid="11656" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11658">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="11656">
+        <label>wxBoxSizer</label>
+        <link refid="classwx_box_sizer"/>
+        <childnode refid="11657" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11657">
+        <label>wxSizer</label>
+        <link refid="classwx_sizer"/>
+        <childnode refid="11658" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11659">
+        <label>wxWrapSizer</label>
+        <link refid="classwx_wrap_sizer"/>
+        <childnode refid="11660" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11662">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="11663" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11660">
+        <label>wxBoxSizer</label>
+        <link refid="classwx_box_sizer"/>
+        <childnode refid="11661" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11661">
+        <label>wxSizer</label>
+        <link refid="classwx_sizer"/>
+        <childnode refid="11662" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11663">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wrapsizer.h" bodystart="25" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1a81d21f287c416da96739a73faa54840d" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1a1c45a17c2d1e2d669c46d558d521d891" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1aaa40babf76cdb56d20f6c37fff282610" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1aa2d6009b34b1d34de920390795d8c0fb" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Add</name></member>
+      <member refid="classwx_sizer_1a6d7602d14f246395773e00ca46bf816a" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Add</name></member>
+      <member refid="classwx_box_sizer_1a58007d1fd88698b9f733ba651977ad55" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>AddSpacer</name></member>
+      <member refid="classwx_sizer_1af529134a9dc74a0551d12e747af5c976" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>AddStretchSpacer</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxWrapSizer</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_wrap_sizer_1adb0c0f62bae28636b1766bcd51689386" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>CalcMin</name></member>
+      <member refid="classwx_sizer_1a5909429d14de1baf1b832d5c1abf7821" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Clear</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxWrapSizer</scope><name>CloneRefData</name></member>
+      <member refid="classwx_sizer_1a0da5d65c9b4192bd24cc3feb1be69e59" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>ComputeFittingClientSize</name></member>
+      <member refid="classwx_sizer_1a3056cb4d47ea296e095b6cbc35d61155" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>ComputeFittingWindowSize</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxWrapSizer</scope><name>CreateRefData</name></member>
+      <member refid="classwx_sizer_1a362d7d556185fe9cd1b5d24004b86518" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Detach</name></member>
+      <member refid="classwx_sizer_1a0283dc800bd1c03cd10d437cef240791" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Detach</name></member>
+      <member refid="classwx_sizer_1aef45062fe9096f2c48c20d8ae3ad6476" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Detach</name></member>
+      <member refid="classwx_sizer_1abad9cedc0cbe9ade2c799da23462d17e" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Fit</name></member>
+      <member refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>FitInside</name></member>
+      <member refid="classwx_sizer_1a619f8bd8f4fd641819626813b1c1f576" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetChildren</name></member>
+      <member refid="classwx_sizer_1a542ef0705987b3b25cec3d0607dfdca2" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetChildren</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_sizer_1afc4df63c94cf062b7ef29d274d2ee6c1" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetContainingWindow</name></member>
+      <member refid="classwx_sizer_1adca9ab35f05d28156ac0d4bc2e2ed6ac" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetItem</name></member>
+      <member refid="classwx_sizer_1acb45fd75ab336670f41879fd557a7c65" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetItem</name></member>
+      <member refid="classwx_sizer_1a2aa7f3c241944ae28ee9cbd6df662227" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetItem</name></member>
+      <member refid="classwx_sizer_1ab94e21f858a3c82055faed4b621e4ad2" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetItemById</name></member>
+      <member refid="classwx_sizer_1ac0e0239d22c99213b99bbafdade6793d" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetItemCount</name></member>
+      <member refid="classwx_sizer_1a9fab8d16aefe347dbd57e0bdfe0d810d" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetMinSize</name></member>
+      <member refid="classwx_box_sizer_1add464d77a9506696e1b8cbd5418834ba" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetOrientation</name></member>
+      <member refid="classwx_sizer_1a3907d4a032274c808b57de3c0c70d215" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetPosition</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetRefData</name></member>
+      <member refid="classwx_sizer_1a4898d4754c1b45e8acc79a2376fc6220" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>GetSize</name></member>
+      <member refid="classwx_sizer_1a317299431009a0adb4874f9c3f39ea8c" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Hide</name></member>
+      <member refid="classwx_sizer_1ae822dbd21860bfdbf7f76ca22cdcc1f4" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Hide</name></member>
+      <member refid="classwx_sizer_1a53c972f52267daea500d78f606fa0032" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Hide</name></member>
+      <member refid="classwx_wrap_sizer_1a37961a3c5eb8f0393d035e899a17664c" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>InformFirstDirection</name></member>
+      <member refid="classwx_sizer_1aafc5f53e9d3511440be05f9805bb2871" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1aecb6744c0c82c0eb1ae12a532d5d019b" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1a244f64c3d5c900615b2384b320f6c17b" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1a9308aed2cb55227ac1aec7e14707eb3e" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1a43cfac9112288a7d9302ceb674694bf4" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1a6d1daeda52f9f944a0ebd667471ecf6d" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Insert</name></member>
+      <member refid="classwx_sizer_1afb001f9018ff92400937bf6bd494de0d" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>InsertSpacer</name></member>
+      <member refid="classwx_sizer_1a8aeaaac2a98635d45a06961e505e8dde" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>InsertStretchSpacer</name></member>
+      <member refid="classwx_sizer_1ae456d3459b9b31545100a799eb5e8c2a" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>IsEmpty</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>IsSameAs</name></member>
+      <member refid="classwx_sizer_1a44f05d5396f62aa3764d319489223536" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>IsShown</name></member>
+      <member refid="classwx_sizer_1a5fd1c503a027709c29e4f56c9707b75c" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>IsShown</name></member>
+      <member refid="classwx_sizer_1a7543a671a8ae7193ba8d15532ca8712d" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>IsShown</name></member>
+      <member refid="classwx_wrap_sizer_1a504e4cf6668eea2a4b62b21f0bf576b2" prot="protected" virt="virtual"><scope>wxWrapSizer</scope><name>IsSpaceItem</name></member>
+      <member refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Layout</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxWrapSizer</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>operator new</name></member>
+      <member refid="classwx_sizer_1a7417fb9b0e3b4777c11b381f14cf0153" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1a66ce726dcc4bf0a283530d3bc425aae9" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1aedfd27f1b77cd34d23c06e001670a62d" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1a968936425f2d5e6b9c15a3820737e1fe" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1a504343f0780c3d1ea7f16bcf1e6e90b5" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1a0f34608b8bf5b119938cea846a4b29c6" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Prepend</name></member>
+      <member refid="classwx_sizer_1acc707e1e6d0afd18dc4e70052fa21d78" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>PrependSpacer</name></member>
+      <member refid="classwx_sizer_1ac102680023527ab0610a0d2a6340d4e4" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>PrependStretchSpacer</name></member>
+      <member refid="classwx_wrap_sizer_1af26c69849c7d91b7bb0976e6cfed90ae" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>RecalcSizes</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Ref</name></member>
+      <member refid="classwx_sizer_1a06ef74a0bb6aba1f1d3aab02fb402fec" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Remove</name></member>
+      <member refid="classwx_sizer_1a7fce6ce0e986e00e6702914436b6191a" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Remove</name></member>
+      <member refid="classwx_sizer_1accad1425ce5f2504fb63d2801b5b85e1" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Remove</name></member>
+      <member refid="classwx_sizer_1ade62512b74abfa0c6ff45825ea0c9d9d" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Replace</name></member>
+      <member refid="classwx_sizer_1a842fc94c0f5e58597216cb952e044509" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Replace</name></member>
+      <member refid="classwx_sizer_1a5283d4d5fd059cea93e9401e3708f294" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>Replace</name></member>
+      <member refid="classwx_sizer_1a3c5483afdc5b5b5657548e190226f285" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetDimension</name></member>
+      <member refid="classwx_sizer_1aa993f4a4534bd4dd24c801bfda6da224" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetDimension</name></member>
+      <member refid="classwx_sizer_1a26fc90231667639d5af7c2f8f7b75c80" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1a486d80e43e6cbd8fea5fa2879d111071" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1a8e4230a56ca442a3eb3577f6c47094d4" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1a9941c644acf3b215678cea0ea15aeec0" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1aae51219b9dfd74c3af5823e39f558ed4" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1abc7a754f4a12f80025fad0d131082fbb" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetItemMinSize</name></member>
+      <member refid="classwx_sizer_1a97bbbf3ee6e55c321d7bb72b4c1b7d79" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetMinSize</name></member>
+      <member refid="classwx_sizer_1a0e89f59e611c0279e8bee1b7ee345446" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetMinSize</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetRefData</name></member>
+      <member refid="classwx_sizer_1abc460cd0e2bb3bde72142fdb434bc546" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetSizeHints</name></member>
+      <member refid="classwx_sizer_1a92cab30589d91cc09028a3abfefe6221" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>SetVirtualSizeHints</name></member>
+      <member refid="classwx_sizer_1afb6638468fe2253d1870b4d387c57a0b" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Show</name></member>
+      <member refid="classwx_sizer_1a65289f40a39fb31512f93d8d7f63720e" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Show</name></member>
+      <member refid="classwx_sizer_1a15f781b11cbe978d6fbc0b62f32bc3b4" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>Show</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>UnShare</name></member>
+      <member refid="classwx_box_sizer_1a1d8b1a1bed1af566c1f95e54dbf1d18e" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>wxBoxSizer</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>wxObject</name></member>
+      <member refid="classwx_sizer_1ae05f76a5e5a8e721065dd5aec1bd6cb2" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>wxSizer</name></member>
+      <member refid="classwx_wrap_sizer_1a49f0eff212b41b84b7b4eebd98dac489" prot="public" virt="non-virtual"><scope>wxWrapSizer</scope><name>wxWrapSizer</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>~wxObject</name></member>
+      <member refid="classwx_sizer_1a5d52467e4e1367939ef4d9ddc6876cfe" prot="public" virt="virtual"><scope>wxWrapSizer</scope><name>~wxSizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

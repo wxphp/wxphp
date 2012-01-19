@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_u_r_l" kind="class" prot="public">
+    <compoundname>wxURL</compoundname>
+    <basecompoundref refid="classwx_u_r_i" prot="public" virt="non-virtual">wxURI</basecompoundref>
+    <includes local="no">wx/url.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_u_r_l_1a9837df16ff9f8daf91e5569265cfbe60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxURL::wxURL</definition>
+        <argsstring>(const wxString &amp;url=wxEmptyString)</argsstring>
+        <name>wxURL</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructs a URL object from the string. </para>        </briefdescription>
+        <detaileddescription>
+<para>The URL must be valid according to RFC 1738. In particular, file URLs must be of the format <computeroutput>&quot;file://hostname/path/to/file&quot;</computeroutput>, otherwise <ref refid="classwx_u_r_l_1ac9b906a4ea766ab695e4dce0eb14fb70" kindref="member">GetError()</ref> will return a value different from <ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81a4845be36309c1c3b66bdc23e678ff260" kindref="member">wxURL_NOERR</ref>.</para><para>It is valid to leave out the hostname but slashes must remain in place, in other words, a file URL without a hostname must contain three consecutive slashes (e.g. <computeroutput>&quot;file:///somepath/myfile&quot;</computeroutput>).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Url string to parse. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_1a6ea0d6a3020382c84c86aac4697768a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxURL::~wxURL</definition>
+        <argsstring>()</argsstring>
+        <name>~wxURL</name>
+        <briefdescription>
+<para>Destroys the URL object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_1ac9b906a4ea766ab695e4dce0eb14fb70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81" kindref="member">wxURLError</ref></type>
+        <definition>wxURLError wxURL::GetError</definition>
+        <argsstring>() const </argsstring>
+        <name>GetError</name>
+        <briefdescription>
+<para>Returns the last error. </para>        </briefdescription>
+        <detaileddescription>
+<para>This error refers to the URL parsing or to the protocol. It can be one of <ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81" kindref="member">wxURLError</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_1a6974f1d2c13a6ef721e2b93c84e5e376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+        <definition>wxInputStream* wxURL::GetInputStream</definition>
+        <argsstring>()</argsstring>
+        <name>GetInputStream</name>
+        <briefdescription>
+<para>Creates a new input stream on the specified URL. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can use all but seek functionality of wxStream. Seek isn&apos;t available on all streams. For example, HTTP or FTP streams don&apos;t deal with it.</para><para>Note that this method is somewhat deprecated, all future wxWidgets applications should use <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> instead.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_u_r_l" kindref="compound" tooltip="wxURL is a specialization of wxURI for parsing URLs.">wxURL</ref><sp/>url(</highlight><highlight class="stringliteral">&quot;http://a.host/a.dir/a.file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(url.GetError()<sp/>==<sp/><ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81a4845be36309c1c3b66bdc23e678ff260" kindref="member" tooltip="No error.">wxURL_NOERR</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_input_stream" kindref="compound" tooltip="wxInputStream is an abstract base class which may not be used directly.">wxInputStream</ref><sp/>*in_stream;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in_stream<sp/>=<sp/>url.GetInputStream();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then,<sp/>you<sp/>can<sp/>use<sp/>all<sp/>IO<sp/>calls<sp/>of<sp/>in_stream<sp/>(See<sp/>wxStream)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><simplesect kind="return"><para>Returns the initialized stream. You will have to delete it yourself.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_1a7ddfecfb1e7d44c571c5db67b21e6330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_protocol" kindref="compound">wxProtocol</ref> &amp;</type>
+        <definition>wxProtocol&amp; wxURL::GetProtocol</definition>
+        <argsstring>()</argsstring>
+        <name>GetProtocol</name>
+        <briefdescription>
+<para>Returns a reference to the protocol which will be used to get the URL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_1ab3c1e6cd3fa2fbb771dff48e7e93f439" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxURL::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if this object is correctly initialized, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>if <ref refid="classwx_u_r_l_1ac9b906a4ea766ab695e4dce0eb14fb70" kindref="member">GetError()</ref> returns <ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81a4845be36309c1c3b66bdc23e678ff260" kindref="member">wxURL_NOERR</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_1a79723a45665f2bbd71d5e1bbfcb2849f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxURL::SetProxy</definition>
+        <argsstring>(const wxString &amp;url_proxy)</argsstring>
+        <name>SetProxy</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url_proxy</declname>
+        </param>
+        <briefdescription>
+<para>Sets the proxy to use for this URL. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_u_r_l_1a3f01e01314933ba28273c6726825c4a5" kindref="member">SetDefaultProxy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_u_r_l_1afd25de2271b473acf331ab56412a3a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81" kindref="member">wxURLError</ref></type>
+        <definition>wxURLError wxURL::SetURL</definition>
+        <argsstring>(const wxString &amp;url)</argsstring>
+        <name>SetURL</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>Initializes this object with the given URL and returns <ref refid="url_8h_1a96577e618caa0aa92dc39403bc3d5d81a4845be36309c1c3b66bdc23e678ff260" kindref="member">wxURL_NOERR</ref> if it&apos;s valid (see <ref refid="classwx_u_r_l_1ac9b906a4ea766ab695e4dce0eb14fb70" kindref="member">GetError()</ref> for more info). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_u_r_l_1a3f01e01314933ba28273c6726825c4a5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxURL::SetDefaultProxy</definition>
+        <argsstring>(const wxString &amp;url_proxy)</argsstring>
+        <name>SetDefaultProxy</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url_proxy</declname>
+        </param>
+        <briefdescription>
+<para>Sets the default proxy server to use to get the URL. </para>        </briefdescription>
+        <detaileddescription>
+<para>The string specifies the proxy like this: <computeroutput>&quot;&lt;hostname&gt;:&lt;port number&gt;&quot;</computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url_proxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the proxy to use.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_u_r_l_1a79723a45665f2bbd71d5e1bbfcb2849f" kindref="member">SetProxy()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> is a specialization of <ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> for parsing URLs. </para>    </briefdescription>
+    <detaileddescription>
+<para>Please look at <ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> documentation for more info about the functions you can use to retrieve the various parts of the URL (scheme, server, port, etc).</para><para>Supports standard assignment operators, copy constructors, and comparison operators.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_protocol" kindref="compound">wxProtocol</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11208">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="11207">
+        <label>wxURI</label>
+        <link refid="classwx_u_r_i"/>
+        <childnode refid="11208" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11206">
+        <label>wxURL</label>
+        <link refid="classwx_u_r_l"/>
+        <childnode refid="11207" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11211">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="11212" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11210">
+        <label>wxURI</label>
+        <link refid="classwx_u_r_i"/>
+        <childnode refid="11211" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11209">
+        <label>wxURL</label>
+        <link refid="classwx_u_r_l"/>
+        <childnode refid="11210" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11212">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" bodystart="37" bodyend="128"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxURL</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_u_r_i_1a3352a1dd8649194230a72efcd2d0ebf9" prot="public" virt="non-virtual"><scope>wxURL</scope><name>BuildUnescapedURI</name></member>
+      <member refid="classwx_u_r_i_1a02116f8883e77754a793dbfea0454896" prot="public" virt="non-virtual"><scope>wxURL</scope><name>BuildURI</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxURL</scope><name>CloneRefData</name></member>
+      <member refid="classwx_u_r_i_1a1b65a25fea50ceb7dd07083c5d6b540d" prot="public" virt="non-virtual"><scope>wxURL</scope><name>Create</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxURL</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxURL</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_u_r_l_1ac9b906a4ea766ab695e4dce0eb14fb70" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetError</name></member>
+      <member refid="classwx_u_r_i_1ac00aa809db96d73784544d3111ff2117" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetFragment</name></member>
+      <member refid="classwx_u_r_i_1ac6650f18e23bb37868faa225cd3412d6" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetHostType</name></member>
+      <member refid="classwx_u_r_l_1a6974f1d2c13a6ef721e2b93c84e5e376" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetInputStream</name></member>
+      <member refid="classwx_u_r_i_1aa743a9ffa9cb1b8f50c27d733dd840cf" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetPassword</name></member>
+      <member refid="classwx_u_r_i_1a344bbf9b939a05a1a5017454ee4cb471" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetPath</name></member>
+      <member refid="classwx_u_r_i_1a2730f3b8bdba4dd20d1c0494316f27c6" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetPort</name></member>
+      <member refid="classwx_u_r_l_1a7ddfecfb1e7d44c571c5db67b21e6330" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetProtocol</name></member>
+      <member refid="classwx_u_r_i_1aee997a36b2669dd55a62f1848c3751fd" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetQuery</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetRefData</name></member>
+      <member refid="classwx_u_r_i_1ae02a0c635fde3fa9db00c1fbec6d0c18" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetScheme</name></member>
+      <member refid="classwx_u_r_i_1a33159a144c40f715544c42d6014383b9" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetServer</name></member>
+      <member refid="classwx_u_r_i_1a8aee0a44dffce7579eb82e0181d4fc1d" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetUser</name></member>
+      <member refid="classwx_u_r_i_1a8621cd0990de99bfeba5bd96691c4e4a" prot="public" virt="non-virtual"><scope>wxURL</scope><name>GetUserInfo</name></member>
+      <member refid="classwx_u_r_i_1af2896c78d0a603c677b8d313f957b0ea" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasFragment</name></member>
+      <member refid="classwx_u_r_i_1acd98d123d25312743bd2b35bfe5dc77b" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasPath</name></member>
+      <member refid="classwx_u_r_i_1a691c3f0f3bc51d8dc2a570700b8256eb" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasPort</name></member>
+      <member refid="classwx_u_r_i_1a25ecd142749d1ca2be7939b1cf606593" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasQuery</name></member>
+      <member refid="classwx_u_r_i_1aa424836846d5438b0cd75fe1631aaf9c" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasScheme</name></member>
+      <member refid="classwx_u_r_i_1a741d16955b870aaddf0d5d6d26d78ae9" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasServer</name></member>
+      <member refid="classwx_u_r_i_1afb92420e39800d72e1adfb4048edd32d" prot="public" virt="non-virtual"><scope>wxURL</scope><name>HasUser</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxURL</scope><name>IsKindOf</name></member>
+      <member refid="classwx_u_r_l_1ab3c1e6cd3fa2fbb771dff48e7e93f439" prot="public" virt="non-virtual"><scope>wxURL</scope><name>IsOk</name></member>
+      <member refid="classwx_u_r_i_1aaa5d7930c1e01d7261126c4fbf4b139d" prot="public" virt="non-virtual"><scope>wxURL</scope><name>IsReference</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxURL</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxURL</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxURL</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxURL</scope><name>operator new</name></member>
+      <member refid="classwx_u_r_i_1a4012ea3965b7fe6a9c0d7cc93dac094f" prot="public" virt="non-virtual"><scope>wxURL</scope><name>operator==</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxURL</scope><name>Ref</name></member>
+      <member refid="classwx_u_r_i_1aba4590d36eb2c9f1ead9e92f4ef31c70" prot="public" virt="non-virtual"><scope>wxURL</scope><name>Resolve</name></member>
+      <member refid="classwx_u_r_l_1a3f01e01314933ba28273c6726825c4a5" prot="public" virt="non-virtual"><scope>wxURL</scope><name>SetDefaultProxy</name></member>
+      <member refid="classwx_u_r_l_1a79723a45665f2bbd71d5e1bbfcb2849f" prot="public" virt="non-virtual"><scope>wxURL</scope><name>SetProxy</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxURL</scope><name>SetRefData</name></member>
+      <member refid="classwx_u_r_l_1afd25de2271b473acf331ab56412a3a99" prot="public" virt="non-virtual"><scope>wxURL</scope><name>SetURL</name></member>
+      <member refid="classwx_u_r_i_1a518f0a025e80aa83f0b6b0c0dd8f51c5" prot="public" virt="non-virtual"><scope>wxURL</scope><name>Unescape</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxURL</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxURL</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxURL</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxURL</scope><name>wxObject</name></member>
+      <member refid="classwx_u_r_i_1a8e75e5929758e6618a302741a92584d9" prot="public" virt="non-virtual"><scope>wxURL</scope><name>wxURI</name></member>
+      <member refid="classwx_u_r_i_1abb3212b6bd4393b24db58411f5f66207" prot="public" virt="non-virtual"><scope>wxURL</scope><name>wxURI</name></member>
+      <member refid="classwx_u_r_i_1a69a1f2a24d618d89b61232f64a441566" prot="public" virt="non-virtual"><scope>wxURL</scope><name>wxURI</name></member>
+      <member refid="classwx_u_r_l_1a9837df16ff9f8daf91e5569265cfbe60" prot="public" virt="non-virtual"><scope>wxURL</scope><name>wxURL</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxURL</scope><name>~wxObject</name></member>
+      <member refid="classwx_u_r_l_1a6ea0d6a3020382c84c86aac4697768a4" prot="public" virt="virtual"><scope>wxURL</scope><name>~wxURL</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

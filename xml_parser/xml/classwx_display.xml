@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_display" kind="class" prot="public">
+    <compoundname>wxDisplay</compoundname>
+    <includes local="no">wx/display.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_display_1a0360037fe135c972559f20c84232b307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDisplay::wxDisplay</definition>
+        <argsstring>(unsigned int index=0)</argsstring>
+        <name>wxDisplay</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor, setting up a <ref refid="classwx_display" kindref="compound">wxDisplay</ref> instance with the specified display. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the display to use. This must be non-negative and lower than the value returned by <ref refid="classwx_display_1a6493e584d40a07c5f789f3027d8eea1d" kindref="member">GetCount()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1a2733feea0f7eb1f1822b6a332ba606bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDisplay::~wxDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>~wxDisplay</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1a43f3eb82f45be488c3829b4d97693e18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDisplay::ChangeMode</definition>
+        <argsstring>(const wxVideoMode &amp;mode=wxDefaultVideoMode)</argsstring>
+        <name>ChangeMode</name>
+        <param>
+          <type>const <ref refid="structwx_video_mode" kindref="compound">wxVideoMode</ref> &amp;</type>
+          <declname>mode</declname>
+          <defval><ref refid="vidmode_8h_1a74100ed513b4a32487b0716a9e20642b" kindref="member">wxDefaultVideoMode</ref></defval>
+        </param>
+        <briefdescription>
+<para>Changes the video mode of this display to the mode specified in the mode parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para>If wxDefaultVideoMode is passed in as the mode parameter, the defined behaviour is that <ref refid="classwx_display" kindref="compound">wxDisplay</ref> will reset the video mode to the default mode used by the display. On Windows, the behaviour is normal. However, there are differences on other platforms. On Unix variations using X11 extensions it should behave as defined, but some irregularities may occur. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1a894bf6bc3db400ddf89233bd8e4b5924" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
+        <definition>wxRect wxDisplay::GetClientArea</definition>
+        <argsstring>() const </argsstring>
+        <name>GetClientArea</name>
+        <briefdescription>
+<para>Returns the client area of the display. </para>        </briefdescription>
+        <detaileddescription>
+<para>The client area is the part of the display available for the normal (non full screen) windows, usually it is the same as <ref refid="classwx_display_1acda8ab1e8a88aa0f96d365bbe7a8efd6" kindref="member">GetGeometry()</ref> but it could be less if there is a taskbar (or equivalent) on this display. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1a4902032f8e75c081b45e8a3e86847e6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structwx_video_mode" kindref="compound">wxVideoMode</ref></type>
+        <definition>wxVideoMode wxDisplay::GetCurrentMode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCurrentMode</name>
+        <briefdescription>
+<para>Returns the current video mode that this display is in. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1acda8ab1e8a88aa0f96d365bbe7a8efd6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
+        <definition>wxRect wxDisplay::GetGeometry</definition>
+        <argsstring>() const </argsstring>
+        <name>GetGeometry</name>
+        <briefdescription>
+<para>Returns the bounding rectangle of the display whose index was passed to the constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_display_1a894bf6bc3db400ddf89233bd8e4b5924" kindref="member">GetClientArea()</ref>, <ref refid="group__group__funcmacro__gdi_1ga2a4dcac2c18c10f546e699ddba2fbfc8" kindref="member">wxDisplaySize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1a6b9c06e45644b58f62ffd4a4a3c5fe3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>wxArrayVideoModes</type>
+        <definition>wxArrayVideoModes wxDisplay::GetModes</definition>
+        <argsstring>(const wxVideoMode &amp;mode=wxDefaultVideoMode) const </argsstring>
+        <name>GetModes</name>
+        <param>
+          <type>const <ref refid="structwx_video_mode" kindref="compound">wxVideoMode</ref> &amp;</type>
+          <declname>mode</declname>
+          <defval><ref refid="vidmode_8h_1a74100ed513b4a32487b0716a9e20642b" kindref="member">wxDefaultVideoMode</ref></defval>
+        </param>
+        <briefdescription>
+<para>Fills and returns an array with all the video modes that are supported by this display, or video modes that are supported by this display and match the mode parameter (if mode is not wxDefaultVideoMode). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1ab8c2e28185f3df8f06a8ff44a034964e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxDisplay::GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+<para>Returns the display&apos;s name. </para>        </briefdescription>
+        <detaileddescription>
+<para>A name is not available on all platforms. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1afec1111f8c760da91e5f7ff2ed2d0233" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDisplay::IsPrimary</definition>
+        <argsstring>() const </argsstring>
+        <name>IsPrimary</name>
+        <briefdescription>
+<para>Returns true if the display is the primary display. </para>        </briefdescription>
+        <detaileddescription>
+<para>The primary display is the one whose index is 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="114"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_display_1a6493e584d40a07c5f789f3027d8eea1d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>static unsigned int wxDisplay::GetCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetCount</name>
+        <briefdescription>
+<para>Returns the number of connected displays. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1ae3cebdb3bab01a12d3d3516af75d3728" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int wxDisplay::GetFromPoint</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>GetFromPoint</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Returns the index of the display on which the given point lies, or <computeroutput>wxNOT_FOUND</computeroutput> if the point is not on any connected display. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point to locate. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_display_1aaf13ecd5a870d5b8b10a6c6cd9710b7a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int wxDisplay::GetFromWindow</definition>
+        <argsstring>(const wxWindow *win)</argsstring>
+        <name>GetFromWindow</name>
+        <param>
+          <type>const <ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <briefdescription>
+<para>Returns the index of the display on which the given window lies. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the window is on more than one display it gets the display that overlaps the window the most.</para><para>Returns <computeroutput>wxNOT_FOUND</computeroutput> if the window is not on any connected display.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>win</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window to locate. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Determines the sizes and locations of displays connected to the system. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__gdi_1gab8a48ec2fc13c5112ff5fcd42e2881b9" kindref="member">wxClientDisplayRect()</ref>, <ref refid="group__group__funcmacro__gdi_1ga2a4dcac2c18c10f546e699ddba2fbfc8" kindref="member">wxDisplaySize()</ref>, <ref refid="group__group__funcmacro__gdi_1ga964bb139750337d8e578450f88b6e97b" kindref="member">wxDisplaySizeMM()</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/display.h" bodystart="19" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classwx_display_1a43f3eb82f45be488c3829b4d97693e18" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>ChangeMode</name></member>
+      <member refid="classwx_display_1a894bf6bc3db400ddf89233bd8e4b5924" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>GetClientArea</name></member>
+      <member refid="classwx_display_1a6493e584d40a07c5f789f3027d8eea1d" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>GetCount</name></member>
+      <member refid="classwx_display_1a4902032f8e75c081b45e8a3e86847e6b" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>GetCurrentMode</name></member>
+      <member refid="classwx_display_1ae3cebdb3bab01a12d3d3516af75d3728" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>GetFromPoint</name></member>
+      <member refid="classwx_display_1aaf13ecd5a870d5b8b10a6c6cd9710b7a" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>GetFromWindow</name></member>
+      <member refid="classwx_display_1acda8ab1e8a88aa0f96d365bbe7a8efd6" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>GetGeometry</name></member>
+      <member refid="classwx_display_1a6b9c06e45644b58f62ffd4a4a3c5fe3b" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>GetModes</name></member>
+      <member refid="classwx_display_1ab8c2e28185f3df8f06a8ff44a034964e" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>GetName</name></member>
+      <member refid="classwx_display_1afec1111f8c760da91e5f7ff2ed2d0233" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>IsPrimary</name></member>
+      <member refid="classwx_display_1a0360037fe135c972559f20c84232b307" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>wxDisplay</name></member>
+      <member refid="classwx_display_1a2733feea0f7eb1f1822b6a332ba606bb" prot="public" virt="non-virtual"><scope>wxDisplay</scope><name>~wxDisplay</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

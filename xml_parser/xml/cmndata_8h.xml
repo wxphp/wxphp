@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="cmndata_8h" kind="file">
+    <compoundname>cmndata.h</compoundname>
+    <innerclass refid="classwx_page_setup_dialog_data" prot="public">wxPageSetupDialogData</innerclass>
+    <innerclass refid="classwx_print_data" prot="public">wxPrintData</innerclass>
+    <innerclass refid="classwx_print_dialog_data" prot="public">wxPrintDialogData</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9" prot="public" static="no">
+        <name>wxPrintBin</name>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a2a9bac494b2421a0763ef9805005a261" prot="public">
+          <name>wxPRINTBIN_DEFAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a57f25d95780bf23af83d3fe63192b919" prot="public">
+          <name>wxPRINTBIN_ONLYONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a814b4d6064e07b99ae2cafe6db908efa" prot="public">
+          <name>wxPRINTBIN_LOWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a2b902b41b151b70914fb4f0fb6d3c9d6" prot="public">
+          <name>wxPRINTBIN_MIDDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9aaf1779d18cf53085a82996a0fe60370f" prot="public">
+          <name>wxPRINTBIN_MANUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9adb69905b1a541008a2de5fc357d50183" prot="public">
+          <name>wxPRINTBIN_ENVELOPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a04a822a3dbf9147d4569f4367cbc531e" prot="public">
+          <name>wxPRINTBIN_ENVMANUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a9e7ad1eb98e4bfab0645d02c526bf6f0" prot="public">
+          <name>wxPRINTBIN_AUTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a1e3542e1665b4f9b09415778ab8e580e" prot="public">
+          <name>wxPRINTBIN_TRACTOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9ad5670b80b04ec0902efe0c3bd7aa4fa0" prot="public">
+          <name>wxPRINTBIN_SMALLFMT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9ac1296d3963fe7ed8e4dfc473b0d2f099" prot="public">
+          <name>wxPRINTBIN_LARGEFMT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9aa944b5525ddd7e3da4aaef12edb14964" prot="public">
+          <name>wxPRINTBIN_LARGECAPACITY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9ad6d9004017d0756ee0e41eef9ed5051e" prot="public">
+          <name>wxPRINTBIN_CASSETTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a8a6bb13003e8af3f435058596c44c2e2" prot="public">
+          <name>wxPRINTBIN_FORMSOURCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9a6fe1039043aecdb17dbd3f83fe92b384" prot="public">
+          <name>wxPRINTBIN_USER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration of various printer bin sources. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_print_data_1af129c5539a9bfa1dbf0d93b6fd6caf3a" kindref="member">wxPrintData::SetBin()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="229" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" bodystart="228" bodyend="247"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h"/>
+  </compounddef>
+</doxygen>

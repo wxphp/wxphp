@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="graphics_8h" kind="file">
+    <compoundname>graphics.h</compoundname>
+    <innerclass refid="classwx_graphics_path" prot="public">wxGraphicsPath</innerclass>
+    <innerclass refid="classwx_graphics_object" prot="public">wxGraphicsObject</innerclass>
+    <innerclass refid="classwx_graphics_bitmap" prot="public">wxGraphicsBitmap</innerclass>
+    <innerclass refid="classwx_graphics_context" prot="public">wxGraphicsContext</innerclass>
+    <innerclass refid="classwx_graphics_gradient_stop" prot="public">wxGraphicsGradientStop</innerclass>
+    <innerclass refid="classwx_graphics_gradient_stops" prot="public">wxGraphicsGradientStops</innerclass>
+    <innerclass refid="classwx_graphics_renderer" prot="public">wxGraphicsRenderer</innerclass>
+    <innerclass refid="classwx_graphics_brush" prot="public">wxGraphicsBrush</innerclass>
+    <innerclass refid="classwx_graphics_font" prot="public">wxGraphicsFont</innerclass>
+    <innerclass refid="classwx_graphics_pen" prot="public">wxGraphicsPen</innerclass>
+    <innerclass refid="classwx_graphics_matrix" prot="public">wxGraphicsMatrix</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="graphics_8h_1a2163cc0b26553eee0e9e7da270518c97" prot="public" static="no">
+        <name>wxAntialiasMode</name>
+        <enumvalue id="graphics_8h_1a2163cc0b26553eee0e9e7da270518c97ac02dd8bc9e3348c2b481c5c32d144543" prot="public">
+          <name>wxANTIALIAS_NONE</name>
+          <briefdescription>
+<para>No anti-aliasing. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1a2163cc0b26553eee0e9e7da270518c97a74c389c1fae8caafb5b92e2435ec5cc9" prot="public">
+          <name>wxANTIALIAS_DEFAULT</name>
+          <briefdescription>
+<para>The default anti-aliasing. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Anti-aliasing modes used by <ref refid="classwx_graphics_context_1a51e968476c72d3d77424cb8e11a14d65" kindref="member">wxGraphicsContext::SetAntialiasMode()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="207" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="206" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="enum" id="graphics_8h_1aec2ef7cc43f841ab74155becb8185e18" prot="public" static="no">
+        <name>wxInterpolationQuality</name>
+        <enumvalue id="graphics_8h_1aec2ef7cc43f841ab74155becb8185e18a169ad9531b1ad926f173c1404f77268f" prot="public">
+          <name>wxINTERPOLATION_DEFAULT</name>
+          <briefdescription>
+<para>default interpolation, based on type of context, in general medium quality </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1aec2ef7cc43f841ab74155becb8185e18ad649cbc43246a85fc5e442eec0260981" prot="public">
+          <name>wxINTERPOLATION_NONE</name>
+          <briefdescription>
+<para>no interpolation </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1aec2ef7cc43f841ab74155becb8185e18a9c23735d6de9e0285312655e2665cd7e" prot="public">
+          <name>wxINTERPOLATION_FAST</name>
+          <briefdescription>
+<para>fast interpolation, suited for interactivity </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1aec2ef7cc43f841ab74155becb8185e18a73b65cf5f62beabc31373a16e57719d3" prot="public">
+          <name>wxINTERPOLATION_GOOD</name>
+          <briefdescription>
+<para>better quality </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1aec2ef7cc43f841ab74155becb8185e18ab559b56c86badea660f05f98a3257f38" prot="public">
+          <name>wxINTERPOLATION_BEST</name>
+          <briefdescription>
+<para>best quality, not suited for interactivity </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Interpolation quality used by <ref refid="classwx_graphics_context_1af6ecb449cb732632a8d9b5c285d01b91" kindref="member">wxGraphicsContext::SetInterpolationQuality()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="219" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="218" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="enum" id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668" prot="public" static="no">
+        <name>wxCompositionMode</name>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668a551dddbf46acefe21ed98984c1715635" prot="public">
+          <name>wxCOMPOSITION_INVALID</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+<para>Indicates invalid or unsupported composition mode. </para>          </briefdescription>
+          <detaileddescription>
+<para>This value can&apos;t be passed to <ref refid="classwx_graphics_context_1a08a80e457f7bb28d0394c248de1742ef" kindref="member">wxGraphicsContext::SetCompositionMode()</ref>.</para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668a19c9489faa69daa8383af7f9d5bb5c55" prot="public">
+          <name>wxCOMPOSITION_CLEAR</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = 0 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668a19a55339fe50cf87cc40e6f675bc8150" prot="public">
+          <name>wxCOMPOSITION_SOURCE</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = S </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668a46fea70da2a1f8cb1151951639c8d07f" prot="public">
+          <name>wxCOMPOSITION_OVER</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>S</emphasis> + <emphasis>D*</emphasis>(1 - <emphasis>Sa</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668ad30d4e9dbf0d0367a749a952ec76be6b" prot="public">
+          <name>wxCOMPOSITION_IN</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>S*<emphasis>Da</emphasis> </emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668a24a1b11099bbce5e64206d8de2a4014e" prot="public">
+          <name>wxCOMPOSITION_OUT</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>S*</emphasis>(1 - <emphasis>Da</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668ae96c0aab326b220e4d5961dd43b10446" prot="public">
+          <name>wxCOMPOSITION_ATOP</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>S*<emphasis>Da</emphasis> +</emphasis> <emphasis>D*</emphasis>(1 - <emphasis>Sa</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668a504c9465521237897f92d78fc3e13433" prot="public">
+          <name>wxCOMPOSITION_DEST</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>D</emphasis>, essentially a noop </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668ab2bb23f40fbb928f23ae876ad51341b5" prot="public">
+          <name>wxCOMPOSITION_DEST_OVER</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>S*</emphasis>(1 - <emphasis>Da</emphasis>) + <emphasis>D</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668ad100155839789ec9acc9b86868deb6df" prot="public">
+          <name>wxCOMPOSITION_DEST_IN</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>D*<emphasis>Sa</emphasis> </emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668a27f835deced3853c6f8afa22df4d9031" prot="public">
+          <name>wxCOMPOSITION_DEST_OUT</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>D*</emphasis>(1 - <emphasis>Sa</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668adfc13a049ebba851a055e9325c06a4e1" prot="public">
+          <name>wxCOMPOSITION_DEST_ATOP</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>S*</emphasis>(1 - <emphasis>Da</emphasis>) + <emphasis>D*<emphasis>Sa</emphasis> </emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668ad431fa90722d1ffe644c4a125f00de6b" prot="public">
+          <name>wxCOMPOSITION_XOR</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>S*</emphasis>(1 - <emphasis>Da</emphasis>) + <emphasis>D*</emphasis>(1 - <emphasis>Sa</emphasis>) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graphics_8h_1af26ae47387aa983f2a975b3f85cb9668a001d285140d452725739bbef4c345e5c" prot="public">
+          <name>wxCOMPOSITION_ADD</name>
+          <briefdescription>
+<para><emphasis>R</emphasis> = <emphasis>S</emphasis> + <emphasis>D</emphasis> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Compositing is done using Porter-Duff compositions (see <ulink url="http://keithp.com/~keithp/porterduff/p253-porter.pdf">http://keithp.com/~keithp/porterduff/p253-porter.pdf</ulink>) with <ref refid="classwx_graphics_context_1a08a80e457f7bb28d0394c248de1742ef" kindref="member">wxGraphicsContext::SetCompositionMode()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The description give a short equation on how the values of a resulting pixel are calculated. <emphasis>R</emphasis> = Result, <emphasis>S</emphasis> = Source, <emphasis>D</emphasis> = Destination, colors premultiplied with alpha <emphasis>Ra</emphasis>, <emphasis>Sa</emphasis>, <emphasis>Da</emphasis> their alpha components </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="243" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="242" bodyend="266"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="graphics_8h_1aa5fc8ab1a7757dd5f642b5cb27c1d19d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classwx_graphics_pen" kindref="compound">wxGraphicsPen</ref></type>
+        <definition>const wxGraphicsPen wxNullGraphicsPen</definition>
+        <argsstring></argsstring>
+        <name>wxNullGraphicsPen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1301" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8h_1a746222fe384446b63e61e613a03e31a3" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classwx_graphics_brush" kindref="compound">wxGraphicsBrush</ref></type>
+        <definition>const wxGraphicsBrush wxNullGraphicsBrush</definition>
+        <argsstring></argsstring>
+        <name>wxNullGraphicsBrush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1302" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8h_1ac5ae5f0d89ce2102d6ab4a06f2a09a28" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classwx_graphics_font" kindref="compound">wxGraphicsFont</ref></type>
+        <definition>const wxGraphicsFont wxNullGraphicsFont</definition>
+        <argsstring></argsstring>
+        <name>wxNullGraphicsFont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1303" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8h_1a11e4bf3e4817ff334ea5ad33a0ea7143" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classwx_graphics_bitmap" kindref="compound">wxGraphicsBitmap</ref></type>
+        <definition>const wxGraphicsBitmap wxNullGraphicsBitmap</definition>
+        <argsstring></argsstring>
+        <name>wxNullGraphicsBitmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1304" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8h_1a07954c042dc231f9f0edbfa558a7d2cb" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref></type>
+        <definition>const wxGraphicsMatrix wxNullGraphicsMatrix</definition>
+        <argsstring></argsstring>
+        <name>wxNullGraphicsMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1305" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8h_1a5e61a130fe29633d1a7c1a7f60043d17" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classwx_graphics_path" kindref="compound">wxGraphicsPath</ref></type>
+        <definition>const wxGraphicsPath wxNullGraphicsPath</definition>
+        <argsstring></argsstring>
+        <name>wxNullGraphicsPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1306" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1306" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h"/>
+  </compounddef>
+</doxygen>

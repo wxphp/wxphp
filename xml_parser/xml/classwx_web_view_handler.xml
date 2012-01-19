@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_web_view_handler" kind="class" prot="public">
+    <compoundname>wxWebViewHandler</compoundname>
+    <derivedcompoundref refid="classwx_web_view_archive_handler" prot="public" virt="non-virtual">wxWebViewArchiveHandler</derivedcompoundref>
+    <includes local="no">wx/webview.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_web_view_handler_1a81e1c85b7954904245e49277df098149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWebViewHandler::wxWebViewHandler</definition>
+        <argsstring>(const wxString &amp;scheme)</argsstring>
+        <name>wxWebViewHandler</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>scheme</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Takes the name of the scheme that will be handled by this class for example <computeroutput>file</computeroutput> or <computeroutput>zip</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_web_view_handler_1a29f448e3c8f685c45e43cc06bd4c9b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> *</type>
+        <definition>virtual wxFSFile* wxWebViewHandler::GetFile</definition>
+        <argsstring>(const wxString &amp;uri)=0</argsstring>
+        <name>GetFile</name>
+        <reimplementedby refid="classwx_web_view_archive_handler_1a80858acc71a35bbd1e48ee31c7d9a3d8">GetFile</reimplementedby>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>uri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to the file represented by <computeroutput>uri</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_web_view_handler_1a44da19cad5e5d2207e009bcee437e2a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxWebViewHandler::GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The name of the scheme, as passed to the constructor. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The base class for handling custom schemes in <ref refid="classwx_web_view" kindref="compound">wxWebView</ref>, for example to allow virtual file system support. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="since"><para>2.9.3 <heading level="2"></heading>
+</para></simplesect>
+Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxwebview" kindref="member">wxWebView</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__webview" kindref="compound">WebView</ref></para><para><simplesect kind="see"><para><ref refid="classwx_web_view" kindref="compound">wxWebView</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11398">
+        <label>wxWebViewArchiveHandler</label>
+        <link refid="classwx_web_view_archive_handler"/>
+        <childnode refid="11397" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11397">
+        <label>wxWebViewHandler</label>
+        <link refid="classwx_web_view_handler"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="133" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="132" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classwx_web_view_handler_1a29f448e3c8f685c45e43cc06bd4c9b38" prot="public" virt="pure-virtual"><scope>wxWebViewHandler</scope><name>GetFile</name></member>
+      <member refid="classwx_web_view_handler_1a44da19cad5e5d2207e009bcee437e2a9" prot="public" virt="virtual"><scope>wxWebViewHandler</scope><name>GetName</name></member>
+      <member refid="classwx_web_view_handler_1a81e1c85b7954904245e49277df098149" prot="public" virt="non-virtual"><scope>wxWebViewHandler</scope><name>wxWebViewHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

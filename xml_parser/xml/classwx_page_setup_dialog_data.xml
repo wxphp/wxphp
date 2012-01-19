@@ -1,0 +1,645 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_page_setup_dialog_data" kind="class" prot="public">
+    <compoundname>wxPageSetupDialogData</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/cmndata.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a820653a1eba7986003ddb34e833d1869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPageSetupDialogData::wxPageSetupDialogData</definition>
+        <argsstring>()</argsstring>
+        <name>wxPageSetupDialogData</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a23491aa9e7e0139d570922549f558170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPageSetupDialogData::wxPageSetupDialogData</definition>
+        <argsstring>(const wxPageSetupDialogData &amp;data)</argsstring>
+        <name>wxPageSetupDialogData</name>
+        <param>
+          <type>const <ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a678ae50ce7cc90e9fc89a44c614524e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPageSetupDialogData::wxPageSetupDialogData</definition>
+        <argsstring>(const wxPrintData &amp;printData)</argsstring>
+        <name>wxPageSetupDialogData</name>
+        <param>
+          <type>const <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> &amp;</type>
+          <declname>printData</declname>
+        </param>
+        <briefdescription>
+<para>Construct an object from a print data object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a896889f283079d93fa6078a9dbaa7935" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxPageSetupDialogData::~wxPageSetupDialogData</definition>
+        <argsstring>()</argsstring>
+        <name>~wxPageSetupDialogData</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a718a48c0c04a359ed59aa4eceed8dcb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::EnableHelp</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>EnableHelp</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables the &quot;Help&quot; button (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a94bd54b3a42e1c7ae3b8aaba30a72b5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::EnableMargins</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>EnableMargins</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables the margin controls (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1aeaa85b49557bb1417014675274cce0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::EnableOrientation</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>EnableOrientation</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables the orientation control (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1af24c96ed1371a23f2d525f1f52be4ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::EnablePaper</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>EnablePaper</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables the paper size control (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a8dcb3eb004919f9f45d83f20aa5190f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::EnablePrinter</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>EnablePrinter</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables the &quot;Printer&quot; button, which invokes a printer setup dialog. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a6920955ac82bae272d41c5a167ae04c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPageSetupDialogData::GetDefaultInfo</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDefaultInfo</name>
+        <briefdescription>
+<para>Returns true if the dialog will simply return default printer information (such as orientation) instead of showing a dialog (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1ace48e40ada3cef56e3acc7b1e2ebe709" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPageSetupDialogData::GetDefaultMinMargins</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDefaultMinMargins</name>
+        <briefdescription>
+<para>Returns true if the page setup dialog will take its minimum margin values from the currently selected printer properties (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a89f3793d50bac0e3e10ea04bf70e69d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPageSetupDialogData::GetEnableHelp</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEnableHelp</name>
+        <briefdescription>
+<para>Returns true if the printer setup button is enabled. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a134bc8484d62107e78efd8c444e69fe3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPageSetupDialogData::GetEnableMargins</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEnableMargins</name>
+        <briefdescription>
+<para>Returns true if the margin controls are enabled (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a23b095fbc9a7fb5f968eb567fbf07881" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPageSetupDialogData::GetEnableOrientation</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEnableOrientation</name>
+        <briefdescription>
+<para>Returns true if the orientation control is enabled (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1ac0a390ef325f43ca6043ab0f926ac499" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPageSetupDialogData::GetEnablePaper</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEnablePaper</name>
+        <briefdescription>
+<para>Returns true if the paper size control is enabled (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1accee08d0a6b4e91708f6e8f19c1e6422" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPageSetupDialogData::GetEnablePrinter</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEnablePrinter</name>
+        <briefdescription>
+<para>Returns true if the printer setup button is enabled. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1afe2cb7600f88d80a2817e9a69b578ac4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+        <definition>wxPoint wxPageSetupDialogData::GetMarginBottomRight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMarginBottomRight</name>
+        <briefdescription>
+<para>Returns the right (x) and bottom (y) margins in millimetres. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a889a1a084fbf59112f5a3858493b0b82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+        <definition>wxPoint wxPageSetupDialogData::GetMarginTopLeft</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMarginTopLeft</name>
+        <briefdescription>
+<para>Returns the left (x) and top (y) margins in millimetres. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a715a097f418b4e3eabeff06ae2edc137" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+        <definition>wxPoint wxPageSetupDialogData::GetMinMarginBottomRight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMinMarginBottomRight</name>
+        <briefdescription>
+<para>Returns the right (x) and bottom (y) minimum margins the user can enter (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+<para>Units are in millimetres. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a7b463aa45597ad2fc5e9a4eb6c13844e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+        <definition>wxPoint wxPageSetupDialogData::GetMinMarginTopLeft</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMinMarginTopLeft</name>
+        <briefdescription>
+<para>Returns the left (x) and top (y) minimum margins the user can enter (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+<para>Units are in millimetres. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a807b188e0dc0e70728e664f09d2d9071" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a2f01b8ae721520dff55dee68a882629a" kindref="member">wxPaperSize</ref></type>
+        <definition>wxPaperSize wxPageSetupDialogData::GetPaperId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPaperId</name>
+        <briefdescription>
+<para>Returns the paper id (stored in the internal <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> object). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_print_data_1a463e3d74092b1067495bb4e687fd2c1a" kindref="member">wxPrintData::SetPaperId()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a9b98bb215d1b6939ab13e6cdcb1b12b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxPageSetupDialogData::GetPaperSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPaperSize</name>
+        <briefdescription>
+<para>Returns the paper size in millimetres. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1aaeffb69a92ed13fd52015fcd9b13e483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> &amp;</type>
+        <definition>wxPrintData&amp; wxPageSetupDialogData::GetPrintData</definition>
+        <argsstring>()</argsstring>
+        <name>GetPrintData</name>
+        <briefdescription>
+<para>Returns a reference to the print data associated with this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a2fa9999337fe4698746e2356e13138a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> &amp;</type>
+        <definition>const wxPrintData&amp; wxPageSetupDialogData::GetPrintData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPrintData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a4106c2ac4fcd4e67699140145a4d73f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPageSetupDialogData::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the print data associated with the dialog data is valid. </para>        </briefdescription>
+        <detaileddescription>
+<para>This can return false on Windows if the current printer is not set, for example. On all other platforms, it returns true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a2d0a1c80cfa2e6024ed13c3b39462080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetDefaultInfo</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>SetDefaultInfo</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Pass true if the dialog will simply return default printer information (such as orientation) instead of showing a dialog (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1ac092b0fadf7cf25157b9ab2f3c50c1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetDefaultMinMargins</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>SetDefaultMinMargins</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Pass true if the page setup dialog will take its minimum margin values from the currently selected printer properties (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+<para>Units are in millimetres. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a9408861607563770543cc8f627db0a7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetMarginBottomRight</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>SetMarginBottomRight</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Sets the right (x) and bottom (y) margins in millimetres. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a28370147ac0f0e82250651f4fdb5c47b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetMarginTopLeft</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>SetMarginTopLeft</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Sets the left (x) and top (y) margins in millimetres. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a03a5cc66f6b27f91c9e95b14d48e79ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetMinMarginBottomRight</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>SetMinMarginBottomRight</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Sets the right (x) and bottom (y) minimum margins the user can enter (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+<para>Units are in millimetres. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1ad15163c356139b7ce1063cea87f2829d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetMinMarginTopLeft</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>SetMinMarginTopLeft</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Sets the left (x) and top (y) minimum margins the user can enter (Windows only). </para>        </briefdescription>
+        <detaileddescription>
+<para>Units are in millimetres. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1afeddcd2351ca5a164a1100e5c9589a2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetPaperId</definition>
+        <argsstring>(wxPaperSize id)</argsstring>
+        <name>SetPaperId</name>
+        <param>
+          <type><ref refid="defs_8h_1a2f01b8ae721520dff55dee68a882629a" kindref="member">wxPaperSize</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Sets the paper size id. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calling this function overrides the explicit paper dimensions passed in <ref refid="classwx_page_setup_dialog_data_1ac6b8016ceefe62d0020098ed99f2ff17" kindref="member">SetPaperSize()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_print_data_1a463e3d74092b1067495bb4e687fd2c1a" kindref="member">wxPrintData::SetPaperId()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1ac6b8016ceefe62d0020098ed99f2ff17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetPaperSize</definition>
+        <argsstring>(const wxSize &amp;size)</argsstring>
+        <name>SetPaperSize</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets the paper size in millimetres. </para>        </briefdescription>
+        <detaileddescription>
+<para>If a corresponding paper id is found, it will be set in the internal <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> object, otherwise the paper size overrides the paper id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1a66d1bc76a519612e124044a594ac4afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPageSetupDialogData::SetPrintData</definition>
+        <argsstring>(const wxPrintData &amp;printData)</argsstring>
+        <name>SetPrintData</name>
+        <param>
+          <type>const <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> &amp;</type>
+          <declname>printData</declname>
+        </param>
+        <briefdescription>
+<para>Sets the print data associated with this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1ad4bccfd3e1aacce2a6dc0be8ea3303c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> &amp;</type>
+        <definition>wxPageSetupDialogData&amp; wxPageSetupDialogData::operator=</definition>
+        <argsstring>(const wxPrintData &amp;data)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Assigns print data to this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_page_setup_dialog_data_1aded3a9b587b8cd91cc5ab1b8ab1b66ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> &amp;</type>
+        <definition>wxPageSetupDialogData&amp; wxPageSetupDialogData::operator=</definition>
+        <argsstring>(const wxPageSetupDialogData &amp;data)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Assigns page setup data to this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class holds a variety of information related to <ref refid="classwx_page_setup_dialog" kindref="compound">wxPageSetupDialog</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>It contains a <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> member which is used to hold basic printer configuration data (as opposed to the user-interface configuration settings stored by <ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref>).</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview__printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_page_setup_dialog" kindref="compound">wxPageSetupDialog</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="8509">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="8508">
+        <label>wxPageSetupDialogData</label>
+        <link refid="classwx_page_setup_dialog_data"/>
+        <childnode refid="8509" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8511">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8512" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8510">
+        <label>wxPageSetupDialogData</label>
+        <link refid="classwx_page_setup_dialog_data"/>
+        <childnode refid="8511" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8512">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" bodystart="23" bodyend="221"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPageSetupDialogData</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxPageSetupDialogData</scope><name>CreateRefData</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a718a48c0c04a359ed59aa4eceed8dcb5" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>EnableHelp</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a94bd54b3a42e1c7ae3b8aaba30a72b5b" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>EnableMargins</name></member>
+      <member refid="classwx_page_setup_dialog_data_1aeaa85b49557bb1417014675274cce0ed" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>EnableOrientation</name></member>
+      <member refid="classwx_page_setup_dialog_data_1af24c96ed1371a23f2d525f1f52be4ba0" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>EnablePaper</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a8dcb3eb004919f9f45d83f20aa5190f5" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>EnablePrinter</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxPageSetupDialogData</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a6920955ac82bae272d41c5a167ae04c9" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetDefaultInfo</name></member>
+      <member refid="classwx_page_setup_dialog_data_1ace48e40ada3cef56e3acc7b1e2ebe709" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetDefaultMinMargins</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a89f3793d50bac0e3e10ea04bf70e69d6" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetEnableHelp</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a134bc8484d62107e78efd8c444e69fe3" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetEnableMargins</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a23b095fbc9a7fb5f968eb567fbf07881" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetEnableOrientation</name></member>
+      <member refid="classwx_page_setup_dialog_data_1ac0a390ef325f43ca6043ab0f926ac499" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetEnablePaper</name></member>
+      <member refid="classwx_page_setup_dialog_data_1accee08d0a6b4e91708f6e8f19c1e6422" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetEnablePrinter</name></member>
+      <member refid="classwx_page_setup_dialog_data_1afe2cb7600f88d80a2817e9a69b578ac4" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetMarginBottomRight</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a889a1a084fbf59112f5a3858493b0b82" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetMarginTopLeft</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a715a097f418b4e3eabeff06ae2edc137" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetMinMarginBottomRight</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a7b463aa45597ad2fc5e9a4eb6c13844e" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetMinMarginTopLeft</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a807b188e0dc0e70728e664f09d2d9071" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetPaperId</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a9b98bb215d1b6939ab13e6cdcb1b12b4" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetPaperSize</name></member>
+      <member refid="classwx_page_setup_dialog_data_1aaeffb69a92ed13fd52015fcd9b13e483" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetPrintData</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a2fa9999337fe4698746e2356e13138a6" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetPrintData</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>IsKindOf</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a4106c2ac4fcd4e67699140145a4d73f8" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>operator new</name></member>
+      <member refid="classwx_page_setup_dialog_data_1ad4bccfd3e1aacce2a6dc0be8ea3303c0" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>operator=</name></member>
+      <member refid="classwx_page_setup_dialog_data_1aded3a9b587b8cd91cc5ab1b8ab1b66ff" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>operator=</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>Ref</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a2d0a1c80cfa2e6024ed13c3b39462080" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetDefaultInfo</name></member>
+      <member refid="classwx_page_setup_dialog_data_1ac092b0fadf7cf25157b9ab2f3c50c1fd" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetDefaultMinMargins</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a9408861607563770543cc8f627db0a7d" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetMarginBottomRight</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a28370147ac0f0e82250651f4fdb5c47b" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetMarginTopLeft</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a03a5cc66f6b27f91c9e95b14d48e79ff" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetMinMarginBottomRight</name></member>
+      <member refid="classwx_page_setup_dialog_data_1ad15163c356139b7ce1063cea87f2829d" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetMinMarginTopLeft</name></member>
+      <member refid="classwx_page_setup_dialog_data_1afeddcd2351ca5a164a1100e5c9589a2c" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetPaperId</name></member>
+      <member refid="classwx_page_setup_dialog_data_1ac6b8016ceefe62d0020098ed99f2ff17" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetPaperSize</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a66d1bc76a519612e124044a594ac4afe" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetPrintData</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>wxObject</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a820653a1eba7986003ddb34e833d1869" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>wxPageSetupDialogData</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a23491aa9e7e0139d570922549f558170" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>wxPageSetupDialogData</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a678ae50ce7cc90e9fc89a44c614524e4" prot="public" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>wxPageSetupDialogData</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxPageSetupDialogData</scope><name>~wxObject</name></member>
+      <member refid="classwx_page_setup_dialog_data_1a896889f283079d93fa6078a9dbaa7935" prot="public" virt="virtual"><scope>wxPageSetupDialogData</scope><name>~wxPageSetupDialogData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

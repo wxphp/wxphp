@@ -1,0 +1,618 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_tar_entry" kind="class" prot="public">
+    <compoundname>wxTarEntry</compoundname>
+    <basecompoundref refid="classwx_archive_entry" prot="public" virt="non-virtual">wxArchiveEntry</basecompoundref>
+    <includes local="no">wx/tarstrm.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1a54c128b9428e346518db6471d42331c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
+        <definition>wxDateTime wxTarEntry::GetAccessTime</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAccessTime</name>
+        <briefdescription>
+<para>Gets/sets the entry&apos;s access time stamp. </para>        </briefdescription>
+        <detaileddescription>
+<para>See also <ref refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" kindref="member">wxArchiveEntry::GetDateTime()</ref> and <ref refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" kindref="member">wxArchiveEntry::SetDateTime()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a2f6fca990f94df6a66a764dee5109580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetAccessTime</definition>
+        <argsstring>(const wxDateTime &amp;dt)</argsstring>
+        <name>SetAccessTime</name>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Gets/sets the entry&apos;s access time stamp. </para>        </briefdescription>
+        <detaileddescription>
+<para>See also <ref refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" kindref="member">wxArchiveEntry::GetDateTime()</ref> and <ref refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" kindref="member">wxArchiveEntry::SetDateTime()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="281"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1ae0ff801da48871aaf7b6a22fea641115" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
+        <definition>wxDateTime wxTarEntry::GetCreateTime</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCreateTime</name>
+        <briefdescription>
+<para>The entry&apos;s creation time stamp. </para>        </briefdescription>
+        <detaileddescription>
+<para>See also <ref refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" kindref="member">wxArchiveEntry::GetDateTime()</ref> and <ref refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" kindref="member">wxArchiveEntry::SetDateTime()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a2a5b595d3398bb2ea041ad991a47ea04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetCreateTime</definition>
+        <argsstring>(const wxDateTime &amp;dt)</argsstring>
+        <name>SetCreateTime</name>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>The entry&apos;s creation time stamp. </para>        </briefdescription>
+        <detaileddescription>
+<para>See also <ref refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" kindref="member">wxArchiveEntry::GetDateTime()</ref> and <ref refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" kindref="member">wxArchiveEntry::SetDateTime()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="290"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1af427c87ca6b875e2840f5d90dc764e1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTarEntry::GetDevMajor</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDevMajor</name>
+        <briefdescription>
+<para>OS specific IDs defining a device; these are only meaningful when <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> is <emphasis>wxTAR_CHRTYPE</emphasis> or <emphasis>wxTAR_BLKTYPE</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a14c30e2df98480c6f7cc3aa006238c0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTarEntry::GetDevMinor</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDevMinor</name>
+        <briefdescription>
+<para>OS specific IDs defining a device; these are only meaningful when <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> is <emphasis>wxTAR_CHRTYPE</emphasis> or <emphasis>wxTAR_BLKTYPE</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1afc7892bf78a72978ea85459a9e879c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetDevMajor</definition>
+        <argsstring>(int dev)</argsstring>
+        <name>SetDevMajor</name>
+        <param>
+          <type>int</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>OS specific IDs defining a device; these are only meaningful when <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> is <emphasis>wxTAR_CHRTYPE</emphasis> or <emphasis>wxTAR_BLKTYPE</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a8506708e9dbe4b66ca895866dac777e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetDevMinor</definition>
+        <argsstring>(int dev)</argsstring>
+        <name>SetDevMinor</name>
+        <param>
+          <type>int</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>OS specific IDs defining a device; these are only meaningful when <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> is <emphasis>wxTAR_CHRTYPE</emphasis> or <emphasis>wxTAR_BLKTYPE</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="301"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1a1c13e206ebf5bdb8421bab44a1cf7ac6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTarEntry::GetGroupId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetGroupId</name>
+        <briefdescription>
+<para>The user ID and group ID that has permissions (see <ref refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" kindref="member">wxTarEntry::GetMode()</ref>) over this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>These values aren&apos;t usually useful unless the file will only be restored to the same system it originated from. <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">wxTarEntry::GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">wxTarEntry::GetUserName()</ref> can be used instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a77026169ccff722e4bce6165aa02a821" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTarEntry::GetUserId</definition>
+        <argsstring>() const </argsstring>
+        <name>GetUserId</name>
+        <briefdescription>
+<para>The user ID and group ID that has permissions (see <ref refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" kindref="member">wxTarEntry::GetMode()</ref>) over this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>These values aren&apos;t usually useful unless the file will only be restored to the same system it originated from. <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">wxTarEntry::GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">wxTarEntry::GetUserName()</ref> can be used instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a72eccb73add48ba41942c736894c311f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetGroupId</definition>
+        <argsstring>(int id)</argsstring>
+        <name>SetGroupId</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>The user ID and group ID that has permissions (see <ref refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" kindref="member">wxTarEntry::GetMode()</ref>) over this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>These values aren&apos;t usually useful unless the file will only be restored to the same system it originated from. <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">wxTarEntry::GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">wxTarEntry::GetUserName()</ref> can be used instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a2dd46136dd6eb9dc972e168b46ea204d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetUserId</definition>
+        <argsstring>(int id)</argsstring>
+        <name>SetUserId</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>The user ID and group ID that has permissions (see <ref refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" kindref="member">wxTarEntry::GetMode()</ref>) over this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>These values aren&apos;t usually useful unless the file will only be restored to the same system it originated from. <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">wxTarEntry::GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">wxTarEntry::GetUserName()</ref> can be used instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="316"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxTarEntry::GetGroupName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetGroupName</name>
+        <briefdescription>
+<para>The names of the user and group that has permissions (see <ref refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" kindref="member">wxTarEntry::GetMode()</ref>) over this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>These are not present in very old tars. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxTarEntry::GetUserName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetUserName</name>
+        <briefdescription>
+<para>The names of the user and group that has permissions (see <ref refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" kindref="member">wxTarEntry::GetMode()</ref>) over this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>These are not present in very old tars. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a79c3b5e094695ec9183afa351bf2d6e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetGroupName</definition>
+        <argsstring>(const wxString &amp;group)</argsstring>
+        <name>SetGroupName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+<para>The names of the user and group that has permissions (see <ref refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" kindref="member">wxTarEntry::GetMode()</ref>) over this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>These are not present in very old tars. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a51184ce2ce070239c76de6fb1c65cfec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetUserName</definition>
+        <argsstring>(const wxString &amp;user)</argsstring>
+        <name>SetUserName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+<para>The names of the user and group that has permissions (see <ref refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" kindref="member">wxTarEntry::GetMode()</ref>) over this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>These are not present in very old tars. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="327"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1a26c40a9893c4d9b59aaf29addd4df068" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxTarEntry::GetLinkName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLinkName</name>
+        <briefdescription>
+<para>The filename of a previous entry in the tar that this entry is a link to. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only meaningful when <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> is set to <emphasis>wxTAR_LNKTYPE</emphasis> or <emphasis>wxTAR_SYMTYPE</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1ae7e815e898d65cd60709dcf80eb8126d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetLinkName</definition>
+        <argsstring>(const wxString &amp;link)</argsstring>
+        <name>SetLinkName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>The filename of a previous entry in the tar that this entry is a link to. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only meaningful when <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">wxTarEntry::GetTypeFlag()</ref> is set to <emphasis>wxTAR_LNKTYPE</emphasis> or <emphasis>wxTAR_SYMTYPE</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="337"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTarEntry::GetMode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMode</name>
+        <briefdescription>
+<para>UNIX permission bits for this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>Giving read, write and execute permissions to the file&apos;s user and group (see <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">GetUserName()</ref>) and to others.</para><para>The integer is one or more <ref refid="group__group__funcmacro__file_1ga64460401fb35c137c9df28f3c019694d" kindref="member">wxPosixPermissions</ref> flags OR-combined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1ac02ce7134837e4071adb3f7a7c3918fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetMode</definition>
+        <argsstring>(int mode)</argsstring>
+        <name>SetMode</name>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>UNIX permission bits for this entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>Giving read, write and execute permissions to the file&apos;s user and group (see <ref refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" kindref="member">GetGroupName()</ref> and <ref refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" kindref="member">GetUserName()</ref>) and to others.</para><para>The integer is one or more <ref refid="group__group__funcmacro__file_1ga64460401fb35c137c9df28f3c019694d" kindref="member">wxPosixPermissions</ref> flags OR-combined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="349"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1a4c6ea65856ecc69cb3a33753a7f35027" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetSize</definition>
+        <argsstring>(wxFileOffset size)</argsstring>
+        <name>SetSize</name>
+        <reimplements refid="classwx_archive_entry_1ac5f34334ab1895a923354bd4da755364">SetSize</reimplements>
+        <param>
+          <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>The size of the entry&apos;s data in bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para>The tar archive format stores the entry&apos;s size ahead of the entry&apos;s data. Therefore when creating an archive on a non-seekable stream it is necessary to supply the correct size when each entry is created.</para><para>For seekable streams this is not necessary as <ref refid="classwx_tar_output_stream" kindref="compound">wxTarOutputStream</ref> will attempt to seek back and fix the entry&apos;s header when the entry is closed, though it is still more efficient if the size is given beforehand. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a066b3d9023480d9fde9ed266d5d9ae8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+        <definition>wxFileOffset wxTarEntry::GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <reimplements refid="classwx_archive_entry_1a05d8c0618a80cb1ada5c37a58042ec32">GetSize</reimplements>
+        <briefdescription>
+<para>The size of the entry&apos;s data in bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para>The tar archive format stores the entry&apos;s size ahead of the entry&apos;s data. Therefore when creating an archive on a non-seekable stream it is necessary to supply the correct size when each entry is created.</para><para>For seekable streams this is not necessary as <ref refid="classwx_tar_output_stream" kindref="compound">wxTarOutputStream</ref> will attempt to seek back and fix the entry&apos;s header when the entry is closed, though it is still more efficient if the size is given beforehand. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="365"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxTarEntry::GetTypeFlag</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTypeFlag</name>
+        <briefdescription>
+<para>Returns/Sets the type of the entry as a <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref> value. </para>        </briefdescription>
+        <detaileddescription>
+<para>When creating archives use only one of <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref> values. When reading archives, <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">GetTypeFlag()</ref> may return a value which does not match any value of <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref>; in this case the returned value should be treated as <emphasis>wxTAR_REGTYPE</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a439d96d58b3e3db4ff02679b46eb057c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTarEntry::SetTypeFlag</definition>
+        <argsstring>(int type)</argsstring>
+        <name>SetTypeFlag</name>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Returns/Sets the type of the entry as a <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref> value. </para>        </briefdescription>
+        <detaileddescription>
+<para>When creating archives use only one of <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref> values. When reading archives, <ref refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" kindref="member">GetTypeFlag()</ref> may return a value which does not match any value of <ref refid="tarstrm_8h_1a182207a2794a58c1c0c21ea6c8ed865f" kindref="member">wxTarType</ref>; in this case the returned value should be treated as <emphasis>wxTAR_REGTYPE</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="378"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_tar_entry_1ad077726d389e80ee074071a51e0130b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTarEntry::wxTarEntry</definition>
+        <argsstring>(const wxString &amp;name=wxEmptyString, const wxDateTime &amp;dt=wxDateTime::Now(), wxFileOffset size=wxInvalidOffset)</argsstring>
+        <name>wxTarEntry</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> &amp;</type>
+          <declname>dt</declname>
+          <defval>wxDateTime::Now()</defval>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
+          <declname>size</declname>
+          <defval><ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The tar archive format stores the entry&apos;s size ahead of the entry&apos;s data. Therefore when creating an archive on a non-seekable stream it is necessary to supply the correct size when each entry is created. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1afc69f3281c918412e034f6f88b74260f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTarEntry::wxTarEntry</definition>
+        <argsstring>(const wxTarEntry &amp;entry)</argsstring>
+        <name>wxTarEntry</name>
+        <param>
+          <type>const <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1ac9f34a7005df589f5428fca61e4e747a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxTarEntry::GetInternalName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInternalName</name>
+        <reimplements refid="classwx_archive_entry_1a53486cf23696bd7b910a652c27af0a38">GetInternalName</reimplements>
+        <briefdescription>
+<para>Returns the entry&apos;s filename in the internal format used within the archive. </para>        </briefdescription>
+        <detaileddescription>
+<para>The name can include directory components, i.e. it can be a full path. The names of directory entries are returned without any trailing path separator. This gives a canonical name that can be used in comparisons. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tar_entry_1a5e185aac56eba9244f216eb2f43e68cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> &amp;</type>
+        <definition>wxTarEntry&amp; wxTarEntry::operator operator=</definition>
+        <argsstring>(const wxTarEntry &amp;entry)</argsstring>
+        <name>operator operator=</name>
+        <param>
+          <type>const <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="404"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_tar_entry_1ae48658021dc1f532454d42260eaeb48b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxTarEntry::GetInternalName</definition>
+        <argsstring>(const wxString &amp;name, wxPathFormat format=wxPATH_NATIVE, bool *pIsDir=NULL)</argsstring>
+        <name>GetInternalName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxPATH_NATIVE</defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>pIsDir</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>A static member that translates a filename into the internal format used within the archive. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the third parameter is provided, the bool pointed to is set to indicate whether the name looks like a directory name (i.e. has a trailing path separator). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="399"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Holds the meta-data for an entry in a tar. </para>    </briefdescription>
+    <detaileddescription>
+<sect1 id="classwx_tar_entry_1tarentry_fields">
+<title>Field availability</title>
+<para>The tar format stores all the meta-data for an entry ahead of its data, therefore GetNextEntry() always returns a fully populated <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref> object, both when reading from seekable and non-seekable streams.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview__archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_tar_input_stream" kindref="compound">wxTarInputStream</ref>, <ref refid="classwx_tar_output_stream" kindref="compound">wxTarOutputStream</ref> </para></simplesect>
+</para></sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10614">
+        <label>wxArchiveEntry</label>
+        <link refid="classwx_archive_entry"/>
+        <childnode refid="10615" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10615">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="10613">
+        <label>wxTarEntry</label>
+        <link refid="classwx_tar_entry"/>
+        <childnode refid="10614" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10617">
+        <label>wxArchiveEntry</label>
+        <link refid="classwx_archive_entry"/>
+        <childnode refid="10618" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10618">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="10619" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10616">
+        <label>wxTarEntry</label>
+        <link refid="classwx_tar_entry"/>
+        <childnode refid="10617" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10619">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="257" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="256" bodyend="405"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTarEntry</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_archive_entry_1a18cf9ea4a92bd5a9e845ee1d2ee04553" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>Clone</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxTarEntry</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxTarEntry</scope><name>CreateRefData</name></member>
+      <member refid="classwx_tar_entry_1a54c128b9428e346518db6471d42331c8" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetAccessTime</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxTarEntry</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_tar_entry_1ae0ff801da48871aaf7b6a22fea641115" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetCreateTime</name></member>
+      <member refid="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>GetDateTime</name></member>
+      <member refid="classwx_tar_entry_1af427c87ca6b875e2840f5d90dc764e1b" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetDevMajor</name></member>
+      <member refid="classwx_tar_entry_1a14c30e2df98480c6f7cc3aa006238c0a" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetDevMinor</name></member>
+      <member refid="classwx_tar_entry_1a1c13e206ebf5bdb8421bab44a1cf7ac6" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetGroupId</name></member>
+      <member refid="classwx_tar_entry_1ad452783e42c096e021d9534a9247099d" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetGroupName</name></member>
+      <member refid="classwx_archive_entry_1a3e93b7e12487636f903956935d92c7b2" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>GetInternalFormat</name></member>
+      <member refid="classwx_tar_entry_1ac9f34a7005df589f5428fca61e4e747a" prot="public" virt="virtual"><scope>wxTarEntry</scope><name>GetInternalName</name></member>
+      <member refid="classwx_tar_entry_1ae48658021dc1f532454d42260eaeb48b" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetInternalName</name></member>
+      <member refid="classwx_tar_entry_1a26c40a9893c4d9b59aaf29addd4df068" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetLinkName</name></member>
+      <member refid="classwx_tar_entry_1a3f5c0df0fe15ac893920ff7e47002a9d" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetMode</name></member>
+      <member refid="classwx_archive_entry_1a7f7c8fc858136626dcdf1865e646cef9" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>GetName</name></member>
+      <member refid="classwx_archive_entry_1ab36942e9cbadced7476b4bceb21b7e08" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>GetOffset</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetRefData</name></member>
+      <member refid="classwx_tar_entry_1a066b3d9023480d9fde9ed266d5d9ae8b" prot="public" virt="virtual"><scope>wxTarEntry</scope><name>GetSize</name></member>
+      <member refid="classwx_tar_entry_1a4655d55a9f6c27e2c36b0d1589efd09c" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetTypeFlag</name></member>
+      <member refid="classwx_tar_entry_1a77026169ccff722e4bce6165aa02a821" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetUserId</name></member>
+      <member refid="classwx_tar_entry_1ae59ba869ec661fb3150838a7312603db" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>GetUserName</name></member>
+      <member refid="classwx_archive_entry_1a548d3b6f4aeba699dc0d1ec1c21b7ce2" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>IsDir</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>IsKindOf</name></member>
+      <member refid="classwx_archive_entry_1abe30c2532550d23136cf6e1390007073" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>IsReadOnly</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxTarEntry</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>operator new</name></member>
+      <member refid="classwx_tar_entry_1a5e185aac56eba9244f216eb2f43e68cf" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>operator operator=</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>Ref</name></member>
+      <member refid="classwx_tar_entry_1a2f6fca990f94df6a66a764dee5109580" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetAccessTime</name></member>
+      <member refid="classwx_tar_entry_1a2a5b595d3398bb2ea041ad991a47ea04" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetCreateTime</name></member>
+      <member refid="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>SetDateTime</name></member>
+      <member refid="classwx_tar_entry_1afc7892bf78a72978ea85459a9e879c35" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetDevMajor</name></member>
+      <member refid="classwx_tar_entry_1a8506708e9dbe4b66ca895866dac777e5" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetDevMinor</name></member>
+      <member refid="classwx_tar_entry_1a72eccb73add48ba41942c736894c311f" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetGroupId</name></member>
+      <member refid="classwx_tar_entry_1a79c3b5e094695ec9183afa351bf2d6e7" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetGroupName</name></member>
+      <member refid="classwx_archive_entry_1ab01182fe22c8eeefa05740e68d12ced0" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>SetIsDir</name></member>
+      <member refid="classwx_archive_entry_1a0ed675785f6d0ddaf36664951f4430b6" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>SetIsReadOnly</name></member>
+      <member refid="classwx_tar_entry_1ae7e815e898d65cd60709dcf80eb8126d" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetLinkName</name></member>
+      <member refid="classwx_tar_entry_1ac02ce7134837e4071adb3f7a7c3918fb" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetMode</name></member>
+      <member refid="classwx_archive_entry_1afd7cfa9a05e971ee0355bafbeff8c93d" prot="public" virt="pure-virtual"><scope>wxTarEntry</scope><name>SetName</name></member>
+      <member refid="classwx_archive_entry_1a14fe1a270dbb1d0e9a76e2c3c8dd32a8" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetNotifier</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetRefData</name></member>
+      <member refid="classwx_tar_entry_1a4c6ea65856ecc69cb3a33753a7f35027" prot="public" virt="virtual"><scope>wxTarEntry</scope><name>SetSize</name></member>
+      <member refid="classwx_tar_entry_1a439d96d58b3e3db4ff02679b46eb057c" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetTypeFlag</name></member>
+      <member refid="classwx_tar_entry_1a2dd46136dd6eb9dc972e168b46ea204d" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetUserId</name></member>
+      <member refid="classwx_tar_entry_1a51184ce2ce070239c76de6fb1c65cfec" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>SetUserName</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>UnRef</name></member>
+      <member refid="classwx_archive_entry_1aaa3a489d4a7038170318e7384a27941b" prot="public" virt="virtual"><scope>wxTarEntry</scope><name>UnsetNotifier</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>wxObject</name></member>
+      <member refid="classwx_tar_entry_1ad077726d389e80ee074071a51e0130b5" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>wxTarEntry</name></member>
+      <member refid="classwx_tar_entry_1afc69f3281c918412e034f6f88b74260f" prot="public" virt="non-virtual"><scope>wxTarEntry</scope><name>wxTarEntry</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxTarEntry</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_single_instance_checker" kind="class" prot="public">
+    <compoundname>wxSingleInstanceChecker</compoundname>
+    <includes local="no">wx/snglinst.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_single_instance_checker_1ab5a56ad3ace10afc97d1c1608e40ef0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSingleInstanceChecker::wxSingleInstanceChecker</definition>
+        <argsstring>()</argsstring>
+        <name>wxSingleInstanceChecker</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>You may call <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref> after using it or directly call <ref refid="classwx_single_instance_checker_1ad3588a5ae39131a129f5b886236f6c40" kindref="member">IsAnotherRunning()</ref> in which case <ref refid="classwx_single_instance_checker_1a3cfc2177b3271480415c138e2edb5833" kindref="member">CreateDefault()</ref> will be implicitly used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/snglinst.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_single_instance_checker_1a2abaea6e42eb24d9175a9f23d10aeed7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSingleInstanceChecker::wxSingleInstanceChecker</definition>
+        <argsstring>(const wxString &amp;name, const wxString &amp;path=wxEmptyString)</argsstring>
+        <name>wxSingleInstanceChecker</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructor calling <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor does exactly the same thing as <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref> but doesn&apos;t allow to check for errors. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/snglinst.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_single_instance_checker_1a7ed555c3c0ec52becbb84e3702607c0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSingleInstanceChecker::~wxSingleInstanceChecker</definition>
+        <argsstring>()</argsstring>
+        <name>~wxSingleInstanceChecker</name>
+        <briefdescription>
+<para>Destructor frees the associated resources. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that it is not virtual, this class is not meant to be used polymorphically. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/snglinst.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSingleInstanceChecker::Create</definition>
+        <argsstring>(const wxString &amp;name, const wxString &amp;path=wxEmptyString)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Initialize the object if it had been created using the default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that you can&apos;t call <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref> more than once, so calling it if the non default ctor had been used is an error.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Must be given and be as unique as possible. It is used as the mutex name under Win32 and the lock file name under Unix. <ref refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" kindref="member">wxApp::GetAppName()</ref> and <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref> are commonly used to construct this parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path is optional and is ignored under Win32 and used as the directory to create the lock file in under Unix (default is <ref refid="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" kindref="member">wxGetHomeDir()</ref>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns false if initialization failed, it doesn&apos;t mean that another instance is running -- use <ref refid="classwx_single_instance_checker_1ad3588a5ae39131a129f5b886236f6c40" kindref="member">IsAnotherRunning()</ref> to check for it.</para></simplesect>
+<simplesect kind="note"><para>One of possible reasons while <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref> may fail on Unix is that the lock file used for checking already exists but was not created by the user. Therefore applications shouldn&apos;t treat failure of this function as fatal condition, because doing so would open them to the possibility of a Denial of Service attack. Instead, they should alert the user about the problem and offer to continue execution without checking if another instance is running. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/snglinst.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_single_instance_checker_1a3cfc2177b3271480415c138e2edb5833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSingleInstanceChecker::CreateDefault</definition>
+        <argsstring>()</argsstring>
+        <name>CreateDefault</name>
+        <briefdescription>
+<para>Calls <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref> with default name. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method simply calls <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref> with a string composed of <ref refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" kindref="member">wxApp::GetAppName()</ref> and <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref>.</para><para>Because this method uses <ref refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" kindref="member">wxApp::GetAppName()</ref>, it may only be called after the global application was constructed.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/snglinst.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_single_instance_checker_1ad3588a5ae39131a129f5b886236f6c40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSingleInstanceChecker::IsAnotherRunning</definition>
+        <argsstring>() const </argsstring>
+        <name>IsAnotherRunning</name>
+        <briefdescription>
+<para>Returns true if another copy of this program is already running and false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that if the object was created using the default constructor <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref> hadn&apos;t been called before this method, it will call <ref refid="classwx_single_instance_checker_1a3cfc2177b3271480415c138e2edb5833" kindref="member">CreateDefault()</ref> automatically. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/snglinst.h" line="145"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_single_instance_checker" kindref="compound">wxSingleInstanceChecker</ref> class allows to check that only a single instance of a program is running. </para>    </briefdescription>
+    <detaileddescription>
+<para>To do it, you should create an object of this class. As long as this object is alive, calls to <ref refid="classwx_single_instance_checker_1ad3588a5ae39131a129f5b886236f6c40" kindref="member">wxSingleInstanceChecker::IsAnotherRunning</ref> from other processes will return true.</para><para>As the object should have the life span as big as possible, it makes sense to create it either as a global or in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit</ref>. For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>MyApp::OnInit()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_checker<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_single_instance_checker" kindref="compound" tooltip="wxSingleInstanceChecker class allows to check that only a single instance of a program...">wxSingleInstanceChecker</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>m_checker-IsAnotherRunning()<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;Another<sp/>program<sp/>instance<sp/>is<sp/>already<sp/>running,<sp/>aborting.&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_checker;<sp/></highlight><highlight class="comment">//<sp/>OnExit()<sp/>won&apos;t<sp/>be<sp/>called<sp/>if<sp/>we<sp/>return<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_checker<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>more<sp/>initializations<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MyApp::OnExit()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_checker;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para>Note that by default <ref refid="classwx_single_instance_checker_1a3cfc2177b3271480415c138e2edb5833" kindref="member">wxSingleInstanceChecker::CreateDefault()</ref> is used to create the checker meaning that it will be initialized differently for different users and thus will allow different users to run the application concurrently which is usually the required behaviour. However if only a single instance of a program should be running system-wide, you need to call <ref refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" kindref="member">Create()</ref> with a custom name which does <emphasis>not</emphasis> include <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref>.</para><para>This class is implemented for Win32 and Unix platforms (supporting <computeroutput>fcntl()</computeroutput> system call, but almost all of modern Unix systems do) only.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/snglinst.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/snglinst.h" bodystart="63" bodyend="146"/>
+    <listofallmembers>
+      <member refid="classwx_single_instance_checker_1aa69725041ea6c0479f65f6b468a42f1e" prot="public" virt="non-virtual"><scope>wxSingleInstanceChecker</scope><name>Create</name></member>
+      <member refid="classwx_single_instance_checker_1a3cfc2177b3271480415c138e2edb5833" prot="public" virt="non-virtual"><scope>wxSingleInstanceChecker</scope><name>CreateDefault</name></member>
+      <member refid="classwx_single_instance_checker_1ad3588a5ae39131a129f5b886236f6c40" prot="public" virt="non-virtual"><scope>wxSingleInstanceChecker</scope><name>IsAnotherRunning</name></member>
+      <member refid="classwx_single_instance_checker_1ab5a56ad3ace10afc97d1c1608e40ef0c" prot="public" virt="non-virtual"><scope>wxSingleInstanceChecker</scope><name>wxSingleInstanceChecker</name></member>
+      <member refid="classwx_single_instance_checker_1a2abaea6e42eb24d9175a9f23d10aeed7" prot="public" virt="non-virtual"><scope>wxSingleInstanceChecker</scope><name>wxSingleInstanceChecker</name></member>
+      <member refid="classwx_single_instance_checker_1a7ed555c3c0ec52becbb84e3702607c0f" prot="public" virt="non-virtual"><scope>wxSingleInstanceChecker</scope><name>~wxSingleInstanceChecker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_reg_ex" kind="class" prot="public">
+    <compoundname>wxRegEx</compoundname>
+    <includes local="no">wx/regex.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegEx::Matches</definition>
+        <argsstring>(const wxChar *text, int flags=0) const </argsstring>
+        <name>Matches</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Matches the precompiled regular expression against the string <emphasis>text</emphasis>, returns true if matches and false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>Flags</emphasis> may be combination of <computeroutput>wxRE_NOTBOL</computeroutput> and <computeroutput>wxRE_NOTEOL</computeroutput>, see <ref refid="regex_8h_1wxRE_NOT_FLAGS" kindref="member">wxRE_NOT_FLAGS</ref>.</para><para>Some regex libraries assume that the text given is null terminated, while others require the length be given as a separate parameter. Therefore for maximum portability assume that <emphasis>text</emphasis> cannot contain embedded nulls.</para><para>When the <bold>Matches(const wxChar *text, int flags = 0)</bold> form is used, a <ref refid="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" kindref="member">wxStrlen()</ref> will be done internally if the regex library requires the length. When using <ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member">Matches()</ref> in a loop the <bold>Matches(text, flags, len)</bold> form can be used instead, making it possible to avoid a <ref refid="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" kindref="member">wxStrlen()</ref> inside the loop.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1a761c31d59bc171d4c526e7d1da76ec9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegEx::Matches</definition>
+        <argsstring>(const wxChar *text, int flags, size_t len) const </argsstring>
+        <name>Matches</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Matches the precompiled regular expression against the string <emphasis>text</emphasis>, returns true if matches and false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>Flags</emphasis> may be combination of <computeroutput>wxRE_NOTBOL</computeroutput> and <computeroutput>wxRE_NOTEOL</computeroutput>, see <ref refid="regex_8h_1wxRE_NOT_FLAGS" kindref="member">wxRE_NOT_FLAGS</ref>.</para><para>Some regex libraries assume that the text given is null terminated, while others require the length be given as a separate parameter. Therefore for maximum portability assume that <emphasis>text</emphasis> cannot contain embedded nulls.</para><para>When the <bold>Matches(const wxChar *text, int flags = 0)</bold> form is used, a <ref refid="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" kindref="member">wxStrlen()</ref> will be done internally if the regex library requires the length. When using <ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member">Matches()</ref> in a loop the <bold>Matches(text, flags, len)</bold> form can be used instead, making it possible to avoid a <ref refid="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" kindref="member">wxStrlen()</ref> inside the loop.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="201"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_reg_ex_1a6e10e9fd01041501fa31c17bf133b09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegEx::wxRegEx</definition>
+        <argsstring>()</argsstring>
+        <name>wxRegEx</name>
+        <briefdescription>
+<para>Default constructor: use <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref> later. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1a840f38773d86b3e8d6b02c120331c2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegEx::wxRegEx</definition>
+        <argsstring>(const wxString &amp;expr, int flags=wxRE_DEFAULT)</argsstring>
+        <name>wxRegEx</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>expr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxRE_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Create and compile the regular expression, use <ref refid="classwx_reg_ex_1ae19a386efd8c012bdcfdd1548dd64dfc" kindref="member">IsValid()</ref> to test for compilation errors. </para>        </briefdescription>
+        <detaileddescription>
+<para>As for the flags, please see <ref refid="regex_8h_1wxRE_FLAGS" kindref="member">wxRE_FLAGS</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1aaf75e99c2dbe5fe8e798c64b1e510355" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRegEx::~wxRegEx</definition>
+        <argsstring>()</argsstring>
+        <name>~wxRegEx</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>It&apos;s not virtual, don&apos;t derive from this class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegEx::Compile</definition>
+        <argsstring>(const wxString &amp;pattern, int flags=wxRE_DEFAULT)</argsstring>
+        <name>Compile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxRE_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Compile the string into regular expression, return true if ok or false if string has a syntax error. </para>        </briefdescription>
+        <detaileddescription>
+<para>As for the flags, please see <ref refid="regex_8h_1wxRE_FLAGS" kindref="member">wxRE_FLAGS</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1a7b2b15b023a36603084a6b8b9fcf84fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegEx::GetMatch</definition>
+        <argsstring>(size_t *start, size_t *len, size_t index=0) const </argsstring>
+        <name>GetMatch</name>
+        <param>
+          <type>size_t *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get the start index and the length of the match of the expression (if <emphasis>index</emphasis> is 0) or a bracketed subexpression (<emphasis>index</emphasis> different from 0). </para>        </briefdescription>
+        <detaileddescription>
+<para>May only be called after successful call to <ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member">Matches()</ref> and only if <computeroutput>wxRE_NOSUB</computeroutput> was <bold>not</bold> used in <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>.</para><para>Returns false if no match or if an error occurred. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1abccca0f3b75c5fe54b02deeb90c09f4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxRegEx::GetMatch</definition>
+        <argsstring>(const wxString &amp;text, size_t index=0) const </argsstring>
+        <name>GetMatch</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Returns the part of string corresponding to the match where index is interpreted as above. </para>        </briefdescription>
+        <detaileddescription>
+<para>Empty string is returned if match failed.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member">Matches()</ref> and only if <computeroutput>wxRE_NOSUB</computeroutput> was <bold>not</bold> used in <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1ab6b4ab7bcb567c452b04549ebff81bba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxRegEx::GetMatchCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMatchCount</name>
+        <briefdescription>
+<para>Returns the size of the array of matches, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>the number of bracketed subexpressions plus one for the expression itself, or 0 on error.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. and only if <computeroutput>wxRE_NOSUB</computeroutput> was <bold>not</bold> used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1ae19a386efd8c012bdcfdd1548dd64dfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegEx::IsValid</definition>
+        <argsstring>() const </argsstring>
+        <name>IsValid</name>
+        <briefdescription>
+<para>Return true if this is a valid compiled regular expression, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1aac3f3acd35f8daf37ab2837473188e6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRegEx::Matches</definition>
+        <argsstring>(const wxString &amp;text, int flags=0) const </argsstring>
+        <name>Matches</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Matches the precompiled regular expression against the string <emphasis>text</emphasis>, returns true if matches and false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>Flags</emphasis> may be combination of <computeroutput>wxRE_NOTBOL</computeroutput> and <computeroutput>wxRE_NOTEOL</computeroutput>, see <ref refid="regex_8h_1wxRE_NOT_FLAGS" kindref="member">wxRE_NOT_FLAGS</ref>.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1a6b581649802549cb7c9c9774f0367fe0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxRegEx::Replace</definition>
+        <argsstring>(wxString *text, const wxString &amp;replacement, size_t maxMatches=0) const </argsstring>
+        <name>Replace</name>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>replacement</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxMatches</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Replaces the current regular expression in the string pointed to by <emphasis>text</emphasis>, with the text in <emphasis>replacement</emphasis> and return number of matches replaced (maybe 0 if none found) or -1 on error. </para>        </briefdescription>
+        <detaileddescription>
+<para>The replacement text may contain back references <computeroutput>\number</computeroutput> which will be replaced with the value of the corresponding subexpression in the pattern match. <computeroutput>\0</computeroutput> corresponds to the entire match and <computeroutput>&amp;</computeroutput> is a synonym for it. Backslash may be used to quote itself or <computeroutput>&amp;</computeroutput> character.</para><para><emphasis>maxMatches</emphasis> may be used to limit the number of replacements made, setting it to 1, for example, will only replace first occurrence (if any) of the pattern in the text while default value of 0 means replace all. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1aeda59d47a50f59511a9b5b14aa847ac2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxRegEx::ReplaceAll</definition>
+        <argsstring>(wxString *text, const wxString &amp;replacement) const </argsstring>
+        <name>ReplaceAll</name>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>replacement</declname>
+        </param>
+        <briefdescription>
+<para>Replace all occurrences: this is actually a synonym for <ref refid="classwx_reg_ex_1a6b581649802549cb7c9c9774f0367fe0" kindref="member">Replace()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_reg_ex_1a22d68765f9807178f537edc04849e6e8" kindref="member">ReplaceFirst()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_reg_ex_1a22d68765f9807178f537edc04849e6e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxRegEx::ReplaceFirst</definition>
+        <argsstring>(wxString *text, const wxString &amp;replacement) const </argsstring>
+        <name>ReplaceFirst</name>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>replacement</declname>
+        </param>
+        <briefdescription>
+<para>Replace the first occurrence. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="243"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_reg_ex" kindref="compound">wxRegEx</ref> represents a regular expression. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class provides support for regular expressions matching and also replacement.</para><para>It is built on top of either the system library (if it has support for POSIX regular expressions - which is the case of the most modern Unices) or uses the built in Henry Spencer&apos;s library. Henry Spencer would appreciate being given credit in the documentation of software which uses his library, but that is not a requirement.</para><para>Regular expressions, as defined by POSIX, come in two flavours: <emphasis>extended</emphasis> and <emphasis>basic</emphasis>. The builtin library also adds a third flavour of expression <ref refid="overview__resyntax" kindref="compound">advanced</ref>, which is not available when using the system library.</para><para>Unicode is fully supported only when using the builtin library. When using the system library in Unicode mode, the expressions and data are translated to the default 8-bit encoding before being passed to the library.</para><para>On platforms where a system library is available, the default is to use the builtin library for Unicode builds, and the system library otherwise. It is possible to use the other if preferred by selecting it when building the wxWidgets.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Examples:</para><para>A bad example of processing some text containing email addresses (the example is bad because the real email addresses can have more complicated form than <computeroutput><ulink url="mailto:user@host.net">user@host.net</ulink></computeroutput>):</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>text;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_reg_ex" kindref="compound" tooltip="wxRegEx represents a regular expression.">wxRegEx</ref><sp/>reEmail<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;([^@]+)@([[:alnum:].-_].)+([[:alnum:]]+)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>reEmail.<ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member" tooltip="Matches the precompiled regular expression against the string text, returns true...">Matches</ref>(text)<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>text<sp/>=<sp/>reEmail.<ref refid="classwx_reg_ex_1a7b2b15b023a36603084a6b8b9fcf84fd" kindref="member" tooltip="Get the start index and the length of the match of the expression (if index is 0)...">GetMatch</ref>(email);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>username<sp/>=<sp/>reEmail.<ref refid="classwx_reg_ex_1a7b2b15b023a36603084a6b8b9fcf84fd" kindref="member" tooltip="Get the start index and the length of the match of the expression (if index is 0)...">GetMatch</ref>(email,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>reEmail.<ref refid="classwx_reg_ex_1a7b2b15b023a36603084a6b8b9fcf84fd" kindref="member" tooltip="Get the start index and the length of the match of the expression (if index is 0)...">GetMatch</ref>(email,<sp/>3)<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;com&quot;</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="comment">//<sp/>.com<sp/>TLD?</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>or<sp/>we<sp/>could<sp/>do<sp/>this<sp/>to<sp/>hide<sp/>the<sp/>email<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>reEmail.<ref refid="classwx_reg_ex_1aeda59d47a50f59511a9b5b14aa847ac2" kindref="member" tooltip="Replace all occurrences: this is actually a synonym for Replace().">ReplaceAll</ref>(text,<sp/></highlight><highlight class="stringliteral">&quot;HIDDEN@\\2\\3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;text<sp/>now<sp/>contains<sp/>%u<sp/>hidden<sp/>addresses&quot;</highlight><highlight class="normal">,<sp/>count);</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="114" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" bodystart="113" bodyend="244"/>
+    <listofallmembers>
+      <member refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>Compile</name></member>
+      <member refid="classwx_reg_ex_1a7b2b15b023a36603084a6b8b9fcf84fd" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>GetMatch</name></member>
+      <member refid="classwx_reg_ex_1abccca0f3b75c5fe54b02deeb90c09f4d" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>GetMatch</name></member>
+      <member refid="classwx_reg_ex_1ab6b4ab7bcb567c452b04549ebff81bba" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>GetMatchCount</name></member>
+      <member refid="classwx_reg_ex_1ae19a386efd8c012bdcfdd1548dd64dfc" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>IsValid</name></member>
+      <member refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>Matches</name></member>
+      <member refid="classwx_reg_ex_1a761c31d59bc171d4c526e7d1da76ec9f" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>Matches</name></member>
+      <member refid="classwx_reg_ex_1aac3f3acd35f8daf37ab2837473188e6a" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>Matches</name></member>
+      <member refid="classwx_reg_ex_1a6b581649802549cb7c9c9774f0367fe0" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>Replace</name></member>
+      <member refid="classwx_reg_ex_1aeda59d47a50f59511a9b5b14aa847ac2" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>ReplaceAll</name></member>
+      <member refid="classwx_reg_ex_1a22d68765f9807178f537edc04849e6e8" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>ReplaceFirst</name></member>
+      <member refid="classwx_reg_ex_1a6e10e9fd01041501fa31c17bf133b09f" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>wxRegEx</name></member>
+      <member refid="classwx_reg_ex_1a840f38773d86b3e8d6b02c120331c2cb" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>wxRegEx</name></member>
+      <member refid="classwx_reg_ex_1aaf75e99c2dbe5fe8e798c64b1e510355" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>~wxRegEx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

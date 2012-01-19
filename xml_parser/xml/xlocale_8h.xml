@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="xlocale_8h" kind="file">
+    <compoundname>xlocale.h</compoundname>
+    <innerclass refid="classwx_x_locale" prot="public">wxXLocale</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="xlocale_8h_1af80db5b763e9056441ffd74bee61ef0e" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref></type>
+        <definition>wxXLocale wxNullXLocale</definition>
+        <argsstring></argsstring>
+        <name>wxNullXLocale</name>
+        <briefdescription>
+<para>An empty and invalid <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__locale_1ga2c9ccf34a8d21498ac931ffd2b666da3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsalnum_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIsalnum_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gacd0bc4d967d50ae7f823b000894a1276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsalpha_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIsalpha_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gade37ad0e12b8a1fcd7e040c824393412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIscntrl_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIscntrl_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1ga4ea4f6bbf84949a09e11bb9d3830d144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsdigit_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIsdigit_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gac02d54370229bf21bf5fccc16f252f54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsgraph_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIsgraph_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1ga9791edc396a64410f20ec4c33e10ccf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIslower_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIslower_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gacdc3622fcffc18c65eda29ae0f0b4517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsprint_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIsprint_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1ga32dc4144f5642f5b2bb004f00c608f43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIspunct_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIspunct_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gab7241bf7c23c871dd9466f95618f5fe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsspace_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIsspace_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1ga7abb9f4c50b26c5d1aec18e8c3f58875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsupper_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIsupper_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1ga7c29a0907dc7e76a3278187a77fca42c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxIsxdigit_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxIsxdigit_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gaf31baafb5092f60427786800d9ab5cfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t</type>
+        <definition>wchar_t wxTolower_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxTolower_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1ga43fc799c8b0dcae5202958638b67a0e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t</type>
+        <definition>wchar_t wxToupper_l</definition>
+        <argsstring>(wchar_t c, const wxXLocale &amp;loc)</argsstring>
+        <name>wxToupper_l</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gaf18ccdc1bf0a25c255f310453f84296e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxStrtod_l</definition>
+        <argsstring>(const wchar_t *c, wchar_t **endptr, const wxXLocale &amp;loc)</argsstring>
+        <name>wxStrtod_l</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>wchar_t **</type>
+          <declname>endptr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gaa642380bc18eb602dcf49a13c085f1bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxStrtol_l</definition>
+        <argsstring>(const wchar_t *c, wchar_t **endptr, int base, const wxXLocale &amp;loc)</argsstring>
+        <name>wxStrtol_l</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>wchar_t **</type>
+          <declname>endptr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="132"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__locale_1gac9a430bd7e7519c64d217fe4f9170605" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long wxStrtoul_l</definition>
+        <argsstring>(const wchar_t *c, wchar_t **endptr, int base, const wxXLocale &amp;loc)</argsstring>
+        <name>wxStrtoul_l</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>wchar_t **</type>
+          <declname>endptr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h"/>
+  </compounddef>
+</doxygen>

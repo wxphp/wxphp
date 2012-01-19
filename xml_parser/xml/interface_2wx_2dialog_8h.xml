@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2dialog_8h" kind="file">
+    <compoundname>dialog.h</compoundname>
+    <innerclass refid="classwx_dialog" prot="public">wxDialog</innerclass>
+    <innerclass refid="classwx_dialog_layout_adapter" prot="public">wxDialogLayoutAdapter</innerclass>
+    <innerclass refid="classwx_window_modal_dialog_event" prot="public">wxWindowModalDialogEvent</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="interface_2wx_2dialog_8h_1a05926442fcb63ec70f4389a62729027a" prot="public" static="no">
+        <name>wxDEFAULT_DIALOG_STYLE</name>
+        <initializer>(wxCAPTION | wxSYSTEM_MENU | wxCLOSE_BOX)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="interface_2wx_2dialog_8h_1a5121a982861076ced173471760f36baf" prot="public" static="no">
+        <name>wxDialogLayoutAdaptationMode</name>
+        <enumvalue id="interface_2wx_2dialog_8h_1a5121a982861076ced173471760f36bafa1c8ae5bcf3e93eb6394863145154a38d" prot="public">
+          <name>wxDIALOG_ADAPTATION_MODE_DEFAULT</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Use global adaptation enabled status. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dialog_8h_1a5121a982861076ced173471760f36bafa0be6558d9ac2090a2e472b0f1df32fa1" prot="public">
+          <name>wxDIALOG_ADAPTATION_MODE_ENABLED</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Enable this dialog overriding global status. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2dialog_8h_1a5121a982861076ced173471760f36bafa167d84fafa7583fae75f3cbf565e1f49" prot="public">
+          <name>wxDIALOG_ADAPTATION_MODE_DISABLED</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Disable this dialog overriding global status. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Modes used for <ref refid="classwx_dialog_1a9f949c545ca70571cec8cd2fcbfc0991" kindref="member">wxDialog::SetLayoutAdaptationMode()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h"/>
+  </compounddef>
+</doxygen>

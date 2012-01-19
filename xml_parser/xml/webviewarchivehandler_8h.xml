@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="webviewarchivehandler_8h" kind="file">
+    <compoundname>webviewarchivehandler.h</compoundname>
+    <innerclass refid="classwx_web_view_archive_handler" prot="public">wxWebViewArchiveHandler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webviewarchivehandler.h"/>
+  </compounddef>
+</doxygen>

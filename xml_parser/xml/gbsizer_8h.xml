@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="gbsizer_8h" kind="file">
+    <compoundname>gbsizer.h</compoundname>
+    <innerclass refid="classwx_g_b_position" prot="public">wxGBPosition</innerclass>
+    <innerclass refid="classwx_grid_bag_sizer" prot="public">wxGridBagSizer</innerclass>
+    <innerclass refid="classwx_g_b_sizer_item" prot="public">wxGBSizerItem</innerclass>
+    <innerclass refid="classwx_g_b_span" prot="public">wxGBSpan</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="gbsizer_8h_1adbaf4ed0f18199b06866229a56febd29" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref></type>
+        <definition>const wxGBSpan wxDefaultSpan</definition>
+        <argsstring></argsstring>
+        <name>wxDefaultSpan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="356" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h"/>
+  </compounddef>
+</doxygen>

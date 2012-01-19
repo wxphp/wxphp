@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Documentation</title>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Julian Smart, Robert Roebling, Vadim Zeitlin, Robin Dunn, Stefan Csomor, Francesco Montorsi, Bryan Petty, et al </para></simplesect>
+<simplesect kind="date"><para>December, 2011</para></simplesect>
+<image type="html" name="main_wxlogo.png"></image>
+</para><sect1 id="index_1manual_user">
+<title>User Manual:</title>
+<para><itemizedlist>
+<listitem><para><ref refid="page__introduction" kindref="compound">Introduction</ref> </para></listitem>
+<listitem><para><ref refid="page__copyright" kindref="compound">Copyrights and Licenses</ref> </para></listitem>
+<listitem><para><ref refid="page__utils" kindref="compound">Utilities Overview</ref> </para></listitem>
+<listitem><para><ref refid="page__samples" kindref="compound">Samples Overview</ref> </para></listitem>
+<listitem><para><ref refid="page__libs" kindref="compound">Library List</ref> </para></listitem>
+<listitem><para><ref refid="page__class__cat" kindref="compound">Summarized Class List by Category</ref> </para></listitem>
+<listitem><para><ref refid="page__topics" kindref="compound">Topic Overviews</ref> </para></listitem>
+<listitem><para><ref refid="page__multiplatform" kindref="compound">General Cross-Platform Development Tips</ref> </para></listitem>
+<listitem><para><ref refid="page__port" kindref="compound">Platform Details</ref></para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="index_1manual_reference">
+<title>Reference Manual:</title>
+<para><itemizedlist>
+<listitem><para><ref refid="page__constants" kindref="compound">Constants</ref> </para></listitem>
+<listitem><para><ref refid="page__translations" kindref="compound">Translations</ref> </para></listitem>
+<listitem><para><ref refid="group__group__class" kindref="compound">Full Class List by Category</ref> </para></listitem>
+<listitem><para><ref refid="group__group__funcmacro" kindref="compound">Functions and Macros by Category</ref> </para></listitem>
+</itemizedlist>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

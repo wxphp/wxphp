@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="memory_8h" kind="file">
+    <compoundname>memory.h</compoundname>
+    <innerclass refid="classwx_debug_context" prot="public">wxDebugContext</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group__funcmacro__log_1ga877ebb06724f99595f74396cc8823b5f" prot="public" static="no">
+        <name>WXTRACE</name>
+        <param><defname>format</defname></param>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000031"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect>Calls <ref refid="group__group__funcmacro__log_1gac125720c9e98ed47efb181cbc0c05b9e" kindref="member">wxTrace()</ref> with printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>).</para><para>Include file: <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="182" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__log_1gaaa8834ddec3fb37c0e07d16a2a29c38e" prot="public" static="no">
+        <name>WXTRACELEVEL</name>
+        <param><defname>level</defname></param>
+        <param><defname>format</defname></param>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000032"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect>Calls wxTraceLevel with printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>). The first argument should be the level at which this information is appropriate. It will only be output if the level returned by <ref refid="classwx_debug_context_1aa2175db985d125950314331d790428c2" kindref="member">wxDebugContext::GetLevel</ref> is equal to or greater than this value.</para><para>Include file: <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="196" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__log_1gac125720c9e98ed47efb181cbc0c05b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTrace</definition>
+        <argsstring>(const wxString &amp;format,...)</argsstring>
+        <name>wxTrace</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000033"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect>Takes printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>).</para><para>Include file: <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="207"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__log_1gacd709b9186e93bd04c01bd635c7a2cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTraceLevel</definition>
+        <argsstring>(int level, const wxString &amp;format,...)</argsstring>
+        <name>wxTraceLevel</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000034"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect>Takes <emphasis>printf()</emphasis> style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>). The first argument should be the level at which this information is appropriate. It will only be output if the level returned by <ref refid="classwx_debug_context_1aa2175db985d125950314331d790428c2" kindref="member">wxDebugContext::GetLevel()</ref> is equal to or greater than this value.</para><para>Include file: <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="221"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h"/>
+  </compounddef>
+</doxygen>

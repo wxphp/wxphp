@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_position" kind="class" prot="public">
+    <compoundname>wxPosition</compoundname>
+    <includes local="no">wx/position.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Miscellaneous operators</header>
+      <description><para><anchor id="_1amgrpe09e661963a51ecc56ad0a00cbd2649b"/> </para></description>
+      <memberdef kind="function" id="classwx_position_1a742dc8cdbc0dc812bb489ec0b66bdc97" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPosition::operator==</definition>
+        <argsstring>(const wxPosition &amp;p) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a891af6766bca89166c2cdf58408890d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPosition::operator!=</definition>
+        <argsstring>(const wxPosition &amp;p) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a90f446cbe8d031afa0361cd9f10c868f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+        <definition>wxPosition&amp; wxPosition::operator+=</definition>
+        <argsstring>(const wxPosition &amp;p) const </argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a0bc71200c7f8509368bf4ad0a06a94c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+        <definition>wxPosition&amp; wxPosition::operator-=</definition>
+        <argsstring>(const wxPosition &amp;p) const </argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a89c5c79a96fd050f60ee4a0eba8da9c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+        <definition>wxPosition&amp; wxPosition::operator+=</definition>
+        <argsstring>(const wxSize &amp;s) const </argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1abe8236eb47fc57ff0a7f4e845248decd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+        <definition>wxPosition&amp; wxPosition::operator-=</definition>
+        <argsstring>(const wxSize &amp;s) const </argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a2d93c1d077ef8860e4da157f8486789a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+        <definition>wxPosition&amp; wxPosition::operator+</definition>
+        <argsstring>(const wxPosition &amp;p) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a6cf221ab3ac9bac0edf7fa7916b4b452" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+        <definition>wxPosition&amp; wxPosition::operator-</definition>
+        <argsstring>(const wxPosition &amp;p) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a60d179f5304c94dd1655b2d55efb9075" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+        <definition>wxPosition&amp; wxPosition::operator+</definition>
+        <argsstring>(const wxSize &amp;s) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a14078d384738ba41e76b0168aa832d1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_position" kindref="compound">wxPosition</ref> &amp;</type>
+        <definition>wxPosition&amp; wxPosition::operator-</definition>
+        <argsstring>(const wxSize &amp;s) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_position_1a6668593c0f6376abdcc2a378963209e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPosition::wxPosition</definition>
+        <argsstring>()</argsstring>
+        <name>wxPosition</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classwx_position" kindref="compound">wxPosition</ref>, setting the row and column to the default value of (0, 0). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1ae8301b4ac1db055821f713ad4e3a1062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPosition::wxPosition</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>wxPosition</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classwx_position" kindref="compound">wxPosition</ref>, setting the row and column to the value of (<emphasis>row</emphasis>, <emphasis>col</emphasis>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1ab541c81540254ef30acce315741ee1f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPosition::GetCol</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCol</name>
+        <briefdescription>
+<para>A synonym for <ref refid="classwx_position_1aeb2d6a7f1119bcf5090d57b40f1f4d26" kindref="member">GetColumn()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1aeb2d6a7f1119bcf5090d57b40f1f4d26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPosition::GetColumn</definition>
+        <argsstring>() const </argsstring>
+        <name>GetColumn</name>
+        <briefdescription>
+<para>Get the current row value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a510d68d82fb257e15d938acd58bc513c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxPosition::GetRow</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRow</name>
+        <briefdescription>
+<para>Get the current row value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1ae186188a3cf0f1065ac2d71c7dbcf289" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPosition::SetCol</definition>
+        <argsstring>(int column)</argsstring>
+        <name>SetCol</name>
+        <param>
+          <type>int</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+<para>A synonym for <ref refid="classwx_position_1ab6171fd77eeba5ffb9b9d42e6b683b72" kindref="member">SetColumn()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1ab6171fd77eeba5ffb9b9d42e6b683b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPosition::SetColumn</definition>
+        <argsstring>(int column)</argsstring>
+        <name>SetColumn</name>
+        <param>
+          <type>int</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+<para>Set a new column value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_position_1a6c7e7e403e18e88bc89cfb4ad4310b49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPosition::SetRow</definition>
+        <argsstring>(int row)</argsstring>
+        <name>SetRow</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Set a new row value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents the position of an item in any kind of grid of rows and columns such as <ref refid="classwx_grid_bag_sizer" kindref="compound">wxGridBagSizer</ref>, or <ref refid="classwx_h_v_scrolled_window" kindref="compound">wxHVScrolledWindow</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_size" kindref="compound">wxSize</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/position.h" bodystart="20" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classwx_position_1ab541c81540254ef30acce315741ee1f2" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>GetCol</name></member>
+      <member refid="classwx_position_1aeb2d6a7f1119bcf5090d57b40f1f4d26" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>GetColumn</name></member>
+      <member refid="classwx_position_1a510d68d82fb257e15d938acd58bc513c" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>GetRow</name></member>
+      <member refid="classwx_position_1a891af6766bca89166c2cdf58408890d0" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator!=</name></member>
+      <member refid="classwx_position_1a2d93c1d077ef8860e4da157f8486789a" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+</name></member>
+      <member refid="classwx_position_1a60d179f5304c94dd1655b2d55efb9075" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+</name></member>
+      <member refid="classwx_position_1a90f446cbe8d031afa0361cd9f10c868f" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+=</name></member>
+      <member refid="classwx_position_1a89c5c79a96fd050f60ee4a0eba8da9c6" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator+=</name></member>
+      <member refid="classwx_position_1a6cf221ab3ac9bac0edf7fa7916b4b452" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-</name></member>
+      <member refid="classwx_position_1a14078d384738ba41e76b0168aa832d1a" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-</name></member>
+      <member refid="classwx_position_1a0bc71200c7f8509368bf4ad0a06a94c1" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-=</name></member>
+      <member refid="classwx_position_1abe8236eb47fc57ff0a7f4e845248decd" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator-=</name></member>
+      <member refid="classwx_position_1a742dc8cdbc0dc812bb489ec0b66bdc97" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>operator==</name></member>
+      <member refid="classwx_position_1ae186188a3cf0f1065ac2d71c7dbcf289" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>SetCol</name></member>
+      <member refid="classwx_position_1ab6171fd77eeba5ffb9b9d42e6b683b72" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>SetColumn</name></member>
+      <member refid="classwx_position_1a6c7e7e403e18e88bc89cfb4ad4310b49" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>SetRow</name></member>
+      <member refid="classwx_position_1a6668593c0f6376abdcc2a378963209e9" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>wxPosition</name></member>
+      <member refid="classwx_position_1ae8301b4ac1db055821f713ad4e3a1062" prot="public" virt="non-virtual"><scope>wxPosition</scope><name>wxPosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

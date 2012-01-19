@@ -1,0 +1,821 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2string_8h" kind="file">
+    <compoundname>string.h</compoundname>
+    <innerclass refid="classwx_string" prot="public">wxString</innerclass>
+    <innerclass refid="classwx_string_buffer_length" prot="public">wxStringBufferLength</innerclass>
+    <innerclass refid="classwx_string_buffer" prot="public">wxStringBuffer</innerclass>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1adb9de78b97ce2369da971e3d1604a899" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxString &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1613"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a8f5342a458e5be812e8e52954fe0d12c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxString &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1614"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1ac4d4a1054da48ea5f325d8fb2ddb54a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(const wxString &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1615"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a069ed570ddfe042f2bbbd7f35cb94674" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&gt;</definition>
+        <argsstring>(const wxString &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1616"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a93eb1a40f4fb366d0b04a311f0656f27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&lt;=</definition>
+        <argsstring>(const wxString &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1617"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1ac80249e3cd63b87b20dc1516f26411be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&gt;=</definition>
+        <argsstring>(const wxString &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1618"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a168d636c3aba1512b01fa694582bc3e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxString &amp;s1, const wxCStrData &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1619"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a67b1073098ee47a7c8bf792d15de4807" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxCStrData &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1620"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1abef5eaa3ea9725bb37443f8081af0735" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxString &amp;s1, const wxCStrData &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1621"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1ab297cb04634cc2da0079994a83dd2e1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxCStrData &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const wxCStrData &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1622"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a6c1a04b92f8958dc3e4be38e110e6dec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxString &amp;s1, const wxWCharBuffer &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1623"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1ad5d86a5dc8922cb31a3c73cb66a60685" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxWCharBuffer &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1624"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1aba8507904d4d093e56aa35c3f89f8870" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxString &amp;s1, const wxWCharBuffer &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1625"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a9eafbdd309638f3be21ad68b92ad46ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxWCharBuffer &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_w_char_buffer" kindref="compound">wxWCharBuffer</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1626"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1af4e96819fe93e8afdef50a8d295c5dc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxString &amp;s1, const wxCharBuffer &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1627"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a8214090d895c54163125de3260a16d70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxCharBuffer &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1628"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a8cc0386f2e8a4d7e6542eec30a755cbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxString &amp;s1, const wxCharBuffer &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1629"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1aa99803a8e6d9c5cbd3de5fff7c42a3d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxCharBuffer &amp;s1, const wxString &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_char_buffer" kindref="compound">wxCharBuffer</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator for string types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1630"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1ad6e045ae55e256fdf1d0afe003fb1e11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxUniChar &amp;c, const wxString &amp;s)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1637"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1af7a5e79a9eede59f133fdfe348d0c69e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxUniCharRef &amp;c, const wxString &amp;s)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1638"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a9c5e9d04af9505120db882a5291cc51d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(char c, const wxString &amp;s)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1639"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1acf418dc4d1cee667f08099a0d2152034" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(wchar_t c, const wxString &amp;s)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1640"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a31fcdbc2ecbb5d6eb7cfe00980138166" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(int c, const wxString &amp;s)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1641"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a2eca333354defa59dca6abcb6a4e8f8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxString &amp;s, const wxUniChar &amp;c)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1642"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a0113bcb268e41b4c1e6bc861e05331c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxString &amp;s, const wxUniCharRef &amp;c)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1643"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a0d4e18d4f4255b0533af660bc2a208a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxString &amp;s, char c)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1644"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1aca9b549503a021cd6f6a3d7091f25584" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxString &amp;s, wchar_t c)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1645"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a96069f5457037e547074785801a92c1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxUniChar &amp;c, const wxString &amp;s)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1646"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a0c6fea75bb1825726080381762d7a6de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxUniCharRef &amp;c, const wxString &amp;s)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1647"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a13c60da7831705bd526e4e16635e35a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(char c, const wxString &amp;s)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1648"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1aef6757c375b382a3b6d2d4f8b3746cfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(wchar_t c, const wxString &amp;s)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1649"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a83b19e14873cb419fe394a8fdeb92191" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(int c, const wxString &amp;s)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1650"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a1148b634700e49f84ac5030d1f9d42e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxString &amp;s, const wxUniChar &amp;c)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1651"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1ac8aeb31a9befb41eb699f751175a13f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxString &amp;s, const wxUniCharRef &amp;c)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1652"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a2fda120662215e3c9a33d3467d9a834e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxString &amp;s, char c)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1653"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_2wx_2string_8h_1a9bb06167875db80ccee29a8f77f21d93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxString &amp;s, wchar_t c)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operators char types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1654"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxEmptyString</definition>
+        <argsstring></argsstring>
+        <name>wxEmptyString</name>
+        <briefdescription>
+<para>The global <ref refid="classwx_string" kindref="compound">wxString</ref> instance of an empty string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Used extensively in the entire wxWidgets API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1661" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" bodystart="1661" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__string_1ga840ccd69c24c878e8c19724adc7728b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool(T)(const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;c)</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool wxStringCheck</definition>
+        <argsstring>(const wxString &amp;val)</argsstring>
+        <name>wxStringCheck</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Allows to extend a function with the signature: </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>SomeFunc(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_uni_char" kindref="compound" tooltip="This class represents a single Unicode character.">wxUniChar</ref>&amp;<sp/>c)<sp/></highlight></codeline>
+</programlisting> which operates on a single character, to an entire <ref refid="classwx_string" kindref="compound">wxString</ref>.</para><para>E.g. if you want to check if an entire string contains only digits, you can do: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wxStringCheck&lt;wxIsdigit&gt;(myString))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/></highlight><highlight class="comment">//<sp/>the<sp/>entire<sp/>string<sp/>contains<sp/>oly<sp/>digits!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/></highlight><highlight class="comment">//<sp/>at<sp/>least<sp/>one<sp/>character<sp/>of<sp/>myString<sp/>is<sp/>not<sp/>a<sp/>digit</highlight></codeline>
+</programlisting></para><para><simplesect kind="return"><para>true if the given function returns a non-zero value for all characters of the <emphasis>val</emphasis> string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h" line="1807"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/string.h"/>
+  </compounddef>
+</doxygen>

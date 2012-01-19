@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="colordlg_8h" kind="file">
+    <compoundname>colordlg.h</compoundname>
+    <innerclass refid="classwx_colour_dialog" prot="public">wxColourDialog</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gae21ee60a8c039d8b78aeeca9f27bac2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>wxColour wxGetColourFromUser</definition>
+        <argsstring>(wxWindow *parent, const wxColour &amp;colInit, const wxString &amp;caption=wxEmptyString, wxColourData *data=NULL)</argsstring>
+        <name>wxGetColourFromUser</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colInit</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_colour_data" kindref="compound">wxColourData</ref> *</type>
+          <declname>data</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Shows the colour selection dialog and returns the colour selected by user or invalid colour (use <ref refid="classwx_colour_1a5616c16dbc5f312421adb50a49720320" kindref="member">wxColour::IsOk()</ref> to test whether a colour is valid) if the dialog was cancelled. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parent window for the colour selection dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>colInit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If given, this will be the colour initially selected in the dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caption</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If given, this will be used for the dialog caption. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional object storing additional colour dialog settings, such as custom colours. If none is provided the same settings as the last time are used.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Include file: <verbatim>#include &lt;wx/colordlg.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h"/>
+  </compounddef>
+</doxygen>

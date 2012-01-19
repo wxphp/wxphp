@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="socket_8h" kind="file">
+    <compoundname>socket.h</compoundname>
+    <innerclass refid="classwx_i_paddress" prot="public">wxIPaddress</innerclass>
+    <innerclass refid="classwx_i_p_v4address" prot="public">wxIPV4address</innerclass>
+    <innerclass refid="classwx_socket_server" prot="public">wxSocketServer</innerclass>
+    <innerclass refid="classwx_socket_client" prot="public">wxSocketClient</innerclass>
+    <innerclass refid="classwx_sock_address" prot="public">wxSockAddress</innerclass>
+    <innerclass refid="classwx_socket_event" prot="public">wxSocketEvent</innerclass>
+    <innerclass refid="classwx_socket_base" prot="public">wxSocketBase</innerclass>
+    <innerclass refid="classwx_datagram_socket" prot="public">wxDatagramSocket</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6" prot="public" static="no">
+        <name>wxSocketError</name>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6aea08ec67172043a54c3a5097d55a0a7d" prot="public">
+          <name>wxSOCKET_NOERROR</name>
+          <briefdescription>
+<para>No error happened. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6a82ac229a005d26a17cb3454a87fc1c63" prot="public">
+          <name>wxSOCKET_INVOP</name>
+          <briefdescription>
+<para>Invalid operation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6aa5bb62f3f65253b53347af737387c308" prot="public">
+          <name>wxSOCKET_IOERR</name>
+          <briefdescription>
+<para>Input/Output error. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6a371126a5aaeec800ac35d787ba0139ea" prot="public">
+          <name>wxSOCKET_INVADDR</name>
+          <briefdescription>
+<para>Invalid address passed to wxSocket. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6ab67395476ae45e701919ab3294e6183b" prot="public">
+          <name>wxSOCKET_INVSOCK</name>
+          <briefdescription>
+<para>Invalid socket (uninitialized). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6a27669eab5e472abebdebecf0face6ad4" prot="public">
+          <name>wxSOCKET_NOHOST</name>
+          <briefdescription>
+<para>No corresponding host. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6a3602281da68a004305231d967575a5cc" prot="public">
+          <name>wxSOCKET_INVPORT</name>
+          <briefdescription>
+<para>Invalid port. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6a4682fd14b73a9ad5837321a8f243a146" prot="public">
+          <name>wxSOCKET_WOULDBLOCK</name>
+          <briefdescription>
+<para>The socket is non-blocking and the operation would block. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6a0f75c06fbe178112f4f79e6f4ce516f5" prot="public">
+          <name>wxSOCKET_TIMEDOUT</name>
+          <briefdescription>
+<para>The timeout for this operation expired. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6ac5f92c61c05bcb7c0e12b020b4dd6cc0" prot="public">
+          <name>wxSOCKET_MEMERR</name>
+          <briefdescription>
+<para>Memory exhausted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>wxSocket error return values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="502" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="501" bodyend="513"/>
+      </memberdef>
+      <memberdef kind="enum" id="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353" prot="public" static="no">
+        <name>wxSocketEventFlags</name>
+        <enumvalue id="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353a27d14981defd0cb66f76ec733c7c6ff1" prot="public">
+          <name>wxSOCKET_INPUT</name>
+          <briefdescription>
+<para>There is data available for reading. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353a8a57cbc400a829a53c64f92950a9e6f6" prot="public">
+          <name>wxSOCKET_OUTPUT</name>
+          <briefdescription>
+<para>The socket is ready to be written to. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353ad5face6ce3a941b3b8bb08971bd6f3fc" prot="public">
+          <name>wxSOCKET_CONNECTION</name>
+          <briefdescription>
+<para>Incoming connection request (server), or successful connection establishment (client). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353a9f962bb5acef5cc744995e2fca0ac165" prot="public">
+          <name>wxSOCKET_LOST</name>
+          <briefdescription>
+<para>The connection has been closed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><anchor id="socket_8h_1wxSocketEventFlags"/></para><para>wxSocket Event Flags.</para><para>A brief note on how to use these events:</para><para>The <bold>wxSOCKET_INPUT</bold> event will be issued whenever there is data available for reading. This will be the case if the input queue was empty and new data arrives, or if the application has read some data yet there is still more data available. This means that the application does not need to read all available data in response to a <bold>wxSOCKET_INPUT</bold> event, as more events will be produced as necessary.</para><para>The <bold>wxSOCKET_OUTPUT</bold> event is issued when a socket is first connected with Connect() or accepted with Accept(). After that, new events will be generated only after an output operation fails with <bold>wxSOCKET_WOULDBLOCK</bold> and buffer space becomes available again. This means that the application should assume that it can write data to the socket until an <bold>wxSOCKET_WOULDBLOCK</bold> error occurs; after this, whenever the socket becomes writable again the application will be notified with another <bold>wxSOCKET_OUTPUT</bold> event.</para><para>The <bold>wxSOCKET_CONNECTION</bold> event is issued when a delayed connection request completes successfully (client) or when a new connection arrives at the incoming queue (server).</para><para>The <bold>wxSOCKET_LOST</bold> event is issued when a close indication is received for the socket. This means that the connection broke down or that it was closed by the peer. Also, this event will be issued if a connection request fails. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="546" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="545" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="enum" id="socket_8h_1a80155586fa275b28773c9b203f52caba" prot="public" static="no">
+        <name>@17</name>
+        <enumvalue id="socket_8h_1a80155586fa275b28773c9b203f52cabaaeb1d7a7c69cad4340559486c04d2336c" prot="public">
+          <name>wxSOCKET_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>Normal functionality. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a80155586fa275b28773c9b203f52cabaaf929a3050e69ff9d3a2dd93795ba2273" prot="public">
+          <name>wxSOCKET_NOWAIT</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Read/write as much data as possible and return immediately. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a80155586fa275b28773c9b203f52cabaaea93cf511bb913dfc17571dd29a2de22" prot="public">
+          <name>wxSOCKET_WAITALL</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Wait for all required data to be read/written unless an error occurs. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a80155586fa275b28773c9b203f52cabaa5736b2f6fb724b2082d861e5a87e1547" prot="public">
+          <name>wxSOCKET_BLOCK</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+<para>Block the GUI (do not yield) while reading/writing data. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a80155586fa275b28773c9b203f52cabaa181fcaf757a6eb4e219a4c9cd473663b" prot="public">
+          <name>wxSOCKET_REUSEADDR</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+<para>Allows the use of an in-use port. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a80155586fa275b28773c9b203f52cabaa680d618e39c20b6003bb99d1f0a3443f" prot="public">
+          <name>wxSOCKET_BROADCAST</name>
+          <initializer> 16</initializer>
+          <briefdescription>
+<para>Switches the socket to broadcast mode. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="socket_8h_1a80155586fa275b28773c9b203f52cabaa2e119a9b0fa2926953a941ff6421e886" prot="public">
+          <name>wxSOCKET_NOBIND</name>
+          <initializer> 32</initializer>
+          <briefdescription>
+<para>Stops the socket from being bound to a specific adapter (normally used in conjunction with <bold>wxSOCKET_BROADCAST</bold>). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><anchor id="socket_8h_1wxSocketFlags"/></para><para>wxSocket Flags.</para><para>A brief overview on how to use these flags follows.</para><para>If no flag is specified (this is the same as <bold>wxSOCKET_NONE</bold>), IO calls will return after some data has been read or written, even when the transfer might not be complete. This is the same as issuing exactly one blocking low-level call to <bold>recv()</bold> or <bold>send()</bold>. Note that <emphasis>blocking</emphasis> here refers to when the function returns, not to whether the GUI blocks during this time.</para><para>If <bold>wxSOCKET_NOWAIT</bold> is specified, IO calls will return immediately. Read operations will retrieve only available data. Write operations will write as much data as possible, depending on how much space is available in the output buffer. This is the same as issuing exactly one nonblocking low-level call to <bold>recv()</bold> or <bold>send()</bold>. Note that <emphasis>nonblocking</emphasis> here refers to when the function returns, not to whether the GUI blocks during this time.</para><para>If <bold>wxSOCKET_WAITALL</bold> is specified, IO calls won&apos;t return until ALL the data has been read or written (or until an error occurs), blocking if necessary, and issuing several low level calls if necessary. This is the same as having a loop which makes as many blocking low-level calls to <bold>recv()</bold> or <bold>send()</bold> as needed so as to transfer all the data. Note that <emphasis>blocking</emphasis> here refers to when the function returns, not to whether the GUI blocks during this time.</para><para>The <bold>wxSOCKET_BLOCK</bold> flag controls whether the GUI blocks during IO operations. If this flag is specified, the socket will not yield during IO calls, so the GUI will remain blocked until the operation completes. If it is not used, then the application must take extra care to avoid unwanted reentrance.</para><para>The <bold>wxSOCKET_REUSEADDR</bold> flag controls the use of the <bold>SO_REUSEADDR</bold> standard <bold>setsockopt()</bold> flag. This flag allows the socket to bind to a port that is already in use. This is mostly used on UNIX-based systems to allow rapid starting and stopping of a server, otherwise you may have to wait several minutes for the port to become available.</para><para><bold>wxSOCKET_REUSEADDR</bold> can also be used with socket clients to (re)bind to a particular local port for an outgoing connection. This option can have surprising platform dependent behaviour, so check the documentation for your platform&apos;s implementation of setsockopt().</para><para>Note that on BSD-based systems(e.g. Mac OS X), use of <bold>wxSOCKET_REUSEADDR</bold> implies <bold>SO_REUSEPORT</bold> in addition to <bold>SO_REUSEADDR</bold> to be consistent with Windows.</para><para>The <bold>wxSOCKET_BROADCAST</bold> flag controls the use of the <bold>SO_BROADCAST</bold> standard <bold>setsockopt()</bold> flag. This flag allows the socket to use the broadcast address, and is generally used in conjunction with <bold>wxSOCKET_NOBIND</bold> and <ref refid="classwx_i_paddress_1a84d58d990e0931616c6842ce103e2000" kindref="member">wxIPaddress::BroadcastAddress()</ref>.</para><para>So:<itemizedlist>
+<listitem><para><bold>wxSOCKET_NONE</bold> will try to read at least SOME data, no matter how much.</para></listitem><listitem><para><bold>wxSOCKET_NOWAIT</bold> will always return immediately, even if it cannot read or write ANY data.</para></listitem><listitem><para><bold>wxSOCKET_WAITALL</bold> will only return when it has read or written ALL the data.</para></listitem><listitem><para><bold>wxSOCKET_BLOCK</bold> has nothing to do with the previous flags and it controls whether the GUI blocks.</para></listitem><listitem><para><bold>wxSOCKET_REUSEADDR</bold> controls special platform-specific behaviour for reusing local addresses/ports. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="623" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="622" bodyend="633"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h"/>
+  </compounddef>
+</doxygen>

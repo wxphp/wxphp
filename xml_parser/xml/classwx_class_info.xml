@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_class_info" kind="class" prot="public">
+    <compoundname>wxClassInfo</compoundname>
+    <includes local="no">wx/object.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_class_info_1a89612fc727626594ba7d325f52c7fa71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxClassInfo::wxClassInfo</definition>
+        <argsstring>(const wxChar *className, const wxClassInfo *baseClass1, const wxClassInfo *baseClass2, int size, wxObjectConstructorFn fn)</argsstring>
+        <name>wxClassInfo</name>
+        <param>
+          <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+          <declname>className</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> *</type>
+          <declname>baseClass1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> *</type>
+          <declname>baseClass2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>wxObjectConstructorFn</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para>The supplied macros implicitly construct objects of this class, so there is no need to create such objects explicitly in an application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="435"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_class_info_1a754a267b65cd7e2026e6a0beb22ff0a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>wxObject* wxClassInfo::CreateObject</definition>
+        <argsstring>() const </argsstring>
+        <name>CreateObject</name>
+        <briefdescription>
+<para>Creates an object of the appropriate kind. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>NULL if the class has not been declared dynamically creatable (typically, this happens for abstract classes). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_class_info_1a8764f4e89eb56345c12aab6bac8e1607" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+        <definition>const wxChar* wxClassInfo::GetBaseClassName1</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBaseClassName1</name>
+        <briefdescription>
+<para>Returns the name of the first base class (NULL if none). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="453"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_class_info_1a1ef4fc497c9fb983a23220d8bdbe5a3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+        <definition>const wxChar* wxClassInfo::GetBaseClassName2</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBaseClassName2</name>
+        <briefdescription>
+<para>Returns the name of the second base class (NULL if none). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="458"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_class_info_1a4827f2dcd6ded37542370e6b1875c79e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
+        <definition>const wxChar* wxClassInfo::GetClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetClassName</name>
+        <briefdescription>
+<para>Returns the string form of the class name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_class_info_1a98669f49aad58c83d991a545e36c46a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxClassInfo::GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+<para>Returns the size of the class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_class_info_1ab2737b6d3f1b8015e08934443eea1785" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxClassInfo::IsDynamic</definition>
+        <argsstring>() const </argsstring>
+        <name>IsDynamic</name>
+        <briefdescription>
+<para>Returns true if this class info can create objects of the associated class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="473"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_class_info_1a468c4f0e65c47d58fdb0a09cd6c6c1b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxClassInfo::IsKindOf</definition>
+        <argsstring>(const wxClassInfo *info) const </argsstring>
+        <name>IsKindOf</name>
+        <param>
+          <type>const <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this class is a kind of (inherits from) the given class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="478"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_class_info_1abca46fc5067f0dffa3e801a104b89818" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> *</type>
+        <definition>static wxClassInfo* wxClassInfo::FindClass</definition>
+        <argsstring>(const wxString &amp;className)</argsstring>
+        <name>FindClass</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>className</declname>
+        </param>
+        <briefdescription>
+<para>Finds the <ref refid="classwx_class_info" kindref="compound">wxClassInfo</ref> object for a class with the given <emphasis>name</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="448"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class stores meta-information about classes. </para>    </briefdescription>
+    <detaileddescription>
+<para>Instances of this class are not generally defined directly by an application, but indirectly through use of macros such as <ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member">wxDECLARE_DYNAMIC_CLASS</ref> and <ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member">wxIMPLEMENT_DYNAMIC_CLASS</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__rtti" kindref="compound">Runtime Type Information (RTTI)</ref></para><para><simplesect kind="see"><para><ref refid="overview__rtti_1overview_rtti_classinfo" kindref="member">wxClassInfo</ref>, <ref refid="classwx_object" kindref="compound">wxObject</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="424" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="423" bodyend="479"/>
+    <listofallmembers>
+      <member refid="classwx_class_info_1a754a267b65cd7e2026e6a0beb22ff0a7" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>CreateObject</name></member>
+      <member refid="classwx_class_info_1abca46fc5067f0dffa3e801a104b89818" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>FindClass</name></member>
+      <member refid="classwx_class_info_1a8764f4e89eb56345c12aab6bac8e1607" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>GetBaseClassName1</name></member>
+      <member refid="classwx_class_info_1a1ef4fc497c9fb983a23220d8bdbe5a3f" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>GetBaseClassName2</name></member>
+      <member refid="classwx_class_info_1a4827f2dcd6ded37542370e6b1875c79e" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>GetClassName</name></member>
+      <member refid="classwx_class_info_1a98669f49aad58c83d991a545e36c46a7" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>GetSize</name></member>
+      <member refid="classwx_class_info_1ab2737b6d3f1b8015e08934443eea1785" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>IsDynamic</name></member>
+      <member refid="classwx_class_info_1a468c4f0e65c47d58fdb0a09cd6c6c1b5" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>IsKindOf</name></member>
+      <member refid="classwx_class_info_1a89612fc727626594ba7d325f52c7fa71" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>wxClassInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

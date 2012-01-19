@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_sizer_flags" kind="class" prot="public">
+    <compoundname>wxSizerFlags</compoundname>
+    <includes local="no">wx/sizer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_sizer_flags_1a2fe0499abe5461a2b8b4fe5fa2c054d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSizerFlags::wxSizerFlags</definition>
+        <argsstring>(int proportion=0)</argsstring>
+        <name>wxSizerFlags</name>
+        <param>
+          <type>int</type>
+          <declname>proportion</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Creates the <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> with the proportion specified by <emphasis>proportion</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1309"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1aab874ed16e2fb454649555e537806395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Align</definition>
+        <argsstring>(int alignment)</argsstring>
+        <name>Align</name>
+        <param>
+          <type>int</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+<para>Sets the alignment of this <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> to <emphasis>align</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method replaces the previously set alignment with the specified one.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alignment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Combination of <computeroutput>wxALIGN_XXX</computeroutput> bit masks.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_sizer_flags_1a332570b2ce022f6ad56206eda0b866ae" kindref="member">Top()</ref>, <ref refid="classwx_sizer_flags_1a69bff80a85fd8fdefa5be0961fb6a569" kindref="member">Left()</ref>, <ref refid="classwx_sizer_flags_1aa8b75ebf008d7c2e6de515dbd22825d5" kindref="member">Right()</ref>, <ref refid="classwx_sizer_flags_1aa13c756352d356682d5d584c4a05996b" kindref="member">Bottom()</ref>, <ref refid="classwx_sizer_flags_1aea64161ea708433e2a674a45ca357abf" kindref="member">Centre()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1321"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a2dc000b863b8580ae3f183c0e11c9944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Border</definition>
+        <argsstring>(int direction, int borderinpixels)</argsstring>
+        <name>Border</name>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>borderinpixels</declname>
+        </param>
+        <briefdescription>
+<para>Sets the <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> to have a border of a number of pixels specified by <emphasis>borderinpixels</emphasis> with the directions specified by <emphasis>direction</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1327"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a8fd32cd5080d3da3597988759c11d337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Border</definition>
+        <argsstring>(int direction=wxALL)</argsstring>
+        <name>Border</name>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+          <defval>wxALL</defval>
+        </param>
+        <briefdescription>
+<para>Sets the <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> to have a border with size as returned by <ref refid="classwx_sizer_flags_1a0766441261548fe6683fcbe411dca7fb" kindref="member">GetDefaultBorder()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction(s) to apply the border in. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1336"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1aa13c756352d356682d5d584c4a05996b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Bottom</definition>
+        <argsstring>()</argsstring>
+        <name>Bottom</name>
+        <briefdescription>
+<para>Aligns the object to the bottom, similar for <computeroutput>Align(wxALIGN_BOTTOM)</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unlike <ref refid="classwx_sizer_flags_1aab874ed16e2fb454649555e537806395" kindref="member">Align()</ref>, this method doesn&apos;t change the horizontal alignment of the item. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1344"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1ad3960148d1e0de7e12c958e7144f4d3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Center</definition>
+        <argsstring>()</argsstring>
+        <name>Center</name>
+        <briefdescription>
+<para>Sets the object of the <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> to center itself in the area it is given. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1350"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1aea64161ea708433e2a674a45ca357abf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Centre</definition>
+        <argsstring>()</argsstring>
+        <name>Centre</name>
+        <briefdescription>
+<para><ref refid="classwx_sizer_flags_1ad3960148d1e0de7e12c958e7144f4d3c" kindref="member">Center()</ref> for people with the other dialect of English. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1355"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1aa1775f50a90fc578db4caafb8dfc7a76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::DoubleBorder</definition>
+        <argsstring>(int direction=wxALL)</argsstring>
+        <name>DoubleBorder</name>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+          <defval>wxALL</defval>
+        </param>
+        <briefdescription>
+<para>Sets the border in the given <emphasis>direction</emphasis> having twice the default border size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1361"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a572ce3e15f96accf902d10f02428e035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::DoubleHorzBorder</definition>
+        <argsstring>()</argsstring>
+        <name>DoubleHorzBorder</name>
+        <briefdescription>
+<para>Sets the border in left and right directions having twice the default border size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1367"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a6cb4e696993ffc828e68dda0736ae453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Expand</definition>
+        <argsstring>()</argsstring>
+        <name>Expand</name>
+        <briefdescription>
+<para>Sets the object of the <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> to expand to fill as much area as it can. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1373"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a497f1ffd0377788cb8cf37722d53ec2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::FixedMinSize</definition>
+        <argsstring>()</argsstring>
+        <name>FixedMinSize</name>
+        <briefdescription>
+<para>Set the <computeroutput>wxFIXED_MINSIZE</computeroutput> flag which indicates that the initial size of the window should be also set as its minimal size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1379"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a2964d29e4d31e7e43ab5f4dee31a9d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::ReserveSpaceEvenIfHidden</definition>
+        <argsstring>()</argsstring>
+        <name>ReserveSpaceEvenIfHidden</name>
+        <briefdescription>
+<para>Set the <computeroutput>wxRESERVE_SPACE_EVEN_IF_HIDDEN</computeroutput> flag. </para>        </briefdescription>
+        <detaileddescription>
+<para>Normally wxSizers don&apos;t allocate space for hidden windows or other items. This flag overrides this behaviour so that sufficient space is allocated for the window even if it isn&apos;t visible. This makes it possible to dynamically show and hide controls without resizing parent dialog, for example.</para><para><simplesect kind="since"><para>2.8.8 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1390"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a69bff80a85fd8fdefa5be0961fb6a569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Left</definition>
+        <argsstring>()</argsstring>
+        <name>Left</name>
+        <briefdescription>
+<para>Aligns the object to the left, similar for <computeroutput>Align(wxALIGN_LEFT)</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unlike <ref refid="classwx_sizer_flags_1aab874ed16e2fb454649555e537806395" kindref="member">Align()</ref>, this method doesn&apos;t change the vertical alignment of the item. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1403"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a4b40ff52a93f33e5566491c24ccbd9bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Proportion</definition>
+        <argsstring>(int proportion)</argsstring>
+        <name>Proportion</name>
+        <param>
+          <type>int</type>
+          <declname>proportion</declname>
+        </param>
+        <briefdescription>
+<para>Sets the proportion of this <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> to <emphasis>proportion</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1408"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1aa8b75ebf008d7c2e6de515dbd22825d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Right</definition>
+        <argsstring>()</argsstring>
+        <name>Right</name>
+        <briefdescription>
+<para>Aligns the object to the right, similar for <computeroutput>Align(wxALIGN_RIGHT)</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unlike <ref refid="classwx_sizer_flags_1aab874ed16e2fb454649555e537806395" kindref="member">Align()</ref>, this method doesn&apos;t change the vertical alignment of the item. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1416"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a18a157863932cf61f0b0ec01b5877fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Shaped</definition>
+        <argsstring>()</argsstring>
+        <name>Shaped</name>
+        <briefdescription>
+<para>Set the <computeroutput>wx_SHAPED</computeroutput> flag which indicates that the elements should always keep the fixed width to height ratio equal to its original value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1422"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a332570b2ce022f6ad56206eda0b866ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::Top</definition>
+        <argsstring>()</argsstring>
+        <name>Top</name>
+        <briefdescription>
+<para>Aligns the object to the top, similar for <computeroutput>Align(wxALIGN_TOP)</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unlike <ref refid="classwx_sizer_flags_1aab874ed16e2fb454649555e537806395" kindref="member">Align()</ref>, this method doesn&apos;t change the horizontal alignment of the item. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1430"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_flags_1a799590935571940a5a7c28c75a324243" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> &amp;</type>
+        <definition>wxSizerFlags&amp; wxSizerFlags::TripleBorder</definition>
+        <argsstring>(int direction=wxALL)</argsstring>
+        <name>TripleBorder</name>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+          <defval>wxALL</defval>
+        </param>
+        <briefdescription>
+<para>Sets the border in the given <emphasis>direction</emphasis> having thrice the default border size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1436"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_sizer_flags_1a0766441261548fe6683fcbe411dca7fb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int wxSizerFlags::GetDefaultBorder</definition>
+        <argsstring>()</argsstring>
+        <name>GetDefaultBorder</name>
+        <briefdescription>
+<para>Returns the border used by default in <ref refid="classwx_sizer_flags_1a2dc000b863b8580ae3f183c0e11c9944" kindref="member">Border()</ref> method. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1395"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Container for sizer items flags providing readable names for them. </para>    </briefdescription>
+    <detaileddescription>
+<para>Normally, when you add an item to a sizer via <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">wxSizer::Add</ref>, you have to specify a lot of flags and parameters which can be unwieldy. This is where <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> comes in: it allows you to specify all parameters using the named methods instead. For example, instead of</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(ctrl,<sp/>0,<sp/><ref refid="defs_8h_1a27b6b668631a5f79f24d474af7d9b388a0d831bd6985c81f9bbc4830cc0c2e7df" kindref="member">wxEXPAND</ref><sp/>|<sp/><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a066863c82a2c08f6f53b663de87c60b6" kindref="member">wxALL</ref>,<sp/>10);</highlight></codeline>
+</programlisting></para><para>you can now write</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(ctrl,<sp/><ref refid="classwx_sizer_flags_1a2fe0499abe5461a2b8b4fe5fa2c054d4" kindref="member" tooltip="Creates the wxSizer with the proportion specified by proportion.">wxSizerFlags</ref>().<ref refid="classwx_sizer_flags_1a6cb4e696993ffc828e68dda0736ae453" kindref="member" tooltip="Sets the object of the wxSizerFlags to expand to fill as much area as it can.">Expand</ref>().<ref refid="classwx_sizer_flags_1a2dc000b863b8580ae3f183c0e11c9944" kindref="member" tooltip="Sets the wxSizerFlags to have a border of a number of pixels specified by borderinpixels...">Border</ref>(<ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a066863c82a2c08f6f53b663de87c60b6" kindref="member">wxALL</ref>,<sp/>10));</highlight></codeline>
+</programlisting></para><para>This is more readable and also allows you to create <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> objects which can be reused for several sizer items.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_sizer_flags" kindref="compound" tooltip="Container for sizer items flags providing readable names for them.">wxSizerFlags</ref><sp/>flagsExpand(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flagsExpand.Expand().Border(<ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556a066863c82a2c08f6f53b663de87c60b6" kindref="member">wxALL</ref>,<sp/>10);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(ctrl1,<sp/>flagsExpand);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(ctrl2,<sp/>flagsExpand);</highlight></codeline>
+</programlisting></para><para>Note that by specification, all methods of <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> return the <ref refid="classwx_sizer_flags" kindref="compound">wxSizerFlags</ref> object itself to allowing chaining multiple methods calls like in the examples above.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1304" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" bodystart="1303" bodyend="1437"/>
+    <listofallmembers>
+      <member refid="classwx_sizer_flags_1aab874ed16e2fb454649555e537806395" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Align</name></member>
+      <member refid="classwx_sizer_flags_1a2dc000b863b8580ae3f183c0e11c9944" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Border</name></member>
+      <member refid="classwx_sizer_flags_1a8fd32cd5080d3da3597988759c11d337" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Border</name></member>
+      <member refid="classwx_sizer_flags_1aa13c756352d356682d5d584c4a05996b" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Bottom</name></member>
+      <member refid="classwx_sizer_flags_1ad3960148d1e0de7e12c958e7144f4d3c" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Center</name></member>
+      <member refid="classwx_sizer_flags_1aea64161ea708433e2a674a45ca357abf" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Centre</name></member>
+      <member refid="classwx_sizer_flags_1aa1775f50a90fc578db4caafb8dfc7a76" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>DoubleBorder</name></member>
+      <member refid="classwx_sizer_flags_1a572ce3e15f96accf902d10f02428e035" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>DoubleHorzBorder</name></member>
+      <member refid="classwx_sizer_flags_1a6cb4e696993ffc828e68dda0736ae453" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Expand</name></member>
+      <member refid="classwx_sizer_flags_1a497f1ffd0377788cb8cf37722d53ec2e" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>FixedMinSize</name></member>
+      <member refid="classwx_sizer_flags_1a0766441261548fe6683fcbe411dca7fb" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>GetDefaultBorder</name></member>
+      <member refid="classwx_sizer_flags_1a69bff80a85fd8fdefa5be0961fb6a569" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Left</name></member>
+      <member refid="classwx_sizer_flags_1a4b40ff52a93f33e5566491c24ccbd9bd" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Proportion</name></member>
+      <member refid="classwx_sizer_flags_1a2964d29e4d31e7e43ab5f4dee31a9d11" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>ReserveSpaceEvenIfHidden</name></member>
+      <member refid="classwx_sizer_flags_1aa8b75ebf008d7c2e6de515dbd22825d5" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Right</name></member>
+      <member refid="classwx_sizer_flags_1a18a157863932cf61f0b0ec01b5877fa6" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Shaped</name></member>
+      <member refid="classwx_sizer_flags_1a332570b2ce022f6ad56206eda0b866ae" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>Top</name></member>
+      <member refid="classwx_sizer_flags_1a799590935571940a5a7c28c75a324243" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>TripleBorder</name></member>
+      <member refid="classwx_sizer_flags_1a2fe0499abe5461a2b8b4fe5fa2c054d4" prot="public" virt="non-virtual"><scope>wxSizerFlags</scope><name>wxSizerFlags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

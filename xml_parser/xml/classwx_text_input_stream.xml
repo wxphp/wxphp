@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_text_input_stream" kind="class" prot="public">
+    <compoundname>wxTextInputStream</compoundname>
+    <includes local="no">wx/txtstrm.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_text_input_stream_1a2b95ccbf2ad56c1105276af4543e07b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTextInputStream::wxTextInputStream</definition>
+        <argsstring>(wxInputStream &amp;stream, const wxString &amp;sep=&quot; \t&quot;, const wxMBConv &amp;conv=wxConvAuto())</argsstring>
+        <name>wxTextInputStream</name>
+        <param>
+          <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>sep</declname>
+          <defval>&quot; \t&quot;</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> &amp;</type>
+          <declname>conv</declname>
+          <defval><ref refid="classwx_conv_auto" kindref="compound">wxConvAuto</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a text stream associated to the given input stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The underlying input stream. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial string separator characters. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>In Unicode build only:</bold> The encoding converter used to convert the bytes in the underlying input stream to characters. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1ae63cd14d6225b08a86ffcfa5660fb8fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTextInputStream::~wxTextInputStream</definition>
+        <argsstring>()</argsstring>
+        <name>~wxTextInputStream</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a82f5d2ecf67c03f4aafcfbed5a942433" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
+        <definition>const wxInputStream&amp; wxTextInputStream::GetInputStream</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInputStream</name>
+        <briefdescription>
+<para>Returns a pointer to the underlying input stream object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a93688dd773005a80da7592744e438e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+        <definition>wxChar wxTextInputStream::GetChar</definition>
+        <argsstring>()</argsstring>
+        <name>GetChar</name>
+        <briefdescription>
+<para>Reads a character, returns 0 if there are no more characters in the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a9d1ea55f580445ee6e1d3bc29e50fd80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a8e9363c460a79dd550df544fab96e16d" kindref="member">wxUint16</ref></type>
+        <definition>wxUint16 wxTextInputStream::Read16</definition>
+        <argsstring>(int base=10)</argsstring>
+        <name>Read16</name>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Reads a unsigned 16 bit integer from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a4de84c0c0b3ed77f847de3f9b7bd01ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1ab69f92e8af201f1d324252e771e8ab5d" kindref="member">wxInt16</ref></type>
+        <definition>wxInt16 wxTextInputStream::Read16S</definition>
+        <argsstring>(int base=10)</argsstring>
+        <name>Read16S</name>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Reads a signed 16 bit integer from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a3ff86078fe2bb6a18b3c528125d3950a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+        <definition>wxUint32 wxTextInputStream::Read32</definition>
+        <argsstring>(int base=10)</argsstring>
+        <name>Read32</name>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Reads a 32 bit unsigned integer from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a7fb61d3fadaef935e4d29b431161a51f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
+        <definition>wxInt32 wxTextInputStream::Read32S</definition>
+        <argsstring>(int base=10)</argsstring>
+        <name>Read32S</name>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Reads a 32 bit signed integer from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member">wxUint8</ref></type>
+        <definition>wxUint8 wxTextInputStream::Read8</definition>
+        <argsstring>(int base=10)</argsstring>
+        <name>Read8</name>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Reads a single unsigned byte from the stream, given in base <emphasis>base</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The value of <emphasis>base</emphasis> must be comprised between 2 and 36, inclusive, or be a special value 0 which means that the usual rules of C numbers are applied: if the number starts with <computeroutput>0x</computeroutput> it is considered to be in base 16, if it starts with 0 - in base 8 and in base 10 otherwise. Note that you may not want to specify the base 0 if you are parsing the numbers which may have leading zeroes as they can yield unexpected (to the user not familiar with C) results. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a70ae90a262a5f5bde0158afef9ea65a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1a7569603c57eac28d9f20098191f936d7" kindref="member">wxInt8</ref></type>
+        <definition>wxInt8 wxTextInputStream::Read8S</definition>
+        <argsstring>(int base=10)</argsstring>
+        <name>Read8S</name>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Reads a single signed byte from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" kindref="member">Read8()</ref> for the description of the <emphasis>base</emphasis> parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a852f289b53336a705101100ddf8430ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wxTextInputStream::ReadDouble</definition>
+        <argsstring>()</argsstring>
+        <name>ReadDouble</name>
+        <briefdescription>
+<para>Reads a double (IEEE encoded) from the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxTextInputStream::ReadLine</definition>
+        <argsstring>()</argsstring>
+        <name>ReadLine</name>
+        <briefdescription>
+<para>Reads a line from the input stream and returns it (without the end of line character). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a29eb32a28f132159ae8fc0e51a487678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxTextInputStream::ReadString</definition>
+        <argsstring>()</argsstring>
+        <name>ReadString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000058"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" kindref="member">ReadLine()</ref> or <ref refid="classwx_text_input_stream_1aa8ce6095e1f7710c3a066b9ff9ff7588" kindref="member">ReadWord()</ref> instead.</para></xrefdescription></xrefsect>Same as <ref refid="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" kindref="member">ReadLine()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1aa8ce6095e1f7710c3a066b9ff9ff7588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxTextInputStream::ReadWord</definition>
+        <argsstring>()</argsstring>
+        <name>ReadWord</name>
+        <briefdescription>
+<para>Reads a word (a sequence of characters until the next separator) from the input stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_text_input_stream_1a1f5226fec5f405a9c2950568ece99373" kindref="member">SetStringSeparators()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_input_stream_1a1f5226fec5f405a9c2950568ece99373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextInputStream::SetStringSeparators</definition>
+        <argsstring>(const wxString &amp;sep)</argsstring>
+        <name>SetStringSeparators</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>sep</declname>
+        </param>
+        <briefdescription>
+<para>Sets the characters which are used to define the word boundaries in <ref refid="classwx_text_input_stream_1aa8ce6095e1f7710c3a066b9ff9ff7588" kindref="member">ReadWord()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default separators are the <computeroutput>space</computeroutput> and <computeroutput>TAB</computeroutput> characters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="169"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class provides functions that reads text data using an input stream, allowing you to read text, floats, and integers. </para>    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref> correctly reads text files (or streams) in DOS, Macintosh and Unix formats and reports a single newline char as a line ending.</para><para>wxTextInputStream::operator&gt;&gt;() is overloaded and you can use this class like a standard C++ iostream. Note, however, that the arguments are the fixed size types wxUint32, wxInt32 etc and on a typical 32-bit computer, none of these match to the &quot;long&quot; type (wxInt32 is defined as int on 32-bit architectures) so that you cannot use long. To avoid problems (here and elsewhere), make use of wxInt32, wxUint32 and similar types.</para><para>If you&apos;re scanning through a file using <ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref>, you should check for <computeroutput>EOF</computeroutput> <bold>before</bold> reading the next item (word / number), because otherwise the last item may get lost. You should however be prepared to receive an empty item (empty string / zero number) at the end of file, especially on Windows systems. This is unavoidable because most (but not all) files end with whitespace (i.e. usually a newline).</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_file_input_stream" kindref="compound" tooltip="This class represents data read in from a file.">wxFileInputStream</ref><sp/>input(<sp/></highlight><highlight class="stringliteral">&quot;mytext.txt&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_text_input_stream" kindref="compound" tooltip="This class provides functions that reads text data using an input stream, allowing...">wxTextInputStream</ref><sp/>text(<sp/>input<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member" tooltip="8 bit type (the mapping is more complex than a simple typedef and is not shown here)...">wxUint8</ref><sp/>i1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>f2;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>line;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>text<sp/>&gt;&gt;<sp/>i1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>a<sp/>8<sp/>bit<sp/>integer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>text<sp/>&gt;&gt;<sp/>i1<sp/>&gt;&gt;<sp/>f2;<sp/></highlight><highlight class="comment">//<sp/>read<sp/>a<sp/>8<sp/>bit<sp/>integer<sp/>followed<sp/>by<sp/>float.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>text<sp/>&gt;&gt;<sp/>line;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>a<sp/>text<sp/>line</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" bodystart="54" bodyend="170"/>
+    <listofallmembers>
+      <member refid="classwx_text_input_stream_1a93688dd773005a80da7592744e438e8c" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>GetChar</name></member>
+      <member refid="classwx_text_input_stream_1a82f5d2ecf67c03f4aafcfbed5a942433" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>GetInputStream</name></member>
+      <member refid="classwx_text_input_stream_1a9d1ea55f580445ee6e1d3bc29e50fd80" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>Read16</name></member>
+      <member refid="classwx_text_input_stream_1a4de84c0c0b3ed77f847de3f9b7bd01ec" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>Read16S</name></member>
+      <member refid="classwx_text_input_stream_1a3ff86078fe2bb6a18b3c528125d3950a" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>Read32</name></member>
+      <member refid="classwx_text_input_stream_1a7fb61d3fadaef935e4d29b431161a51f" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>Read32S</name></member>
+      <member refid="classwx_text_input_stream_1aab532fc13db6a42bc9278a863c8d46e4" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>Read8</name></member>
+      <member refid="classwx_text_input_stream_1a70ae90a262a5f5bde0158afef9ea65a4" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>Read8S</name></member>
+      <member refid="classwx_text_input_stream_1a852f289b53336a705101100ddf8430ff" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>ReadDouble</name></member>
+      <member refid="classwx_text_input_stream_1ab6a53dda37e49a69be09a7dbe881729d" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>ReadLine</name></member>
+      <member refid="classwx_text_input_stream_1a29eb32a28f132159ae8fc0e51a487678" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>ReadString</name></member>
+      <member refid="classwx_text_input_stream_1aa8ce6095e1f7710c3a066b9ff9ff7588" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>ReadWord</name></member>
+      <member refid="classwx_text_input_stream_1a1f5226fec5f405a9c2950568ece99373" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>SetStringSeparators</name></member>
+      <member refid="classwx_text_input_stream_1a2b95ccbf2ad56c1105276af4543e07b8" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>wxTextInputStream</name></member>
+      <member refid="classwx_text_input_stream_1ae63cd14d6225b08a86ffcfa5660fb8fd" prot="public" virt="non-virtual"><scope>wxTextInputStream</scope><name>~wxTextInputStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

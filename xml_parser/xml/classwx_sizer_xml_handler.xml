@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_sizer_xml_handler" kind="class" prot="public">
+    <compoundname>wxSizerXmlHandler</compoundname>
+    <basecompoundref refid="classwx_xml_resource_handler" prot="public" virt="non-virtual">wxXmlResourceHandler</basecompoundref>
+    <includes local="no">wx/xrc/xh_sizer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_sizer_xml_handler_1ab7667feb76333caaa690ee53cfd82608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSizerXmlHandler::wxSizerXmlHandler</definition>
+        <argsstring>()</argsstring>
+        <name>wxSizerXmlHandler</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initializes the attributes and adds the supported styles. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_xml_handler_1a96014255241b509cfc0cb9861d0c2457" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>virtual wxObject* wxSizerXmlHandler::DoCreateResource</definition>
+        <argsstring>()</argsstring>
+        <name>DoCreateResource</name>
+        <reimplements refid="classwx_xml_resource_handler_1aea4c926eb4842302568d4d063960e2fc">DoCreateResource</reimplements>
+        <briefdescription>
+<para>Creates a sizer, sizeritem or spacer object, depending on the current handled node. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_xml_resource_handler_1aea4c926eb4842302568d4d063960e2fc" kindref="member">wxXmlResourceHandler::DoCreateResource()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_xml_handler_1a084c61f000ada8809952c75d2b2602f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxSizerXmlHandler::CanHandle</definition>
+        <argsstring>(wxXmlNode *node)</argsstring>
+        <name>CanHandle</name>
+        <reimplements refid="classwx_xml_resource_handler_1af0c078bc565c86b6ba33f860bfc053ed">CanHandle</reimplements>
+        <param>
+          <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given node can be handled by this class. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the node concerns a sizer object, the method IsSizerNode is called to know if the class is managed or not. If the node concerns a sizer item or a spacer, true is returned. Otherwise false is returned. <simplesect kind="see"><para><ref refid="classwx_xml_resource_handler_1af0c078bc565c86b6ba33f860bfc053ed" kindref="member">wxXmlResourceHandler::CanHandle()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_sizer_xml_handler_1abdca4455bece1de0cfab04c2a84323ba" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> *</type>
+        <definition>virtual wxSizer* wxSizerXmlHandler::DoCreateSizer</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>DoCreateSizer</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Creates an object of type <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> from the XML node content. </para>        </briefdescription>
+        <detaileddescription>
+<para>This virtual method can be overridden to add support for custom sizer classes to the derived handler.</para><para>Notice that if you override this method you would typically overload <ref refid="classwx_sizer_xml_handler_1adc7dd4d2b943f31f581196d8493c17d7" kindref="member">IsSizerNode()</ref> as well.</para><para>Example of use of this method: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MySizerXmlHandler<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_sizer_xml_handler" kindref="compound">wxSizerXmlHandler</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_sizer_xml_handler_1adc7dd4d2b943f31f581196d8493c17d7" kindref="member" tooltip="Used by CanHandle() to know if the given node contains a sizer supported by this...">IsSizerNode</ref>(<ref refid="classwx_xml_node" kindref="compound" tooltip="Represents a node in an XML document.">wxXmlNode</ref><sp/>*node)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classwx_xml_resource_handler_1a4ceba613e1ec6261be315d148de6bc46" kindref="member" tooltip="Convenience function.">IsOfClass</ref>(node,<sp/></highlight><highlight class="stringliteral">&quot;MySizer&quot;</highlight><highlight class="normal">)<sp/>||</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_sizer_xml_handler_1adc7dd4d2b943f31f581196d8493c17d7" kindref="member" tooltip="Used by CanHandle() to know if the given node contains a sizer supported by this...">wxSizerXmlHandler::IsSizerNode</ref>(node));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_sizer_xml_handler_1abdca4455bece1de0cfab04c2a84323ba" kindref="member" tooltip="Creates an object of type wxSizer from the XML node content.">DoCreateSizer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>name)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;MySizer&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Handle_MySizer();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classwx_sizer_xml_handler_1abdca4455bece1de0cfab04c2a84323ba" kindref="member" tooltip="Creates an object of type wxSizer from the XML node content.">wxSizerXmlHandler::DoCreateSizer</ref>(name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_sizer" kindref="compound" tooltip="wxSizer is the abstract base class used for laying out subwindows in a window.">wxSizer</ref>*<sp/>Handle_MySizer()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>your<sp/>own<sp/>sizer<sp/>here<sp/>from<sp/>XRC<sp/>content<sp/>(see</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wxXmlResource<sp/>methods)<sp/>and<sp/>return<sp/>the<sp/>instance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_sizer_xml_handler_1adc7dd4d2b943f31f581196d8493c17d7" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxSizerXmlHandler::IsSizerNode</definition>
+        <argsstring>(wxXmlNode *node) const </argsstring>
+        <name>IsSizerNode</name>
+        <param>
+          <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Used by <ref refid="classwx_sizer_xml_handler_1a084c61f000ada8809952c75d2b2602f6" kindref="member">CanHandle()</ref> to know if the given node contains a sizer supported by this class. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method should be overridden to allow this handler to be used for the custom sizer types.</para><para>See the example in <ref refid="classwx_sizer_xml_handler_1abdca4455bece1de0cfab04c2a84323ba" kindref="member">DoCreateSizer()</ref> description for how it can be used.</para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10196">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="10194">
+        <label>wxSizerXmlHandler</label>
+        <link refid="classwx_sizer_xml_handler"/>
+        <childnode refid="10195" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10195">
+        <label>wxXmlResourceHandler</label>
+        <link refid="classwx_xml_resource_handler"/>
+        <childnode refid="10196" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10199">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="10200" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10197">
+        <label>wxSizerXmlHandler</label>
+        <link refid="classwx_sizer_xml_handler"/>
+        <childnode refid="10198" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10198">
+        <label>wxXmlResourceHandler</label>
+        <link refid="classwx_xml_resource_handler"/>
+        <childnode refid="10199" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10200">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xh_sizer.h" bodystart="23" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classwx_xml_resource_handler_1a610176f73f543c1de32b65c4d370c34e" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>AddStyle</name></member>
+      <member refid="classwx_xml_resource_handler_1af495ff91d59a9839e1646ca4c1887cb7" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>AddWindowStyles</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_sizer_xml_handler_1a084c61f000ada8809952c75d2b2602f6" prot="public" virt="virtual"><scope>wxSizerXmlHandler</scope><name>CanHandle</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSizerXmlHandler</scope><name>CloneRefData</name></member>
+      <member refid="classwx_xml_resource_handler_1a5dea1c0876a5716b6cb3ca8d4bc9917a" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>CreateChildren</name></member>
+      <member refid="classwx_xml_resource_handler_1a0bde85883fb19a919ce2fa490d741f0b" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>CreateChildrenPrivately</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxSizerXmlHandler</scope><name>CreateRefData</name></member>
+      <member refid="classwx_xml_resource_handler_1a0952d0c96d96642c518e8df0d37f7471" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>CreateResFromNode</name></member>
+      <member refid="classwx_xml_resource_handler_1acf52bd86ca7dd4a055b8e89d693fd846" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>CreateResource</name></member>
+      <member refid="classwx_sizer_xml_handler_1a96014255241b509cfc0cb9861d0c2457" prot="public" virt="virtual"><scope>wxSizerXmlHandler</scope><name>DoCreateResource</name></member>
+      <member refid="classwx_sizer_xml_handler_1abdca4455bece1de0cfab04c2a84323ba" prot="protected" virt="virtual"><scope>wxSizerXmlHandler</scope><name>DoCreateSizer</name></member>
+      <member refid="classwx_xml_resource_handler_1abf28b5b86f4f9a6c7e167434dbec9db0" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetAnimation</name></member>
+      <member refid="classwx_xml_resource_handler_1a941fe235c4dc7b19a68e79440ab31f54" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetBitmap</name></member>
+      <member refid="classwx_xml_resource_handler_1abf6d75e522c9b1adbec78496f07fce2e" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetBitmap</name></member>
+      <member refid="classwx_xml_resource_handler_1a47f4102dcc458e8049219a021ed8e644" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetBool</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxSizerXmlHandler</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_xml_resource_handler_1a598b39cb1307c1920a38ac69234b0f3d" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetColour</name></member>
+      <member refid="classwx_xml_resource_handler_1a1887a0495b62f24db47cf7145ddbcf05" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetCurFileSystem</name></member>
+      <member refid="classwx_xml_resource_handler_1a5620096a112d71fc9f288514cd14a9a8" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetDimension</name></member>
+      <member refid="classwx_xml_resource_handler_1a5afbcaee0380ea29ac7467f8e31ce31c" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetDirection</name></member>
+      <member refid="classwx_xml_resource_handler_1a506ec19c2257ceebfa2b09a96452a740" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetFont</name></member>
+      <member refid="classwx_xml_resource_handler_1ac21a94bce897ff2497e2bdaf943f88be" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetIcon</name></member>
+      <member refid="classwx_xml_resource_handler_1a40eecb20b3789f2efe2ae739ac86fb10" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetIcon</name></member>
+      <member refid="classwx_xml_resource_handler_1af9d88525abbfa6e5a7f0836f004df0bb" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetIconBundle</name></member>
+      <member refid="classwx_xml_resource_handler_1a1b255b20978adeb1ea4ba2394153baf0" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetID</name></member>
+      <member refid="classwx_xml_resource_handler_1ac66ac763f22925794a85c2a3d854e394" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetImageList</name></member>
+      <member refid="classwx_xml_resource_handler_1ab77ae1200dce25a066ec780d5fac927e" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetLong</name></member>
+      <member refid="classwx_xml_resource_handler_1ab3164a50a6264fd72268d62c1b0b66ca" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetName</name></member>
+      <member refid="classwx_xml_resource_handler_1a97a4c2bf8c55d5921348ce5d647f833f" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetNodeContent</name></member>
+      <member refid="classwx_xml_resource_handler_1afe53fac82e35de8faa39ff84e6cd8547" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetParamNode</name></member>
+      <member refid="classwx_xml_resource_handler_1ad235a53d08598812ed655befb2dcaae4" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetParamValue</name></member>
+      <member refid="classwx_xml_resource_handler_1a9cef3784d0cf114a85f3129ffb9ba622" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetParamValue</name></member>
+      <member refid="classwx_xml_resource_handler_1a592563abecf1ddadee0bcbae4278f007" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetPosition</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetRefData</name></member>
+      <member refid="classwx_xml_resource_handler_1a19357b2f59f20a3c2eb1d944aa664c14" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetSize</name></member>
+      <member refid="classwx_xml_resource_handler_1a218d5e6e96d34b8dbf11227be49413f3" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetStyle</name></member>
+      <member refid="classwx_xml_resource_handler_1ad97104f92eefebe62873aeb8e1b1e8f7" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>GetText</name></member>
+      <member refid="classwx_xml_resource_handler_1af26bb8a6f771c61f40cf97dd0a8f5944" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>HasParam</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>IsKindOf</name></member>
+      <member refid="classwx_xml_resource_handler_1a4ceba613e1ec6261be315d148de6bc46" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>IsOfClass</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>IsSameAs</name></member>
+      <member refid="classwx_sizer_xml_handler_1adc7dd4d2b943f31f581196d8493c17d7" prot="protected" virt="virtual"><scope>wxSizerXmlHandler</scope><name>IsSizerNode</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>Ref</name></member>
+      <member refid="classwx_xml_resource_handler_1a0b4c148209e4fcf1e6940895902ac5eb" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>ReportError</name></member>
+      <member refid="classwx_xml_resource_handler_1aeab6ca68ceb48baa386b4c345b7cd270" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>ReportError</name></member>
+      <member refid="classwx_xml_resource_handler_1a66d983d3b2a11d38f50b58e9399fc23d" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>ReportParamError</name></member>
+      <member refid="classwx_xml_resource_handler_1a1fa6e58387f7b76dcc0b6d6e6e075ca3" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>SetParentResource</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>SetRefData</name></member>
+      <member refid="classwx_xml_resource_handler_1a20415a720e259e8cc138f38718b8831b" prot="protected" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>SetupWindow</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>wxObject</name></member>
+      <member refid="classwx_sizer_xml_handler_1ab7667feb76333caaa690ee53cfd82608" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>wxSizerXmlHandler</name></member>
+      <member refid="classwx_xml_resource_handler_1ab5ef07446fbcee06abe2ceaa64425073" prot="public" virt="non-virtual"><scope>wxSizerXmlHandler</scope><name>wxXmlResourceHandler</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxSizerXmlHandler</scope><name>~wxObject</name></member>
+      <member refid="classwx_xml_resource_handler_1a96baada9ca7c54c3136268e93a84dd39" prot="public" virt="virtual"><scope>wxSizerXmlHandler</scope><name>~wxXmlResourceHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

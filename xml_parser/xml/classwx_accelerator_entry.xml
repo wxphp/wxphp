@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_accelerator_entry" kind="class" prot="public">
+    <compoundname>wxAcceleratorEntry</compoundname>
+    <includes local="no">wx/accel.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_accelerator_entry_1a9387fbbaed1cbfb8673308ec2b10da3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxAcceleratorEntry::wxAcceleratorEntry</definition>
+        <argsstring>(int flags=0, int keyCode=0, int cmd=0, wxMenuItem *item=NULL)</argsstring>
+        <name>wxAcceleratorEntry</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keyCode</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cmd</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
+          <declname>item</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of the <ref refid="accel_8h_1ae3253ea019602f79fde0d3195f507a9f" kindref="member">wxAcceleratorEntryFlags</ref> values, which indicates which modifier keys are held down. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keycode to be detected. See <ref refid="defs_8h_1a41c4609211685cff198618963ec8f77d" kindref="member">wxKeyCode</ref> for a full list of keycodes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu or control command identifier (ID). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu item associated with this accelerator. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1a8853051e5706c505d15ff70e1e44c7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxAcceleratorEntry::wxAcceleratorEntry</definition>
+        <argsstring>(const wxAcceleratorEntry &amp;entry)</argsstring>
+        <name>wxAcceleratorEntry</name>
+        <param>
+          <type>const <ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+<para>Copy ctor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1ae1d386394ee03b85d4826237071e3fb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxAcceleratorEntry::GetCommand</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCommand</name>
+        <briefdescription>
+<para>Returns the command identifier for the accelerator table entry. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1abb84cd94b583e18eeb02597f4907e4ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxAcceleratorEntry::GetFlags</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFlags</name>
+        <briefdescription>
+<para>Returns the flags for the accelerator table entry. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1af2da2c566731201caaabee443dc4bee1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxAcceleratorEntry::GetKeyCode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetKeyCode</name>
+        <briefdescription>
+<para>Returns the keycode for the accelerator table entry. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1a48d31d2dbf55bdd3cae39135b3ec83a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
+        <definition>wxMenuItem* wxAcceleratorEntry::GetMenuItem</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMenuItem</name>
+        <briefdescription>
+<para>Returns the menu item associated with this accelerator entry. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1abaac10bba35d3e3c32f05761e0d19d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAcceleratorEntry::Set</definition>
+        <argsstring>(int flags, int keyCode, int cmd, wxMenuItem *item=NULL)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keyCode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
+          <declname>item</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Sets the accelerator entry parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of the <ref refid="accel_8h_1ae3253ea019602f79fde0d3195f507a9f" kindref="member">wxAcceleratorEntryFlags</ref> values, which indicates which modifier keys are held down. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keycode to be detected. See <ref refid="defs_8h_1a41c4609211685cff198618963ec8f77d" kindref="member">wxKeyCode</ref> for a full list of keycodes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu or control command identifier (ID). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu item associated with this accelerator. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1aa8087cc425e16773f76911ea67a39631" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAcceleratorEntry::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if this object is correctly initialized. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1a0d164fa98bba518e6b6f9cca65332d36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxAcceleratorEntry::ToString</definition>
+        <argsstring>() const </argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Returns a textual representation of this accelerator. </para>        </briefdescription>
+        <detaileddescription>
+<para>The returned string is of the form <computeroutput>[Alt+][Ctrl+][Shift+]Key</computeroutput> where the modifier keys are present only if the corresponding flag is set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1a201b717e9069367c60bd8765eda60371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAcceleratorEntry::FromString</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>FromString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Parses the given string and sets the accelerator accordingly. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This string may be either in the same format as returned by <ref refid="classwx_accelerator_entry_1a0d164fa98bba518e6b6f9cca65332d36" kindref="member">ToString()</ref>, i.e. contain the accelerator itself only, or have the format of a full menu item text with i.e. <computeroutput>Label TAB Accelerator</computeroutput>. In the latter case, the part of the string before the TAB is ignored. Notice that the latter format is only supported for the compatibility with the previous wxWidgets versions and the new code should pass only the accelerator string itself to this function.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the given string correctly initialized this object (i.e. if <ref refid="classwx_accelerator_entry_1aa8087cc425e16773f76911ea67a39631" kindref="member">IsOk()</ref> returns true after this call) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1a3e3f35ba5bb44a9f0b7c073e4294eb62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref> &amp;</type>
+        <definition>wxAcceleratorEntry&amp; wxAcceleratorEntry::operator=</definition>
+        <argsstring>(const wxAcceleratorEntry &amp;entry)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1a129c9a53e8c540b0ce7b2ce22401e027" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAcceleratorEntry::operator==</definition>
+        <argsstring>(const wxAcceleratorEntry &amp;entry) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1a2f6079d45fd5916dacebdc91bf00d243" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxAcceleratorEntry::operator!=</definition>
+        <argsstring>(const wxAcceleratorEntry &amp;entry) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An object used by an application wishing to create an accelerator table (see <ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref>). </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref>, <ref refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" kindref="member">wxWindow::SetAcceleratorTable</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" bodystart="44" bodyend="139"/>
+    <listofallmembers>
+      <member refid="classwx_accelerator_entry_1a201b717e9069367c60bd8765eda60371" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>FromString</name></member>
+      <member refid="classwx_accelerator_entry_1ae1d386394ee03b85d4826237071e3fb6" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>GetCommand</name></member>
+      <member refid="classwx_accelerator_entry_1abb84cd94b583e18eeb02597f4907e4ba" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>GetFlags</name></member>
+      <member refid="classwx_accelerator_entry_1af2da2c566731201caaabee443dc4bee1" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>GetKeyCode</name></member>
+      <member refid="classwx_accelerator_entry_1a48d31d2dbf55bdd3cae39135b3ec83a3" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>GetMenuItem</name></member>
+      <member refid="classwx_accelerator_entry_1aa8087cc425e16773f76911ea67a39631" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>IsOk</name></member>
+      <member refid="classwx_accelerator_entry_1a2f6079d45fd5916dacebdc91bf00d243" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>operator!=</name></member>
+      <member refid="classwx_accelerator_entry_1a3e3f35ba5bb44a9f0b7c073e4294eb62" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>operator=</name></member>
+      <member refid="classwx_accelerator_entry_1a129c9a53e8c540b0ce7b2ce22401e027" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>operator==</name></member>
+      <member refid="classwx_accelerator_entry_1abaac10bba35d3e3c32f05761e0d19d1a" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>Set</name></member>
+      <member refid="classwx_accelerator_entry_1a0d164fa98bba518e6b6f9cca65332d36" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>ToString</name></member>
+      <member refid="classwx_accelerator_entry_1a9387fbbaed1cbfb8673308ec2b10da3e" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>wxAcceleratorEntry</name></member>
+      <member refid="classwx_accelerator_entry_1a8853051e5706c505d15ff70e1e44c7df" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>wxAcceleratorEntry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

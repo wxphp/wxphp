@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="convauto_8h" kind="file">
+    <compoundname>convauto.h</compoundname>
+    <innerclass refid="classwx_conv_auto" prot="public">wxConvAuto</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="convauto_8h_1af393832da543c9238919f38be4536f60" prot="public" static="no">
+        <name>wxBOM</name>
+        <enumvalue id="convauto_8h_1af393832da543c9238919f38be4536f60afc832b9aa62fb80a324a55c50d7abf10" prot="public">
+          <name>wxBOM_Unknown</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+<para>Unknown BOM. </para>          </briefdescription>
+          <detaileddescription>
+<para>This is returned if BOM presence couldn&apos;t be determined and normally happens because not enough bytes of input have been analysed. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="convauto_8h_1af393832da543c9238919f38be4536f60a549e0aa1904ac2be88f375315665e0ac" prot="public">
+          <name>wxBOM_None</name>
+          <briefdescription>
+<para>No BOM. </para>          </briefdescription>
+          <detaileddescription>
+<para>The stream doesn&apos;t contain BOM character at all. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="convauto_8h_1af393832da543c9238919f38be4536f60a1373305c38d5fa750d0b1255dcdf5ea4" prot="public">
+          <name>wxBOM_UTF32BE</name>
+          <briefdescription>
+<para>UTF-32 big endian BOM. </para>          </briefdescription>
+          <detaileddescription>
+<para>The stream is encoded in big endian variant of UTF-32. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="convauto_8h_1af393832da543c9238919f38be4536f60a13cc70351990fb0b9c622afcded2d1c2" prot="public">
+          <name>wxBOM_UTF32LE</name>
+          <briefdescription>
+<para>UTF-32 little endian BOM. </para>          </briefdescription>
+          <detaileddescription>
+<para>The stream is encoded in little endian variant of UTF-32. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="convauto_8h_1af393832da543c9238919f38be4536f60a766d315691964338468be4b8c435fe95" prot="public">
+          <name>wxBOM_UTF16BE</name>
+          <briefdescription>
+<para>UTF-16 big endian BOM. </para>          </briefdescription>
+          <detaileddescription>
+<para>The stream is encoded in big endian variant of UTF-16. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="convauto_8h_1af393832da543c9238919f38be4536f60adae944e87215115ec44bc8940e048b48" prot="public">
+          <name>wxBOM_UTF16LE</name>
+          <briefdescription>
+<para>UTF-16 little endian BOM. </para>          </briefdescription>
+          <detaileddescription>
+<para>The stream is encoded in little endian variant of UTF-16. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="convauto_8h_1af393832da543c9238919f38be4536f60ae4ca64fbf2d1f23b1af8000d8669f67d" prot="public">
+          <name>wxBOM_UTF8</name>
+          <briefdescription>
+<para>UTF-8 BOM. </para>          </briefdescription>
+          <detaileddescription>
+<para>The stream is encoded in UTF-8.</para><para>Notice that contrary to a popular belief, it&apos;s perfectly possible and, n fact, common under Microsoft Windows systems, to have a BOM in an UTF-8 stream: while it&apos;s not used to indicate the endianness of UTF-8 stream (as it&apos;s byte-oriented), the BOM can still be useful just as an unambiguous indicator of UTF-8 being used. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Constants representing various BOM types. </para>        </briefdescription>
+        <detaileddescription>
+<para>BOM is an abbreviation for &quot;Byte Order Mark&quot;, a special Unicode character which may be inserted into the beginning of a text stream to indicate its encoding.</para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h" bodystart="18" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/convauto.h"/>
+  </compounddef>
+</doxygen>

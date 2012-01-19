@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_mime_types_manager" kind="class" prot="public">
+    <compoundname>wxMimeTypesManager</compoundname>
+    <includes local="no">wx/mimetype.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_mime_types_manager_1a797c34a9f22aeb53da5dbca604c9f4eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMimeTypesManager::wxMimeTypesManager</definition>
+        <argsstring>()</argsstring>
+        <name>wxMimeTypesManager</name>
+        <briefdescription>
+<para>Constructor puts the object in the &quot;working&quot; state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mime_types_manager_1a31b5b4a56a01380a4375fb75e012a5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMimeTypesManager::~wxMimeTypesManager</definition>
+        <argsstring>()</argsstring>
+        <name>~wxMimeTypesManager</name>
+        <briefdescription>
+<para>Destructor is not virtual, so this class should not be derived from. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mime_types_manager_1a5a34d689e57c8c0d9f8032e1302f9e0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxMimeTypesManager::AddFallbacks</definition>
+        <argsstring>(const wxFileTypeInfo *fallbacks)</argsstring>
+        <name>AddFallbacks</name>
+        <param>
+          <type>const <ref refid="classwx_file_type_info" kindref="compound">wxFileTypeInfo</ref> *</type>
+          <declname>fallbacks</declname>
+        </param>
+        <briefdescription>
+<para>This function may be used to provide hard-wired fallbacks for the MIME types and extensions that might not be present in the system MIME database. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please see the typetest sample for an example of using it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mime_types_manager_1a20a5bd44120549886911a6bb34a06feb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_file_type" kindref="compound">wxFileType</ref> *</type>
+        <definition>wxFileType* wxMimeTypesManager::GetFileTypeFromExtension</definition>
+        <argsstring>(const wxString &amp;extension)</argsstring>
+        <name>GetFileTypeFromExtension</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <briefdescription>
+<para>Gather information about the files with given extension and return the corresponding <ref refid="classwx_file_type" kindref="compound">wxFileType</ref> object or NULL if the extension is unknown. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>extension</emphasis> parameter may have, or not, the leading dot, if it has it, it is stripped automatically. It must not however be empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mime_types_manager_1a5c4bc90bfd1b4355d489bb7eb0ed4a6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_file_type" kindref="compound">wxFileType</ref> *</type>
+        <definition>wxFileType* wxMimeTypesManager::GetFileTypeFromMimeType</definition>
+        <argsstring>(const wxString &amp;mimeType)</argsstring>
+        <name>GetFileTypeFromMimeType</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>mimeType</declname>
+        </param>
+        <briefdescription>
+<para>Gather information about the files with given MIME type and return the corresponding <ref refid="classwx_file_type" kindref="compound">wxFileType</ref> object or NULL if the MIME type is unknown. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="87"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_mime_types_manager_1ad97313fdca56a1896691c3f4b7a9898e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxMimeTypesManager::IsOfType</definition>
+        <argsstring>(const wxString &amp;mimeType, const wxString &amp;wildcard)</argsstring>
+        <name>IsOfType</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>mimeType</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>wildcard</declname>
+        </param>
+        <briefdescription>
+<para>This function returns true if either the given <emphasis>mimeType</emphasis> is exactly the same as <emphasis>wildcard</emphasis> or if it has the same category and the subtype of <emphasis>wildcard</emphasis> is &apos;*&apos;. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that the &apos;*&apos; wildcard is not allowed in <emphasis>mimeType</emphasis> itself.</para><para>The comparison don by this function is case insensitive so it is not necessary to convert the strings to the same case before calling it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class allows the application to retrieve informations about all known MIME types from a system-specific location and the filename extensions to the MIME types and vice versa. </para>    </briefdescription>
+    <detaileddescription>
+<para>MIME stands for &quot;Multipurpose Internet Mail Extensions&quot; and was originally used in mail protocols. It&apos;s standardized by several RFCs.</para><para>Under Windows, the MIME type information is queried from registry. Under Linux and Unix, it is queried from the XDG data directories.</para><para>Currently, <ref refid="classwx_mime_types_manager" kindref="compound">wxMimeTypesManager</ref> is limited to <emphasis>reading</emphasis> MIME type information.</para><para>The application should not construct its own manager: it should use the object pointer <ref refid="mimetype_8h_1a452e0da90a41ab30e7efe5c981d2522e" kindref="member">wxTheMimeTypesManager</ref>. The functions <ref refid="classwx_mime_types_manager_1a5c4bc90bfd1b4355d489bb7eb0ed4a6f" kindref="member">GetFileTypeFromMimeType()</ref> and <ref refid="classwx_mime_types_manager_1a20a5bd44120549886911a6bb34a06feb" kindref="member">GetFileTypeFromExtension()</ref> return a <ref refid="classwx_file_type" kindref="compound">wxFileType</ref> object which may be further queried for file description, icon and other attributes.</para><sect1 id="classwx_mime_types_manager_1mimetypemanager_helpers">
+<title>Helper functions</title>
+<para>All of these functions are static (i.e. don&apos;t need a <ref refid="classwx_mime_types_manager" kindref="compound">wxMimeTypesManager</ref> object to call them) and provide some useful operations for string representations of MIME types. Their usage is recommended instead of directly working with MIME types using <ref refid="classwx_string" kindref="compound">wxString</ref> functions.</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_mime_types_manager_1ad97313fdca56a1896691c3f4b7a9898e" kindref="member">wxMimeTypesManager::IsOfType()</ref></para></listitem></itemizedlist>
+</para></sect1>
+<sect1 id="classwx_mime_types_manager_1mimetypemanager_query">
+<title>Query database</title>
+<para>These functions are the heart of this class: they allow to find a file type object from either file extension or MIME type. If the function is successful, it returns a pointer to the <ref refid="classwx_file_type" kindref="compound">wxFileType</ref> object which must be deleted by the caller, otherwise NULL will be returned.</para><para><itemizedlist>
+<listitem><para><ref refid="classwx_mime_types_manager_1a5c4bc90bfd1b4355d489bb7eb0ed4a6f" kindref="member">wxMimeTypesManager::GetFileTypeFromMimeType()</ref></para></listitem><listitem><para><ref refid="classwx_mime_types_manager_1a20a5bd44120549886911a6bb34a06feb" kindref="member">wxMimeTypesManager::GetFileTypeFromExtension()</ref></para></listitem></itemizedlist>
+</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_type" kindref="compound">wxFileType</ref> </para></simplesect>
+</para></sect1>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" bodystart="54" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classwx_mime_types_manager_1a5a34d689e57c8c0d9f8032e1302f9e0f" prot="public" virt="non-virtual"><scope>wxMimeTypesManager</scope><name>AddFallbacks</name></member>
+      <member refid="classwx_mime_types_manager_1a20a5bd44120549886911a6bb34a06feb" prot="public" virt="non-virtual"><scope>wxMimeTypesManager</scope><name>GetFileTypeFromExtension</name></member>
+      <member refid="classwx_mime_types_manager_1a5c4bc90bfd1b4355d489bb7eb0ed4a6f" prot="public" virt="non-virtual"><scope>wxMimeTypesManager</scope><name>GetFileTypeFromMimeType</name></member>
+      <member refid="classwx_mime_types_manager_1ad97313fdca56a1896691c3f4b7a9898e" prot="public" virt="non-virtual"><scope>wxMimeTypesManager</scope><name>IsOfType</name></member>
+      <member refid="classwx_mime_types_manager_1a797c34a9f22aeb53da5dbca604c9f4eb" prot="public" virt="non-virtual"><scope>wxMimeTypesManager</scope><name>wxMimeTypesManager</name></member>
+      <member refid="classwx_mime_types_manager_1a31b5b4a56a01380a4375fb75e012a5f1" prot="public" virt="non-virtual"><scope>wxMimeTypesManager</scope><name>~wxMimeTypesManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

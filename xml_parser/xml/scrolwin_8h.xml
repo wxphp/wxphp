@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="scrolwin_8h" kind="file">
+    <compoundname>scrolwin.h</compoundname>
+    <innerclass refid="classwx_scrolled" prot="public">wxScrolled</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="scrolwin_8h_1a4351a92a4d06bc722e0c604d6482a5a4" prot="public" static="no">
+        <name>wxScrollbarVisibility</name>
+        <enumvalue id="scrolwin_8h_1a4351a92a4d06bc722e0c604d6482a5a4a28096058af7a73e83c466a5e4648dfb5" prot="public">
+          <name>wxSHOW_SB_NEVER</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+<para>Never show the scrollbar at all. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scrolwin_8h_1a4351a92a4d06bc722e0c604d6482a5a4a816ca9fb80b0eea9c72b2f0ab3e6407c" prot="public">
+          <name>wxSHOW_SB_DEFAULT</name>
+          <briefdescription>
+<para>Show scrollbar only if it is needed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scrolwin_8h_1a4351a92a4d06bc722e0c604d6482a5a4a840eb87bcad3155e78c635eebbef724f" prot="public">
+          <name>wxSHOW_SB_ALWAYS</name>
+          <briefdescription>
+<para>Always show scrollbar, even if not needed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible values for the second argument of <ref refid="classwx_scrolled_1a8590337dc643a64437c56031cf5f2e71" kindref="member">wxScrolled::ShowScrollbars()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" prot="public" static="no">
+        <type><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>&lt; <ref refid="classwx_panel" kindref="compound">wxPanel</ref> &gt;</type>
+        <definition>typedef wxScrolled&lt;wxPanel&gt; wxScrolledWindow</definition>
+        <argsstring></argsstring>
+        <name>wxScrolledWindow</name>
+        <briefdescription>
+<para>Scrolled window derived from <ref refid="classwx_panel" kindref="compound">wxPanel</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref> for detailed description.</para><para><simplesect kind="note"><para>Note that because this class derives from <ref refid="classwx_panel" kindref="compound">wxPanel</ref>, it shares its behaviour with regard to TAB traversal and focus handling (in particular, it forwards focus to its children). If you don&apos;t want this behaviour, use <ref refid="group__group__class__miscwnd_1ga6b205af0f8759231eab11f15f7d4a098" kindref="member">wxScrolledCanvas</ref> instead.</para><simplesectsep/><para><ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> is an alias for wxScrolled&lt;wxPanel&gt; since version 2.9.0. In older versions, it was a standalone class.</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, <ref refid="group__group__class__miscwnd_1ga6b205af0f8759231eab11f15f7d4a098" kindref="member">wxScrolledCanvas</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="576" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" bodystart="576" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__class__miscwnd_1ga6b205af0f8759231eab11f15f7d4a098" prot="public" static="no">
+        <type><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>&lt; <ref refid="classwx_window" kindref="compound">wxWindow</ref> &gt;</type>
+        <definition>typedef wxScrolled&lt;wxWindow&gt; wxScrolledCanvas</definition>
+        <argsstring></argsstring>
+        <name>wxScrolledCanvas</name>
+        <briefdescription>
+<para>Alias for wxScrolled&lt;wxWindow&gt;. </para>        </briefdescription>
+        <detaileddescription>
+<para>Scrolled window that doesn&apos;t have children and so doesn&apos;t need or want special handling of TAB traversal.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled" kindref="compound">wxScrolled</ref>, <ref refid="group__group__class__miscwnd_1ga695bec5996cd4d5512d1a01cfdcf96a5" kindref="member">wxScrolledWindow</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" line="589" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h" bodystart="589" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scrolwin.h"/>
+  </compounddef>
+</doxygen>

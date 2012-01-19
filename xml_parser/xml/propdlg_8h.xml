@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="propdlg_8h" kind="file">
+    <compoundname>propdlg.h</compoundname>
+    <innerclass refid="classwx_property_sheet_dialog" prot="public">wxPropertySheetDialog</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6" prot="public" static="no">
+        <name>wxPropertySheetDialogFlags</name>
+        <enumvalue id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6a928b8210c5d85d8dd1b29472d3f39ae6" prot="public">
+          <name>wxPROPSHEET_DEFAULT</name>
+          <initializer> 0x0001</initializer>
+          <briefdescription>
+<para>Uses the default look and feel for the controller window, normally a notebook except on Smartphone where a choice control is used. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6a358b76ea05fff8239a50986d72470281" prot="public">
+          <name>wxPROPSHEET_NOTEBOOK</name>
+          <initializer> 0x0002</initializer>
+          <briefdescription>
+<para>Uses a notebook for the controller window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6a4fd5b483bdead87224d75701003b13b5" prot="public">
+          <name>wxPROPSHEET_TOOLBOOK</name>
+          <initializer> 0x0004</initializer>
+          <briefdescription>
+<para>Uses a toolbook for the controller window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6a5eb0ea0c5b89771a76bd29fb3a8583a9" prot="public">
+          <name>wxPROPSHEET_CHOICEBOOK</name>
+          <initializer> 0x0008</initializer>
+          <briefdescription>
+<para>Uses a choicebook for the controller window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6ab5ed95a4a3d5cd26920643104be25787" prot="public">
+          <name>wxPROPSHEET_LISTBOOK</name>
+          <initializer> 0x0010</initializer>
+          <briefdescription>
+<para>Uses a listbook for the controller window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6ac0d83d7b7b06d061626118b287053963" prot="public">
+          <name>wxPROPSHEET_BUTTONTOOLBOOK</name>
+          <initializer> 0x0020</initializer>
+          <briefdescription>
+<para>Uses a button toolbox for the controller window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6a58381f0268d1bdf18e01cb2ea02f7d29" prot="public">
+          <name>wxPROPSHEET_TREEBOOK</name>
+          <initializer> 0x0040</initializer>
+          <briefdescription>
+<para>Uses a treebook for the controller window. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propdlg_8h_1ad1095e1f7196bc6425c57aea315480c6a2f2176d75a7b37ee4284b1bbfc4bff0f" prot="public">
+          <name>wxPROPSHEET_SHRINKTOFIT</name>
+          <initializer> 0x0100</initializer>
+          <briefdescription>
+<para>Shrinks the dialog window to fit the currently selected page (common behaviour for property sheets on Mac OS X). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Values used by <ref refid="classwx_property_sheet_dialog_1acdfd10705dfdc4517150e5e9e70b9f9a" kindref="member">wxPropertySheetDialog::SetSheetStyle</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propdlg.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propdlg.h" bodystart="13" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propdlg.h"/>
+  </compounddef>
+</doxygen>

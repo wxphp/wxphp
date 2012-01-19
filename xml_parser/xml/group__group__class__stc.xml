@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__stc" kind="group">
+    <compoundname>group_class_stc</compoundname>
+    <title>Scintilla Text Editor</title>
+    <innerclass refid="classwx_styled_text_event" prot="public">wxStyledTextEvent</innerclass>
+    <innerclass refid="classwx_styled_text_ctrl" prot="public">wxStyledTextCtrl</innerclass>
+    <briefdescription>
+<para>wxWidgets also provides a wrapper around the Scintilla text editor control, which is a control for plain-text editing with support for highlighting, smart indentation, etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

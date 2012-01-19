@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_string_tokenizer" kind="class" prot="public">
+    <compoundname>wxStringTokenizer</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/tokenzr.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_string_tokenizer_1a59aa6a8673730d97a235c9a77ee93866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxStringTokenizer::wxStringTokenizer</definition>
+        <argsstring>()</argsstring>
+        <name>wxStringTokenizer</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>You must call <ref refid="classwx_string_tokenizer_1a689e26b3056baa9e88359d08deb513d8" kindref="member">SetString()</ref> before calling any other methods. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_tokenizer_1aebf1f272418cb048c820c1726eb5d079" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxStringTokenizer::wxStringTokenizer</definition>
+        <argsstring>(const wxString &amp;str, const wxString &amp;delims=&quot; \t\r\n&quot;, wxStringTokenizerMode mode=wxTOKEN_DEFAULT)</argsstring>
+        <name>wxStringTokenizer</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>delims</declname>
+          <defval>&quot; \t\r\n&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="tokenzr_8h_1a8203239377764e04822e52b33ee02f9f" kindref="member">wxStringTokenizerMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxTOKEN_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Pass the string to tokenize, a string containing delimiters, and the <emphasis>mode</emphasis> specifying how the string should be tokenized.</para><para><simplesect kind="see"><para><ref refid="classwx_string_tokenizer_1a689e26b3056baa9e88359d08deb513d8" kindref="member">SetString()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_tokenizer_1a7d13c6b1bbe348fce022e96c071ea126" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStringTokenizer::CountTokens</definition>
+        <argsstring>() const </argsstring>
+        <name>CountTokens</name>
+        <briefdescription>
+<para>Returns the number of tokens remaining in the input string. </para>        </briefdescription>
+        <detaileddescription>
+<para>The number of tokens returned by this function is decremented each time <ref refid="classwx_string_tokenizer_1a6537282af1f6b9757393046d780e5270" kindref="member">GetNextToken()</ref> is called and when it reaches 0, <ref refid="classwx_string_tokenizer_1a9617fc60328fbc8a502b5da16841fd73" kindref="member">HasMoreTokens()</ref> returns false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_tokenizer_1ab58df9e376b49be51cead0a05524888c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref></type>
+        <definition>wxChar wxStringTokenizer::GetLastDelimiter</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLastDelimiter</name>
+        <briefdescription>
+<para>Returns the delimiter which ended scan for the last token returned by <ref refid="classwx_string_tokenizer_1a6537282af1f6b9757393046d780e5270" kindref="member">GetNextToken()</ref> or <computeroutput>NUL</computeroutput> if there had been no calls to this function yet or if it returned the trailing empty token in <ref refid="tokenzr_8h_1a8203239377764e04822e52b33ee02f9faa4d5162c3be9163135a2a79bbe6ecacd" kindref="member">wxTOKEN_RET_EMPTY_ALL</ref> mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.7.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_tokenizer_1a6537282af1f6b9757393046d780e5270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxStringTokenizer::GetNextToken</definition>
+        <argsstring>()</argsstring>
+        <name>GetNextToken</name>
+        <briefdescription>
+<para>Returns the next token or empty string if the end of string was reached. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_tokenizer_1ac7115609fc4ee202f7e37ab4d670bf12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxStringTokenizer::GetPosition</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPosition</name>
+        <briefdescription>
+<para>Returns the current position (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>one index after the last returned token or 0 if <ref refid="classwx_string_tokenizer_1a6537282af1f6b9757393046d780e5270" kindref="member">GetNextToken()</ref> has never been called) in the original string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_tokenizer_1a2c4998dcc38134a4fc7309857b5d08cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxStringTokenizer::GetString</definition>
+        <argsstring>() const </argsstring>
+        <name>GetString</name>
+        <briefdescription>
+<para>Returns the part of the starting string without all token already extracted. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_tokenizer_1a9617fc60328fbc8a502b5da16841fd73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxStringTokenizer::HasMoreTokens</definition>
+        <argsstring>() const </argsstring>
+        <name>HasMoreTokens</name>
+        <briefdescription>
+<para>Returns true if the tokenizer has further tokens, false if none are left. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_string_tokenizer_1a689e26b3056baa9e88359d08deb513d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxStringTokenizer::SetString</definition>
+        <argsstring>(const wxString &amp;to_tokenize, const wxString &amp;delims=&quot; \t\r\n&quot;, wxStringTokenizerMode mode=wxTOKEN_DEFAULT)</argsstring>
+        <name>SetString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>to_tokenize</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>delims</declname>
+          <defval>&quot; \t\r\n&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="tokenzr_8h_1a8203239377764e04822e52b33ee02f9f" kindref="member">wxStringTokenizerMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxTOKEN_DEFAULT</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the tokenizer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Pass the string to tokenize, a string containing delimiters, and the <emphasis>mode</emphasis> specifying how the string should be tokenized. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_string_tokenizer" kindref="compound">wxStringTokenizer</ref> helps you to break a string up into a number of tokens. </para>    </briefdescription>
+    <detaileddescription>
+<para>It replaces the standard C function <computeroutput>strtok()</computeroutput> and also extends it in a number of ways.</para><para>To use this class, you should create a <ref refid="classwx_string_tokenizer" kindref="compound">wxStringTokenizer</ref> object, give it the string to tokenize and also the delimiters which separate tokens in the string (by default, white space characters will be used).</para><para>Then <ref refid="classwx_string_tokenizer_1a6537282af1f6b9757393046d780e5270" kindref="member">wxStringTokenizer::GetNextToken()</ref> may be called repeatedly until <ref refid="classwx_string_tokenizer_1a9617fc60328fbc8a502b5da16841fd73" kindref="member">wxStringTokenizer::HasMoreTokens()</ref> returns false.</para><para>For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string_tokenizer" kindref="compound" tooltip="wxStringTokenizer helps you to break a string up into a number of tokens.">wxStringTokenizer</ref><sp/>tokenizer(</highlight><highlight class="stringliteral">&quot;first:second:third:fourth&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>tokenizer.HasMoreTokens()<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>token<sp/>=<sp/>tokenizer.GetNextToken();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>process<sp/>token<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__string_1ga2c25293c0f273b78001e02313ca20d96" kindref="member">wxStringTokenize()</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10539">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="10538">
+        <label>wxStringTokenizer</label>
+        <link refid="classwx_string_tokenizer"/>
+        <childnode refid="10539" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10541">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="10542" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10540">
+        <label>wxStringTokenizer</label>
+        <link refid="classwx_string_tokenizer"/>
+        <childnode refid="10541" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10542">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" line="94" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tokenzr.h" bodystart="93" bodyend="160"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxStringTokenizer</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxStringTokenizer</scope><name>CloneRefData</name></member>
+      <member refid="classwx_string_tokenizer_1a7d13c6b1bbe348fce022e96c071ea126" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>CountTokens</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxStringTokenizer</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxStringTokenizer</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_string_tokenizer_1ab58df9e376b49be51cead0a05524888c" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>GetLastDelimiter</name></member>
+      <member refid="classwx_string_tokenizer_1a6537282af1f6b9757393046d780e5270" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>GetNextToken</name></member>
+      <member refid="classwx_string_tokenizer_1ac7115609fc4ee202f7e37ab4d670bf12" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>GetPosition</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>GetRefData</name></member>
+      <member refid="classwx_string_tokenizer_1a2c4998dcc38134a4fc7309857b5d08cd" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>GetString</name></member>
+      <member refid="classwx_string_tokenizer_1a9617fc60328fbc8a502b5da16841fd73" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>HasMoreTokens</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxStringTokenizer</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>Ref</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>SetRefData</name></member>
+      <member refid="classwx_string_tokenizer_1a689e26b3056baa9e88359d08deb513d8" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>SetString</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>wxObject</name></member>
+      <member refid="classwx_string_tokenizer_1a59aa6a8673730d97a235c9a77ee93866" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>wxStringTokenizer</name></member>
+      <member refid="classwx_string_tokenizer_1aebf1f272418cb048c820c1726eb5d079" prot="public" virt="non-virtual"><scope>wxStringTokenizer</scope><name>wxStringTokenizer</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxStringTokenizer</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

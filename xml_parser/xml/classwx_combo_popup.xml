@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_combo_popup" kind="class" prot="public">
+    <compoundname>wxComboPopup</compoundname>
+    <includes local="no">wx/combo.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classwx_combo_popup_1a8f6dddf9f36244932b6bde1e322629ef" prot="protected" static="no" mutable="no">
+        <type><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> *</type>
+        <definition>wxComboCtrl* wxComboPopup::m_combo</definition>
+        <argsstring></argsstring>
+        <name>m_combo</name>
+        <briefdescription>
+<para>Parent <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This member variable is prepared automatically before <ref refid="classwx_combo_popup_1aff98da6f4c273ba768979c94ce82508e" kindref="member">Init()</ref> is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="175" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_combo_popup_1aff049e99b180ebaf8ee4a9a099ab8413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxComboPopup::wxComboPopup</definition>
+        <argsstring>()</argsstring>
+        <name>wxComboPopup</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is recommended that internal variables are prepared in <ref refid="classwx_combo_popup_1aff98da6f4c273ba768979c94ce82508e" kindref="member">Init()</ref> instead (because m_combo is not valid in constructor). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a42375d0b5b9d39c0e48d7ca00b05e310" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxComboPopup::Create</definition>
+        <argsstring>(wxWindow *parent)=0</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>The derived class must implement this to create the popup control. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the call succeeded, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a7bab875909925651797460484ab237df" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxComboPopup::DestroyPopup</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyPopup</name>
+        <briefdescription>
+<para>You only need to implement this member function if you create your popup class in non-standard way. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default implementation can handle both multiple-inherited popup control (as seen in <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> samples) and one allocated separately in heap.</para><para>If you do completely re-implement this function, make sure it calls Destroy() for the popup control and also deletes <emphasis>this</emphasis> object (usually as the last thing). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1aefa27348fb0160af43197223238396e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxComboPopup::Dismiss</definition>
+        <argsstring>()</argsstring>
+        <name>Dismiss</name>
+        <briefdescription>
+<para>Utility function that hides the popup. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a2d19c49312ff3098d11e3e465afcf284" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxComboPopup::FindItem</definition>
+        <argsstring>(const wxString &amp;item, wxString *trueItem=NULL)</argsstring>
+        <name>FindItem</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>trueItem</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Implement to customize matching of value string to an item container entry. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String entered, usually by user or from SetValue() call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trueItem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When item matches an entry, but the entry&apos;s string representation is not exactly the same (case mismatch, for example), then the true item string should be written back to here, if it is not a NULL pointer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>Default implementation always return true and does not alter trueItem. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1ae8ff1d6570b177c2c6b7a101035cf2ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxComboPopup::GetAdjustedSize</definition>
+        <argsstring>(int minWidth, int prefHeight, int maxHeight)</argsstring>
+        <name>GetAdjustedSize</name>
+        <param>
+          <type>int</type>
+          <declname>minWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prefHeight</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxHeight</declname>
+        </param>
+        <briefdescription>
+<para>The derived class may implement this to return adjusted size for the popup control, according to the variables given. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Preferred minimum width. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Preferred height. May be -1 to indicate no preference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max height for window, as limited by screen size.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function is called each time popup is about to be shown. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a699adab3b32a90c3817aa2fc8f9b00a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> *</type>
+        <definition>wxComboCtrl* wxComboPopup::GetComboCtrl</definition>
+        <argsstring>() const </argsstring>
+        <name>GetComboCtrl</name>
+        <briefdescription>
+<para>Returns pointer to the associated parent <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1aacb4c414cba10a680f0bc5591f7c0c39" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+        <definition>virtual wxWindow* wxComboPopup::GetControl</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetControl</name>
+        <briefdescription>
+<para>The derived class must implement this to return pointer to the associated control created in <ref refid="classwx_combo_popup_1a42375d0b5b9d39c0e48d7ca00b05e310" kindref="member">Create()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1addba104e8e7944c758905e2d1540e389" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxComboPopup::GetStringValue</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetStringValue</name>
+        <briefdescription>
+<para>The derived class must implement this to return string representation of the value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1aff98da6f4c273ba768979c94ce82508e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxComboPopup::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>The derived class must implement this to initialize its internal variables. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called immediately after construction finishes. m_combo member variable has been initialized before the call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1acdb55a4d2167f1b764bb0644f07896f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxComboPopup::IsCreated</definition>
+        <argsstring>() const </argsstring>
+        <name>IsCreated</name>
+        <briefdescription>
+<para>Utility method that returns true if Create has been called. </para>        </briefdescription>
+        <detaileddescription>
+<para>Useful in conjunction with <ref refid="classwx_combo_popup_1a3203d64b41c9689b0379314630324280" kindref="member">LazyCreate()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a3203d64b41c9689b0379314630324280" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxComboPopup::LazyCreate</definition>
+        <argsstring>()</argsstring>
+        <name>LazyCreate</name>
+        <briefdescription>
+<para>The derived class may implement this to return true if it wants to delay call to <ref refid="classwx_combo_popup_1a42375d0b5b9d39c0e48d7ca00b05e310" kindref="member">Create()</ref> until the popup is shown for the first time. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is more efficient, but on the other hand it is often more convenient to have the control created immediately.</para><para><simplesect kind="remark"><para>Base implementation returns false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a26c6a69e340db96f47b88e2ecb296f2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxComboPopup::OnComboDoubleClick</definition>
+        <argsstring>()</argsstring>
+        <name>OnComboDoubleClick</name>
+        <briefdescription>
+<para>The derived class may implement this to do something when the parent <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> gets double-clicked. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a0cac7a0495f53119ad34583ad0591695" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxComboPopup::OnComboKeyEvent</definition>
+        <argsstring>(wxKeyEvent &amp;event)</argsstring>
+        <name>OnComboKeyEvent</name>
+        <param>
+          <type><ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>The derived class may implement this to receive key events from the parent <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Events not handled should be skipped, as usual. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a24abde370c9f0faa8dc592a395797d7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxComboPopup::OnDismiss</definition>
+        <argsstring>()</argsstring>
+        <name>OnDismiss</name>
+        <briefdescription>
+<para>The derived class may implement this to do special processing when popup is hidden. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1a1a9e2d8553b1ed3641109f45ab7bfe8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxComboPopup::OnPopup</definition>
+        <argsstring>()</argsstring>
+        <name>OnPopup</name>
+        <briefdescription>
+<para>The derived class may implement this to do special processing when popup is shown. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1ae64038e6f785d2c6b4826991f0f75b18" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxComboPopup::PaintComboControl</definition>
+        <argsstring>(wxDC &amp;dc, const wxRect &amp;rect)</argsstring>
+        <name>PaintComboControl</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>The derived class may implement this to paint the parent <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default implementation draws value as string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_combo_popup_1ad55221c409f2e1edbfcbf75719dc3864" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxComboPopup::SetStringValue</definition>
+        <argsstring>(const wxString &amp;value)</argsstring>
+        <name>SetStringValue</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>The derived class must implement this to receive string value changes from <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>In order to use a custom popup with <ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>, an interface class must be derived from <ref refid="classwx_combo_popup" kindref="compound">wxComboPopup</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>For more information on how to use it, see <ref refid="classwx_combo_ctrl_1comboctrl_custompopup" kindref="member">Setting Custom Popup for wxComboCtrl</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="4945">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="4946" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="4944">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="4945" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4947" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4947">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="4948">
+        <label>wxTextEntry</label>
+        <link refid="classwx_text_entry"/>
+      </node>
+      <node id="4942">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="4943" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4943">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="4944" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4941">
+        <label>wxComboCtrl</label>
+        <link refid="classwx_combo_ctrl"/>
+        <childnode refid="4942" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4940">
+        <label>wxComboPopup</label>
+        <link refid="classwx_combo_popup"/>
+        <childnode refid="4941" relation="usage">
+          <edgelabel>m_combo</edgelabel>
+        </childnode>
+      </node>
+      <node id="4946">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/combo.h" bodystart="22" bodyend="176"/>
+    <listofallmembers>
+      <member refid="classwx_combo_popup_1a42375d0b5b9d39c0e48d7ca00b05e310" prot="public" virt="pure-virtual"><scope>wxComboPopup</scope><name>Create</name></member>
+      <member refid="classwx_combo_popup_1a7bab875909925651797460484ab237df" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>DestroyPopup</name></member>
+      <member refid="classwx_combo_popup_1aefa27348fb0160af43197223238396e5" prot="public" virt="non-virtual"><scope>wxComboPopup</scope><name>Dismiss</name></member>
+      <member refid="classwx_combo_popup_1a2d19c49312ff3098d11e3e465afcf284" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>FindItem</name></member>
+      <member refid="classwx_combo_popup_1ae8ff1d6570b177c2c6b7a101035cf2ff" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>GetAdjustedSize</name></member>
+      <member refid="classwx_combo_popup_1a699adab3b32a90c3817aa2fc8f9b00a9" prot="public" virt="non-virtual"><scope>wxComboPopup</scope><name>GetComboCtrl</name></member>
+      <member refid="classwx_combo_popup_1aacb4c414cba10a680f0bc5591f7c0c39" prot="public" virt="pure-virtual"><scope>wxComboPopup</scope><name>GetControl</name></member>
+      <member refid="classwx_combo_popup_1addba104e8e7944c758905e2d1540e389" prot="public" virt="pure-virtual"><scope>wxComboPopup</scope><name>GetStringValue</name></member>
+      <member refid="classwx_combo_popup_1aff98da6f4c273ba768979c94ce82508e" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>Init</name></member>
+      <member refid="classwx_combo_popup_1acdb55a4d2167f1b764bb0644f07896f9" prot="public" virt="non-virtual"><scope>wxComboPopup</scope><name>IsCreated</name></member>
+      <member refid="classwx_combo_popup_1a3203d64b41c9689b0379314630324280" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>LazyCreate</name></member>
+      <member refid="classwx_combo_popup_1a8f6dddf9f36244932b6bde1e322629ef" prot="protected" virt="non-virtual"><scope>wxComboPopup</scope><name>m_combo</name></member>
+      <member refid="classwx_combo_popup_1a26c6a69e340db96f47b88e2ecb296f2e" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>OnComboDoubleClick</name></member>
+      <member refid="classwx_combo_popup_1a0cac7a0495f53119ad34583ad0591695" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>OnComboKeyEvent</name></member>
+      <member refid="classwx_combo_popup_1a24abde370c9f0faa8dc592a395797d7a" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>OnDismiss</name></member>
+      <member refid="classwx_combo_popup_1a1a9e2d8553b1ed3641109f45ab7bfe8d" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>OnPopup</name></member>
+      <member refid="classwx_combo_popup_1ae64038e6f785d2c6b4826991f0f75b18" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>PaintComboControl</name></member>
+      <member refid="classwx_combo_popup_1ad55221c409f2e1edbfcbf75719dc3864" prot="public" virt="virtual"><scope>wxComboPopup</scope><name>SetStringValue</name></member>
+      <member refid="classwx_combo_popup_1aff049e99b180ebaf8ee4a9a099ab8413" prot="public" virt="non-virtual"><scope>wxComboPopup</scope><name>wxComboPopup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

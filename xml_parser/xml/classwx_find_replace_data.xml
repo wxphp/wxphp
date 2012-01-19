@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_find_replace_data" kind="class" prot="public">
+    <compoundname>wxFindReplaceData</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/fdrepdlg.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_find_replace_data_1a73e6c4fb8e6b9863816dffc5b1c12728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFindReplaceData::wxFindReplaceData</definition>
+        <argsstring>(wxUint32 flags=0)</argsstring>
+        <name>wxFindReplaceData</name>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor initializes the flags to default value (0). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_replace_data_1af868f81386e974980b43ee0b71968077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxFindReplaceData::GetFindString</definition>
+        <argsstring>()</argsstring>
+        <name>GetFindString</name>
+        <briefdescription>
+<para>Get the string to find. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_replace_data_1a23326c79aacac5c21c4363e6b0a142e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxFindReplaceData::GetFlags</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFlags</name>
+        <briefdescription>
+<para>Get the combination of <computeroutput>wxFindReplaceFlags</computeroutput> values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_replace_data_1a59fdf63a306850a755005ec794c9d8fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxFindReplaceData::GetReplaceString</definition>
+        <argsstring>()</argsstring>
+        <name>GetReplaceString</name>
+        <briefdescription>
+<para>Get the replacement string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_replace_data_1ae8762e9353ddf76a6e1887b5f6b53d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFindReplaceData::SetFindString</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>SetFindString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Set the string to find (used as initial value by the dialog). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_replace_data_1a001753a59b85cf8035a77c91502d16a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFindReplaceData::SetFlags</definition>
+        <argsstring>(wxUint32 flags)</argsstring>
+        <name>SetFlags</name>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set the flags to use to initialize the controls of the dialog. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_find_replace_data_1ae9371cf3a1e68a288cd4508f67f2a8d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFindReplaceData::SetReplaceString</definition>
+        <argsstring>(const wxString &amp;str)</argsstring>
+        <name>SetReplaceString</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Set the replacement string (used as initial value by the dialog). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="152"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_find_replace_data" kindref="compound">wxFindReplaceData</ref> holds the data for <ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is used to initialize the dialog with the default values and will keep the last values from the dialog when it is closed. It is also updated each time a wxFindDialogEvent is generated so instead of using the wxFindDialogEvent methods you can also directly query this object.</para><para>Note that all <computeroutput>SetXXX()</computeroutput> methods may only be called before showing the dialog and calling them has no effect later.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6309">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6308">
+        <label>wxFindReplaceData</label>
+        <link refid="classwx_find_replace_data"/>
+        <childnode refid="6309" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6311">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6312" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6310">
+        <label>wxFindReplaceData</label>
+        <link refid="classwx_find_replace_data"/>
+        <childnode refid="6311" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6312">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" line="117" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fdrepdlg.h" bodystart="116" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFindReplaceData</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFindReplaceData</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFindReplaceData</scope><name>CreateRefData</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxFindReplaceData</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_find_replace_data_1af868f81386e974980b43ee0b71968077" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>GetFindString</name></member>
+      <member refid="classwx_find_replace_data_1a23326c79aacac5c21c4363e6b0a142e4" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>GetFlags</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>GetRefData</name></member>
+      <member refid="classwx_find_replace_data_1a59fdf63a306850a755005ec794c9d8fc" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>GetReplaceString</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFindReplaceData</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>Ref</name></member>
+      <member refid="classwx_find_replace_data_1ae8762e9353ddf76a6e1887b5f6b53d11" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>SetFindString</name></member>
+      <member refid="classwx_find_replace_data_1a001753a59b85cf8035a77c91502d16a7" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>SetFlags</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>SetRefData</name></member>
+      <member refid="classwx_find_replace_data_1ae9371cf3a1e68a288cd4508f67f2a8d9" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>SetReplaceString</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>UnShare</name></member>
+      <member refid="classwx_find_replace_data_1a73e6c4fb8e6b9863816dffc5b1c12728" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>wxFindReplaceData</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFindReplaceData</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxFindReplaceData</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

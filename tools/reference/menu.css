@@ -1,0 +1,40 @@
+body
+{
+	font-family: Verdana, sans-serif;
+}
+
+a
+{
+	color: #194CCE;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+ul
+{
+}
+
+ul li
+{
+}
+
+ul li a
+{
+}
+
+.home
+{
+	display: block;
+	padding: 5px;
+	background-color: #d3d3d3;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 10px 0 10px 0;
+	width: 250px;
+	text-align: center;
+}

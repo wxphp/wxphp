@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="fontpicker_8h" kind="file">
+    <compoundname>fontpicker.h</compoundname>
+    <innerclass refid="classwx_font_picker_ctrl" prot="public">wxFontPickerCtrl</innerclass>
+    <innerclass refid="classwx_font_picker_event" prot="public">wxFontPickerEvent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontpicker.h"/>
+  </compounddef>
+</doxygen>

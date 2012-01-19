@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_item_container_immutable" kind="class" prot="public">
+    <compoundname>wxItemContainerImmutable</compoundname>
+    <derivedcompoundref refid="classwx_item_container" prot="public" virt="non-virtual">wxItemContainer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_radio_box" prot="private" virt="non-virtual">wxRadioBox</derivedcompoundref>
+    <includes local="no">wx/ctrlsub.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_item_container_immutable_1a173bdb9c72977d524f524fcd02521f61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int wxItemContainerImmutable::GetCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetCount</name>
+        <reimplementedby refid="classwx_radio_box_1a9604c1693a26da3076d013ddd11f386c">GetCount</reimplementedby>
+        <reimplementedby refid="classwx_list_box_1a82ab64b37477c9cf0a354e435f078092">GetCount</reimplementedby>
+        <reimplementedby refid="classwx_combo_box_1ad43c531eb94f1283a781dcb478de50dd">GetCount</reimplementedby>
+        <reimplementedby refid="classwx_choice_1ab85196b1b0f530cf3497014de51889b6">GetCount</reimplementedby>
+        <briefdescription>
+<para>Returns the number of items in the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_item_container_immutable_1a32c254e4cd1a6090377e0504e230bb88" kindref="member">IsEmpty()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1a32c254e4cd1a6090377e0504e230bb88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxItemContainerImmutable::IsEmpty</definition>
+        <argsstring>() const </argsstring>
+        <name>IsEmpty</name>
+        <reimplementedby refid="classwx_combo_box_1a41789d188664ce4d05500b8452798c8f">IsEmpty</reimplementedby>
+        <briefdescription>
+<para>Returns true if the control is empty or false if it has some items. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_item_container_immutable_1a173bdb9c72977d524f524fcd02521f61" kindref="member">GetCount()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1a30e9fe62bd51415d9af2a9c6f19ec8f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxItemContainerImmutable::GetString</definition>
+        <argsstring>(unsigned int n) const =0</argsstring>
+        <name>GetString</name>
+        <reimplementedby refid="classwx_radio_box_1aa3976438a4928725f7fdc5c5561020d5">GetString</reimplementedby>
+        <reimplementedby refid="classwx_list_box_1a39f0013a5386c1fa882dfab359284957">GetString</reimplementedby>
+        <reimplementedby refid="classwx_combo_box_1ae6bfbfa36e53edc58df54525db1b6e44">GetString</reimplementedby>
+        <reimplementedby refid="classwx_choice_1a3a89e3eef072e7914f8408154b4a1daa">GetString</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the label of the item with the given index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The label of the item or an empty string if the position was invalid. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1a1468727e7ce4194b3c4edd05cc1336ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
+        <definition>wxArrayString wxItemContainerImmutable::GetStrings</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStrings</name>
+        <briefdescription>
+<para>Returns the array of the labels of all items in the control. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1a1daf356c330bac2d7a93c5b3de8fbabf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxItemContainerImmutable::SetString</definition>
+        <argsstring>(unsigned int n, const wxString &amp;string)=0</argsstring>
+        <name>SetString</name>
+        <reimplementedby refid="classwx_radio_box_1a95951516ebbf6d4ef78a110c0905777c">SetString</reimplementedby>
+        <reimplementedby refid="classwx_list_box_1aa7167deecacd31c66134500d96681405">SetString</reimplementedby>
+        <reimplementedby refid="classwx_combo_box_1a281df5e404fb6745657ca7faac96ff41">SetString</reimplementedby>
+        <reimplementedby refid="classwx_choice_1a0b5ca1f30a82f57849e8142d22e703eb">SetString</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Sets the label for the given item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based item index. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The label to set. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1af4a1bcdae92a7fe0367dc25a73e669bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxItemContainerImmutable::FindString</definition>
+        <argsstring>(const wxString &amp;string, bool caseSensitive=false) const </argsstring>
+        <name>FindString</name>
+        <reimplementedby refid="classwx_radio_box_1a0235f9ff37a3c8da18f08024881ad88a">FindString</reimplementedby>
+        <reimplementedby refid="classwx_list_box_1aeb5cbabed700c5215bd8543fae2d039c">FindString</reimplementedby>
+        <reimplementedby refid="classwx_combo_box_1a089acdaa86fa91c0899259ecbed9dd46">FindString</reimplementedby>
+        <reimplementedby refid="classwx_choice_1a72e49836b9ed3ace5a512700d3680401">FindString</reimplementedby>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>caseSensitive</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Finds an item whose label matches the given string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to find. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caseSensitive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether search is case sensitive (default is not).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The zero-based position of the item, or wxNOT_FOUND if the string was not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Selection</header>
+      <description><para><anchor id="_1amgrp6ff9dd0d34f65181173c1e4bc39939de"/> </para></description>
+      <memberdef kind="function" id="classwx_item_container_immutable_1aea97d8ee51e7af5e06befd5f8c9d793b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxItemContainerImmutable::SetSelection</definition>
+        <argsstring>(int n)=0</argsstring>
+        <name>SetSelection</name>
+        <reimplementedby refid="classwx_radio_box_1acdfb1a4331a5fc9b62d57f94b90f70c9">SetSelection</reimplementedby>
+        <reimplementedby refid="classwx_list_box_1a65fd7fd5e3b8e7451b225b581ead70b1">SetSelection</reimplementedby>
+        <reimplementedby refid="classwx_combo_box_1a28ec184571590745a26a1be7fa2dfc72">SetSelection</reimplementedby>
+        <reimplementedby refid="classwx_choice_1a10096ed787d493c701e9348f8e34440f">SetSelection</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Sets the selection to the given item <emphasis>n</emphasis> or removes the selection entirely if <emphasis>n</emphasis> == <computeroutput>wxNOT_FOUND</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that this does not cause any command events to be emitted nor does it deselect any other items in the controls which support multiple selections.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string position to select, starting from zero.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_item_container_immutable_1a1daf356c330bac2d7a93c5b3de8fbabf" kindref="member">SetString()</ref>, <ref refid="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" kindref="member">SetStringSelection()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1a18a7cb1a652772d5cb8adc52be1efea0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int wxItemContainerImmutable::GetSelection</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetSelection</name>
+        <reimplementedby refid="classwx_radio_box_1afe941a37abea6422c8dab24102dfefc3">GetSelection</reimplementedby>
+        <reimplementedby refid="classwx_list_box_1a704e48e294f4116dd5e073baaf79d770">GetSelection</reimplementedby>
+        <reimplementedby refid="classwx_combo_box_1ab669c3175df737ed1d6fb8d95c621f70">GetSelection</reimplementedby>
+        <reimplementedby refid="classwx_choice_1af13b41f102b0a819aead40919c5f4944">GetSelection</reimplementedby>
+        <briefdescription>
+<para>Returns the index of the selected item or <computeroutput>wxNOT_FOUND</computeroutput> if no item is selected. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The position of the current selection.</para></simplesect>
+<simplesect kind="remark"><para>This method can be used with single selection list boxes only, you should use <ref refid="classwx_list_box_1abe7c5010843f2b3522036588b5298427" kindref="member">wxListBox::GetSelections()</ref> for the list boxes with wxLB_MULTIPLE style.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_item_container_immutable_1aea97d8ee51e7af5e06befd5f8c9d793b" kindref="member">SetSelection()</ref>, <ref refid="classwx_item_container_immutable_1ad4e81fb20f75c3cd6b277ed639087e28" kindref="member">GetStringSelection()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxItemContainerImmutable::SetStringSelection</definition>
+        <argsstring>(const wxString &amp;string)</argsstring>
+        <name>SetStringSelection</name>
+        <reimplementedby refid="classwx_list_box_1a708da5aa578b62b86e497f56e272a9a5">SetStringSelection</reimplementedby>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Selects the item with the specified string in the control. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method doesn&apos;t cause any command events to be emitted.</para><para>Notice that this method is case-insensitive, i.e. the string is compared with all the elements of the control case-insensitively and the first matching entry is selected, even if it doesn&apos;t have exactly the same case as this string and there is an exact match afterwards.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to select. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the specified string has been selected, false if it wasn&apos;t found in the control. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1ad4e81fb20f75c3cd6b277ed639087e28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxItemContainerImmutable::GetStringSelection</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStringSelection</name>
+        <reimplementedby refid="classwx_combo_box_1aae0a8a3adfb51a5dd44cf03c0fd20d1c">GetStringSelection</reimplementedby>
+        <briefdescription>
+<para>Returns the label of the selected item or an empty string if no item is selected. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_item_container_immutable_1a18a7cb1a652772d5cb8adc52be1efea0" kindref="member">GetSelection()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_item_container_immutable_1abcc0d37a2a7f29d5c54cfa5252571d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxItemContainerImmutable::Select</definition>
+        <argsstring>(int n)</argsstring>
+        <name>Select</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>This is the same as <ref refid="classwx_item_container_immutable_1aea97d8ee51e7af5e06befd5f8c9d793b" kindref="member">SetSelection()</ref> and exists only because it is slightly more natural for controls which support multiple selection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="154"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_item_container_immutable_1ae70470db41f14f56b610bc30098ebce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxItemContainerImmutable::wxItemContainerImmutable</definition>
+        <argsstring>()</argsstring>
+        <name>wxItemContainerImmutable</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> defines an interface which is implemented by all controls which have string subitems each of which may be selected. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is decomposed in <ref refid="classwx_item_container_immutable" kindref="compound">wxItemContainerImmutable</ref> which omits all methods adding/removing items and is used by <ref refid="classwx_radio_box" kindref="compound">wxRadioBox</ref> and <ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> itself.</para><para>Note that this is not a control, it&apos;s a mixin interface that classes have to derive from in addition to <ref refid="classwx_control" kindref="compound">wxControl</ref> or <ref refid="classwx_window" kindref="compound">wxWindow</ref>.</para><para>Examples: <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_check_list_box" kindref="compound">wxCheckListBox</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref> and <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref> (which implements an extended interface deriving from this one)</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref>, <ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7342">
+        <label>wxItemContainer</label>
+        <link refid="classwx_item_container"/>
+        <childnode refid="7341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7347">
+        <label>wxListBox</label>
+        <link refid="classwx_list_box"/>
+        <childnode refid="7345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7350">
+        <label>wxSimpleHtmlListBox</label>
+        <link refid="classwx_simple_html_list_box"/>
+        <childnode refid="7342" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7344">
+        <label>wxBitmapComboBox</label>
+        <link refid="classwx_bitmap_combo_box"/>
+        <childnode refid="7343" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7351">
+        <label>wxRadioBox</label>
+        <link refid="classwx_radio_box"/>
+        <childnode refid="7341" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="7348">
+        <label>wxCheckListBox</label>
+        <link refid="classwx_check_list_box"/>
+        <childnode refid="7347" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7349">
+        <label>wxRearrangeList</label>
+        <link refid="classwx_rearrange_list"/>
+        <childnode refid="7348" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7346">
+        <label>wxChoice</label>
+        <link refid="classwx_choice"/>
+        <childnode refid="7345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7343">
+        <label>wxComboBox</label>
+        <link refid="classwx_combo_box"/>
+        <childnode refid="7342" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7345">
+        <label>wxControlWithItems</label>
+        <link refid="classwx_control_with_items"/>
+        <childnode refid="7342" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7341">
+        <label>wxItemContainerImmutable</label>
+        <link refid="classwx_item_container_immutable"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" bodystart="30" bodyend="157"/>
+    <listofallmembers>
+      <member refid="classwx_item_container_immutable_1af4a1bcdae92a7fe0367dc25a73e669bb" prot="public" virt="virtual"><scope>wxItemContainerImmutable</scope><name>FindString</name></member>
+      <member refid="classwx_item_container_immutable_1a173bdb9c72977d524f524fcd02521f61" prot="public" virt="pure-virtual"><scope>wxItemContainerImmutable</scope><name>GetCount</name></member>
+      <member refid="classwx_item_container_immutable_1a18a7cb1a652772d5cb8adc52be1efea0" prot="public" virt="pure-virtual"><scope>wxItemContainerImmutable</scope><name>GetSelection</name></member>
+      <member refid="classwx_item_container_immutable_1a30e9fe62bd51415d9af2a9c6f19ec8f7" prot="public" virt="pure-virtual"><scope>wxItemContainerImmutable</scope><name>GetString</name></member>
+      <member refid="classwx_item_container_immutable_1a1468727e7ce4194b3c4edd05cc1336ec" prot="public" virt="non-virtual"><scope>wxItemContainerImmutable</scope><name>GetStrings</name></member>
+      <member refid="classwx_item_container_immutable_1ad4e81fb20f75c3cd6b277ed639087e28" prot="public" virt="virtual"><scope>wxItemContainerImmutable</scope><name>GetStringSelection</name></member>
+      <member refid="classwx_item_container_immutable_1a32c254e4cd1a6090377e0504e230bb88" prot="public" virt="non-virtual"><scope>wxItemContainerImmutable</scope><name>IsEmpty</name></member>
+      <member refid="classwx_item_container_immutable_1abcc0d37a2a7f29d5c54cfa5252571d61" prot="public" virt="non-virtual"><scope>wxItemContainerImmutable</scope><name>Select</name></member>
+      <member refid="classwx_item_container_immutable_1aea97d8ee51e7af5e06befd5f8c9d793b" prot="public" virt="pure-virtual"><scope>wxItemContainerImmutable</scope><name>SetSelection</name></member>
+      <member refid="classwx_item_container_immutable_1a1daf356c330bac2d7a93c5b3de8fbabf" prot="public" virt="pure-virtual"><scope>wxItemContainerImmutable</scope><name>SetString</name></member>
+      <member refid="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" prot="public" virt="non-virtual"><scope>wxItemContainerImmutable</scope><name>SetStringSelection</name></member>
+      <member refid="classwx_item_container_immutable_1ae70470db41f14f56b610bc30098ebce4" prot="public" virt="non-virtual"><scope>wxItemContainerImmutable</scope><name>wxItemContainerImmutable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

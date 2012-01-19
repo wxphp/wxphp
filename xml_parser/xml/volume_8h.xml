@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="volume_8h" kind="file">
+    <compoundname>volume.h</compoundname>
+    <innerclass refid="classwx_f_s_volume" prot="public">wxFSVolume</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="volume_8h_1a5c80e004648868994c5a2406a9f950fe" prot="public" static="no">
+        <name>wxFSVolumeFlags</name>
+        <enumvalue id="volume_8h_1a5c80e004648868994c5a2406a9f950feaa738f268b8368179ea9d58ee63627608" prot="public">
+          <name>wxFS_VOL_MOUNTED</name>
+          <initializer> 0x0001</initializer>
+          <briefdescription>
+<para>Is the volume mounted? </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1a5c80e004648868994c5a2406a9f950feada8b23ca3211ea5c7a28bf3f9551a095" prot="public">
+          <name>wxFS_VOL_REMOVABLE</name>
+          <initializer> 0x0002</initializer>
+          <briefdescription>
+<para>Is the volume removable (floppy, CD, ...)? </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1a5c80e004648868994c5a2406a9f950feada58d39d4c2b87d219de985c0b3d3207" prot="public">
+          <name>wxFS_VOL_READONLY</name>
+          <initializer> 0x0004</initializer>
+          <briefdescription>
+<para>Read only? (otherwise read write). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1a5c80e004648868994c5a2406a9f950fea76b6fdaa2c4f3f057d5f672f80d9d3aa" prot="public">
+          <name>wxFS_VOL_REMOTE</name>
+          <initializer> 0x0008</initializer>
+          <briefdescription>
+<para>Network resources. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The volume flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" bodystart="12" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="enum" id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129" prot="public" static="no">
+        <name>wxFSVolumeKind</name>
+        <enumvalue id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129adc6d81b7886fab21b6f8011b65924cfb" prot="public">
+          <name>wxFS_VOL_FLOPPY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129adc2017e50e6206ff0b18490972add324" prot="public">
+          <name>wxFS_VOL_DISK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129a6007b2b9540588906bfd331f27e0c908" prot="public">
+          <name>wxFS_VOL_CDROM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129a55dfa46f32e6fa99d70a13e156dea625" prot="public">
+          <name>wxFS_VOL_DVDROM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129a4f81d882ed89a0ac65fd25f5307590be" prot="public">
+          <name>wxFS_VOL_NETWORK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129a27b66660b38cb67c937a6d8d12cc20a5" prot="public">
+          <name>wxFS_VOL_OTHER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1aa4e140e1cf09e65894158d6df45cb129a457f741f093b7fb2f0d6d0a3ec8cfb62" prot="public">
+          <name>wxFS_VOL_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The volume types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" bodystart="30" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="enum" id="volume_8h_1a25716a00b483e0fd09f520c53cca04c3" prot="public" static="no">
+        <name>wxFSIconType</name>
+        <enumvalue id="volume_8h_1a25716a00b483e0fd09f520c53cca04c3a542cf041807357a04cac16866aaecc7e" prot="public">
+          <name>wxFS_VOL_ICO_SMALL</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1a25716a00b483e0fd09f520c53cca04c3a7a1002edd0039f34841a6d064123e50f" prot="public">
+          <name>wxFS_VOL_ICO_LARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1a25716a00b483e0fd09f520c53cca04c3a1ce95d4be00e8078cedd73e6f41d4f6c" prot="public">
+          <name>wxFS_VOL_ICO_SEL_SMALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1a25716a00b483e0fd09f520c53cca04c3ac93a644b21e4e5128655ba85ad207eb5" prot="public">
+          <name>wxFS_VOL_ICO_SEL_LARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="volume_8h_1a25716a00b483e0fd09f520c53cca04c3aa88eb378271562454436f90177f4c10e" prot="public">
+          <name>wxFS_VOL_ICO_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Icon types used by <ref refid="classwx_f_s_volume" kindref="compound">wxFSVolume</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h" bodystart="44" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/volume.h"/>
+  </compounddef>
+</doxygen>

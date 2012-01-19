@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="spinctrl_8h" kind="file">
+    <compoundname>spinctrl.h</compoundname>
+    <innerclass refid="classwx_spin_ctrl" prot="public">wxSpinCtrl</innerclass>
+    <innerclass refid="classwx_spin_ctrl_double" prot="public">wxSpinCtrlDouble</innerclass>
+    <innerclass refid="classwx_spin_double_event" prot="public">wxSpinDoubleEvent</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="spinctrl_8h_1a6d2cb97b81356988b5db032b4d7be822" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_SPINCTRL_UPDATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_SPINCTRL_UPDATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="331" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="spinctrl_8h_1a65967cb3b61729dd165ea29fdcc20990" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_SPINCTRLDOUBLE_UPDATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_SPINCTRLDOUBLE_UPDATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="332" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h"/>
+  </compounddef>
+</doxygen>

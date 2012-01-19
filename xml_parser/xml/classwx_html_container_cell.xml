@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_html_container_cell" kind="class" prot="public">
+    <compoundname>wxHtmlContainerCell</compoundname>
+    <basecompoundref refid="classwx_html_cell" prot="public" virt="non-virtual">wxHtmlCell</basecompoundref>
+    <includes local="no">wx/html/htmlcell.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_html_container_cell_1a65c3b99cb584faba1f3745c3e6063ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHtmlContainerCell::wxHtmlContainerCell</definition>
+        <argsstring>(wxHtmlContainerCell *parent)</argsstring>
+        <name>wxHtmlContainerCell</name>
+        <param>
+          <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>parent</emphasis> is pointer to parent container or NULL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="333"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a50b6d1cafec39aaa0d114869744f22b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlContainerCell::GetAlignHor</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAlignHor</name>
+        <briefdescription>
+<para>Returns container&apos;s horizontal alignment. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="338"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a52b96ea4459c950f97ef6a25588af854" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlContainerCell::GetAlignVer</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAlignVer</name>
+        <briefdescription>
+<para>Returns container&apos;s vertical alignment. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1ac39f120ede6091ad283c69a67c9e99bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>wxColour wxHtmlContainerCell::GetBackgroundColour</definition>
+        <argsstring>()</argsstring>
+        <name>GetBackgroundColour</name>
+        <briefdescription>
+<para>Returns the background colour of the container or <computeroutput>wxNullColour</computeroutput> if no background colour is set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1ae787c31ccd1c195f1a35b6ce8136501c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlContainerCell::GetIndent</definition>
+        <argsstring>(int ind) const </argsstring>
+        <name>GetIndent</name>
+        <param>
+          <type>int</type>
+          <declname>ind</declname>
+        </param>
+        <briefdescription>
+<para>Returns the indentation. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>ind</emphasis> is one of the <bold>wxHTML_INDENT_*</bold> constants.</para><para><simplesect kind="note"><para>You must call <ref refid="classwx_html_container_cell_1a73c92ddcf2e987ea2b7fa20516443b48" kindref="member">GetIndentUnits()</ref> with same <emphasis>ind</emphasis> parameter in order to correctly interpret the returned integer value. It is NOT always in pixels! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a73c92ddcf2e987ea2b7fa20516443b48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxHtmlContainerCell::GetIndentUnits</definition>
+        <argsstring>(int ind) const </argsstring>
+        <name>GetIndentUnits</name>
+        <param>
+          <type>int</type>
+          <declname>ind</declname>
+        </param>
+        <briefdescription>
+<para>Returns the units of indentation for <emphasis>ind</emphasis> where <emphasis>ind</emphasis> is one of the <bold>wxHTML_INDENT_*</bold> constants. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a84c159f60c4bd8f82622647428720667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::InsertCell</definition>
+        <argsstring>(wxHtmlCell *cell)</argsstring>
+        <name>InsertCell</name>
+        <param>
+          <type><ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> *</type>
+          <declname>cell</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a new cell into the container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a952ce8414ab6d6b11dbe7cd143875fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetAlign</definition>
+        <argsstring>(const wxHtmlTag &amp;tag)</argsstring>
+        <name>SetAlign</name>
+        <param>
+          <type>const <ref refid="classwx_html_tag" kindref="compound">wxHtmlTag</ref> &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Sets the container&apos;s alignment (both horizontal and vertical) according to the values stored in <emphasis>tag</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>(Tags <computeroutput>ALIGN</computeroutput> parameter is extracted.) In fact it is only a front-end to <ref refid="classwx_html_container_cell_1a094ec1d188a7fb01a9ae90115480a01d" kindref="member">SetAlignHor()</ref> and <ref refid="classwx_html_container_cell_1aa46be3614d598c9100eb56f44c1404b4" kindref="member">SetAlignVer()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="376"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a094ec1d188a7fb01a9ae90115480a01d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetAlignHor</definition>
+        <argsstring>(int al)</argsstring>
+        <name>SetAlignHor</name>
+        <param>
+          <type>int</type>
+          <declname>al</declname>
+        </param>
+        <briefdescription>
+<para>Sets the container&apos;s <emphasis>horizontal</emphasis> alignment. </para>        </briefdescription>
+        <detaileddescription>
+<para>During <ref refid="classwx_html_cell_1ada68b93b129fafc7b251580408b67fd6" kindref="member">wxHtmlCell::Layout</ref> each line is aligned according to <emphasis>al</emphasis> value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>al</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new horizontal alignment. May be one of these values:<itemizedlist>
+<listitem><para>wxHTML_ALIGN_LEFT: lines are left-aligned (default)</para></listitem><listitem><para>wxHTML_ALIGN_JUSTIFY: lines are justified</para></listitem><listitem><para>wxHTML_ALIGN_CENTER: lines are centered</para></listitem><listitem><para>wxHTML_ALIGN_RIGHT: lines are right-aligned </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1aa46be3614d598c9100eb56f44c1404b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetAlignVer</definition>
+        <argsstring>(int al)</argsstring>
+        <name>SetAlignVer</name>
+        <param>
+          <type>int</type>
+          <declname>al</declname>
+        </param>
+        <briefdescription>
+<para>Sets the container&apos;s <emphasis>vertical</emphasis> alignment. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is per-line alignment!</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>al</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new vertical alignment. May be one of these values:<itemizedlist>
+<listitem><para>wxHTML_ALIGN_BOTTOM: cells are over the line (default)</para></listitem><listitem><para>wxHTML_ALIGN_CENTER: cells are centered on line</para></listitem><listitem><para>wxHTML_ALIGN_TOP: cells are under the line</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<image type="html" name="htmlcontcell_alignv.png"></image>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a05e7714fcd4bd798b835bea0a9421048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetBackgroundColour</definition>
+        <argsstring>(const wxColour &amp;clr)</argsstring>
+        <name>SetBackgroundColour</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>clr</declname>
+        </param>
+        <briefdescription>
+<para>Sets the background colour for this container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1adb6802ee9643e6d043bd3f3890ad067e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetBorder</definition>
+        <argsstring>(const wxColour &amp;clr1, const wxColour &amp;clr2, int border=1)</argsstring>
+        <name>SetBorder</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>clr1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>clr2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>border</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Sets the border (frame) colours. </para>        </briefdescription>
+        <detaileddescription>
+<para>A border is a rectangle around the container.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clr1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Colour of top and left lines </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clr2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Colour of bottom and right lines </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>border</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the border in pixels </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="419"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a1a09c3060faa3f138557b4ffdcfc9ea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetIndent</definition>
+        <argsstring>(int i, int what, int units=wxHTML_UNITS_PIXELS)</argsstring>
+        <name>SetIndent</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>what</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>units</declname>
+          <defval>wxHTML_UNITS_PIXELS</defval>
+        </param>
+        <briefdescription>
+<para>Sets the indentation (free space between borders of container and subcells). </para>        </briefdescription>
+        <detaileddescription>
+<para><image type="html" name="htmlcontcell_indent.png"></image>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indentation value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>what</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Determines which of the four borders we&apos;re setting. It is OR combination of following constants:<itemizedlist>
+<listitem><para>wxHTML_INDENT_TOP: top border</para></listitem><listitem><para>wxHTML_INDENT_BOTTOM: bottom</para></listitem><listitem><para>wxHTML_INDENT_LEFT: left</para></listitem><listitem><para>wxHTML_INDENT_RIGHT: right</para></listitem><listitem><para>wxHTML_INDENT_HORIZONTAL: left and right</para></listitem><listitem><para>wxHTML_INDENT_VERTICAL: top and bottom</para></listitem><listitem><para>wxHTML_INDENT_ALL: all 4 borders </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Units of i. This parameter affects interpretation of value.<itemizedlist>
+<listitem><para>wxHTML_UNITS_PIXELS: <emphasis>i</emphasis> is number of pixels</para></listitem><listitem><para>wxHTML_UNITS_PERCENT: <emphasis>i</emphasis> is interpreted as percents of width of parent container </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="444"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a6723a2a5143b7b9484bbe139f7bbd3dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetMinHeight</definition>
+        <argsstring>(int h, int align=wxHTML_ALIGN_TOP)</argsstring>
+        <name>SetMinHeight</name>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>align</declname>
+          <defval>wxHTML_ALIGN_TOP</defval>
+        </param>
+        <briefdescription>
+<para>Sets minimal height of the container. </para>        </briefdescription>
+        <detaileddescription>
+<para>When container&apos;s <ref refid="classwx_html_cell_1ada68b93b129fafc7b251580408b67fd6" kindref="member">wxHtmlCell::Layout</ref> is called, m_Height is set depending on layout of subcells to the height of area covered by layed-out subcells. Calling this method guarantees you that the height of container is never smaller than <emphasis>h</emphasis> - even if the subcells cover much smaller area.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimal height. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>align</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If height of the container is lower than the minimum height, empty space must be inserted somewhere in order to ensure minimal height. This parameter is one of <computeroutput>wxHTML_ALIGN_TOP</computeroutput>, <computeroutput>wxHTML_ALIGN_BOTTOM</computeroutput>, <computeroutput>wxHTML_ALIGN_CENTER</computeroutput>. It refers to the contents, not to the empty place. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a3b8c0d42641fa5324d67188920f9a5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetWidthFloat</definition>
+        <argsstring>(int w, int units)</argsstring>
+        <name>SetWidthFloat</name>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Sets floating width adjustment. </para>        </briefdescription>
+        <detaileddescription>
+<para>The normal behaviour of container is that its width is the same as the width of parent container (and thus you can have only one sub-container per line). You can change this by setting the floating width adjustment.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the container. If the value is negative it means complement to full width of parent container. E.g. <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_html_container_cell_1a3b8c0d42641fa5324d67188920f9a5ec" kindref="member" tooltip="Sets floating width adjustment.">SetWidthFloat</ref>(-50,<sp/>wxHTML_UNITS_PIXELS)<sp/></highlight></codeline>
+</programlisting> sets the width of container to parent&apos;s width minus 50 pixels. This is useful when creating tables - you can call SetWidthFloat(50) and SetWidthFloat(-50). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Units of w This parameter affects the interpretation of value.<itemizedlist>
+<listitem><para>wxHTML_UNITS_PIXELS: <emphasis>w</emphasis> is number of pixels</para></listitem><listitem><para>wxHTML_UNITS_PERCENT: <emphasis>w</emphasis> is interpreted as percents of width of parent container </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="483"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_container_cell_1a0413dfd03c409f6ccc17ebb2cfbe8756" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlContainerCell::SetWidthFloat</definition>
+        <argsstring>(const wxHtmlTag &amp;tag, double pixel_scale=1.0)</argsstring>
+        <name>SetWidthFloat</name>
+        <param>
+          <type>const <ref refid="classwx_html_tag" kindref="compound">wxHtmlTag</ref> &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pixel_scale</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Sets floating width adjustment. </para>        </briefdescription>
+        <detaileddescription>
+<para>The normal behaviour of container is that its width is the same as the width of parent container (and thus you can have only one sub-container per line). You can change this by setting the floating width adjustment.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>In the second version of method, <emphasis>w</emphasis> and <emphasis>units</emphasis> info is extracted from tag&apos;s WIDTH parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pixel_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is number of real pixels that equals to 1 HTML pixel. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="499"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> class is an implementation of a cell that may contain more cells in it. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is heavily used in the wxHTML layout algorithm.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6987">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6986">
+        <label>wxHtmlCell</label>
+        <link refid="classwx_html_cell"/>
+        <childnode refid="6987" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6985">
+        <label>wxHtmlContainerCell</label>
+        <link refid="classwx_html_container_cell"/>
+        <childnode refid="6986" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6990">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6991" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6989">
+        <label>wxHtmlCell</label>
+        <link refid="classwx_html_cell"/>
+        <childnode refid="6990" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6988">
+        <label>wxHtmlContainerCell</label>
+        <link refid="classwx_html_container_cell"/>
+        <childnode refid="6989" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6991">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="328" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" bodystart="327" bodyend="500"/>
+    <listofallmembers>
+      <member refid="classwx_html_cell_1a0444199b22671fe2a1ac7924002b683a" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>AdjustPagebreak</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlContainerCell</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHtmlContainerCell</scope><name>CreateRefData</name></member>
+      <member refid="classwx_html_cell_1abebd247b545b1885e2a6406a1fc20d0a" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>Draw</name></member>
+      <member refid="classwx_html_cell_1abe8d7bac1f334d039a55c25eb55626c0" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>DrawInvisible</name></member>
+      <member refid="classwx_html_cell_1a77d18c7c6a676e3ff14f20469423d2c6" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>Find</name></member>
+      <member refid="classwx_html_container_cell_1a50b6d1cafec39aaa0d114869744f22b3" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetAlignHor</name></member>
+      <member refid="classwx_html_container_cell_1a52b96ea4459c950f97ef6a25588af854" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetAlignVer</name></member>
+      <member refid="classwx_html_container_cell_1ac39f120ede6091ad283c69a67c9e99bd" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetBackgroundColour</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_html_cell_1abf0cf712378d49567f0708190fa15f95" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetDescent</name></member>
+      <member refid="classwx_html_cell_1a9861edcc59cf4241e3377011380a2fcc" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>GetFirstChild</name></member>
+      <member refid="classwx_html_cell_1aa4e5f0c1def82d7a9e36cca7b852eef3" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetHeight</name></member>
+      <member refid="classwx_html_cell_1affd3cb3d9817fda15d0dbcd95175764f" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetId</name></member>
+      <member refid="classwx_html_container_cell_1ae787c31ccd1c195f1a35b6ce8136501c" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetIndent</name></member>
+      <member refid="classwx_html_container_cell_1a73c92ddcf2e987ea2b7fa20516443b48" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetIndentUnits</name></member>
+      <member refid="classwx_html_cell_1a5c7611ecfbcc5ed32b824e6f85399e8b" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>GetLink</name></member>
+      <member refid="classwx_html_cell_1a609ca60b7474e5901e150f0267600563" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>GetMouseCursor</name></member>
+      <member refid="classwx_html_cell_1aebaf45b9fa4040c5a651f94ad8498739" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetNext</name></member>
+      <member refid="classwx_html_cell_1af108492ead23c2e7417d183523126555" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetParent</name></member>
+      <member refid="classwx_html_cell_1a266568dffdad8970180832b3f8339dbe" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetPosX</name></member>
+      <member refid="classwx_html_cell_1a970eec0120d6e2b21bc5711fe28cb243" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetPosY</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetRefData</name></member>
+      <member refid="classwx_html_cell_1a2e8726d5bebf99a3b3f5152af1c01698" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>GetWidth</name></member>
+      <member refid="classwx_html_container_cell_1a84c159f60c4bd8f82622647428720667" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>InsertCell</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>IsSameAs</name></member>
+      <member refid="classwx_html_cell_1ada68b93b129fafc7b251580408b67fd6" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>Layout</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>operator new</name></member>
+      <member refid="classwx_html_cell_1ae6ed35ebd27616ae32905461507fe8db" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>ProcessMouseClick</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>Ref</name></member>
+      <member refid="classwx_html_container_cell_1a952ce8414ab6d6b11dbe7cd143875fb2" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetAlign</name></member>
+      <member refid="classwx_html_container_cell_1a094ec1d188a7fb01a9ae90115480a01d" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetAlignHor</name></member>
+      <member refid="classwx_html_container_cell_1aa46be3614d598c9100eb56f44c1404b4" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetAlignVer</name></member>
+      <member refid="classwx_html_container_cell_1a05e7714fcd4bd798b835bea0a9421048" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetBackgroundColour</name></member>
+      <member refid="classwx_html_container_cell_1adb6802ee9643e6d043bd3f3890ad067e" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetBorder</name></member>
+      <member refid="classwx_html_cell_1ae70b6dde74d962102a80bbceef1ce372" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetId</name></member>
+      <member refid="classwx_html_container_cell_1a1a09c3060faa3f138557b4ffdcfc9ea6" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetIndent</name></member>
+      <member refid="classwx_html_cell_1af85de831d0381ebe7b862ed3d147f306" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetLink</name></member>
+      <member refid="classwx_html_container_cell_1a6723a2a5143b7b9484bbe139f7bbd3dc" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetMinHeight</name></member>
+      <member refid="classwx_html_cell_1af744488eb0f3fc67b15e89c88bf8e916" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetNext</name></member>
+      <member refid="classwx_html_cell_1abd0726c3573d161c7db27f12705ec124" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetParent</name></member>
+      <member refid="classwx_html_cell_1a6cba35376a5280f83450c3993f517851" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>SetPos</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetRefData</name></member>
+      <member refid="classwx_html_container_cell_1a3b8c0d42641fa5324d67188920f9a5ec" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetWidthFloat</name></member>
+      <member refid="classwx_html_container_cell_1a0413dfd03c409f6ccc17ebb2cfbe8756" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>SetWidthFloat</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>UnShare</name></member>
+      <member refid="classwx_html_cell_1aac6636a52a073486383e0f278607534b" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>wxHtmlCell</name></member>
+      <member refid="classwx_html_container_cell_1a65c3b99cb584faba1f3745c3e6063ea3" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>wxHtmlContainerCell</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxHtmlContainerCell</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxHtmlContainerCell</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

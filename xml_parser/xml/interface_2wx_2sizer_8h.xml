@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_2wx_2sizer_8h" kind="file">
+    <compoundname>sizer.h</compoundname>
+    <innerclass refid="classwx_sizer" prot="public">wxSizer</innerclass>
+    <innerclass refid="classwx_std_dialog_button_sizer" prot="public">wxStdDialogButtonSizer</innerclass>
+    <innerclass refid="classwx_sizer_item" prot="public">wxSizerItem</innerclass>
+    <innerclass refid="classwx_sizer_flags" prot="public">wxSizerFlags</innerclass>
+    <innerclass refid="classwx_flex_grid_sizer" prot="public">wxFlexGridSizer</innerclass>
+    <innerclass refid="classwx_grid_sizer" prot="public">wxGridSizer</innerclass>
+    <innerclass refid="classwx_static_box_sizer" prot="public">wxStaticBoxSizer</innerclass>
+    <innerclass refid="classwx_box_sizer" prot="public">wxBoxSizer</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="interface_2wx_2sizer_8h_1a5b5b133178b18c701fbf208271234221" prot="public" static="no">
+        <name>wxFlexSizerGrowMode</name>
+        <enumvalue id="interface_2wx_2sizer_8h_1a5b5b133178b18c701fbf208271234221ab171622cf80c558d82625163048c5a1c" prot="public">
+          <name>wxFLEX_GROWMODE_NONE</name>
+          <briefdescription>
+<para>Don&apos;t resize the cells in non-flexible direction at all. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2sizer_8h_1a5b5b133178b18c701fbf208271234221a659fcb3c33a1f8606e10b73dc2991f41" prot="public">
+          <name>wxFLEX_GROWMODE_SPECIFIED</name>
+          <briefdescription>
+<para>Uniformly resize only the specified ones (default). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2sizer_8h_1a5b5b133178b18c701fbf208271234221ac79d751697a16443a50db8d66e9d5d91" prot="public">
+          <name>wxFLEX_GROWMODE_ALL</name>
+          <briefdescription>
+<para>Uniformly resize all cells. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Values which define the behaviour for resizing <ref refid="classwx_flex_grid_sizer" kindref="compound">wxFlexGridSizer</ref> cells in the &quot;non-flexible&quot; direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1445" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" bodystart="1444" bodyend="1454"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h"/>
+  </compounddef>
+</doxygen>

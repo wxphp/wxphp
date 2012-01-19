@@ -1,0 +1,26 @@
+selector.php:
+
+This tool enables/disables methods within the library mapping.
+Takes "full_classes_set.json" and generates "classes.json". This tool 
+already requires the wxwidgets library module. It's part of a later 
+development, initially the method mapping was done by hand.
+
+full_classes_set.json:
+
+Holds a lightly modified copy of the classes.json generated 
+by the xml parser.
+	
+classes.json: 
+
+Holds the selected methods using the GUI utility. This file is 
+automatically copied to the dumps directory on the 	source_maker 
+directory each time the go.sh/go.bat is ran.
+
+manual_changes.txt:
+
+Registry of manual changes done to full_classes_set.json.
+Note that if you make changes to methods on full_classes_set.json
+and they are enabled on the classes.json you will have to manually 
+apply those changes also to classes.json since the GUI utility doesnt 
+detects this and garbage would be left hanging, producing compilation 
+errors. (duplicated methods with different definitions)

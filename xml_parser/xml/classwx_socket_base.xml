@@ -1,0 +1,1040 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_socket_base" kind="class" prot="public">
+    <compoundname>wxSocketBase</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <derivedcompoundref refid="classwx_datagram_socket" prot="public" virt="non-virtual">wxDatagramSocket</derivedcompoundref>
+    <derivedcompoundref refid="classwx_socket_client" prot="public" virt="non-virtual">wxSocketClient</derivedcompoundref>
+    <derivedcompoundref refid="classwx_socket_server" prot="public" virt="non-virtual">wxSocketServer</derivedcompoundref>
+    <includes local="no">wx/socket.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Construction and Destruction</header>
+      <description><para><anchor id="_1amgrp4c01d48151768cf79c4dba8cc909606d"/> </para></description>
+      <memberdef kind="function" id="classwx_socket_base_1a3bf32997db6732a5b053d8d52b1173f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxSocketBase::wxSocketBase</definition>
+        <argsstring>()</argsstring>
+        <name>wxSocketBase</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Don&apos;t use it directly; instead, use <ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref> to construct a socket client, or <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref> to construct a socket server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="674"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a636e72242dd5550e84456c277ca31222" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxSocketBase::~wxSocketBase</definition>
+        <argsstring>()</argsstring>
+        <name>~wxSocketBase</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Do not destroy a socket using the delete operator directly; use <ref refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" kindref="member">Destroy()</ref> instead. Also, do not create socket objects in the stack. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="682"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <briefdescription>
+<para>Destroys the socket safely. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use this function instead of the delete operator, since otherwise socket events could reach the application even after the socket has been destroyed. To prevent this problem, this function appends the wxSocket to a list of object to be deleted on idle time, after all events have been processed. For the same reason, you should avoid creating socket objects in the stack.</para><para><ref refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" kindref="member">Destroy()</ref> calls <ref refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" kindref="member">Close()</ref> automatically.</para><para><simplesect kind="return"><para>Always true. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="697"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxSocketBase::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+<para>Perform the initialization needed in order to use the sockets. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called from wxSocket constructor implicitly and so normally doesn&apos;t need to be called explicitly. There is however one important exception: as this function must be called from the main (UI) thread, if you use wxSocket from multiple threads you must call <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref> from the main thread before creating wxSocket objects in the other ones.</para><para>It is safe to call this function multiple times (only the first call does anything) but you must call <ref refid="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" kindref="member">Shutdown()</ref> exactly once for every call to <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref>.</para><para>This function should only be called from the main thread.</para><para><simplesect kind="return"><para>true if the sockets can be used, false if the initialization failed and sockets are not available at all. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="719"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxSocketBase::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <briefdescription>
+<para>Shut down the sockets. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function undoes the call to <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref> and must be called after every successful call to <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref>.</para><para>This function should only be called from the main thread, just as <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="730"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Socket State</header>
+      <description><para><anchor id="_1amgrp11a4b3ca2e7694a5a290b95b97953139"/> </para></description>
+      <memberdef kind="function" id="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::Error</definition>
+        <argsstring>() const </argsstring>
+        <name>Error</name>
+        <briefdescription>
+<para>Returns true if an error occurred in the last IO operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use this function to check for an error condition after one of the following calls: <ref refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" kindref="member">Discard()</ref>, <ref refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" kindref="member">Peek()</ref>, <ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref>, <ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref>, <ref refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" kindref="member">Unread()</ref>, <ref refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" kindref="member">Write()</ref>, <ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="746"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a1751b32af0172a30f544068100ba90d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxSocketBase::GetLocal</definition>
+        <argsstring>(wxSockAddress &amp;addr) const </argsstring>
+        <name>GetLocal</name>
+        <param>
+          <type><ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref> &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Return the local address of the socket. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if no error happened, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="753"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1aae825b5309067c212640189d6ad7e993" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxSocketBase::GetPeer</definition>
+        <argsstring>(wxSockAddress &amp;addr) const </argsstring>
+        <name>GetPeer</name>
+        <param>
+          <type><ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref> &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Return the peer address field of the socket. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if no error happened, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="760"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1adb940bb2853901b4ea0b2840964f8e5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxSocketBase::GetTimeout</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTimeout</name>
+        <briefdescription>
+<para>Return the socket timeout in seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>The timeout can be set using <ref refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" kindref="member">SetTimeout()</ref> and is 10 minutes by default. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="767"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a2d171f3eac0dbc9211f0032188d381ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::IsConnected</definition>
+        <argsstring>() const </argsstring>
+        <name>IsConnected</name>
+        <briefdescription>
+<para>Returns true if the socket is connected. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="772"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a6703a3dd7c15fcb2eff7c7baf0b886f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::IsData</definition>
+        <argsstring>()</argsstring>
+        <name>IsData</name>
+        <briefdescription>
+<para>Check if the socket can be currently read or written. </para>        </briefdescription>
+        <detaileddescription>
+<para>This might mean that queued data is available for reading or, for streamed sockets, that the connection has been closed, so that a read operation will complete immediately without blocking (unless the <bold>wxSOCKET_WAITALL</bold> flag is set, in which case the operation might still block). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="782"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1ac5118b15195664969b7d914a045936f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::IsDisconnected</definition>
+        <argsstring>() const </argsstring>
+        <name>IsDisconnected</name>
+        <briefdescription>
+<para>Returns true if the socket is not connected. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="787"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the socket is initialized and ready and false in other cases. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>For <ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref>, <ref refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" kindref="member">IsOk()</ref> won&apos;t return true unless the client is connected to a server. For <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref>, <ref refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" kindref="member">IsOk()</ref> will return true if the server could bind to the specified address and is already listening for new connections. <ref refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" kindref="member">IsOk()</ref> does not check for IO errors; use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref> instead for that purpose. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="799"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+        <definition>wxUint32 wxSocketBase::LastCount</definition>
+        <argsstring>() const </argsstring>
+        <name>LastCount</name>
+        <briefdescription>
+<para>Returns the number of bytes read or written by the last IO call. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use this function to get the number of bytes actually transferred after using one of the following IO calls: <ref refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" kindref="member">Discard()</ref>, <ref refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" kindref="member">Peek()</ref>, <ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref>, <ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref>, <ref refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" kindref="member">Unread()</ref>, <ref refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" kindref="member">Write()</ref>, <ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="808"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6" kindref="member">wxSocketError</ref></type>
+        <definition>wxSocketError wxSocketBase::LastError</definition>
+        <argsstring>() const </argsstring>
+        <name>LastError</name>
+        <briefdescription>
+<para>Returns the last wxSocket error. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6" kindref="member">wxSocketError</ref> .</para><para><simplesect kind="note"><para>This function merely returns the last error code, but it should not be used to determine if an error has occurred (this is because successful operations do not change the LastError value). Use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref> first, in order to determine if the last IO call failed. If this returns true, use <ref refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" kindref="member">LastError()</ref> to discover the cause of the error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="820"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::RestoreState</definition>
+        <argsstring>()</argsstring>
+        <name>RestoreState</name>
+        <briefdescription>
+<para>Restore the previous state of the socket, as saved with <ref refid="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" kindref="member">SaveState()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calls to <ref refid="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" kindref="member">SaveState()</ref> and <ref refid="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" kindref="member">RestoreState()</ref> can be nested.</para><para><simplesect kind="see"><para><ref refid="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" kindref="member">SaveState()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="829"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::SaveState</definition>
+        <argsstring>()</argsstring>
+        <name>SaveState</name>
+        <briefdescription>
+<para>Save the current state of the socket in a stack. </para>        </briefdescription>
+        <detaileddescription>
+<para>Socket state includes flags, as set with <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref>, event mask, as set with <ref refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" kindref="member">SetNotify()</ref> and <ref refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" kindref="member">Notify()</ref>, user data, as set with <ref refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" kindref="member">SetClientData()</ref>. Calls to SaveState and RestoreState can be nested.</para><para><simplesect kind="see"><para><ref refid="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" kindref="member">RestoreState()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="840"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Basic I/O</header>
+      <description><para><anchor id="_1amgrp5962bd3a4e3d75d2eb9b928c8bc68834"/>See also: <ref refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" kindref="member">wxSocketServer::WaitForAccept()</ref>, <ref refid="classwx_socket_client_1a83c92e8c27a72c3610c9eb0b60e92d74" kindref="member">wxSocketClient::WaitOnConnect()</ref> </para></description>
+      <memberdef kind="function" id="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxSocketBase::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <reimplementedby refid="classwx_f_t_p_1ae7e072cefb173542f20946cd50ef6213">Close</reimplementedby>
+        <briefdescription>
+<para>Shut down the socket, disabling further transmission and reception of data and disable events for the socket and frees the associated system resources. </para>        </briefdescription>
+        <detaileddescription>
+<para>Upon socket destruction, <ref refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" kindref="member">Close()</ref> is automatically called, so in most cases you won&apos;t need to do it yourself, unless you explicitly want to shut down the socket, typically to notify the peer that you are closing the connection.</para><para><simplesect kind="remark"><para>Although <ref refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" kindref="member">Close()</ref> immediately disables events for the socket, it is possible that event messages may be waiting in the application&apos;s event queue. The application must therefore be prepared to handle socket event messages even after calling <ref refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" kindref="member">Close()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="867"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a90d2aea95b10c68eee2656860d90e23e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::ShutdownOutput</definition>
+        <argsstring>()</argsstring>
+        <name>ShutdownOutput</name>
+        <briefdescription>
+<para>Shuts down the writing end of the socket. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function simply calls the standard shutdown() function on the underlying socket, indicating that nothing will be written to this socket any more. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="876"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
+        <definition>wxSocketBase&amp; wxSocketBase::Discard</definition>
+        <argsstring>()</argsstring>
+        <name>Discard</name>
+        <briefdescription>
+<para>Delete all bytes in the incoming queue. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function always returns immediately and its operation is not affected by IO flags.</para><para>Use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref> to verify the number of bytes actually discarded.</para><para>If you use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, it will always return false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="888"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a1eecc8010fa40587623778cf9902e661" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>wxSocketFlags</type>
+        <definition>wxSocketFlags wxSocketBase::GetFlags</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFlags</name>
+        <briefdescription>
+<para>Returns current IO flags, as set with <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="893"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::InterruptWait</definition>
+        <argsstring>()</argsstring>
+        <name>InterruptWait</name>
+        <briefdescription>
+<para>Use this function to interrupt any wait operation currently in progress. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that this is not intended as a regular way to interrupt a Wait call, but only as an escape mechanism for exceptional situations where it is absolutely necessary to use it, for example to abort an operation due to some exception or abnormal problem. InterruptWait is automatically called when you <ref refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" kindref="member">Close()</ref> a socket (and thus also upon socket destruction), so you don&apos;t need to use it in these cases.</para><para><simplesect kind="see"><para><ref refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" kindref="member">Wait()</ref>, <ref refid="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" kindref="member">WaitForLost()</ref>, <ref refid="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" kindref="member">WaitForRead()</ref>, <ref refid="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" kindref="member">WaitForWrite()</ref>, <ref refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" kindref="member">wxSocketServer::WaitForAccept()</ref>, <ref refid="classwx_socket_client_1a83c92e8c27a72c3610c9eb0b60e92d74" kindref="member">wxSocketClient::WaitOnConnect()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="908"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
+        <definition>wxSocketBase&amp; wxSocketBase::Peek</definition>
+        <argsstring>(void *buffer, wxUint32 nbytes)</argsstring>
+        <name>Peek</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+<para>Peek into the socket by copying the next bytes which would be read by <ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref> into the provided buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Peeking a buffer doesn&apos;t delete it from the socket input queue, i.e. calling <ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref> will return the same data.</para><para>Use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref> to verify the number of bytes actually peeked.</para><para>Use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref> to determine if the operation succeeded.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where to put peeked data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a reference to the current object.</para></simplesect>
+<simplesect kind="remark"><para>The exact behaviour of <ref refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" kindref="member">Peek()</ref> depends on the combination of flags being used. For a detailed explanation, see <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref></para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, <ref refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" kindref="member">LastError()</ref>, <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref>, <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="934"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
+        <definition>wxSocketBase&amp; wxSocketBase::Read</definition>
+        <argsstring>(void *buffer, wxUint32 nbytes)</argsstring>
+        <name>Read</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+<para>Read up to the given number of bytes from the socket. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref> to verify the number of bytes actually read. Use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref> to determine if the operation succeeded.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where to put read data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a reference to the current object.</para></simplesect>
+<simplesect kind="remark"><para>The exact behaviour of <ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref> depends on the combination of flags being used. For a detailed explanation, see <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref></para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, <ref refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" kindref="member">LastError()</ref>, <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref>, <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="956"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
+        <definition>wxSocketBase&amp; wxSocketBase::ReadMsg</definition>
+        <argsstring>(void *buffer, wxUint32 nbytes)</argsstring>
+        <name>ReadMsg</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+<para>Receive a message sent by <ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the buffer passed to the function isn&apos;t big enough, the remaining bytes will be discarded. This function always waits for the buffer to be entirely filled, unless an error occurs.</para><para>Use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref> to verify the number of bytes actually read.</para><para>Use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref> to determine if the operation succeeded.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where to put read data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a reference to the current object.</para></simplesect>
+<simplesect kind="remark"><para><ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref> will behave as if the <bold>wxSOCKET_WAITALL</bold> flag was always set and it will always ignore the <bold>wxSOCKET_NOWAIT</bold> flag. The exact behaviour of <ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref> depends on the <bold>wxSOCKET_BLOCK</bold> flag. For a detailed explanation, see <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref>.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, <ref refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" kindref="member">LastError()</ref>, <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref>, <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref>, <ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="984"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::SetFlags</definition>
+        <argsstring>(wxSocketFlags flags)</argsstring>
+        <name>SetFlags</name>
+        <param>
+          <type>wxSocketFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Use SetFlags to customize IO operation for this socket. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>flags</emphasis> parameter may be a combination of flags ORed together. Notice that not all combinations of flags affecting the IO calls (<ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref> and <ref refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" kindref="member">Write()</ref>) make sense, e.g. <bold>wxSOCKET_NOWAIT</bold> can&apos;t be combined with <bold>wxSOCKET_WAITALL</bold> nor with <bold>wxSOCKET_BLOCK</bold>.</para><para>The following flags can be used:  <itemizedlist>
+<listitem><para>wxSOCKET_NONE: Default mode: the socket will read some data in the IO calls and will process events to avoid blocking UI while waiting for the data to become available. </para></listitem>
+<listitem><para>wxSOCKET_NOWAIT: Don&apos;t wait for the socket to become ready in IO calls, read as much data as is available -- potentially 0 bytes -- and return immediately. </para></listitem>
+<listitem><para>wxSOCKET_WAITALL: Don&apos;t return before the entire amount of data specified in IO calls is read or written unless an error occurs. If this flag is not specified, the IO calls return as soon as any amount of data, even less than the total number of bytes, is processed. </para></listitem>
+<listitem><para>wxSOCKET_BLOCK: Don&apos;t process the UI events while waiting for the socket to become ready. This means that UI will be unresponsive during socket IO. </para></listitem>
+<listitem><para>wxSOCKET_REUSEADDR: Allows the use of an in-use port (wxServerSocket only). </para></listitem>
+<listitem><para>wxSOCKET_BROADCAST: Switches the socket to broadcast mode. </para></listitem>
+<listitem><para>wxSOCKET_NOBIND: Stops the socket from being bound to a specific adapter (normally used in conjunction with <bold>wxSOCKET_BROADCAST</bold>). </para></listitem>
+</itemizedlist>
+For more information on socket events see <ref refid="socket_8h_1wxSocketFlags" kindref="member">wxSocketFlags</ref> . </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1023"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a18b26d4201f86daf64c881433c68a1b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxSocketBase::SetLocal</definition>
+        <argsstring>(const wxIPV4address &amp;local)</argsstring>
+        <name>SetLocal</name>
+        <param>
+          <type>const <ref refid="classwx_i_p_v4address" kindref="compound">wxIPV4address</ref> &amp;</type>
+          <declname>local</declname>
+        </param>
+        <briefdescription>
+<para>Set the local address and port to use. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function must always be called for the server sockets but may also be called for client sockets, if it is, <bold>bind()</bold> is called before <bold>connect()</bold>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1032"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::SetTimeout</definition>
+        <argsstring>(long seconds)</argsstring>
+        <name>SetTimeout</name>
+        <param>
+          <type>long</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+<para>Set the default socket timeout in seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>This timeout applies to all IO calls, and also to the <ref refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" kindref="member">Wait()</ref> family of functions if you don&apos;t specify a wait interval. Initially, the default timeout is 10 minutes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1041"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
+        <definition>wxSocketBase&amp; wxSocketBase::Unread</definition>
+        <argsstring>(const void *buffer, wxUint32 nbytes)</argsstring>
+        <name>Unread</name>
+        <param>
+          <type>const void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+<para>Put the specified data into the input queue. </para>        </briefdescription>
+        <detaileddescription>
+<para>The data in the buffer will be returned by the next call to <ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref>.</para><para>This function is not affected by wxSocket flags.</para><para>If you use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref>, it will always return <emphasis>nbytes</emphasis>.</para><para>If you use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, it will always return false.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to be unread. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a reference to the current object.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref>, <ref refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" kindref="member">LastError()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1063"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::Wait</definition>
+        <argsstring>(long seconds=-1, long millisecond=0)</argsstring>
+        <name>Wait</name>
+        <param>
+          <type>long</type>
+          <declname>seconds</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>millisecond</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Wait for any socket event. </para>        </briefdescription>
+        <detaileddescription>
+<para>Possible socket events are: <itemizedlist>
+<listitem><para>The socket becomes readable. </para></listitem>
+<listitem><para>The socket becomes writable. </para></listitem>
+<listitem><para>An ongoing connection request has completed (<ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref> only) </para></listitem>
+<listitem><para>An incoming connection request has arrived (<ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref> only) </para></listitem>
+<listitem><para>The connection has been closed.</para></listitem>
+</itemizedlist>
+Note that it is recommended to use the individual <bold>WaitForXXX()</bold> functions to wait for the required condition, instead of this one.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds to wait. If -1, it will wait for the default timeout, as set with <ref refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" kindref="member">SetTimeout()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>millisecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds to wait.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true when any of the above conditions is satisfied or false if the timeout was reached.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" kindref="member">InterruptWait()</ref>, <ref refid="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" kindref="member">wxSocketServer::WaitForAccept()</ref>, <ref refid="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" kindref="member">WaitForLost()</ref>, <ref refid="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" kindref="member">WaitForRead()</ref>, <ref refid="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" kindref="member">WaitForWrite()</ref>, <ref refid="classwx_socket_client_1a83c92e8c27a72c3610c9eb0b60e92d74" kindref="member">wxSocketClient::WaitOnConnect()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1093"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::WaitForLost</definition>
+        <argsstring>(long seconds=-1, long millisecond=0)</argsstring>
+        <name>WaitForLost</name>
+        <param>
+          <type>long</type>
+          <declname>seconds</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>millisecond</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Wait until the connection is lost. </para>        </briefdescription>
+        <detaileddescription>
+<para>This may happen if the peer gracefully closes the connection or if the connection breaks.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds to wait. If -1, it will wait for the default timeout, as set with <ref refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" kindref="member">SetTimeout()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>millisecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds to wait.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the connection was lost, false if the timeout was reached.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" kindref="member">InterruptWait()</ref>, <ref refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" kindref="member">Wait()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1113"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::WaitForRead</definition>
+        <argsstring>(long seconds=-1, long millisecond=0)</argsstring>
+        <name>WaitForRead</name>
+        <param>
+          <type>long</type>
+          <declname>seconds</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>millisecond</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Wait until the socket is readable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This might mean that queued data is available for reading or, for streamed sockets, that the connection has been closed, so that a read operation will complete immediately without blocking (unless the <bold>wxSOCKET_WAITALL</bold> flag is set, in which case the operation might still block).</para><para>Notice that this function should not be called if there is already data available for reading on the socket.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds to wait. If -1, it will wait for the default timeout, as set with <ref refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" kindref="member">SetTimeout()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>millisecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds to wait.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the socket becomes readable, false on timeout.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" kindref="member">InterruptWait()</ref>, <ref refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" kindref="member">Wait()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1137"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxSocketBase::WaitForWrite</definition>
+        <argsstring>(long seconds=-1, long millisecond=0)</argsstring>
+        <name>WaitForWrite</name>
+        <param>
+          <type>long</type>
+          <declname>seconds</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>millisecond</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Wait until the socket becomes writable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This might mean that the socket is ready to send new data, or for streamed sockets, that the connection has been closed, so that a write operation is guaranteed to complete immediately (unless the <bold>wxSOCKET_WAITALL</bold> flag is set, in which case the operation might still block).</para><para>Notice that this function should not be called if the socket is already writable.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds to wait. If -1, it will wait for the default timeout, as set with <ref refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" kindref="member">SetTimeout()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>millisecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds to wait.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the socket becomes writable, false on timeout.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" kindref="member">InterruptWait()</ref>, <ref refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" kindref="member">Wait()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
+        <definition>wxSocketBase&amp; wxSocketBase::Write</definition>
+        <argsstring>(const void *buffer, wxUint32 nbytes)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>const void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+<para>Write up to the given number of bytes to the socket. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref> to verify the number of bytes actually written.</para><para>Use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref> to determine if the operation succeeded.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer with the data to be sent. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a reference to the current object.</para></simplesect>
+<simplesect kind="remark"><para></para></simplesect>
+The exact behaviour of <ref refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" kindref="member">Write()</ref> depends on the combination of flags being used. For a detailed explanation, see <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, <ref refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" kindref="member">LastError()</ref>, <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref>, <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1184"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
+        <definition>wxSocketBase&amp; wxSocketBase::WriteMsg</definition>
+        <argsstring>(const void *buffer, wxUint32 nbytes)</argsstring>
+        <name>WriteMsg</name>
+        <param>
+          <type>const void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+<para>Sends a buffer which can be read using <ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref> sends a short header before the data so that <ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref> knows how much data should be actually read.</para><para>This function always waits for the entire buffer to be sent, unless an error occurs.</para><para>Use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref> to verify the number of bytes actually written.</para><para>Use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref> to determine if the operation succeeded.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer with the data to be sent. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to send.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a reference to the current object.</para></simplesect>
+<simplesect kind="remark"><para></para></simplesect>
+<ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref> will behave as if the <bold>wxSOCKET_WAITALL</bold> flag was always set and it will always ignore the <bold>wxSOCKET_NOWAIT</bold> flag. The exact behaviour of <ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref> depends on the <bold>wxSOCKET_BLOCK</bold> flag. For a detailed explanation, see <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, <ref refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" kindref="member">LastError()</ref>, <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref>, <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">SetFlags()</ref>, <ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1216"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Handling Socket Events</header>
+      <description><para><anchor id="_1amgrpd94968408a849875ecf1d37ca3788e42"/> </para></description>
+      <memberdef kind="function" id="classwx_socket_base_1a9dd69ce31cb441c2c47e374256fabcc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* wxSocketBase::GetClientData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetClientData</name>
+        <briefdescription>
+<para>Returns a pointer of the client data for this socket, as set with <ref refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" kindref="member">SetClientData()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1230"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::Notify</definition>
+        <argsstring>(bool notify)</argsstring>
+        <name>Notify</name>
+        <param>
+          <type>bool</type>
+          <declname>notify</declname>
+        </param>
+        <briefdescription>
+<para>According to the <emphasis>notify</emphasis> value, this function enables or disables socket events. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>notify</emphasis> is true, the events configured with <ref refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" kindref="member">SetNotify()</ref> will be sent to the application. If <emphasis>notify</emphasis> is false; no events will be sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1239"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::SetClientData</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>SetClientData</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Sets user-supplied client data for this socket. </para>        </briefdescription>
+        <detaileddescription>
+<para>All socket events will contain a pointer to this data, which can be retrieved with the <ref refid="classwx_socket_event_1ad25a41eaa76521bef7c9d9a3d2bb0936" kindref="member">wxSocketEvent::GetClientData()</ref> function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1246"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a09819e56d36638fb6b45bf3dd7ea8742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::SetEventHandler</definition>
+        <argsstring>(wxEvtHandler &amp;handler, int id=-1)</argsstring>
+        <name>SetEventHandler</name>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> &amp;</type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Sets an event handler to be called when a socket event occurs. </para>        </briefdescription>
+        <detaileddescription>
+<para>The handler will be called for those events for which notification is enabled with <ref refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" kindref="member">SetNotify()</ref> and <ref refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" kindref="member">Notify()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the event handler you want to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of socket event.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" kindref="member">SetNotify()</ref>, <ref refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" kindref="member">Notify()</ref>, <ref refid="classwx_socket_event" kindref="compound">wxSocketEvent</ref>, <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1261"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxSocketBase::SetNotify</definition>
+        <argsstring>(wxSocketEventFlags flags)</argsstring>
+        <name>SetNotify</name>
+        <param>
+          <type><ref refid="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353" kindref="member">wxSocketEventFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Specifies which socket events are to be sent to the event handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>flags</emphasis> parameter may be combination of flags ORed together. The following flags can be used:</para><para> <itemizedlist>
+<listitem><para>wxSOCKET_INPUT_FLAG: to receive <bold>wxSOCKET_INPUT</bold>. </para></listitem>
+<listitem><para>wxSOCKET_OUTPUT_FLAG: to receive <bold>wxSOCKET_OUTPUT</bold>. </para></listitem>
+<listitem><para>wxSOCKET_CONNECTION_FLAG: to receive <bold>wxSOCKET_CONNECTION</bold>. </para></listitem>
+<listitem><para>wxSOCKET_LOST_FLAG: to receive <bold>wxSOCKET_LOST</bold>. </para></listitem>
+</itemizedlist>
+For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sock.SetNotify(wxSOCKET_INPUT_FLAG<sp/>|<sp/>wxSOCKET_LOST_FLAG);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sock.Notify(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>In this example, the user will be notified about incoming socket data and whenever the connection is closed.</para><para>For more information on socket events see <ref refid="socket_8h_1wxSocketEventFlags" kindref="member">wxSocketEventFlags</ref> . </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1287"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> is the base class for all socket-related objects, and it defines all basic IO functionality. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>When using wxSocket from multiple threads, even implicitly (e.g. by using <ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> or <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> in another thread) you must initialize the sockets from the main thread by calling <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref> before creating the other ones.</para></simplesect>
+<heading level="2">Events emitted by this class</heading>
+</para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_socket_event" kindref="compound">wxSocketEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
+<listitem><para>EVT_SOCKET(id,  func): Process a <computeroutput>wxEVT_SOCKET</computeroutput> event. See <ref refid="socket_8h_1wxSocketEventFlags" kindref="member">wxSocketEventFlags</ref> and <ref refid="socket_8h_1wxSocketFlags" kindref="member">wxSocketFlags</ref> for more info. </para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_event" kindref="compound">wxSocketEvent</ref>, <ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref>, <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref>, <ref refid="page__samples_1page_samples_sockets" kindref="member">Sockets Sample</ref>, <ref refid="socket_8h_1wxSocketFlags" kindref="member">wxSocketFlags</ref>, <ref refid="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353" kindref="member">wxSocketEventFlags</ref>, <ref refid="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6" kindref="member">wxSocketError</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10221">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="10222" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10222">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="10223">
+        <label>wxDatagramSocket</label>
+        <link refid="classwx_datagram_socket"/>
+        <childnode refid="10221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10224">
+        <label>wxSocketClient</label>
+        <link refid="classwx_socket_client"/>
+        <childnode refid="10221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10228">
+        <label>wxSocketServer</label>
+        <link refid="classwx_socket_server"/>
+        <childnode refid="10221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10226">
+        <label>wxFTP</label>
+        <link refid="classwx_f_t_p"/>
+        <childnode refid="10225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10227">
+        <label>wxHTTP</label>
+        <link refid="classwx_h_t_t_p"/>
+        <childnode refid="10225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10225">
+        <label>wxProtocol</label>
+        <link refid="classwx_protocol"/>
+        <childnode refid="10224" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10229">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="10230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10230">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="10231" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10231">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="660" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="659" bodyend="1290"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSocketBase</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSocketBase</scope><name>CloneRefData</name></member>
+      <member refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" prot="public" virt="virtual"><scope>wxSocketBase</scope><name>Close</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxSocketBase</scope><name>CreateRefData</name></member>
+      <member refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Destroy</name></member>
+      <member refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Discard</name></member>
+      <member refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Error</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxSocketBase</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_socket_base_1a9dd69ce31cb441c2c47e374256fabcc4" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>GetClientData</name></member>
+      <member refid="classwx_socket_base_1a1eecc8010fa40587623778cf9902e661" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>GetFlags</name></member>
+      <member refid="classwx_socket_base_1a1751b32af0172a30f544068100ba90d2" prot="public" virt="virtual"><scope>wxSocketBase</scope><name>GetLocal</name></member>
+      <member refid="classwx_socket_base_1aae825b5309067c212640189d6ad7e993" prot="public" virt="virtual"><scope>wxSocketBase</scope><name>GetPeer</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>GetRefData</name></member>
+      <member refid="classwx_socket_base_1adb940bb2853901b4ea0b2840964f8e5b" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>GetTimeout</name></member>
+      <member refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Initialize</name></member>
+      <member refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>InterruptWait</name></member>
+      <member refid="classwx_socket_base_1a2d171f3eac0dbc9211f0032188d381ac" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>IsConnected</name></member>
+      <member refid="classwx_socket_base_1a6703a3dd7c15fcb2eff7c7baf0b886f5" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>IsData</name></member>
+      <member refid="classwx_socket_base_1ac5118b15195664969b7d914a045936f6" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>IsDisconnected</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>IsKindOf</name></member>
+      <member refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>IsSameAs</name></member>
+      <member refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>LastCount</name></member>
+      <member refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>LastError</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSocketBase</scope><name>m_refData</name></member>
+      <member refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Notify</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>operator new</name></member>
+      <member refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Peek</name></member>
+      <member refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Read</name></member>
+      <member refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>ReadMsg</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Ref</name></member>
+      <member refid="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>RestoreState</name></member>
+      <member refid="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>SaveState</name></member>
+      <member refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>SetClientData</name></member>
+      <member refid="classwx_socket_base_1a09819e56d36638fb6b45bf3dd7ea8742" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>SetEventHandler</name></member>
+      <member refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>SetFlags</name></member>
+      <member refid="classwx_socket_base_1a18b26d4201f86daf64c881433c68a1b3" prot="public" virt="virtual"><scope>wxSocketBase</scope><name>SetLocal</name></member>
+      <member refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>SetNotify</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>SetRefData</name></member>
+      <member refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>SetTimeout</name></member>
+      <member refid="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Shutdown</name></member>
+      <member refid="classwx_socket_base_1a90d2aea95b10c68eee2656860d90e23e" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>ShutdownOutput</name></member>
+      <member refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Unread</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>UnShare</name></member>
+      <member refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Wait</name></member>
+      <member refid="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>WaitForLost</name></member>
+      <member refid="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>WaitForRead</name></member>
+      <member refid="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>WaitForWrite</name></member>
+      <member refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>Write</name></member>
+      <member refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>WriteMsg</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>wxObject</name></member>
+      <member refid="classwx_socket_base_1a3bf32997db6732a5b053d8d52b1173f0" prot="public" virt="non-virtual"><scope>wxSocketBase</scope><name>wxSocketBase</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxSocketBase</scope><name>~wxObject</name></member>
+      <member refid="classwx_socket_base_1a636e72242dd5550e84456c277ca31222" prot="public" virt="virtual"><scope>wxSocketBase</scope><name>~wxSocketBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

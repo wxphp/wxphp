@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__dc" kind="group">
+    <compoundname>group_class_dc</compoundname>
+    <title>Device Contexts</title>
+    <innerclass refid="structwx_font_metrics" prot="public">wxFontMetrics</innerclass>
+    <innerclass refid="classwx_d_c" prot="public">wxDC</innerclass>
+    <innerclass refid="classwx_buffered_d_c" prot="public">wxBufferedDC</innerclass>
+    <innerclass refid="classwx_auto_buffered_paint_d_c" prot="public">wxAutoBufferedPaintDC</innerclass>
+    <innerclass refid="classwx_buffered_paint_d_c" prot="public">wxBufferedPaintDC</innerclass>
+    <innerclass refid="classwx_paint_d_c" prot="public">wxPaintDC</innerclass>
+    <innerclass refid="classwx_client_d_c" prot="public">wxClientDC</innerclass>
+    <innerclass refid="classwx_window_d_c" prot="public">wxWindowDC</innerclass>
+    <innerclass refid="classwx_g_c_d_c" prot="public">wxGCDC</innerclass>
+    <innerclass refid="classwx_memory_d_c" prot="public">wxMemoryDC</innerclass>
+    <innerclass refid="classwx_mirror_d_c" prot="public">wxMirrorDC</innerclass>
+    <innerclass refid="classwx_post_script_d_c" prot="public">wxPostScriptDC</innerclass>
+    <innerclass refid="classwx_screen_d_c" prot="public">wxScreenDC</innerclass>
+    <innerclass refid="classwx_s_v_g_file_d_c" prot="public">wxSVGFileDC</innerclass>
+    <innerclass refid="classwx_graphics_context" prot="public">wxGraphicsContext</innerclass>
+    <innerclass refid="classwx_metafile_d_c" prot="public">wxMetafileDC</innerclass>
+    <briefdescription>
+<para>Device contexts are surfaces that may be drawn on, and provide an abstraction that allows parameterisation of your drawing code by passing different device contexts. </para>    </briefdescription>
+    <detaileddescription>
+<para>Related Overviews: <ref refid="overview__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

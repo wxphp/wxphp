@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_m_b_conv_u_t_f32" kind="class" prot="public">
+    <compoundname>wxMBConvUTF32</compoundname>
+    <basecompoundref refid="classwx_m_b_conv" prot="public" virt="non-virtual">wxMBConv</basecompoundref>
+    <includes local="no">wx/strconv.h</includes>
+    <briefdescription>
+<para>This class is used to convert between multibyte encodings and UTF-32 Unicode encoding (also known as UCS-4). </para>    </briefdescription>
+    <detaileddescription>
+<para>Unlike UTF-8 encoding, UTF-32 uses (double) words and not bytes and hence depends on the byte ordering: big or little endian. Hence this class is provided in two versions: wxMBConvUTF32LE and wxMBConvUTF32BE and <ref refid="classwx_m_b_conv_u_t_f32" kindref="compound">wxMBConvUTF32</ref> itself is just a typedef for one of them (native for the given platform, e.g. LE under Windows and BE under Mac).</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv_u_t_f8" kindref="compound">wxMBConvUTF8</ref>, <ref refid="classwx_m_b_conv_u_t_f16" kindref="compound">wxMBConvUTF16</ref>, <ref refid="overview__mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7582">
+        <label>wxMBConvUTF32</label>
+        <link refid="classwx_m_b_conv_u_t_f32"/>
+        <childnode refid="7583" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7583">
+        <label>wxMBConv</label>
+        <link refid="classwx_m_b_conv"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7584">
+        <label>wxMBConvUTF32</label>
+        <link refid="classwx_m_b_conv_u_t_f32"/>
+        <childnode refid="7585" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7585">
+        <label>wxMBConv</label>
+        <link refid="classwx_m_b_conv"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="416" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" bodystart="415" bodyend="417"/>
+    <listofallmembers>
+      <member refid="classwx_m_b_conv_1ae6fd1020a2c7c82191c4822682e80d05" prot="public" virt="pure-virtual"><scope>wxMBConvUTF32</scope><name>Clone</name></member>
+      <member refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cMB2WC</name></member>
+      <member refid="classwx_m_b_conv_1aced3961b0bdad13f390343b2b70d49b1" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cMB2WC</name></member>
+      <member refid="classwx_m_b_conv_1a62b723fea6758812e786a3ec5797f8ba" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cMB2WX</name></member>
+      <member refid="classwx_m_b_conv_1af8632260d14b0afcba0f2bc524ca2134" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cMB2WX</name></member>
+      <member refid="classwx_m_b_conv_1a496c808fc769800659e5de1a74115a54" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cWC2MB</name></member>
+      <member refid="classwx_m_b_conv_1a34d1ea0725e5001e4f74a5dbf5c81c4f" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cWC2MB</name></member>
+      <member refid="classwx_m_b_conv_1a9bcb820aebfdd3d3e50a929b01c52f8d" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cWC2WX</name></member>
+      <member refid="classwx_m_b_conv_1ac6c7885e9186d5ce2786b49169c872f1" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cWC2WX</name></member>
+      <member refid="classwx_m_b_conv_1a15f4266aa96806bb5eebc9b1c4eaff05" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cWX2MB</name></member>
+      <member refid="classwx_m_b_conv_1a3bbb71a7814c12dac290f6b61a3acc15" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cWX2MB</name></member>
+      <member refid="classwx_m_b_conv_1ae08f0764f8acb6b075846c8bf126f57b" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cWX2WC</name></member>
+      <member refid="classwx_m_b_conv_1ab4eec03d83e532986aca1e41ad472bb8" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>cWX2WC</name></member>
+      <member refid="classwx_m_b_conv_1a149c15b515e008fdd1f69a852f11594e" prot="public" virt="virtual"><scope>wxMBConvUTF32</scope><name>FromWChar</name></member>
+      <member refid="classwx_m_b_conv_1a9d22d211135f265ed018e103590a61f0" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>GetMaxMBNulLen</name></member>
+      <member refid="classwx_m_b_conv_1a2d6590cbcc686be76a9c4f1c071ff99f" prot="public" virt="virtual"><scope>wxMBConvUTF32</scope><name>GetMBNulLen</name></member>
+      <member refid="classwx_m_b_conv_1a79d63eff51836148157c986943835742" prot="public" virt="virtual"><scope>wxMBConvUTF32</scope><name>MB2WC</name></member>
+      <member refid="classwx_m_b_conv_1a22ad1976c06a540a95dfa878038d65f2" prot="public" virt="virtual"><scope>wxMBConvUTF32</scope><name>ToWChar</name></member>
+      <member refid="classwx_m_b_conv_1a537a0f90ab4738e3e9be58d9a77b71b1" prot="public" virt="virtual"><scope>wxMBConvUTF32</scope><name>WC2MB</name></member>
+      <member refid="classwx_m_b_conv_1ab2348d20301679ce0cf5c565446b0080" prot="public" virt="non-virtual"><scope>wxMBConvUTF32</scope><name>wxMBConv</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

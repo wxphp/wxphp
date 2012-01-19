@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="ustring_8h" kind="file">
+    <compoundname>ustring.h</compoundname>
+    <innerclass refid="classwx_u_string" prot="public">wxUString</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ustring_8h_1a26ee785e75e33e1347a3a8d882e8479a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwx_u_string" kindref="compound">wxUString</ref></type>
+        <definition>wxUString operator+</definition>
+        <argsstring>(const wxUString &amp;s1, const wxUString &amp;s2)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Concatenation operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="248"/>
+      </memberdef>
+      <memberdef kind="function" id="ustring_8h_1a333bf64b6e1f9eb6d6beeaef78e226ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxUString &amp;s1, const wxUString &amp;s2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="255"/>
+      </memberdef>
+      <memberdef kind="function" id="ustring_8h_1a47f84a04f4b08fb2027ac6b2cfffb50a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxUString &amp;s1, const wxUString &amp;s2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Inequality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="261"/>
+      </memberdef>
+      <memberdef kind="function" id="ustring_8h_1ada82e58e765867bb87f55f6360fd1efd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(const wxUString &amp;s1, const wxUString &amp;s2)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="267"/>
+      </memberdef>
+      <memberdef kind="function" id="ustring_8h_1a60ad5d54a9306f31fe6d6bb2eeb23c3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&gt;</definition>
+        <argsstring>(const wxUString &amp;s1, const wxUString &amp;s2)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="273"/>
+      </memberdef>
+      <memberdef kind="function" id="ustring_8h_1a8f2eee8ed36bf49efc0862d3fe3bdeb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&lt;=</definition>
+        <argsstring>(const wxUString &amp;s1, const wxUString &amp;s2)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="279"/>
+      </memberdef>
+      <memberdef kind="function" id="ustring_8h_1a60380a62d3887028c7d8e58545adcf77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator&gt;=</definition>
+        <argsstring>(const wxUString &amp;s1, const wxUString &amp;s2)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_u_string" kindref="compound">wxUString</ref> &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="285"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h"/>
+  </compounddef>
+</doxygen>

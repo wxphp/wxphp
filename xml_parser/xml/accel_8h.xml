@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="accel_8h" kind="file">
+    <compoundname>accel.h</compoundname>
+    <innerclass refid="classwx_accelerator_entry" prot="public">wxAcceleratorEntry</innerclass>
+    <innerclass refid="classwx_accelerator_table" prot="public">wxAcceleratorTable</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="accel_8h_1ae3253ea019602f79fde0d3195f507a9f" prot="public" static="no">
+        <name>wxAcceleratorEntryFlags</name>
+        <enumvalue id="accel_8h_1ae3253ea019602f79fde0d3195f507a9fa3b09967815d3cd3c82f048d05864c156" prot="public">
+          <name>wxACCEL_NORMAL</name>
+          <briefdescription>
+<para>no modifiers </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="accel_8h_1ae3253ea019602f79fde0d3195f507a9faf66894d5b8b49e678c5a7082c4818174" prot="public">
+          <name>wxACCEL_ALT</name>
+          <briefdescription>
+<para>hold Alt key down </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="accel_8h_1ae3253ea019602f79fde0d3195f507a9fa0b437c0885e352c31a14fd8fad8d6ae5" prot="public">
+          <name>wxACCEL_CTRL</name>
+          <briefdescription>
+<para>hold Ctrl key down, corresponds to Command key on OS X </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="accel_8h_1ae3253ea019602f79fde0d3195f507a9face856b44e375038aae5d3d6b06c618dc" prot="public">
+          <name>wxACCEL_SHIFT</name>
+          <briefdescription>
+<para>hold Shift key down </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="accel_8h_1ae3253ea019602f79fde0d3195f507a9fae7c2c128e3f492bc811eaee6cee9f3a9" prot="public">
+          <name>wxACCEL_RAW_CTRL</name>
+          <briefdescription>
+<para>corresponds to real Ctrl key on OS X, identic to <computeroutput>wxACCEL_CTRL</computeroutput> on other platforms </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="accel_8h_1ae3253ea019602f79fde0d3195f507a9fac9486021ed829cfc2b7622238c35c818" prot="public">
+          <name>wxACCEL_CMD</name>
+          <briefdescription>
+<para>deprecated, identic to <computeroutput>wxACCEL_CTRL</computeroutput> on all platforms. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para><ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref> flags </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" bodystart="11" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="accel_8h_1ad73e85397cbc1a674e32e3ab77d3ee34" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref></type>
+        <definition>wxAcceleratorTable wxNullAcceleratorTable</definition>
+        <argsstring></argsstring>
+        <name>wxNullAcceleratorTable</name>
+        <briefdescription>
+<para>An empty accelerator table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="233" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h"/>
+  </compounddef>
+</doxygen>

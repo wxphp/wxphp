@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_log_record_info" kind="class" prot="public">
+    <compoundname>wxLogRecordInfo</compoundname>
+    <includes local="no">wx/log.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classwx_log_record_info_1a91290266e065128e556e76a21e01dbd9" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* wxLogRecordInfo::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+<para>The name of the file where this log message was generated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_log_record_info_1a1b5362167925e65dc65d59b2ea30a077" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxLogRecordInfo::line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <briefdescription>
+<para>The line number at which this log message was generated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_log_record_info_1a417ea2d0476c2838cbb17deba2bcab68" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* wxLogRecordInfo::func</definition>
+        <argsstring></argsstring>
+        <name>func</name>
+        <briefdescription>
+<para>The name of the function where the log record was generated. </para>        </briefdescription>
+        <detaileddescription>
+<para>This field may be NULL if the compiler doesn&apos;t support <computeroutput>__FUNCTION__</computeroutput> (but most modern compilers do). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_log_record_info_1a702d51504b8ae8b313f642de68f38964" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t wxLogRecordInfo::timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+<para>Time when the log message was generated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwx_log_record_info_1af7766219720d7215dcdef349d247916e" prot="public" static="no" mutable="no">
+        <type>wxThreadIdType</type>
+        <definition>wxThreadIdType wxLogRecordInfo::threadId</definition>
+        <argsstring></argsstring>
+        <name>threadId</name>
+        <briefdescription>
+<para>Id of the thread in which the message was generated. </para>        </briefdescription>
+        <detaileddescription>
+<para>This field is only available if wxWidgets was built with threads support (<computeroutput>wxUSE_THREADS == 1</computeroutput>).</para><para><simplesect kind="see"><para><ref refid="classwx_thread_1a414fecfb855a7e12088bb0fa54ebd330" kindref="member">wxThread::GetCurrentId()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Information about a log record (unit of the log output). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="40" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classwx_log_record_info_1a91290266e065128e556e76a21e01dbd9" prot="public" virt="non-virtual"><scope>wxLogRecordInfo</scope><name>filename</name></member>
+      <member refid="classwx_log_record_info_1a417ea2d0476c2838cbb17deba2bcab68" prot="public" virt="non-virtual"><scope>wxLogRecordInfo</scope><name>func</name></member>
+      <member refid="classwx_log_record_info_1a1b5362167925e65dc65d59b2ea30a077" prot="public" virt="non-virtual"><scope>wxLogRecordInfo</scope><name>line</name></member>
+      <member refid="classwx_log_record_info_1af7766219720d7215dcdef349d247916e" prot="public" virt="non-virtual"><scope>wxLogRecordInfo</scope><name>threadId</name></member>
+      <member refid="classwx_log_record_info_1a702d51504b8ae8b313f642de68f38964" prot="public" virt="non-virtual"><scope>wxLogRecordInfo</scope><name>timestamp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

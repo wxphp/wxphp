@@ -1,0 +1,416 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_caret" kind="class" prot="public">
+    <compoundname>wxCaret</compoundname>
+    <includes local="no">wx/caret.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_caret_1a69612cbfbe2bd14a244b9c347db5e142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCaret::wxCaret</definition>
+        <argsstring>(wxWindow *window, int width, int height)</argsstring>
+        <name>wxCaret</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Creates a caret with the given size (in pixels) and associates it with the <emphasis>window</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a74852f5d8cd0210f47b645da445aeb96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCaret::wxCaret</definition>
+        <argsstring>(wxWindowBase *window, const wxSize &amp;size)</argsstring>
+        <name>wxCaret</name>
+        <param>
+          <type>wxWindowBase *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Creates a caret with the given size (in pixels) and associates it with the <emphasis>window</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_caret_1aa3364db05669724259f42a4df68cb303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxCaret::Create</definition>
+        <argsstring>(wxWindowBase *window, int width, int height)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>wxWindowBase *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Creates a caret with the given size (in pixels) and associates it with the <emphasis>window</emphasis> (same as the equivalent constructors). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a81d78716eed0fc5b3fc984f4572da10e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxCaret::Create</definition>
+        <argsstring>(wxWindowBase *window, const wxSize &amp;size)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>wxWindowBase *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Creates a caret with the given size (in pixels) and associates it with the <emphasis>window</emphasis> (same as the equivalent constructors). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_caret_1a39fdb7ed7a18ae274c2ba58d697b2528" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxCaret::GetPosition</definition>
+        <argsstring>(int *x, int *y) const </argsstring>
+        <name>GetPosition</name>
+        <param>
+          <type>int *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get the caret position (in pixels). </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl there are two methods instead of a single overloaded method:<itemizedlist>
+<listitem><para><ref refid="classwx_caret_1a39fdb7ed7a18ae274c2ba58d697b2528" kindref="member">GetPosition()</ref>: returns a Wx::Point object.</para></listitem><listitem><para>GetPositionXY(): returns a 2-element list (x, y). </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a3a1d4bffd5ba39f8edf8761d6fb3bc30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
+        <definition>wxPoint wxCaret::GetPosition</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPosition</name>
+        <briefdescription>
+<para>Get the caret position (in pixels). </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl there are two methods instead of a single overloaded method:<itemizedlist>
+<listitem><para><ref refid="classwx_caret_1a39fdb7ed7a18ae274c2ba58d697b2528" kindref="member">GetPosition()</ref>: returns a Wx::Point object.</para></listitem><listitem><para>GetPositionXY(): returns a 2-element list (x, y). </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_caret_1ae14c6047f60597ff0304b8d4b25a7bc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxCaret::GetSize</definition>
+        <argsstring>(int *width, int *height) const </argsstring>
+        <name>GetSize</name>
+        <param>
+          <type>int *</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Get the caret size. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl there are two methods instead of a single overloaded method:<itemizedlist>
+<listitem><para><ref refid="classwx_caret_1ae14c6047f60597ff0304b8d4b25a7bc7" kindref="member">GetSize()</ref>: returns a Wx::Size object.</para></listitem><listitem><para>GetSizeWH(): returns a 2-element list (width, height). </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a8f2c20a9a5eefd72fbcadb04a77d7a11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>wxSize wxCaret::GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+<para>Get the caret size. </para>        </briefdescription>
+        <detaileddescription>
+<para><bold>wxPerl Note:</bold> In wxPerl there are two methods instead of a single overloaded method:<itemizedlist>
+<listitem><para><ref refid="classwx_caret_1ae14c6047f60597ff0304b8d4b25a7bc7" kindref="member">GetSize()</ref>: returns a Wx::Size object.</para></listitem><listitem><para>GetSizeWH(): returns a 2-element list (width, height). </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="87"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_caret_1ae490dc3156c4c686bc37f601edc33388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxCaret::Move</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>Move</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Move the caret to given position (in logical coordinates). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a4b1e2c18b950f771b44172b752d6eb1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxCaret::Move</definition>
+        <argsstring>(const wxPoint &amp;pt)</argsstring>
+        <name>Move</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+<para>Move the caret to given position (in logical coordinates). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="117"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_caret_1a0dd4f34b8e000a967701bb2821ed8bb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxCaret::SetSize</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>SetSize</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Changes the size of the caret. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1afaed1930afff173d1a5ec005e6086509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxCaret::SetSize</definition>
+        <argsstring>(const wxSize &amp;size)</argsstring>
+        <name>SetSize</name>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Changes the size of the caret. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="136"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_caret_1a07b320d7d5296d378fa8d6350e2ecf22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxCaret::wxCaret</definition>
+        <argsstring>()</argsstring>
+        <name>wxCaret</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a80f54ac9c706292a05e5ee0c97ae4c1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+        <definition>wxWindow* wxCaret::GetWindow</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWindow</name>
+        <briefdescription>
+<para>Get the window the caret is associated with. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a272c1c4887bf5b9d16213b2bd616033a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxCaret::Hide</definition>
+        <argsstring>()</argsstring>
+        <name>Hide</name>
+        <briefdescription>
+<para>Hides the caret, same as Show(false). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a5114e47c973bf022e59e9780f9e4fa3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxCaret::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the caret was created successfully. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1ad96e4e1ec5c0063ac625bebee394b1f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxCaret::IsVisible</definition>
+        <argsstring>() const </argsstring>
+        <name>IsVisible</name>
+        <briefdescription>
+<para>Returns true if the caret is visible and false if it is permanently hidden (if it is blinking and not shown currently but will be after the next blink, this method still returns true). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1a5112409bd3a83148f364c4b08086fe28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxCaret::Show</definition>
+        <argsstring>(bool show=true)</argsstring>
+        <name>Show</name>
+        <param>
+          <type>bool</type>
+          <declname>show</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Shows or hides the caret. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that if the caret was hidden N times, it must be shown N times as well to reappear on the screen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="143"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_caret_1ab9f9aed8b31730a8d451ce12aeffab3a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int wxCaret::GetBlinkTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetBlinkTime</name>
+        <briefdescription>
+<para>Returns the blink time which is measured in milliseconds and is the time elapsed between 2 inversions of the caret (blink time of the caret is the same for all carets, so this functions is static). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_caret_1ae6018e5419476a7437940b92d10ec318" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxCaret::SetBlinkTime</definition>
+        <argsstring>(int milliseconds)</argsstring>
+        <name>SetBlinkTime</name>
+        <param>
+          <type>int</type>
+          <declname>milliseconds</declname>
+        </param>
+        <briefdescription>
+<para>Sets the blink time for all the carets. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Under Windows, this function will change the blink time for all carets permanently (until the next time it is called), even for carets in other applications.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_caret_1ab9f9aed8b31730a8d451ce12aeffab3a" kindref="member">GetBlinkTime()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A caret is a blinking cursor showing the position where the typed text will appear. </para>    </briefdescription>
+    <detaileddescription>
+<para>Text controls usually have their own caret but <ref refid="classwx_caret" kindref="compound">wxCaret</ref> provides a way to use a caret in other windows.</para><para>Currently, the caret appears as a rectangle of the given size. In the future, it will be possible to specify a bitmap to be used for the caret shape.</para><para>A caret is always associated with a window and the current caret can be retrieved using <ref refid="classwx_window_1a83ed7c9d9252b912eebc753d6132245b" kindref="member">wxWindow::GetCaret()</ref>. The same caret can&apos;t be reused in two different windows.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/caret.h" bodystart="27" bodyend="144"/>
+    <listofallmembers>
+      <member refid="classwx_caret_1aa3364db05669724259f42a4df68cb303" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>Create</name></member>
+      <member refid="classwx_caret_1a81d78716eed0fc5b3fc984f4572da10e" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>Create</name></member>
+      <member refid="classwx_caret_1ab9f9aed8b31730a8d451ce12aeffab3a" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>GetBlinkTime</name></member>
+      <member refid="classwx_caret_1a39fdb7ed7a18ae274c2ba58d697b2528" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>GetPosition</name></member>
+      <member refid="classwx_caret_1a3a1d4bffd5ba39f8edf8761d6fb3bc30" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>GetPosition</name></member>
+      <member refid="classwx_caret_1ae14c6047f60597ff0304b8d4b25a7bc7" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>GetSize</name></member>
+      <member refid="classwx_caret_1a8f2c20a9a5eefd72fbcadb04a77d7a11" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>GetSize</name></member>
+      <member refid="classwx_caret_1a80f54ac9c706292a05e5ee0c97ae4c1e" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>GetWindow</name></member>
+      <member refid="classwx_caret_1a272c1c4887bf5b9d16213b2bd616033a" prot="public" virt="virtual"><scope>wxCaret</scope><name>Hide</name></member>
+      <member refid="classwx_caret_1a5114e47c973bf022e59e9780f9e4fa3a" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>IsOk</name></member>
+      <member refid="classwx_caret_1ad96e4e1ec5c0063ac625bebee394b1f0" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>IsVisible</name></member>
+      <member refid="classwx_caret_1ae490dc3156c4c686bc37f601edc33388" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>Move</name></member>
+      <member refid="classwx_caret_1a4b1e2c18b950f771b44172b752d6eb1b" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>Move</name></member>
+      <member refid="classwx_caret_1ae6018e5419476a7437940b92d10ec318" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>SetBlinkTime</name></member>
+      <member refid="classwx_caret_1a0dd4f34b8e000a967701bb2821ed8bb2" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>SetSize</name></member>
+      <member refid="classwx_caret_1afaed1930afff173d1a5ec005e6086509" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>SetSize</name></member>
+      <member refid="classwx_caret_1a5112409bd3a83148f364c4b08086fe28" prot="public" virt="virtual"><scope>wxCaret</scope><name>Show</name></member>
+      <member refid="classwx_caret_1a07b320d7d5296d378fa8d6350e2ecf22" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>wxCaret</name></member>
+      <member refid="classwx_caret_1a69612cbfbe2bd14a244b9c347db5e142" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>wxCaret</name></member>
+      <member refid="classwx_caret_1a74852f5d8cd0210f47b645da445aeb96" prot="public" virt="non-virtual"><scope>wxCaret</scope><name>wxCaret</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

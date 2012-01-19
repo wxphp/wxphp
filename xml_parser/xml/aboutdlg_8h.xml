@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="aboutdlg_8h" kind="file">
+    <compoundname>aboutdlg.h</compoundname>
+    <innerclass refid="classwx_about_dialog_info" prot="public">wxAboutDialogInfo</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga6d8198c95b97786f206abfde010a4d8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxAboutBox</definition>
+        <argsstring>(const wxAboutDialogInfo &amp;info, wxWindow *parent=NULL)</argsstring>
+        <name>wxAboutBox</name>
+        <param>
+          <type>const <ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This function shows the standard about dialog containing the information specified in <emphasis>info</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the current platform has a native about dialog which is capable of showing all the fields in <emphasis>info</emphasis>, the native dialog is used, otherwise the function falls back to the generic wxWidgets version of the dialog, i.e. does the same thing as wxGenericAboutBox.</para><para>Here is an example of how this function may be used:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MyFrame::ShowSimpleAboutDialog(<ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>&amp;<sp/>WXUNUSED(event))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_about_dialog_info" kindref="compound" tooltip="wxAboutDialogInfo contains information shown in the standard About dialog displayed...">wxAboutDialogInfo</ref><sp/>info;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a5fef05c5e61acb59d9554bda8de26eef" kindref="member" tooltip="Set the name of the program.">SetName</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;My<sp/>Program&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1aac5029cab6b04b34dbf8cd6b66fff251" kindref="member" tooltip="Set the version of the program.">SetVersion</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;1.2.3<sp/>Beta&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a47bd84aa96af70cb304a76c6cf3428e3" kindref="member" tooltip="Set brief, but possibly multiline, description of the program.">SetDescription</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for...">_</ref>(</highlight><highlight class="stringliteral">&quot;This<sp/>program<sp/>does<sp/>something<sp/>great.&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="classwx_about_dialog_info_1a10f5d9b8ca9ed69754e54fd2e03c4538" kindref="member" tooltip="Set the short string containing the program copyright information.">SetCopyright</ref>(<ref refid="group__group__funcmacro__string_1ga437ea6ba615b75dac8603e96ec864160" kindref="member" tooltip="This macro can be used with character and string literals (in other words, &amp;#39;x&amp;#39;...">wxT</ref>(</highlight><highlight class="stringliteral">&quot;(C)<sp/>2007<sp/>Me<sp/>&lt;my@email.addre.ss&gt;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1ga6d8198c95b97786f206abfde010a4d8f" kindref="member" tooltip="This function shows the standard about dialog containing the information specified...">wxAboutBox</ref>(info);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para>Please see the <ref refid="page__samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> for more examples of using this function and <ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref> for the description of the information which can be shown in the about dialog.</para><para>Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aboutdlg.h" line="265"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga2e27fd9a2a2c11e73030deb83a065d23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGenericAboutBox</definition>
+        <argsstring>(const wxAboutDialogInfo &amp;info, wxWindow *parent=NULL)</argsstring>
+        <name>wxGenericAboutBox</name>
+        <param>
+          <type>const <ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This function does the same thing as <ref refid="group__group__funcmacro__dialog_1ga6d8198c95b97786f206abfde010a4d8f" kindref="member">wxAboutBox()</ref> except that it always uses the generic wxWidgets version of the dialog instead of the native one. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is mainly useful if you need to customize the dialog by e.g. adding custom controls to it (customizing the native dialog is not currently supported).</para><para>See the <ref refid="page__samples_1page_samples_dialogs" kindref="member">Dialogs Sample</ref> for an example of about dialog customization.</para><para><simplesect kind="see"><para><ref refid="classwx_about_dialog_info" kindref="compound">wxAboutDialogInfo</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/aboutdlg.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aboutdlg.h" line="282"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aboutdlg.h"/>
+  </compounddef>
+</doxygen>

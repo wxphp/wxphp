@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dockart_8h" kind="file">
+    <compoundname>dockart.h</compoundname>
+    <innerclass refid="classwx_aui_dock_art" prot="public">wxAuiDockArt</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0" prot="public" static="no">
+        <name>wxAuiPaneDockArtSetting</name>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a48106f704eaa492d7e7354e638354fd5" prot="public">
+          <name>wxAUI_DOCKART_SASH_SIZE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a0617fe4dc6d16ffddc064b1a82102ad5" prot="public">
+          <name>wxAUI_DOCKART_CAPTION_SIZE</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a3d6576e90c7c16dfac3b79d1032a8935" prot="public">
+          <name>wxAUI_DOCKART_GRIPPER_SIZE</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a6cc705f171c075cc80cc2a78e96c4c4d" prot="public">
+          <name>wxAUI_DOCKART_PANE_BORDER_SIZE</name>
+          <initializer> 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a4d5909b6f410a2797ee6da6f018ff022" prot="public">
+          <name>wxAUI_DOCKART_PANE_BUTTON_SIZE</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a1f6abd33c70ff4b0ebf5b61d72357271" prot="public">
+          <name>wxAUI_DOCKART_BACKGROUND_COLOUR</name>
+          <initializer> 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0ac258a0a12f1901c57dd485028e356592" prot="public">
+          <name>wxAUI_DOCKART_SASH_COLOUR</name>
+          <initializer> 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0ad1fdc120d155e6629d65fdf4fb141782" prot="public">
+          <name>wxAUI_DOCKART_ACTIVE_CAPTION_COLOUR</name>
+          <initializer> 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a40e7b9beca789070f948bc27eb9e2ed7" prot="public">
+          <name>wxAUI_DOCKART_ACTIVE_CAPTION_GRADIENT_COLOUR</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a35762ddc7081a478d0b2b39db7f4ef9e" prot="public">
+          <name>wxAUI_DOCKART_INACTIVE_CAPTION_COLOUR</name>
+          <initializer> 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a543327c99ead1dfe58b77adff7a7c32a" prot="public">
+          <name>wxAUI_DOCKART_INACTIVE_CAPTION_GRADIENT_COLOUR</name>
+          <initializer> 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a2068a545e0c74800fb8ab5bf0cd1d09d" prot="public">
+          <name>wxAUI_DOCKART_ACTIVE_CAPTION_TEXT_COLOUR</name>
+          <initializer> 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a1b21c76b920c842c5747b03f0859f1e7" prot="public">
+          <name>wxAUI_DOCKART_INACTIVE_CAPTION_TEXT_COLOUR</name>
+          <initializer> 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a3c097368a59117ad699f4201e14f5fb6" prot="public">
+          <name>wxAUI_DOCKART_BORDER_COLOUR</name>
+          <initializer> 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a0ffd17c05c54da3a97585af95e50a991" prot="public">
+          <name>wxAUI_DOCKART_GRIPPER_COLOUR</name>
+          <initializer> 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0a52f776666bf7cd4f056a82e073529b4a" prot="public">
+          <name>wxAUI_DOCKART_CAPTION_FONT</name>
+          <initializer> 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1ab09190c5a3f9cd3628819fbe93a9caa0adff2b73c2d79c6fa6f58aeb4aef7be01" prot="public">
+          <name>wxAUI_DOCKART_GRADIENT_TYPE</name>
+          <initializer> 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000011"><xreftitle>Todo</xreftitle><xrefdescription><para>TOWRITE </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="13" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="enum" id="dockart_8h_1a615f7ec3429260746a2dd465a14fb1ae" prot="public" static="no">
+        <name>wxAuiPaneDockArtGradients</name>
+        <enumvalue id="dockart_8h_1a615f7ec3429260746a2dd465a14fb1aea6836026edd9b3accc5900f441d3ef199" prot="public">
+          <name>wxAUI_GRADIENT_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a615f7ec3429260746a2dd465a14fb1aea73d74a74193f581a6bac9edf9acecea0" prot="public">
+          <name>wxAUI_GRADIENT_VERTICAL</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a615f7ec3429260746a2dd465a14fb1aea600259bd1c84809f1d7465ed311397d2" prot="public">
+          <name>wxAUI_GRADIENT_HORIZONTAL</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000012"><xreftitle>Todo</xreftitle><xrefdescription><para>TOWRITE </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="enum" id="dockart_8h_1a6ce0fe49238f90e0c430e5456ea8d852" prot="public" static="no">
+        <name>wxAuiPaneButtonState</name>
+        <enumvalue id="dockart_8h_1a6ce0fe49238f90e0c430e5456ea8d852adfaed116084faa3ab67eb770ef631734" prot="public">
+          <name>wxAUI_BUTTON_STATE_NORMAL</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a6ce0fe49238f90e0c430e5456ea8d852a2ded746467af91b1a3ef8e4539dce2bf" prot="public">
+          <name>wxAUI_BUTTON_STATE_HOVER</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a6ce0fe49238f90e0c430e5456ea8d852a197abf7bebaf42060dab362c90c7afa7" prot="public">
+          <name>wxAUI_BUTTON_STATE_PRESSED</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000013"><xreftitle>Todo</xreftitle><xrefdescription><para>TOWRITE </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="enum" id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6" prot="public" static="no">
+        <name>wxAuiButtonId</name>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6abf082be3036f877f52a61f3f59e70694" prot="public">
+          <name>wxAUI_BUTTON_CLOSE</name>
+          <initializer> 101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a25c7e034de324035d9b76f1b14848f41" prot="public">
+          <name>wxAUI_BUTTON_MAXIMIZE_RESTORE</name>
+          <initializer> 102</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a71c3a4d40008df28bcdf227a4d58b664" prot="public">
+          <name>wxAUI_BUTTON_MINIMIZE</name>
+          <initializer> 103</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a9ae1dd33ca075683d78f2fa8be50051d" prot="public">
+          <name>wxAUI_BUTTON_PIN</name>
+          <initializer> 104</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a2de8967c6ff286e2cfdec3e7ce20a85c" prot="public">
+          <name>wxAUI_BUTTON_OPTIONS</name>
+          <initializer> 105</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a6b98dbcd5a891befb08ef883ea4f779c" prot="public">
+          <name>wxAUI_BUTTON_WINDOWLIST</name>
+          <initializer> 106</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a4e1bc33bd434414b031b89f692d5e170" prot="public">
+          <name>wxAUI_BUTTON_LEFT</name>
+          <initializer> 107</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a73311abc56e38166d7055fb3b1b85407" prot="public">
+          <name>wxAUI_BUTTON_RIGHT</name>
+          <initializer> 108</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a64d79b5ee4dcb2cf6a5fa8b08cb3ae27" prot="public">
+          <name>wxAUI_BUTTON_UP</name>
+          <initializer> 109</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6aef098926760cef2a416068dc8756df16" prot="public">
+          <name>wxAUI_BUTTON_DOWN</name>
+          <initializer> 110</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a8ec817cbfa6ffeb7f9543350ab0b7a4b" prot="public">
+          <name>wxAUI_BUTTON_CUSTOM1</name>
+          <initializer> 201</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6abd42844be6b03bb689d09da7f4613add" prot="public">
+          <name>wxAUI_BUTTON_CUSTOM2</name>
+          <initializer> 202</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dockart_8h_1a69100375d2c563a9b848f6dd9292bff6a79a3a180a400239b5e7484a1513497d0" prot="public">
+          <name>wxAUI_BUTTON_CUSTOM3</name>
+          <initializer> 203</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000014"><xreftitle>Todo</xreftitle><xrefdescription><para>TOWRITE </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="57" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h"/>
+  </compounddef>
+</doxygen>

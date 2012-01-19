@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_archive_iterator" kind="class" prot="public">
+    <compoundname>wxArchiveIterator</compoundname>
+    <includes local="no">wx/archive.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_archive_iterator_1a1ea0a4c8d77e860b229e04d4ca44ca47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_archive_iterator" kindref="compound">wxArchiveIterator</ref></type>
+        <definition>wxArchiveIterator wxArchiveIterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+<para>Position the input iterator at the next entry in the archive input stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="618"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_archive_iterator_1a0b62fbe749f09e81f3e722fe181249fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_archive_iterator" kindref="compound">wxArchiveIterator</ref></type>
+        <definition>wxArchiveIterator wxArchiveIterator::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Position the input iterator at the next entry in the archive input stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="619"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_archive_iterator_1aa9efa7aaf43227212b9ced2ac4a9d2bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxArchiveIterator::wxArchiveIterator</definition>
+        <argsstring>()</argsstring>
+        <name>wxArchiveIterator</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="600"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_archive_iterator_1a183ba26604c7efab6f62e5f0d1a01980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxArchiveIterator::wxArchiveIterator</definition>
+        <argsstring>(Arc &amp;arc)</argsstring>
+        <name>wxArchiveIterator</name>
+        <param>
+          <type>Arc &amp;</type>
+          <declname>arc</declname>
+        </param>
+        <briefdescription>
+<para>Construct the iterator that returns all the entries in the archive input stream <emphasis>arc</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="606"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_archive_iterator_1a1c21be4714c9fdfcf5dff748789d66ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const T</type>
+        <definition>const T wxArchiveIterator::operator*</definition>
+        <argsstring>() const </argsstring>
+        <name>operator*</name>
+        <briefdescription>
+<para>Returns an entry object from the archive input stream, giving away ownership. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="612"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An input iterator template class that can be used to transfer an archive&apos;s catalogue to a container. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is only available if wxUSE_STL is set to 1 in setup.h, and the uses for it outlined below require a compiler which supports member templates.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Arc,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Arc::entry_type*&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classwx_archive_iterator" kindref="compound" tooltip="An input iterator template class that can be used to transfer an archive&amp;#39;s catalogue...">wxArchiveIterator</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>constructor<sp/>creates<sp/>an<sp/>&apos;end<sp/>of<sp/>sequence&apos;<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_archive_iterator_1aa9efa7aaf43227212b9ced2ac4a9d2bf" kindref="member" tooltip="Default constructor.">wxArchiveIterator</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>template<sp/>parameter<sp/>&apos;Arc&apos;<sp/>should<sp/>be<sp/>the<sp/>type<sp/>of<sp/>an<sp/>archive<sp/>input<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_archive_iterator_1aa9efa7aaf43227212b9ced2ac4a9d2bf" kindref="member" tooltip="Default constructor.">wxArchiveIterator</ref>(Arc&amp;<sp/>arc)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para>The first template parameter should be the type of archive input stream (e.g. <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>) and the second can either be a pointer to an entry (e.g. wxArchiveEntry*), or a string/pointer pair (e.g. std::pair&lt;wxString,wxArchiveEntry*&gt;).</para><para>The <computeroutput><ref refid="interface_2wx_2archive_8h" kindref="compound">wx/archive.h</ref></computeroutput> header defines the following typedefs:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_iterator" kindref="compound" tooltip="An input iterator template class that can be used to transfer an archive&amp;#39;s catalogue...">wxArchiveIterator&lt;wxArchiveInputStream&gt;</ref><sp/>wxArchiveIter;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_iterator" kindref="compound" tooltip="An input iterator template class that can be used to transfer an archive&amp;#39;s catalogue...">wxArchiveIterator</ref>&lt;<ref refid="classwx_archive_input_stream" kindref="compound" tooltip="This is an abstract base class which serves as a common interface to archive input...">wxArchiveInputStream</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;wxString,<sp/>wxArchiveEntry*&gt;<sp/>&gt;<sp/>wxArchivePairIter;</highlight></codeline>
+</programlisting></para><para>The header for any implementation of this interface should define similar typedefs for its types, for example in <computeroutput><ref refid="zipstrm_8h" kindref="compound">wx/zipstrm.h</ref></computeroutput> there is:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_iterator" kindref="compound" tooltip="An input iterator template class that can be used to transfer an archive&amp;#39;s catalogue...">wxArchiveIterator&lt;wxZipInputStream&gt;</ref><sp/>wxZipIter;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_iterator" kindref="compound" tooltip="An input iterator template class that can be used to transfer an archive&amp;#39;s catalogue...">wxArchiveIterator</ref>&lt;<ref refid="classwx_zip_input_stream" kindref="compound" tooltip="Input stream for reading zip files.">wxZipInputStream</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;wxString,<sp/>wxZipEntry*&gt;<sp/>&gt;<sp/>wxZipPairIter;</highlight></codeline>
+</programlisting></para><para>Transferring the catalogue of an archive <emphasis>arc</emphasis> to a vector <emphasis>cat</emphasis>, can then be done something like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;wxArchiveEntry*&gt;<sp/>cat((wxArchiveIter)arc,<sp/>wxArchiveIter());</highlight></codeline>
+</programlisting></para><para>When the iterator is dereferenced, it gives away ownership of an entry object. So in the above example, when you have finished with <emphasis>cat</emphasis> you must delete the pointers it contains.</para><para>If you have smart pointers with normal copy semantics (i.e. not auto_ptr or <ref refid="classwx_scoped_ptr" kindref="compound">wxScopedPtr</ref>), then you can create an iterator which uses them instead.</para><para>For example, with a smart pointer class for zip entries <emphasis>ZipEntryPtr:</emphasis> </para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;ZipEntryPtr&gt;<sp/>ZipCatalog;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_iterator" kindref="compound" tooltip="An input iterator template class that can be used to transfer an archive&amp;#39;s catalogue...">wxArchiveIterator&lt;wxZipInputStream, ZipEntryPtr&gt;</ref><sp/>ZipIter;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ZipCatalog<sp/>cat((ZipIter)zip,<sp/>ZipIter());</highlight></codeline>
+</programlisting></para><para>Iterators that return std::pair objects can be used to populate a std::multimap, to allow entries to be looked up by name. The string is initialised using the <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref> object&apos;s <ref refid="classwx_archive_entry_1a53486cf23696bd7b910a652c27af0a38" kindref="member">wxArchiveEntry::GetInternalName</ref> function.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::multimap&lt;wxString,<sp/>wxZipEntry*&gt;<sp/>ZipCatalog;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ZipCatalog<sp/>cat((wxZipPairIter)zip,<sp/>wxZipPairIter());</highlight></codeline>
+</programlisting></para><para>Note that this iterator also gives away ownership of an entry object each time it is dereferenced. So in the above example, when you have finished with <emphasis>cat</emphasis> you must delete the pointers it contains.</para><para>Or if you have them, a pair containing a smart pointer can be used (again <emphasis>ZipEntryPtr</emphasis>), no worries about ownership:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::multimap&lt;wxString,<sp/>ZipEntryPtr&gt;<sp/>ZipCatalog;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_iterator" kindref="compound" tooltip="An input iterator template class that can be used to transfer an archive&amp;#39;s catalogue...">wxArchiveIterator</ref>&lt;wxZipInputStream,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;wxString,<sp/>ZipEntryPtr&gt;<sp/>&gt;<sp/>ZipPairIter;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ZipCatalog<sp/>cat((ZipPairIter)zip,<sp/>ZipPairIter());</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="595" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" bodystart="594" bodyend="621"/>
+    <listofallmembers>
+      <member refid="classwx_archive_iterator_1a1c21be4714c9fdfcf5dff748789d66ad" prot="public" virt="non-virtual"><scope>wxArchiveIterator</scope><name>operator*</name></member>
+      <member refid="classwx_archive_iterator_1a1ea0a4c8d77e860b229e04d4ca44ca47" prot="public" virt="non-virtual"><scope>wxArchiveIterator</scope><name>operator++</name></member>
+      <member refid="classwx_archive_iterator_1a0b62fbe749f09e81f3e722fe181249fe" prot="public" virt="non-virtual"><scope>wxArchiveIterator</scope><name>operator++</name></member>
+      <member refid="classwx_archive_iterator_1aa9efa7aaf43227212b9ced2ac4a9d2bf" prot="public" virt="non-virtual"><scope>wxArchiveIterator</scope><name>wxArchiveIterator</name></member>
+      <member refid="classwx_archive_iterator_1a183ba26604c7efab6f62e5f0d1a01980" prot="public" virt="non-virtual"><scope>wxArchiveIterator</scope><name>wxArchiveIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

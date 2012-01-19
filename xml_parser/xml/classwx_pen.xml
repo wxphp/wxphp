@@ -1,0 +1,621 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_pen" kind="class" prot="public">
+    <compoundname>wxPen</compoundname>
+    <basecompoundref refid="classwx_g_d_i_object" prot="public" virt="non-virtual">wxGDIObject</basecompoundref>
+    <includes local="no">wx/pen.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_pen_1a3c45922aa86019a0e2ffdeedd0182931" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPen::SetColour</definition>
+        <argsstring>(wxColour &amp;colour)</argsstring>
+        <name>SetColour</name>
+        <param>
+          <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>The pen&apos;s colour is changed to the given colour. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1afeddf87958683f10e2fd685fff932e25" kindref="member">GetColour()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a4bd6be69b648a46b22b87a73b8f6212a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPen::SetColour</definition>
+        <argsstring>(unsigned char red, unsigned char green, unsigned char blue)</argsstring>
+        <name>SetColour</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+<para>The pen&apos;s colour is changed to the given colour. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1afeddf87958683f10e2fd685fff932e25" kindref="member">GetColour()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="328"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_pen_1af08e2f8db0c78f9bbca31674ab61d5eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPen::wxPen</definition>
+        <argsstring>()</argsstring>
+        <name>wxPen</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The pen will be uninitialised, and <ref refid="classwx_pen_1ad36b523a05e5dc6f26cedcbe4e09e513" kindref="member">IsOk()</ref> will return false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a3bcca8b2a34a208689b739b6df00a24e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPen::wxPen</definition>
+        <argsstring>(const wxColour &amp;colour, int width=1, wxPenStyle style=wxPENSTYLE_SOLID)</argsstring>
+        <name>wxPen</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="pen_8h_1aebe64277219894a55d6b963607ad5f54" kindref="member">wxPenStyle</ref></type>
+          <declname>style</declname>
+          <defval>wxPENSTYLE_SOLID</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a pen from a colour object, pen width and style. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A colour object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pen width. Under Windows, the pen width cannot be greater than 1 if the style is <computeroutput>wxPENSTYLE_DOT</computeroutput>, <computeroutput>wxPENSTYLE_LONG_DASH</computeroutput>, <computeroutput>wxPENSTYLE_SHORT_DASH</computeroutput>, <computeroutput>wxPENSTYLE_DOT_DASH</computeroutput>, or <computeroutput>wxPENSTYLE_USER_DASH</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The style may be one of the <ref refid="pen_8h_1aebe64277219894a55d6b963607ad5f54" kindref="member">wxPenStyle</ref> values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>Different versions of Windows and different versions of other platforms support very different subsets of the styles above<itemizedlist>
+<listitem><para>there is no similarity even between Windows95 and Windows98 - so handle with care.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_pen_1a741bccee5c10c6a24d22132f5c1ff2f7" kindref="member">SetStyle()</ref>, <ref refid="classwx_pen_1a3c45922aa86019a0e2ffdeedd0182931" kindref="member">SetColour()</ref>, <ref refid="classwx_pen_1ad390a7361cd737fcb176db622f5ad039" kindref="member">SetWidth()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1ae2a92286436cd980de9f9360eb9d4def" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPen::wxPen</definition>
+        <argsstring>(const wxBitmap &amp;stipple, int width)</argsstring>
+        <name>wxPen</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>stipple</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a stippled pen from a stipple bitmap and a width. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pen width. Under Windows, the pen width cannot be greater than 1 if the style is <computeroutput>wxPENSTYLE_DOT</computeroutput>, <computeroutput>wxPENSTYLE_LONG_DASH</computeroutput>, <computeroutput>wxPENSTYLE_SHORT_DASH</computeroutput>, <computeroutput>wxPENSTYLE_DOT_DASH</computeroutput>, or <computeroutput>wxPENSTYLE_USER_DASH</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stipple</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A stipple bitmap.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page__port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_pen_1ad390a7361cd737fcb176db622f5ad039" kindref="member">SetWidth()</ref>, <ref refid="classwx_pen_1acb75ec80dcd9534181f8c17520aca2b0" kindref="member">SetStipple()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a5ba7b9a179fa2887bf77099bbe2dddce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPen::wxPen</definition>
+        <argsstring>(const wxPen &amp;pen)</argsstring>
+        <name>wxPen</name>
+        <param>
+          <type>const <ref refid="classwx_pen" kindref="compound">wxPen</ref> &amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor, uses <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer or reference to a pen to copy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1ae4879c3e2bbe8b302f603a1f3d031024" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxPen::~wxPen</definition>
+        <argsstring>()</argsstring>
+        <name>~wxPen</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="overview__refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref></para></simplesect>
+<simplesect kind="remark"><para>Although all remaining pens are deleted when the application exits, the application should try to clean up all pens itself. This is because wxWidgets cannot know if a pointer to the pen object is stored in an application data structure, and there is a risk of double deletion. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1ac501e84664f2ca047a36ee816a2f58ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="pen_8h_1a7d4a9e379451a8d249239543ad78af3a" kindref="member">wxPenCap</ref></type>
+        <definition>virtual wxPenCap wxPen::GetCap</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCap</name>
+        <briefdescription>
+<para>Returns the pen cap style, which may be one of <computeroutput>wxCAP_ROUND</computeroutput>, <computeroutput>wxCAP_PROJECTING</computeroutput> and <computeroutput>wxCAP_BUTT</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default is <computeroutput>wxCAP_ROUND</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="classwx_pen_1ac577f818922f65043ae8642369ce3841" kindref="member">SetCap()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1afeddf87958683f10e2fd685fff932e25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>virtual wxColour wxPen::GetColour</definition>
+        <argsstring>() const </argsstring>
+        <name>GetColour</name>
+        <briefdescription>
+<para>Returns a reference to the pen colour. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1a3c45922aa86019a0e2ffdeedd0182931" kindref="member">SetColour()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a89897140519f81047fdbae7653e25c98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxPen::GetDashes</definition>
+        <argsstring>(wxDash **dashes) const </argsstring>
+        <name>GetDashes</name>
+        <param>
+          <type>wxDash **</type>
+          <declname>dashes</declname>
+        </param>
+        <briefdescription>
+<para>Gets an array of dashes (defined as <computeroutput>char</computeroutput> in X, <computeroutput>DWORD</computeroutput> under Windows). </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>dashes</emphasis> is a pointer to the internal array. Do not deallocate or store this pointer.</para><para><simplesect kind="return"><para>The number of dashes associated with this pen.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_pen_1a6f4471824d023b98e5d884b00535b573" kindref="member">SetDashes()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1afa2c9d8badbc1701d56f3f37490ead80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4" kindref="member">wxPenJoin</ref></type>
+        <definition>virtual wxPenJoin wxPen::GetJoin</definition>
+        <argsstring>() const </argsstring>
+        <name>GetJoin</name>
+        <briefdescription>
+<para>Returns the pen join style, which may be one of <computeroutput>wxJOIN_BEVEL</computeroutput>, <computeroutput>wxJOIN_ROUND</computeroutput> and <computeroutput>wxJOIN_MITER</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default is <computeroutput>wxJOIN_ROUND</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="classwx_pen_1a6458cc3b4d30ac5a62cd75a445fc0b28" kindref="member">SetJoin()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a50195e3d48e7f1469b949bc52e94f284" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> *</type>
+        <definition>virtual wxBitmap* wxPen::GetStipple</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStipple</name>
+        <briefdescription>
+<para>Gets a pointer to the stipple bitmap. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1acb75ec80dcd9534181f8c17520aca2b0" kindref="member">SetStipple()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1ac2614614fc84337541adff4fd3659af4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="pen_8h_1aebe64277219894a55d6b963607ad5f54" kindref="member">wxPenStyle</ref></type>
+        <definition>virtual wxPenStyle wxPen::GetStyle</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStyle</name>
+        <briefdescription>
+<para>Returns the pen style. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1af08e2f8db0c78f9bbca31674ab61d5eb" kindref="member">wxPen()</ref>, <ref refid="classwx_pen_1a741bccee5c10c6a24d22132f5c1ff2f7" kindref="member">SetStyle()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a2e2c46609fe1d92d22394a74ae19f2a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxPen::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Returns the pen width. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1ad390a7361cd737fcb176db622f5ad039" kindref="member">SetWidth()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1ad36b523a05e5dc6f26cedcbe4e09e513" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxPen::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the pen is initialised. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that an uninitialized pen object can&apos;t be queried for any pen properties and all calls to the accessor methods on it will result in an assert failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1aaa41bac2e7f09a3f59829813c3160da6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPen::IsNonTransparent</definition>
+        <argsstring>() const </argsstring>
+        <name>IsNonTransparent</name>
+        <briefdescription>
+<para>Returns true if the pen is a valid non-transparent pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method returns true if the pen object is initialized and has a non-transparent style. Notice that this should be used instead of simply testing whether <ref refid="classwx_pen_1ac2614614fc84337541adff4fd3659af4" kindref="member">GetStyle()</ref> returns a style different from wxPENSTYLE_TRANSPARENT if the pen may be invalid as <ref refid="classwx_pen_1ac2614614fc84337541adff4fd3659af4" kindref="member">GetStyle()</ref> would assert in this case.</para><para><simplesect kind="see"><para><ref refid="classwx_pen_1a3fc43564c149d688c9b651da53a2bb4a" kindref="member">IsTransparent()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.2. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a3fc43564c149d688c9b651da53a2bb4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPen::IsTransparent</definition>
+        <argsstring>() const </argsstring>
+        <name>IsTransparent</name>
+        <briefdescription>
+<para>Returns true if the pen is transparent. </para>        </briefdescription>
+        <detaileddescription>
+<para>A transparent pen is simply a pen with wxPENSTYLE_TRANSPARENT style.</para><para>Notice that this function works even for non-initialized pens (for which it returns false) unlike tests of the form <computeroutput><ref refid="classwx_pen_1ac2614614fc84337541adff4fd3659af4" kindref="member">GetStyle()</ref> == wxPENSTYLE_TRANSPARENT</computeroutput> which would assert if the pen is invalid.</para><para><simplesect kind="see"><para><ref refid="classwx_pen_1aaa41bac2e7f09a3f59829813c3160da6" kindref="member">IsNonTransparent()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.2. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="311"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1ac577f818922f65043ae8642369ce3841" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPen::SetCap</definition>
+        <argsstring>(wxPenCap capStyle)</argsstring>
+        <name>SetCap</name>
+        <param>
+          <type><ref refid="pen_8h_1a7d4a9e379451a8d249239543ad78af3a" kindref="member">wxPenCap</ref></type>
+          <declname>capStyle</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pen cap style, which may be one of <computeroutput>wxCAP_ROUND</computeroutput>, <computeroutput>wxCAP_PROJECTING</computeroutput> and <computeroutput>wxCAP_BUTT</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default is <computeroutput>wxCAP_ROUND</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="classwx_pen_1ac501e84664f2ca047a36ee816a2f58ed" kindref="member">GetCap()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a6f4471824d023b98e5d884b00535b573" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPen::SetDashes</definition>
+        <argsstring>(int n, const wxDash *dash)</argsstring>
+        <name>SetDashes</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const wxDash *</type>
+          <declname>dash</declname>
+        </param>
+        <briefdescription>
+<para>Associates an array of dash values (defined as <computeroutput>char</computeroutput> in X, <computeroutput>DWORD</computeroutput> under Windows) with the pen. </para>        </briefdescription>
+        <detaileddescription>
+<para>The array is not deallocated by <ref refid="classwx_pen" kindref="compound">wxPen</ref>, but neither must it be deallocated by the calling application until the pen is deleted or this function is called with a NULL array.</para><para><simplesect kind="see"><para><ref refid="classwx_pen_1a89897140519f81047fdbae7653e25c98" kindref="member">GetDashes()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a6458cc3b4d30ac5a62cd75a445fc0b28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPen::SetJoin</definition>
+        <argsstring>(wxPenJoin join_style)</argsstring>
+        <name>SetJoin</name>
+        <param>
+          <type><ref refid="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4" kindref="member">wxPenJoin</ref></type>
+          <declname>join_style</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pen join style, which may be one of <computeroutput>wxJOIN_BEVEL</computeroutput>, <computeroutput>wxJOIN_ROUND</computeroutput> and <computeroutput>wxJOIN_MITER</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default is <computeroutput>wxJOIN_ROUND</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="classwx_pen_1afa2c9d8badbc1701d56f3f37490ead80" kindref="member">GetJoin()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="351"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1acb75ec80dcd9534181f8c17520aca2b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPen::SetStipple</definition>
+        <argsstring>(const wxBitmap &amp;stipple)</argsstring>
+        <name>SetStipple</name>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>stipple</declname>
+        </param>
+        <briefdescription>
+<para>Sets the bitmap for stippling. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1a50195e3d48e7f1469b949bc52e94f284" kindref="member">GetStipple()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a741bccee5c10c6a24d22132f5c1ff2f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPen::SetStyle</definition>
+        <argsstring>(wxPenStyle style)</argsstring>
+        <name>SetStyle</name>
+        <param>
+          <type><ref refid="pen_8h_1aebe64277219894a55d6b963607ad5f54" kindref="member">wxPenStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+<para>Set the pen style. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1af08e2f8db0c78f9bbca31674ab61d5eb" kindref="member">wxPen()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1ad390a7361cd737fcb176db622f5ad039" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxPen::SetWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pen width. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_pen_1a2e2c46609fe1d92d22394a74ae19f2a2" kindref="member">GetWidth()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a98819e4cb9abba22d993ba5ae1a93613" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPen::operator!=</definition>
+        <argsstring>(const wxPen &amp;pen) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_pen" kindref="compound">wxPen</ref> &amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+<para>Inequality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="380"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a54b6973663045f1b2a239fc8e752a737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> &amp;</type>
+        <definition>wxPen&amp; wxPen::operator=</definition>
+        <argsstring>(const wxPen &amp;pen)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_pen" kindref="compound">wxPen</ref> &amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator, using <ref refid="overview__refcount" kindref="compound">Reference Counting</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pen_1a96ad6c566711fc2a3f94f60b949bf39d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPen::operator==</definition>
+        <argsstring>(const wxPen &amp;pen) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_pen" kindref="compound">wxPen</ref> &amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="overview__refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="393"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A pen is a drawing tool for drawing outlines. </para>    </briefdescription>
+    <detaileddescription>
+<para>It is used for drawing lines and painting the outline of rectangles, ellipses, etc. It has a colour, a width and a style.</para><para><simplesect kind="note"><para>On a monochrome display, wxWidgets shows all non-white pens as black.</para></simplesect>
+Do not initialize objects on the stack before the program commences, since other required structures may not have been set up yet. Instead, define global pointers to objects and create them in <ref refid="classwx_app_console_1a99953775a2fd83fa2456e390779afe15" kindref="member">wxApp::OnInit()</ref> or when required.</para><para>An application may wish to dynamically create pens with different characteristics, and there is the consequent danger that a large number of duplicate pens will be created. Therefore an application may wish to get a pointer to a pen by using the global list of pens <ref refid="pen_8h_1a9eb4c70a69dd5c289c6c53b0da13f48b" kindref="member">wxThePenList</ref>, and calling the member function <ref refid="classwx_pen_list_1ab350d769f4a3b89dc275cef1f6dbd17c" kindref="member">wxPenList::FindOrCreatePen()</ref>. See <ref refid="classwx_pen_list" kindref="compound">wxPenList</ref> for more info.</para><para>This class uses <ref refid="overview__refcount" kindref="compound">reference counting and copy-on-write</ref> internally so that assignments between two instances of this class are very cheap. You can therefore use actual objects instead of pointers without efficiency problems. If an instance of this class is changed it will create its own data internally so that other instances, which previously shared the data using the reference counting, are not affected.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <itemizedlist>
+<listitem><para><ref refid="pen_8h_1a4dbfd18a818b95630453f3d755a1c95d" kindref="member">wxNullPen</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1ae1d7305927b56df235753d543ec02b2d" kindref="member">wxBLACK_DASHED_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a845a77278b675303c61858c18c2bb91b" kindref="member">wxBLACK_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a40815520d399c003f4b17dd1d8a24142" kindref="member">wxBLUE_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a4b1692630dc023b9900f2d507da34735" kindref="member">wxCYAN_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a3cbf557f3d9825283a92dcb40bc2e20a" kindref="member">wxGREEN_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a787768c16bb3ca4bba95f850e1a737d6" kindref="member">wxYELLOW_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a63955d74842289709ca0d7adc2c63e51" kindref="member">wxGREY_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a7ae1733b4203165aba05a5b53476e9c3" kindref="member">wxLIGHT_GREY_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a0af84a9a68b2cb4d4d3f0a600da0b264" kindref="member">wxMEDIUM_GREY_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a62930a76d6d75371553b90661f8d9d30" kindref="member">wxRED_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1afa8342d5885d1b1adf1fabd18a97ac58" kindref="member">wxTRANSPARENT_PEN</ref> </para></listitem>
+<listitem><para><ref refid="pen_8h_1a2673a1627fe81e99a5b69ddacaecee2b" kindref="member">wxWHITE_PEN</ref></para></listitem>
+</itemizedlist>
+<simplesect kind="see"><para><ref refid="classwx_pen_list" kindref="compound">wxPenList</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_d_c_1a0d229733fbc83c7e4c483c0714d090b2" kindref="member">wxDC::SetPen()</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="8591">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="8589">
+        <label>wxPen</label>
+        <link refid="classwx_pen"/>
+        <childnode refid="8590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8590">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="8591" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8594">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="8595" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="8592">
+        <label>wxPen</label>
+        <link refid="classwx_pen"/>
+        <childnode refid="8593" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8593">
+        <label>wxGDIObject</label>
+        <link refid="classwx_g_d_i_object"/>
+        <childnode refid="8594" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8595">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="150" bodyend="394"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPen</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPen</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxPen</scope><name>CreateRefData</name></member>
+      <member refid="classwx_pen_1ac501e84664f2ca047a36ee816a2f58ed" prot="public" virt="virtual"><scope>wxPen</scope><name>GetCap</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxPen</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_pen_1afeddf87958683f10e2fd685fff932e25" prot="public" virt="virtual"><scope>wxPen</scope><name>GetColour</name></member>
+      <member refid="classwx_pen_1a89897140519f81047fdbae7653e25c98" prot="public" virt="virtual"><scope>wxPen</scope><name>GetDashes</name></member>
+      <member refid="classwx_pen_1afa2c9d8badbc1701d56f3f37490ead80" prot="public" virt="virtual"><scope>wxPen</scope><name>GetJoin</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxPen</scope><name>GetRefData</name></member>
+      <member refid="classwx_pen_1a50195e3d48e7f1469b949bc52e94f284" prot="public" virt="virtual"><scope>wxPen</scope><name>GetStipple</name></member>
+      <member refid="classwx_pen_1ac2614614fc84337541adff4fd3659af4" prot="public" virt="virtual"><scope>wxPen</scope><name>GetStyle</name></member>
+      <member refid="classwx_pen_1a2e2c46609fe1d92d22394a74ae19f2a2" prot="public" virt="virtual"><scope>wxPen</scope><name>GetWidth</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxPen</scope><name>IsKindOf</name></member>
+      <member refid="classwx_pen_1aaa41bac2e7f09a3f59829813c3160da6" prot="public" virt="non-virtual"><scope>wxPen</scope><name>IsNonTransparent</name></member>
+      <member refid="classwx_pen_1ad36b523a05e5dc6f26cedcbe4e09e513" prot="public" virt="virtual"><scope>wxPen</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxPen</scope><name>IsSameAs</name></member>
+      <member refid="classwx_pen_1a3fc43564c149d688c9b651da53a2bb4a" prot="public" virt="non-virtual"><scope>wxPen</scope><name>IsTransparent</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPen</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxPen</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxPen</scope><name>operator new</name></member>
+      <member refid="classwx_pen_1a98819e4cb9abba22d993ba5ae1a93613" prot="public" virt="non-virtual"><scope>wxPen</scope><name>operator!=</name></member>
+      <member refid="classwx_pen_1a54b6973663045f1b2a239fc8e752a737" prot="public" virt="non-virtual"><scope>wxPen</scope><name>operator=</name></member>
+      <member refid="classwx_pen_1a96ad6c566711fc2a3f94f60b949bf39d" prot="public" virt="non-virtual"><scope>wxPen</scope><name>operator==</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxPen</scope><name>Ref</name></member>
+      <member refid="classwx_pen_1ac577f818922f65043ae8642369ce3841" prot="public" virt="virtual"><scope>wxPen</scope><name>SetCap</name></member>
+      <member refid="classwx_pen_1a3c45922aa86019a0e2ffdeedd0182931" prot="public" virt="virtual"><scope>wxPen</scope><name>SetColour</name></member>
+      <member refid="classwx_pen_1a4bd6be69b648a46b22b87a73b8f6212a" prot="public" virt="virtual"><scope>wxPen</scope><name>SetColour</name></member>
+      <member refid="classwx_pen_1a6f4471824d023b98e5d884b00535b573" prot="public" virt="virtual"><scope>wxPen</scope><name>SetDashes</name></member>
+      <member refid="classwx_pen_1a6458cc3b4d30ac5a62cd75a445fc0b28" prot="public" virt="virtual"><scope>wxPen</scope><name>SetJoin</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxPen</scope><name>SetRefData</name></member>
+      <member refid="classwx_pen_1acb75ec80dcd9534181f8c17520aca2b0" prot="public" virt="virtual"><scope>wxPen</scope><name>SetStipple</name></member>
+      <member refid="classwx_pen_1a741bccee5c10c6a24d22132f5c1ff2f7" prot="public" virt="virtual"><scope>wxPen</scope><name>SetStyle</name></member>
+      <member refid="classwx_pen_1ad390a7361cd737fcb176db622f5ad039" prot="public" virt="virtual"><scope>wxPen</scope><name>SetWidth</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxPen</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxPen</scope><name>UnShare</name></member>
+      <member refid="classwx_g_d_i_object_1a20ac442e0d24cf6250d7bd45f0d968d5" prot="public" virt="non-virtual"><scope>wxPen</scope><name>wxGDIObject</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxPen</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxPen</scope><name>wxObject</name></member>
+      <member refid="classwx_pen_1af08e2f8db0c78f9bbca31674ab61d5eb" prot="public" virt="non-virtual"><scope>wxPen</scope><name>wxPen</name></member>
+      <member refid="classwx_pen_1a3bcca8b2a34a208689b739b6df00a24e" prot="public" virt="non-virtual"><scope>wxPen</scope><name>wxPen</name></member>
+      <member refid="classwx_pen_1ae2a92286436cd980de9f9360eb9d4def" prot="public" virt="non-virtual"><scope>wxPen</scope><name>wxPen</name></member>
+      <member refid="classwx_pen_1a5ba7b9a179fa2887bf77099bbe2dddce" prot="public" virt="non-virtual"><scope>wxPen</scope><name>wxPen</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxPen</scope><name>~wxObject</name></member>
+      <member refid="classwx_pen_1ae4879c3e2bbe8b302f603a1f3d031024" prot="public" virt="virtual"><scope>wxPen</scope><name>~wxPen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

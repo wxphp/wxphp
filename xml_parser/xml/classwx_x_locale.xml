@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_x_locale" kind="class" prot="public">
+    <compoundname>wxXLocale</compoundname>
+    <includes local="no">wx/xlocale.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_x_locale_1a77e4782bb822bcee66dd046040488d7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxXLocale::wxXLocale</definition>
+        <argsstring>()</argsstring>
+        <name>wxXLocale</name>
+        <briefdescription>
+<para>Creates an uninitialized locale object, <ref refid="classwx_x_locale_1a4a096b74dc64fc2e37c47df161217e91" kindref="member">IsOk()</ref> method will return false. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_x_locale_1aeb8fa51e7f5ec1eec6456e7ae0ac4119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxXLocale::wxXLocale</definition>
+        <argsstring>(wxLanguage lang)</argsstring>
+        <name>wxXLocale</name>
+        <param>
+          <type><ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref></type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+<para>Creates the locale object corresponding to the specified language. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_x_locale_1ac8f33d48790d1a2c2e6381bde3b92d41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxXLocale::wxXLocale</definition>
+        <argsstring>(const char *loc)</argsstring>
+        <name>wxXLocale</name>
+        <param>
+          <type>const char *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Creates the locale object corresponding to the specified locale string. </para>        </briefdescription>
+        <detaileddescription>
+<para>The locale string is system-dependent, use constructor taking wxLanguage for better portability. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_x_locale_1a4a096b74dc64fc2e37c47df161217e91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXLocale::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if this object is initialized, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>represents a valid locale or false otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_x_locale_1a2b27b4ea526909778e79a8f0599c8d53" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXLocale::operator==</definition>
+        <argsstring>(const wxXLocale &amp;loc) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_x_locale_1ad2d0c304e027f93cdd79f603305c9717" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> &amp;</type>
+        <definition>static wxXLocale&amp; wxXLocale::GetCLocale</definition>
+        <argsstring>()</argsstring>
+        <name>GetCLocale</name>
+        <briefdescription>
+<para>Returns the global object representing the &quot;C&quot; locale. </para>        </briefdescription>
+        <detaileddescription>
+<para>For an even shorter access to this object a global <computeroutput>wxCLocale</computeroutput> variable (implemented as a macro) is provided and can be used instead of calling this method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a locale object used by so-called xlocale API. </para>    </briefdescription>
+    <detaileddescription>
+<para>Unlike <ref refid="classwx_locale" kindref="compound">wxLocale</ref> it doesn&apos;t provide any non-trivial operations but simply provides a portable wrapper for POSIX <computeroutput>locale_t</computeroutput> type.</para><para>It exists solely to be provided as an argument to various <computeroutput>wxFoo_l()</computeroutput> functions which are the extensions of the standard locale-dependent functions (hence the name xlocale). These functions do exactly the same thing as the corresponding standard <computeroutput>foo()</computeroutput> except that instead of using the global program locale they use the provided <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> object.</para><para>For example, if the user runs the program in French locale, the standard <computeroutput>printf()</computeroutput> function will output floating point numbers using decimal comma instead of decimal period. If the program needs to format a floating-point number in a standard format it can use: <programlisting><codeline><highlight class="normal"><sp/>wxPrintf_l(<ref refid="classwx_x_locale_1ad2d0c304e027f93cdd79f603305c9717" kindref="member" tooltip="Returns the global object representing the &amp;quot;C&amp;quot; locale.">wxXLocale::GetCLocale</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;%g&quot;</highlight><highlight class="normal">,<sp/>number)<sp/></highlight></codeline>
+</programlisting> to do it.</para><para>See <ref refid="group__group__funcmacro__locale" kindref="compound">Locale-dependent functions</ref> for a list of wxXLocale-enabled functions.</para><para>Conversely, if a program wanted to output the number in French locale, even if the current locale is different, it could use wxXLocale(wxLANGUAGE_FRENCH).</para><sect1 id="classwx_x_locale_1xlocale_avail">
+<title>Availability</title>
+<para>This class is fully implemented only under the platforms where xlocale POSIX API or equivalent is available. Currently the xlocale API is available under most of the recent Unix systems (including Linux, various BSD and Mac OS X) and Microsoft Visual C++ standard library provides a similar API starting from version 8 (Visual Studio 2005).</para><para>If neither POSIX API nor Microsoft proprietary equivalent are available, this class is still available but works in degraded mode: the only supported locale is the C one and attempts to create <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> object for any other locale will fail. You can use the preprocessor macro <computeroutput>wxHAS_XLOCALE_SUPPORT</computeroutput> to test if full xlocale API is available or only skeleton C locale support is present.</para><para>Notice that <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref> is new in wxWidgets 2.9.0 and is not compiled in if <computeroutput>wxUSE_XLOCALE</computeroutput> was set to 0 during the library compilation.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para>Predefined objects/pointers: <itemizedlist>
+<listitem><para><ref refid="xlocale_8h_1af80db5b763e9056441ffd74bee61ef0e" kindref="member">wxNullXLocale</ref></para></listitem>
+</itemizedlist>
+<simplesect kind="see"><para><ref refid="classwx_locale" kindref="compound">wxLocale</ref> </para></simplesect>
+</para></sect1>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" bodystart="63" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classwx_x_locale_1ad2d0c304e027f93cdd79f603305c9717" prot="public" virt="non-virtual"><scope>wxXLocale</scope><name>GetCLocale</name></member>
+      <member refid="classwx_x_locale_1a4a096b74dc64fc2e37c47df161217e91" prot="public" virt="non-virtual"><scope>wxXLocale</scope><name>IsOk</name></member>
+      <member refid="classwx_x_locale_1a2b27b4ea526909778e79a8f0599c8d53" prot="public" virt="non-virtual"><scope>wxXLocale</scope><name>operator==</name></member>
+      <member refid="classwx_x_locale_1a77e4782bb822bcee66dd046040488d7b" prot="public" virt="non-virtual"><scope>wxXLocale</scope><name>wxXLocale</name></member>
+      <member refid="classwx_x_locale_1aeb8fa51e7f5ec1eec6456e7ae0ac4119" prot="public" virt="non-virtual"><scope>wxXLocale</scope><name>wxXLocale</name></member>
+      <member refid="classwx_x_locale_1ac8f33d48790d1a2c2e6381bde3b92d41" prot="public" virt="non-virtual"><scope>wxXLocale</scope><name>wxXLocale</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

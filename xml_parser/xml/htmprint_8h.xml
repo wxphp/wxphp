@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="htmprint_8h" kind="file">
+    <compoundname>htmprint.h</compoundname>
+    <innerclass refid="classwx_html_d_c_renderer" prot="public">wxHtmlDCRenderer</innerclass>
+    <innerclass refid="classwx_html_easy_printing" prot="public">wxHtmlEasyPrinting</innerclass>
+    <innerclass refid="classwx_html_printout" prot="public">wxHtmlPrintout</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h"/>
+  </compounddef>
+</doxygen>

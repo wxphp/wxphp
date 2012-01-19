@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_rich_text_style_sheet" kind="class" prot="public">
+    <compoundname>wxRichTextStyleSheet</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/richtext/richtextstyles.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a3073745c5eda9a6daef7a776b6cf0cc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRichTextStyleSheet::wxRichTextStyleSheet</definition>
+        <argsstring>()</argsstring>
+        <name>wxRichTextStyleSheet</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="541"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a4203f4f87083005a94e2e3331b7b5aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxRichTextStyleSheet::~wxRichTextStyleSheet</definition>
+        <argsstring>()</argsstring>
+        <name>~wxRichTextStyleSheet</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="546"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a6d9917f11aba10ec584d16a4cfb24049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextStyleSheet::AddCharacterStyle</definition>
+        <argsstring>(wxRichTextCharacterStyleDefinition *def)</argsstring>
+        <name>AddCharacterStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_character_style_definition" kindref="compound">wxRichTextCharacterStyleDefinition</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>Adds a definition to the character style list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="551"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a6b30bfacb63d59dd9182cadd0b88d63d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextStyleSheet::AddListStyle</definition>
+        <argsstring>(wxRichTextListStyleDefinition *def)</argsstring>
+        <name>AddListStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_list_style_definition" kindref="compound">wxRichTextListStyleDefinition</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>Adds a definition to the list style list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="556"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1af38c1435ad568c5579ddee84e50353d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextStyleSheet::AddParagraphStyle</definition>
+        <argsstring>(wxRichTextParagraphStyleDefinition *def)</argsstring>
+        <name>AddParagraphStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_paragraph_style_definition" kindref="compound">wxRichTextParagraphStyleDefinition</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>Adds a definition to the paragraph style list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="561"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a19e3138595fd602a4cbed6404f02b85d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextStyleSheet::AddStyle</definition>
+        <argsstring>(wxRichTextStyleDefinition *def)</argsstring>
+        <name>AddStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+<para>Adds a definition to the appropriate style list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="566"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a09090795001b1efa4959c5f9157820eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextStyleSheet::DeleteStyles</definition>
+        <argsstring>()</argsstring>
+        <name>DeleteStyles</name>
+        <briefdescription>
+<para>Deletes all styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a7ecb6f1bb0bbf81577cc55d56af0de29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rich_text_character_style_definition" kindref="compound">wxRichTextCharacterStyleDefinition</ref> *</type>
+        <definition>wxRichTextCharacterStyleDefinition* wxRichTextStyleSheet::FindCharacterStyle</definition>
+        <argsstring>(const wxString &amp;name, bool recurse=true) const </argsstring>
+        <name>FindCharacterStyle</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recurse</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Finds a character definition by name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="577"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a6ef40859b3b78ed92176ee1e76f92cce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rich_text_list_style_definition" kindref="compound">wxRichTextListStyleDefinition</ref> *</type>
+        <definition>wxRichTextListStyleDefinition* wxRichTextStyleSheet::FindListStyle</definition>
+        <argsstring>(const wxString &amp;name, bool recurse=true) const </argsstring>
+        <name>FindListStyle</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recurse</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Finds a list definition by name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="583"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1aaf6e4af5cf68e60f7863ae514370b1eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rich_text_paragraph_style_definition" kindref="compound">wxRichTextParagraphStyleDefinition</ref> *</type>
+        <definition>wxRichTextParagraphStyleDefinition* wxRichTextStyleSheet::FindParagraphStyle</definition>
+        <argsstring>(const wxString &amp;name, bool recurse=true) const </argsstring>
+        <name>FindParagraphStyle</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recurse</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Finds a paragraph definition by name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="589"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1aabfbec5b89ea7474d8f15e538684de0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
+        <definition>wxRichTextStyleDefinition* wxRichTextStyleSheet::FindStyle</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>FindStyle</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Finds a style definition by name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="594"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1ac023d795f3b4e7171f5618582e9ff95e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rich_text_character_style_definition" kindref="compound">wxRichTextCharacterStyleDefinition</ref> *</type>
+        <definition>wxRichTextCharacterStyleDefinition* wxRichTextStyleSheet::GetCharacterStyle</definition>
+        <argsstring>(size_t n) const </argsstring>
+        <name>GetCharacterStyle</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the <emphasis>nth</emphasis> character style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="599"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a00bdc3bb60b86b49f2909c0e05b7b6f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxRichTextStyleSheet::GetCharacterStyleCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCharacterStyleCount</name>
+        <briefdescription>
+<para>Returns the number of character styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="604"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a87e933e209f1ae7e64af69252220c8be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxRichTextStyleSheet::GetDescription</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDescription</name>
+        <briefdescription>
+<para>Returns the style sheet&apos;s description. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="609"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a1a44a12f0713ec31bc3e255d6c028dff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rich_text_list_style_definition" kindref="compound">wxRichTextListStyleDefinition</ref> *</type>
+        <definition>wxRichTextListStyleDefinition* wxRichTextStyleSheet::GetListStyle</definition>
+        <argsstring>(size_t n) const </argsstring>
+        <name>GetListStyle</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the <emphasis>nth</emphasis> list style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="614"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a032a081899cb4dbad2521f82a02e53ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxRichTextStyleSheet::GetListStyleCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetListStyleCount</name>
+        <briefdescription>
+<para>Returns the number of list styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="619"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a9d68bd407b2cba86e4e52eab37d5a2b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxRichTextStyleSheet::GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+<para>Returns the style sheet&apos;s name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="624"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a40412a1b264459c11033e7b8fc468d0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rich_text_paragraph_style_definition" kindref="compound">wxRichTextParagraphStyleDefinition</ref> *</type>
+        <definition>wxRichTextParagraphStyleDefinition* wxRichTextStyleSheet::GetParagraphStyle</definition>
+        <argsstring>(size_t n) const </argsstring>
+        <name>GetParagraphStyle</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the <emphasis>nth</emphasis> paragraph style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="629"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1ab90ecca6dfb52b3bd3c45ea0a98b0bcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t wxRichTextStyleSheet::GetParagraphStyleCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetParagraphStyleCount</name>
+        <briefdescription>
+<para>Returns the number of paragraph styles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="634"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a3376ce3cf0c2264253f9af4b91335be2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextStyleSheet::RemoveCharacterStyle</definition>
+        <argsstring>(wxRichTextStyleDefinition *def, bool deleteStyle=false)</argsstring>
+        <name>RemoveCharacterStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>deleteStyle</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Removes a character style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="640"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1af34b682b79c84277ea1db8a05a8bbac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextStyleSheet::RemoveListStyle</definition>
+        <argsstring>(wxRichTextStyleDefinition *def, bool deleteStyle=false)</argsstring>
+        <name>RemoveListStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>deleteStyle</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Removes a list style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="646"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a2a24f28fa46444e2e15520cf9c85fc41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextStyleSheet::RemoveParagraphStyle</definition>
+        <argsstring>(wxRichTextStyleDefinition *def, bool deleteStyle=false)</argsstring>
+        <name>RemoveParagraphStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>deleteStyle</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Removes a paragraph style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="652"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a45df0dca85261fe34e2708e5c4959dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRichTextStyleSheet::RemoveStyle</definition>
+        <argsstring>(wxRichTextStyleDefinition *def, bool deleteStyle=false)</argsstring>
+        <name>RemoveStyle</name>
+        <param>
+          <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
+          <declname>def</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>deleteStyle</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Removes a style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="658"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1a2343eedbcfc2f9e1837963d690a448d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextStyleSheet::SetDescription</definition>
+        <argsstring>(const wxString &amp;descr)</argsstring>
+        <name>SetDescription</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>descr</declname>
+        </param>
+        <briefdescription>
+<para>Sets the style sheet&apos;s description. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="663"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rich_text_style_sheet_1af17d9a4df7e5d1893c0dc02d1fc07143" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRichTextStyleSheet::SetName</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>SetName</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Sets the style sheet&apos;s name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="668"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A style sheet contains named paragraph and character styles that make it easy for a user to apply combinations of attributes to a <ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>You can use a <ref refid="classwx_rich_text_style_list_box" kindref="compound">wxRichTextStyleListBox</ref> in your user interface to show available styles to the user, and allow application of styles to the control.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9921">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="9920">
+        <label>wxRichTextStyleSheet</label>
+        <link refid="classwx_rich_text_style_sheet"/>
+        <childnode refid="9921" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9923">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="9924" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9922">
+        <label>wxRichTextStyleSheet</label>
+        <link refid="classwx_rich_text_style_sheet"/>
+        <childnode refid="9923" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9924">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="536" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" bodystart="535" bodyend="669"/>
+    <listofallmembers>
+      <member refid="classwx_rich_text_style_sheet_1a6d9917f11aba10ec584d16a4cfb24049" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>AddCharacterStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a6b30bfacb63d59dd9182cadd0b88d63d" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>AddListStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1af38c1435ad568c5579ddee84e50353d4" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>AddParagraphStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a19e3138595fd602a4cbed6404f02b85d" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>AddStyle</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextStyleSheet</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxRichTextStyleSheet</scope><name>CreateRefData</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a09090795001b1efa4959c5f9157820eb" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>DeleteStyles</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a7ecb6f1bb0bbf81577cc55d56af0de29" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>FindCharacterStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a6ef40859b3b78ed92176ee1e76f92cce" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>FindListStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1aaf6e4af5cf68e60f7863ae514370b1eb" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>FindParagraphStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1aabfbec5b89ea7474d8f15e538684de0c" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>FindStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1ac023d795f3b4e7171f5618582e9ff95e" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetCharacterStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a00bdc3bb60b86b49f2909c0e05b7b6f5" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetCharacterStyleCount</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRichTextStyleSheet</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a87e933e209f1ae7e64af69252220c8be" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetDescription</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a1a44a12f0713ec31bc3e255d6c028dff" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetListStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a032a081899cb4dbad2521f82a02e53ff" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetListStyleCount</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a9d68bd407b2cba86e4e52eab37d5a2b7" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetName</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a40412a1b264459c11033e7b8fc468d0c" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetParagraphStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1ab90ecca6dfb52b3bd3c45ea0a98b0bcf" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetParagraphStyleCount</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>Ref</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a3376ce3cf0c2264253f9af4b91335be2" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>RemoveCharacterStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1af34b682b79c84277ea1db8a05a8bbac7" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>RemoveListStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a2a24f28fa46444e2e15520cf9c85fc41" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>RemoveParagraphStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a45df0dca85261fe34e2708e5c4959dc5" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>RemoveStyle</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a2343eedbcfc2f9e1837963d690a448d4" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>SetDescription</name></member>
+      <member refid="classwx_rich_text_style_sheet_1af17d9a4df7e5d1893c0dc02d1fc07143" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>SetName</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>wxObject</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a3073745c5eda9a6daef7a776b6cf0cc1" prot="public" virt="non-virtual"><scope>wxRichTextStyleSheet</scope><name>wxRichTextStyleSheet</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxRichTextStyleSheet</scope><name>~wxObject</name></member>
+      <member refid="classwx_rich_text_style_sheet_1a4203f4f87083005a94e2e3331b7b5aab" prot="public" virt="virtual"><scope>wxRichTextStyleSheet</scope><name>~wxRichTextStyleSheet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

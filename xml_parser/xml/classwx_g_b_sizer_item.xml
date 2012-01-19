@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_g_b_sizer_item" kind="class" prot="public">
+    <compoundname>wxGBSizerItem</compoundname>
+    <basecompoundref refid="classwx_sizer_item" prot="public" virt="non-virtual">wxSizerItem</basecompoundref>
+    <includes local="no">wx/gbsizer.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a4a01a60d5cebf1a6303db1f1defbaa90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref></type>
+        <definition>wxGBPosition wxGBSizerItem::GetPos</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPos</name>
+        <briefdescription>
+<para>Get the grid position of the item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a0bae32b23b9b3d03aafc140ef91c7dfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGBSizerItem::GetPos</definition>
+        <argsstring>(int &amp;row, int &amp;col) const </argsstring>
+        <name>GetPos</name>
+        <param>
+          <type>int &amp;</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Get the grid position of the item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="259"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1ad334845a0b91b5b03820ba8b0776f2d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref></type>
+        <definition>wxGBSpan wxGBSizerItem::GetSpan</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSpan</name>
+        <briefdescription>
+<para>Get the row and column spanning of the item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1accb20138e1aa2ae7e16b4342e73bff07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGBSizerItem::GetSpan</definition>
+        <argsstring>(int &amp;rowspan, int &amp;colspan) const </argsstring>
+        <name>GetSpan</name>
+        <param>
+          <type>int &amp;</type>
+          <declname>rowspan</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>colspan</declname>
+        </param>
+        <briefdescription>
+<para>Get the row and column spanning of the item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="267"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a17ecfba64a4dc099f285e45123ec9af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGBSizerItem::wxGBSizerItem</definition>
+        <argsstring>(int width, int height, const wxGBPosition &amp;pos, const wxGBSpan &amp;span=wxDefaultSpan, int flag=0, int border=0, wxObject *userData=NULL)</argsstring>
+        <name>wxGBSizerItem</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref> &amp;</type>
+          <declname>span</declname>
+          <defval><ref refid="gbsizer_8h_1adbaf4ed0f18199b06866229a56febd29" kindref="member">wxDefaultSpan</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>border</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Construct a sizer item for tracking a spacer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1aca1e967cfb791dc102ab1766acb27e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGBSizerItem::wxGBSizerItem</definition>
+        <argsstring>(wxWindow *window, const wxGBPosition &amp;pos, const wxGBSpan &amp;span=wxDefaultSpan, int flag=0, int border=0, wxObject *userData=NULL)</argsstring>
+        <name>wxGBSizerItem</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref> &amp;</type>
+          <declname>span</declname>
+          <defval><ref refid="gbsizer_8h_1adbaf4ed0f18199b06866229a56febd29" kindref="member">wxDefaultSpan</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>border</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Construct a sizer item for tracking a window. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a6e02caab6163a761ced57e5b370c72c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGBSizerItem::wxGBSizerItem</definition>
+        <argsstring>(wxSizer *sizer, const wxGBPosition &amp;pos, const wxGBSpan &amp;span=wxDefaultSpan, int flag=0, int border=0, wxObject *userData=NULL)</argsstring>
+        <name>wxGBSizerItem</name>
+        <param>
+          <type><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> *</type>
+          <declname>sizer</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref> &amp;</type>
+          <declname>span</declname>
+          <defval><ref refid="gbsizer_8h_1adbaf4ed0f18199b06866229a56febd29" kindref="member">wxDefaultSpan</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>border</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Construct a sizer item for tracking a subsizer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a6dfe180960c6d1eb5674de93bacefb66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGBSizerItem::GetEndPos</definition>
+        <argsstring>(int &amp;row, int &amp;col)</argsstring>
+        <name>GetEndPos</name>
+        <param>
+          <type>int &amp;</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Get the row and column of the endpoint of this item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a53bb94f29fef93966cd960c644408cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGBSizerItem::Intersects</definition>
+        <argsstring>(const wxGBSizerItem &amp;other)</argsstring>
+        <name>Intersects</name>
+        <param>
+          <type>const <ref refid="classwx_g_b_sizer_item" kindref="compound">wxGBSizerItem</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this item and the <emphasis>other</emphasis> item intersect. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1ada5e2355bc74010eed74e24fa21a9836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGBSizerItem::Intersects</definition>
+        <argsstring>(const wxGBPosition &amp;pos, const wxGBSpan &amp;span)</argsstring>
+        <name>Intersects</name>
+        <param>
+          <type>const <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref> &amp;</type>
+          <declname>span</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given pos/span would intersect with this item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a16f4cfb3084129107896cdcb6ab6e0df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGBSizerItem::SetPos</definition>
+        <argsstring>(const wxGBPosition &amp;pos)</argsstring>
+        <name>SetPos</name>
+        <param>
+          <type>const <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>If the item is already a member of a sizer then first ensure that there is no other item that would intersect with this one at the new position, then set the new position. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the change is successful and after the next Layout the item will be moved. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a62fe2aad8ca333ba7d99b688970ab23d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGBSizerItem::SetSpan</definition>
+        <argsstring>(const wxGBSpan &amp;span)</argsstring>
+        <name>SetSpan</name>
+        <param>
+          <type>const <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref> &amp;</type>
+          <declname>span</declname>
+        </param>
+        <briefdescription>
+<para>If the item is already a member of a sizer then first ensure that there is no other item that would intersect with this one with its new spanning size, then set the new spanning. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the change is successful and after the next Layout the item will be resized. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a8f1f9d7aedb04352a19dd8bdf713c687" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_grid_bag_sizer" kindref="compound">wxGridBagSizer</ref> *</type>
+        <definition>wxGridBagSizer* wxGBSizerItem::GetGBSizer</definition>
+        <argsstring>() const </argsstring>
+        <name>GetGBSizer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_sizer_item_1a38666e7ccd3eac99b170be25575c497f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGBSizerItem::SetGBSizer</definition>
+        <argsstring>(wxGridBagSizer *sizer)</argsstring>
+        <name>SetGBSizer</name>
+        <param>
+          <type><ref refid="classwx_grid_bag_sizer" kindref="compound">wxGridBagSizer</ref> *</type>
+          <declname>sizer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="297"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classwx_g_b_sizer_item" kindref="compound">wxGBSizerItem</ref> class is used by the <ref refid="classwx_grid_bag_sizer" kindref="compound">wxGridBagSizer</ref> for tracking the items in the sizer. </para>    </briefdescription>
+    <detaileddescription>
+<para>It adds grid position and spanning information to the normal <ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> by adding <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> and <ref refid="classwx_g_b_span" kindref="compound">wxGBSpan</ref> attributes. Most of the time you will not need to use a <ref refid="classwx_g_b_sizer_item" kindref="compound">wxGBSizerItem</ref> directly in your code, but there are a couple of cases where it is handy.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6482">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6480">
+        <label>wxGBSizerItem</label>
+        <link refid="classwx_g_b_sizer_item"/>
+        <childnode refid="6481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6481">
+        <label>wxSizerItem</label>
+        <link refid="classwx_sizer_item"/>
+        <childnode refid="6482" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6485">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6486" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6483">
+        <label>wxGBSizerItem</label>
+        <link refid="classwx_g_b_sizer_item"/>
+        <childnode refid="6484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6484">
+        <label>wxSizerItem</label>
+        <link refid="classwx_sizer_item"/>
+        <childnode refid="6485" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6486">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="228" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" bodystart="227" bodyend="298"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGBSizerItem</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_sizer_item_1adfbb98b4173df43be52d9c25d4f842b4" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>AssignSizer</name></member>
+      <member refid="classwx_sizer_item_1ad6e478ed2a645b8f18642d7d3194278a" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>AssignSpacer</name></member>
+      <member refid="classwx_sizer_item_1ac558c9e0615222292ba798963bb65286" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>AssignSpacer</name></member>
+      <member refid="classwx_sizer_item_1a4dbc6292038eb7de978be98f8a4f802e" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>AssignWindow</name></member>
+      <member refid="classwx_sizer_item_1adcb05eea89effd217d5f3431e6064c36" prot="public" virt="virtual"><scope>wxGBSizerItem</scope><name>CalcMin</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGBSizerItem</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxGBSizerItem</scope><name>CreateRefData</name></member>
+      <member refid="classwx_sizer_item_1aa1bc12b256f01f8faee2b046415e4e82" prot="public" virt="virtual"><scope>wxGBSizerItem</scope><name>DeleteWindows</name></member>
+      <member refid="classwx_sizer_item_1a0b6971d562afba609a310828fdc53f03" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>DetachSizer</name></member>
+      <member refid="classwx_sizer_item_1a530e3095d1c86540ac5985dd14bc53bf" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetBorder</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxGBSizerItem</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_g_b_sizer_item_1a6dfe180960c6d1eb5674de93bacefb66" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetEndPos</name></member>
+      <member refid="classwx_sizer_item_1a4687b805952acfc9d7fb782a4474f837" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetFlag</name></member>
+      <member refid="classwx_g_b_sizer_item_1a8f1f9d7aedb04352a19dd8bdf713c687" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetGBSizer</name></member>
+      <member refid="classwx_sizer_item_1a0ab50194fcdb8e0150fcbceff2ab6236" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetId</name></member>
+      <member refid="classwx_sizer_item_1a5211509f78a24247ec8d6e53465bdcd9" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetMinSize</name></member>
+      <member refid="classwx_g_b_sizer_item_1a4a01a60d5cebf1a6303db1f1defbaa90" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetPos</name></member>
+      <member refid="classwx_g_b_sizer_item_1a0bae32b23b9b3d03aafc140ef91c7dfc" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetPos</name></member>
+      <member refid="classwx_sizer_item_1a6448e1f1476c83e844e249848feb820e" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetPosition</name></member>
+      <member refid="classwx_sizer_item_1a0b5727fc76e833d06bad42a71eceab3b" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetProportion</name></member>
+      <member refid="classwx_sizer_item_1ad7f29c137679454aefa1f07db48a2b7c" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetRatio</name></member>
+      <member refid="classwx_sizer_item_1a3c3a8e59193eb64cb6cf1e120c9ed544" prot="public" virt="virtual"><scope>wxGBSizerItem</scope><name>GetRect</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetRefData</name></member>
+      <member refid="classwx_sizer_item_1a44e2199ccc16690b46fadcbccfec6bfb" prot="public" virt="virtual"><scope>wxGBSizerItem</scope><name>GetSize</name></member>
+      <member refid="classwx_sizer_item_1a4c020916c310f6bc1089dbd0288ec008" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetSizer</name></member>
+      <member refid="classwx_sizer_item_1a88b8aecba418eabdd328134a3a823af6" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetSpacer</name></member>
+      <member refid="classwx_g_b_sizer_item_1ad334845a0b91b5b03820ba8b0776f2d6" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetSpan</name></member>
+      <member refid="classwx_g_b_sizer_item_1accb20138e1aa2ae7e16b4342e73bff07" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetSpan</name></member>
+      <member refid="classwx_sizer_item_1ad2e04bd20f530b3f3077fefdc8cc9603" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetUserData</name></member>
+      <member refid="classwx_sizer_item_1a8ec9f53feb839b2a1aee803c789df229" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>GetWindow</name></member>
+      <member refid="classwx_g_b_sizer_item_1a53bb94f29fef93966cd960c644408cac" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>Intersects</name></member>
+      <member refid="classwx_g_b_sizer_item_1ada5e2355bc74010eed74e24fa21a9836" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>Intersects</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>IsSameAs</name></member>
+      <member refid="classwx_sizer_item_1acf4fdee6540663e5de1666bddf962c97" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>IsShown</name></member>
+      <member refid="classwx_sizer_item_1af2789036d523ab9cac1e902b8e00bdbd" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>IsSizer</name></member>
+      <member refid="classwx_sizer_item_1a0eb7167d14d1e7483367968b28682201" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>IsSpacer</name></member>
+      <member refid="classwx_sizer_item_1adfeeb2e05398746af764e5a7f8dc5d13" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>IsWindow</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxGBSizerItem</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>Ref</name></member>
+      <member refid="classwx_sizer_item_1af007095393ea60c2c2431e65ffe639db" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetBorder</name></member>
+      <member refid="classwx_sizer_item_1a4fc9c5889185d1c06665f47112663a75" prot="public" virt="virtual"><scope>wxGBSizerItem</scope><name>SetDimension</name></member>
+      <member refid="classwx_sizer_item_1aa6e15409d4dcdf01ba88d5f44a1aadfb" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetFlag</name></member>
+      <member refid="classwx_g_b_sizer_item_1a38666e7ccd3eac99b170be25575c497f" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetGBSizer</name></member>
+      <member refid="classwx_sizer_item_1a14b3da2cb04b9096f5c8888ca90ab858" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetId</name></member>
+      <member refid="classwx_sizer_item_1a39ddf1d7da5982d6fc21e4b57db9bd61" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetInitSize</name></member>
+      <member refid="classwx_sizer_item_1ae81527c4eae65c1bdc491309df643d07" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetMinSize</name></member>
+      <member refid="classwx_sizer_item_1ab989d3ce6d529c50dea6675454c1ab97" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetMinSize</name></member>
+      <member refid="classwx_g_b_sizer_item_1a16f4cfb3084129107896cdcb6ab6e0df" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetPos</name></member>
+      <member refid="classwx_sizer_item_1a7de372e08f991227d4105d24051d04a7" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetProportion</name></member>
+      <member refid="classwx_sizer_item_1ae761aa97de98f606d86419dbced0672d" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetRatio</name></member>
+      <member refid="classwx_sizer_item_1acbb969c8df6f141dc479cc8123af3430" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetRatio</name></member>
+      <member refid="classwx_sizer_item_1a0cc088cb6755dc0df5633aeae8d05fa5" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetRatio</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetRefData</name></member>
+      <member refid="classwx_sizer_item_1a4c4af76c0686e00b50ff9a238288386c" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetSizer</name></member>
+      <member refid="classwx_sizer_item_1a83baa6835015e9ccd71ba290883db4f5" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetSpacer</name></member>
+      <member refid="classwx_g_b_sizer_item_1a62fe2aad8ca333ba7d99b688970ab23d" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetSpan</name></member>
+      <member refid="classwx_sizer_item_1a5dde3d0ca94189848ad4ece129d6937a" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetUserData</name></member>
+      <member refid="classwx_sizer_item_1a9a310e236fa40720fe17a7d08ae4a1a6" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>SetWindow</name></member>
+      <member refid="classwx_sizer_item_1a62baa1d528dabc001472de5b70786ac3" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>Show</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>UnShare</name></member>
+      <member refid="classwx_g_b_sizer_item_1a17ecfba64a4dc099f285e45123ec9af9" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxGBSizerItem</name></member>
+      <member refid="classwx_g_b_sizer_item_1aca1e967cfb791dc102ab1766acb27e4f" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxGBSizerItem</name></member>
+      <member refid="classwx_g_b_sizer_item_1a6e02caab6163a761ced57e5b370c72c4" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxGBSizerItem</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxObject</name></member>
+      <member refid="classwx_sizer_item_1ab07c608bd56283df5847c1e9bd4ebfa9" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxSizerItem</name></member>
+      <member refid="classwx_sizer_item_1a4c858f9b3ae6e1d9e96602959d5d7ff2" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxSizerItem</name></member>
+      <member refid="classwx_sizer_item_1aaefc97a23300b948bab559e4e89638b1" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxSizerItem</name></member>
+      <member refid="classwx_sizer_item_1af321a97190675a193212131d5f11523f" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxSizerItem</name></member>
+      <member refid="classwx_sizer_item_1a8678d88740bc5a9244338fd345502284" prot="public" virt="non-virtual"><scope>wxGBSizerItem</scope><name>wxSizerItem</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxGBSizerItem</scope><name>~wxObject</name></member>
+      <member refid="classwx_sizer_item_1aaecba04b2291dddf5576fd3bc8f52596" prot="public" virt="virtual"><scope>wxGBSizerItem</scope><name>~wxSizerItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

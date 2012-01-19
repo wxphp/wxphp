@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_message_output_best" kind="class" prot="public">
+    <compoundname>wxMessageOutputBest</compoundname>
+    <basecompoundref refid="classwx_message_output_stderr" prot="public" virt="non-virtual">wxMessageOutputStderr</basecompoundref>
+    <includes local="no">wx/msgout.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_message_output_best_1a8dc10016b58fecd43106dbd3efe205d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMessageOutputBest::wxMessageOutputBest</definition>
+        <argsstring>(wxMessageOutputFlags flags=wxMSGOUT_PREFER_STDERR)</argsstring>
+        <name>wxMessageOutputBest</name>
+        <param>
+          <type>wxMessageOutputFlags</type>
+          <declname>flags</declname>
+          <defval>wxMSGOUT_PREFER_STDERR</defval>
+        </param>
+        <briefdescription>
+<para>Create a new message output object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>May be either <computeroutput>wxMSGOUT_PREFER_STDERR</computeroutput> (default) meaning that standard error will be used if it&apos;s available (e.g. program is being run from console under Windows) or <computeroutput>wxMSGOUT_PREFER_MSGBOX</computeroutput> meaning that a message box will always be used if the current system supports showing message boxes from console programs (currently only Windows does). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Output messages in the best possible way. </para>    </briefdescription>
+    <detaileddescription>
+<para>Some systems (e.g. MSW) are capable of showing message boxes even from console programs. If this is the case, this class will use message box if standard error stream is not available (e.g. running console program not from console under Windows) or possibly even always, depending on the value of flags constructor argument.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7752">
+        <label>wxMessageOutputStderr</label>
+        <link refid="classwx_message_output_stderr"/>
+        <childnode refid="7753" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7753">
+        <label>wxMessageOutput</label>
+        <link refid="classwx_message_output"/>
+      </node>
+      <node id="7751">
+        <label>wxMessageOutputBest</label>
+        <link refid="classwx_message_output_best"/>
+        <childnode refid="7752" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7755">
+        <label>wxMessageOutputStderr</label>
+        <link refid="classwx_message_output_stderr"/>
+        <childnode refid="7756" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7756">
+        <label>wxMessageOutput</label>
+        <link refid="classwx_message_output"/>
+      </node>
+      <node id="7754">
+        <label>wxMessageOutputBest</label>
+        <link refid="classwx_message_output_best"/>
+        <childnode refid="7755" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="129" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" bodystart="128" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classwx_message_output_1aff0387f83c5ee4db7cf26b909e1057e7" prot="public" virt="non-virtual"><scope>wxMessageOutputBest</scope><name>Get</name></member>
+      <member refid="classwx_message_output_1ae8b0b6734006e716bd80fd053a7b4e4d" prot="public" virt="pure-virtual"><scope>wxMessageOutputBest</scope><name>Output</name></member>
+      <member refid="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" prot="public" virt="non-virtual"><scope>wxMessageOutputBest</scope><name>Printf</name></member>
+      <member refid="classwx_message_output_1ac8a0f8cc3ff1c0582d7e3e3f490e7e0b" prot="public" virt="non-virtual"><scope>wxMessageOutputBest</scope><name>Set</name></member>
+      <member refid="classwx_message_output_best_1a8dc10016b58fecd43106dbd3efe205d4" prot="public" virt="non-virtual"><scope>wxMessageOutputBest</scope><name>wxMessageOutputBest</name></member>
+      <member refid="classwx_message_output_stderr_1a2545c02ce8dcf188c820d78ff7faa4b1" prot="public" virt="non-virtual"><scope>wxMessageOutputBest</scope><name>wxMessageOutputStderr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

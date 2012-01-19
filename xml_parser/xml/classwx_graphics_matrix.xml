@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_graphics_matrix" kind="class" prot="public">
+    <compoundname>wxGraphicsMatrix</compoundname>
+    <basecompoundref refid="classwx_graphics_object" prot="public" virt="non-virtual">wxGraphicsObject</basecompoundref>
+    <includes local="no">wx/graphics.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_graphics_matrix_1a382d94e2ed9445408e4ac158af667196" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::Concat</definition>
+        <argsstring>(const wxGraphicsMatrix *t)</argsstring>
+        <name>Concat</name>
+        <param>
+          <type>const <ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Concatenates the matrix passed with the current matrix. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1227"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a445239d3314fa5aea94edd7e4e7e0d12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGraphicsMatrix::Concat</definition>
+        <argsstring>(const wxGraphicsMatrix &amp;t)</argsstring>
+        <name>Concat</name>
+        <param>
+          <type>const <ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Concatenates the matrix passed with the current matrix. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1231"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a039ea790c5521171edaee041c83beb97" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::Get</definition>
+        <argsstring>(wxDouble *a=NULL, wxDouble *b=NULL, wxDouble *c=NULL, wxDouble *d=NULL, wxDouble *tx=NULL, wxDouble *ty=NULL) const </argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>a</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>b</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>c</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>d</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>tx</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>ty</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Returns the component values of the matrix via the argument pointers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1238"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a3df49f20c0d41212a645f03213b86ca7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>virtual void* wxGraphicsMatrix::GetNativeMatrix</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNativeMatrix</name>
+        <briefdescription>
+<para>Returns the native representation of the matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para>For CoreGraphics this is a CFAffineMatrix pointer, for GDIPlus a Matrix Pointer, and for Cairo a cairo_matrix_t pointer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1245"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a4e83f56734919d83d8cc0d5c56b0f11c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::Invert</definition>
+        <argsstring>()</argsstring>
+        <name>Invert</name>
+        <briefdescription>
+<para>Inverts the matrix. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1250"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1ad3c900d0dec166a8424b2eb9a9a88a67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGraphicsMatrix::IsEqual</definition>
+        <argsstring>(const wxGraphicsMatrix *t) const </argsstring>
+        <name>IsEqual</name>
+        <param>
+          <type>const <ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the elements of the transformation matrix are equal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1255"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a5edc3ee0a933ed9817413551ea578292" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGraphicsMatrix::IsEqual</definition>
+        <argsstring>(const wxGraphicsMatrix &amp;t) const </argsstring>
+        <name>IsEqual</name>
+        <param>
+          <type>const <ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the elements of the transformation matrix are equal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1259"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a3f188ad4ed56af78d83dd7d49853de9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGraphicsMatrix::IsIdentity</definition>
+        <argsstring>() const </argsstring>
+        <name>IsIdentity</name>
+        <briefdescription>
+<para>Return true if this is the identity matrix. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1264"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a05c3709b63cc1df5bf7ae48787befc37" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::Rotate</definition>
+        <argsstring>(wxDouble angle)</argsstring>
+        <name>Rotate</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>Rotates this matrix (in radians). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1269"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1ae0a4ac622f4073c8bf02f96744463dc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::Scale</definition>
+        <argsstring>(wxDouble xScale, wxDouble yScale)</argsstring>
+        <name>Scale</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>xScale</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>yScale</declname>
+        </param>
+        <briefdescription>
+<para>Scales this matrix. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1274"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a2d2e9ede4902eb87d5e2368c487508a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::Set</definition>
+        <argsstring>(wxDouble a=1.0, wxDouble b=0.0, wxDouble c=0.0, wxDouble d=1.0, wxDouble tx=0.0, wxDouble ty=0.0)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>a</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>b</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>c</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>d</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>tx</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>ty</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>Sets the matrix to the respective values (default values are the identity matrix). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1281"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a7c260921b498791c1355d3ae2fe4a3e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::TransformDistance</definition>
+        <argsstring>(wxDouble *dx, wxDouble *dy) const </argsstring>
+        <name>TransformDistance</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+<para>Applies this matrix to a distance (ie. </para>        </briefdescription>
+        <detaileddescription>
+<para>performs all transforms except translations). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1287"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1a27f4264be5407a9a584297c822b8deae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::TransformPoint</definition>
+        <argsstring>(wxDouble *x, wxDouble *y) const </argsstring>
+        <name>TransformPoint</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref> *</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Applies this matrix to a point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1292"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_graphics_matrix_1ae91dc96cb34b4562179efb6c9857dc75" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGraphicsMatrix::Translate</definition>
+        <argsstring>(wxDouble dx, wxDouble dy)</argsstring>
+        <name>Translate</name>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+<para>Translates this matrix. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1297"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref> is a native representation of an affine matrix. </para>    </briefdescription>
+    <detaileddescription>
+<para>The contents are specific and private to the respective renderer. Instances are ref counted and can therefore be assigned as usual. The only way to get a valid instance is via <ref refid="classwx_graphics_context_1a03baf02210eba82dc54e4fead30db284" kindref="member">wxGraphicsContext::CreateMatrix()</ref> or <ref refid="classwx_graphics_renderer_1a502cedf20552ed22d8cae823b045105b" kindref="member">wxGraphicsRenderer::CreateMatrix()</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6585">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6584">
+        <label>wxGraphicsObject</label>
+        <link refid="classwx_graphics_object"/>
+        <childnode refid="6585" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6583">
+        <label>wxGraphicsMatrix</label>
+        <link refid="classwx_graphics_matrix"/>
+        <childnode refid="6584" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6588">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6589" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6587">
+        <label>wxGraphicsObject</label>
+        <link refid="classwx_graphics_object"/>
+        <childnode refid="6588" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6586">
+        <label>wxGraphicsMatrix</label>
+        <link refid="classwx_graphics_matrix"/>
+        <childnode refid="6587" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6589">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1222" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1221" bodyend="1298"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGraphicsMatrix</scope><name>CloneRefData</name></member>
+      <member refid="classwx_graphics_matrix_1a382d94e2ed9445408e4ac158af667196" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>Concat</name></member>
+      <member refid="classwx_graphics_matrix_1a445239d3314fa5aea94edd7e4e7e0d12" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>Concat</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxGraphicsMatrix</scope><name>CreateRefData</name></member>
+      <member refid="classwx_graphics_matrix_1a039ea790c5521171edaee041c83beb97" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>Get</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_graphics_matrix_1a3df49f20c0d41212a645f03213b86ca7" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>GetNativeMatrix</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>GetRefData</name></member>
+      <member refid="classwx_graphics_object_1a1cbac3ca9b99eaafa6eccf6476742cd0" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>GetRenderer</name></member>
+      <member refid="classwx_graphics_matrix_1a4e83f56734919d83d8cc0d5c56b0f11c" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>Invert</name></member>
+      <member refid="classwx_graphics_matrix_1ad3c900d0dec166a8424b2eb9a9a88a67" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>IsEqual</name></member>
+      <member refid="classwx_graphics_matrix_1a5edc3ee0a933ed9817413551ea578292" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>IsEqual</name></member>
+      <member refid="classwx_graphics_matrix_1a3f188ad4ed56af78d83dd7d49853de9b" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>IsIdentity</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>IsKindOf</name></member>
+      <member refid="classwx_graphics_object_1ada13da4f78271792792050132965777d" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>IsNull</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>Ref</name></member>
+      <member refid="classwx_graphics_matrix_1a05c3709b63cc1df5bf7ae48787befc37" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>Rotate</name></member>
+      <member refid="classwx_graphics_matrix_1ae0a4ac622f4073c8bf02f96744463dc6" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>Scale</name></member>
+      <member refid="classwx_graphics_matrix_1a2d2e9ede4902eb87d5e2368c487508a2" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>Set</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>SetRefData</name></member>
+      <member refid="classwx_graphics_matrix_1a7c260921b498791c1355d3ae2fe4a3e0" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>TransformDistance</name></member>
+      <member refid="classwx_graphics_matrix_1a27f4264be5407a9a584297c822b8deae" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>TransformPoint</name></member>
+      <member refid="classwx_graphics_matrix_1ae91dc96cb34b4562179efb6c9857dc75" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>Translate</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxGraphicsMatrix</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxGraphicsMatrix</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="imaglist_8h" kind="file">
+    <compoundname>imaglist.h</compoundname>
+    <innerclass refid="classwx_image_list" prot="public">wxImageList</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="imaglist_8h_1ad8ed19b2300d177e42820a78a155c2b3" prot="public" static="no">
+        <name>wxIMAGELIST_DRAW_NORMAL</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>Flags for Draw. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="imaglist_8h_1afa0fe19305c63a8a91bc43dbaeb52a55" prot="public" static="no">
+        <name>wxIMAGELIST_DRAW_TRANSPARENT</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="imaglist_8h_1afc4a13e2ce601e30a1c14927ba80a2ed" prot="public" static="no">
+        <name>wxIMAGELIST_DRAW_SELECTED</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="imaglist_8h_1a48570ea9540c6097f7b46f0358bb163a" prot="public" static="no">
+        <name>wxIMAGELIST_DRAW_FOCUSED</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="imaglist_8h_1ac36f475ca5b446f4fde4c9b90bec77c8" prot="public" static="no">
+        <name>@12</name>
+        <enumvalue id="imaglist_8h_1ac36f475ca5b446f4fde4c9b90bec77c8aec1cfefd5c35fa6dc93c282472ed9122" prot="public">
+          <name>wxIMAGE_LIST_NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="imaglist_8h_1ac36f475ca5b446f4fde4c9b90bec77c8aaff447fcf94ef577a1b477adad415da0" prot="public">
+          <name>wxIMAGE_LIST_SMALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="imaglist_8h_1ac36f475ca5b446f4fde4c9b90bec77c8adda05446800fbd3ad25dac2e69411001" prot="public">
+          <name>wxIMAGE_LIST_STATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flag values for Set/GetImageList. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/imaglist.h"/>
+  </compounddef>
+</doxygen>

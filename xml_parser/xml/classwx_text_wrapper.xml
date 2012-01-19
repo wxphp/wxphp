@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_text_wrapper" kind="class" prot="public">
+    <compoundname>wxTextWrapper</compoundname>
+    <includes local="no">wx/textwrapper.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_text_wrapper_1af2d0767c838907b326dc9ea362b60314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxTextWrapper::wxTextWrapper</definition>
+        <argsstring>()</argsstring>
+        <name>wxTextWrapper</name>
+        <briefdescription>
+<para>Trivial default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textwrapper.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_wrapper_1afa7189141b03d3f3e41b77f32e501a94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxTextWrapper::Wrap</definition>
+        <argsstring>(wxWindow *win, const wxString &amp;text, int widthMax)</argsstring>
+        <name>Wrap</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>widthMax</declname>
+        </param>
+        <briefdescription>
+<para>Wrap the given text. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method will call <ref refid="classwx_text_wrapper_1a0494d2803dd8471f3f96b3ef7febbb45" kindref="member">OnOutputLine()</ref> for every line of wrapped text and <ref refid="classwx_text_wrapper_1a71ef5470d0e0066c8b5d3372d8df5fd7" kindref="member">OnNewLine()</ref> before the beginning of every new line after the first one (so it might be never called at all if the width of entire <emphasis>text</emphasis> is less than <emphasis>widthMax</emphasis>).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>win</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A non-NULL window used for measuring the text extents. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to wrap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>widthMax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximal width of each line of text or <computeroutput>-1</computeroutput> to disable wrapping. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textwrapper.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_text_wrapper_1a0494d2803dd8471f3f96b3ef7febbb45" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxTextWrapper::OnOutputLine</definition>
+        <argsstring>(const wxString &amp;line)=0</argsstring>
+        <name>OnOutputLine</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>Called by <ref refid="classwx_text_wrapper_1afa7189141b03d3f3e41b77f32e501a94" kindref="member">Wrap()</ref> for each wrapped line of text. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method will always be called at least once by <ref refid="classwx_text_wrapper_1afa7189141b03d3f3e41b77f32e501a94" kindref="member">Wrap()</ref>. Notice that <emphasis>line</emphasis> may be empty if the text passed to <ref refid="classwx_text_wrapper_1afa7189141b03d3f3e41b77f32e501a94" kindref="member">Wrap()</ref> was empty itself. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textwrapper.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_text_wrapper_1a71ef5470d0e0066c8b5d3372d8df5fd7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxTextWrapper::OnNewLine</definition>
+        <argsstring>()</argsstring>
+        <name>OnNewLine</name>
+        <briefdescription>
+<para>Called at the start of each subsequent line of text by <ref refid="classwx_text_wrapper_1afa7189141b03d3f3e41b77f32e501a94" kindref="member">Wrap()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method may not be called at all if the entire text passed to <ref refid="classwx_text_wrapper_1afa7189141b03d3f3e41b77f32e501a94" kindref="member">Wrap()</ref> fits into the specified width. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textwrapper.h" line="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helps wrap lines of text to given width. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is a generic purpose class which can be used to wrap lines of text to the specified width. It doesn&apos;t do anything by itself but simply calls its virtual <ref refid="classwx_text_wrapper_1a0494d2803dd8471f3f96b3ef7febbb45" kindref="member">OnOutputLine()</ref> and <ref refid="classwx_text_wrapper_1a71ef5470d0e0066c8b5d3372d8df5fd7" kindref="member">OnNewLine()</ref> methods for each wrapped line of text, you need to implement them in your derived class to actually do something useful.</para><para>Here is an example function using this class which inserts hard line breaks into a string of text at the positions where it would be wrapped:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>WrapText(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref><sp/>*win,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>text,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>widthMax)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">HardBreakWrapper<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_text_wrapper" kindref="compound" tooltip="Helps wrap lines of text to given width.">wxTextWrapper</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HardBreakWrapper(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref><sp/>*win,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>text,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>widthMax)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_text_wrapper_1afa7189141b03d3f3e41b77f32e501a94" kindref="member" tooltip="Wrap the given text.">Wrap</ref>(win,<sp/>text,<sp/>widthMax);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>GetWrapped()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_wrapped;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_text_wrapper_1a0494d2803dd8471f3f96b3ef7febbb45" kindref="member" tooltip="Called by Wrap() for each wrapped line of text.">OnOutputLine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>line)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_wrapped<sp/>+=<sp/>line;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classwx_text_wrapper_1a71ef5470d0e0066c8b5d3372d8df5fd7" kindref="member" tooltip="Called at the start of each subsequent line of text by Wrap().">OnNewLine</ref>()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_wrapped<sp/>+=<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref><sp/>m_wrapped;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HardBreakWrapper<sp/>wrapper(win,<sp/>text,<sp/>widthMax);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>wrapper.GetWrapped();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textwrapper.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textwrapper.h" bodystart="60" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classwx_text_wrapper_1a71ef5470d0e0066c8b5d3372d8df5fd7" prot="protected" virt="virtual"><scope>wxTextWrapper</scope><name>OnNewLine</name></member>
+      <member refid="classwx_text_wrapper_1a0494d2803dd8471f3f96b3ef7febbb45" prot="protected" virt="pure-virtual"><scope>wxTextWrapper</scope><name>OnOutputLine</name></member>
+      <member refid="classwx_text_wrapper_1afa7189141b03d3f3e41b77f32e501a94" prot="public" virt="non-virtual"><scope>wxTextWrapper</scope><name>Wrap</name></member>
+      <member refid="classwx_text_wrapper_1af2d0767c838907b326dc9ea362b60314" prot="public" virt="non-virtual"><scope>wxTextWrapper</scope><name>wxTextWrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

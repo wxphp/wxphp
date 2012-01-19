@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_status_bar_pane" kind="class" prot="public">
+    <compoundname>wxStatusBarPane</compoundname>
+    <includes local="no">wx/statusbr.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_status_bar_pane_1a442cbb04a9a53cbfa63feded1050aeca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxStatusBarPane::wxStatusBarPane</definition>
+        <argsstring>(int style=wxSB_NORMAL, size_t width=0)</argsstring>
+        <name>wxStatusBarPane</name>
+        <param>
+          <type>int</type>
+          <declname>style</declname>
+          <defval>wxSB_NORMAL</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>width</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructs the pane with the given <emphasis>style</emphasis> and <emphasis>width</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_status_bar_pane_1a1ec718cfd2487553b7dfe18419482282" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxStatusBarPane::GetWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWidth</name>
+        <briefdescription>
+<para>Returns the pane width; it maybe negative, indicating a variable-width field. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_status_bar_pane_1a0d00ac53d9e3c32a02072a6c5e3978c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxStatusBarPane::GetStyle</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStyle</name>
+        <briefdescription>
+<para>Returns the pane style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_status_bar_pane_1ae5c45183b68522993d834b3eb7f0f65d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxStatusBarPane::GetText</definition>
+        <argsstring>() const </argsstring>
+        <name>GetText</name>
+        <briefdescription>
+<para>Returns the text currently shown in this pane. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A status bar pane data container used by <ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="35" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classwx_status_bar_pane_1a0d00ac53d9e3c32a02072a6c5e3978c4" prot="public" virt="non-virtual"><scope>wxStatusBarPane</scope><name>GetStyle</name></member>
+      <member refid="classwx_status_bar_pane_1ae5c45183b68522993d834b3eb7f0f65d" prot="public" virt="non-virtual"><scope>wxStatusBarPane</scope><name>GetText</name></member>
+      <member refid="classwx_status_bar_pane_1a1ec718cfd2487553b7dfe18419482282" prot="public" virt="non-virtual"><scope>wxStatusBarPane</scope><name>GetWidth</name></member>
+      <member refid="classwx_status_bar_pane_1a442cbb04a9a53cbfa63feded1050aeca" prot="public" virt="non-virtual"><scope>wxStatusBarPane</scope><name>wxStatusBarPane</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

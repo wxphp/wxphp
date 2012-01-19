@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="textdlg_8h" kind="file">
+    <compoundname>textdlg.h</compoundname>
+    <innerclass refid="classwx_password_entry_dialog" prot="public">wxPasswordEntryDialog</innerclass>
+    <innerclass refid="classwx_text_entry_dialog" prot="public">wxTextEntryDialog</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga7ffaac89c7b1be611d61599ec0bc2a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetTextFromUser</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption=&quot;Input text&quot;, const wxString &amp;default_value=wxEmptyString, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord, bool centre=true)</argsstring>
+        <name>wxGetTextFromUser</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+          <defval>&quot;Input text&quot;</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>default_value</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Pop up a dialog box with title set to <emphasis>caption</emphasis>, <computeroutput>message</computeroutput>, and a <computeroutput>default_value</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The user may type in text and press OK to return this text, or press Cancel to return the empty string.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>This function is a wrapper around <ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> and while it is usually more convenient to use, using the dialog directly is more flexible, e.g. it allows you to specify the <computeroutput>wxTE_MULTILINE</computeroutput> to allow the user enter multiple lines of text while this function is limited to single line entry only.</para><para>Include file: <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga568ded2f0ec3af010b25a05514b7bb77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxGetPasswordFromUser</definition>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption=&quot;Input text&quot;, const wxString &amp;default_value=wxEmptyString, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord, bool centre=true)</argsstring>
+        <name>wxGetPasswordFromUser</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>caption</declname>
+          <defval>&quot;Input text&quot;</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>default_value</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>centre</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Similar to <ref refid="group__group__funcmacro__dialog_1ga7ffaac89c7b1be611d61599ec0bc2a8d" kindref="member">wxGetTextFromUser()</ref> but the text entered in the dialog is not shown on screen but replaced with stars. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is intended to be used for entering passwords as the function name implies.</para><para>Include file: <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h" line="162"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h"/>
+  </compounddef>
+</doxygen>

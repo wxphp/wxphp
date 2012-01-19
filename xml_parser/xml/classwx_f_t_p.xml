@@ -1,0 +1,720 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_f_t_p" kind="class" prot="public">
+    <compoundname>wxFTP</compoundname>
+    <basecompoundref refid="classwx_protocol" prot="public" virt="non-virtual">wxProtocol</basecompoundref>
+    <includes local="no">wx/protocol/ftp.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_f_t_p_1adf97ae110d01e048aa55da6f6e7a8185" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFTP::Connect</definition>
+        <argsstring>(const wxString &amp;host)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>host</declname>
+        </param>
+        <briefdescription>
+<para>Connect to the FTP server to default port (21) of the specified <emphasis>host</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1aad6d0c102912c0f508986d06e3406237" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFTP::Connect</definition>
+        <argsstring>(const wxString &amp;host, unsigned short port)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Connect to the FTP server to any port of the specified <emphasis>host</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default (<emphasis>port</emphasis> = 0), connection is made to default FTP port (21) of the specified <emphasis>host</emphasis>.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Functions for managing the FTP connection</header>
+      <description><para><anchor id="_1amgrp1ea650bc082f4589eb31774d4e3ea18e"/> </para></description>
+      <memberdef kind="function" id="classwx_f_t_p_1a9f1d0c38321f880302959c07c4749d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFTP::Abort</definition>
+        <argsstring>()</argsstring>
+        <name>Abort</name>
+        <reimplements refid="classwx_protocol_1a251f4c7e9d13fc23a863540bbbedd81b">Abort</reimplements>
+        <briefdescription>
+<para>Aborts the download currently in process, returns true if ok, false if an error occurred. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1ae7e072cefb173542f20946cd50ef6213" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFTP::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <reimplements refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945">Close</reimplements>
+        <briefdescription>
+<para>Gracefully closes the connection with the server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1ab00f9f352c1e45422d2d5a158379f9a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::CheckCommand</definition>
+        <argsstring>(const wxString &amp;command, char ret)</argsstring>
+        <name>CheckCommand</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+<para>Send the specified <emphasis>command</emphasis> to the FTP server. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>ret</emphasis> specifies the expected result.</para><para><simplesect kind="return"><para>true if the command has been sent successfully, else false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a469e4fc750cb81cc113465e73e0a3b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxFTP::GetLastResult</definition>
+        <argsstring>()</argsstring>
+        <name>GetLastResult</name>
+        <briefdescription>
+<para>Returns the last command result, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>the full server reply for the last command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a6a9d830ff6e3ec0075945425fe330f47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char wxFTP::SendCommand</definition>
+        <argsstring>(const wxString &amp;command)</argsstring>
+        <name>SendCommand</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Send the specified <emphasis>command</emphasis> to the FTP server and return the first character of the return code. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a79f9b7d63245d75d7843b5f6587fc119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::SetAscii</definition>
+        <argsstring>()</argsstring>
+        <name>SetAscii</name>
+        <briefdescription>
+<para>Sets the transfer mode to ASCII. </para>        </briefdescription>
+        <detaileddescription>
+<para>It will be used for the next transfer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a93c03a6ffb9e4923067e2e10828b2bee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::SetBinary</definition>
+        <argsstring>()</argsstring>
+        <name>SetBinary</name>
+        <briefdescription>
+<para>Sets the transfer mode to binary. </para>        </briefdescription>
+        <detaileddescription>
+<para>It will be used for the next transfer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1af31656af37bf0e53129f1e6caa9443f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxFTP::SetPassive</definition>
+        <argsstring>(bool pasv)</argsstring>
+        <name>SetPassive</name>
+        <param>
+          <type>bool</type>
+          <declname>pasv</declname>
+        </param>
+        <briefdescription>
+<para>If <emphasis>pasv</emphasis> is true, passive connection to the FTP server is used. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the default as it works with practically all firewalls. If the server doesn&apos;t support passive mode, you may call this function with false as argument to use an active connection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a9fda9b5eceee7c10cfdea9e5e062a084" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFTP::SetPassword</definition>
+        <argsstring>(const wxString &amp;passwd)</argsstring>
+        <name>SetPassword</name>
+        <reimplements refid="classwx_protocol_1adde2801803a01311e8911e9f5c30607b">SetPassword</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>passwd</declname>
+        </param>
+        <briefdescription>
+<para>Sets the password to be sent to the FTP server to be allowed to log in. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1acf95bd9da39666c74bb55db6ecc5cc0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::SetTransferMode</definition>
+        <argsstring>(TransferMode mode)</argsstring>
+        <name>SetTransferMode</name>
+        <param>
+          <type><ref refid="ftp_8h_1ac6a3bd5749f031b948edd5a5dc74df55" kindref="member">TransferMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Sets the transfer mode to the specified one. </para>        </briefdescription>
+        <detaileddescription>
+<para>It will be used for the next transfer.</para><para>If this function is never called, binary transfer mode is used by default. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1aa98a9516aacb33260942d5f65e4189ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxFTP::SetUser</definition>
+        <argsstring>(const wxString &amp;user)</argsstring>
+        <name>SetUser</name>
+        <reimplements refid="classwx_protocol_1ab1f11044077ce6755e17eab0b0b461a1">SetUser</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+<para>Sets the user name to be sent to the FTP server to be allowed to log in. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="201"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Filesystem commands</header>
+      <description><para><anchor id="_1amgrpaa0fcddf8229b80feb69b2cbe92b7e2e"/> </para></description>
+      <memberdef kind="function" id="classwx_f_t_p_1a33cced47ce8c8809f10f98485e5b2042" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::ChDir</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>ChDir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Change the current FTP working directory. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1ac9d150320640a50b8644fc56a9cbef91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::MkDir</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>MkDir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Create the specified directory in the current FTP working directory. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a007702c93714905da46998e89ee82e62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFTP::Pwd</definition>
+        <argsstring>()</argsstring>
+        <name>Pwd</name>
+        <briefdescription>
+<para>Returns the current FTP working directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a714e155b6758e84e1a2c764818354902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::Rename</definition>
+        <argsstring>(const wxString &amp;src, const wxString &amp;dst)</argsstring>
+        <name>Rename</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Rename the specified <emphasis>src</emphasis> element to <emphasis>dst</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a95c6ec4a2be4082a3c4dc9408e4aa12d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::RmDir</definition>
+        <argsstring>(const wxString &amp;dir)</argsstring>
+        <name>RmDir</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Remove the specified directory from the current FTP working directory. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a61cc4d8b71dd5a013963c8611be22b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::RmFile</definition>
+        <argsstring>(const wxString &amp;path)</argsstring>
+        <name>RmFile</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Delete the file specified by <emphasis>path</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if successful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a45c5d8b47b1150b223859a37245922be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::FileExists</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>FileExists</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given remote file exists, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1acaa8a56639efe4f6313ec1b0bcc1d731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::GetDirList</definition>
+        <argsstring>(wxArrayString &amp;files, const wxString &amp;wildcard=wxEmptyString)</argsstring>
+        <name>GetDirList</name>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>files</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>wildcard</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>The GetList() function is quite low-level. </para>        </briefdescription>
+        <detaileddescription>
+<para>It returns the list of the files in the current directory. The list can be filtered using the <emphasis>wildcard</emphasis> string.</para><para>If <emphasis>wildcard</emphasis> is empty (default), it will return all files in directory. The form of the list can change from one peer system to another. For example, for a UNIX peer system, it will look like this:</para><para><verbatim>
+        -r--r--r--   1 guilhem  lavaux      12738 Jan 16 20:17 cmndata.cpp
+        -r--r--r--   1 guilhem  lavaux      10866 Jan 24 16:41 config.cpp
+        -rw-rw-rw-   1 guilhem  lavaux      29967 Dec 21 19:17 cwlex_yy.c
+        -rw-rw-rw-   1 guilhem  lavaux      14342 Jan 22 19:51 cwy_tab.c
+        -r--r--r--   1 guilhem  lavaux      13890 Jan 29 19:18 date.cpp
+        -r--r--r--   1 guilhem  lavaux       3989 Feb  8 19:18 datstrm.cpp
+        </verbatim></para><para>But on Windows system, it will look like this:</para><para><verbatim>
+        winamp~1 exe    520196 02-25-1999  19:28  winamp204.exe
+            1 file(s)           520 196 bytes
+        </verbatim></para><para><simplesect kind="return"><para>true if the file list was successfully retrieved, false otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_f_t_p_1afe3fdde3907de65f15750f22ebf66eab" kindref="member">GetFilesList()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a54f6a620edf5d5ea6850c05dbb78f6cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxFTP::GetFileSize</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>GetFileSize</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns the file size in bytes or -1 if the file doesn&apos;t exist or the size couldn&apos;t be determined. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that this size can be approximative size only and shouldn&apos;t be used for allocating the buffer in which the remote file is copied, for example. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1afe3fdde3907de65f15750f22ebf66eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFTP::GetFilesList</definition>
+        <argsstring>(wxArrayString &amp;files, const wxString &amp;wildcard=wxEmptyString)</argsstring>
+        <name>GetFilesList</name>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>files</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>wildcard</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>This function returns the computer-parsable list of the files in the current directory (optionally only of the files matching the <emphasis>wildcard</emphasis>, all files by default). </para>        </briefdescription>
+        <detaileddescription>
+<para>This list always has the same format and contains one full (including the directory path) file name per line.</para><para><simplesect kind="return"><para>true if the file list was successfully retrieved, false otherwise.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_f_t_p_1acaa8a56639efe4f6313ec1b0bcc1d731" kindref="member">GetDirList()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="303"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Download and upload functions</header>
+      <description><para><anchor id="_1amgrpc5688c54a6ed60693bee41d9041fa925"/> </para></description>
+      <memberdef kind="function" id="classwx_f_t_p_1a97d34cb6df2b6075e49a50b88d4a54b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
+        <definition>virtual wxInputStream* wxFTP::GetInputStream</definition>
+        <argsstring>(const wxString &amp;path)</argsstring>
+        <name>GetInputStream</name>
+        <reimplements refid="classwx_protocol_1a1adc6bb4d61c1ef993cc17006562acae">GetInputStream</reimplements>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new input stream on the specified path. </para>        </briefdescription>
+        <detaileddescription>
+<para>You can use all but the seek functionality of <ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref>. wxStreamBase::Seek() isn&apos;t available on all streams. For example, HTTP or FTP streams do not deal with it. Other functions like wxStreamBase::Tell() are not available for this sort of stream, at present.</para><para>You will be notified when the EOF is reached by an error.</para><para><simplesect kind="return"><para>Returns NULL if an error occurred (it could be a network failure or the fact that the file doesn&apos;t exist). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1a76277252a7bbc21efe6eaa6948dbda98" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> *</type>
+        <definition>virtual wxOutputStream* wxFTP::GetOutputStream</definition>
+        <argsstring>(const wxString &amp;file)</argsstring>
+        <name>GetOutputStream</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Initializes an output stream to the specified <emphasis>file</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The returned stream has all but the seek functionality of wxStreams. When the user finishes writing data, he has to delete the stream to close it.</para><para><simplesect kind="return"><para>An initialized write-only stream. Returns NULL if an error occurred (it could be a network failure or the fact that the file doesn&apos;t exist). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="338"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_f_t_p_1a5c00a2e1d46846ebec20526d276b23bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFTP::wxFTP</definition>
+        <argsstring>()</argsstring>
+        <name>wxFTP</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_t_p_1aaa0a2be71fe00757acb4f3484f179a2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxFTP::~wxFTP</definition>
+        <argsstring>()</argsstring>
+        <name>~wxFTP</name>
+        <briefdescription>
+<para>Destructor will close the connection if connected. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> can be used to establish a connection to an FTP server and perform all the usual operations. </para>    </briefdescription>
+    <detaileddescription>
+<para>Please consult the RFC 959 (<ulink url="http://www.w3.org/Protocols/rfc959/">http://www.w3.org/Protocols/rfc959/</ulink>) for more details about the FTP protocol.</para><para><ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> can thus be used to create a (basic) FTP <bold>client</bold>.</para><para>To use a command which doesn&apos;t involve file transfer (i.e. directory oriented commands) you just need to call a corresponding member function or use the generic <ref refid="classwx_f_t_p_1a6a9d830ff6e3ec0075945425fe330f47" kindref="member">wxFTP::SendCommand()</ref> method. However to actually transfer files you just get or give a stream to or from this class and the actual data are read or written using the usual stream methods.</para><para>Example of using <ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref> for file downloading:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_f_t_p" kindref="compound" tooltip="wxFTP can be used to establish a connection to an FTP server and perform all the...">wxFTP</ref><sp/>ftp;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>you<sp/>don&apos;t<sp/>use<sp/>these<sp/>lines<sp/>anonymous<sp/>login<sp/>will<sp/>be<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftp.<ref refid="classwx_f_t_p_1aa98a9516aacb33260942d5f65e4189ae" kindref="member" tooltip="Sets the user name to be sent to the FTP server to be allowed to log in.">SetUser</ref>(</highlight><highlight class="stringliteral">&quot;user&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftp.<ref refid="classwx_f_t_p_1a9fda9b5eceee7c10cfdea9e5e062a084" kindref="member" tooltip="Sets the password to be sent to the FTP server to be allowed to log in.">SetPassword</ref>(</highlight><highlight class="stringliteral">&quot;password&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!ftp.<ref refid="classwx_f_t_p_1adf97ae110d01e048aa55da6f6e7a8185" kindref="member" tooltip="Connect to the FTP server to default port (21) of the specified host.">Connect</ref>(</highlight><highlight class="stringliteral">&quot;ftp.wxwidgets.org&quot;</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>connect&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftp.<ref refid="classwx_f_t_p_1a33cced47ce8c8809f10f98485e5b2042" kindref="member" tooltip="Change the current FTP working directory.">ChDir</ref>(</highlight><highlight class="stringliteral">&quot;/pub/2.8.9&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;wxWidgets-2.8.9.tar.bz2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>ftp.<ref refid="classwx_f_t_p_1a54f6a620edf5d5ea6850c05dbb78f6cd" kindref="member" tooltip="Returns the file size in bytes or -1 if the file doesn&amp;#39;t exist or the size couldn&amp;#39;t...">GetFileSize</ref>(filename);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>size<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>get<sp/>the<sp/>file<sp/>size<sp/>for<sp/>\&quot;%s\&quot;&quot;</highlight><highlight class="normal">,<sp/>filename);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_input_stream" kindref="compound" tooltip="wxInputStream is an abstract base class which may not be used directly.">wxInputStream</ref><sp/>*i<sp/>=<sp/>ftp.<ref refid="classwx_f_t_p_1a97d34cb6df2b6075e49a50b88d4a54b9" kindref="member" tooltip="Creates a new input stream on the specified path.">GetInputStream</ref>(filename);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!in<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>get<sp/>the<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[size];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!in-&gt;Read(data,<sp/>size)<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Read<sp/>error:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>ftp.<ref refid="classwx_protocol_1a06994af171fb3f497f384a4002dbfc3c" kindref="member" tooltip="Returns the last occurred error.">GetError</ref>());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>file<sp/>data<sp/>is<sp/>in<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>data;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>in;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gracefully<sp/>close<sp/>the<sp/>connection<sp/>to<sp/>the<sp/>server</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftp.<ref refid="classwx_f_t_p_1ae7e072cefb173542f20946cd50ef6213" kindref="member" tooltip="Gracefully closes the connection with the server.">Close</ref>();</highlight></codeline>
+</programlisting></para><para>To upload a file you would do (assuming the connection to the server was opened successfully):</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_output_stream" kindref="compound" tooltip="wxOutputStream is an abstract base class which may not be used directly.">wxOutputStream</ref><sp/>*out<sp/>=<sp/>ftp.<ref refid="classwx_f_t_p_1a76277252a7bbc21efe6eaa6948dbda98" kindref="member" tooltip="Initializes an output stream to the specified file.">GetOutputStream</ref>(</highlight><highlight class="stringliteral">&quot;filename&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>out<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out-&gt;<ref refid="classwx_output_stream_1a22154f02408431ffe8b1590407c3b011" kindref="member" tooltip="Writes up to the specified amount of bytes using the data of buffer.">Write</ref>(...);<sp/></highlight><highlight class="comment">//<sp/>your<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6457">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="6458" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6458">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6456">
+        <label>wxSocketClient</label>
+        <link refid="classwx_socket_client"/>
+        <childnode refid="6457" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6454">
+        <label>wxFTP</label>
+        <link refid="classwx_f_t_p"/>
+        <childnode refid="6455" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6455">
+        <label>wxProtocol</label>
+        <link refid="classwx_protocol"/>
+        <childnode refid="6456" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6462">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="6463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6463">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6464" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6461">
+        <label>wxSocketClient</label>
+        <link refid="classwx_socket_client"/>
+        <childnode refid="6462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6459">
+        <label>wxFTP</label>
+        <link refid="classwx_f_t_p"/>
+        <childnode refid="6460" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6460">
+        <label>wxProtocol</label>
+        <link refid="classwx_protocol"/>
+        <childnode refid="6461" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6464">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" bodystart="100" bodyend="341"/>
+    <listofallmembers>
+      <member refid="classwx_f_t_p_1a9f1d0c38321f880302959c07c4749d4d" prot="public" virt="virtual"><scope>wxFTP</scope><name>Abort</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFTP</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_f_t_p_1a33cced47ce8c8809f10f98485e5b2042" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>ChDir</name></member>
+      <member refid="classwx_f_t_p_1ab00f9f352c1e45422d2d5a158379f9a4" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>CheckCommand</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFTP</scope><name>CloneRefData</name></member>
+      <member refid="classwx_f_t_p_1ae7e072cefb173542f20946cd50ef6213" prot="public" virt="virtual"><scope>wxFTP</scope><name>Close</name></member>
+      <member refid="classwx_f_t_p_1adf97ae110d01e048aa55da6f6e7a8185" prot="public" virt="virtual"><scope>wxFTP</scope><name>Connect</name></member>
+      <member refid="classwx_f_t_p_1aad6d0c102912c0f508986d06e3406237" prot="public" virt="virtual"><scope>wxFTP</scope><name>Connect</name></member>
+      <member refid="classwx_socket_client_1a581cdb757cce6020c8caac1ddd74a599" prot="public" virt="virtual" ambiguityscope="wxProtocol::"><scope>wxFTP</scope><name>Connect</name></member>
+      <member refid="classwx_socket_client_1a2167813338c94621a9ee0180524974a5" prot="public" virt="non-virtual" ambiguityscope="wxProtocol::"><scope>wxFTP</scope><name>Connect</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxFTP</scope><name>CreateRefData</name></member>
+      <member refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Destroy</name></member>
+      <member refid="classwx_protocol_1a5b385ca23b57e99fd6ff41e455efe736" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>DetachLog</name></member>
+      <member refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Discard</name></member>
+      <member refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Error</name></member>
+      <member refid="classwx_f_t_p_1a45c5d8b47b1150b223859a37245922be" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>FileExists</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxFTP</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_socket_base_1a9dd69ce31cb441c2c47e374256fabcc4" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetClientData</name></member>
+      <member refid="classwx_protocol_1a114954376b6de808141f6cd56bb972a9" prot="public" virt="virtual"><scope>wxFTP</scope><name>GetContentType</name></member>
+      <member refid="classwx_f_t_p_1acaa8a56639efe4f6313ec1b0bcc1d731" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetDirList</name></member>
+      <member refid="classwx_protocol_1a06994af171fb3f497f384a4002dbfc3c" prot="public" virt="virtual"><scope>wxFTP</scope><name>GetError</name></member>
+      <member refid="classwx_f_t_p_1a54f6a620edf5d5ea6850c05dbb78f6cd" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetFileSize</name></member>
+      <member refid="classwx_f_t_p_1afe3fdde3907de65f15750f22ebf66eab" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetFilesList</name></member>
+      <member refid="classwx_socket_base_1a1eecc8010fa40587623778cf9902e661" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetFlags</name></member>
+      <member refid="classwx_f_t_p_1a97d34cb6df2b6075e49a50b88d4a54b9" prot="public" virt="virtual"><scope>wxFTP</scope><name>GetInputStream</name></member>
+      <member refid="classwx_f_t_p_1a469e4fc750cb81cc113465e73e0a3b77" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetLastResult</name></member>
+      <member refid="classwx_socket_base_1a1751b32af0172a30f544068100ba90d2" prot="public" virt="virtual"><scope>wxFTP</scope><name>GetLocal</name></member>
+      <member refid="classwx_protocol_1ac258796f356769a4c66bce207f3ad7bc" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetLog</name></member>
+      <member refid="classwx_f_t_p_1a76277252a7bbc21efe6eaa6948dbda98" prot="public" virt="virtual"><scope>wxFTP</scope><name>GetOutputStream</name></member>
+      <member refid="classwx_socket_base_1aae825b5309067c212640189d6ad7e993" prot="public" virt="virtual"><scope>wxFTP</scope><name>GetPeer</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetRefData</name></member>
+      <member refid="classwx_socket_base_1adb940bb2853901b4ea0b2840964f8e5b" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>GetTimeout</name></member>
+      <member refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Initialize</name></member>
+      <member refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>InterruptWait</name></member>
+      <member refid="classwx_socket_base_1a2d171f3eac0dbc9211f0032188d381ac" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>IsConnected</name></member>
+      <member refid="classwx_socket_base_1a6703a3dd7c15fcb2eff7c7baf0b886f5" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>IsData</name></member>
+      <member refid="classwx_socket_base_1ac5118b15195664969b7d914a045936f6" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>IsDisconnected</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>IsKindOf</name></member>
+      <member refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>IsSameAs</name></member>
+      <member refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>LastCount</name></member>
+      <member refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>LastError</name></member>
+      <member refid="classwx_protocol_1a99159e95daa826e4b74b229f652a3766" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>LogRequest</name></member>
+      <member refid="classwx_protocol_1a03c4ee18cd126eeec76fd79c016de2fb" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>LogResponse</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFTP</scope><name>m_refData</name></member>
+      <member refid="classwx_f_t_p_1ac9d150320640a50b8644fc56a9cbef91" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>MkDir</name></member>
+      <member refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Notify</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>operator new</name></member>
+      <member refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Peek</name></member>
+      <member refid="classwx_f_t_p_1a007702c93714905da46998e89ee82e62" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Pwd</name></member>
+      <member refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Read</name></member>
+      <member refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>ReadMsg</name></member>
+      <member refid="classwx_protocol_1a98f5d494d988353de194104bd7e83fe1" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Reconnect</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Ref</name></member>
+      <member refid="classwx_f_t_p_1a714e155b6758e84e1a2c764818354902" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Rename</name></member>
+      <member refid="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>RestoreState</name></member>
+      <member refid="classwx_f_t_p_1a95c6ec4a2be4082a3c4dc9408e4aa12d" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>RmDir</name></member>
+      <member refid="classwx_f_t_p_1a61cc4d8b71dd5a013963c8611be22b87" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>RmFile</name></member>
+      <member refid="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SaveState</name></member>
+      <member refid="classwx_f_t_p_1a6a9d830ff6e3ec0075945425fe330f47" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SendCommand</name></member>
+      <member refid="classwx_f_t_p_1a79f9b7d63245d75d7843b5f6587fc119" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetAscii</name></member>
+      <member refid="classwx_f_t_p_1a93c03a6ffb9e4923067e2e10828b2bee" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetBinary</name></member>
+      <member refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetClientData</name></member>
+      <member refid="classwx_protocol_1ab1e5d1001c2a7b4c6cf50b8e26829985" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetDefaultTimeout</name></member>
+      <member refid="classwx_socket_base_1a09819e56d36638fb6b45bf3dd7ea8742" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetEventHandler</name></member>
+      <member refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetFlags</name></member>
+      <member refid="classwx_socket_base_1a18b26d4201f86daf64c881433c68a1b3" prot="public" virt="virtual"><scope>wxFTP</scope><name>SetLocal</name></member>
+      <member refid="classwx_protocol_1aad66b5f4dd52e5a34fe80ef44d4fab52" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetLog</name></member>
+      <member refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetNotify</name></member>
+      <member refid="classwx_f_t_p_1af31656af37bf0e53129f1e6caa9443f2" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetPassive</name></member>
+      <member refid="classwx_f_t_p_1a9fda9b5eceee7c10cfdea9e5e062a084" prot="public" virt="virtual"><scope>wxFTP</scope><name>SetPassword</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetRefData</name></member>
+      <member refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetTimeout</name></member>
+      <member refid="classwx_f_t_p_1acf95bd9da39666c74bb55db6ecc5cc0d" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>SetTransferMode</name></member>
+      <member refid="classwx_f_t_p_1aa98a9516aacb33260942d5f65e4189ae" prot="public" virt="virtual"><scope>wxFTP</scope><name>SetUser</name></member>
+      <member refid="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Shutdown</name></member>
+      <member refid="classwx_socket_base_1a90d2aea95b10c68eee2656860d90e23e" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>ShutdownOutput</name></member>
+      <member refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Unread</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>UnShare</name></member>
+      <member refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Wait</name></member>
+      <member refid="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>WaitForLost</name></member>
+      <member refid="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>WaitForRead</name></member>
+      <member refid="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>WaitForWrite</name></member>
+      <member refid="classwx_socket_client_1a83c92e8c27a72c3610c9eb0b60e92d74" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>WaitOnConnect</name></member>
+      <member refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Write</name></member>
+      <member refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>WriteMsg</name></member>
+      <member refid="classwx_f_t_p_1a5c00a2e1d46846ebec20526d276b23bf" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>wxFTP</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>wxObject</name></member>
+      <member refid="classwx_socket_base_1a3bf32997db6732a5b053d8d52b1173f0" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>wxSocketBase</name></member>
+      <member refid="classwx_socket_client_1a1eaa0a775aa619d4d04d48bd84a8212c" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>wxSocketClient</name></member>
+      <member refid="classwx_f_t_p_1aaa0a2be71fe00757acb4f3484f179a2f" prot="public" virt="virtual"><scope>wxFTP</scope><name>~wxFTP</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxFTP</scope><name>~wxObject</name></member>
+      <member refid="classwx_socket_base_1a636e72242dd5550e84456c277ca31222" prot="public" virt="virtual"><scope>wxFTP</scope><name>~wxSocketBase</name></member>
+      <member refid="classwx_socket_client_1a6e55d27056f3bf22b16b25d2fadb01ad" prot="public" virt="virtual"><scope>wxFTP</scope><name>~wxSocketClient</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

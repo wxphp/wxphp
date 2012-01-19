@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_debug_report_upload" kind="class" prot="public">
+    <compoundname>wxDebugReportUpload</compoundname>
+    <basecompoundref refid="classwx_debug_report_compress" prot="public" virt="non-virtual">wxDebugReportCompress</basecompoundref>
+    <includes local="no">wx/debugrpt.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_debug_report_upload_1a4f26478db5a415f0af870ae1b23130c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDebugReportUpload::wxDebugReportUpload</definition>
+        <argsstring>(const wxString &amp;url, const wxString &amp;input, const wxString &amp;action, const wxString &amp;curl=&quot;curl&quot;)</argsstring>
+        <name>wxDebugReportUpload</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>curl</declname>
+          <defval>&quot;curl&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This class will upload the compressed file created by its base class to an HTML multipart/form-data form at the specified address. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>url</emphasis> is the upload page address, <emphasis>input</emphasis> is the name of the <computeroutput>&quot;type=file&quot;</computeroutput> control on the form used for the file name and <emphasis>action</emphasis> is the value of the form action field. The report is uploaded using the <emphasis>curl</emphasis> program which should be available, the <emphasis>curl</emphasis> parameter may be used to specify the full path to it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="378"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_debug_report_upload_1a3066f35d42bbfed0e0737af1b97e522d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDebugReportUpload::OnServerReply</definition>
+        <argsstring>(const wxArrayString &amp;reply)</argsstring>
+        <name>OnServerReply</name>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>reply</declname>
+        </param>
+        <briefdescription>
+<para>This function may be overridden in a derived class to show the output from curl: this may be an HTML page or anything else that the server returned. </para>        </briefdescription>
+        <detaileddescription>
+<para>Value returned by this function becomes the return value of <ref refid="classwx_debug_report_1a3ec35bb65b88aac386a399b27ef940a5" kindref="member">wxDebugReport::Process()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="387"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used to upload a compressed file using HTTP POST request. </para>    </briefdescription>
+    <detaileddescription>
+<para>As this class derives from <ref refid="classwx_debug_report_compress" kindref="compound">wxDebugReportCompress</ref>, before upload the report is compressed in a single ZIP file.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5559">
+        <label>wxDebugReportUpload</label>
+        <link refid="classwx_debug_report_upload"/>
+        <childnode refid="5560" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5561">
+        <label>wxDebugReport</label>
+        <link refid="classwx_debug_report"/>
+      </node>
+      <node id="5560">
+        <label>wxDebugReportCompress</label>
+        <link refid="classwx_debug_report_compress"/>
+        <childnode refid="5561" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5562">
+        <label>wxDebugReportUpload</label>
+        <link refid="classwx_debug_report_upload"/>
+        <childnode refid="5563" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5564">
+        <label>wxDebugReport</label>
+        <link refid="classwx_debug_report"/>
+      </node>
+      <node id="5563">
+        <label>wxDebugReportCompress</label>
+        <link refid="classwx_debug_report_compress"/>
+        <childnode refid="5564" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="365" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" bodystart="364" bodyend="388"/>
+    <listofallmembers>
+      <member refid="classwx_debug_report_1aeec28b7b39294cdb29a5f4da252cc18b" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>AddAll</name></member>
+      <member refid="classwx_debug_report_1a8f54f2a1a052a7e33d10a5deb0b1037f" prot="public" virt="virtual"><scope>wxDebugReportUpload</scope><name>AddContext</name></member>
+      <member refid="classwx_debug_report_1a239a2a49a7e951fcffc40c05f3cd0ab2" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>AddCurrentContext</name></member>
+      <member refid="classwx_debug_report_1aea719d012f378d470c75183339b3c542" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>AddCurrentDump</name></member>
+      <member refid="classwx_debug_report_1a256d702690530ab982dc97cfa945094a" prot="public" virt="virtual"><scope>wxDebugReportUpload</scope><name>AddDump</name></member>
+      <member refid="classwx_debug_report_1ac897b26d2c0f55baf69a7aaf291b80bc" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>AddExceptionContext</name></member>
+      <member refid="classwx_debug_report_1a0df685608f1b418b01c10a6b35cf6c85" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>AddExceptionDump</name></member>
+      <member refid="classwx_debug_report_1aea190079cf5b14a9d9b8604b5b3e2d32" prot="public" virt="virtual"><scope>wxDebugReportUpload</scope><name>AddFile</name></member>
+      <member refid="classwx_debug_report_1a6573bf401d5a7d2ba4d5bc17f6dba480" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>AddText</name></member>
+      <member refid="classwx_debug_report_1a10c883cbb07392fffd65d031c55aa23b" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>Context</name></member>
+      <member refid="classwx_debug_report_1a10c883cbb07392fffd65d031c55aa23bafb8de50388e6ce1085fa3e45e5ebd024" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>Context_Current</name></member>
+      <member refid="classwx_debug_report_1a10c883cbb07392fffd65d031c55aa23ba8af0c49e5a9e8eeb8a47d997a2d6a709" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>Context_Exception</name></member>
+      <member refid="classwx_debug_report_1acb7593611497a54e3f5c9727992f7ad2" prot="protected" virt="virtual"><scope>wxDebugReportUpload</scope><name>DoAddCustomContext</name></member>
+      <member refid="classwx_debug_report_1ab3c7d9e2329a70fd86ad91237d6efdee" prot="protected" virt="virtual"><scope>wxDebugReportUpload</scope><name>DoAddExceptionInfo</name></member>
+      <member refid="classwx_debug_report_1a07639b262106766a4a860a358b5ed814" prot="protected" virt="virtual"><scope>wxDebugReportUpload</scope><name>DoAddLoadedModules</name></member>
+      <member refid="classwx_debug_report_1a11a2815019fcaa50dffe53c21f5b121f" prot="protected" virt="virtual"><scope>wxDebugReportUpload</scope><name>DoAddSystemInfo</name></member>
+      <member refid="classwx_debug_report_compress_1a55c898a570b89ea491f6dc6b1d42e465" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>GetCompressedFileName</name></member>
+      <member refid="classwx_debug_report_1a9d468d2561b6a111c2d421e9965c1157" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>GetDirectory</name></member>
+      <member refid="classwx_debug_report_1aceb8640f55701369f40e35ba12b3250b" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>GetFile</name></member>
+      <member refid="classwx_debug_report_1ada0b3ef4849927977df02980d656709f" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>GetFilesCount</name></member>
+      <member refid="classwx_debug_report_1aa4540fed6e2fe7c32a3245dbf8bf626f" prot="public" virt="virtual"><scope>wxDebugReportUpload</scope><name>GetReportName</name></member>
+      <member refid="classwx_debug_report_1aec2381b47edf01ec3f2462fd84534989" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>IsOk</name></member>
+      <member refid="classwx_debug_report_upload_1a3066f35d42bbfed0e0737af1b97e522d" prot="protected" virt="virtual"><scope>wxDebugReportUpload</scope><name>OnServerReply</name></member>
+      <member refid="classwx_debug_report_1a3ec35bb65b88aac386a399b27ef940a5" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>Process</name></member>
+      <member refid="classwx_debug_report_1a0e2ce4e318a701ce9a7f74df15bc7c35" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>RemoveFile</name></member>
+      <member refid="classwx_debug_report_1ac9b95dc82b763b20f56a9ecaf0643c6e" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>Reset</name></member>
+      <member refid="classwx_debug_report_compress_1a7fa629ad94d1976eb9648d0e9ed916f7" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>SetCompressedFileBaseName</name></member>
+      <member refid="classwx_debug_report_compress_1a865c9bdf4a444f6b72a48bb0ab113500" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>SetCompressedFileDirectory</name></member>
+      <member refid="classwx_debug_report_1af39eefde7adf0a0fe2e1fc71568cdc94" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>wxDebugReport</name></member>
+      <member refid="classwx_debug_report_compress_1a99c5b3dbb848e1be8278b2f752efa274" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>wxDebugReportCompress</name></member>
+      <member refid="classwx_debug_report_upload_1a4f26478db5a415f0af870ae1b23130c5" prot="public" virt="non-virtual"><scope>wxDebugReportUpload</scope><name>wxDebugReportUpload</name></member>
+      <member refid="classwx_debug_report_1a455abd17b0b3b38c9292b0cc5796f4df" prot="public" virt="virtual"><scope>wxDebugReportUpload</scope><name>~wxDebugReport</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

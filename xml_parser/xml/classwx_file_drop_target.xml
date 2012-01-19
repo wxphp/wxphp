@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_file_drop_target" kind="class" prot="public">
+    <compoundname>wxFileDropTarget</compoundname>
+    <basecompoundref refid="classwx_drop_target" prot="public" virt="non-virtual">wxDropTarget</basecompoundref>
+    <includes local="no">wx/dnd.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_file_drop_target_1a9271eb94cb20f9a55ddb0c2443ee74da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileDropTarget::wxFileDropTarget</definition>
+        <argsstring>()</argsstring>
+        <name>wxFileDropTarget</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_drop_target_1a17b5db1464b525ffe1974af64b034f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFileDropTarget::OnDrop</definition>
+        <argsstring>(wxCoord x, wxCoord y)</argsstring>
+        <name>OnDrop</name>
+        <reimplements refid="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1">OnDrop</reimplements>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>See <ref refid="classwx_drop_target_1a3448cb9505b9dd3f064e9c5208d82ae1" kindref="member">wxDropTarget::OnDrop()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is implemented appropriately for files, and calls <ref refid="classwx_file_drop_target_1ad4f15d965332e232a59fe985e37d48f9" kindref="member">OnDropFiles()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_drop_target_1ad4f15d965332e232a59fe985e37d48f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxFileDropTarget::OnDropFiles</definition>
+        <argsstring>(wxCoord x, wxCoord y, const wxArrayString &amp;filenames)=0</argsstring>
+        <name>OnDropFiles</name>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>filenames</declname>
+        </param>
+        <briefdescription>
+<para>Override this function to receive dropped files. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the mouse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the mouse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filenames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of filenames.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Return true to accept the data, or false to veto the operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="385"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a drop target which accepts files (dragged from File Manager or Explorer). </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview__dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>, <ref refid="classwx_drop_target" kindref="compound">wxDropTarget</ref>, <ref refid="classwx_text_drop_target" kindref="compound">wxTextDropTarget</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6195">
+        <label>wxDropTarget</label>
+        <link refid="classwx_drop_target"/>
+      </node>
+      <node id="6194">
+        <label>wxFileDropTarget</label>
+        <link refid="classwx_file_drop_target"/>
+        <childnode refid="6195" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6197">
+        <label>wxDropTarget</label>
+        <link refid="classwx_drop_target"/>
+      </node>
+      <node id="6196">
+        <label>wxFileDropTarget</label>
+        <link refid="classwx_file_drop_target"/>
+        <childnode refid="6197" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="359" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="358" bodyend="386"/>
+    <listofallmembers>
+      <member refid="classwx_drop_target_1a179adb5f161e0a8abc17e65f4470c51d" prot="public" virt="virtual"><scope>wxFileDropTarget</scope><name>GetData</name></member>
+      <member refid="classwx_drop_target_1a5c27f66d59eb89ab7e014fd153ace093" prot="public" virt="virtual"><scope>wxFileDropTarget</scope><name>OnData</name></member>
+      <member refid="classwx_drop_target_1a2b1ae4317f7079e811060e3745eb0601" prot="public" virt="virtual"><scope>wxFileDropTarget</scope><name>OnDragOver</name></member>
+      <member refid="classwx_file_drop_target_1a17b5db1464b525ffe1974af64b034f6d" prot="public" virt="virtual"><scope>wxFileDropTarget</scope><name>OnDrop</name></member>
+      <member refid="classwx_file_drop_target_1ad4f15d965332e232a59fe985e37d48f9" prot="public" virt="pure-virtual"><scope>wxFileDropTarget</scope><name>OnDropFiles</name></member>
+      <member refid="classwx_drop_target_1a00de5f93c9d2ef8010ad8bd3475b623a" prot="public" virt="virtual"><scope>wxFileDropTarget</scope><name>OnEnter</name></member>
+      <member refid="classwx_drop_target_1a8627e82d3f3ee58a09d67fc51c265113" prot="public" virt="virtual"><scope>wxFileDropTarget</scope><name>OnLeave</name></member>
+      <member refid="classwx_drop_target_1a06c2858ba321c2095fc220b82c238a2d" prot="public" virt="non-virtual"><scope>wxFileDropTarget</scope><name>SetDataObject</name></member>
+      <member refid="classwx_drop_target_1a95ba8e24dd0b27d428e168a686cfafbf" prot="public" virt="non-virtual"><scope>wxFileDropTarget</scope><name>wxDropTarget</name></member>
+      <member refid="classwx_file_drop_target_1a9271eb94cb20f9a55ddb0c2443ee74da" prot="public" virt="non-virtual"><scope>wxFileDropTarget</scope><name>wxFileDropTarget</name></member>
+      <member refid="classwx_drop_target_1ac7af5b2047050278248dc9ab41625892" prot="public" virt="virtual"><scope>wxFileDropTarget</scope><name>~wxDropTarget</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

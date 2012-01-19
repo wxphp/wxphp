@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="valtext_8h" kind="file">
+    <compoundname>valtext.h</compoundname>
+    <innerclass refid="classwx_text_validator" prot="public">wxTextValidator</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07" prot="public" static="no">
+        <name>wxTextValidatorStyle</name>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07ac475c7a66d38e027a87f74fcfb78adff" prot="public">
+          <name>wxFILTER_NONE</name>
+          <briefdescription>
+<para>No filtering takes place. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07af00de7b897e8d856bf6a3de17f10ba24" prot="public">
+          <name>wxFILTER_EMPTY</name>
+          <briefdescription>
+<para>Empty strings are filtered out. </para>          </briefdescription>
+          <detaileddescription>
+<para>If this style is not specified then empty strings are accepted only if they pass the other checks (if you use more than one wxTextValidatorStyle). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07a1c6bde1ab6d45b7daed08ac19f75983b" prot="public">
+          <name>wxFILTER_ASCII</name>
+          <briefdescription>
+<para>Non-ASCII characters are filtered out. See <ref refid="classwx_string_1a932ddb6b4786213596c3e41b1fa1f7c5" kindref="member">wxString::IsAscii</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07ab7fa483928635f2e066229fe0bceec93" prot="public">
+          <name>wxFILTER_ALPHA</name>
+          <briefdescription>
+<para>Non-alpha characters are filtered out. </para>          </briefdescription>
+          <detaileddescription>
+<para>Uses the wxWidgets wrapper for the standard CRT function <computeroutput>isalpha</computeroutput> (which is locale-dependent) on all characters of the string. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07a56c1d11ebc1b6eacd4614cef6319c2bc" prot="public">
+          <name>wxFILTER_ALPHANUMERIC</name>
+          <briefdescription>
+<para>Non-alphanumeric characters are filtered out. </para>          </briefdescription>
+          <detaileddescription>
+<para>Uses the wxWidgets wrapper for the standard CRT function <computeroutput>isalnum</computeroutput> (which is locale-dependent) on all characters of the string. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07a724e6e8a40da5bdef9ec2389da3ccebf" prot="public">
+          <name>wxFILTER_DIGITS</name>
+          <briefdescription>
+<para>Non-numeric characters are filtered out. </para>          </briefdescription>
+          <detaileddescription>
+<para>Uses the wxWidgets wrapper for the standard CRT function <computeroutput>isdigit</computeroutput> (which is locale-dependent) on all characters of the string. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07ad5c28afce09912e2440b5c267737644f" prot="public">
+          <name>wxFILTER_NUMERIC</name>
+          <briefdescription>
+<para>Non-numeric characters are filtered out. </para>          </briefdescription>
+          <detaileddescription>
+<para>Works like <computeroutput>wxFILTER_DIGITS</computeroutput> but allows also decimal points, minus/plus signs and the &apos;e&apos; or &apos;E&apos; character to input exponents. Note that this is not the same behaviour of <ref refid="classwx_string_1a42fc468fb16b820b1b599fadfc6285cb" kindref="member">wxString::IsNumber()</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07a535e6138673908871d94a460f0c9ccfc" prot="public">
+          <name>wxFILTER_INCLUDE_LIST</name>
+          <briefdescription>
+<para>Use an include list. </para>          </briefdescription>
+          <detaileddescription>
+<para>The validator checks if the user input is on the list, complaining if not. See <ref refid="classwx_text_validator_1a82e11147d76becf3c1dd5805b92f5b74" kindref="member">wxTextValidator::SetIncludes()</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07acb40805803b96882af40a830afbbc0f1" prot="public">
+          <name>wxFILTER_INCLUDE_CHAR_LIST</name>
+          <briefdescription>
+<para>Use an include list. </para>          </briefdescription>
+          <detaileddescription>
+<para>The validator checks if each input character is in the list (one character per list element), complaining if not. See <ref refid="classwx_text_validator_1a73b9a9a92761b34503777381226d30a3" kindref="member">wxTextValidator::SetCharIncludes()</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07a0cd241d224d0a61b222cdbc0cab9ddfa" prot="public">
+          <name>wxFILTER_EXCLUDE_LIST</name>
+          <briefdescription>
+<para>Use an exclude list. </para>          </briefdescription>
+          <detaileddescription>
+<para>The validator checks if the user input is on the list, complaining if it is. See <ref refid="classwx_text_validator_1aca577f30a7bb9dfec8a5ae6e11413891" kindref="member">wxTextValidator::SetExcludes()</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07a69d26118743b080adef55abf8d1b2931" prot="public">
+          <name>wxFILTER_EXCLUDE_CHAR_LIST</name>
+          <briefdescription>
+<para>Use an exclude list. </para>          </briefdescription>
+          <detaileddescription>
+<para>The validator checks if each input character is in the list (one character per list element), complaining if it is. See <ref refid="classwx_text_validator_1a8a461648fd10e0ce15021e3d913f24d4" kindref="member">wxTextValidator::SetCharExcludes()</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Styles used by <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that when you specify more styles in <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref> the validation checks are performed in the order in which the styles of this enumeration are defined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valtext.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valtext.h" bodystart="16" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valtext.h"/>
+  </compounddef>
+</doxygen>

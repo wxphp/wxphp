@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="xmlres_8h" kind="file">
+    <compoundname>xmlres.h</compoundname>
+    <innerclass refid="classwx_xml_resource" prot="public">wxXmlResource</innerclass>
+    <innerclass refid="classwx_xml_resource_handler" prot="public">wxXmlResourceHandler</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="xmlres_8h_1ad36a879ef645d6ee478f118b211d9431" prot="public" static="no">
+        <name>wxXmlResourceFlags</name>
+        <enumvalue id="xmlres_8h_1ad36a879ef645d6ee478f118b211d9431ad4296e578135189b7820c6d096e952e9" prot="public">
+          <name>wxXRC_USE_LOCALE</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Translatable strings will be translated via <ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member">_()</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlres_8h_1ad36a879ef645d6ee478f118b211d9431ae71f919b25bccff3de8c1ac5faa94ace" prot="public">
+          <name>wxXRC_NO_SUBCLASSING</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Subclass property of object nodes will be ignored (useful for previews in XRC editors). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlres_8h_1ad36a879ef645d6ee478f118b211d9431a4de02ca558d0dad4f7e52076e95202f4" prot="public">
+          <name>wxXRC_NO_RELOADING</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+<para>Prevent the XRC files from being reloaded from disk in case they have been modified there since being last loaded (may slightly speed up loading them). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags which can be used with <ref refid="classwx_xml_resource_1a02755ba4a1862da0c2233834c42be1e5" kindref="member">wxXmlResource::wxXmlResource</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" bodystart="12" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h"/>
+  </compounddef>
+</doxygen>

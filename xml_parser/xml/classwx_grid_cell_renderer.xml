@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_grid_cell_renderer" kind="class" prot="public">
+    <compoundname>wxGridCellRenderer</compoundname>
+    <derivedcompoundref refid="classwx_grid_cell_bool_renderer" prot="public" virt="non-virtual">wxGridCellBoolRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_grid_cell_string_renderer" prot="public" virt="non-virtual">wxGridCellStringRenderer</derivedcompoundref>
+    <includes local="no">wx/grid.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_grid_cell_renderer_1a55c1db8c06f8cb994beb90615d5264f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref> *</type>
+        <definition>virtual wxGridCellRenderer* wxGridCellRenderer::Clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Clone</name>
+        <briefdescription>
+<para>This function must be implemented in derived classes to return a copy of itself. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_renderer_1a1848512422742bbbf9dec1b173bfc752" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxGridCellRenderer::Draw</definition>
+        <argsstring>(wxGrid &amp;grid, wxGridCellAttr &amp;attr, wxDC &amp;dc, const wxRect &amp;rect, int row, int col, bool isSelected)=0</argsstring>
+        <name>Draw</name>
+        <param>
+          <type><ref refid="classwx_grid" kindref="compound">wxGrid</ref> &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isSelected</declname>
+        </param>
+        <briefdescription>
+<para>Draw the given cell on the provided DC inside the given rectangle using the style specified by the attribute and the default or selected state corresponding to the isSelected value. </para>        </briefdescription>
+        <detaileddescription>
+<para>This pure virtual function has a default implementation which will prepare the DC using the given attribute: it will draw the rectangle with the background colour from attr and set the text colour and font. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_renderer_1a747661d7b50f6bc5d67a6ac218b12ed8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxGridCellRenderer::GetBestSize</definition>
+        <argsstring>(wxGrid &amp;grid, wxGridCellAttr &amp;attr, wxDC &amp;dc, int row, int col)=0</argsstring>
+        <name>GetBestSize</name>
+        <param>
+          <type><ref refid="classwx_grid" kindref="compound">wxGrid</ref> &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Get the preferred size of the cell for its contents. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is responsible for actually drawing the cell in the grid. </para>    </briefdescription>
+    <detaileddescription>
+<para>You may pass it to the <ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> (below) to change the format of one given cell or to <ref refid="classwx_grid_1acee5b448bb394d1dc846c6340789e1da" kindref="member">wxGrid::SetDefaultRenderer()</ref> to change the view of all cells. This is an abstract class, and you will normally use one of the predefined derived classes or derive your own class from it.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_auto_wrap_string_renderer" kindref="compound">wxGridCellAutoWrapStringRenderer</ref>, <ref refid="classwx_grid_cell_bool_renderer" kindref="compound">wxGridCellBoolRenderer</ref>, <ref refid="classwx_grid_cell_date_time_renderer" kindref="compound">wxGridCellDateTimeRenderer</ref>, <ref refid="classwx_grid_cell_enum_renderer" kindref="compound">wxGridCellEnumRenderer</ref>, <ref refid="classwx_grid_cell_float_renderer" kindref="compound">wxGridCellFloatRenderer</ref>, <ref refid="classwx_grid_cell_number_renderer" kindref="compound">wxGridCellNumberRenderer</ref>, <ref refid="classwx_grid_cell_string_renderer" kindref="compound">wxGridCellStringRenderer</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6719">
+        <label>wxGridCellBoolRenderer</label>
+        <link refid="classwx_grid_cell_bool_renderer"/>
+        <childnode refid="6718" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6723">
+        <label>wxGridCellEnumRenderer</label>
+        <link refid="classwx_grid_cell_enum_renderer"/>
+        <childnode refid="6720" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6722">
+        <label>wxGridCellDateTimeRenderer</label>
+        <link refid="classwx_grid_cell_date_time_renderer"/>
+        <childnode refid="6720" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6725">
+        <label>wxGridCellNumberRenderer</label>
+        <link refid="classwx_grid_cell_number_renderer"/>
+        <childnode refid="6720" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6721">
+        <label>wxGridCellAutoWrapStringRenderer</label>
+        <link refid="classwx_grid_cell_auto_wrap_string_renderer"/>
+        <childnode refid="6720" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6724">
+        <label>wxGridCellFloatRenderer</label>
+        <link refid="classwx_grid_cell_float_renderer"/>
+        <childnode refid="6720" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6718">
+        <label>wxGridCellRenderer</label>
+        <link refid="classwx_grid_cell_renderer"/>
+      </node>
+      <node id="6720">
+        <label>wxGridCellStringRenderer</label>
+        <link refid="classwx_grid_cell_string_renderer"/>
+        <childnode refid="6718" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="26" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classwx_grid_cell_renderer_1a55c1db8c06f8cb994beb90615d5264f7" prot="public" virt="pure-virtual"><scope>wxGridCellRenderer</scope><name>Clone</name></member>
+      <member refid="classwx_grid_cell_renderer_1a1848512422742bbbf9dec1b173bfc752" prot="public" virt="pure-virtual"><scope>wxGridCellRenderer</scope><name>Draw</name></member>
+      <member refid="classwx_grid_cell_renderer_1a747661d7b50f6bc5d67a6ac218b12ed8" prot="public" virt="pure-virtual"><scope>wxGridCellRenderer</scope><name>GetBestSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

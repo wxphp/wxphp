@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="time_8h" kind="file">
+    <compoundname>time.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga595d562b91080c486af44c752a725fea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGetTimeZone</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetTimeZone</name>
+        <briefdescription>
+<para>Returns the difference between UTC and local time in seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1gaa47bc61fdb1251cfc6ee234520e1df27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxGetLocalTime</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetLocalTime</name>
+        <briefdescription>
+<para>Returns the number of seconds since local time 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">wxDateTime::Now()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga163e97c4b3b5eeb0c8de80cd81ae09da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxGetLocalTimeMillis</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetLocalTimeMillis</name>
+        <briefdescription>
+<para>Returns the number of milliseconds since local time 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para>The use of <ref refid="group__group__funcmacro__time_1ga9e6cb143b3e04cf0459aa3f9763eec82" kindref="member">wxGetUTCTimeMillis()</ref> is preferred as it provides a usually (except for changes to the system time) monotonic clock which the local time also changes whenever DST begins or ends.</para><para><simplesect kind="see"><para><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">wxDateTime::Now()</ref>, <ref refid="group__group__funcmacro__time_1ga9e6cb143b3e04cf0459aa3f9763eec82" kindref="member">wxGetUTCTimeMillis()</ref>, <ref refid="group__group__funcmacro__time_1gafd807c12555028ba730f4aa56983339c" kindref="member">wxGetUTCTimeUSec()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga673d50c96dd575ba6658fa1b094dc769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxGetUTCTime</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUTCTime</name>
+        <briefdescription>
+<para>Returns the number of seconds since GMT 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_date_time_1a6e6c37a0414bb4831e2cc03b37f498a2" kindref="member">wxDateTime::Now()</ref></para></simplesect>
+Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1ga9e6cb143b3e04cf0459aa3f9763eec82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxGetUTCTimeMillis</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUTCTimeMillis</name>
+        <briefdescription>
+<para>Returns the number of milliseconds since GMT 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__time_1gafd807c12555028ba730f4aa56983339c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
+        <definition>wxLongLong wxGetUTCTimeUSec</definition>
+        <argsstring>()</argsstring>
+        <name>wxGetUTCTimeUSec</name>
+        <briefdescription>
+<para>Returns the number of microseconds since GMT 00:00:00 Jan 1st 1970. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include file: <verbatim>#include &lt;wx/time.h&gt; </verbatim></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h"/>
+  </compounddef>
+</doxygen>

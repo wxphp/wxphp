@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_mouse_events_manager" kind="class" prot="public">
+    <compoundname>wxMouseEventsManager</compoundname>
+    <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
+    <includes local="no">wx/mousemanager.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_mouse_events_manager_1ac410f5009fecfb70f9e4644a0e09079e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMouseEventsManager::wxMouseEventsManager</definition>
+        <argsstring>()</argsstring>
+        <name>wxMouseEventsManager</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>You must call <ref refid="classwx_mouse_events_manager_1a8627443b743f13fb4a486ee9831f6f89" kindref="member">Create()</ref> to finish initializing the mouse events manager. If possible, avoid the use of this constructor in favour of the other one which fully initializes the mouse events manager immediately. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1a069e9abad1cb2d178b4899bdc7081f43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMouseEventsManager::wxMouseEventsManager</definition>
+        <argsstring>(wxWindow *win)</argsstring>
+        <name>wxMouseEventsManager</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <briefdescription>
+<para>Constructor creates the manager for the window. </para>        </briefdescription>
+        <detaileddescription>
+<para>A mouse event manager is always associated with a window and must be destroyed by the window when it is destroyed (it doesn&apos;t need to be allocated on the heap however). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1a8627443b743f13fb4a486ee9831f6f89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxMouseEventsManager::Create</definition>
+        <argsstring>(wxWindow *win)</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <briefdescription>
+<para>Finishes initialization of the object created using default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Currently always returns true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="64"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_mouse_events_manager_1ac0b0ee5a5987470f523a03630ba4b6e4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int wxMouseEventsManager::MouseHitTest</definition>
+        <argsstring>(const wxPoint &amp;pos)=0</argsstring>
+        <name>MouseHitTest</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to return the item at the given position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position to test, in physical coordinates. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index of the item at the given position or wxNOT_FOUND if there is no item there. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1aef800a0d0d71c2ccdc1b797e52a0f282" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxMouseEventsManager::MouseClicked</definition>
+        <argsstring>(int item)=0</argsstring>
+        <name>MouseClicked</name>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to react to mouse clicks. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called when the user clicked (i.e. pressed and released mouse over the <emphasis>same</emphasis> item) and should normally generate a notification about this click and return true if it was handled or false otherwise, determining whether the original mouse event is skipped or not.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item which was clicked. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the mouse event was processed and false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1a6efa90616c6fa3b01bcd9a2e7b7c3d12" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxMouseEventsManager::MouseDragBegin</definition>
+        <argsstring>(int item, const wxPoint &amp;pos)=0</argsstring>
+        <name>MouseDragBegin</name>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to allow or deny dragging of the item. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called when the user attempts to start dragging the given item.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item which is going to be dragged. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position from where it is being dragged. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true to allow the item to be dragged (in which case <ref refid="classwx_mouse_events_manager_1a06919af9b1d82f0ba33046620e82d3f0" kindref="member">MouseDragging()</ref> and <ref refid="classwx_mouse_events_manager_1a202263161d841caeb9d5c47a8c87db16" kindref="member">MouseDragEnd()</ref> will be called later, unless <ref refid="classwx_mouse_events_manager_1aab7d86df3e6b9a61facb5199f9f6b631" kindref="member">MouseDragCancelled()</ref> is called instead) or false to forbid it. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1a06919af9b1d82f0ba33046620e82d3f0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxMouseEventsManager::MouseDragging</definition>
+        <argsstring>(int item, const wxPoint &amp;pos)=0</argsstring>
+        <name>MouseDragging</name>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to provide feed back while an item is being dragged. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called while the item is being dragged and should normally update the feedback shown on screen (usually this is done using wxOverlay).</para><para>Notice that this method will never be called for the items for which <ref refid="classwx_mouse_events_manager_1a6efa90616c6fa3b01bcd9a2e7b7c3d12" kindref="member">MouseDragBegin()</ref> returns false. Consequently, if <ref refid="classwx_mouse_events_manager_1a6efa90616c6fa3b01bcd9a2e7b7c3d12" kindref="member">MouseDragBegin()</ref> always returns false you can do nothing in this method.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item being dragged. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current position of the item.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_mouse_events_manager_1a202263161d841caeb9d5c47a8c87db16" kindref="member">MouseDragEnd()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1a202263161d841caeb9d5c47a8c87db16" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxMouseEventsManager::MouseDragEnd</definition>
+        <argsstring>(int item, const wxPoint &amp;pos)=0</argsstring>
+        <name>MouseDragEnd</name>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to handle item drop. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called when the mouse is released after dragging the item. Normally the item should be positioned at the new location.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item which was dragged and now dropped. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position at which the item was dropped.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_mouse_events_manager_1a6efa90616c6fa3b01bcd9a2e7b7c3d12" kindref="member">MouseDragBegin()</ref>, <ref refid="classwx_mouse_events_manager_1a06919af9b1d82f0ba33046620e82d3f0" kindref="member">MouseDragging()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1aab7d86df3e6b9a61facb5199f9f6b631" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxMouseEventsManager::MouseDragCancelled</definition>
+        <argsstring>(int item)=0</argsstring>
+        <name>MouseDragCancelled</name>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to handle cancellation of mouse dragging. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called when mouse capture is lost while dragging the item and normally should remove the visual feedback drawn by <ref refid="classwx_mouse_events_manager_1a06919af9b1d82f0ba33046620e82d3f0" kindref="member">MouseDragging()</ref> as well as reset any internal variables set in <ref refid="classwx_mouse_events_manager_1a6efa90616c6fa3b01bcd9a2e7b7c3d12" kindref="member">MouseDragBegin()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_mouse_capture_lost_event" kindref="compound">wxMouseCaptureLostEvent</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1a543da21dccf90eb88a67d9b2175dbd9b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxMouseEventsManager::MouseClickBegin</definition>
+        <argsstring>(int item)</argsstring>
+        <name>MouseClickBegin</name>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>May be overridden to update the state of an item when it is pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called when the item is becomes pressed and can be used to change its appearance when this happens. It is mostly useful for button-like items and doesn&apos;t need to be overridden if the items shouldn&apos;t change their appearance when pressed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item being pressed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_mouse_events_manager_1a9fd1d3883b222936d0704dd18ca8f599" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxMouseEventsManager::MouseClickCancelled</definition>
+        <argsstring>(int item)</argsstring>
+        <name>MouseClickCancelled</name>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to reset the item appearance changed by <ref refid="classwx_mouse_events_manager_1a543da21dccf90eb88a67d9b2175dbd9b" kindref="member">MouseClickBegin()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called if the mouse capture was lost while the item was pressed and must be overridden to restore the default item appearance if it was changed in <ref refid="classwx_mouse_events_manager_1a543da21dccf90eb88a67d9b2175dbd9b" kindref="member">MouseClickBegin()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_mouse_events_manager_1aab7d86df3e6b9a61facb5199f9f6b631" kindref="member">MouseDragCancelled()</ref>, <ref refid="classwx_mouse_capture_lost_event" kindref="compound">wxMouseCaptureLostEvent</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="182"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper for handling mouse input events in windows containing multiple items. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class handles mouse events and synthesizes high-level notifications such as clicks and drag events from low level mouse button presses and mouse movement events. It is useful because handling the mouse events is less obvious than might seem at a first glance: for example, clicks on an object should only be generated if the mouse was both pressed and released over it and not just released (so it requires storing the previous state) and dragging shouldn&apos;t start before the mouse moves away far enough.</para><para>This class encapsulates all these dull details for controls containing multiple items which can be identified by a positive integer index and you just need to implement its pure virtual functions to use it.</para><para>Notice that this class supposes that all items can be identified by an integer &quot;index&quot; but it doesn&apos;t need to be an ordinal index of the item (although this is the most common case) -- it can be any value which can be used to uniquely identify an item.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7846">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7845">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7846" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7847" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7844">
+        <label>wxMouseEventsManager</label>
+        <link refid="classwx_mouse_events_manager"/>
+        <childnode refid="7845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7847">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7850">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7851" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7849">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7850" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7852" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7848">
+        <label>wxMouseEventsManager</label>
+        <link refid="classwx_mouse_events_manager"/>
+        <childnode refid="7849" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7852">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7851">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousemanager.h" bodystart="37" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>AddFilter</name></member>
+      <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Bind</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxMouseEventsManager</scope><name>CloneRefData</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Connect</name></member>
+      <member refid="classwx_mouse_events_manager_1a8627443b743f13fb4a486ee9831f6f89" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Create</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxMouseEventsManager</scope><name>CreateRefData</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Disconnect</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>GetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>IsSameAs</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>m_refData</name></member>
+      <member refid="classwx_mouse_events_manager_1a543da21dccf90eb88a67d9b2175dbd9b" prot="protected" virt="virtual"><scope>wxMouseEventsManager</scope><name>MouseClickBegin</name></member>
+      <member refid="classwx_mouse_events_manager_1a9fd1d3883b222936d0704dd18ca8f599" prot="protected" virt="virtual"><scope>wxMouseEventsManager</scope><name>MouseClickCancelled</name></member>
+      <member refid="classwx_mouse_events_manager_1aef800a0d0d71c2ccdc1b797e52a0f282" prot="protected" virt="pure-virtual"><scope>wxMouseEventsManager</scope><name>MouseClicked</name></member>
+      <member refid="classwx_mouse_events_manager_1a6efa90616c6fa3b01bcd9a2e7b7c3d12" prot="protected" virt="pure-virtual"><scope>wxMouseEventsManager</scope><name>MouseDragBegin</name></member>
+      <member refid="classwx_mouse_events_manager_1aab7d86df3e6b9a61facb5199f9f6b631" prot="protected" virt="pure-virtual"><scope>wxMouseEventsManager</scope><name>MouseDragCancelled</name></member>
+      <member refid="classwx_mouse_events_manager_1a202263161d841caeb9d5c47a8c87db16" prot="protected" virt="pure-virtual"><scope>wxMouseEventsManager</scope><name>MouseDragEnd</name></member>
+      <member refid="classwx_mouse_events_manager_1a06919af9b1d82f0ba33046620e82d3f0" prot="protected" virt="pure-virtual"><scope>wxMouseEventsManager</scope><name>MouseDragging</name></member>
+      <member refid="classwx_mouse_events_manager_1ac0b0ee5a5987470f523a03630ba4b6e4" prot="protected" virt="pure-virtual"><scope>wxMouseEventsManager</scope><name>MouseHitTest</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>operator new</name></member>
+      <member refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_evt_handler_1a6f643dbdcf8e914ae1c8b70dd305e6f2" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>QueueEvent</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Ref</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>SetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>SetRefData</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxMouseEventsManager</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxMouseEventsManager</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>UnShare</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_mouse_events_manager_1ac410f5009fecfb70f9e4644a0e09079e" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>wxMouseEventsManager</name></member>
+      <member refid="classwx_mouse_events_manager_1a069e9abad1cb2d178b4899bdc7081f43" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>wxMouseEventsManager</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxMouseEventsManager</scope><name>wxObject</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxMouseEventsManager</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

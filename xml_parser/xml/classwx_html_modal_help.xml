@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_html_modal_help" kind="class" prot="public">
+    <compoundname>wxHtmlModalHelp</compoundname>
+    <includes local="no">wx/html/helpctrl.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_html_modal_help_1a4d16248f91685234b066edca4993a665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHtmlModalHelp::wxHtmlModalHelp</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;helpFile, const wxString &amp;topic=wxEmptyString, int style=wxHF_DEFAULT_STYLE|wxHF_DIALOG|wxHF_MODAL)</argsstring>
+        <name>wxHtmlModalHelp</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>helpFile</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>topic</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>style</declname>
+          <defval>wxHF_DEFAULT_STYLE|wxHF_DIALOG|wxHF_MODAL</defval>
+        </param>
+        <briefdescription>
+<para>The ctor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the parent of the dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>helpFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the HTML help file to show. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an optional topic. If this is empty, the help contents will be shown. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a combination of the flags described in the <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> documentation. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" line="282"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class uses <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> to display help in a modal dialog. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is useful on platforms such as wxMac where if you display help from a modal dialog, the help window must itself be a modal dialog.</para><para>Create objects of this class on the stack, for example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>help<sp/>can<sp/>be<sp/>browsed<sp/>during<sp/>the<sp/>lifetime<sp/>of<sp/>this<sp/>object;<sp/>when<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>user<sp/>quits<sp/>the<sp/>help,<sp/>program<sp/>execution<sp/>will<sp/>continue.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_html_modal_help" kindref="compound" tooltip="This class uses wxHtmlHelpController to display help in a modal dialog.">wxHtmlModalHelp</ref><sp/>help(parent,<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>topic&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" line="265" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpctrl.h" bodystart="264" bodyend="283"/>
+    <listofallmembers>
+      <member refid="classwx_html_modal_help_1a4d16248f91685234b066edca4993a665" prot="public" virt="non-virtual"><scope>wxHtmlModalHelp</scope><name>wxHtmlModalHelp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_message_output_stderr" kind="class" prot="public">
+    <compoundname>wxMessageOutputStderr</compoundname>
+    <basecompoundref refid="classwx_message_output" prot="public" virt="non-virtual">wxMessageOutput</basecompoundref>
+    <derivedcompoundref refid="classwx_message_output_best" prot="public" virt="non-virtual">wxMessageOutputBest</derivedcompoundref>
+    <derivedcompoundref refid="classwx_message_output_debug" prot="public" virt="non-virtual">wxMessageOutputDebug</derivedcompoundref>
+    <includes local="no">wx/msgout.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_message_output_stderr_1a2545c02ce8dcf188c820d78ff7faa4b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxMessageOutputStderr::wxMessageOutputStderr</definition>
+        <argsstring>(FILE *fp=stderr)</argsstring>
+        <name>wxMessageOutputStderr</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+          <defval>stderr</defval>
+        </param>
+        <briefdescription>
+<para>Create a new message output object associated with standard error stream by default. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Non-null STDIO file stream. Notice that this object does <emphasis>not</emphasis> take ownership of this pointer, i.e. the caller is responsible for both ensuring that its life-time is great er than life-time of this object and for deleting it if necessary. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="113"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Output messages to stderr or another STDIO file stream. </para>    </briefdescription>
+    <detaileddescription>
+<para>Implements <ref refid="classwx_message_output" kindref="compound">wxMessageOutput</ref> by using stderr or specified file.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7767">
+        <label>wxMessageOutputStderr</label>
+        <link refid="classwx_message_output_stderr"/>
+        <childnode refid="7768" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7768">
+        <label>wxMessageOutput</label>
+        <link refid="classwx_message_output"/>
+      </node>
+      <node id="7769">
+        <label>wxMessageOutputBest</label>
+        <link refid="classwx_message_output_best"/>
+        <childnode refid="7767" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7770">
+        <label>wxMessageOutputDebug</label>
+        <link refid="classwx_message_output_debug"/>
+        <childnode refid="7767" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7771">
+        <label>wxMessageOutputStderr</label>
+        <link refid="classwx_message_output_stderr"/>
+        <childnode refid="7772" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7772">
+        <label>wxMessageOutput</label>
+        <link refid="classwx_message_output"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" bodystart="100" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classwx_message_output_1aff0387f83c5ee4db7cf26b909e1057e7" prot="public" virt="non-virtual"><scope>wxMessageOutputStderr</scope><name>Get</name></member>
+      <member refid="classwx_message_output_1ae8b0b6734006e716bd80fd053a7b4e4d" prot="public" virt="pure-virtual"><scope>wxMessageOutputStderr</scope><name>Output</name></member>
+      <member refid="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" prot="public" virt="non-virtual"><scope>wxMessageOutputStderr</scope><name>Printf</name></member>
+      <member refid="classwx_message_output_1ac8a0f8cc3ff1c0582d7e3e3f490e7e0b" prot="public" virt="non-virtual"><scope>wxMessageOutputStderr</scope><name>Set</name></member>
+      <member refid="classwx_message_output_stderr_1a2545c02ce8dcf188c820d78ff7faa4b1" prot="public" virt="non-virtual"><scope>wxMessageOutputStderr</scope><name>wxMessageOutputStderr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

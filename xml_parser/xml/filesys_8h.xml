@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="filesys_8h" kind="file">
+    <compoundname>filesys.h</compoundname>
+    <innerclass refid="classwx_file_system" prot="public">wxFileSystem</innerclass>
+    <innerclass refid="classwx_f_s_file" prot="public">wxFSFile</innerclass>
+    <innerclass refid="classwx_file_system_handler" prot="public">wxFileSystemHandler</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="filesys_8h_1abe38fc3ba01ed25545f0c841da8c2942" prot="public" static="no">
+        <name>wxFileSystemOpenFlags</name>
+        <enumvalue id="filesys_8h_1abe38fc3ba01ed25545f0c841da8c2942a05297883347433d9f47427abbbee8211" prot="public">
+          <name>wxFS_READ</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Open for reading. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="filesys_8h_1abe38fc3ba01ed25545f0c841da8c2942a15a8fd9e9208cef60a0ddd340775877f" prot="public">
+          <name>wxFS_SEEKABLE</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+<para>Returned stream will be seekable. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Open Bit Flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" bodystart="13" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_dial_up_manager" kind="class" prot="public">
+    <compoundname>wxDialUpManager</compoundname>
+    <includes local="no">wx/dialup.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_dial_up_manager_1a085a6228e54f8688b11653d6d11deb51" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxDialUpManager::~wxDialUpManager</definition>
+        <argsstring>()</argsstring>
+        <name>~wxDialUpManager</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a5f7353cc5ac19f115b589fbf4f603ec6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDialUpManager::CancelDialing</definition>
+        <argsstring>()=0</argsstring>
+        <name>CancelDialing</name>
+        <briefdescription>
+<para>Cancel dialing the number initiated with <ref refid="classwx_dial_up_manager_1a8c94f29ebc0d535ed4c54b9f04b0e67d" kindref="member">Dial()</ref> with async parameter equal to true. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This won&apos;t result in a DISCONNECTED event being sent.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_dial_up_manager_1a147470d1b1e0d8b0eae30d5ed37b2ed1" kindref="member">IsDialing()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a8c94f29ebc0d535ed4c54b9f04b0e67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDialUpManager::Dial</definition>
+        <argsstring>(const wxString &amp;nameOfISP=wxEmptyString, const wxString &amp;username=wxEmptyString, const wxString &amp;password=wxEmptyString, bool async=true)=0</argsstring>
+        <name>Dial</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>nameOfISP</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>username</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>password</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>async</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Dial the given ISP, use <emphasis>username</emphasis> and <emphasis>password</emphasis> to authenticate. </para>        </briefdescription>
+        <detaileddescription>
+<para>The parameters are only used under Windows currently, for Unix you should use <ref refid="classwx_dial_up_manager_1a09fe2ef6bed96bf3fcb14bd2d68382c7" kindref="member">SetConnectCommand()</ref> to customize this functions behaviour.</para><para>If no <emphasis>nameOfISP</emphasis> is given, the function will select the default one (proposing the user to choose among all connections defined on this machine) and if no username and/or password are given, the function will try to do without them, but will ask the user if really needed.</para><para>If <emphasis>async</emphasis> parameter is false, the function waits until the end of dialing and returns true upon successful completion.</para><para>If <emphasis>async</emphasis> is true, the function only initiates the connection and returns immediately - the result is reported via events (an event is sent anyhow, but if dialing failed it will be a DISCONNECTED one). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a8ed5256ff997883460a3fdf71dee4c87" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxDialUpManager::DisableAutoCheckOnlineStatus</definition>
+        <argsstring>()=0</argsstring>
+        <name>DisableAutoCheckOnlineStatus</name>
+        <briefdescription>
+<para>Disable automatic check for connection status change - notice that the <computeroutput>wxEVT_DIALUP_XXX</computeroutput> events won&apos;t be sent any more neither. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a266e3d7b0bd204eb65e677297235c67e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDialUpManager::EnableAutoCheckOnlineStatus</definition>
+        <argsstring>(size_t nSeconds=60)=0</argsstring>
+        <name>EnableAutoCheckOnlineStatus</name>
+        <param>
+          <type>size_t</type>
+          <declname>nSeconds</declname>
+          <defval>60</defval>
+        </param>
+        <briefdescription>
+<para>Enable automatic checks for the connection status and sending of <computeroutput>wxEVT_DIALUP_CONNECTED/wxEVT_DIALUP_DISCONNECTED</computeroutput> events. </para>        </briefdescription>
+        <detaileddescription>
+<para>The interval parameter is only for Unix where we do the check manually and specifies how often should we repeat the check (each minute by default). Under Windows, the notification about the change of connection status is sent by the system and so we don&apos;t do any polling and this parameter is ignored.</para><para><simplesect kind="return"><para>false if couldn&apos;t set up automatic check for online status. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a4bde9d3a0e7029f9f0358455125cfbe3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t wxDialUpManager::GetISPNames</definition>
+        <argsstring>(wxArrayString &amp;names) const =0</argsstring>
+        <name>GetISPNames</name>
+        <param>
+          <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+<para>This function is only implemented under Windows. </para>        </briefdescription>
+        <detaileddescription>
+<para>Fills the array with the names of all possible values for the first parameter to <ref refid="classwx_dial_up_manager_1a8c94f29ebc0d535ed4c54b9f04b0e67d" kindref="member">Dial()</ref> on this machine and returns their number (may be 0). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a61ac08dfa3145fd651adfb8fd3104d9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDialUpManager::HangUp</definition>
+        <argsstring>()=0</argsstring>
+        <name>HangUp</name>
+        <briefdescription>
+<para>Hang up the currently active dial up connection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a414b0769313802c1bb3d43aed65c643d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDialUpManager::IsAlwaysOnline</definition>
+        <argsstring>() const =0</argsstring>
+        <name>IsAlwaysOnline</name>
+        <briefdescription>
+<para>Returns true if the computer has a permanent network connection (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>is on a LAN) and so there is no need to use <ref refid="classwx_dial_up_manager_1a8c94f29ebc0d535ed4c54b9f04b0e67d" kindref="member">Dial()</ref> function to go online.</para><para><simplesect kind="note"><para>This function tries to guess the result and it is not always guaranteed to be correct, so it is better to ask user for confirmation or give him a possibility to override it. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a147470d1b1e0d8b0eae30d5ed37b2ed1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDialUpManager::IsDialing</definition>
+        <argsstring>() const =0</argsstring>
+        <name>IsDialing</name>
+        <briefdescription>
+<para>Returns true if (async) dialing is in progress. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_dial_up_manager_1a8c94f29ebc0d535ed4c54b9f04b0e67d" kindref="member">Dial()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1ab50dd34fc4446e2983250579bd47c10b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDialUpManager::IsOk</definition>
+        <argsstring>() const =0</argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Returns true if the dialup manager was initialized correctly. </para>        </briefdescription>
+        <detaileddescription>
+<para>If this function returns false, no other functions will work neither, so it is a good idea to call this function and check its result before calling any other <ref refid="classwx_dial_up_manager" kindref="compound">wxDialUpManager</ref> methods. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a95964e7683e3818044496499d2c1cb70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDialUpManager::IsOnline</definition>
+        <argsstring>() const =0</argsstring>
+        <name>IsOnline</name>
+        <briefdescription>
+<para>Returns true if the computer is connected to the network: under Windows, this just means that a RAS connection exists, under Unix we check that the &quot;well-known host&quot; (as specified by <ref refid="classwx_dial_up_manager_1a5feb6ba7f390d50be7eae85920a2230e" kindref="member">SetWellKnownHost()</ref>) is reachable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a09fe2ef6bed96bf3fcb14bd2d68382c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxDialUpManager::SetConnectCommand</definition>
+        <argsstring>(const wxString &amp;commandDial=&quot;/usr/bin/pon&quot;, const wxString &amp;commandHangup=&quot;/usr/bin/poff&quot;)=0</argsstring>
+        <name>SetConnectCommand</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>commandDial</declname>
+          <defval>&quot;/usr/bin/pon&quot;</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>commandHangup</declname>
+          <defval>&quot;/usr/bin/poff&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This method is for Unix only. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets the commands to start up the network and to hang up again. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1af97aac56c5fa72dae86cc3f7730e3c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxDialUpManager::SetOnlineStatus</definition>
+        <argsstring>(bool isOnline=true)=0</argsstring>
+        <name>SetOnlineStatus</name>
+        <param>
+          <type>bool</type>
+          <declname>isOnline</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Sometimes the built-in logic for determining the online status may fail, so, in general, the user should be allowed to override it. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function allows to forcefully set the online status - whatever our internal algorithm may think about it.</para><para><simplesect kind="see"><para><ref refid="classwx_dial_up_manager_1a95964e7683e3818044496499d2c1cb70" kindref="member">IsOnline()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dial_up_manager_1a5feb6ba7f390d50be7eae85920a2230e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxDialUpManager::SetWellKnownHost</definition>
+        <argsstring>(const wxString &amp;hostname, int portno=80)=0</argsstring>
+        <name>SetWellKnownHost</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>portno</declname>
+          <defval>80</defval>
+        </param>
+        <briefdescription>
+<para>This method is for Unix only. </para>        </briefdescription>
+        <detaileddescription>
+<para>Under Unix, the value of well-known host is used to check whether we&apos;re connected to the internet. It is unused under Windows, but this function is always safe to call. The default value is <computeroutput>&quot;www.yahoo.com:80&quot;</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="182"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_dial_up_manager_1a695c7032e6b025c1ddd293eaea442f40" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_dial_up_manager" kindref="compound">wxDialUpManager</ref> *</type>
+        <definition>static wxDialUpManager* wxDialUpManager::Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <briefdescription>
+<para>This function should create and return the object of the platform-specific class derived from <ref refid="classwx_dial_up_manager" kindref="compound">wxDialUpManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>You should delete the pointer when you are done with it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class encapsulates functions dealing with verifying the connection status of the workstation (connected to the Internet via a direct connection, connected through a modem or not connected at all) and to establish this connection if possible/required (i.e. </para>    </briefdescription>
+    <detaileddescription>
+<para>in the case of the modem).</para><para>The program may also wish to be notified about the change in the connection status (for example, to perform some action when the user connects to the network the next time or, on the contrary, to stop receiving data from the net when the user hangs up the modem). For this, you need to use one of the event macros described below.</para><para>This class is different from other wxWidgets classes in that there is at most one instance of this class in the program accessed via <ref refid="classwx_dial_up_manager_1a695c7032e6b025c1ddd293eaea442f40" kindref="member">Create()</ref> and you can&apos;t create the objects of this class directly.</para><para><heading level="2">Events emitted by this class</heading>
+</para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_dial_up_event" kindref="compound">wxDialUpEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
+<listitem><para>EVT_DIALUP_CONNECTED(func): A connection with the network was established. </para></listitem>
+<listitem><para>EVT_DIALUP_DISCONNECTED(func): The connection with the network was lost. </para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="page__samples_1page_samples_dialup" kindref="member">Dialup Sample</ref>, <ref refid="classwx_dial_up_event" kindref="compound">wxDialUpEvent</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialup.h" bodystart="40" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classwx_dial_up_manager_1a5f7353cc5ac19f115b589fbf4f603ec6" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>CancelDialing</name></member>
+      <member refid="classwx_dial_up_manager_1a695c7032e6b025c1ddd293eaea442f40" prot="public" virt="non-virtual"><scope>wxDialUpManager</scope><name>Create</name></member>
+      <member refid="classwx_dial_up_manager_1a8c94f29ebc0d535ed4c54b9f04b0e67d" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>Dial</name></member>
+      <member refid="classwx_dial_up_manager_1a8ed5256ff997883460a3fdf71dee4c87" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>DisableAutoCheckOnlineStatus</name></member>
+      <member refid="classwx_dial_up_manager_1a266e3d7b0bd204eb65e677297235c67e" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>EnableAutoCheckOnlineStatus</name></member>
+      <member refid="classwx_dial_up_manager_1a4bde9d3a0e7029f9f0358455125cfbe3" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>GetISPNames</name></member>
+      <member refid="classwx_dial_up_manager_1a61ac08dfa3145fd651adfb8fd3104d9b" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>HangUp</name></member>
+      <member refid="classwx_dial_up_manager_1a414b0769313802c1bb3d43aed65c643d" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>IsAlwaysOnline</name></member>
+      <member refid="classwx_dial_up_manager_1a147470d1b1e0d8b0eae30d5ed37b2ed1" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>IsDialing</name></member>
+      <member refid="classwx_dial_up_manager_1ab50dd34fc4446e2983250579bd47c10b" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>IsOk</name></member>
+      <member refid="classwx_dial_up_manager_1a95964e7683e3818044496499d2c1cb70" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>IsOnline</name></member>
+      <member refid="classwx_dial_up_manager_1a09fe2ef6bed96bf3fcb14bd2d68382c7" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>SetConnectCommand</name></member>
+      <member refid="classwx_dial_up_manager_1af97aac56c5fa72dae86cc3f7730e3c94" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>SetOnlineStatus</name></member>
+      <member refid="classwx_dial_up_manager_1a5feb6ba7f390d50be7eae85920a2230e" prot="public" virt="pure-virtual"><scope>wxDialUpManager</scope><name>SetWellKnownHost</name></member>
+      <member refid="classwx_dial_up_manager_1a085a6228e54f8688b11653d6d11deb51" prot="public" virt="virtual"><scope>wxDialUpManager</scope><name>~wxDialUpManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

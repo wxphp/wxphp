@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__ctrl" kind="group">
+    <compoundname>group_class_ctrl</compoundname>
+    <title>Controls</title>
+    <innerclass refid="classwx_tree_list_item" prot="public">wxTreeListItem</innerclass>
+    <innerclass refid="classwx_tree_list_item_comparator" prot="public">wxTreeListItemComparator</innerclass>
+    <innerclass refid="classwx_tree_list_ctrl" prot="public">wxTreeListCtrl</innerclass>
+    <innerclass refid="classwx_animation_ctrl" prot="public">wxAnimationCtrl</innerclass>
+    <innerclass refid="classwx_bitmap_button" prot="public">wxBitmapButton</innerclass>
+    <innerclass refid="classwx_bitmap_combo_box" prot="public">wxBitmapComboBox</innerclass>
+    <innerclass refid="classwx_button" prot="public">wxButton</innerclass>
+    <innerclass refid="classwx_calendar_ctrl" prot="public">wxCalendarCtrl</innerclass>
+    <innerclass refid="classwx_check_box" prot="public">wxCheckBox</innerclass>
+    <innerclass refid="classwx_check_list_box" prot="public">wxCheckListBox</innerclass>
+    <innerclass refid="classwx_choice" prot="public">wxChoice</innerclass>
+    <innerclass refid="classwx_collapsible_pane" prot="public">wxCollapsiblePane</innerclass>
+    <innerclass refid="classwx_combo_popup" prot="public">wxComboPopup</innerclass>
+    <innerclass refid="classwx_combo_ctrl" prot="public">wxComboCtrl</innerclass>
+    <innerclass refid="classwx_combo_box" prot="public">wxComboBox</innerclass>
+    <innerclass refid="classwx_command_link_button" prot="public">wxCommandLinkButton</innerclass>
+    <innerclass refid="classwx_control" prot="public">wxControl</innerclass>
+    <innerclass refid="classwx_item_container_immutable" prot="public">wxItemContainerImmutable</innerclass>
+    <innerclass refid="classwx_item_container" prot="public">wxItemContainer</innerclass>
+    <innerclass refid="classwx_control_with_items" prot="public">wxControlWithItems</innerclass>
+    <innerclass refid="classwx_data_view_ctrl" prot="public">wxDataViewCtrl</innerclass>
+    <innerclass refid="classwx_data_view_list_ctrl" prot="public">wxDataViewListCtrl</innerclass>
+    <innerclass refid="classwx_data_view_tree_ctrl" prot="public">wxDataViewTreeCtrl</innerclass>
+    <innerclass refid="classwx_generic_dir_ctrl" prot="public">wxGenericDirCtrl</innerclass>
+    <innerclass refid="classwx_editable_list_box" prot="public">wxEditableListBox</innerclass>
+    <innerclass refid="classwx_file_ctrl" prot="public">wxFileCtrl</innerclass>
+    <innerclass refid="classwx_gauge" prot="public">wxGauge</innerclass>
+    <innerclass refid="classwx_header_column" prot="public">wxHeaderColumn</innerclass>
+    <innerclass refid="classwx_settable_header_column" prot="public">wxSettableHeaderColumn</innerclass>
+    <innerclass refid="classwx_header_column_simple" prot="public">wxHeaderColumnSimple</innerclass>
+    <innerclass refid="classwx_header_ctrl" prot="public">wxHeaderCtrl</innerclass>
+    <innerclass refid="classwx_header_ctrl_simple" prot="public">wxHeaderCtrlSimple</innerclass>
+    <innerclass refid="classwx_html_list_box" prot="public">wxHtmlListBox</innerclass>
+    <innerclass refid="classwx_simple_html_list_box" prot="public">wxSimpleHtmlListBox</innerclass>
+    <innerclass refid="classwx_hyperlink_ctrl" prot="public">wxHyperlinkCtrl</innerclass>
+    <innerclass refid="classwx_list_box" prot="public">wxListBox</innerclass>
+    <innerclass refid="classwx_list_ctrl" prot="public">wxListCtrl</innerclass>
+    <innerclass refid="classwx_list_view" prot="public">wxListView</innerclass>
+    <innerclass refid="classwx_active_x_container" prot="public">wxActiveXContainer</innerclass>
+    <innerclass refid="classwx_owner_drawn_combo_box" prot="public">wxOwnerDrawnComboBox</innerclass>
+    <innerclass refid="classwx_radio_box" prot="public">wxRadioBox</innerclass>
+    <innerclass refid="classwx_radio_button" prot="public">wxRadioButton</innerclass>
+    <innerclass refid="classwx_rearrange_list" prot="public">wxRearrangeList</innerclass>
+    <innerclass refid="classwx_rearrange_ctrl" prot="public">wxRearrangeCtrl</innerclass>
+    <innerclass refid="classwx_scroll_bar" prot="public">wxScrollBar</innerclass>
+    <innerclass refid="classwx_slider" prot="public">wxSlider</innerclass>
+    <innerclass refid="classwx_spin_button" prot="public">wxSpinButton</innerclass>
+    <innerclass refid="classwx_spin_ctrl" prot="public">wxSpinCtrl</innerclass>
+    <innerclass refid="classwx_spin_ctrl_double" prot="public">wxSpinCtrlDouble</innerclass>
+    <innerclass refid="classwx_search_ctrl" prot="public">wxSearchCtrl</innerclass>
+    <innerclass refid="classwx_static_bitmap" prot="public">wxStaticBitmap</innerclass>
+    <innerclass refid="classwx_static_box" prot="public">wxStaticBox</innerclass>
+    <innerclass refid="classwx_static_line" prot="public">wxStaticLine</innerclass>
+    <innerclass refid="classwx_static_text" prot="public">wxStaticText</innerclass>
+    <innerclass refid="classwx_text_ctrl" prot="public">wxTextCtrl</innerclass>
+    <innerclass refid="classwx_text_entry" prot="public">wxTextEntry</innerclass>
+    <innerclass refid="classwx_toggle_button" prot="public">wxToggleButton</innerclass>
+    <innerclass refid="classwx_bitmap_toggle_button" prot="public">wxBitmapToggleButton</innerclass>
+    <innerclass refid="classwx_tree_ctrl" prot="public">wxTreeCtrl</innerclass>
+    <innerclass refid="classwx_v_list_box" prot="public">wxVListBox</innerclass>
+    <innerclass refid="classwx_web_view" prot="public">wxWebView</innerclass>
+    <briefdescription>
+<para>Typically, these are small windows which provide interaction with the user. </para>    </briefdescription>
+    <detaileddescription>
+<para>Controls that are not static can have <ref refid="classwx_validator" kindref="compound">wxValidator</ref> associated with them. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

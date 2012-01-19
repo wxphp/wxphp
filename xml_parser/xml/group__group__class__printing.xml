@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__printing" kind="group">
+    <compoundname>group_class_printing</compoundname>
+    <title>Printing Framework</title>
+    <innerclass refid="classwx_page_setup_dialog_data" prot="public">wxPageSetupDialogData</innerclass>
+    <innerclass refid="classwx_print_data" prot="public">wxPrintData</innerclass>
+    <innerclass refid="classwx_print_dialog_data" prot="public">wxPrintDialogData</innerclass>
+    <innerclass refid="classwx_printer_d_c" prot="public">wxPrinterDC</innerclass>
+    <innerclass refid="classwx_html_easy_printing" prot="public">wxHtmlEasyPrinting</innerclass>
+    <innerclass refid="classwx_html_printout" prot="public">wxHtmlPrintout</innerclass>
+    <innerclass refid="classwx_preview_control_bar" prot="public">wxPreviewControlBar</innerclass>
+    <innerclass refid="classwx_preview_canvas" prot="public">wxPreviewCanvas</innerclass>
+    <innerclass refid="classwx_preview_frame" prot="public">wxPreviewFrame</innerclass>
+    <innerclass refid="classwx_print_preview" prot="public">wxPrintPreview</innerclass>
+    <innerclass refid="classwx_printer" prot="public">wxPrinter</innerclass>
+    <innerclass refid="classwx_printout" prot="public">wxPrintout</innerclass>
+    <innerclass refid="classwx_print_dialog" prot="public">wxPrintDialog</innerclass>
+    <innerclass refid="classwx_page_setup_dialog" prot="public">wxPageSetupDialog</innerclass>
+    <briefdescription>
+<para>A printing and previewing framework is implemented to make it relatively straightforward to provide document printing facilities. </para>    </briefdescription>
+    <detaileddescription>
+<para>Related Overviews: <ref refid="overview__printing" kindref="compound">Printing Framework Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

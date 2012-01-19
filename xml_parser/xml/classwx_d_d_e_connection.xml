@@ -1,0 +1,693 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_d_d_e_connection" kind="class" prot="public">
+    <compoundname>wxDDEConnection</compoundname>
+    <basecompoundref refid="classwx_connection_base" prot="public" virt="non-virtual">wxConnectionBase</basecompoundref>
+    <includes local="no">wx/dde.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1ae9ca728cf687cf9f1a3d68864e234e64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Advise</definition>
+        <argsstring>(const wxString &amp;item, const void *data, size_t size, wxIPCFormat format=wxIPC_PRIVATE)</argsstring>
+        <name>Advise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" kindref="member">wxIPCFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxIPC_PRIVATE</defval>
+        </param>
+        <briefdescription>
+<para>Called by the server application to advise the client of a change in the data associated with the given item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Causes the client connection&apos;s <ref refid="classwx_d_d_e_connection_1a13bf3348f8ad73e63a7778feb707f137" kindref="member">OnAdvise()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1abacdd09626b95fc1140a65aaec35777b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Advise</definition>
+        <argsstring>(const wxString &amp;item, const char *data)</argsstring>
+        <name>Advise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the server application to advise the client of a change in the data associated with the given item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Causes the client connection&apos;s <ref refid="classwx_d_d_e_connection_1a13bf3348f8ad73e63a7778feb707f137" kindref="member">OnAdvise()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a07d9c2ae6ed349ca6048b7087462d28e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Advise</definition>
+        <argsstring>(const wxString &amp;item, const wchar_t *data)</argsstring>
+        <name>Advise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the server application to advise the client of a change in the data associated with the given item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Causes the client connection&apos;s <ref refid="classwx_d_d_e_connection_1a13bf3348f8ad73e63a7778feb707f137" kindref="member">OnAdvise()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1ab236c72c7bfd9bc4c61bcd602d2ca3d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Advise</definition>
+        <argsstring>(const wxString &amp;item, const wxString data)</argsstring>
+        <name>Advise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the server application to advise the client of a change in the data associated with the given item. </para>        </briefdescription>
+        <detaileddescription>
+<para>Causes the client connection&apos;s <ref refid="classwx_d_d_e_connection_1a13bf3348f8ad73e63a7778feb707f137" kindref="member">OnAdvise()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a8849ceaa780f92e716700c0ecb338f80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Execute</definition>
+        <argsstring>(const void *data, size_t size, wxIPCFormat format=wxIPC_PRIVATE)</argsstring>
+        <name>Execute</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" kindref="member">wxIPCFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxIPC_PRIVATE</defval>
+        </param>
+        <briefdescription>
+<para>Called by the client application to execute a command on the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can also be used to transfer arbitrary data to the server (similar to <ref refid="classwx_d_d_e_connection_1a04ff3f7845b01dee7fa7e96e22b6868f" kindref="member">Poke()</ref> in that respect). Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a03bce372e9d07d195ed9fc13ec264b97" kindref="member">OnExecute()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1ace490e5a3525ea32506118174a3ba7e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Execute</definition>
+        <argsstring>(const char *data)</argsstring>
+        <name>Execute</name>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the client application to execute a command on the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can also be used to transfer arbitrary data to the server (similar to <ref refid="classwx_d_d_e_connection_1a04ff3f7845b01dee7fa7e96e22b6868f" kindref="member">Poke()</ref> in that respect). Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a03bce372e9d07d195ed9fc13ec264b97" kindref="member">OnExecute()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a43d59d31e34a2c334ecb0bfca94b285c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Execute</definition>
+        <argsstring>(const wchar_t *data)</argsstring>
+        <name>Execute</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the client application to execute a command on the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can also be used to transfer arbitrary data to the server (similar to <ref refid="classwx_d_d_e_connection_1a04ff3f7845b01dee7fa7e96e22b6868f" kindref="member">Poke()</ref> in that respect). Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a03bce372e9d07d195ed9fc13ec264b97" kindref="member">OnExecute()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1af37dc0ced3eca507875f2c1c725a6b00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Execute</definition>
+        <argsstring>(const wxString data)</argsstring>
+        <name>Execute</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the client application to execute a command on the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can also be used to transfer arbitrary data to the server (similar to <ref refid="classwx_d_d_e_connection_1a04ff3f7845b01dee7fa7e96e22b6868f" kindref="member">Poke()</ref> in that respect). Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a03bce372e9d07d195ed9fc13ec264b97" kindref="member">OnExecute()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="105"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a04ff3f7845b01dee7fa7e96e22b6868f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Poke</definition>
+        <argsstring>(const wxString &amp;item, const void *data, size_t size, wxIPCFormat format=wxIPC_PRIVATE)</argsstring>
+        <name>Poke</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" kindref="member">wxIPCFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxIPC_PRIVATE</defval>
+        </param>
+        <briefdescription>
+<para>Called by the client application to poke data into the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can be used to transfer arbitrary data to the server. Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a63548e45b0359b0704f0a36622f32400" kindref="member">OnPoke()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a4ce553933810a97e126f95c7e0d11c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Poke</definition>
+        <argsstring>(const wxString &amp;item, const char *data)</argsstring>
+        <name>Poke</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the client application to poke data into the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can be used to transfer arbitrary data to the server. Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a63548e45b0359b0704f0a36622f32400" kindref="member">OnPoke()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a583220ac2934aae89d7f23b2dba5188e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Poke</definition>
+        <argsstring>(const wxString &amp;item, const wchar_t *data)</argsstring>
+        <name>Poke</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the client application to poke data into the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can be used to transfer arbitrary data to the server. Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a63548e45b0359b0704f0a36622f32400" kindref="member">OnPoke()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a82d70d7558762d97fe0b923f7117be21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Poke</definition>
+        <argsstring>(const wxString &amp;item, const wxString data)</argsstring>
+        <name>Poke</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Called by the client application to poke data into the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Can be used to transfer arbitrary data to the server. Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a63548e45b0359b0704f0a36622f32400" kindref="member">OnPoke()</ref> member to be called.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="173"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_d_d_e_connection_1ac159300994646817535aa0d6790a7d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDDEConnection::wxDDEConnection</definition>
+        <argsstring>()</argsstring>
+        <name>wxDDEConnection</name>
+        <briefdescription>
+<para>Constructs a connection object. </para>        </briefdescription>
+        <detaileddescription>
+<para>If no user-defined connection object is to be derived from <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, then the constructor should not be called directly, since the default connection object will be provided on requesting (or accepting) a connection. However, if the user defines his or her own derived connection object, the <ref refid="classwx_d_d_e_server_1ae2ba3d248d3fa46a25b9fded5fbe095d" kindref="member">wxDDEServer::OnAcceptConnection()</ref> and/or <ref refid="classwx_d_d_e_client_1a286079977cd233d29497507fd04d71c0" kindref="member">wxDDEClient::OnMakeConnection()</ref> members should be replaced by functions which construct the new connection object.</para><para>A default buffer will be associated with this connection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a5bb4db4b16c6022de5ef2c7890327187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDDEConnection::wxDDEConnection</definition>
+        <argsstring>(void *buffer, size_t size)</argsstring>
+        <name>wxDDEConnection</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a connection object. </para>        </briefdescription>
+        <detaileddescription>
+<para>If no user-defined connection object is to be derived from <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, then the constructor should not be called directly, since the default connection object will be provided on requesting (or accepting) a connection. However, if the user defines his or her own derived connection object, the <ref refid="classwx_d_d_e_server_1ae2ba3d248d3fa46a25b9fded5fbe095d" kindref="member">wxDDEServer::OnAcceptConnection()</ref> and/or <ref refid="classwx_d_d_e_client_1a286079977cd233d29497507fd04d71c0" kindref="member">wxDDEClient::OnMakeConnection()</ref> members should be replaced by functions which construct the new connection object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer for this connection object to use in transactions. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer given. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a5128f4db4e875ad3861f2e7375ee8ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::Disconnect</definition>
+        <argsstring>()</argsstring>
+        <name>Disconnect</name>
+        <briefdescription>
+<para>Called by the client or server application to disconnect from the other program; it causes the <ref refid="classwx_d_d_e_connection_1a4198c8efc0880341079a27f820d57b1d" kindref="member">OnDisconnect()</ref> message to be sent to the corresponding connection object in the other program. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default behaviour of <ref refid="classwx_d_d_e_connection_1a4198c8efc0880341079a27f820d57b1d" kindref="member">OnDisconnect()</ref> is to delete the connection, but the calling application must explicitly delete its side of the connection having called <ref refid="classwx_d_d_e_connection_1a5128f4db4e875ad3861f2e7375ee8ee5" kindref="member">Disconnect()</ref>.</para><para><simplesect kind="return"><para>true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a13bf3348f8ad73e63a7778feb707f137" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDDEConnection::OnAdvise</definition>
+        <argsstring>(const wxString &amp;topic, const wxString &amp;item, const void *data, size_t size, wxIPCFormat format)</argsstring>
+        <name>OnAdvise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" kindref="member">wxIPCFormat</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Message sent to the client application when the server notifies it of a change in the data associated with the given item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a4198c8efc0880341079a27f820d57b1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDDEConnection::OnDisconnect</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisconnect</name>
+        <briefdescription>
+<para>Message sent to the client or server application when the other application notifies it to delete the connection. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default behaviour is to delete the connection object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a03bce372e9d07d195ed9fc13ec264b97" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDDEConnection::OnExecute</definition>
+        <argsstring>(const wxString &amp;topic, const void *data, size_t size, wxIPCFormat format)</argsstring>
+        <name>OnExecute</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" kindref="member">wxIPCFormat</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Message sent to the server application when the client notifies it to execute the given data. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that there is no item associated with this message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a63548e45b0359b0704f0a36622f32400" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDDEConnection::OnPoke</definition>
+        <argsstring>(const wxString &amp;topic, const wxString &amp;item, const void *data, size_t size, wxIPCFormat format)</argsstring>
+        <name>OnPoke</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" kindref="member">wxIPCFormat</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Message sent to the server application when the client notifies it to accept the given data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a85de14db18cc0305b05ee1356f403cdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const void *</type>
+        <definition>virtual const void* wxDDEConnection::OnRequest</definition>
+        <argsstring>(const wxString &amp;topic, const wxString &amp;item, size_t *size, wxIPCFormat format)</argsstring>
+        <name>OnRequest</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" kindref="member">wxIPCFormat</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Message sent to the server application when the client calls <ref refid="classwx_d_d_e_connection_1a2341e697812cc3a9a6adbfeeacc7042d" kindref="member">Request()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The server should respond by returning a character string from <ref refid="classwx_d_d_e_connection_1a85de14db18cc0305b05ee1356f403cdf" kindref="member">OnRequest()</ref>, or NULL to indicate no data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a1d64612731ecfad916f9f24601724511" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDDEConnection::OnStartAdvise</definition>
+        <argsstring>(const wxString &amp;topic, const wxString &amp;item)</argsstring>
+        <name>OnStartAdvise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Message sent to the server application by the client, when the client wishes to start an &quot;advise loop&quot; for the given topic and item. </para>        </briefdescription>
+        <detaileddescription>
+<para>The server can refuse to participate by returning false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a8130e48a08d3691a24c87ac04e260c14" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDDEConnection::OnStopAdvise</definition>
+        <argsstring>(const wxString &amp;topic, const wxString &amp;item)</argsstring>
+        <name>OnStopAdvise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Message sent to the server application by the client, when the client wishes to stop an &quot;advise loop&quot; for the given topic and item. </para>        </briefdescription>
+        <detaileddescription>
+<para>The server can refuse to stop the advise loop by returning false, although this doesn&apos;t have much meaning in practice. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1a2341e697812cc3a9a6adbfeeacc7042d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void* wxDDEConnection::Request</definition>
+        <argsstring>(const wxString &amp;item, size_t *size, wxIPCFormat format=wxIPC_TEXT)</argsstring>
+        <name>Request</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" kindref="member">wxIPCFormat</ref></type>
+          <declname>format</declname>
+          <defval>wxIPC_TEXT</defval>
+        </param>
+        <briefdescription>
+<para>Called by the client application to request data from the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a85de14db18cc0305b05ee1356f403cdf" kindref="member">OnRequest()</ref> member to be called.</para><para><simplesect kind="return"><para>A character string (actually a pointer to the connection&apos;s buffer) if successful, NULL otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1ab9dceec1d2398c7ec0f33cc1ff305bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::StartAdvise</definition>
+        <argsstring>(const wxString &amp;item)</argsstring>
+        <name>StartAdvise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Called by the client application to ask if an advise loop can be started with the server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a1d64612731ecfad916f9f24601724511" kindref="member">OnStartAdvise()</ref> member to be called.</para><para><simplesect kind="return"><para>true if the server okays it, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_d_d_e_connection_1aebe2577f6d687d9166fa858a9c3a2e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxDDEConnection::StopAdvise</definition>
+        <argsstring>(const wxString &amp;item)</argsstring>
+        <name>StopAdvise</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Called by the client application to ask if an advise loop can be stopped. </para>        </briefdescription>
+        <detaileddescription>
+<para>Causes the server connection&apos;s <ref refid="classwx_d_d_e_connection_1a8130e48a08d3691a24c87ac04e260c14" kindref="member">OnStopAdvise()</ref> member to be called.</para><para><simplesect kind="return"><para>true if the server okays it, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="202"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> object represents the connection between a client and a server. </para>    </briefdescription>
+    <detaileddescription>
+<para>It can be created by making a connection using a <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref> object, or by the acceptance of a connection by a <ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref> object. The bulk of a DDE (Dynamic Data Exchange) conversation is controlled by calling members in a <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref> object or by overriding its members.</para><para>An application should normally derive a new connection class from <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, in order to override the communication event handlers to do something interesting.</para><para>This DDE-based implementation is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref> Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page__port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref>, <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref>, <ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref>, <ref refid="overview__ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5534">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="5533">
+        <label>wxConnectionBase</label>
+        <link refid="classwx_connection_base"/>
+        <childnode refid="5534" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5532">
+        <label>wxDDEConnection</label>
+        <link refid="classwx_d_d_e_connection"/>
+        <childnode refid="5533" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5537">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5538" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5536">
+        <label>wxConnectionBase</label>
+        <link refid="classwx_connection_base"/>
+        <childnode refid="5537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5535">
+        <label>wxDDEConnection</label>
+        <link refid="classwx_d_d_e_connection"/>
+        <childnode refid="5536" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5538">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" bodystart="32" bodyend="203"/>
+    <listofallmembers>
+      <member refid="classwx_d_d_e_connection_1ae9ca728cf687cf9f1a3d68864e234e64" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Advise</name></member>
+      <member refid="classwx_d_d_e_connection_1abacdd09626b95fc1140a65aaec35777b" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Advise</name></member>
+      <member refid="classwx_d_d_e_connection_1a07d9c2ae6ed349ca6048b7087462d28e" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Advise</name></member>
+      <member refid="classwx_d_d_e_connection_1ab236c72c7bfd9bc4c61bcd602d2ca3d1" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Advise</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDDEConnection</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDDEConnection</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxDDEConnection</scope><name>CreateRefData</name></member>
+      <member refid="classwx_d_d_e_connection_1a5128f4db4e875ad3861f2e7375ee8ee5" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Disconnect</name></member>
+      <member refid="classwx_d_d_e_connection_1a8849ceaa780f92e716700c0ecb338f80" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Execute</name></member>
+      <member refid="classwx_d_d_e_connection_1ace490e5a3525ea32506118174a3ba7e9" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Execute</name></member>
+      <member refid="classwx_d_d_e_connection_1a43d59d31e34a2c334ecb0bfca94b285c" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Execute</name></member>
+      <member refid="classwx_d_d_e_connection_1af37dc0ced3eca507875f2c1c725a6b00" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Execute</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxDDEConnection</scope><name>m_refData</name></member>
+      <member refid="classwx_d_d_e_connection_1a13bf3348f8ad73e63a7778feb707f137" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>OnAdvise</name></member>
+      <member refid="classwx_d_d_e_connection_1a4198c8efc0880341079a27f820d57b1d" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>OnDisconnect</name></member>
+      <member refid="classwx_d_d_e_connection_1a03bce372e9d07d195ed9fc13ec264b97" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>OnExecute</name></member>
+      <member refid="classwx_d_d_e_connection_1a63548e45b0359b0704f0a36622f32400" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>OnPoke</name></member>
+      <member refid="classwx_d_d_e_connection_1a85de14db18cc0305b05ee1356f403cdf" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>OnRequest</name></member>
+      <member refid="classwx_d_d_e_connection_1a1d64612731ecfad916f9f24601724511" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>OnStartAdvise</name></member>
+      <member refid="classwx_d_d_e_connection_1a8130e48a08d3691a24c87ac04e260c14" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>OnStopAdvise</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>operator new</name></member>
+      <member refid="classwx_d_d_e_connection_1a04ff3f7845b01dee7fa7e96e22b6868f" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Poke</name></member>
+      <member refid="classwx_d_d_e_connection_1a4ce553933810a97e126f95c7e0d11c6e" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Poke</name></member>
+      <member refid="classwx_d_d_e_connection_1a583220ac2934aae89d7f23b2dba5188e" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Poke</name></member>
+      <member refid="classwx_d_d_e_connection_1a82d70d7558762d97fe0b923f7117be21" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Poke</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Ref</name></member>
+      <member refid="classwx_d_d_e_connection_1a2341e697812cc3a9a6adbfeeacc7042d" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Request</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>SetRefData</name></member>
+      <member refid="classwx_d_d_e_connection_1ab9dceec1d2398c7ec0f33cc1ff305bf6" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>StartAdvise</name></member>
+      <member refid="classwx_d_d_e_connection_1aebe2577f6d687d9166fa858a9c3a2e88" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>StopAdvise</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>UnShare</name></member>
+      <member refid="classwx_d_d_e_connection_1ac159300994646817535aa0d6790a7d6d" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>wxDDEConnection</name></member>
+      <member refid="classwx_d_d_e_connection_1a5bb4db4b16c6022de5ef2c7890327187" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>wxDDEConnection</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxDDEConnection</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

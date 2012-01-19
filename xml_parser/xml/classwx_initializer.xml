@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_initializer" kind="class" prot="public">
+    <compoundname>wxInitializer</compoundname>
+    <includes local="no">wx/init.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_initializer_1a7b53997659917e3703a6fe2950fe56a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxInitializer::wxInitializer</definition>
+        <argsstring>(int argc=0, wxChar **argv=NULL)</argsstring>
+        <name>wxInitializer</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> **</type>
+          <declname>argv</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the library. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_initializer_1a4014aaf600313c364709893f3833c36e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxInitializer::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Has the initialization been successful? (explicit test). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_initializer_1add5bb7958976708e2c8089f79a9ef02c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxInitializer::~wxInitializer</definition>
+        <argsstring>()</argsstring>
+        <name>~wxInitializer</name>
+        <briefdescription>
+<para>This dtor only does clean up if we initialized the library properly. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Create an object of this class on the stack to initialize/cleanup the library automatically. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" bodystart="21" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classwx_initializer_1a4014aaf600313c364709893f3833c36e" prot="public" virt="non-virtual"><scope>wxInitializer</scope><name>IsOk</name></member>
+      <member refid="classwx_initializer_1a7b53997659917e3703a6fe2950fe56a2" prot="public" virt="non-virtual"><scope>wxInitializer</scope><name>wxInitializer</name></member>
+      <member refid="classwx_initializer_1add5bb7958976708e2c8089f79a9ef02c" prot="public" virt="non-virtual"><scope>wxInitializer</scope><name>~wxInitializer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

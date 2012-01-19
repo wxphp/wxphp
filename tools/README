@@ -1,0 +1,15 @@
+reference_generator.php:
+
+Generate a simple reference of available wxWidgets class methods,
+functions, constants, categorized constants (named enums) and object
+constants and class constants.
+
+To use it run php reference_generator.php, this will produce a new
+directory named doc on the root directory of wxPHP source.
+
+To start browsing the reference open the file index.html
+
+changes_generator.php:
+
+To facilitate the generation of CHANGES file by using the svn
+commits log by month.

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__richtext" kind="group">
+    <compoundname>group_class_richtext</compoundname>
+    <title>Rich Text</title>
+    <innerclass refid="classwx_text_attr_dimension" prot="public">wxTextAttrDimension</innerclass>
+    <innerclass refid="classwx_text_attr_dimensions" prot="public">wxTextAttrDimensions</innerclass>
+    <innerclass refid="classwx_text_attr_size" prot="public">wxTextAttrSize</innerclass>
+    <innerclass refid="classwx_text_attr_dimension_converter" prot="public">wxTextAttrDimensionConverter</innerclass>
+    <innerclass refid="classwx_text_attr_border" prot="public">wxTextAttrBorder</innerclass>
+    <innerclass refid="classwx_text_attr_borders" prot="public">wxTextAttrBorders</innerclass>
+    <innerclass refid="classwx_text_box_attr" prot="public">wxTextBoxAttr</innerclass>
+    <innerclass refid="classwx_rich_text_attr" prot="public">wxRichTextAttr</innerclass>
+    <innerclass refid="classwx_rich_text_properties" prot="public">wxRichTextProperties</innerclass>
+    <innerclass refid="classwx_rich_text_font_table" prot="public">wxRichTextFontTable</innerclass>
+    <innerclass refid="classwx_rich_text_range" prot="public">wxRichTextRange</innerclass>
+    <innerclass refid="classwx_rich_text_selection" prot="public">wxRichTextSelection</innerclass>
+    <innerclass refid="classwx_rich_text_object" prot="public">wxRichTextObject</innerclass>
+    <innerclass refid="classwx_rich_text_composite_object" prot="public">wxRichTextCompositeObject</innerclass>
+    <innerclass refid="classwx_rich_text_paragraph_box" prot="public">wxRichTextParagraphBox</innerclass>
+    <innerclass refid="classwx_rich_text_box" prot="public">wxRichTextBox</innerclass>
+    <innerclass refid="classwx_rich_text_line" prot="public">wxRichTextLine</innerclass>
+    <innerclass refid="classwx_rich_text_paragraph" prot="public">wxRichTextParagraph</innerclass>
+    <innerclass refid="classwx_rich_text_plain_text" prot="public">wxRichTextPlainText</innerclass>
+    <innerclass refid="classwx_rich_text_image_block" prot="public">wxRichTextImageBlock</innerclass>
+    <innerclass refid="classwx_rich_text_image" prot="public">wxRichTextImage</innerclass>
+    <innerclass refid="classwx_rich_text_buffer" prot="public">wxRichTextBuffer</innerclass>
+    <innerclass refid="classwx_rich_text_object_address" prot="public">wxRichTextObjectAddress</innerclass>
+    <innerclass refid="classwx_rich_text_command" prot="public">wxRichTextCommand</innerclass>
+    <innerclass refid="classwx_rich_text_action" prot="public">wxRichTextAction</innerclass>
+    <innerclass refid="classwx_rich_text_file_handler" prot="public">wxRichTextFileHandler</innerclass>
+    <innerclass refid="classwx_rich_text_plain_text_handler" prot="public">wxRichTextPlainTextHandler</innerclass>
+    <innerclass refid="classwx_rich_text_renderer" prot="public">wxRichTextRenderer</innerclass>
+    <innerclass refid="classwx_rich_text_std_renderer" prot="public">wxRichTextStdRenderer</innerclass>
+    <innerclass refid="classwx_rich_text_ctrl" prot="public">wxRichTextCtrl</innerclass>
+    <innerclass refid="classwx_rich_text_event" prot="public">wxRichTextEvent</innerclass>
+    <innerclass refid="classwx_rich_text_formatting_dialog_factory" prot="public">wxRichTextFormattingDialogFactory</innerclass>
+    <innerclass refid="classwx_rich_text_formatting_dialog" prot="public">wxRichTextFormattingDialog</innerclass>
+    <innerclass refid="classwx_rich_text_h_t_m_l_handler" prot="public">wxRichTextHTMLHandler</innerclass>
+    <innerclass refid="classwx_rich_text_header_footer_data" prot="public">wxRichTextHeaderFooterData</innerclass>
+    <innerclass refid="classwx_rich_text_printout" prot="public">wxRichTextPrintout</innerclass>
+    <innerclass refid="classwx_rich_text_printing" prot="public">wxRichTextPrinting</innerclass>
+    <innerclass refid="classwx_rich_text_style_organiser_dialog" prot="public">wxRichTextStyleOrganiserDialog</innerclass>
+    <innerclass refid="classwx_rich_text_style_list_ctrl" prot="public">wxRichTextStyleListCtrl</innerclass>
+    <innerclass refid="classwx_rich_text_style_definition" prot="public">wxRichTextStyleDefinition</innerclass>
+    <innerclass refid="classwx_rich_text_paragraph_style_definition" prot="public">wxRichTextParagraphStyleDefinition</innerclass>
+    <innerclass refid="classwx_rich_text_style_list_box" prot="public">wxRichTextStyleListBox</innerclass>
+    <innerclass refid="classwx_rich_text_style_combo_ctrl" prot="public">wxRichTextStyleComboCtrl</innerclass>
+    <innerclass refid="classwx_rich_text_character_style_definition" prot="public">wxRichTextCharacterStyleDefinition</innerclass>
+    <innerclass refid="classwx_rich_text_list_style_definition" prot="public">wxRichTextListStyleDefinition</innerclass>
+    <innerclass refid="classwx_rich_text_style_sheet" prot="public">wxRichTextStyleSheet</innerclass>
+    <innerclass refid="classwx_rich_text_x_m_l_handler" prot="public">wxRichTextXMLHandler</innerclass>
+    <innerclass refid="classwx_text_attr" prot="public">wxTextAttr</innerclass>
+    <briefdescription>
+<para>wxWidgets provides a set of generic classes to edit and print simple rich text with character and paragraph formatting. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="cshelp_8h" kind="file">
+    <compoundname>cshelp.h</compoundname>
+    <innerclass refid="classwx_help_provider" prot="public">wxHelpProvider</innerclass>
+    <innerclass refid="classwx_help_controller_help_provider" prot="public">wxHelpControllerHelpProvider</innerclass>
+    <innerclass refid="classwx_context_help" prot="public">wxContextHelp</innerclass>
+    <innerclass refid="classwx_context_help_button" prot="public">wxContextHelpButton</innerclass>
+    <innerclass refid="classwx_simple_help_provider" prot="public">wxSimpleHelpProvider</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h"/>
+  </compounddef>
+</doxygen>

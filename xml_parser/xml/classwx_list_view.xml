@@ -1,0 +1,704 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_list_view" kind="class" prot="public">
+    <compoundname>wxListView</compoundname>
+    <basecompoundref refid="classwx_list_ctrl" prot="public" virt="non-virtual">wxListCtrl</basecompoundref>
+    <includes local="no">wx/listctrl.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_list_view_1ae37c58d623cf113d7cef451eb38bdf78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxListView::ClearColumnImage</definition>
+        <argsstring>(int col)</argsstring>
+        <name>ClearColumnImage</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Resets the column image -- after calling this function, no image will be shown. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the column to clear image for</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_list_view_1ab4f169a074fbe2d6bf9c2880c84f3dee" kindref="member">SetColumnImage()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1302"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_list_view_1a5468e6e52d0cca76b1584dbb2a552adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxListView::Focus</definition>
+        <argsstring>(long index)</argsstring>
+        <name>Focus</name>
+        <param>
+          <type>long</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Sets focus to the item with the given <emphasis>index</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1307"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_list_view_1a5104e465fc4c31782179c2a7f8a18a4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxListView::GetFirstSelected</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFirstSelected</name>
+        <briefdescription>
+<para>Returns the first selected item in a (presumably) multiple selection control. </para>        </briefdescription>
+        <detaileddescription>
+<para>Together with <ref refid="classwx_list_view_1a4aafbf2bbd35dea3b3be284285c9a727" kindref="member">GetNextSelected()</ref> it can be used to iterate over all selected items in the control.</para><para><simplesect kind="return"><para>The first selected item, if any, -1 otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1316"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_list_view_1aa7337c34a27bf53c1700e74b7463a9f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxListView::GetFocusedItem</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFocusedItem</name>
+        <briefdescription>
+<para>Returns the currently focused item or -1 if none. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_list_view_1a98e03eaba3a9461acb6ea1b2f4bb1b7c" kindref="member">IsSelected()</ref>, <ref refid="classwx_list_view_1a5468e6e52d0cca76b1584dbb2a552adc" kindref="member">Focus()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1323"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_list_view_1a4aafbf2bbd35dea3b3be284285c9a727" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxListView::GetNextSelected</definition>
+        <argsstring>(long item) const </argsstring>
+        <name>GetNextSelected</name>
+        <param>
+          <type>long</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Used together with <ref refid="classwx_list_view_1a5104e465fc4c31782179c2a7f8a18a4d" kindref="member">GetFirstSelected()</ref> to iterate over all selected items in the control. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns the next selected item or -1 if there are no more of them. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1331"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_list_view_1a98e03eaba3a9461acb6ea1b2f4bb1b7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxListView::IsSelected</definition>
+        <argsstring>(long index) const </argsstring>
+        <name>IsSelected</name>
+        <param>
+          <type>long</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the item with the given <emphasis>index</emphasis> is selected, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_list_view_1a5104e465fc4c31782179c2a7f8a18a4d" kindref="member">GetFirstSelected()</ref>, <ref refid="classwx_list_view_1a4aafbf2bbd35dea3b3be284285c9a727" kindref="member">GetNextSelected()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1339"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_list_view_1a02966936da5643b2d80a857676482b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxListView::Select</definition>
+        <argsstring>(long n, bool on=true)</argsstring>
+        <name>Select</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Selects or unselects the given item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the item to select or unselect </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>on</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true (default), selects the item, otherwise unselects it</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_list_ctrl_1a172d78854092aec2b784b8519bf5be08" kindref="member">wxListCtrl::SetItemState</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1351"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_list_view_1ab4f169a074fbe2d6bf9c2880c84f3dee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxListView::SetColumnImage</definition>
+        <argsstring>(int col, int image)</argsstring>
+        <name>SetColumnImage</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>Sets the column image for the specified column. </para>        </briefdescription>
+        <detaileddescription>
+<para>To use the column images, the control must have a valid image list with at least one image.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the column to set image for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index of the column image in the controls image list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1363"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class currently simply presents a simpler to use interface for the <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> -- it can be thought of as a <emphasis>façade</emphasis> for that complicated class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Using it is preferable to using <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> directly whenever possible because in the future some ports might implement <ref refid="classwx_list_view" kindref="compound">wxListView</ref> but not the full set of <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> features.</para><para>Other than different interface, this class is identical to <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>. In particular, it uses the same events, same window styles and so on.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/listview.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/listview.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/listview.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_list_view_1ab4f169a074fbe2d6bf9c2880c84f3dee" kindref="member">wxListView::SetColumnImage</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7473">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="7472">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7473" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7474" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7474">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7470">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="7471" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7468">
+        <label>wxListView</label>
+        <link refid="classwx_list_view"/>
+        <childnode refid="7469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7471">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="7472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7469">
+        <label>wxListCtrl</label>
+        <link refid="classwx_list_ctrl"/>
+        <childnode refid="7470" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7480">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7481" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7479">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="7480" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7482" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7482">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="7477">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="7478" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7475">
+        <label>wxListView</label>
+        <link refid="classwx_list_view"/>
+        <childnode refid="7476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7478">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="7479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7476">
+        <label>wxListCtrl</label>
+        <link refid="classwx_list_ctrl"/>
+        <childnode refid="7477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7481">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1292" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="1291" bodyend="1364"/>
+    <listofallmembers>
+      <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxListView</scope><name>AcceptsFocus</name></member>
+      <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxListView</scope><name>AcceptsFocusFromKeyboard</name></member>
+      <member refid="classwx_window_1ac7ed96693517630f4d2e99265b76d1a9" prot="public" virt="virtual"><scope>wxListView</scope><name>AcceptsFocusRecursively</name></member>
+      <member refid="classwx_window_1abf60159278059a5bb397eb8647227bb3" prot="public" virt="virtual"><scope>wxListView</scope><name>AddChild</name></member>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>AddFilter</name></member>
+      <member refid="classwx_window_1a774b5b5548a6258727b5e2099e63ae9a" prot="protected" virt="virtual"><scope>wxListView</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_window_1aae29552806a328c6a55ef8f07647f5ba" prot="public" virt="virtual"><scope>wxListView</scope><name>AlwaysShowScrollbars</name></member>
+      <member refid="classwx_list_ctrl_1a18017016afaf8f9b564df7eb692e5e5f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Arrange</name></member>
+      <member refid="classwx_list_ctrl_1abea2212faca2067fc5a8b8ce261906f2" prot="public" virt="non-virtual"><scope>wxListView</scope><name>AssignImageList</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Bind</name></member>
+      <member refid="classwx_window_1a100905524d330cfd9620fd726e378066" prot="public" virt="non-virtual"><scope>wxListView</scope><name>CacheBestSize</name></member>
+      <member refid="classwx_window_1a179f9a770f8c835f279923d2cbe5d766" prot="public" virt="non-virtual"><scope>wxListView</scope><name>CanScroll</name></member>
+      <member refid="classwx_window_1a64f7f6fb75bf4b7281e1d33542d523c7" prot="public" virt="virtual"><scope>wxListView</scope><name>CanSetTransparent</name></member>
+      <member refid="classwx_window_1a5c72c6260a73ef77bb0b1f7ec85fcfef" prot="public" virt="non-virtual"><scope>wxListView</scope><name>CaptureMouse</name></member>
+      <member refid="classwx_window_1a06c0ecb262995b40083bfb446a6cff99" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Center</name></member>
+      <member refid="classwx_window_1a2dc4e0a85d33fc55cc9650eaea1da0a4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>CenterOnParent</name></member>
+      <member refid="classwx_window_1a4a1819eeee3f2143cdde4f329ffde787" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Centre</name></member>
+      <member refid="classwx_window_1ab8e9b91b0e2db344fd71259616dfd433" prot="public" virt="non-virtual"><scope>wxListView</scope><name>CentreOnParent</name></member>
+      <member refid="classwx_list_ctrl_1a834e6ee38695323f882ad2ee5cc7a979" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ClearAll</name></member>
+      <member refid="classwx_window_1a61e833684ee5c89775e91e88be1a9a52" prot="public" virt="virtual"><scope>wxListView</scope><name>ClearBackground</name></member>
+      <member refid="classwx_list_view_1ae37c58d623cf113d7cef451eb38bdf78" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ClearColumnImage</name></member>
+      <member refid="classwx_window_1a29eac611e5f6b47db82bb4dd5450ba3d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ClientToScreen</name></member>
+      <member refid="classwx_window_1a7de852b144210b93b690189e99dbe1df" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ClientToScreen</name></member>
+      <member refid="classwx_window_1a693fffbbb7ad5f36a5f442703396dafa" prot="public" virt="virtual"><scope>wxListView</scope><name>ClientToWindowSize</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxListView</scope><name>CloneRefData</name></member>
+      <member refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Close</name></member>
+      <member refid="classwx_control_1a8cd7ac81debaf506d6d146528c3d9a82" prot="public" virt="virtual"><scope>wxListView</scope><name>Command</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Connect</name></member>
+      <member refid="classwx_window_1acb6787b6c3c314f9e015658a89ad0265" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ConvertDialogToPixels</name></member>
+      <member refid="classwx_window_1a3daf76b93f648c68224e6ccd8095066b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ConvertDialogToPixels</name></member>
+      <member refid="classwx_window_1a449aac6a24f1d14b1a82b58003447dfe" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ConvertPixelsToDialog</name></member>
+      <member refid="classwx_window_1afd955ce9d25ec26a115bfb794b1c7d8b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ConvertPixelsToDialog</name></member>
+      <member refid="classwx_list_ctrl_1a5b13e700b9957677468d63558d73d5df" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Create</name></member>
+      <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxWindow::"><scope>wxListView</scope><name>Create</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxListView</scope><name>CreateRefData</name></member>
+      <member refid="classwx_list_ctrl_1aa9fe817f4a8fd36fca7e8cd5e9818291" prot="public" virt="non-virtual"><scope>wxListView</scope><name>DeleteAllItems</name></member>
+      <member refid="classwx_list_ctrl_1a6d30022b48a69999ceafa8c6420bba5e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>DeleteColumn</name></member>
+      <member refid="classwx_list_ctrl_1aa4d9e2fd4e35137f970b65f0d60b6058" prot="public" virt="non-virtual"><scope>wxListView</scope><name>DeleteItem</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxListView</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxListView</scope><name>Destroy</name></member>
+      <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxListView</scope><name>DestroyChildren</name></member>
+      <member refid="classwx_window_1a26d7329a9a753fa0445501f01f66c41e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Disable</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Disconnect</name></member>
+      <member refid="classwx_window_1a2d10b472a4962d1c852c83d55252c44b" prot="protected" virt="virtual"><scope>wxListView</scope><name>DoCentre</name></member>
+      <member refid="classwx_window_1a01e7604ab0f0b2b1a8e322a630a4669e" prot="protected" virt="virtual"><scope>wxListView</scope><name>DoGetBestSize</name></member>
+      <member refid="classwx_window_1ae8a84a80645e99f4d24a22e5c386f626" prot="public" virt="virtual"><scope>wxListView</scope><name>DoUpdateWindowUI</name></member>
+      <member refid="classwx_window_1a7e7015bc61bd79b6821d2dccaecf9eda" prot="public" virt="virtual"><scope>wxListView</scope><name>DragAcceptFiles</name></member>
+      <member refid="classwx_list_ctrl_1a95b0ed5ccc8bcf8640534db5977bdd7c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>EditLabel</name></member>
+      <member refid="classwx_control_1a0bb834cae2a8986aceddb89f84ef4ed1" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Ellipsize</name></member>
+      <member refid="classwx_window_1a4e933aa891f42fbb3b87438057c573af" prot="public" virt="virtual"><scope>wxListView</scope><name>Enable</name></member>
+      <member refid="classwx_list_ctrl_1a037b5c94e79661110663d542f093d3a4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>EndEditLabel</name></member>
+      <member refid="classwx_list_ctrl_1a59373c7c7b3b02522c40f97dd6493534" prot="public" virt="non-virtual"><scope>wxListView</scope><name>EnsureVisible</name></member>
+      <member refid="classwx_control_1abdbd9c0684856546671e759dd95b23d4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>EscapeMnemonics</name></member>
+      <member refid="classwx_window_1a777258379a3eef1b0530f12db6b77cab" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindFocus</name></member>
+      <member refid="classwx_list_ctrl_1ad8d64b6d1b4af0df31e61ae9521388d4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindItem</name></member>
+      <member refid="classwx_list_ctrl_1ab027c0950e2d425b86461324765e8d43" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindItem</name></member>
+      <member refid="classwx_list_ctrl_1ae46c0aa927816ae5b10afeea7a040e47" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindItem</name></member>
+      <member refid="classwx_window_1a3468ef382c612b5f8e91c7c18d00a69f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindWindow</name></member>
+      <member refid="classwx_window_1ab2dad735acc2121b964ee1d51836cffa" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindWindow</name></member>
+      <member refid="classwx_window_1a101201b12ccd5fba49fa06ed19b5c6fb" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindWindowById</name></member>
+      <member refid="classwx_window_1ab8eb148fffae109e0fac86e88d569670" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindWindowByLabel</name></member>
+      <member refid="classwx_window_1adbe4eea02f615313c12a2c00557a44c3" prot="public" virt="non-virtual"><scope>wxListView</scope><name>FindWindowByName</name></member>
+      <member refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" prot="public" virt="virtual"><scope>wxListView</scope><name>Fit</name></member>
+      <member refid="classwx_window_1a55aca401aab29d59f7cc53f89ba2e38d" prot="public" virt="virtual"><scope>wxListView</scope><name>FitInside</name></member>
+      <member refid="classwx_list_view_1a5468e6e52d0cca76b1584dbb2a552adc" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Focus</name></member>
+      <member refid="classwx_window_1a15c678314cfc1d807196bc298b713ed3" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Freeze</name></member>
+      <member refid="classwx_window_1aefc02d7275010ebb8d5b66569e7287c4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetAcceleratorTable</name></member>
+      <member refid="classwx_window_1ae0469b554e9c501b356b3ed4b6d8a3af" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetAccessible</name></member>
+      <member refid="classwx_window_1ad7a9d7fca325112fae493a00d253b3be" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetAutoLayout</name></member>
+      <member refid="classwx_window_1a3006d98a4145b7064c1f08e39487d257" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetBackgroundColour</name></member>
+      <member refid="classwx_window_1a59047d52b88f2422bbcf01bbecdc4b7b" prot="public" virt="virtual"><scope>wxListView</scope><name>GetBackgroundStyle</name></member>
+      <member refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetBestSize</name></member>
+      <member refid="classwx_window_1a0180343fa395e0c8e6de4022684ca5d6" prot="public" virt="virtual"><scope>wxListView</scope><name>GetBestVirtualSize</name></member>
+      <member refid="classwx_window_1ad95a95e683e57ac6365745b737571582" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetBorder</name></member>
+      <member refid="classwx_window_1aa53c8d1b5af17a8fbbe8845210e2032b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetBorder</name></member>
+      <member refid="classwx_window_1a483d3f73925bd38c3964dad058672f0a" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetCapture</name></member>
+      <member refid="classwx_window_1a83ed7c9d9252b912eebc753d6132245b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetCaret</name></member>
+      <member refid="classwx_window_1a304b4446de399b240a3fa4aa83a2e468" prot="public" virt="virtual"><scope>wxListView</scope><name>GetCharHeight</name></member>
+      <member refid="classwx_window_1aef2745df13435e913027107cab2a6286" prot="public" virt="virtual"><scope>wxListView</scope><name>GetCharWidth</name></member>
+      <member refid="classwx_window_1ad500085ad0511879b5e018706c91a494" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetChildren</name></member>
+      <member refid="classwx_window_1a666cfe7cc8eda6fcecfd39c67c50f609" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetChildren</name></member>
+      <member refid="classwx_window_1a170d85e4aa0cbacbfcdd0728120e1417" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetClassDefaultAttributes</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxListView</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_window_1a8fd1c0fd88d63dfbf6fefb688b7fd19e" prot="public" virt="virtual"><scope>wxListView</scope><name>GetClientAreaOrigin</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetClientObject</name></member>
+      <member refid="classwx_window_1a3928765a8dd3c5c3d6a689179c8005e0" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetClientRect</name></member>
+      <member refid="classwx_window_1ae56fc53268b815b58570f66bfc33838f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetClientSize</name></member>
+      <member refid="classwx_window_1afb9fd4a3b3310b2e11049a5113f749fa" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetClientSize</name></member>
+      <member refid="classwx_list_ctrl_1a274b10b0abb9c75d19ee9806ead2caa8" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetColumn</name></member>
+      <member refid="classwx_list_ctrl_1ab42694bad95025988d65949bbe334d6b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetColumnCount</name></member>
+      <member refid="classwx_list_ctrl_1abaf0c8d0d5647619e7098fe73cfb2b18" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetColumnIndexFromOrder</name></member>
+      <member refid="classwx_list_ctrl_1ac71dfc3321e8dad476a837e9c381d8f0" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetColumnOrder</name></member>
+      <member refid="classwx_list_ctrl_1a475c9e2234a60fb5751ddf7880c988f6" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetColumnsOrder</name></member>
+      <member refid="classwx_list_ctrl_1a68358cfe94a7ed9ad3a7fa820dd24d7b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetColumnWidth</name></member>
+      <member refid="classwx_window_1ac5664c7cd26848b5eebfaded2ecde7be" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetConstraints</name></member>
+      <member refid="classwx_window_1ade8de9a91bb5bf49c3a52e5262a5ffea" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetContainingSizer</name></member>
+      <member refid="classwx_list_ctrl_1a95b76c8a013a596cfff5ad3b9a72d735" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetCountPerPage</name></member>
+      <member refid="classwx_window_1ad7ce1e9af33e6be0b608813eff2d349c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetCursor</name></member>
+      <member refid="classwx_window_1a24e7b8f717e91f4590d148140e853dc5" prot="public" virt="virtual"><scope>wxListView</scope><name>GetDefaultAttributes</name></member>
+      <member refid="classwx_window_1a4511e71affd926a47c5c320563ca2df5" prot="public" virt="virtual"><scope>wxListView</scope><name>GetDropTarget</name></member>
+      <member refid="classwx_list_ctrl_1ad42426f06fd14dc293e281816eeb71f7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetEditControl</name></member>
+      <member refid="classwx_window_1a1a54fcda8d52986482e030bd54739e9f" prot="public" virt="virtual"><scope>wxListView</scope><name>GetEffectiveMinSize</name></member>
+      <member refid="classwx_window_1a72c2454cf309f30109da3cbfe237c760" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_window_1a8da0e59017af368c062f11c9abe2c667" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetExtraStyle</name></member>
+      <member refid="classwx_list_view_1a5104e465fc4c31782179c2a7f8a18a4d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetFirstSelected</name></member>
+      <member refid="classwx_list_view_1aa7337c34a27bf53c1700e74b7463a9f4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetFocusedItem</name></member>
+      <member refid="classwx_window_1a0dcc6f6f7bda203a868ff10c413289fa" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetFont</name></member>
+      <member refid="classwx_window_1acb8e9bd1c88f330bc9748255a5592964" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetForegroundColour</name></member>
+      <member refid="classwx_window_1a55d3155d2d3139a84e8fb19a8900aa76" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetGrandParent</name></member>
+      <member refid="classwx_window_1a185e6cd7065367b552748cb722651b27" prot="public" virt="virtual"><scope>wxListView</scope><name>GetHandle</name></member>
+      <member refid="classwx_window_1a77f8a4bbee228ed333af2e6a06509cff" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetHelpText</name></member>
+      <member refid="classwx_window_1afa448f4e01bedc4a5e3d4324929e5d5d" prot="public" virt="virtual"><scope>wxListView</scope><name>GetHelpTextAtPoint</name></member>
+      <member refid="classwx_window_1a4633b6ad527c921598f55af5274156f0" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetId</name></member>
+      <member refid="classwx_list_ctrl_1aaf7fa8cac520e418487c645f8c81405a" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetImageList</name></member>
+      <member refid="classwx_list_ctrl_1a5a1cf111420f076d5fccd0be24f2efd3" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItem</name></member>
+      <member refid="classwx_list_ctrl_1ac922b4a5705703c786f347cf1063e2d4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemBackgroundColour</name></member>
+      <member refid="classwx_list_ctrl_1ac68cf16b035f4dca7d64931de82cdffa" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemCount</name></member>
+      <member refid="classwx_list_ctrl_1a137f05aa3d7b893b1393168df17511df" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemData</name></member>
+      <member refid="classwx_list_ctrl_1a93e53127014979d2551a02faea556ece" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemFont</name></member>
+      <member refid="classwx_list_ctrl_1a3fd6cdba165ace784819fccb311f510b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemPosition</name></member>
+      <member refid="classwx_list_ctrl_1a7e0657c17aededca22a58409712bc205" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemRect</name></member>
+      <member refid="classwx_list_ctrl_1a090c477e2d52ff647d2ddb32fbae7f55" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemSpacing</name></member>
+      <member refid="classwx_list_ctrl_1ae3328b6aee8be7da8e73c31659e60704" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemState</name></member>
+      <member refid="classwx_list_ctrl_1ab0a596e1ad4714b6d5ee7b3180c59680" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemText</name></member>
+      <member refid="classwx_list_ctrl_1a083bf286b4508e637e239661c381db3d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetItemTextColour</name></member>
+      <member refid="classwx_control_1a0c15321992cfb77595db57cd4e4aec37" prot="public" virt="virtual"><scope>wxListView</scope><name>GetLabel</name></member>
+      <member refid="classwx_control_1ad95895ecdd123dff35866db1d2430a76" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetLabelText</name></member>
+      <member refid="classwx_control_1ae892fefe6b88168c158e11e975633665" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetLabelText</name></member>
+      <member refid="classwx_window_1a0a624f5fad4a603d58ffe94b058d4dda" prot="public" virt="virtual"><scope>wxListView</scope><name>GetLayoutDirection</name></member>
+      <member refid="classwx_window_1aef9b71458720452374137cd20be24b97" prot="public" virt="virtual"><scope>wxListView</scope><name>GetMaxClientSize</name></member>
+      <member refid="classwx_window_1a5cc2082eb5ddb27f97be191bd093709e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetMaxHeight</name></member>
+      <member refid="classwx_window_1a0a1672e81caf81a95eb5b48383d22065" prot="public" virt="virtual"><scope>wxListView</scope><name>GetMaxSize</name></member>
+      <member refid="classwx_window_1a2e953a64c41131b87bdd7c513ced3687" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetMaxWidth</name></member>
+      <member refid="classwx_window_1a8e88d1d38c2bf98a72d86b42cf3e35c0" prot="public" virt="virtual"><scope>wxListView</scope><name>GetMinClientSize</name></member>
+      <member refid="classwx_window_1ae4dd9a046ff774ea3ef114caeb452681" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetMinHeight</name></member>
+      <member refid="classwx_window_1a853c9a8443f996a368569a8fae551f5a" prot="public" virt="virtual"><scope>wxListView</scope><name>GetMinSize</name></member>
+      <member refid="classwx_window_1a9f79aa07a1b82a9a738f6c1d9c17496f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetMinWidth</name></member>
+      <member refid="classwx_window_1aab1b302c4bdabd134ce8d401dbaaf990" prot="public" virt="virtual"><scope>wxListView</scope><name>GetName</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_list_ctrl_1ad8372c4619ad5ea55ad16889caa32e78" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetNextItem</name></member>
+      <member refid="classwx_list_view_1a4aafbf2bbd35dea3b3be284285c9a727" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetNextSelected</name></member>
+      <member refid="classwx_window_1a41608736affe2ff115d80d8f69dc832e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetNextSibling</name></member>
+      <member refid="classwx_window_1a63871f881941b99b4b94328d1c4cd163" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetParent</name></member>
+      <member refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetPopupMenuSelectionFromUser</name></member>
+      <member refid="classwx_window_1a00f5cb3cac003205317a565a33d4bb27" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetPopupMenuSelectionFromUser</name></member>
+      <member refid="classwx_window_1a9f36392b289a1e567e95bee073d6533e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetPosition</name></member>
+      <member refid="classwx_window_1ad9a883e20827fa717e92fc2f8bd99d6b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetPosition</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_window_1aa4cb912eb28be31279fa1b95747c6d02" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetPrevSibling</name></member>
+      <member refid="classwx_window_1ac8809904bb379c32c33c79fbe38745eb" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetRect</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetRefData</name></member>
+      <member refid="classwx_window_1abd39ef50fbc1ef3771f695e7322e8c1d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetScreenPosition</name></member>
+      <member refid="classwx_window_1a32074a2c677ebadb1ed6e92ab172656c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetScreenPosition</name></member>
+      <member refid="classwx_window_1a5c0e45fac07ac4cf29eefa108337a110" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetScreenRect</name></member>
+      <member refid="classwx_window_1a3e23d10c17943fd873d0acb472db0caa" prot="public" virt="virtual"><scope>wxListView</scope><name>GetScrollPos</name></member>
+      <member refid="classwx_window_1a067d2a38efbf2f535f717f1027003281" prot="public" virt="virtual"><scope>wxListView</scope><name>GetScrollRange</name></member>
+      <member refid="classwx_window_1a10d24c60525a1c612cd775fc44dd1953" prot="public" virt="virtual"><scope>wxListView</scope><name>GetScrollThumb</name></member>
+      <member refid="classwx_list_ctrl_1a35a1f602550778c8bf6f3b475f025f73" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetSelectedItemCount</name></member>
+      <member refid="classwx_window_1a124c12cff1e7b6e96a5e1fd3e48dca34" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetSize</name></member>
+      <member refid="classwx_window_1a66e144ed8ab9a20e080ae6c69fc7015c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetSize</name></member>
+      <member refid="classwx_window_1ad8284cce1a2afe57724b52a89d7fac2f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetSizer</name></member>
+      <member refid="classwx_list_ctrl_1aad3ef363dc21c7ad869a1ecdc2ece00a" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetSubItemRect</name></member>
+      <member refid="classwx_list_ctrl_1ac17700e61cb7b784cbe1da548dac4a2a" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetTextColour</name></member>
+      <member refid="classwx_window_1ac9cd7b4472d5419e518f69311914466f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetTextExtent</name></member>
+      <member refid="classwx_window_1a79e5f88a2408871663d4ab0405cd35f6" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetTextExtent</name></member>
+      <member refid="classwx_window_1a0b31a21532407cf809d73aa09f34235c" prot="public" virt="virtual"><scope>wxListView</scope><name>GetThemeEnabled</name></member>
+      <member refid="classwx_window_1aae94155ccf8a6e4e72ad08527c89ba89" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetToolTip</name></member>
+      <member refid="classwx_window_1ad1a9c53c8e7e5010874f15b8ff4a6568" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetToolTipText</name></member>
+      <member refid="classwx_list_ctrl_1ae148ac03ad8043dfc842f6d9f9d8ffd7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetTopItem</name></member>
+      <member refid="classwx_window_1a7e32d9a9ffd058c931db20416bc55baa" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetUpdateClientRect</name></member>
+      <member refid="classwx_window_1aa982adbcebfa7bc73fbae7465132115b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetUpdateRegion</name></member>
+      <member refid="classwx_window_1a6a332586346cb9ece4a8fe058a7b88c4" prot="public" virt="virtual"><scope>wxListView</scope><name>GetValidator</name></member>
+      <member refid="classwx_list_ctrl_1a6a28cfaa0c27745883cd16b2aedf75d8" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetViewRect</name></member>
+      <member refid="classwx_window_1a614d32c464296b7d6caabcafc18deb97" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetVirtualSize</name></member>
+      <member refid="classwx_window_1a2628c6f1f4aecb790f0c86622ebf4d56" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetVirtualSize</name></member>
+      <member refid="classwx_window_1afd861e553190e22a76d3d40ee5e8d628" prot="public" virt="virtual"><scope>wxListView</scope><name>GetWindowBorderSize</name></member>
+      <member refid="classwx_window_1a994147d8294bd7d5a32c825d5692af28" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetWindowStyle</name></member>
+      <member refid="classwx_window_1a0a0e81677bf2f0de5982a634e11d9a69" prot="public" virt="virtual"><scope>wxListView</scope><name>GetWindowStyleFlag</name></member>
+      <member refid="classwx_window_1aafcccd0d5d31651484df02453c53361c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>GetWindowVariant</name></member>
+      <member refid="classwx_window_1a89d1b079de97aac170e999692095872c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>HandleAsNavigationKey</name></member>
+      <member refid="classwx_window_1a665731bbfa46a72c215b04df60216ef1" prot="public" virt="non-virtual"><scope>wxListView</scope><name>HandleWindowEvent</name></member>
+      <member refid="classwx_window_1a9b44f61543b77317f9820e06856c5514" prot="public" virt="virtual"><scope>wxListView</scope><name>HasCapture</name></member>
+      <member refid="classwx_window_1ae30b415c1ef526563161efea5b78d640" prot="public" virt="non-virtual"><scope>wxListView</scope><name>HasExtraStyle</name></member>
+      <member refid="classwx_window_1a62ba2fb9be6422bf06bb7db5871d551f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>HasFlag</name></member>
+      <member refid="classwx_window_1a4e0abff99d64d2a595ee0ab4b415bbd6" prot="public" virt="virtual"><scope>wxListView</scope><name>HasFocus</name></member>
+      <member refid="classwx_window_1abe1522483478b1f777ad8ef34fa7c44a" prot="public" virt="virtual"><scope>wxListView</scope><name>HasMultiplePages</name></member>
+      <member refid="classwx_window_1a950847ecf2d488d83c14a74a3906f668" prot="public" virt="non-virtual"><scope>wxListView</scope><name>HasScrollbar</name></member>
+      <member refid="classwx_window_1ab9cbcb6d6f4a272c2f0342e69a13b59a" prot="public" virt="virtual"><scope>wxListView</scope><name>HasTransparentBackground</name></member>
+      <member refid="classwx_window_1a7ed103df04014cb3c59c6a3fb4d95328" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Hide</name></member>
+      <member refid="classwx_window_1a5326fbb26557a224507a1c06e5640e89" prot="public" virt="virtual"><scope>wxListView</scope><name>HideWithEffect</name></member>
+      <member refid="classwx_list_ctrl_1ac346d7aa18722fb54580d4c4ed5cf113" prot="public" virt="non-virtual"><scope>wxListView</scope><name>HitTest</name></member>
+      <member refid="classwx_window_1a6a026b2a16a9f050deddd44e5586762c" prot="public" virt="non-virtual" ambiguityscope="wxControl::"><scope>wxListView</scope><name>HitTest</name></member>
+      <member refid="classwx_window_1a44f4d85f42fac6090a42cafd40f24ff5" prot="public" virt="non-virtual" ambiguityscope="wxControl::"><scope>wxListView</scope><name>HitTest</name></member>
+      <member refid="classwx_window_1a9fd5b6520c1b30eb8e82bb5d56bc24c0" prot="public" virt="virtual"><scope>wxListView</scope><name>InformFirstDirection</name></member>
+      <member refid="classwx_window_1a6b1bf9e099704e7a493b8c4666b1f7f7" prot="public" virt="virtual"><scope>wxListView</scope><name>InheritAttributes</name></member>
+      <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxListView</scope><name>InitDialog</name></member>
+      <member refid="classwx_list_ctrl_1a3e1c9d18e1f9cc8f97e2526a07b07d85" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InsertColumn</name></member>
+      <member refid="classwx_list_ctrl_1aba0752dfdffffb3c15cd1321be3b49ec" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InsertColumn</name></member>
+      <member refid="classwx_list_ctrl_1aa65a5ca4e7bd7c0e60a0522a9092a693" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InsertItem</name></member>
+      <member refid="classwx_list_ctrl_1a66128e3a4806a7b545e83b6de0f49ed5" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InsertItem</name></member>
+      <member refid="classwx_list_ctrl_1a5a01ced78c631b056d781cf6f2ae6626" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InsertItem</name></member>
+      <member refid="classwx_list_ctrl_1ad06b98bdb32f5d3b15703db8e8f5f5c3" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InsertItem</name></member>
+      <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InvalidateBestSize</name></member>
+      <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxListView</scope><name>IsDoubleBuffered</name></member>
+      <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsEnabled</name></member>
+      <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a31af79f647cbec4950ce31620db51753" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a4a23e724619ec070f7d5c45ba21529d5" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a4da9a2d13534535aaf7b45200ee8728e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsExposed</name></member>
+      <member refid="classwx_window_1a866c62cc23d8de88e952aad5db4d1a61" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsFrozen</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsKindOf</name></member>
+      <member refid="classwx_window_1ae9b31dec54256b68574a4bba8cca94ab" prot="public" virt="virtual"><scope>wxListView</scope><name>IsRetained</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsSameAs</name></member>
+      <member refid="classwx_window_1aeeef7eaf8c8f1ec1a54e7a68d63923d0" prot="public" virt="virtual"><scope>wxListView</scope><name>IsScrollbarAlwaysShown</name></member>
+      <member refid="classwx_list_view_1a98e03eaba3a9461acb6ea1b2f4bb1b7c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsSelected</name></member>
+      <member refid="classwx_window_1a95af3a39aa422580dae156ed281a7e88" prot="public" virt="virtual"><scope>wxListView</scope><name>IsShown</name></member>
+      <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxListView</scope><name>IsShownOnScreen</name></member>
+      <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsThisEnabled</name></member>
+      <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxListView</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxListView</scope><name>Layout</name></member>
+      <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxListView</scope><name>LineDown</name></member>
+      <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxListView</scope><name>LineUp</name></member>
+      <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxListView</scope><name>Lower</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>m_refData</name></member>
+      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxListView</scope><name>MakeModal</name></member>
+      <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Move</name></member>
+      <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Move</name></member>
+      <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxListView</scope><name>MoveAfterInTabOrder</name></member>
+      <member refid="classwx_window_1af2b92f61cd9f9e2e0efe4cce307e25b1" prot="public" virt="non-virtual"><scope>wxListView</scope><name>MoveBeforeInTabOrder</name></member>
+      <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Navigate</name></member>
+      <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxListView</scope><name>NavigateIn</name></member>
+      <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxListView</scope><name>NewControlId</name></member>
+      <member refid="classwx_list_ctrl_1ad8508ae3a3478d778a912581f87cf349" prot="protected" virt="virtual"><scope>wxListView</scope><name>OnGetItemAttr</name></member>
+      <member refid="classwx_list_ctrl_1ae0137632163b0714368f67585d46a5e6" prot="protected" virt="virtual"><scope>wxListView</scope><name>OnGetItemColumnAttr</name></member>
+      <member refid="classwx_list_ctrl_1ac2650c225e81512af8dcff22ab50a9dc" prot="protected" virt="virtual"><scope>wxListView</scope><name>OnGetItemColumnImage</name></member>
+      <member refid="classwx_list_ctrl_1a05bd10ebe1ea2a45955dda48045d23a3" prot="protected" virt="virtual"><scope>wxListView</scope><name>OnGetItemImage</name></member>
+      <member refid="classwx_list_ctrl_1a92370967f97215e6068326645ee76624" prot="protected" virt="virtual"><scope>wxListView</scope><name>OnGetItemText</name></member>
+      <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxListView</scope><name>OnInternalIdle</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxListView</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>operator new</name></member>
+      <member refid="classwx_window_1a61e78cb48ece3e9e989e37b475ac1e35" prot="public" virt="non-virtual"><scope>wxListView</scope><name>PageDown</name></member>
+      <member refid="classwx_window_1aa7c2bbc480d8863d9f139c01d7abc1b1" prot="public" virt="non-virtual"><scope>wxListView</scope><name>PageUp</name></member>
+      <member refid="classwx_window_1ac45c1f4cf96c70779764c14cf528790b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>PopEventHandler</name></member>
+      <member refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" prot="public" virt="non-virtual"><scope>wxListView</scope><name>PopupMenu</name></member>
+      <member refid="classwx_window_1a834bcdfd41f5e5370ebd9ea401c92900" prot="public" virt="non-virtual"><scope>wxListView</scope><name>PopupMenu</name></member>
+      <member refid="classwx_window_1ab1943463e6661f97e072b43337c6cc09" prot="public" virt="non-virtual"><scope>wxListView</scope><name>PostSizeEvent</name></member>
+      <member refid="classwx_window_1aa080d8dcda58bcc6ea2abd8bea592e3e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>PostSizeEventToParent</name></member>
+      <member refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96" prot="protected" virt="virtual"><scope>wxListView</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_window_1a7cbee38944dab02d753a4dba74230443" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_window_1a9350b3a9c2e380707eaea92cedad12a5" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>ProcessThreadEvent</name></member>
+      <member refid="classwx_window_1a0a76891d726ad5f9a729e27e4eab2b57" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ProcessWindowEvent</name></member>
+      <member refid="classwx_window_1a0a11aa4a50491d051f947e2618e52178" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ProcessWindowEventLocally</name></member>
+      <member refid="classwx_window_1a398c11ab9af7956067a964f560d1978c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>PushEventHandler</name></member>
+      <member refid="classwx_window_1a69e450f21b0d7013269ec1a4771f043b" prot="protected" virt="virtual"><scope>wxListView</scope><name>QueueEvent</name></member>
+      <member refid="classwx_window_1a54808c933f22a891c5db646f6209fa4d" prot="public" virt="virtual"><scope>wxListView</scope><name>Raise</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Ref</name></member>
+      <member refid="classwx_window_1a29dc7251746154c821b17841b9877830" prot="public" virt="virtual"><scope>wxListView</scope><name>Refresh</name></member>
+      <member refid="classwx_list_ctrl_1ab8a88dac752a883ad4e02bb42a7d5015" prot="public" virt="non-virtual"><scope>wxListView</scope><name>RefreshItem</name></member>
+      <member refid="classwx_list_ctrl_1aaa6b0180a9dcdf46be8ec4baffc61efc" prot="public" virt="non-virtual"><scope>wxListView</scope><name>RefreshItems</name></member>
+      <member refid="classwx_window_1ab0ae6b9898cd261c39ebeb2891aa3d67" prot="public" virt="non-virtual"><scope>wxListView</scope><name>RefreshRect</name></member>
+      <member refid="classwx_window_1a53ca57872dac5851ea6ba55a494b899b" prot="public" virt="virtual"><scope>wxListView</scope><name>RegisterHotKey</name></member>
+      <member refid="classwx_window_1adcc538819c11ecb3bd3e4e5d13c5ba7a" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ReleaseMouse</name></member>
+      <member refid="classwx_window_1acee332ed4368d26e8bc3db5767c1240a" prot="public" virt="virtual"><scope>wxListView</scope><name>RemoveChild</name></member>
+      <member refid="classwx_window_1aacbfe424fa527966b954229a1db96ab5" prot="public" virt="non-virtual"><scope>wxListView</scope><name>RemoveEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxListView</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_control_1ab7df4ca0dfde3a6409833cf470ee02e6" prot="public" virt="non-virtual"><scope>wxListView</scope><name>RemoveMnemonics</name></member>
+      <member refid="classwx_window_1a7977b749284e65aecfed2ce146799cb9" prot="public" virt="virtual"><scope>wxListView</scope><name>Reparent</name></member>
+      <member refid="classwx_window_1a0f9814efc50316b4c57b7ec2bf78b716" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_window_1a65531bbc52f9508b0e31a9c08c97bd31" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ScreenToClient</name></member>
+      <member refid="classwx_window_1a59d02b70a9107433836a977c4c0cd7a9" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ScreenToClient</name></member>
+      <member refid="classwx_window_1aa5c5b683bd11a0d9771bd2fcdf643c64" prot="public" virt="virtual"><scope>wxListView</scope><name>ScrollLines</name></member>
+      <member refid="classwx_list_ctrl_1a7e620aa7cc9953d5e98846b130034135" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ScrollList</name></member>
+      <member refid="classwx_window_1adc0ed5e1c4925223cb901ced14b8343d" prot="public" virt="virtual"><scope>wxListView</scope><name>ScrollPages</name></member>
+      <member refid="classwx_window_1ab7be4956ff22da37fff2b8aaa581045c" prot="public" virt="virtual"><scope>wxListView</scope><name>ScrollWindow</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxListView</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_list_view_1a02966936da5643b2d80a857676482b2b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Select</name></member>
+      <member refid="classwx_window_1a7e21eb6a0819281b29134a6432d064fe" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>SendDestroyEvent</name></member>
+      <member refid="classwx_window_1a237f739b21937d3e8f1bff5fa82ba4c2" prot="public" virt="virtual"><scope>wxListView</scope><name>SendSizeEvent</name></member>
+      <member refid="classwx_window_1af7987987978fd8a93df88b29b19a6388" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SendSizeEventToParent</name></member>
+      <member refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" prot="public" virt="virtual"><scope>wxListView</scope><name>SetAcceleratorTable</name></member>
+      <member refid="classwx_window_1a413220ead41f05a2ec2cfe10b3d573df" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetAccessible</name></member>
+      <member refid="classwx_window_1ad369fe1db5c20f9d9edff7b5eb1f7226" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetAutoLayout</name></member>
+      <member refid="classwx_list_ctrl_1a935412e9017c3fe511514cfc360a3117" prot="public" virt="virtual"><scope>wxListView</scope><name>SetBackgroundColour</name></member>
+      <member refid="classwx_window_1af14f8fd2ed2d30a9bbb5d4f9fd6594ec" prot="public" virt="virtual"><scope>wxListView</scope><name>SetBackgroundStyle</name></member>
+      <member refid="classwx_window_1a2b8b2e99231a0ec1a05f5066f1b7f3d8" prot="public" virt="virtual"><scope>wxListView</scope><name>SetCanFocus</name></member>
+      <member refid="classwx_window_1acfef5e1cada92c73e2937b84ff57ff57" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetCaret</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetClientObject</name></member>
+      <member refid="classwx_window_1aa59f715217fffa5bcf14cd97f92e7840" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetClientSize</name></member>
+      <member refid="classwx_window_1ab2aadc857ee7f55f47ab9a8669e3beb7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetClientSize</name></member>
+      <member refid="classwx_window_1a582d4d1f60a3f777627773b2da0bb2ef" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetClientSize</name></member>
+      <member refid="classwx_list_ctrl_1a61244b9721214359b0ad3992135920c4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumn</name></member>
+      <member refid="classwx_list_view_1ab4f169a074fbe2d6bf9c2880c84f3dee" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumnImage</name></member>
+      <member refid="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumnsOrder</name></member>
+      <member refid="classwx_list_ctrl_1ac5818d43ce3913f7f70a6a759485cd6c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumnWidth</name></member>
+      <member refid="classwx_window_1afa75d111bbd9a68f837101a5fbed60a7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetConstraints</name></member>
+      <member refid="classwx_window_1a0ccf78fe06722b500adfb7f36b8ce443" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetContainingSizer</name></member>
+      <member refid="classwx_window_1ad83f9c51c6f31e0e05f598b47a19ed98" prot="public" virt="virtual"><scope>wxListView</scope><name>SetCursor</name></member>
+      <member refid="classwx_window_1a5477a89c17fdcc3ec6c90274796eb1c3" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetDoubleBuffered</name></member>
+      <member refid="classwx_window_1ae34b4d45433ca8287df0e47d46411e58" prot="public" virt="virtual"><scope>wxListView</scope><name>SetDropTarget</name></member>
+      <member refid="classwx_window_1af6c84b7679183b377ba27a52a2f708b4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetEventHandler</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_window_1ae9655f7c35ce7ac89cac2f6c0054b103" prot="public" virt="virtual"><scope>wxListView</scope><name>SetExtraStyle</name></member>
+      <member refid="classwx_window_1a697f9f8d3ff389790f1c74b59bcb1d75" prot="public" virt="virtual"><scope>wxListView</scope><name>SetFocus</name></member>
+      <member refid="classwx_window_1a6fa03f82d7917dff482754d0d2e2b1c8" prot="public" virt="virtual"><scope>wxListView</scope><name>SetFocusFromKbd</name></member>
+      <member refid="classwx_window_1a9ab11e7da57a1d08918aa75fc33f6ad3" prot="public" virt="virtual"><scope>wxListView</scope><name>SetFont</name></member>
+      <member refid="classwx_window_1a69f1e1c7ddd370d72e68c70f13ac8de9" prot="public" virt="virtual"><scope>wxListView</scope><name>SetForegroundColour</name></member>
+      <member refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetHelpText</name></member>
+      <member refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetId</name></member>
+      <member refid="classwx_list_ctrl_1a9a6b0ebe6f4b0a8fbef31c4e17fe235f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetImageList</name></member>
+      <member refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" prot="protected" virt="virtual"><scope>wxListView</scope><name>SetInitialBestSize</name></member>
+      <member refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetInitialSize</name></member>
+      <member refid="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItem</name></member>
+      <member refid="classwx_list_ctrl_1aa1ea1a3071677e667af1fcc909cefa03" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItem</name></member>
+      <member refid="classwx_list_ctrl_1adf07b82511dc77d64097c0ffefdc9a30" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemBackgroundColour</name></member>
+      <member refid="classwx_list_ctrl_1a83d08f3aefb0a20b25fad05f19fad67d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemColumnImage</name></member>
+      <member refid="classwx_list_ctrl_1a5ded9342e4969eeeb60d1305f75995fd" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemCount</name></member>
+      <member refid="classwx_list_ctrl_1a54825c8c66e7fb59cee6076d6554f8ec" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemData</name></member>
+      <member refid="classwx_list_ctrl_1acfc640f1aba5634ab25186e71ffc278f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemFont</name></member>
+      <member refid="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemImage</name></member>
+      <member refid="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemImage</name></member>
+      <member refid="classwx_list_ctrl_1a13525147c745a26eeb54fe55dfdbad46" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemPosition</name></member>
+      <member refid="classwx_list_ctrl_1a748edc3f8e43939632f2838756599863" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemPtrData</name></member>
+      <member refid="classwx_list_ctrl_1a172d78854092aec2b784b8519bf5be08" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemState</name></member>
+      <member refid="classwx_list_ctrl_1af4d70a5a6a15011590fa0b94254ecbd9" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemText</name></member>
+      <member refid="classwx_list_ctrl_1a069801dda4c0df09ddb0c7cdefcdaf11" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemTextColour</name></member>
+      <member refid="classwx_control_1a2c2ae20554e7db5e765f163022ce09c0" prot="public" virt="virtual"><scope>wxListView</scope><name>SetLabel</name></member>
+      <member refid="classwx_control_1afeb308dc3b54d8d735b33cb250395503" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetLabelMarkup</name></member>
+      <member refid="classwx_control_1ae092899c3fe658831a9c796755a65eb7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetLabelText</name></member>
+      <member refid="classwx_window_1a7d494549f7fcfed44af95f8ee364c1f9" prot="public" virt="virtual"><scope>wxListView</scope><name>SetLayoutDirection</name></member>
+      <member refid="classwx_window_1a664e5b2ddd817d9c58788269fe1d8479" prot="public" virt="virtual"><scope>wxListView</scope><name>SetMaxClientSize</name></member>
+      <member refid="classwx_window_1a38b496214d728a3212afadee5ed51606" prot="public" virt="virtual"><scope>wxListView</scope><name>SetMaxSize</name></member>
+      <member refid="classwx_window_1a6e35ba44b97e374dfffa460d41d94b31" prot="public" virt="virtual"><scope>wxListView</scope><name>SetMinClientSize</name></member>
+      <member refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" prot="public" virt="virtual"><scope>wxListView</scope><name>SetMinSize</name></member>
+      <member refid="classwx_window_1af80875cda5e1af98dcd7c8e712e3c800" prot="public" virt="virtual"><scope>wxListView</scope><name>SetName</name></member>
+      <member refid="classwx_window_1aeab905f61df7004c1b76a3351dca9e96" prot="public" virt="virtual"><scope>wxListView</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_window_1a9a3f9d8477aab1d9176cd66ee56e75d9" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetOwnBackgroundColour</name></member>
+      <member refid="classwx_window_1a89a4f62f23c1e7c845b8d07cecae4c43" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetOwnFont</name></member>
+      <member refid="classwx_window_1a53f4a878e4e2d440bd00543f8014aaaa" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetOwnForegroundColour</name></member>
+      <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetPalette</name></member>
+      <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetPosition</name></member>
+      <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxListView</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetRefData</name></member>
+      <member refid="classwx_window_1aa842d59529f873683e55cd8392ec46e9" prot="public" virt="virtual"><scope>wxListView</scope><name>SetScrollbar</name></member>
+      <member refid="classwx_window_1afbf4dc9064cf70cfe6884554b97a27bf" prot="public" virt="virtual"><scope>wxListView</scope><name>SetScrollPos</name></member>
+      <member refid="classwx_list_ctrl_1a20daa8d70dc41ba23d00bcf6a652ab28" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetSingleStyle</name></member>
+      <member refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a8e383bc6d5ca008965922a36c676aea0" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a030a928cd854de3def97c5720f14695b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a2ea9b25296d591aea4470c8fd99ff7cb" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetSize</name></member>
+      <member refid="classwx_window_1a307329dc3b10f5584aeb2cbce9293ffd" prot="public" virt="virtual"><scope>wxListView</scope><name>SetSizeHints</name></member>
+      <member refid="classwx_window_1ae813c640e1e2bc6014423247050846cf" prot="public" virt="virtual"><scope>wxListView</scope><name>SetSizeHints</name></member>
+      <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetSizer</name></member>
+      <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetSizerAndFit</name></member>
+      <member refid="classwx_list_ctrl_1af3e129f2ac6412c8bd602f286b95300f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetTextColour</name></member>
+      <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxListView</scope><name>SetThemeEnabled</name></member>
+      <member refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetToolTip</name></member>
+      <member refid="classwx_window_1a494e0b7cfca9299caa40e847767e7357" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetToolTip</name></member>
+      <member refid="classwx_window_1ac8cf4398cec50ac36634760f45a0656f" prot="public" virt="virtual"><scope>wxListView</scope><name>SetTransparent</name></member>
+      <member refid="classwx_window_1a00066c70049a7be3ce6b648d206e6432" prot="public" virt="virtual"><scope>wxListView</scope><name>SetValidator</name></member>
+      <member refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetVirtualSize</name></member>
+      <member refid="classwx_window_1a8e95201edebe43b9623bd3bdc555af4d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetVirtualSize</name></member>
+      <member refid="classwx_window_1a306af30adec68689f74ed537b4f9d5fd" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetWindowStyle</name></member>
+      <member refid="classwx_list_ctrl_1ae719fa247088c1f5e3b6bd7de2cfcc39" prot="public" virt="virtual"><scope>wxListView</scope><name>SetWindowStyleFlag</name></member>
+      <member refid="classwx_window_1acd955418c336e73b3e32cadf1ca46e29" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetWindowVariant</name></member>
+      <member refid="classwx_window_1a0c43a27fa04f9c17cc28fde71fdba490" prot="public" virt="virtual"><scope>wxListView</scope><name>ShouldInheritColours</name></member>
+      <member refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" prot="public" virt="virtual"><scope>wxListView</scope><name>Show</name></member>
+      <member refid="classwx_window_1a596b1715edfc7609f352b2e000ecbaec" prot="public" virt="virtual"><scope>wxListView</scope><name>ShowWithEffect</name></member>
+      <member refid="classwx_list_ctrl_1a5a36fae3701f7df7021362b0330f9640" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SortItems</name></member>
+      <member refid="classwx_window_1a279a532124073261b28131b6afb59a1e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Thaw</name></member>
+      <member refid="classwx_window_1a8a4fa47129de552bfec37db8c69688a2" prot="public" virt="non-virtual"><scope>wxListView</scope><name>ToggleWindowStyle</name></member>
+      <member refid="classwx_window_1ab8e51f36e7d8790b361c8d8c6f37b1ad" prot="public" virt="virtual"><scope>wxListView</scope><name>TransferDataFromWindow</name></member>
+      <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxListView</scope><name>TransferDataToWindow</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxListView</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxListView</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxListView</scope><name>UnRef</name></member>
+      <member refid="classwx_window_1a695f60d65f8f6c12e3c3645ad9c0c35b" prot="public" virt="virtual"><scope>wxListView</scope><name>UnregisterHotKey</name></member>
+      <member refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>UnreserveControlId</name></member>
+      <member refid="classwx_window_1ae75712451673658b0a533480bf5eeaa4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>UnsetToolTip</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxListView</scope><name>UnShare</name></member>
+      <member refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" prot="public" virt="virtual"><scope>wxListView</scope><name>Update</name></member>
+      <member refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" prot="public" virt="virtual"><scope>wxListView</scope><name>UpdateWindowUI</name></member>
+      <member refid="classwx_window_1ac87f253253a0c5eb498871c83afa40fd" prot="public" virt="virtual"><scope>wxListView</scope><name>Validate</name></member>
+      <member refid="classwx_window_1ac500152d1eca3a2ee98a68e7ea7372b5" prot="public" virt="virtual"><scope>wxListView</scope><name>WarpPointer</name></member>
+      <member refid="classwx_window_1aa456f800c9dde3b2361cad0abf54bc27" prot="public" virt="virtual"><scope>wxListView</scope><name>WindowToClientSize</name></member>
+      <member refid="classwx_control_1adb8f3edf807efa9159de826bf92d6a44" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxControl</name></member>
+      <member refid="classwx_control_1a08428de2ba5cc988a86fe17071d49522" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxControl</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_list_ctrl_1a6941e35348b00a288e833871fd0138e8" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxListCtrl</name></member>
+      <member refid="classwx_list_ctrl_1aaf98aeeba06ad86fa471f9218ae91097" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxListCtrl</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxObject</name></member>
+      <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxWindow</name></member>
+      <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxListView</scope><name>wxWindow</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxListView</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_list_ctrl_1a8b9f3f6517e7e1ddfcd2f45c86741209" prot="public" virt="virtual"><scope>wxListView</scope><name>~wxListCtrl</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxListView</scope><name>~wxObject</name></member>
+      <member refid="classwx_window_1a0c2a46181a89c349327f0b276f5ef8d7" prot="public" virt="virtual"><scope>wxListView</scope><name>~wxWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_data_view_renderer" kind="class" prot="public">
+    <compoundname>wxDataViewRenderer</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <derivedcompoundref refid="classwx_data_view_bitmap_renderer" prot="public" virt="non-virtual">wxDataViewBitmapRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_data_view_choice_renderer" prot="public" virt="non-virtual">wxDataViewChoiceRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_data_view_custom_renderer" prot="public" virt="non-virtual">wxDataViewCustomRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_data_view_date_renderer" prot="public" virt="non-virtual">wxDataViewDateRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_data_view_icon_text_renderer" prot="public" virt="non-virtual">wxDataViewIconTextRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_data_view_progress_renderer" prot="public" virt="non-virtual">wxDataViewProgressRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_data_view_text_renderer" prot="public" virt="non-virtual">wxDataViewTextRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_data_view_toggle_renderer" prot="public" virt="non-virtual">wxDataViewToggleRenderer</derivedcompoundref>
+    <includes local="no">wx/dataview.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_data_view_renderer_1ada4b068514a9732e32e03aae8b4581e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDataViewRenderer::wxDataViewRenderer</definition>
+        <argsstring>(const wxString &amp;varianttype, wxDataViewCellMode mode=wxDATAVIEW_CELL_INERT, int align=wxDVR_DEFAULT_ALIGNMENT)</argsstring>
+        <name>wxDataViewRenderer</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>varianttype</declname>
+        </param>
+        <param>
+          <type><ref refid="dataview_8h_1a82ea89fa957cf47b29e59799429bda7e" kindref="member">wxDataViewCellMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxDATAVIEW_CELL_INERT</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>align</declname>
+          <defval>wxDVR_DEFAULT_ALIGNMENT</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1436"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1aeea4804c641149896b8e213bba672e64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataViewRenderer::EnableEllipsize</definition>
+        <argsstring>(wxEllipsizeMode mode=wxELLIPSIZE_MIDDLE)</argsstring>
+        <name>EnableEllipsize</name>
+        <param>
+          <type><ref refid="control_8h_1a0293befa07fe89f6efd8caec89c3b489" kindref="member">wxEllipsizeMode</ref></type>
+          <declname>mode</declname>
+          <defval>wxELLIPSIZE_MIDDLE</defval>
+        </param>
+        <briefdescription>
+<para>Enable or disable replacing parts of the item text with ellipsis to make it fit the column width. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method only makes sense for the renderers working with text, such as <ref refid="classwx_data_view_text_renderer" kindref="compound">wxDataViewTextRenderer</ref> or <ref refid="classwx_data_view_icon_text_renderer" kindref="compound">wxDataViewIconTextRenderer</ref>.</para><para>By default wxELLIPSIZE_MIDDLE is used.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ellipsization mode, use wxELLIPSIZE_NONE to disable.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1452"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1ad88c4e7dcf842d1ac56544ca85e72f9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataViewRenderer::DisableEllipsize</definition>
+        <argsstring>()</argsstring>
+        <name>DisableEllipsize</name>
+        <briefdescription>
+<para>Disable replacing parts of the item text with ellipsis. </para>        </briefdescription>
+        <detaileddescription>
+<para>If ellipsizing is disabled, the string will be truncated if it doesn&apos;t fit.</para><para>This is the same as <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_data_view_renderer_1aeea4804c641149896b8e213bba672e64" kindref="member" tooltip="Enable or disable replacing parts of the item text with ellipsis to make it fit the...">EnableEllipsize</ref>(<ref refid="control_8h_1a0293befa07fe89f6efd8caec89c3b489ae4c8bd13c9e9c6af29a618bc7a554a3a" kindref="member" tooltip="Don&amp;#39;t ellipsize the text at all.">wxELLIPSIZE_NONE</ref>)<sp/></highlight></codeline>
+</programlisting>.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1464"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1af77226c361846ad168ff8bc921317429" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int wxDataViewRenderer::GetAlignment</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAlignment</name>
+        <briefdescription>
+<para>Returns the alignment. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_data_view_renderer_1a2c67ceb437b6c2d2280ca651712dec1c" kindref="member">SetAlignment()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1469"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1a93b4f4418b3a762856e2a7f0789edde9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="control_8h_1a0293befa07fe89f6efd8caec89c3b489" kindref="member">wxEllipsizeMode</ref></type>
+        <definition>wxEllipsizeMode wxDataViewRenderer::GetEllipsizeMode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEllipsizeMode</name>
+        <briefdescription>
+<para>Returns the ellipsize mode used by the renderer. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the return value is wxELLIPSIZE_NONE, the text is simply truncated if it doesn&apos;t fit.</para><para><simplesect kind="see"><para><ref refid="classwx_data_view_renderer_1aeea4804c641149896b8e213bba672e64" kindref="member">EnableEllipsize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1479"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1a3a27d87356d02d8d4f2a1c3d3168c7d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="dataview_8h_1a82ea89fa957cf47b29e59799429bda7e" kindref="member">wxDataViewCellMode</ref></type>
+        <definition>virtual wxDataViewCellMode wxDataViewRenderer::GetMode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMode</name>
+        <briefdescription>
+<para>Returns the cell mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1484"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1a1f82555c918bf620fa09116bba111cfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref> *</type>
+        <definition>wxDataViewColumn* wxDataViewRenderer::GetOwner</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOwner</name>
+        <briefdescription>
+<para>Returns pointer to the owning <ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1489"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1ad7c52082d76074cae4ceaf94e55cf604" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDataViewRenderer::GetValue</definition>
+        <argsstring>(wxVariant &amp;value) const =0</argsstring>
+        <name>GetValue</name>
+        <param>
+          <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>This methods retrieves the value from the renderer in order to transfer the value back to the data model. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false on failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1497"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1ad2eaa791c222f9f02692a95b216b6f05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxDataViewRenderer::GetVariantType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVariantType</name>
+        <briefdescription>
+<para>Returns a string with the type of the <ref refid="classwx_variant" kindref="compound">wxVariant</ref> supported by this renderer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1502"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1a2c67ceb437b6c2d2280ca651712dec1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxDataViewRenderer::SetAlignment</definition>
+        <argsstring>(int align)</argsstring>
+        <name>SetAlignment</name>
+        <param>
+          <type>int</type>
+          <declname>align</declname>
+        </param>
+        <briefdescription>
+<para>Sets the alignment of the renderer&apos;s content. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default value of <computeroutput>wxDVR_DEFAULT_ALIGMENT</computeroutput> indicates that the content should have the same alignment as the column header.</para><para>The method is not implemented under OS X and the renderer always aligns its contents as the column header on that platform. The other platforms support both vertical and horizontal alignment. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1513"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1a388da7afbbf86971c1e945255344666c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxDataViewRenderer::SetOwner</definition>
+        <argsstring>(wxDataViewColumn *owner)</argsstring>
+        <name>SetOwner</name>
+        <param>
+          <type><ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref> *</type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+<para>Sets the owning <ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is usually called from within <ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1518"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1ac4494f39d056c1b0976481647b24117f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDataViewRenderer::SetValue</definition>
+        <argsstring>(const wxVariant &amp;value)=0</argsstring>
+        <name>SetValue</name>
+        <param>
+          <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of the renderer (and thus its cell) to <emphasis>value</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The internal code will then render this cell with this data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1524"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_data_view_renderer_1a64c9df3410623498956ce5ed7524a9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxDataViewRenderer::Validate</definition>
+        <argsstring>(wxVariant &amp;value)</argsstring>
+        <name>Validate</name>
+        <param>
+          <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Before data is committed to the data model, it is passed to this method where it can be checked for validity. </para>        </briefdescription>
+        <detaileddescription>
+<para>This can also be used for checking a valid range or limiting the user input in a certain aspect (e.g. max number of characters or only alphanumeric input, ASCII only etc.). Return false if the value is not valid.</para><para>Please note that due to implementation limitations, this validation is done after the editing control already is destroyed and the editing process finished. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1537"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used by <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> to render the individual cells. </para>    </briefdescription>
+    <detaileddescription>
+<para>One instance of a renderer class is owned by a <ref refid="classwx_data_view_column" kindref="compound">wxDataViewColumn</ref>. There is a number of ready-to-use renderers provided:<itemizedlist>
+<listitem><para><ref refid="classwx_data_view_text_renderer" kindref="compound">wxDataViewTextRenderer</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_icon_text_renderer" kindref="compound">wxDataViewIconTextRenderer</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_toggle_renderer" kindref="compound">wxDataViewToggleRenderer</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_progress_renderer" kindref="compound">wxDataViewProgressRenderer</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_bitmap_renderer" kindref="compound">wxDataViewBitmapRenderer</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_date_renderer" kindref="compound">wxDataViewDateRenderer</ref>,</para></listitem><listitem><para><ref refid="classwx_data_view_spin_renderer" kindref="compound">wxDataViewSpinRenderer</ref>.</para></listitem><listitem><para><ref refid="classwx_data_view_choice_renderer" kindref="compound">wxDataViewChoiceRenderer</ref>.</para></listitem></itemizedlist>
+</para><para>Additionally, the user can write own renderers by deriving from <ref refid="classwx_data_view_custom_renderer" kindref="compound">wxDataViewCustomRenderer</ref>.</para><para>The <ref refid="dataview_8h_1a82ea89fa957cf47b29e59799429bda7e" kindref="member">wxDataViewCellMode</ref> and <ref refid="dataview_8h_1ac165875cd54c065f2aebcc7cd795ff6e" kindref="member">wxDataViewCellRenderState</ref> flags accepted by the constructors respectively controls what actions the cell data allows and how the renderer should display its contents in a cell.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5401">
+        <label>wxDataViewRenderer</label>
+        <link refid="classwx_data_view_renderer"/>
+        <childnode refid="5402" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5410">
+        <label>wxDataViewTextRenderer</label>
+        <link refid="classwx_data_view_text_renderer"/>
+        <childnode refid="5401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5402">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="5411">
+        <label>wxDataViewToggleRenderer</label>
+        <link refid="classwx_data_view_toggle_renderer"/>
+        <childnode refid="5401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5409">
+        <label>wxDataViewProgressRenderer</label>
+        <link refid="classwx_data_view_progress_renderer"/>
+        <childnode refid="5401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5407">
+        <label>wxDataViewDateRenderer</label>
+        <link refid="classwx_data_view_date_renderer"/>
+        <childnode refid="5401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5403">
+        <label>wxDataViewBitmapRenderer</label>
+        <link refid="classwx_data_view_bitmap_renderer"/>
+        <childnode refid="5401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5406">
+        <label>wxDataViewSpinRenderer</label>
+        <link refid="classwx_data_view_spin_renderer"/>
+        <childnode refid="5405" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5405">
+        <label>wxDataViewCustomRenderer</label>
+        <link refid="classwx_data_view_custom_renderer"/>
+        <childnode refid="5401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5404">
+        <label>wxDataViewChoiceRenderer</label>
+        <link refid="classwx_data_view_choice_renderer"/>
+        <childnode refid="5401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5408">
+        <label>wxDataViewIconTextRenderer</label>
+        <link refid="classwx_data_view_icon_text_renderer"/>
+        <childnode refid="5401" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5412">
+        <label>wxDataViewRenderer</label>
+        <link refid="classwx_data_view_renderer"/>
+        <childnode refid="5413" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5413">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5414" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5414">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1429" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1428" bodyend="1538"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDataViewRenderer</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxDataViewRenderer</scope><name>CreateRefData</name></member>
+      <member refid="classwx_data_view_renderer_1ad88c4e7dcf842d1ac56544ca85e72f9a" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>DisableEllipsize</name></member>
+      <member refid="classwx_data_view_renderer_1aeea4804c641149896b8e213bba672e64" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>EnableEllipsize</name></member>
+      <member refid="classwx_data_view_renderer_1af77226c361846ad168ff8bc921317429" prot="public" virt="virtual"><scope>wxDataViewRenderer</scope><name>GetAlignment</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxDataViewRenderer</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_data_view_renderer_1a93b4f4418b3a762856e2a7f0789edde9" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>GetEllipsizeMode</name></member>
+      <member refid="classwx_data_view_renderer_1a3a27d87356d02d8d4f2a1c3d3168c7d2" prot="public" virt="virtual"><scope>wxDataViewRenderer</scope><name>GetMode</name></member>
+      <member refid="classwx_data_view_renderer_1a1f82555c918bf620fa09116bba111cfc" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>GetOwner</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>GetRefData</name></member>
+      <member refid="classwx_data_view_renderer_1ad7c52082d76074cae4ceaf94e55cf604" prot="public" virt="pure-virtual"><scope>wxDataViewRenderer</scope><name>GetValue</name></member>
+      <member refid="classwx_data_view_renderer_1ad2eaa791c222f9f02692a95b216b6f05" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>GetVariantType</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>Ref</name></member>
+      <member refid="classwx_data_view_renderer_1a2c67ceb437b6c2d2280ca651712dec1c" prot="public" virt="virtual"><scope>wxDataViewRenderer</scope><name>SetAlignment</name></member>
+      <member refid="classwx_data_view_renderer_1a388da7afbbf86971c1e945255344666c" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>SetOwner</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>SetRefData</name></member>
+      <member refid="classwx_data_view_renderer_1ac4494f39d056c1b0976481647b24117f" prot="public" virt="pure-virtual"><scope>wxDataViewRenderer</scope><name>SetValue</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>UnShare</name></member>
+      <member refid="classwx_data_view_renderer_1a64c9df3410623498956ce5ed7524a9cf" prot="public" virt="virtual"><scope>wxDataViewRenderer</scope><name>Validate</name></member>
+      <member refid="classwx_data_view_renderer_1ada4b068514a9732e32e03aae8b4581e6" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>wxDataViewRenderer</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxDataViewRenderer</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxDataViewRenderer</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

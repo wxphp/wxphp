@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__smartpointers" kind="group">
+    <compoundname>group_class_smartpointers</compoundname>
+    <title>Smart Pointers</title>
+    <innerclass refid="classwx_object_data_ptr_3_01_t_01_4" prot="public">wxObjectDataPtr&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_scoped_array" prot="public">wxScopedArray</innerclass>
+    <innerclass refid="classwx_scoped_ptr_3_01_t_01_4" prot="public">wxScopedPtr&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_shared_ptr_3_01_t_01_4" prot="public">wxSharedPtr&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_weak_ref_dynamic_3_01_t_01_4" prot="public">wxWeakRefDynamic&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_weak_ref_3_01_t_01_4" prot="public">wxWeakRef&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_scoped_ptr" prot="public">wxScopedPtr</innerclass>
+    <innerclass refid="classwx_scoped_tied_ptr" prot="public">wxScopedTiedPtr</innerclass>
+    <innerclass refid="classwx_trackable" prot="public">wxTrackable</innerclass>
+    <briefdescription>
+<para>wxWidgets provides a few smart pointer class templates. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

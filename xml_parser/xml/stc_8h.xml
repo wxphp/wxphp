@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="stc_8h" kind="file">
+    <compoundname>stc.h</compoundname>
+    <innerclass refid="classwx_styled_text_event" prot="public">wxStyledTextEvent</innerclass>
+    <innerclass refid="classwx_styled_text_ctrl" prot="public">wxStyledTextCtrl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h"/>
+  </compounddef>
+</doxygen>

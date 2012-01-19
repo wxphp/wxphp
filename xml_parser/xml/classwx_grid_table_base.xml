@@ -1,0 +1,970 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_grid_table_base" kind="class" prot="public">
+    <compoundname>wxGridTableBase</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/grid.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Table Cell Accessors</header>
+      <description><para><anchor id="_1amgrp4edd8e1c699750fa0a68ef3afeff65d7"/> </para></description>
+      <memberdef kind="function" id="classwx_grid_table_base_1a53b7f70b9eff26b9d699993e3a71968b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::IsEmptyCell</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>IsEmptyCell</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>May be overridden to implement testing for empty cells. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is used by the grid to test if the given cell is not used and so whether a neighbouring cell may overflow into it. By default it only returns true if the value of the given cell, as returned by <ref refid="classwx_grid_table_base_1a4233348a081a46dabadb6b2dd2cfb972" kindref="member">GetValue()</ref>, is empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1279"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a819caeb23236eb3f70832cacab2a9836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridTableBase::IsEmpty</definition>
+        <argsstring>(const wxGridCellCoords &amp;coords)</argsstring>
+        <name>IsEmpty</name>
+        <param>
+          <type>const wxGridCellCoords &amp;</type>
+          <declname>coords</declname>
+        </param>
+        <briefdescription>
+<para>Same as <ref refid="classwx_grid_table_base_1a53b7f70b9eff26b9d699993e3a71968b" kindref="member">IsEmptyCell()</ref> but taking wxGridCellCoords. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that this method is not virtual, only <ref refid="classwx_grid_table_base_1a53b7f70b9eff26b9d699993e3a71968b" kindref="member">IsEmptyCell()</ref> should be overridden. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1287"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a4233348a081a46dabadb6b2dd2cfb972" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxGridTableBase::GetValue</definition>
+        <argsstring>(int row, int col)=0</argsstring>
+        <name>GetValue</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to implement accessing the table values as text. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1292"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a81959e0a329f006de970c5cc82d99ba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetValue</definition>
+        <argsstring>(int row, int col, const wxString &amp;value)=0</argsstring>
+        <name>SetValue</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Must be overridden to implement setting the table values as text. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1297"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a2192fb69ab1daf9684f23562d1fea727" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxGridTableBase::GetTypeName</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>GetTypeName</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Returns the type of the value in the given cell. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default all cells are strings and this method returns <computeroutput>wxGRID_VALUE_STRING</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1305"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ab35a34c87742cf546751d93b5f6cdbdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::CanGetValueAs</definition>
+        <argsstring>(int row, int col, const wxString &amp;typeName)</argsstring>
+        <name>CanGetValueAs</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>typeName</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the value of the given cell can be accessed as if it were of the specified type. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default the cells can only be accessed as strings. Note that a cell could be accessible in different ways, e.g. a numeric cell may return true for <computeroutput>wxGRID_VALUE_NUMBER</computeroutput> but also for <computeroutput>wxGRID_VALUE_STRING</computeroutput> indicating that the value can be coerced to a string form. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1316"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ab17971b84ec8c875cf758310a975d96e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::CanSetValueAs</definition>
+        <argsstring>(int row, int col, const wxString &amp;typeName)</argsstring>
+        <name>CanSetValueAs</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>typeName</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the value of the given cell can be set as if it were of the specified type. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_grid_table_base_1ab35a34c87742cf546751d93b5f6cdbdb" kindref="member">CanGetValueAs()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1324"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ac4abb42709ba4ad5fb3e65747b5525f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>long</type>
+        <definition>virtual long wxGridTableBase::GetValueAsLong</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>GetValueAsLong</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value of the given cell as a long. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should only be called if <ref refid="classwx_grid_table_base_1ab35a34c87742cf546751d93b5f6cdbdb" kindref="member">CanGetValueAs()</ref> returns true when called with <computeroutput>wxGRID_VALUE_NUMBER</computeroutput> argument. Default implementation always return 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1333"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ab761072281ec4e7f800f44c9577040bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>virtual double wxGridTableBase::GetValueAsDouble</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>GetValueAsDouble</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value of the given cell as a double. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should only be called if <ref refid="classwx_grid_table_base_1ab35a34c87742cf546751d93b5f6cdbdb" kindref="member">CanGetValueAs()</ref> returns true when called with <computeroutput>wxGRID_VALUE_FLOAT</computeroutput> argument. Default implementation always return 0.0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1342"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a133772ec139879eef58d0440f22e4476" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::GetValueAsBool</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>GetValueAsBool</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value of the given cell as a boolean. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should only be called if <ref refid="classwx_grid_table_base_1ab35a34c87742cf546751d93b5f6cdbdb" kindref="member">CanGetValueAs()</ref> returns true when called with <computeroutput>wxGRID_VALUE_BOOL</computeroutput> argument. Default implementation always return false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1351"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a3679460609888689f497c6dc01ae8d41" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>virtual void* wxGridTableBase::GetValueAsCustom</definition>
+        <argsstring>(int row, int col, const wxString &amp;typeName)</argsstring>
+        <name>GetValueAsCustom</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>typeName</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value of the given cell as a user-defined type. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should only be called if <ref refid="classwx_grid_table_base_1ab35a34c87742cf546751d93b5f6cdbdb" kindref="member">CanGetValueAs()</ref> returns true when called with <emphasis>typeName</emphasis>. Default implementation always return NULL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1359"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ae035a347dd02d16182e37e866b5c2632" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetValueAsLong</definition>
+        <argsstring>(int row, int col, long value)</argsstring>
+        <name>SetValueAsLong</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the given cell as a long. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should only be called if <ref refid="classwx_grid_table_base_1ab17971b84ec8c875cf758310a975d96e" kindref="member">CanSetValueAs()</ref> returns true when called with <computeroutput>wxGRID_VALUE_NUMBER</computeroutput> argument. Default implementation doesn&apos;t do anything. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1368"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a4cf3f5ba2c6338cf2cb944960c15bdb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetValueAsDouble</definition>
+        <argsstring>(int row, int col, double value)</argsstring>
+        <name>SetValueAsDouble</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the given cell as a double. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should only be called if <ref refid="classwx_grid_table_base_1ab17971b84ec8c875cf758310a975d96e" kindref="member">CanSetValueAs()</ref> returns true when called with <computeroutput>wxGRID_VALUE_FLOAT</computeroutput> argument. Default implementation doesn&apos;t do anything. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1377"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a1948b5e152aac985892e568655561feb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetValueAsBool</definition>
+        <argsstring>(int row, int col, bool value)</argsstring>
+        <name>SetValueAsBool</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the given cell as a boolean. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should only be called if <ref refid="classwx_grid_table_base_1ab17971b84ec8c875cf758310a975d96e" kindref="member">CanSetValueAs()</ref> returns true when called with <computeroutput>wxGRID_VALUE_BOOL</computeroutput> argument. Default implementation doesn&apos;t do anything. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1386"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ad9be80bb5bf75a8f80e26e40208be583" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetValueAsCustom</definition>
+        <argsstring>(int row, int col, const wxString &amp;typeName, void *value)</argsstring>
+        <name>SetValueAsCustom</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>typeName</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the given cell as a user-defined type. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should only be called if <ref refid="classwx_grid_table_base_1ab17971b84ec8c875cf758310a975d96e" kindref="member">CanSetValueAs()</ref> returns true when called with <emphasis>typeName</emphasis>. Default implementation doesn&apos;t do anything. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1395"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Table Structure Modifiers</header>
+      <description><para><anchor id="_1amgrpa3e9f1e602d4e8c84231bc5b0a74af4a"/>Notice that none of these functions are pure virtual as they don&apos;t have to be implemented if the table structure is never modified after creation, i.e.</para><para>neither rows nor columns are never added or deleted but that you do need to implement them if they are called, i.e. if your code either calls them directly or uses the matching <ref refid="classwx_grid" kindref="compound">wxGrid</ref> methods, as by default they simply do nothing which is definitely inappropriate. </para></description>
+      <memberdef kind="function" id="classwx_grid_table_base_1acc1ed3ef5d026594cb09d957f34761f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Clear the table contents. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is used by <ref refid="classwx_grid_1a7928e5d1e23e09db6c45c35f7aa65532" kindref="member">wxGrid::ClearGrid()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1432"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a649fad50aeeb8dea442ae1f9122e4e6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::InsertRows</definition>
+        <argsstring>(size_t pos=0, size_t numRows=1)</argsstring>
+        <name>InsertRows</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numRows</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Insert additional rows into the table. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the first new row. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numRows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of rows to insert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1442"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a4b85abbed0e689820aa1928eb3a303cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::AppendRows</definition>
+        <argsstring>(size_t numRows=1)</argsstring>
+        <name>AppendRows</name>
+        <param>
+          <type>size_t</type>
+          <declname>numRows</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Append additional rows at the end of the table. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is provided in addition to <ref refid="classwx_grid_table_base_1a649fad50aeeb8dea442ae1f9122e4e6a" kindref="member">InsertRows()</ref> as some data models may only support appending rows to them but not inserting them at arbitrary locations. In such case you may implement this method only and leave <ref refid="classwx_grid_table_base_1a649fad50aeeb8dea442ae1f9122e4e6a" kindref="member">InsertRows()</ref> unimplemented.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numRows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of rows to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1455"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a038567ce937e90cc3f06c5d7c4df7c16" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::DeleteRows</definition>
+        <argsstring>(size_t pos=0, size_t numRows=1)</argsstring>
+        <name>DeleteRows</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numRows</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Delete rows from the table. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first row to delete. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numRows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of rows to delete. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1465"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a361c7064a0199afc01678318ce8b712d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::InsertCols</definition>
+        <argsstring>(size_t pos=0, size_t numCols=1)</argsstring>
+        <name>InsertCols</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numCols</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Exactly the same as <ref refid="classwx_grid_table_base_1a649fad50aeeb8dea442ae1f9122e4e6a" kindref="member">InsertRows()</ref> but for columns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1470"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a2f70e66794796670b6e5367e200d5168" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::AppendCols</definition>
+        <argsstring>(size_t numCols=1)</argsstring>
+        <name>AppendCols</name>
+        <param>
+          <type>size_t</type>
+          <declname>numCols</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Exactly the same as <ref refid="classwx_grid_table_base_1a4b85abbed0e689820aa1928eb3a303cd" kindref="member">AppendRows()</ref> but for columns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1475"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a4f96bd344c49875495c4f20ef707ca4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::DeleteCols</definition>
+        <argsstring>(size_t pos=0, size_t numCols=1)</argsstring>
+        <name>DeleteCols</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numCols</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Exactly the same as <ref refid="classwx_grid_table_base_1a038567ce937e90cc3f06c5d7c4df7c16" kindref="member">DeleteRows()</ref> but for columns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1480"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Table Row and Column Labels</header>
+      <description><para><anchor id="_1amgrpfa110c605aa069b4b9a752c4a9116a6c"/>By default the numbers are used for labeling rows and Latin letters for labeling columns.</para><para>If the table has more than 26 columns, the pairs of letters are used starting from the 27-th one and so on, i.e. the sequence of labels is A, B, ..., Z, AA, AB, ..., AZ, BA, ..., ..., ZZ, AAA, ... </para></description>
+      <memberdef kind="function" id="classwx_grid_table_base_1ad2a20c7f8ac0cbca8665639897b0aa33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxGridTableBase::GetRowLabelValue</definition>
+        <argsstring>(int row)</argsstring>
+        <name>GetRowLabelValue</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Return the label of the specified row. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1498"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ac7db44c525e0791b29005ee4fa48e729" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>virtual wxString wxGridTableBase::GetColLabelValue</definition>
+        <argsstring>(int col)</argsstring>
+        <name>GetColLabelValue</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Return the label of the specified column. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1503"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a8205840a49da8ab2147fa8081afb2de6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetRowLabelValue</definition>
+        <argsstring>(int row, const wxString &amp;label)</argsstring>
+        <name>SetRowLabelValue</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Set the given label for the specified row. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default version does nothing, i.e. the label is not stored. You must override this method in your derived class if you wish <ref refid="classwx_grid_1ae67491f6e506a37dd45bc52e47a09fdc" kindref="member">wxGrid::SetRowLabelValue()</ref> to work. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1512"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a2c228818518de127b34c13655153021e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetColLabelValue</definition>
+        <argsstring>(int col, const wxString &amp;label)</argsstring>
+        <name>SetColLabelValue</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Exactly the same as <ref refid="classwx_grid_table_base_1a8205840a49da8ab2147fa8081afb2de6" kindref="member">SetRowLabelValue()</ref> but for columns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1517"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Attributes Management</header>
+      <description><para><anchor id="_1amgrp8f39c4f523d9cd82cf24c7690fb9087b"/>By default the attributes management is delegated to <ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> class.</para><para>You may override the methods in this section to handle the attributes directly if, for example, they can be computed from the cell values. </para></description>
+      <memberdef kind="function" id="classwx_grid_table_base_1ad0248937170cf1f0280694525ee5f994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridTableBase::SetAttrProvider</definition>
+        <argsstring>(wxGridCellAttrProvider *attrProvider)</argsstring>
+        <name>SetAttrProvider</name>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> *</type>
+          <declname>attrProvider</declname>
+        </param>
+        <briefdescription>
+<para>Associate this attributes provider with the table. </para>        </briefdescription>
+        <detaileddescription>
+<para>The table takes ownership of <emphasis>attrProvider</emphasis> pointer and will delete it when it doesn&apos;t need it any more. The pointer can be NULL, however this won&apos;t disable attributes management in the table but will just result in a default attributes being recreated the next time any of the other functions in this section is called. To completely disable the attributes support, should this be needed, you need to override <ref refid="classwx_grid_table_base_1aa5d507ed6d82b7a7878ad65f5e75d4f0" kindref="member">CanHaveAttributes()</ref> to return false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1543"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a774b855c89b93812fff8940917f8dc3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> *</type>
+        <definition>wxGridCellAttrProvider* wxGridTableBase::GetAttrProvider</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAttrProvider</name>
+        <briefdescription>
+<para>Returns the attribute provider currently being used. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function may return NULL if the attribute provider hasn&apos;t been neither associated with this table by <ref refid="classwx_grid_table_base_1ad0248937170cf1f0280694525ee5f994" kindref="member">SetAttrProvider()</ref> nor created on demand by any other methods. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1552"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1af031321a86e3835d23177ffe53eee643" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
+        <definition>virtual wxGridCellAttr* wxGridTableBase::GetAttr</definition>
+        <argsstring>(int row, int col, wxGridCellAttr::wxAttrKind kind)</argsstring>
+        <name>GetAttr</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440" kindref="member">wxGridCellAttr::wxAttrKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <briefdescription>
+<para>Return the attribute for the given cell. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default this function is simply forwarded to <ref refid="classwx_grid_cell_attr_provider_1a26ce9f9fd2e86e649b031b6211b6ab0a" kindref="member">wxGridCellAttrProvider::GetAttr()</ref> but it may be overridden to handle attributes directly in the table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1562"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a12277f75a635fd35fcaefd0d56cad0ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetAttr</definition>
+        <argsstring>(wxGridCellAttr *attr, int row, int col)</argsstring>
+        <name>SetAttr</name>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Set attribute of the specified cell. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default this function is simply forwarded to <ref refid="classwx_grid_cell_attr_provider_1a85676f2c08382cd2a1e3c1f38a24540b" kindref="member">wxGridCellAttrProvider::SetAttr()</ref>.</para><para>The table takes ownership of <emphasis>attr</emphasis>, i.e. will call DecRef() on it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1572"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a8f1dc4a35497eeec27104943f0d7be11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetRowAttr</definition>
+        <argsstring>(wxGridCellAttr *attr, int row)</argsstring>
+        <name>SetRowAttr</name>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Set attribute of the specified row. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default this function is simply forwarded to <ref refid="classwx_grid_cell_attr_provider_1afe30d6ea1164d0730d3f7ba447150735" kindref="member">wxGridCellAttrProvider::SetRowAttr()</ref>.</para><para>The table takes ownership of <emphasis>attr</emphasis>, i.e. will call DecRef() on it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1582"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ac08a10473e538c1f3859ad59936eb870" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetColAttr</definition>
+        <argsstring>(wxGridCellAttr *attr, int col)</argsstring>
+        <name>SetColAttr</name>
+        <param>
+          <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Set attribute of the specified column. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default this function is simply forwarded to <ref refid="classwx_grid_cell_attr_provider_1ab07209295a7afb61658d24b3fe34cb89" kindref="member">wxGridCellAttrProvider::SetColAttr()</ref>.</para><para>The table takes ownership of <emphasis>attr</emphasis>, i.e. will call DecRef() on it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1592"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_grid_table_base_1a86c1ecf0f8077de6246194f3fcdf966d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridTableBase::wxGridTableBase</definition>
+        <argsstring>()</argsstring>
+        <name>wxGridTableBase</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a6cf5b1cc9d9d57dd112695ed3dca5690" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxGridTableBase::~wxGridTableBase</definition>
+        <argsstring>()</argsstring>
+        <name>~wxGridTableBase</name>
+        <briefdescription>
+<para>Destructor frees the attribute provider if it was created. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1227"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1aefe57964fd86e7a9ab2253d070908b48" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int wxGridTableBase::GetNumberRows</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetNumberRows</name>
+        <briefdescription>
+<para>Must be overridden to return the number of rows in the table. </para>        </briefdescription>
+        <detaileddescription>
+<para>For backwards compatibility reasons, this method is not const. Use <ref refid="classwx_grid_table_base_1ac28b5760892b159031dafa43100f3c6e" kindref="member">GetRowsCount()</ref> instead of it in const methods of derived table classes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1236"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ad290f56b43056a66fa08531410c658d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int wxGridTableBase::GetNumberCols</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetNumberCols</name>
+        <briefdescription>
+<para>Must be overridden to return the number of columns in the table. </para>        </briefdescription>
+        <detaileddescription>
+<para>For backwards compatibility reasons, this method is not const. Use <ref refid="classwx_grid_table_base_1a8552f0173f411c15ea094bc5731e70af" kindref="member">GetColsCount()</ref> instead of it in const methods of derived table classes, </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1245"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1ac28b5760892b159031dafa43100f3c6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridTableBase::GetRowsCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRowsCount</name>
+        <briefdescription>
+<para>Return the number of rows in the table. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is not virtual and is only provided as a convenience for the derived classes which can&apos;t call <ref refid="classwx_grid_table_base_1aefe57964fd86e7a9ab2253d070908b48" kindref="member">GetNumberRows()</ref> without a <computeroutput>const_cast</computeroutput> from their const methods. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1254"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a8552f0173f411c15ea094bc5731e70af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridTableBase::GetColsCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetColsCount</name>
+        <briefdescription>
+<para>Return the number of columns in the table. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is not virtual and is only provided as a convenience for the derived classes which can&apos;t call <ref refid="classwx_grid_table_base_1ad290f56b43056a66fa08531410c658d7" kindref="member">GetNumberCols()</ref> without a <computeroutput>const_cast</computeroutput> from their const methods. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1263"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a7dfac01d7b0655d3b41d350e2f322f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxGridTableBase::SetView</definition>
+        <argsstring>(wxGrid *grid)</argsstring>
+        <name>SetView</name>
+        <param>
+          <type><ref refid="classwx_grid" kindref="compound">wxGrid</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+<para>Called by the grid when the table is associated with it. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default implementation stores the pointer and returns it from its <ref refid="classwx_grid_table_base_1a9d63ffa9b5638699234fd85940386482" kindref="member">GetView()</ref> and so only makes sense if the table cannot be associated with more than one grid at a time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1407"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1a9d63ffa9b5638699234fd85940386482" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_grid" kindref="compound">wxGrid</ref> *</type>
+        <definition>virtual wxGrid* wxGridTableBase::GetView</definition>
+        <argsstring>() const </argsstring>
+        <name>GetView</name>
+        <briefdescription>
+<para>Returns the last grid passed to <ref refid="classwx_grid_table_base_1a7dfac01d7b0655d3b41d350e2f322f60" kindref="member">SetView()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1412"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_table_base_1aa5d507ed6d82b7a7878ad65f5e75d4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxGridTableBase::CanHaveAttributes</definition>
+        <argsstring>()</argsstring>
+        <name>CanHaveAttributes</name>
+        <briefdescription>
+<para>Returns true if this table supports attributes or false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, the table automatically creates a <ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> when this function is called if it had no attribute provider before and returns true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1603"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The almost abstract base class for grid tables. </para>    </briefdescription>
+    <detaileddescription>
+<para>A grid table is responsible for storing the grid data and, indirectly, grid cell attributes. The data can be stored in the way most convenient for the application but has to be provided in string form to <ref refid="classwx_grid" kindref="compound">wxGrid</ref>. It is also possible to provide cells values in other formats if appropriate, e.g. as numbers.</para><para>This base class is not quite abstract as it implements a trivial strategy for storing the attributes by forwarding it to <ref refid="classwx_grid_cell_attr_provider" kindref="compound">wxGridCellAttrProvider</ref> and also provides stubs for some other functions. However it does have a number of pure virtual methods which must be implemented in the derived classes.</para><para><simplesect kind="see"><para>wxGridStringTable</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6847">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="6846">
+        <label>wxGridTableBase</label>
+        <link refid="classwx_grid_table_base"/>
+        <childnode refid="6847" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6849">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6850" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6848">
+        <label>wxGridTableBase</label>
+        <link refid="classwx_grid_table_base"/>
+        <childnode refid="6849" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6850">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="1217" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="1216" bodyend="1604"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGridTableBase</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_grid_table_base_1a2f70e66794796670b6e5367e200d5168" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>AppendCols</name></member>
+      <member refid="classwx_grid_table_base_1a4b85abbed0e689820aa1928eb3a303cd" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>AppendRows</name></member>
+      <member refid="classwx_grid_table_base_1ab35a34c87742cf546751d93b5f6cdbdb" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>CanGetValueAs</name></member>
+      <member refid="classwx_grid_table_base_1aa5d507ed6d82b7a7878ad65f5e75d4f0" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>CanHaveAttributes</name></member>
+      <member refid="classwx_grid_table_base_1ab17971b84ec8c875cf758310a975d96e" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>CanSetValueAs</name></member>
+      <member refid="classwx_grid_table_base_1acc1ed3ef5d026594cb09d957f34761f5" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>Clear</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGridTableBase</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxGridTableBase</scope><name>CreateRefData</name></member>
+      <member refid="classwx_grid_table_base_1a4f96bd344c49875495c4f20ef707ca4b" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>DeleteCols</name></member>
+      <member refid="classwx_grid_table_base_1a038567ce937e90cc3f06c5d7c4df7c16" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>DeleteRows</name></member>
+      <member refid="classwx_grid_table_base_1af031321a86e3835d23177ffe53eee643" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetAttr</name></member>
+      <member refid="classwx_grid_table_base_1a774b855c89b93812fff8940917f8dc3e" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>GetAttrProvider</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_grid_table_base_1ac7db44c525e0791b29005ee4fa48e729" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetColLabelValue</name></member>
+      <member refid="classwx_grid_table_base_1a8552f0173f411c15ea094bc5731e70af" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>GetColsCount</name></member>
+      <member refid="classwx_grid_table_base_1ad290f56b43056a66fa08531410c658d7" prot="public" virt="pure-virtual"><scope>wxGridTableBase</scope><name>GetNumberCols</name></member>
+      <member refid="classwx_grid_table_base_1aefe57964fd86e7a9ab2253d070908b48" prot="public" virt="pure-virtual"><scope>wxGridTableBase</scope><name>GetNumberRows</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>GetRefData</name></member>
+      <member refid="classwx_grid_table_base_1ad2a20c7f8ac0cbca8665639897b0aa33" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetRowLabelValue</name></member>
+      <member refid="classwx_grid_table_base_1ac28b5760892b159031dafa43100f3c6e" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>GetRowsCount</name></member>
+      <member refid="classwx_grid_table_base_1a2192fb69ab1daf9684f23562d1fea727" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetTypeName</name></member>
+      <member refid="classwx_grid_table_base_1a4233348a081a46dabadb6b2dd2cfb972" prot="public" virt="pure-virtual"><scope>wxGridTableBase</scope><name>GetValue</name></member>
+      <member refid="classwx_grid_table_base_1a133772ec139879eef58d0440f22e4476" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetValueAsBool</name></member>
+      <member refid="classwx_grid_table_base_1a3679460609888689f497c6dc01ae8d41" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetValueAsCustom</name></member>
+      <member refid="classwx_grid_table_base_1ab761072281ec4e7f800f44c9577040bc" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetValueAsDouble</name></member>
+      <member refid="classwx_grid_table_base_1ac4abb42709ba4ad5fb3e65747b5525f2" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetValueAsLong</name></member>
+      <member refid="classwx_grid_table_base_1a9d63ffa9b5638699234fd85940386482" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>GetView</name></member>
+      <member refid="classwx_grid_table_base_1a361c7064a0199afc01678318ce8b712d" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>InsertCols</name></member>
+      <member refid="classwx_grid_table_base_1a649fad50aeeb8dea442ae1f9122e4e6a" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>InsertRows</name></member>
+      <member refid="classwx_grid_table_base_1a819caeb23236eb3f70832cacab2a9836" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>IsEmpty</name></member>
+      <member refid="classwx_grid_table_base_1a53b7f70b9eff26b9d699993e3a71968b" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>IsEmptyCell</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxGridTableBase</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>Ref</name></member>
+      <member refid="classwx_grid_table_base_1a12277f75a635fd35fcaefd0d56cad0ab" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetAttr</name></member>
+      <member refid="classwx_grid_table_base_1ad0248937170cf1f0280694525ee5f994" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>SetAttrProvider</name></member>
+      <member refid="classwx_grid_table_base_1ac08a10473e538c1f3859ad59936eb870" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetColAttr</name></member>
+      <member refid="classwx_grid_table_base_1a2c228818518de127b34c13655153021e" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetColLabelValue</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>SetRefData</name></member>
+      <member refid="classwx_grid_table_base_1a8f1dc4a35497eeec27104943f0d7be11" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetRowAttr</name></member>
+      <member refid="classwx_grid_table_base_1a8205840a49da8ab2147fa8081afb2de6" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetRowLabelValue</name></member>
+      <member refid="classwx_grid_table_base_1a81959e0a329f006de970c5cc82d99ba2" prot="public" virt="pure-virtual"><scope>wxGridTableBase</scope><name>SetValue</name></member>
+      <member refid="classwx_grid_table_base_1a1948b5e152aac985892e568655561feb" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetValueAsBool</name></member>
+      <member refid="classwx_grid_table_base_1ad9be80bb5bf75a8f80e26e40208be583" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetValueAsCustom</name></member>
+      <member refid="classwx_grid_table_base_1a4cf3f5ba2c6338cf2cb944960c15bdb1" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetValueAsDouble</name></member>
+      <member refid="classwx_grid_table_base_1ae035a347dd02d16182e37e866b5c2632" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetValueAsLong</name></member>
+      <member refid="classwx_grid_table_base_1a7dfac01d7b0655d3b41d350e2f322f60" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>SetView</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>UnShare</name></member>
+      <member refid="classwx_grid_table_base_1a86c1ecf0f8077de6246194f3fcdf966d" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>wxGridTableBase</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxGridTableBase</scope><name>wxObject</name></member>
+      <member refid="classwx_grid_table_base_1a6cf5b1cc9d9d57dd112695ed3dca5690" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>~wxGridTableBase</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxGridTableBase</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

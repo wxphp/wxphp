@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_pixel_data_1_1_iterator" kind="class" prot="public">
+    <compoundname>wxPixelData::Iterator</compoundname>
+    <includes local="no">wx/rawbmp.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1ad23430aa71b8e7a6370379b59f5f1486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChannelType &amp;</type>
+        <definition>ChannelType&amp; wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Red</definition>
+        <argsstring>()</argsstring>
+        <name>Red</name>
+        <briefdescription>
+<para>Data Access: Access to individual colour components. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1ab3c1205f85cb8c1498c706d31fe4c165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChannelType &amp;</type>
+        <definition>ChannelType&amp; wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Green</definition>
+        <argsstring>()</argsstring>
+        <name>Green</name>
+        <briefdescription>
+<para>Data Access: Access to individual colour components. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a35877d8a2c26212b23cbeb7416b2c52e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChannelType &amp;</type>
+        <definition>ChannelType&amp; wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Blue</definition>
+        <argsstring>()</argsstring>
+        <name>Blue</name>
+        <briefdescription>
+<para>Data Access: Access to individual colour components. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a1dcf961ed80fbc71868607fad322ad72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChannelType &amp;</type>
+        <definition>ChannelType&amp; wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Alpha</definition>
+        <argsstring>()</argsstring>
+        <name>Alpha</name>
+        <briefdescription>
+<para>Data Access: Access to individual colour components. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="210"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a1508bd1dac903caae5f62c800441714c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Reset</definition>
+        <argsstring>(const PixelData &amp;data)</argsstring>
+        <name>Reset</name>
+        <param>
+          <type>const PixelData &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Reset the iterator to point to (0, 0). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1ae59b8444cfce0445d816f4d685db5a31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Iterator</definition>
+        <argsstring>(PixelData &amp;data)</argsstring>
+        <name>Iterator</name>
+        <param>
+          <type>PixelData &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the iterator to point to the origin of the given pixel data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a39ced996a863dc8e902e91d475af5673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Iterator</definition>
+        <argsstring>(wxBitmap &amp;bmp, PixelData &amp;data)</argsstring>
+        <name>Iterator</name>
+        <param>
+          <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmp</declname>
+        </param>
+        <param>
+          <type>PixelData &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the iterator to point to the origin of the given Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1aed6096b98cf27e7d25ed9bde48538903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Iterator</definition>
+        <argsstring>()</argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a96eff4404cb3db9ac07d2290594b5d02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxPixelData&lt; Image, PixelFormat &gt;::Iterator::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <briefdescription>
+<para>Return true if this iterator is valid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a3179184224dbcf48ae7e9920d2293e12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_pixel_data_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
+        <definition>Iterator&amp; wxPixelData&lt; Image, PixelFormat &gt;::Iterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+<para>Advance the iterator to the next pixel, prefix version. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a7db073d3192ffc096045ff8c53aa564b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_pixel_data_1_1_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator wxPixelData&lt; Image, PixelFormat &gt;::Iterator::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Advance the iterator to the next pixel, postfix (hence less efficient -- don&apos;t use it unless you absolutely must) version. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a0bcf659f67218ed8fe207d56df7b57a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPixelData&lt; Image, PixelFormat &gt;::Iterator::Offset</definition>
+        <argsstring>(const PixelData &amp;data, int x, int y)</argsstring>
+        <name>Offset</name>
+        <param>
+          <type>const PixelData &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Move <emphasis>x</emphasis> pixels to the right and <emphasis>y</emphasis> down. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The rows won&apos;t wrap automatically. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a4420f1bfd9d1d686f99508d0883d5c4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPixelData&lt; Image, PixelFormat &gt;::Iterator::OffsetX</definition>
+        <argsstring>(const PixelData &amp;data, int x)</argsstring>
+        <name>OffsetX</name>
+        <param>
+          <type>const PixelData &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Move <emphasis>x</emphasis> pixels to the right. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The rows won&apos;t wrap automatically. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1abfc6ed60b223d3df4c528afba191006f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPixelData&lt; Image, PixelFormat &gt;::Iterator::OffsetY</definition>
+        <argsstring>(const PixelData &amp;data, int y)</argsstring>
+        <name>OffsetY</name>
+        <param>
+          <type>const PixelData &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Move <emphasis>y</emphasis> rows to the bottom. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_pixel_data_1_1_iterator_1a8fc62aab73405b74c0d7afd5081c74c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPixelData&lt; Image, PixelFormat &gt;::Iterator::MoveTo</definition>
+        <argsstring>(const PixelData &amp;data, int x, int y)</argsstring>
+        <name>MoveTo</name>
+        <param>
+          <type>const PixelData &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Go to the given position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="201"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The iterator of class <ref refid="classwx_pixel_data" kindref="compound">wxPixelData</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" line="139" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rawbmp.h" bodystart="138" bodyend="212"/>
+    <listofallmembers>
+      <member refid="classwx_pixel_data_1_1_iterator_1a1dcf961ed80fbc71868607fad322ad72" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Alpha</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a35877d8a2c26212b23cbeb7416b2c52e" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Blue</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1ab3c1205f85cb8c1498c706d31fe4c165" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Green</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a96eff4404cb3db9ac07d2290594b5d02" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>IsOk</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1ae59b8444cfce0445d816f4d685db5a31" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Iterator</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a39ced996a863dc8e902e91d475af5673" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Iterator</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1aed6096b98cf27e7d25ed9bde48538903" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Iterator</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a8fc62aab73405b74c0d7afd5081c74c4" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>MoveTo</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a0bcf659f67218ed8fe207d56df7b57a9" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Offset</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a4420f1bfd9d1d686f99508d0883d5c4e" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>OffsetX</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1abfc6ed60b223d3df4c528afba191006f" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>OffsetY</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a3179184224dbcf48ae7e9920d2293e12" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>operator++</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a7db073d3192ffc096045ff8c53aa564b" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>operator++</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1ad23430aa71b8e7a6370379b59f5f1486" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Red</name></member>
+      <member refid="classwx_pixel_data_1_1_iterator_1a1508bd1dac903caae5f62c800441714c" prot="public" virt="non-virtual"><scope>wxPixelData::Iterator</scope><name>Reset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

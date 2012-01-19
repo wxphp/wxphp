@@ -1,0 +1,1931 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_ribbon_art_provider" kind="class" prot="public">
+    <compoundname>wxRibbonArtProvider</compoundname>
+    <includes local="no">wx/ribbon/art.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a114852d7b22df26812bbf19bac981e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRibbonArtProvider::wxRibbonArtProvider</definition>
+        <argsstring>()</argsstring>
+        <name>wxRibbonArtProvider</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a392b91dde5089fc50580f6303f8f7e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxRibbonArtProvider::~wxRibbonArtProvider</definition>
+        <argsstring>()</argsstring>
+        <name>~wxRibbonArtProvider</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a7d5c4aedb277c10201b8594f780e6f67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_ribbon_art_provider" kindref="compound">wxRibbonArtProvider</ref> *</type>
+        <definition>virtual wxRibbonArtProvider* wxRibbonArtProvider::Clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Clone</name>
+        <briefdescription>
+<para>Create a new art provider which is a clone of this one. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1ad5f47ae6b9c2d4c67b931e48a71befa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::SetFlags</definition>
+        <argsstring>(long flags)=0</argsstring>
+        <name>SetFlags</name>
+        <param>
+          <type>long</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set the style flags. </para>        </briefdescription>
+        <detaileddescription>
+<para>Normally called automatically by <ref refid="classwx_ribbon_bar_1adba2da31cb9ec4b9f0e80629c96ea691" kindref="member">wxRibbonBar::SetArtProvider</ref> with the ribbon bar&apos;s style flags, so that the art provider has the same flags as the bar which it is serving. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a4ec0f9caed973d4eea3f2c61708d9473" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>long</type>
+        <definition>virtual long wxRibbonArtProvider::GetFlags</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetFlags</name>
+        <briefdescription>
+<para>Get the previously set style flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a560bcaebdbea38f8a5bf2e7fb5be0a92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int wxRibbonArtProvider::GetMetric</definition>
+        <argsstring>(int id) const =0</argsstring>
+        <name>GetMetric</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the value of a certain integer setting. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the size values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1af0bc8f57e0016f0a9d1501fa9499c616" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::SetMetric</definition>
+        <argsstring>(int id, int new_val)=0</argsstring>
+        <name>SetMetric</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>new_val</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of a certain integer setting to the value <emphasis>new_val</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the size values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1ac225e7587c06fffdaadb306cafc153fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::SetFont</definition>
+        <argsstring>(int id, const wxFont &amp;font)=0</argsstring>
+        <name>SetFont</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of a certain font setting to the value <emphasis>font</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the font values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a793d17d671afaac75273f2934bd56495" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>virtual wxFont wxRibbonArtProvider::GetFont</definition>
+        <argsstring>(int id) const =0</argsstring>
+        <name>GetFont</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the value of a certain font setting. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the font values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1ad048e9bd640c22f88ac94031052d9e57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>virtual wxColour wxRibbonArtProvider::GetColour</definition>
+        <argsstring>(int id) const =0</argsstring>
+        <name>GetColour</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the value of a certain colour setting. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the colour values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1ab0f69278adbfabd03df9e5ee0b8b3679" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::SetColour</definition>
+        <argsstring>(int id, const wxColor &amp;colour)=0</argsstring>
+        <name>SetColour</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const wxColor &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of a certain colour setting to the value <emphasis>colour</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the colour values of <ref refid="art_8h_1a1d09d963ecc6e5a290768e15a1f70155" kindref="member">wxRibbonArtSetting</ref>, though not all colour settings will have an effect on every art provider.</para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a90056470545d7c4d6a8e44439d8e51f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>wxColour wxRibbonArtProvider::GetColor</definition>
+        <argsstring>(int id) const </argsstring>
+        <name>GetColor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_art_provider_1ad048e9bd640c22f88ac94031052d9e57" kindref="member">wxRibbonArtProvider::GetColour()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a710c582dac748afbfd33d5524749a8eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRibbonArtProvider::SetColor</definition>
+        <argsstring>(int id, const wxColour &amp;color)</argsstring>
+        <name>SetColor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_art_provider_1ab0f69278adbfabd03df9e5ee0b8b3679" kindref="member">wxRibbonArtProvider::SetColour()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a23498380fde981a820c37ce40eabe651" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::GetColourScheme</definition>
+        <argsstring>(wxColour *primary, wxColour *secondary, wxColour *tertiary) const =0</argsstring>
+        <name>GetColourScheme</name>
+        <param>
+          <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+          <declname>primary</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+          <declname>secondary</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> *</type>
+          <declname>tertiary</declname>
+        </param>
+        <briefdescription>
+<para>Get the current colour scheme. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns three colours such that if <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> were called with them, the colour scheme would be restored to what it was when <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> was last called. In practice, this usually means that the returned values are the three colours given in the last call to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>, however if <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> performs an idempotent operation upon the colours it is given (like clamping a component of the colour), then the returned values may not be the three colours given in the last call to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>. If <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref> has not been called, then the returned values should result in a colour scheme similar to, if not identical to, the default colours of the art provider. Note that if <ref refid="classwx_ribbon_art_provider_1ab0f69278adbfabd03df9e5ee0b8b3679" kindref="member">SetColour()</ref> is called, then <ref refid="classwx_ribbon_art_provider_1a23498380fde981a820c37ce40eabe651" kindref="member">GetColourScheme()</ref> does not try and return a colour scheme similar to colours being used - it&apos;s return values are dependant upon the last values given to <ref refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" kindref="member">SetColourScheme()</ref>, as described above.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">primary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a location to store the primary colour, or NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">secondary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a location to store the secondary colour, or NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">tertiary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a location to store the tertiary colour, or NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::SetColourScheme</definition>
+        <argsstring>(const wxColour &amp;primary, const wxColour &amp;secondary, const wxColour &amp;tertiary)=0</argsstring>
+        <name>SetColourScheme</name>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>primary</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>secondary</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>tertiary</declname>
+        </param>
+        <briefdescription>
+<para>Set all applicable colour settings from a few base colours. </para>        </briefdescription>
+        <detaileddescription>
+<para>Uses any or all of the three given colours to create a colour scheme, and then sets all colour settings which are relevant to the art provider using that scheme. Note that some art providers may not use the tertiary colour for anything, and some may not use the secondary colour either.</para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_art_provider_1ab0f69278adbfabd03df9e5ee0b8b3679" kindref="member">SetColour()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_art_provider_1a23498380fde981a820c37ce40eabe651" kindref="member">GetColourScheme()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a0cdf421efa57fc932fcabd4095da5974" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawTabCtrlBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawTabCtrlBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draw the background of the tab region of a ribbon bar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a103f0d6af1d9431623361d6818e83745" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawTab</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRibbonPageTabInfo &amp;tab)=0</argsstring>
+        <name>DrawTab</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const wxRibbonPageTabInfo &amp;</type>
+          <declname>tab</declname>
+        </param>
+        <briefdescription>
+<para>Draw a single tab in the tab region of a ribbon bar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto (not the <ref refid="classwx_ribbon_page" kindref="compound">wxRibbonPage</ref> associated with the tab being drawn). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw, and also the tab label, icon, and state (active and/or hovered). The drawing rectangle will be entirely within a rectangle on the same device context previously painted with <ref refid="classwx_ribbon_art_provider_1a0cdf421efa57fc932fcabd4095da5974" kindref="member">DrawTabCtrlBackground()</ref>. The rectangle&apos;s width will be at least the minimum value returned by <ref refid="classwx_ribbon_art_provider_1a231e0a24c4eca119c99cef80d749f247" kindref="member">GetBarTabWidth()</ref>, and height will be the value returned by <ref refid="classwx_ribbon_art_provider_1a0409f65a0bf21ebbec064a802d144f78" kindref="member">GetTabCtrlHeight()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a65db56a6fb82fc47fa27d39bbdd6f697" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawTabSeparator</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect, double visibility)=0</argsstring>
+        <name>DrawTabSeparator</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>visibility</declname>
+        </param>
+        <briefdescription>
+<para>Draw a separator between two tabs in a ribbon bar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw, which will be entirely within a rectangle on the same device context previously painted with <ref refid="classwx_ribbon_art_provider_1a0cdf421efa57fc932fcabd4095da5974" kindref="member">DrawTabCtrlBackground()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visibility</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The opacity with which to draw the separator. Values are in the range [0, 1], with 0 being totally transparent, and 1 being totally opaque. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1ab579704095f947e7bdffd84d142e1902" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawPageBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawPageBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draw the background of a ribbon page. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto (which is commonly the <ref refid="classwx_ribbon_page" kindref="compound">wxRibbonPage</ref> whose background is being drawn, but doesn&apos;t have to be). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_art_provider_1acdc605f1e231f47a4d247c7e41b8e3e3" kindref="member">GetPageBackgroundRedrawArea</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1aee81b27bd880ee8681682919fdb7a01d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawScrollButton</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect, long style)=0</argsstring>
+        <name>DrawScrollButton</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+<para>Draw a ribbon-style scroll button. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. The size of this rectangle will be at least the size returned by <ref refid="classwx_ribbon_art_provider_1a55e55a4a05d19fd555f85f71502ea84a" kindref="member">GetScrollButtonMinimumSize()</ref> for a scroll button with the same style. For tab scroll buttons, this rectangle will be entirely within a rectangle on the same device context previously painted with <ref refid="classwx_ribbon_art_provider_1a0cdf421efa57fc932fcabd4095da5974" kindref="member">DrawTabCtrlBackground()</ref>, but this is not guaranteed for other types of button (for example, page scroll buttons will not be painted on an area previously painted with <ref refid="classwx_ribbon_art_provider_1ab579704095f947e7bdffd84d142e1902" kindref="member">DrawPageBackground()</ref>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of flags from <ref refid="art_8h_1af1a48dec08a6e9f2501acbf98d545ab1" kindref="member">wxRibbonScrollButtonStyle</ref>, including a direction, a for flag, and one or more states. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a200c597d607ba3bd95a7038236658af0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawPanelBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxRibbonPanel *wnd, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawPanelBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_ribbon_panel" kindref="compound">wxRibbonPanel</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draw the background and chrome for a ribbon panel. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should draw the border, background, label, and any other items of a panel which are outside the client area of a panel.</para><para>Note that when a panel is minimised, this function is not called - only <ref refid="classwx_ribbon_art_provider_1a32378494458223326d70261ea3afbd6a" kindref="member">DrawMinimisedPanel()</ref> is called, so a background should be explicitly painted by that if required.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto, which is always the panel whose background and chrome is being drawn. The panel label and other panel attributes can be obtained by querying this. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1ad41db7f3891c8b541ef1cc6e9add15f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawGalleryBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxRibbonGallery *wnd, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawGalleryBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draw the background and chrome for a <ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> control. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should draw the border, background, scroll buttons, extension button, and any other UI elements which are not attached to a specific gallery item.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto, which is always the gallery whose background and chrome is being drawn. Attributes used during drawing like the gallery hover state and individual button states can be queried from this parameter by <ref refid="classwx_ribbon_gallery_1a29473f5d428cf045074451812750b3fd" kindref="member">wxRibbonGallery::IsHovered()</ref>, <ref refid="classwx_ribbon_gallery_1a96c55389c02ba850e073df0d73a006ba" kindref="member">wxRibbonGallery::GetExtensionButtonState()</ref>, <ref refid="classwx_ribbon_gallery_1ad42e8e9de84a28a99b970f6dced536bb" kindref="member">wxRibbonGallery::GetUpButtonState()</ref>, and <ref refid="classwx_ribbon_gallery_1ade04d63a05a87218c259c8095281eaa6" kindref="member">wxRibbonGallery::GetDownButtonState()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. This rectangle is the entire area of the gallery control, not just the client rectangle. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="479"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a3d52bff64e7fbcf1a56a11c552008a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawGalleryItemBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxRibbonGallery *wnd, const wxRect &amp;rect, wxRibbonGalleryItem *item)=0</argsstring>
+        <name>DrawGalleryItemBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>wxRibbonGalleryItem *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Draw the background of a single item in a <ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> control. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is painted on top of a gallery background, and behind the items bitmap. Unlike <ref refid="classwx_ribbon_art_provider_1aa465a3894f4d46f9b1bad349e1099e0a" kindref="member">DrawButtonBarButton()</ref> and <ref refid="classwx_ribbon_art_provider_1a1ef15193ceae62665fe17c207db69677" kindref="member">DrawTool()</ref>, it is not expected to draw the item bitmap - that is done by the gallery control itself.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto, which is always the gallery which contains the item being drawn. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. The size of this rectangle will be the size of the item&apos;s bitmap, expanded by gallery item padding values (wxRIBBON_ART_GALLERY_BITMAP_PADDING_LEFT_SIZE, wxRIBBON_ART_GALLERY_BITMAP_PADDING_RIGHT_SIZE, wxRIBBON_ART_GALLERY_BITMAP_PADDING_TOP_SIZE, and wxRIBBON_ART_GALLERY_BITMAP_PADDING_BOTTOM_SIZE). The drawing rectangle will be entirely within a rectangle on the same device context previously painted with <ref refid="classwx_ribbon_art_provider_1ad41db7f3891c8b541ef1cc6e9add15f8" kindref="member">DrawGalleryBackground()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item whose background is being painted. Typically the background will vary if the item is hovered, active, or selected; <ref refid="classwx_ribbon_gallery_1a7a829e0ebf1ad57c16b251804692baa9" kindref="member">wxRibbonGallery::GetSelection()</ref>, <ref refid="classwx_ribbon_gallery_1abcea89c22766a7b88f70f909ac049e23" kindref="member">wxRibbonGallery::GetActiveItem()</ref>, and <ref refid="classwx_ribbon_gallery_1aa5de142fdc67398e9741b52038af98bb" kindref="member">wxRibbonGallery::GetHoveredItem()</ref> can be called to test if the given item is in one of these states. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="512"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a32378494458223326d70261ea3afbd6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawMinimisedPanel</definition>
+        <argsstring>(wxDC &amp;dc, wxRibbonPanel *wnd, const wxRect &amp;rect, wxBitmap &amp;bitmap)=0</argsstring>
+        <name>DrawMinimisedPanel</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_ribbon_panel" kindref="compound">wxRibbonPanel</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <briefdescription>
+<para>Draw a minimised ribbon panel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto, which is always the panel which is minimised. The panel label can be obtained from this window. The minimised icon obtained from querying the window may not be the size requested by <ref refid="classwx_ribbon_art_provider_1ad495a398a67be326541a59063682fb57" kindref="member">GetMinimisedPanelMinimumSize()</ref> - the <emphasis>bitmap</emphasis> argument contains the icon in the requested size. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. The size of the rectangle will be at least the size returned by <ref refid="classwx_ribbon_art_provider_1ad495a398a67be326541a59063682fb57" kindref="member">GetMinimisedPanelMinimumSize()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A copy of the panel&apos;s minimised bitmap rescaled to the size returned by <ref refid="classwx_ribbon_art_provider_1ad495a398a67be326541a59063682fb57" kindref="member">GetMinimisedPanelMinimumSize()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="536"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a6271fda02361a91c508972d13647a228" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawButtonBarBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawButtonBarBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draw the background for a <ref refid="classwx_ribbon_button_bar" kindref="compound">wxRibbonButtonBar</ref> control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto (which will typically be the button bar itself, though this is not guaranteed). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="552"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1aa465a3894f4d46f9b1bad349e1099e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawButtonBarButton</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect, wxRibbonButtonBarButtonKind kind, long state, const wxString &amp;label, const wxBitmap &amp;bitmap_large, const wxBitmap &amp;bitmap_small)=0</argsstring>
+        <name>DrawButtonBarButton</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>wxRibbonButtonBarButtonKind</type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap_large</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap_small</declname>
+        </param>
+        <briefdescription>
+<para>Draw a single button for a <ref refid="classwx_ribbon_button_bar" kindref="compound">wxRibbonButtonBar</ref> control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. The size of this rectangle will be a size previously returned by <ref refid="classwx_ribbon_art_provider_1a848d2c74d291caec0d21f2d0c41a1766" kindref="member">GetButtonBarButtonSize()</ref>, and the rectangle will be entirely within a rectangle on the same device context previously painted with <ref refid="classwx_ribbon_art_provider_1a6271fda02361a91c508972d13647a228" kindref="member">DrawButtonBarBackground()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The kind of button to draw (normal, dropdown or hybrid). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Combination of a size flag and state flags from the wxRibbonButtonBarButtonState enumeration. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The label of the button. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap_large</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The large bitmap of the button (or the large disabled bitmap when wxRIBBON_BUTTONBAR_BUTTON_DISABLED is set in <emphasis>state</emphasis>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap_small</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The small bitmap of the button (or the small disabled bitmap when wxRIBBON_BUTTONBAR_BUTTON_DISABLED is set in <emphasis>state</emphasis>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="588"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1aa73ed5659bf7130cd53746a7ef67f9a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawToolBarBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawToolBarBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draw the background for a <ref refid="classwx_ribbon_tool_bar" kindref="compound">wxRibbonToolBar</ref> control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The which is being drawn onto. In most cases this will be a <ref refid="classwx_ribbon_tool_bar" kindref="compound">wxRibbonToolBar</ref>, but it doesn&apos;t have to be. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. Some of this rectangle will later be drawn over using <ref refid="classwx_ribbon_art_provider_1a27d75cf08c75157439b6cb302cc82bec" kindref="member">DrawToolGroupBackground()</ref> and <ref refid="classwx_ribbon_art_provider_1a1ef15193ceae62665fe17c207db69677" kindref="member">DrawTool()</ref>, but not all of it will (unless there is only a single group of tools). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="607"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a27d75cf08c75157439b6cb302cc82bec" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawToolGroupBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawToolGroupBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draw the background for a group of tools on a <ref refid="classwx_ribbon_tool_bar" kindref="compound">wxRibbonToolBar</ref> control. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto. In most cases this will be a <ref refid="classwx_ribbon_tool_bar" kindref="compound">wxRibbonToolBar</ref>, but it doesn&apos;t have to be. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. This rectangle is a union of the individual tools&apos; rectangles. As there are no gaps between tools, this rectangle will be painted over exactly once by calls to <ref refid="classwx_ribbon_art_provider_1a1ef15193ceae62665fe17c207db69677" kindref="member">DrawTool()</ref>. The group background could therefore be painted by <ref refid="classwx_ribbon_art_provider_1a1ef15193ceae62665fe17c207db69677" kindref="member">DrawTool()</ref>, though it can be conceptually easier and more efficient to draw it all at once here. The rectangle will be entirely within a rectangle on the same device context previously painted with <ref refid="classwx_ribbon_art_provider_1aa73ed5659bf7130cd53746a7ef67f9a3" kindref="member">DrawToolBarBackground()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="630"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a1ef15193ceae62665fe17c207db69677" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::DrawTool</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRect &amp;rect, const wxBitmap &amp;bitmap, wxRibbonButtonKind kind, long state)=0</argsstring>
+        <name>DrawTool</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Draw a single tool (for a <ref refid="classwx_ribbon_tool_bar" kindref="compound">wxRibbonToolBar</ref> control). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The device context to draw onto. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window which is being drawn onto. In most cases this will be a <ref refid="classwx_ribbon_tool_bar" kindref="compound">wxRibbonToolBar</ref>, but it doesn&apos;t have to be. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within which to draw. The size of this rectangle will at least the size returned by <ref refid="classwx_ribbon_art_provider_1af8b23b6097865cfbf3255a791ea7c368" kindref="member">GetToolSize()</ref>, and the height of it will be equal for all tools within the same group. The rectangle will be entirely within a rectangle on the same device context previously painted with <ref refid="classwx_ribbon_art_provider_1a27d75cf08c75157439b6cb302cc82bec" kindref="member">DrawToolGroupBackground()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitmap to use as the tool&apos;s foreground. If the tool is a hybrid or dropdown tool, then the foreground should also contain a standard dropdown button. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The kind of tool to draw (normal, dropdown, or hybrid). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of wxRibbonToolBarToolState flags giving the state of the tool and it&apos;s relative position within a tool group. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="662"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a231e0a24c4eca119c99cef80d749f247" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxRibbonArtProvider::GetBarTabWidth</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxString &amp;label, const wxBitmap &amp;bitmap, int *ideal, int *small_begin_need_separator, int *small_must_have_separator, int *minimum)=0</argsstring>
+        <name>GetBarTabWidth</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>ideal</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>small_begin_need_separator</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>small_must_have_separator</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>minimum</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the ideal and minimum width (in pixels) of a tab in a ribbon bar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use when one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window onto which the tab will eventually be drawn. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tab&apos;s label (or wxEmptyString if it has none). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tab&apos;s icon (or wxNullBitmap if it has none). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ideal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ideal width (in pixels) of the tab. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">small_begin_need_separator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A size less than the <emphasis>ideal</emphasis> size, at which a tab separator should begin to be drawn (i.e. drawn, but still fairly transparent). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">small_must_have_separator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A size less than the <emphasis>small_begin_need_separator</emphasis> size, at which a tab separator must be drawn (i.e. drawn at full opacity). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">minimum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A size less than the <emphasis>small_must_have_separator</emphasis> size, and greater than or equal to zero, which is the minimum pixel width for the tab. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="696"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a0409f65a0bf21ebbec064a802d144f78" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int wxRibbonArtProvider::GetTabCtrlHeight</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, const wxRibbonPageTabInfoArray &amp;pages)=0</argsstring>
+        <name>GetTabCtrlHeight</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>const wxRibbonPageTabInfoArray &amp;</type>
+          <declname>pages</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the height (in pixels) of the tab region of a ribbon bar. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that as the tab region can contain scroll buttons, the height should be greater than or equal to the minimum height for a tab scroll button.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use when one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window onto which the tabs will eventually be drawn. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pages</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tabs which will acquire the returned height. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="714"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a55e55a4a05d19fd555f85f71502ea84a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxRibbonArtProvider::GetScrollButtonMinimumSize</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, long style)=0</argsstring>
+        <name>GetScrollButtonMinimumSize</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the minimum size (in pixels) of a scroll button. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use when one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window onto which the scroll button will eventually be drawn. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of flags from <ref refid="art_8h_1af1a48dec08a6e9f2501acbf98d545ab1" kindref="member">wxRibbonScrollButtonStyle</ref>, including a direction, and a for flag (state flags may be given too, but should be ignored, as a button should retain a constant size, regardless of its state). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="732"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1ad73b98f0673ac6e72b768baac9caf38c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxRibbonArtProvider::GetPanelSize</definition>
+        <argsstring>(wxDC &amp;dc, const wxRibbonPanel *wnd, wxSize client_size, wxPoint *client_offset)=0</argsstring>
+        <name>GetPanelSize</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_ribbon_panel" kindref="compound">wxRibbonPanel</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>client_size</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_point" kindref="compound">wxPoint</ref> *</type>
+          <declname>client_offset</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the size of a panel for a given client size. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should increment the given size by enough to fit the panel label and other chrome.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use if one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ribbon panel in question. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>client_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client size. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">client_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset where the client rectangle begins within the panel (may be NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_art_provider_1a91de8ee36cdbb22bc8af726611a40adb" kindref="member">GetPanelClientSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="755"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a91de8ee36cdbb22bc8af726611a40adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxRibbonArtProvider::GetPanelClientSize</definition>
+        <argsstring>(wxDC &amp;dc, const wxRibbonPanel *wnd, wxSize size, wxPoint *client_offset)=0</argsstring>
+        <name>GetPanelClientSize</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_ribbon_panel" kindref="compound">wxRibbonPanel</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_point" kindref="compound">wxPoint</ref> *</type>
+          <declname>client_offset</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the client size of a panel for a given overall size. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should act as the inverse to <ref refid="classwx_ribbon_art_provider_1ad73b98f0673ac6e72b768baac9caf38c" kindref="member">GetPanelSize()</ref>, and decrement the given size by enough to fit the panel label and other chrome.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use if one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ribbon panel in question. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The overall size to calculate client size for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">client_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset where the returned client size begins within the given <emphasis>size</emphasis> (may be NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_art_provider_1ad73b98f0673ac6e72b768baac9caf38c" kindref="member">GetPanelSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="778"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a622a74a205eb1b13af29bfed8e705dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxRibbonArtProvider::GetGallerySize</definition>
+        <argsstring>(wxDC &amp;dc, const wxRibbonGallery *wnd, wxSize client_size)=0</argsstring>
+        <name>GetGallerySize</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>client_size</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the size of a <ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> control for a given client size. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should increment the given size by enough to fit the gallery border, buttons, and any other chrome.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use if one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gallery in question. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>client_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client size.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_art_provider_1abb0f2d7564900953a406ea3518108c97" kindref="member">GetGalleryClientSize()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="797"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1abb0f2d7564900953a406ea3518108c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxRibbonArtProvider::GetGalleryClientSize</definition>
+        <argsstring>(wxDC &amp;dc, const wxRibbonGallery *wnd, wxSize size, wxPoint *client_offset, wxRect *scroll_up_button, wxRect *scroll_down_button, wxRect *extension_button)=0</argsstring>
+        <name>GetGalleryClientSize</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_point" kindref="compound">wxPoint</ref> *</type>
+          <declname>client_offset</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> *</type>
+          <declname>scroll_up_button</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> *</type>
+          <declname>scroll_down_button</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> *</type>
+          <declname>extension_button</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the client size of a <ref refid="classwx_ribbon_gallery" kindref="compound">wxRibbonGallery</ref> control for a given size. </para>        </briefdescription>
+        <detaileddescription>
+<para>This should act as the inverse to <ref refid="classwx_ribbon_art_provider_1a622a74a205eb1b13af29bfed8e705dd2" kindref="member">GetGallerySize()</ref>, and decrement the given size by enough to fir the gallery border, buttons, and other chrome.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use if one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gallery in question. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The overall size to calculate the client size for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">client_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position within the given size at which the returned client size begins. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">scroll_up_button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within the given size which the scroll up button occupies. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">scroll_down_button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within the given size which the scroll down button occupies. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">extension_button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle within the given size which the extension button occupies. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="831"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1acdc605f1e231f47a4d247c7e41b8e3e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
+        <definition>virtual wxRect wxRibbonArtProvider::GetPageBackgroundRedrawArea</definition>
+        <argsstring>(wxDC &amp;dc, const wxRibbonPage *wnd, wxSize page_old_size, wxSize page_new_size)=0</argsstring>
+        <name>GetPageBackgroundRedrawArea</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_ribbon_page" kindref="compound">wxRibbonPage</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>page_old_size</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>page_new_size</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the portion of a page background which needs to be redrawn when a page is resized. </para>        </briefdescription>
+        <detaileddescription>
+<para>To optimise the drawing of page backgrounds, as small an area as possible should be returned. Of course, if the way in which a background is drawn means that the entire background needs to be repainted on resize, then the entire new size should be returned.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use when one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The page which is being resized. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>page_old_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the page prior to the resize (which has already been painted). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>page_new_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the page after the resize. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="854"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1a848d2c74d291caec0d21f2d0c41a1766" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool wxRibbonArtProvider::GetButtonBarButtonSize</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, wxRibbonButtonBarButtonKind kind, wxRibbonButtonBarButtonState size, const wxString &amp;label, wxSize bitmap_size_large, wxSize bitmap_size_small, wxSize *button_size, wxRect *normal_region, wxRect *dropdown_region)=0</argsstring>
+        <name>GetButtonBarButtonSize</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type>wxRibbonButtonBarButtonKind</type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type><ref refid="buttonbar_8h_1abcc37993f6b41cbfd92091c612368eda" kindref="member">wxRibbonButtonBarButtonState</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>bitmap_size_large</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>bitmap_size_small</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref> *</type>
+          <declname>button_size</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> *</type>
+          <declname>normal_region</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> *</type>
+          <declname>dropdown_region</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the size of a button within a <ref refid="classwx_ribbon_button_bar" kindref="compound">wxRibbonButtonBar</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use when one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window onto which the button will eventually be drawn (which is normally a <ref refid="classwx_ribbon_button_bar" kindref="compound">wxRibbonButtonBar</ref>, though this is not guaranteed). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The kind of button. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size-class to calculate the size for. Buttons on a button bar can have three distinct sizes: wxRIBBON_BUTTONBAR_BUTTON_SMALL, wxRIBBON_BUTTONBAR_BUTTON_MEDIUM, and wxRIBBON_BUTTONBAR_BUTTON_LARGE. If the requested size-class is not applicable, then false should be returned. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The label of the button. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap_size_large</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of all &quot;large&quot; bitmaps on the button bar. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap_size_small</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of all &quot;small&quot; bitmaps on the button bar. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">button_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size, in pixels, of the button. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">normal_region</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The region of the button which constitutes the normal button. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dropdown_region</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The region of the button which constitutes the dropdown button.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a size exists for the button, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="897"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1ad495a398a67be326541a59063682fb57" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxRibbonArtProvider::GetMinimisedPanelMinimumSize</definition>
+        <argsstring>(wxDC &amp;dc, const wxRibbonPanel *wnd, wxSize *desired_bitmap_size, wxDirection *expanded_panel_direction)=0</argsstring>
+        <name>GetMinimisedPanelMinimumSize</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_ribbon_panel" kindref="compound">wxRibbonPanel</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref> *</type>
+          <declname>desired_bitmap_size</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556" kindref="member">wxDirection</ref> *</type>
+          <declname>expanded_panel_direction</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the size of a minimised ribbon panel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use when one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ribbon panel in question. Attributes like the panel label can be queried from this. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">desired_bitmap_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional parameter which is filled with the size of the bitmap suitable for a minimised ribbon panel. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">expanded_panel_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional parameter which is filled with the direction of the minimised panel (<computeroutput>wxEAST</computeroutput> or <computeroutput>wxSOUTH</computeroutput> depending on the style). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="918"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_ribbon_art_provider_1af8b23b6097865cfbf3255a791ea7c368" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+        <definition>virtual wxSize wxRibbonArtProvider::GetToolSize</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *wnd, wxSize bitmap_size, wxRibbonButtonKind kind, bool is_first, bool is_last, wxRect *dropdown_region)=0</argsstring>
+        <name>GetToolSize</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>wnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
+          <declname>bitmap_size</declname>
+        </param>
+        <param>
+          <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_first</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_last</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_rect" kindref="compound">wxRect</ref> *</type>
+          <declname>dropdown_region</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the size of a tool within a <ref refid="classwx_ribbon_tool_bar" kindref="compound">wxRibbonToolBar</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device context to use when one is required for size calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window onto which the tool will eventually be drawn. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitmap_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the tool&apos;s foreground bitmap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The kind of tool (normal, dropdown, or hybrid). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>is_first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the tool is the first within its group. false otherwise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>is_last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the tool is the last within its group. false otherwise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dropdown_region</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>For dropdown and hybrid tools, the region within the returned size which counts as the dropdown part. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="946"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_ribbon_art_provider" kindref="compound">wxRibbonArtProvider</ref> is responsible for drawing all the components of the ribbon interface. </para>    </briefdescription>
+    <detaileddescription>
+<para>This allows a ribbon bar to have a pluggable look-and-feel, while retaining the same underlying behaviour. As a single art provider is used for all ribbon components, a ribbon bar usually has a consistent (though unique) appearance.</para><para>By default, a <ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> uses an instance of this class called <computeroutput>wxRibbonDefaultArtProvider</computeroutput>, which resolves to <computeroutput>wxRibbonAUIArtProvider</computeroutput>, <computeroutput>wxRibbonMSWArtProvider</computeroutput>, or <computeroutput>wxRibbonOSXArtProvider</computeroutput> - whichever is most appropriate to the current platform. These art providers are all slightly configurable with regard to colours and fonts, but for larger modifications, you can derive from one of these classes, or write a completely new art provider class. Call <ref refid="classwx_ribbon_bar_1adba2da31cb9ec4b9f0e80629c96ea691" kindref="member">wxRibbonBar::SetArtProvider</ref> to change the art provider being used.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref></para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" line="208" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/art.h" bodystart="207" bodyend="947"/>
+    <listofallmembers>
+      <member refid="classwx_ribbon_art_provider_1a7d5c4aedb277c10201b8594f780e6f67" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>Clone</name></member>
+      <member refid="classwx_ribbon_art_provider_1a6271fda02361a91c508972d13647a228" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawButtonBarBackground</name></member>
+      <member refid="classwx_ribbon_art_provider_1aa465a3894f4d46f9b1bad349e1099e0a" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawButtonBarButton</name></member>
+      <member refid="classwx_ribbon_art_provider_1ad41db7f3891c8b541ef1cc6e9add15f8" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawGalleryBackground</name></member>
+      <member refid="classwx_ribbon_art_provider_1a3d52bff64e7fbcf1a56a11c552008a34" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawGalleryItemBackground</name></member>
+      <member refid="classwx_ribbon_art_provider_1a32378494458223326d70261ea3afbd6a" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawMinimisedPanel</name></member>
+      <member refid="classwx_ribbon_art_provider_1ab579704095f947e7bdffd84d142e1902" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawPageBackground</name></member>
+      <member refid="classwx_ribbon_art_provider_1a200c597d607ba3bd95a7038236658af0" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawPanelBackground</name></member>
+      <member refid="classwx_ribbon_art_provider_1aee81b27bd880ee8681682919fdb7a01d" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawScrollButton</name></member>
+      <member refid="classwx_ribbon_art_provider_1a103f0d6af1d9431623361d6818e83745" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawTab</name></member>
+      <member refid="classwx_ribbon_art_provider_1a0cdf421efa57fc932fcabd4095da5974" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawTabCtrlBackground</name></member>
+      <member refid="classwx_ribbon_art_provider_1a65db56a6fb82fc47fa27d39bbdd6f697" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawTabSeparator</name></member>
+      <member refid="classwx_ribbon_art_provider_1a1ef15193ceae62665fe17c207db69677" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawTool</name></member>
+      <member refid="classwx_ribbon_art_provider_1aa73ed5659bf7130cd53746a7ef67f9a3" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawToolBarBackground</name></member>
+      <member refid="classwx_ribbon_art_provider_1a27d75cf08c75157439b6cb302cc82bec" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>DrawToolGroupBackground</name></member>
+      <member refid="classwx_ribbon_art_provider_1a231e0a24c4eca119c99cef80d749f247" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetBarTabWidth</name></member>
+      <member refid="classwx_ribbon_art_provider_1a848d2c74d291caec0d21f2d0c41a1766" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetButtonBarButtonSize</name></member>
+      <member refid="classwx_ribbon_art_provider_1a90056470545d7c4d6a8e44439d8e51f7" prot="public" virt="non-virtual"><scope>wxRibbonArtProvider</scope><name>GetColor</name></member>
+      <member refid="classwx_ribbon_art_provider_1ad048e9bd640c22f88ac94031052d9e57" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetColour</name></member>
+      <member refid="classwx_ribbon_art_provider_1a23498380fde981a820c37ce40eabe651" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetColourScheme</name></member>
+      <member refid="classwx_ribbon_art_provider_1a4ec0f9caed973d4eea3f2c61708d9473" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetFlags</name></member>
+      <member refid="classwx_ribbon_art_provider_1a793d17d671afaac75273f2934bd56495" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetFont</name></member>
+      <member refid="classwx_ribbon_art_provider_1abb0f2d7564900953a406ea3518108c97" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetGalleryClientSize</name></member>
+      <member refid="classwx_ribbon_art_provider_1a622a74a205eb1b13af29bfed8e705dd2" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetGallerySize</name></member>
+      <member refid="classwx_ribbon_art_provider_1a560bcaebdbea38f8a5bf2e7fb5be0a92" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetMetric</name></member>
+      <member refid="classwx_ribbon_art_provider_1ad495a398a67be326541a59063682fb57" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetMinimisedPanelMinimumSize</name></member>
+      <member refid="classwx_ribbon_art_provider_1acdc605f1e231f47a4d247c7e41b8e3e3" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetPageBackgroundRedrawArea</name></member>
+      <member refid="classwx_ribbon_art_provider_1a91de8ee36cdbb22bc8af726611a40adb" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetPanelClientSize</name></member>
+      <member refid="classwx_ribbon_art_provider_1ad73b98f0673ac6e72b768baac9caf38c" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetPanelSize</name></member>
+      <member refid="classwx_ribbon_art_provider_1a55e55a4a05d19fd555f85f71502ea84a" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetScrollButtonMinimumSize</name></member>
+      <member refid="classwx_ribbon_art_provider_1a0409f65a0bf21ebbec064a802d144f78" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetTabCtrlHeight</name></member>
+      <member refid="classwx_ribbon_art_provider_1af8b23b6097865cfbf3255a791ea7c368" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>GetToolSize</name></member>
+      <member refid="classwx_ribbon_art_provider_1a710c582dac748afbfd33d5524749a8eb" prot="public" virt="non-virtual"><scope>wxRibbonArtProvider</scope><name>SetColor</name></member>
+      <member refid="classwx_ribbon_art_provider_1ab0f69278adbfabd03df9e5ee0b8b3679" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>SetColour</name></member>
+      <member refid="classwx_ribbon_art_provider_1a027db8d45ff72b2f8df164dc79c3eb87" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>SetColourScheme</name></member>
+      <member refid="classwx_ribbon_art_provider_1ad5f47ae6b9c2d4c67b931e48a71befa3" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>SetFlags</name></member>
+      <member refid="classwx_ribbon_art_provider_1ac225e7587c06fffdaadb306cafc153fa" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>SetFont</name></member>
+      <member refid="classwx_ribbon_art_provider_1af0bc8f57e0016f0a9d1501fa9499c616" prot="public" virt="pure-virtual"><scope>wxRibbonArtProvider</scope><name>SetMetric</name></member>
+      <member refid="classwx_ribbon_art_provider_1a114852d7b22df26812bbf19bac981e26" prot="public" virt="non-virtual"><scope>wxRibbonArtProvider</scope><name>wxRibbonArtProvider</name></member>
+      <member refid="classwx_ribbon_art_provider_1a392b91dde5089fc50580f6303f8f7e15" prot="public" virt="virtual"><scope>wxRibbonArtProvider</scope><name>~wxRibbonArtProvider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

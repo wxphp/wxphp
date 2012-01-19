@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="control_8h" kind="file">
+    <compoundname>control.h</compoundname>
+    <innerclass refid="classwx_control" prot="public">wxControl</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="control_8h_1ad7c89373a31bffb2388cfa2b98abea39" prot="public" static="no">
+        <name>wxEllipsizeFlags</name>
+        <enumvalue id="control_8h_1ad7c89373a31bffb2388cfa2b98abea39acee65715edbd26cde0a294b33a330d7a" prot="public">
+          <name>wxELLIPSIZE_FLAGS_NONE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>No special flags. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="control_8h_1ad7c89373a31bffb2388cfa2b98abea39ac52490f0265d4093a96aeb6d550facfe" prot="public">
+          <name>wxELLIPSIZE_FLAGS_PROCESS_MNEMONICS</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>Take mnemonics into account when calculating the text width. </para>          </briefdescription>
+          <detaileddescription>
+<para>With this flag when calculating the size of the passed string, mnemonics characters (see <ref refid="classwx_control_1a2c2ae20554e7db5e765f163022ce09c0" kindref="member">wxControl::SetLabel</ref>) will be automatically reduced to a single character. This leads to correct calculations only if the string passed to Ellipsize() will be used with <ref refid="classwx_control_1a2c2ae20554e7db5e765f163022ce09c0" kindref="member">wxControl::SetLabel</ref>. If you don&apos;t want ampersand to be interpreted as mnemonics (e.g. because you use <ref refid="classwx_control_1ae092899c3fe658831a9c796755a65eb7" kindref="member">wxControl::SetLabelText</ref>) then don&apos;t use this flag. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="control_8h_1ad7c89373a31bffb2388cfa2b98abea39a15694cb026251ddc3452e14b6dcc7b08" prot="public">
+          <name>wxELLIPSIZE_FLAGS_EXPAND_TABS</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>Expand tabs in spaces when calculating the text width. </para>          </briefdescription>
+          <detaileddescription>
+<para>This flag tells <ref refid="classwx_control_1a0bb834cae2a8986aceddb89f84ef4ed1" kindref="member">wxControl::Ellipsize()</ref> to calculate the width of tab characters <computeroutput>&apos;\t&apos;</computeroutput> as 6 spaces. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="control_8h_1ad7c89373a31bffb2388cfa2b98abea39acf249cd72de81f7da28aecb146975722" prot="public">
+          <name>wxELLIPSIZE_FLAGS_DEFAULT</name>
+          <initializer> wxELLIPSIZE_FLAGS_PROCESS_MNEMONICS|
+                                wxELLIPSIZE_FLAGS_EXPAND_TABS</initializer>
+          <briefdescription>
+<para>The default flags for <ref refid="classwx_control_1a0bb834cae2a8986aceddb89f84ef4ed1" kindref="member">wxControl::Ellipsize</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags used by <ref refid="classwx_control_1a0bb834cae2a8986aceddb89f84ef4ed1" kindref="member">wxControl::Ellipsize</ref> function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h" bodystart="12" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="control_8h_1a0293befa07fe89f6efd8caec89c3b489" prot="public" static="no">
+        <name>wxEllipsizeMode</name>
+        <enumvalue id="control_8h_1a0293befa07fe89f6efd8caec89c3b489ae4c8bd13c9e9c6af29a618bc7a554a3a" prot="public">
+          <name>wxELLIPSIZE_NONE</name>
+          <briefdescription>
+<para>Don&apos;t ellipsize the text at all. </para>          </briefdescription>
+          <detaileddescription>
+<para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="control_8h_1a0293befa07fe89f6efd8caec89c3b489ad2d48fa3b9b8efd6032a6a4fb3cc040f" prot="public">
+          <name>wxELLIPSIZE_START</name>
+          <briefdescription>
+<para>Put the ellipsis at the start of the string, if the string needs ellipsization. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="control_8h_1a0293befa07fe89f6efd8caec89c3b489ab003e35ed1323293486f49977758443c" prot="public">
+          <name>wxELLIPSIZE_MIDDLE</name>
+          <briefdescription>
+<para>Put the ellipsis in the middle of the string, if the string needs ellipsization. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="control_8h_1a0293befa07fe89f6efd8caec89c3b489afffc4ee1338574f3877f35c78080e6e3" prot="public">
+          <name>wxELLIPSIZE_END</name>
+          <briefdescription>
+<para>Put the ellipsis at the end of the string, if the string needs ellipsization. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The different ellipsization modes supported by the <ref refid="classwx_control_1a0bb834cae2a8986aceddb89f84ef4ed1" kindref="member">wxControl::Ellipsize</ref> function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h" bodystart="48" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/control.h"/>
+  </compounddef>
+</doxygen>

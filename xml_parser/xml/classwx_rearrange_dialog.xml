@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_rearrange_dialog" kind="class" prot="public">
+    <compoundname>wxRearrangeDialog</compoundname>
+    <includes local="no">wx/rearrangectrl.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_rearrange_dialog_1ad230c6d3baf27e7d3f516a37e62e0d58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRearrangeDialog::wxRearrangeDialog</definition>
+        <argsstring>()</argsstring>
+        <name>wxRearrangeDialog</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_rearrange_dialog_1ae6bddbc5d1fc41031f518a266f62591b" kindref="member">Create()</ref> must be called later to effectively create the control. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rearrange_dialog_1ad91c63bf702f87b4727994d255743719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxRearrangeDialog::wxRearrangeDialog</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;message, const wxString &amp;title, const wxArrayInt &amp;order, const wxArrayString &amp;items, const wxPoint &amp;pos=wxDefaultPosition, const wxString &amp;name=wxRearrangeDialogNameStr)</argsstring>
+        <name>wxRearrangeDialog</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+          <defval><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval>wxRearrangeDialogNameStr</defval>
+        </param>
+        <briefdescription>
+<para>Constructor creating the dialog. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please see <ref refid="classwx_rearrange_dialog_1ae6bddbc5d1fc41031f518a266f62591b" kindref="member">Create()</ref> for the parameters description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rearrange_dialog_1ae6bddbc5d1fc41031f518a266f62591b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxRearrangeDialog::Create</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;message, const wxString &amp;title, const wxArrayInt &amp;order, const wxArrayString &amp;items, const wxPoint &amp;pos=wxDefaultPosition, const wxString &amp;name=wxRearrangeDialogNameStr)</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+          <defval><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval>wxRearrangeDialogNameStr</defval>
+        </param>
+        <briefdescription>
+<para>Effectively creates the dialog for an object created using the default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dialog parent, possibly NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message shown inside the dialog itself, above the items list. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial order of the items in the convention used by <ref refid="classwx_rearrange_list" kindref="compound">wxRearrangeList</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The items to show in the dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional dialog position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional dialog name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the dialog was successfully created or false if creation failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rearrange_dialog_1af3f804a35d4df4c22546d80c691474d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxRearrangeDialog::AddExtraControls</definition>
+        <argsstring>(wxWindow *win)</argsstring>
+        <name>AddExtraControls</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <briefdescription>
+<para>Customize the dialog by adding extra controls to it. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function adds the given <emphasis>win</emphasis> to the dialog, putting it just below the part occupied by <ref refid="classwx_rearrange_ctrl" kindref="compound">wxRearrangeCtrl</ref>. It must be called after creating the dialog and you will typically need to process the events generated by the extra controls for them to do something useful.</para><para>For example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyRearrangeDialog<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classwx_rearrange_dialog" kindref="compound" tooltip="A dialog allowing the user to rearrange the specified items.">wxRearrangeDialog</ref></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyRearrangeDialog(<ref refid="classwx_window" kindref="compound" tooltip="wxWindow is the base class for all windows and represents any visible object on screen...">wxWindow</ref><sp/>*parent,<sp/>...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classwx_rearrange_dialog" kindref="compound" tooltip="A dialog allowing the user to rearrange the specified items.">wxRearrangeDialog</ref>(parent,<sp/>...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_panel" kindref="compound" tooltip="A panel is a window on which controls are placed.">wxPanel</ref><sp/>*panel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_panel" kindref="compound" tooltip="A panel is a window on which controls are placed.">wxPanel</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_sizer" kindref="compound" tooltip="wxSizer is the abstract base class used for laying out subwindows in a window.">wxSizer</ref><sp/>*sizer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971ab96154c324ed87cc17e9b227f9248c77" kindref="member">wxHORIZONTAL</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_static_text" kindref="compound" tooltip="A static text control displays one or more lines of read-only text.">wxStaticText</ref>(panel,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Column<sp/>width<sp/>in<sp/>pixels:&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizer-&gt;<ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member" tooltip="Appends a child to the sizer.">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref>(panel,<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba1f375b01ea03a713bbb7e32a36a2589c" kindref="member" tooltip="Any id: means that we don&amp;#39;t care about the id, whether when installing an event...">wxID_ANY</ref>,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel-&gt;<ref refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" kindref="member" tooltip="Sets the window to have the given layout sizer.">SetSizer</ref>(sizer);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_rearrange_dialog_1af3f804a35d4df4c22546d80c691474d3" kindref="member" tooltip="Customize the dialog by adding extra controls to it.">AddExtraControls</ref>(panel);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...<sp/>code<sp/>to<sp/>update<sp/>the<sp/>text<sp/>control<sp/>with<sp/>the<sp/>currently<sp/>selected</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>width<sp/>and<sp/>to<sp/>react<sp/>to<sp/>its<sp/>changes<sp/>omitted<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para>See also the complete example of a custom rearrange dialog in the dialogs sample.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>win</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window containing the extra controls. It must have this dialog as its parent. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="363"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rearrange_dialog_1af71529585b2dd1cd8805255d57cc13f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_rearrange_list" kindref="compound">wxRearrangeList</ref> *</type>
+        <definition>wxRearrangeList* wxRearrangeDialog::GetList</definition>
+        <argsstring>() const </argsstring>
+        <name>GetList</name>
+        <briefdescription>
+<para>Return the list control used by the dialog. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_rearrange_ctrl_1a96a66c0c2bf1135d12a9e7902b050356" kindref="member">wxRearrangeCtrl::GetList()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_rearrange_dialog_1a9891a64bf392de430c790ad773799b55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
+        <definition>wxArrayInt wxRearrangeDialog::GetOrder</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOrder</name>
+        <briefdescription>
+<para>Return the array describing the order of items after it was modified by the user. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please notice that the array will contain negative items if any items were unchecked. See <ref refid="classwx_rearrange_list" kindref="compound">wxRearrangeList</ref> for more information about the convention used for this array. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="380"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A dialog allowing the user to rearrange the specified items. </para>    </briefdescription>
+    <detaileddescription>
+<para>This dialog can be used to allow the user to modify the order of the items and to enable or disable them individually. For example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_array_string" kindref="compound" tooltip="wxArrayString is an efficient container for storing wxString objects.">wxArrayString</ref><sp/>items;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items.push_back(</highlight><highlight class="stringliteral">&quot;meat&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items.push_back(</highlight><highlight class="stringliteral">&quot;fish&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items.push_back(</highlight><highlight class="stringliteral">&quot;fruits&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items.push_back(</highlight><highlight class="stringliteral">&quot;beer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member" tooltip="Predefined specialization of wxArray&amp;lt;T&amp;gt; for standard types.">wxArrayInt</ref><sp/>order;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order.push_back(3);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order.push_back(0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order.push_back(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order.push_back(2);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_rearrange_dialog" kindref="compound" tooltip="A dialog allowing the user to rearrange the specified items.">wxRearrangeDialog</ref><sp/>dlg(NULL,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;You<sp/>can<sp/>also<sp/>uncheck<sp/>the<sp/>items<sp/>you<sp/>don&apos;t<sp/>like<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;at<sp/>all.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Sort<sp/>the<sp/>items<sp/>in<sp/>order<sp/>of<sp/>preference&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order,<sp/>items);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dlg.ShowModal()<sp/>==<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbbaeeb1bdf97306d7f0fdffb62c8af3d02f" kindref="member" tooltip="Standard button and menu IDs.">wxID_OK</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order<sp/>=<sp/>dlg.GetOrder();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>0;<sp/>n<sp/>&lt;<sp/>order.size();<sp/>n++<sp/>)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>order[n]<sp/>&gt;=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member" tooltip="For all normal, informational messages.">wxLogMessage</ref>(</highlight><highlight class="stringliteral">&quot;Your<sp/>most<sp/>preferred<sp/>item<sp/>is<sp/>\&quot;%s\&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items[order[n]]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="273" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" bodystart="272" bodyend="381"/>
+    <listofallmembers>
+      <member refid="classwx_rearrange_dialog_1af3f804a35d4df4c22546d80c691474d3" prot="public" virt="non-virtual"><scope>wxRearrangeDialog</scope><name>AddExtraControls</name></member>
+      <member refid="classwx_rearrange_dialog_1ae6bddbc5d1fc41031f518a266f62591b" prot="public" virt="non-virtual"><scope>wxRearrangeDialog</scope><name>Create</name></member>
+      <member refid="classwx_rearrange_dialog_1af71529585b2dd1cd8805255d57cc13f1" prot="public" virt="non-virtual"><scope>wxRearrangeDialog</scope><name>GetList</name></member>
+      <member refid="classwx_rearrange_dialog_1a9891a64bf392de430c790ad773799b55" prot="public" virt="non-virtual"><scope>wxRearrangeDialog</scope><name>GetOrder</name></member>
+      <member refid="classwx_rearrange_dialog_1ad230c6d3baf27e7d3f516a37e62e0d58" prot="public" virt="non-virtual"><scope>wxRearrangeDialog</scope><name>wxRearrangeDialog</name></member>
+      <member refid="classwx_rearrange_dialog_1ad91c63bf702f87b4727994d255743719" prot="public" virt="non-virtual"><scope>wxRearrangeDialog</scope><name>wxRearrangeDialog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_aui_dock_art" kind="class" prot="public">
+    <compoundname>wxAuiDockArt</compoundname>
+    <includes local="no">wx/aui/dockart.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_aui_dock_art_1a0d9ee21f95d11ff50b50e5a4e3d5e2c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxAuiDockArt::wxAuiDockArt</definition>
+        <argsstring>()</argsstring>
+        <name>wxAuiDockArt</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1acbcfd4caba9681f99b80da29e1fa5809" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxAuiDockArt::~wxAuiDockArt</definition>
+        <argsstring>()</argsstring>
+        <name>~wxAuiDockArt</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a9bac6e12be7cc862edfb71d115c6a022" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::DrawBackground</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *window, int orientation, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawBackground</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>orientation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draws a background. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1ae889690f8f9ccc46a45fa3c11a2030b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::DrawBorder</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *window, const wxRect &amp;rect, wxAuiPaneInfo &amp;pane)=0</argsstring>
+        <name>DrawBorder</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> &amp;</type>
+          <declname>pane</declname>
+        </param>
+        <briefdescription>
+<para>Draws a border. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a2beeb9e8b4497cd0bd9120039969a73a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::DrawCaption</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *window, const wxString &amp;text, const wxRect &amp;rect, wxAuiPaneInfo &amp;pane)=0</argsstring>
+        <name>DrawCaption</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> &amp;</type>
+          <declname>pane</declname>
+        </param>
+        <briefdescription>
+<para>Draws a caption. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a443759a14c9808739cfec4c4f92d0e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::DrawGripper</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *window, const wxRect &amp;rect, wxAuiPaneInfo &amp;pane)=0</argsstring>
+        <name>DrawGripper</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> &amp;</type>
+          <declname>pane</declname>
+        </param>
+        <briefdescription>
+<para>Draws a gripper. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a63c5420456511a83b6646d44fc8c56ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::DrawPaneButton</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *window, int button, int button_state, const wxRect &amp;rect, wxAuiPaneInfo &amp;pane)=0</argsstring>
+        <name>DrawPaneButton</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>button_state</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> &amp;</type>
+          <declname>pane</declname>
+        </param>
+        <briefdescription>
+<para>Draws a button in the pane&apos;s title bar. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>button</emphasis> can be one of the values of <bold>wxAuiButtonId</bold>. <emphasis>button_state</emphasis> can be one of the values of <bold>wxAuiPaneButtonState</bold>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a412e8a03632e93ac7447a0083cd7d238" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::DrawSash</definition>
+        <argsstring>(wxDC &amp;dc, wxWindow *window, int orientation, const wxRect &amp;rect)=0</argsstring>
+        <name>DrawSash</name>
+        <param>
+          <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> &amp;</type>
+          <declname>dc</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>orientation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Draws a sash between two windows. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a210231fe31b1b0dafe6ea66bd4a28518" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
+        <definition>virtual wxColour wxAuiDockArt::GetColour</definition>
+        <argsstring>(int id)=0</argsstring>
+        <name>GetColour</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the colour of a certain setting. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the colour values of <bold>wxAuiPaneDockArtSetting</bold>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1ab3a4c743fc3168f054788e10e3100050" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
+        <definition>virtual wxFont wxAuiDockArt::GetFont</definition>
+        <argsstring>(int id)=0</argsstring>
+        <name>GetFont</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get a font setting. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1aea3a8a0b0eb98b9009e0b32e6cc7fd11" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int wxAuiDockArt::GetMetric</definition>
+        <argsstring>(int id)=0</argsstring>
+        <name>GetMetric</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the value of a certain setting. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the size values of <bold>wxAuiPaneDockArtSetting</bold>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a906319d1191daf62148f3fa25b6d1fcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::SetColour</definition>
+        <argsstring>(int id, const wxColour &amp;colour)=0</argsstring>
+        <name>SetColour</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+<para>Set a certain setting with the value <emphasis>colour</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the colour values of <bold>wxAuiPaneDockArtSetting</bold>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a66e1b9f358aa5ec62e1ecbb16a2225dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::SetFont</definition>
+        <argsstring>(int id, const wxFont &amp;font)=0</argsstring>
+        <name>SetFont</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Set a font setting. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_aui_dock_art_1a28e0bfc7853f098ba3bb551002e4ac03" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void wxAuiDockArt::SetMetric</definition>
+        <argsstring>(int id, int new_val)=0</argsstring>
+        <name>SetMetric</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>new_val</declname>
+        </param>
+        <briefdescription>
+<para>Set a certain setting with the value <emphasis>new_val</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>id</emphasis> can be one of the size values of <bold>wxAuiPaneDockArtSetting</bold>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="177"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_aui_dock_art" kindref="compound">wxAuiDockArt</ref> is part of the wxAUI class framework. </para>    </briefdescription>
+    <detaileddescription>
+<para>See also <ref refid="overview__aui" kindref="compound">wxAUI Overview</ref>.</para><para><ref refid="classwx_aui_dock_art" kindref="compound">wxAuiDockArt</ref> is the art provider: provides all drawing functionality to the wxAui dock manager. This allows the dock manager to have a plugable look-and-feel.</para><para>By default, a <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> uses an instance of this class called wxAuiDefaultDockArt which provides bitmap art and a colour scheme that is adapted to the major platforms&apos; look. You can either derive from that class to alter its behaviour or write a completely new dock art class. Call <ref refid="classwx_aui_manager_1ac9969d2f9dd5e4e0050d790ad0ac6bb7" kindref="member">wxAuiManager::SetArtProvider</ref> to force wxAUI to use your new dock art provider.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref>, <ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="94" bodyend="178"/>
+    <listofallmembers>
+      <member refid="classwx_aui_dock_art_1a9bac6e12be7cc862edfb71d115c6a022" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>DrawBackground</name></member>
+      <member refid="classwx_aui_dock_art_1ae889690f8f9ccc46a45fa3c11a2030b4" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>DrawBorder</name></member>
+      <member refid="classwx_aui_dock_art_1a2beeb9e8b4497cd0bd9120039969a73a" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>DrawCaption</name></member>
+      <member refid="classwx_aui_dock_art_1a443759a14c9808739cfec4c4f92d0e8d" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>DrawGripper</name></member>
+      <member refid="classwx_aui_dock_art_1a63c5420456511a83b6646d44fc8c56ee" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>DrawPaneButton</name></member>
+      <member refid="classwx_aui_dock_art_1a412e8a03632e93ac7447a0083cd7d238" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>DrawSash</name></member>
+      <member refid="classwx_aui_dock_art_1a210231fe31b1b0dafe6ea66bd4a28518" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>GetColour</name></member>
+      <member refid="classwx_aui_dock_art_1ab3a4c743fc3168f054788e10e3100050" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>GetFont</name></member>
+      <member refid="classwx_aui_dock_art_1aea3a8a0b0eb98b9009e0b32e6cc7fd11" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>GetMetric</name></member>
+      <member refid="classwx_aui_dock_art_1a906319d1191daf62148f3fa25b6d1fcc" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>SetColour</name></member>
+      <member refid="classwx_aui_dock_art_1a66e1b9f358aa5ec62e1ecbb16a2225dc" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>SetFont</name></member>
+      <member refid="classwx_aui_dock_art_1a28e0bfc7853f098ba3bb551002e4ac03" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>SetMetric</name></member>
+      <member refid="classwx_aui_dock_art_1a0d9ee21f95d11ff50b50e5a4e3d5e2c0" prot="public" virt="non-virtual"><scope>wxAuiDockArt</scope><name>wxAuiDockArt</name></member>
+      <member refid="classwx_aui_dock_art_1acbcfd4caba9681f99b80da29e1fa5809" prot="public" virt="virtual"><scope>wxAuiDockArt</scope><name>~wxAuiDockArt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

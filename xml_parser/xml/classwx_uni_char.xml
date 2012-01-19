@@ -1,0 +1,599 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_uni_char" kind="class" prot="public">
+    <compoundname>wxUniChar</compoundname>
+    <includes local="no">wx/unichar.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_uni_char_1a647fb6c5e9bf0bce95ad3593a99e6b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(char c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Create a character from the 8-bit character value <emphasis>c</emphasis> using the current locale encoding. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a3ab8194435662cb83a1f4b973b3f8074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(unsigned char c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Create a character from the 8-bit character value <emphasis>c</emphasis> using the current locale encoding. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_uni_char_1a40495a76028f6f2f8193994985f9c5b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator char</definition>
+        <argsstring>() const </argsstring>
+        <name>operator char</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1ac94ec868908df39c2e0d7fd9e6ce865e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator unsigned char</definition>
+        <argsstring>() const </argsstring>
+        <name>operator unsigned char</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a72eaa228a28100c69281a1b1306b30db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator wchar_t</definition>
+        <argsstring>() const </argsstring>
+        <name>operator wchar_t</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1ad316e691e9ca967ea4cb91ee8f174823" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator int</definition>
+        <argsstring>() const </argsstring>
+        <name>operator int</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a0538b7dd738ebb861ad1f79607fe2406" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator unsigned int</definition>
+        <argsstring>() const </argsstring>
+        <name>operator unsigned int</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1abd23dfd8f4bd1ff32fe1ed93c5762259" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator long int</definition>
+        <argsstring>() const </argsstring>
+        <name>operator long int</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a103207b53446c738889a20ec5a4d6f6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator unsigned long int</definition>
+        <argsstring>() const </argsstring>
+        <name>operator unsigned long int</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a17191c56143329ca69505308a8338d40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator short int</definition>
+        <argsstring>() const </argsstring>
+        <name>operator short int</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a42048feb60cd36003752f20961c9807e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::operator unsigned short int</definition>
+        <argsstring>() const </argsstring>
+        <name>operator unsigned short int</name>
+        <briefdescription>
+<para>Conversions to char and wchar_t types: all of those are needed to be able to pass wxUniChars to various standard narrow and wide character functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="99"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_uni_char_1aaf6575553d1096ad56edf57f9c534c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(const wxUniChar &amp;c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1ad1be5e81dce1ed604fe080306998abb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(const wxUniCharRef &amp;c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a023eabbbdc1eccfa9828bda1288cf9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(char c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a0534c167e8d58c805d2dff72eb7bd6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(unsigned char c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1aa11f788f1e31f9e8ff81369a8d304a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(wchar_t c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a3c42992c29fd46b417c0a2257eca3905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(int c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a5451c92ce066657646e1a329fb7e7104" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(unsigned int c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1af650cd1a4d4e1696198ca5c773765ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(long int c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>long int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a7095cad93f925f250905929503898b29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(unsigned long int c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>unsigned long int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1ae15beca0666b99b46cccd662d2000815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(short int c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>short int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a5a55026b3c0bda47acf1dd2c9d04bae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref> &amp;</type>
+        <definition>wxUniChar&amp; wxUniChar::operator=</definition>
+        <argsstring>(unsigned short int c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>unsigned short int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="116"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classwx_uni_char_1ac115911ed58b8a8d781307523c4c759c" prot="public" static="no">
+        <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+        <definition>typedef wxUint32 wxUniChar::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+<para>A type capable of holding any Unicode code point. </para>        </briefdescription>
+        <detaileddescription>
+<para>We do not use wchar_t as it cannot do the job on Win32, where wchar_t is a 16-bit type (wchar_t* is encoded using UTF-16 on Win32). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_uni_char_1ae041f48915544dbbd9a6457932749253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>()</argsstring>
+        <name>wxUniChar</name>
+        <briefdescription>
+<para>Default ctor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a49e8c14f75fbb36ba3233079b9f763b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(int c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a8838f0ebdf714f804cbeaf70aabb4f77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(unsigned int c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a0bb50a4f4caaaa38c916a658c3926cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(long int c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>long int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a5cd11bf7578be856477e330d61bcd272" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(unsigned long int c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>unsigned long int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a26f88f8370a03ab12da7119e2e3de79f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(short int c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>short int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1ad97f25676ce70a6465301cfcd077834f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(unsigned short int c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>unsigned short int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1aa24344dfd264b05f0366b60e973af64c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxUniChar::wxUniChar</definition>
+        <argsstring>(const wxUniCharRef &amp;c)</argsstring>
+        <name>wxUniChar</name>
+        <param>
+          <type>const <ref refid="classwx_uni_char_ref" kindref="compound">wxUniCharRef</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a870a92d4a197ba01a5f5fbf811623713" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_uni_char_1ac115911ed58b8a8d781307523c4c759c" kindref="member">value_type</ref></type>
+        <definition>value_type wxUniChar::GetValue</definition>
+        <argsstring>() const </argsstring>
+        <name>GetValue</name>
+        <briefdescription>
+<para>Returns Unicode code point value of the character. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a584ce7cb729ceea70dde2bb25f8639cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUniChar::IsAscii</definition>
+        <argsstring>() const </argsstring>
+        <name>IsAscii</name>
+        <briefdescription>
+<para>Returns true if the character is an ASCII character (i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>if its value is less than 128). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_uni_char_1a47afeef71d421805e40aaee1869ba6aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxUniChar::GetAsChar</definition>
+        <argsstring>(char *c) const </argsstring>
+        <name>GetAsChar</name>
+        <param>
+          <type>char *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the character is representable as a single byte in the current locale encoding. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function only returns true if the character can be converted in exactly one byte, e.g. it only returns true for 7 bit ASCII characters when the encoding used is UTF-8.</para><para>It is mostly useful to test if the character can be passed to functions taking a char and is used by wxWidgets itself for this purpose.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output pointer to the value of this Unicode character as a <computeroutput>char</computeroutput>. Must be non-NULL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the object is an 8 bit char and <emphasis>c</emphasis> was filled with its value as char or false otherwise (<emphasis>c</emphasis> won&apos;t be modified then).</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_uni_char_1a584ce7cb729ceea70dde2bb25f8639cd" kindref="member">IsAscii()</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a single Unicode character. </para>    </briefdescription>
+    <detaileddescription>
+<para>It can be converted to and from <computeroutput>char</computeroutput> or <computeroutput>wchar_t</computeroutput> and implements commonly used character operations.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/unichar.h" bodystart="18" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classwx_uni_char_1a47afeef71d421805e40aaee1869ba6aa" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>GetAsChar</name></member>
+      <member refid="classwx_uni_char_1a870a92d4a197ba01a5f5fbf811623713" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>GetValue</name></member>
+      <member refid="classwx_uni_char_1a584ce7cb729ceea70dde2bb25f8639cd" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>IsAscii</name></member>
+      <member refid="classwx_uni_char_1a40495a76028f6f2f8193994985f9c5b8" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator char</name></member>
+      <member refid="classwx_uni_char_1ad316e691e9ca967ea4cb91ee8f174823" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator int</name></member>
+      <member refid="classwx_uni_char_1abd23dfd8f4bd1ff32fe1ed93c5762259" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator long int</name></member>
+      <member refid="classwx_uni_char_1a17191c56143329ca69505308a8338d40" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator short int</name></member>
+      <member refid="classwx_uni_char_1ac94ec868908df39c2e0d7fd9e6ce865e" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator unsigned char</name></member>
+      <member refid="classwx_uni_char_1a0538b7dd738ebb861ad1f79607fe2406" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator unsigned int</name></member>
+      <member refid="classwx_uni_char_1a103207b53446c738889a20ec5a4d6f6c" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator unsigned long int</name></member>
+      <member refid="classwx_uni_char_1a42048feb60cd36003752f20961c9807e" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator unsigned short int</name></member>
+      <member refid="classwx_uni_char_1a72eaa228a28100c69281a1b1306b30db" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator wchar_t</name></member>
+      <member refid="classwx_uni_char_1aaf6575553d1096ad56edf57f9c534c4c" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1ad1be5e81dce1ed604fe080306998abb4" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1a023eabbbdc1eccfa9828bda1288cf9f3" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1a0534c167e8d58c805d2dff72eb7bd6bb" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1aa11f788f1e31f9e8ff81369a8d304a44" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1a3c42992c29fd46b417c0a2257eca3905" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1a5451c92ce066657646e1a329fb7e7104" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1af650cd1a4d4e1696198ca5c773765ba8" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1a7095cad93f925f250905929503898b29" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1ae15beca0666b99b46cccd662d2000815" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1a5a55026b3c0bda47acf1dd2c9d04bae8" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>operator=</name></member>
+      <member refid="classwx_uni_char_1ac115911ed58b8a8d781307523c4c759c" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>value_type</name></member>
+      <member refid="classwx_uni_char_1ae041f48915544dbbd9a6457932749253" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1a647fb6c5e9bf0bce95ad3593a99e6b24" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1a3ab8194435662cb83a1f4b973b3f8074" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1a49e8c14f75fbb36ba3233079b9f763b5" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1a8838f0ebdf714f804cbeaf70aabb4f77" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1a0bb50a4f4caaaa38c916a658c3926cd7" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1a5cd11bf7578be856477e330d61bcd272" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1a26f88f8370a03ab12da7119e2e3de79f" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1ad97f25676ce70a6465301cfcd077834f" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+      <member refid="classwx_uni_char_1aa24344dfd264b05f0366b60e973af64c" prot="public" virt="non-virtual"><scope>wxUniChar</scope><name>wxUniChar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

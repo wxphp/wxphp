@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="sckipc_8h" kind="file">
+    <compoundname>sckipc.h</compoundname>
+    <innerclass refid="classwx_t_c_p_server" prot="public">wxTCPServer</innerclass>
+    <innerclass refid="classwx_t_c_p_client" prot="public">wxTCPClient</innerclass>
+    <innerclass refid="classwx_t_c_p_connection" prot="public">wxTCPConnection</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2" prot="public" static="no">
+        <name>wxIPCFormat</name>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a6853aff9aa81bfc7786fdd08f414087c" prot="public">
+          <name>wxIPC_INVALID</name>
+          <initializer>     0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a456b5b5260c379ab5207ad9ff6744950" prot="public">
+          <name>wxIPC_TEXT</name>
+          <initializer>        1</initializer>
+          <briefdescription>
+<para>CF_TEXT. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a79adff9793cc276af162fc97d940a5d9" prot="public">
+          <name>wxIPC_BITMAP</name>
+          <initializer>      2</initializer>
+          <briefdescription>
+<para>CF_BITMAP. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a003f2090a21da60925a3d7ff071ffd57" prot="public">
+          <name>wxIPC_METAFILE</name>
+          <initializer>    3</initializer>
+          <briefdescription>
+<para>CF_METAFILEPICT. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2abd0338dbcf8b047fa37f4bad7b0990ee" prot="public">
+          <name>wxIPC_SYLK</name>
+          <initializer>        4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2affa1b295b137231a9968b33250b49e8c" prot="public">
+          <name>wxIPC_DIF</name>
+          <initializer>         5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a6ba51c7ce1a107b580b27379a3996549" prot="public">
+          <name>wxIPC_TIFF</name>
+          <initializer>        6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a7f5d41f41f52d7d159d83dbc1975a6aa" prot="public">
+          <name>wxIPC_OEMTEXT</name>
+          <initializer>     7</initializer>
+          <briefdescription>
+<para>CF_OEMTEXT. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2af514306d4dadbe872d5d77a316fb199b" prot="public">
+          <name>wxIPC_DIB</name>
+          <initializer>         8</initializer>
+          <briefdescription>
+<para>CF_DIB. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2abf66cede8b4586a105ec26f5e079a170" prot="public">
+          <name>wxIPC_PALETTE</name>
+          <initializer>     9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a42b7fdb90d1f2e00b1748165f3677aec" prot="public">
+          <name>wxIPC_PENDATA</name>
+          <initializer>     10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a1db0885330b5eb76f419ebfdcbaafb46" prot="public">
+          <name>wxIPC_RIFF</name>
+          <initializer>        11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a4760acbacb76d446364203821aab64f9" prot="public">
+          <name>wxIPC_WAVE</name>
+          <initializer>        12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2aa111b4f1f7bcdd3d819d28cd715f07d0" prot="public">
+          <name>wxIPC_UTF16TEXT</name>
+          <initializer>   13</initializer>
+          <briefdescription>
+<para>CF_UNICODE. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a1078dd9a5ac11a11bc3f21228407432e" prot="public">
+          <name>wxIPC_ENHMETAFILE</name>
+          <initializer> 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2aa8534ab347ddddf216b084aba118c777" prot="public">
+          <name>wxIPC_FILENAME</name>
+          <initializer>    15</initializer>
+          <briefdescription>
+<para>CF_HDROP. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2af4d8759d38911ece3f1fd9fdf819df8b" prot="public">
+          <name>wxIPC_LOCALE</name>
+          <initializer>      16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a1e0f577eb30a929de751b65c18bd57fc" prot="public">
+          <name>wxIPC_UTF8TEXT</name>
+          <initializer>    17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a0c9ecc3e2bef20f0c22a37aecd5add9c" prot="public">
+          <name>wxIPC_UTF32TEXT</name>
+          <initializer>   18</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a502f3bd42ce3d53b08ea9355c5efabfc" prot="public">
+          <name>wxIPC_UNICODETEXT</name>
+          <initializer> wxIPC_UTF16TEXT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ipcbase_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a41de659f55ab53c44876c14149925cca" prot="public">
+          <name>wxIPC_PRIVATE</name>
+          <initializer>     20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a6853aff9aa81bfc7786fdd08f414087c" prot="public">
+          <name>wxIPC_INVALID</name>
+          <initializer>          0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a456b5b5260c379ab5207ad9ff6744950" prot="public">
+          <name>wxIPC_TEXT</name>
+          <initializer>             1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a79adff9793cc276af162fc97d940a5d9" prot="public">
+          <name>wxIPC_BITMAP</name>
+          <initializer>           2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a003f2090a21da60925a3d7ff071ffd57" prot="public">
+          <name>wxIPC_METAFILE</name>
+          <initializer>         3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2abd0338dbcf8b047fa37f4bad7b0990ee" prot="public">
+          <name>wxIPC_SYLK</name>
+          <initializer>             4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2affa1b295b137231a9968b33250b49e8c" prot="public">
+          <name>wxIPC_DIF</name>
+          <initializer>              5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a6ba51c7ce1a107b580b27379a3996549" prot="public">
+          <name>wxIPC_TIFF</name>
+          <initializer>             6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a7f5d41f41f52d7d159d83dbc1975a6aa" prot="public">
+          <name>wxIPC_OEMTEXT</name>
+          <initializer>          7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2af514306d4dadbe872d5d77a316fb199b" prot="public">
+          <name>wxIPC_DIB</name>
+          <initializer>              8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2abf66cede8b4586a105ec26f5e079a170" prot="public">
+          <name>wxIPC_PALETTE</name>
+          <initializer>          9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a42b7fdb90d1f2e00b1748165f3677aec" prot="public">
+          <name>wxIPC_PENDATA</name>
+          <initializer>          10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a1db0885330b5eb76f419ebfdcbaafb46" prot="public">
+          <name>wxIPC_RIFF</name>
+          <initializer>             11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a4760acbacb76d446364203821aab64f9" prot="public">
+          <name>wxIPC_WAVE</name>
+          <initializer>             12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2aa111b4f1f7bcdd3d819d28cd715f07d0" prot="public">
+          <name>wxIPC_UTF16TEXT</name>
+          <initializer>        13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a1078dd9a5ac11a11bc3f21228407432e" prot="public">
+          <name>wxIPC_ENHMETAFILE</name>
+          <initializer>      14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2aa8534ab347ddddf216b084aba118c777" prot="public">
+          <name>wxIPC_FILENAME</name>
+          <initializer>         15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2af4d8759d38911ece3f1fd9fdf819df8b" prot="public">
+          <name>wxIPC_LOCALE</name>
+          <initializer>           16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a1e0f577eb30a929de751b65c18bd57fc" prot="public">
+          <name>wxIPC_UTF8TEXT</name>
+          <initializer>         17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a0c9ecc3e2bef20f0c22a37aecd5add9c" prot="public">
+          <name>wxIPC_UTF32TEXT</name>
+          <initializer>        18</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a502f3bd42ce3d53b08ea9355c5efabfc" prot="public">
+          <name>wxIPC_UNICODETEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sckipc_8h_1a95e8d5059caf54ddbaabdaf8224fe3f2a41de659f55ab53c44876c14149925cca" prot="public">
+          <name>wxIPC_PRIVATE</name>
+          <initializer>          20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>See <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" bodystart="13" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h"/>
+  </compounddef>
+</doxygen>

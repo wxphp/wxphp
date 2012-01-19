@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_datagram_socket" kind="class" prot="public">
+    <compoundname>wxDatagramSocket</compoundname>
+    <basecompoundref refid="classwx_socket_base" prot="public" virt="non-virtual">wxSocketBase</basecompoundref>
+    <includes local="no">wx/socket.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_datagram_socket_1a21cd68f0fc809d03d80d77d053db6ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxDatagramSocket::wxDatagramSocket</definition>
+        <argsstring>(const wxSockAddress &amp;addr, wxSocketFlags flags=wxSOCKET_NONE)</argsstring>
+        <name>wxDatagramSocket</name>
+        <param>
+          <type>const <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref> &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>wxSocketFlags</type>
+          <declname>flags</declname>
+          <defval>wxSOCKET_NONE</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket flags (See <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">wxSocketBase::SetFlags()</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1314"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_datagram_socket_1ad079d6d4d46c18ae7ff1939a2176c20a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxDatagramSocket::~wxDatagramSocket</definition>
+        <argsstring>()</argsstring>
+        <name>~wxDatagramSocket</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please see <ref refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" kindref="member">wxSocketBase::Destroy()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1319"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_datagram_socket_1a12eb147a3f3119e09bbecbda2393a35a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_datagram_socket" kindref="compound">wxDatagramSocket</ref> &amp;</type>
+        <definition>wxDatagramSocket&amp; wxDatagramSocket::SendTo</definition>
+        <argsstring>(const wxSockAddress &amp;address, const void *buffer, wxUint32 nbytes)</argsstring>
+        <name>SendTo</name>
+        <param>
+          <type>const <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref> &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+<para>Write a buffer of <emphasis>nbytes</emphasis> bytes to the socket. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">wxSocketBase::LastCount()</ref> to verify the number of bytes actually wrote. Use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">wxSocketBase::Error()</ref> to determine if the operation succeeded.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the destination peer for this data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where read data is. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a reference to the current object.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" kindref="member">wxSocketBase::LastError()</ref>, <ref refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" kindref="member">wxSocketBase::SetFlags()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1339"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="todo_1_todo000060"><xreftitle>Todo</xreftitle><xrefdescription><para>docme</para></xrefdescription></xrefsect><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5231">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="5232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5232">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="5230">
+        <label>wxDatagramSocket</label>
+        <link refid="classwx_datagram_socket"/>
+        <childnode refid="5231" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5234">
+        <label>wxSocketBase</label>
+        <link refid="classwx_socket_base"/>
+        <childnode refid="5235" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5235">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5236" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5233">
+        <label>wxDatagramSocket</label>
+        <link refid="classwx_datagram_socket"/>
+        <childnode refid="5234" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5236">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1303" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="1302" bodyend="1340"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDatagramSocket</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDatagramSocket</scope><name>CloneRefData</name></member>
+      <member refid="classwx_socket_base_1a054754d97e15427949ffa30af8ce9945" prot="public" virt="virtual"><scope>wxDatagramSocket</scope><name>Close</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxDatagramSocket</scope><name>CreateRefData</name></member>
+      <member refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Destroy</name></member>
+      <member refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Discard</name></member>
+      <member refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Error</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxDatagramSocket</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_socket_base_1a9dd69ce31cb441c2c47e374256fabcc4" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>GetClientData</name></member>
+      <member refid="classwx_socket_base_1a1eecc8010fa40587623778cf9902e661" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>GetFlags</name></member>
+      <member refid="classwx_socket_base_1a1751b32af0172a30f544068100ba90d2" prot="public" virt="virtual"><scope>wxDatagramSocket</scope><name>GetLocal</name></member>
+      <member refid="classwx_socket_base_1aae825b5309067c212640189d6ad7e993" prot="public" virt="virtual"><scope>wxDatagramSocket</scope><name>GetPeer</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>GetRefData</name></member>
+      <member refid="classwx_socket_base_1adb940bb2853901b4ea0b2840964f8e5b" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>GetTimeout</name></member>
+      <member refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Initialize</name></member>
+      <member refid="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>InterruptWait</name></member>
+      <member refid="classwx_socket_base_1a2d171f3eac0dbc9211f0032188d381ac" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>IsConnected</name></member>
+      <member refid="classwx_socket_base_1a6703a3dd7c15fcb2eff7c7baf0b886f5" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>IsData</name></member>
+      <member refid="classwx_socket_base_1ac5118b15195664969b7d914a045936f6" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>IsDisconnected</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>IsKindOf</name></member>
+      <member refid="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>IsOk</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>IsSameAs</name></member>
+      <member refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>LastCount</name></member>
+      <member refid="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>LastError</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxDatagramSocket</scope><name>m_refData</name></member>
+      <member refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Notify</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>operator new</name></member>
+      <member refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Peek</name></member>
+      <member refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Read</name></member>
+      <member refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>ReadMsg</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Ref</name></member>
+      <member refid="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>RestoreState</name></member>
+      <member refid="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>SaveState</name></member>
+      <member refid="classwx_datagram_socket_1a12eb147a3f3119e09bbecbda2393a35a" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>SendTo</name></member>
+      <member refid="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>SetClientData</name></member>
+      <member refid="classwx_socket_base_1a09819e56d36638fb6b45bf3dd7ea8742" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>SetEventHandler</name></member>
+      <member refid="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>SetFlags</name></member>
+      <member refid="classwx_socket_base_1a18b26d4201f86daf64c881433c68a1b3" prot="public" virt="virtual"><scope>wxDatagramSocket</scope><name>SetLocal</name></member>
+      <member refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>SetNotify</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>SetRefData</name></member>
+      <member refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>SetTimeout</name></member>
+      <member refid="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Shutdown</name></member>
+      <member refid="classwx_socket_base_1a90d2aea95b10c68eee2656860d90e23e" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>ShutdownOutput</name></member>
+      <member refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Unread</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>UnShare</name></member>
+      <member refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Wait</name></member>
+      <member refid="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>WaitForLost</name></member>
+      <member refid="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>WaitForRead</name></member>
+      <member refid="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>WaitForWrite</name></member>
+      <member refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>Write</name></member>
+      <member refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>WriteMsg</name></member>
+      <member refid="classwx_datagram_socket_1a21cd68f0fc809d03d80d77d053db6ca9" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>wxDatagramSocket</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>wxObject</name></member>
+      <member refid="classwx_socket_base_1a3bf32997db6732a5b053d8d52b1173f0" prot="public" virt="non-virtual"><scope>wxDatagramSocket</scope><name>wxSocketBase</name></member>
+      <member refid="classwx_datagram_socket_1ad079d6d4d46c18ae7ff1939a2176c20a" prot="public" virt="virtual"><scope>wxDatagramSocket</scope><name>~wxDatagramSocket</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxDatagramSocket</scope><name>~wxObject</name></member>
+      <member refid="classwx_socket_base_1a636e72242dd5550e84456c277ca31222" prot="public" virt="virtual"><scope>wxDatagramSocket</scope><name>~wxSocketBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

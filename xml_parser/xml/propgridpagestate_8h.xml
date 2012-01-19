@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="propgridpagestate_8h" kind="file">
+    <compoundname>propgridpagestate.h</compoundname>
+    <innerclass refid="structwx_property_grid_hit_test_result" prot="public">wxPropertyGridHitTestResult</innerclass>
+    <innerclass refid="classwx_property_grid_iterator" prot="public">wxPropertyGridIterator</innerclass>
+    <innerclass refid="classwx_p_g_v_iterator" prot="public">wxPGVIterator</innerclass>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="enum" id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0a" prot="public" static="no">
+        <name>wxPG_ITERATOR_FLAGS</name>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa879aa0952cc5f6b16264baa4d75401c8" prot="public">
+          <name>wxPG_ITERATE_PROPERTIES</name>
+          <initializer> (wxPG_PROP_PROPERTY|wxPG_PROP_MISC_PARENT|wxPG_PROP_AGGREGATE| 
+                                       wxPG_PROP_COLLAPSED|((wxPG_PROP_MISC_PARENT|wxPG_PROP_CATEGORY)&lt;&lt;16))</initializer>
+          <briefdescription>
+<para>Iterate through &apos;normal&apos; property items (does not include children of aggregate or hidden items by default). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa2ba47959731cee25882eb98e3dba90e8" prot="public">
+          <name>wxPG_ITERATE_HIDDEN</name>
+          <initializer> (wxPG_PROP_HIDDEN|wxPG_IT_CHILDREN(wxPG_PROP_COLLAPSED))</initializer>
+          <briefdescription>
+<para>Iterate children of collapsed parents, and individual items that are hidden. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa8f1fec68761e76d94c698ee4b28d94d6" prot="public">
+          <name>wxPG_ITERATE_FIXED_CHILDREN</name>
+          <initializer> (wxPG_IT_CHILDREN(wxPG_PROP_AGGREGATE)|wxPG_ITERATE_PROPERTIES)</initializer>
+          <briefdescription>
+<para>Iterate children of parent that is an aggregate property (ie. </para>          </briefdescription>
+          <detaileddescription>
+<para>has fixed children). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa6197a50f3278509eb2f17a62b5209368" prot="public">
+          <name>wxPG_ITERATE_CATEGORIES</name>
+          <initializer> (wxPG_PROP_CATEGORY|wxPG_IT_CHILDREN(wxPG_PROP_CATEGORY)|wxPG_PROP_COLLAPSED)</initializer>
+          <briefdescription>
+<para>Iterate categories. </para>          </briefdescription>
+          <detaileddescription>
+<para>Note that even without this flag, children of categories are still iterated through. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa05018aae942c223e9dd132858bedd79c" prot="public">
+          <name>wxPG_ITERATE_ALL_PARENTS</name>
+          <initializer> (wxPG_PROP_MISC_PARENT|wxPG_PROP_AGGREGATE|wxPG_PROP_CATEGORY)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa79290cc2a82ca025fe5a294e4f52c536" prot="public">
+          <name>wxPG_ITERATE_ALL_PARENTS_RECURSIVELY</name>
+          <initializer> (wxPG_ITERATE_ALL_PARENTS|wxPG_IT_CHILDREN(wxPG_ITERATE_ALL_PARENTS))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aab4e4e8661743b772513d9305f07ae7d1" prot="public">
+          <name>wxPG_ITERATOR_FLAGS_ALL</name>
+          <initializer> (wxPG_PROP_PROPERTY|wxPG_PROP_MISC_PARENT|wxPG_PROP_AGGREGATE| 
+                                      wxPG_PROP_HIDDEN|wxPG_PROP_CATEGORY|wxPG_PROP_COLLAPSED)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aaea1b39d76f0038a6bbbe3d5472b25c2e" prot="public">
+          <name>wxPG_ITERATOR_MASK_OP_ITEM</name>
+          <initializer> wxPG_ITERATOR_FLAGS_ALL</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa917be97074562f6ff3d75935797044bd" prot="public">
+          <name>wxPG_ITERATOR_MASK_OP_PARENT</name>
+          <initializer> wxPG_ITERATOR_FLAGS_ALL</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aaafca9ed41c9420c5efb18b7e519928e5" prot="public">
+          <name>wxPG_ITERATE_VISIBLE</name>
+          <initializer> (wxPG_ITERATE_PROPERTIES|wxPG_PROP_CATEGORY|wxPG_IT_CHILDREN(wxPG_PROP_AGGREGATE))</initializer>
+          <briefdescription>
+<para>Combines all flags needed to iterate through visible properties (ie. </para>          </briefdescription>
+          <detaileddescription>
+<para>hidden properties and children of collapsed parents are skipped). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aacc6979a5992fc69a76cd8c1ce5f844e5" prot="public">
+          <name>wxPG_ITERATE_ALL</name>
+          <initializer> (wxPG_ITERATE_VISIBLE|wxPG_ITERATE_HIDDEN)</initializer>
+          <briefdescription>
+<para>Iterate all items. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aa72566ae28f77230964b243aaa4b08b83" prot="public">
+          <name>wxPG_ITERATE_NORMAL</name>
+          <initializer> (wxPG_ITERATE_PROPERTIES|wxPG_ITERATE_HIDDEN)</initializer>
+          <briefdescription>
+<para>Iterate through individual properties (ie. </para>          </briefdescription>
+          <detaileddescription>
+<para>categories and children of aggregate properties are skipped). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="propgridpagestate_8h_1a307ba26bf1eeb9d76108893f4f723b0aaa73795625ba7549869c0a194d17846dd" prot="public">
+          <name>wxPG_ITERATE_DEFAULT</name>
+          <initializer> wxPG_ITERATE_NORMAL</initializer>
+          <briefdescription>
+<para>Default iterator flags. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="propgridpagestate_8h_1propgrid_iterator_flags">
+<title>wxPropertyGridIterator Flags</title>
+<para>NOTES: At lower 16-bits, there are flags to check if item will be included. At higher 16-bits, there are same flags, but to instead check if children will be included. </para></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="47" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="propgridpagestate_8h_1a16cc6088021c3fd5386dd099d124abe6" prot="public" static="no">
+        <name>wxPG_IT_CHILDREN</name>
+        <param><defname>A</defname></param>
+        <initializer>(A&lt;&lt;16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgridpagestate.h"/>
+  </compounddef>
+</doxygen>

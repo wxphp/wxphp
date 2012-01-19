@@ -1,0 +1,547 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="property_8h" kind="file">
+    <compoundname>property.h</compoundname>
+    <innerclass refid="classwx_p_g_property" prot="public">wxPGProperty</innerclass>
+    <innerclass refid="classwx_p_g_cell" prot="public">wxPGCell</innerclass>
+    <innerclass refid="classwx_p_g_choices" prot="public">wxPGChoices</innerclass>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="define" id="property_8h_1a85a6ad200c1c9847b7c194af4af2fa0c" prot="public" static="no">
+        <name>wxPG_ATTR_DEFAULT_VALUE</name>
+        <initializer>wxS(&quot;DefaultValue&quot;)</initializer>
+        <briefdescription>
+<para>Set default value for property. </para>        </briefdescription>
+        <detaileddescription>
+<sect1 id="property_8h_1propgrid_property_attributes">
+<title>wxPropertyGrid Property Attribute Identifiers</title>
+<para><ref refid="classwx_p_g_property_1a418c1539969b7a0a9378a3411a5680a6" kindref="member">wxPGProperty::SetAttribute()</ref> and <ref refid="classwx_property_grid_interface_1a129a37f9d87a2a08516772de9860432d" kindref="member">wxPropertyGridInterface::SetPropertyAttribute()</ref> accept one of these as attribute name argument.</para><para>You can use strings instead of constants. However, some of these constants are redefined to use cached strings which may reduce your binary size by some amount. </para></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1af3a2df2e7d48eebac8c4c1d5fc5c7674" prot="public" static="no">
+        <name>wxPG_ATTR_MIN</name>
+        <initializer>wxS(&quot;Min&quot;)</initializer>
+        <briefdescription>
+<para>Universal, int or double. </para>        </briefdescription>
+        <detaileddescription>
+<para>Minimum value for numeric properties. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="32" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1ab6db0512b26c30788f87d12a33e41b83" prot="public" static="no">
+        <name>wxPG_ATTR_MAX</name>
+        <initializer>wxS(&quot;Max&quot;)</initializer>
+        <briefdescription>
+<para>Universal, int or double. </para>        </briefdescription>
+        <detaileddescription>
+<para>Maximum value for numeric properties. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1ac230e35b0326d4875f6edff62ba87193" prot="public" static="no">
+        <name>wxPG_ATTR_UNITS</name>
+        <initializer>wxS(&quot;Units&quot;)</initializer>
+        <briefdescription>
+<para>Universal, string. </para>        </briefdescription>
+        <detaileddescription>
+<para>When set, will be shown as text after the displayed text value. Alternatively, if third column is enabled, text will be shown there (for any type of property). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="42" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a7a9e4f54dad7e12f09eca803d110c690" prot="public" static="no">
+        <name>wxPG_ATTR_HINT</name>
+        <initializer>wxS(&quot;Hint&quot;)</initializer>
+        <briefdescription>
+<para>When set, will be shown as &apos;greyed&apos; text in property&apos;s value cell when the actual displayed value is blank. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a346b2fb98b8639ac02e822290923a662" prot="public" static="no">
+        <name>wxPG_ATTR_INLINE_HELP</name>
+        <initializer>wxS(&quot;InlineHelp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000045"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use &quot;Hint&quot; (wxPG_ATTR_HINT) instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a5553822f656c5230474efcf47fa342fe" prot="public" static="no">
+        <name>wxPG_ATTR_AUTOCOMPLETE</name>
+        <initializer>wxS(&quot;AutoComplete&quot;)</initializer>
+        <briefdescription>
+<para>Universal, <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set to enable auto-completion in any wxTextCtrl-based property editor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a9e92f4867bf9fbc7c71779c74d18ccd1" prot="public" static="no">
+        <name>wxPG_BOOL_USE_CHECKBOX</name>
+        <initializer>wxS(&quot;UseCheckbox&quot;)</initializer>
+        <briefdescription>
+<para>wxBoolProperty and wxFlagsProperty specific. </para>        </briefdescription>
+        <detaileddescription>
+<para>Value type is bool. Default value is False.</para><para>When set to True, bool property will use check box instead of a combo box as its editor control. If you set this attribute for a wxFlagsProperty, it is automatically applied to child bool properties. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a83269ba02f001acb95afd54365ab1249" prot="public" static="no">
+        <name>wxPG_BOOL_USE_DOUBLE_CLICK_CYCLING</name>
+        <initializer>wxS(&quot;UseDClickCycling&quot;)</initializer>
+        <briefdescription>
+<para>wxBoolProperty and wxFlagsProperty specific. </para>        </briefdescription>
+        <detaileddescription>
+<para>Value type is bool. Default value is False.</para><para>Set to True for the bool property to cycle value on double click (instead of showing the popup listbox). If you set this attribute for a wxFlagsProperty, it is automatically applied to child bool properties. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a0eb461aed02f070563a251508a8c39ab" prot="public" static="no">
+        <name>wxPG_FLOAT_PRECISION</name>
+        <initializer>wxS(&quot;Precision&quot;)</initializer>
+        <briefdescription>
+<para>wxFloatProperty (and similar) specific, int, default -1. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets the (max) precision used when floating point value is rendered as text. The default -1 means infinite precision. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1ac993471d9a61aa32599ffc859ba291cd" prot="public" static="no">
+        <name>wxPG_STRING_PASSWORD</name>
+        <initializer>wxS(&quot;Password&quot;)</initializer>
+        <briefdescription>
+<para>The text will be echoed as asterisks (wxTE_PASSWORD will be passed to textctrl etc). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="87" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a37d4a454b7e6af6dcb357e8889c75900" prot="public" static="no">
+        <name>wxPG_UINT_BASE</name>
+        <initializer>wxS(&quot;Base&quot;)</initializer>
+        <briefdescription>
+<para>Define base used by a wxUIntProperty. </para>        </briefdescription>
+        <detaileddescription>
+<para>Valid constants are wxPG_BASE_OCT, wxPG_BASE_DEC, wxPG_BASE_HEX and wxPG_BASE_HEXL (lowercase characters). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a7e7c064da03b41fa90390df48cb7e8b4" prot="public" static="no">
+        <name>wxPG_UINT_PREFIX</name>
+        <initializer>wxS(&quot;Prefix&quot;)</initializer>
+        <briefdescription>
+<para>Define prefix rendered to wxUIntProperty. </para>        </briefdescription>
+        <detaileddescription>
+<para>Accepted constants wxPG_PREFIX_NONE, wxPG_PREFIX_0x, and wxPG_PREFIX_DOLLAR_SIGN. <bold>Note:</bold> Only wxPG_PREFIX_NONE works with Decimal and Octal numbers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a1817e1bea592d9cda7a330ea3a25f851" prot="public" static="no">
+        <name>wxPG_FILE_WILDCARD</name>
+        <initializer>wxS(&quot;Wildcard&quot;)</initializer>
+        <briefdescription>
+<para>wxFileProperty/wxImageFileProperty specific, wxChar*, default is detected/varies. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets the wildcard used in the triggered <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref>. Format is the same. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a4f5c5c01ab4d8831176444348f1871c1" prot="public" static="no">
+        <name>wxPG_FILE_SHOW_FULL_PATH</name>
+        <initializer>wxS(&quot;ShowFullPath&quot;)</initializer>
+        <briefdescription>
+<para>wxFileProperty/wxImageFileProperty specific, int, default 1. </para>        </briefdescription>
+        <detaileddescription>
+<para>When 0, only the file name is shown (i.e. drive and directory are hidden). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1ae796be9c5d62019d98eac2607bea2cd7" prot="public" static="no">
+        <name>wxPG_FILE_SHOW_RELATIVE_PATH</name>
+        <initializer>wxS(&quot;ShowRelativePath&quot;)</initializer>
+        <briefdescription>
+<para>Specific to wxFileProperty and derived properties, <ref refid="classwx_string" kindref="compound">wxString</ref>, default empty. </para>        </briefdescription>
+        <detaileddescription>
+<para>If set, then the filename is shown relative to the given path string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="116" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a637a42721fc9cc4792074485c404ef9c" prot="public" static="no">
+        <name>wxPG_FILE_INITIAL_PATH</name>
+        <initializer>wxS(&quot;InitialPath&quot;)</initializer>
+        <briefdescription>
+<para>Specific to wxFileProperty and derived properties, <ref refid="classwx_string" kindref="compound">wxString</ref>, default is empty. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets the initial path of where to look for files. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a7eaada265b1de41f5077394a9641fb90" prot="public" static="no">
+        <name>wxPG_FILE_DIALOG_TITLE</name>
+        <initializer>wxS(&quot;DialogTitle&quot;)</initializer>
+        <briefdescription>
+<para>Specific to wxFileProperty and derivatives, <ref refid="classwx_string" kindref="compound">wxString</ref>, default is empty. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets a specific title for the dir dialog. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="126" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a97abb775beecdf1a0fafb19a83c27064" prot="public" static="no">
+        <name>wxPG_DIR_DIALOG_MESSAGE</name>
+        <initializer>wxS(&quot;DialogMessage&quot;)</initializer>
+        <briefdescription>
+<para>Specific to wxDirProperty, <ref refid="classwx_string" kindref="compound">wxString</ref>, default is empty. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets a specific message for the dir dialog. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="131" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a8df4932f72136a96e275bc47e0424b21" prot="public" static="no">
+        <name>wxPG_ARRAY_DELIMITER</name>
+        <initializer>wxS(&quot;Delimiter&quot;)</initializer>
+        <briefdescription>
+<para>wxArrayStringProperty&apos;s string delimiter character. </para>        </briefdescription>
+        <detaileddescription>
+<para>If this is a quotation mark or hyphen, then strings will be quoted instead (with given character).</para><para>Default delimiter is quotation mark. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="140" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1adc9cc7e8e83bfe00e2731fed4414262d" prot="public" static="no">
+        <name>wxPG_DATE_FORMAT</name>
+        <initializer>wxS(&quot;DateFormat&quot;)</initializer>
+        <briefdescription>
+<para>Sets displayed date format for wxDateProperty. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="144" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1afaf305be931ad04c70cc87e4bea1f6b4" prot="public" static="no">
+        <name>wxPG_DATE_PICKER_STYLE</name>
+        <initializer>wxS(&quot;PickerStyle&quot;)</initializer>
+        <briefdescription>
+<para>Sets <ref refid="classwx_date_picker_ctrl" kindref="compound">wxDatePickerCtrl</ref> window style used with wxDateProperty. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default is wxDP_DEFAULT | wxDP_SHOWCENTURY. Using wxDP_ALLOWNONE will enable better unspecified value support in the editor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="150" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a94a6c060555a0273ba2c6eb6b4b8354d" prot="public" static="no">
+        <name>wxPG_ATTR_SPINCTRL_STEP</name>
+        <initializer>wxS(&quot;Step&quot;)</initializer>
+        <briefdescription>
+<para>SpinCtrl editor, int or double. </para>        </briefdescription>
+        <detaileddescription>
+<para>How much number changes when button is pressed (or up/down on keyboard). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a0736a304ee458959cef2d961b2ce197c" prot="public" static="no">
+        <name>wxPG_ATTR_SPINCTRL_WRAP</name>
+        <initializer>wxS(&quot;Wrap&quot;)</initializer>
+        <briefdescription>
+<para>SpinCtrl editor, bool. </para>        </briefdescription>
+        <detaileddescription>
+<para>If true, value wraps at Min/Max. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="159" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a954e3111feb8105008786a43c4adacab" prot="public" static="no">
+        <name>wxPG_ATTR_SPINCTRL_MOTIONSPIN</name>
+        <initializer>wxS(&quot;MotionSpin&quot;)</initializer>
+        <briefdescription>
+<para>SpinCtrl editor, bool. </para>        </briefdescription>
+        <detaileddescription>
+<para>If true, value can also by changed by moving mouse when left mouse button is being pressed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="164" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1af122a189c011842114c76f92a9c8747c" prot="public" static="no">
+        <name>wxPG_ATTR_MULTICHOICE_USERSTRINGMODE</name>
+        <initializer>wxS(&quot;UserStringMode&quot;)</initializer>
+        <briefdescription>
+<para>wxMultiChoiceProperty, int. </para>        </briefdescription>
+        <detaileddescription>
+<para>If 0, no user strings allowed. If 1, user strings appear before list strings. If 2, user strings appear after list string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="169" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1ae0e144261fd157a14505ea4ccd491902" prot="public" static="no">
+        <name>wxPG_COLOUR_ALLOW_CUSTOM</name>
+        <initializer>wxS(&quot;AllowCustom&quot;)</initializer>
+        <briefdescription>
+<para>wxColourProperty and its kind, int, default 1. </para>        </briefdescription>
+        <detaileddescription>
+<para>Setting this attribute to 0 hides custom colour from property&apos;s list of choices. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="174" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a6a5b9803f092feb44e6bbd6da4e3cb0d" prot="public" static="no">
+        <name>wxPG_COLOUR_HAS_ALPHA</name>
+        <initializer>wxS(&quot;HasAlpha&quot;)</initializer>
+        <briefdescription>
+<para>wxColourProperty and its kind: Set to True in order to support editing alpha colour component. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="180" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="define" id="property_8h_1affbe3c4e1e2213c2fb1674f11f0af89b" prot="public" static="no">
+        <name>wxPG_PROP_MAX</name>
+        <initializer>wxPG_PROP_AUTO_UNSPECIFIED</initializer>
+        <briefdescription>
+<para>Topmost flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="317" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="property_8h_1a75aacc9fa61f87a81d7b3e676747141a" prot="public" static="no">
+        <name>wxPG_PROP_PARENTAL_FLAGS</name>
+        <initializer>((<ref refid="property_8h_1a2aac85b6d4e1018849f0026b62f1b751" kindref="member">wxPGPropertyFlags</ref>)(wxPG_PROP_AGGREGATE | \
+                         wxPG_PROP_CATEGORY | \
+                         wxPG_PROP_MISC_PARENT))</initializer>
+        <briefdescription>
+<para>Property with children must have one of these set, otherwise iterators will not work correctly. </para>        </briefdescription>
+        <detaileddescription>
+<para>Code should automatically take care of this, however. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="326" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="enum" id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751" prot="public" static="no">
+        <name>wxPGPropertyFlags</name>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a982ca54bad1cb6771c3c236ee35ce7ed" prot="public">
+          <name>wxPG_PROP_MODIFIED</name>
+          <initializer> 0x0001</initializer>
+          <briefdescription>
+<para>Indicates bold font. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a28fee74b5d05c40e6cc48b3565420509" prot="public">
+          <name>wxPG_PROP_DISABLED</name>
+          <initializer> 0x0002</initializer>
+          <briefdescription>
+<para>Disables (&apos;greyed&apos; text and editor does not activate) property. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a578cbd6cc30be5a6cec0bb3df75976d5" prot="public">
+          <name>wxPG_PROP_HIDDEN</name>
+          <initializer> 0x0004</initializer>
+          <briefdescription>
+<para>Hider button will hide this property. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a4232e423e3c062f7a4143c2cfc8b52c9" prot="public">
+          <name>wxPG_PROP_CUSTOMIMAGE</name>
+          <initializer> 0x0008</initializer>
+          <briefdescription>
+<para>This property has custom paint image just in front of its value. </para>          </briefdescription>
+          <detaileddescription>
+<para>If property only draws custom images into a popup list, then this flag should not be set. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751ab560628cfb09b2f9d1bd431d42ce259c" prot="public">
+          <name>wxPG_PROP_NOEDITOR</name>
+          <initializer> 0x0010</initializer>
+          <briefdescription>
+<para>Do not create text based editor for this property (but button-triggered dialog and choice are ok). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751af2e9fb8bcd0cc5e0fe6e20b869c7e340" prot="public">
+          <name>wxPG_PROP_COLLAPSED</name>
+          <initializer> 0x0020</initializer>
+          <briefdescription>
+<para>Property is collapsed, ie. </para>          </briefdescription>
+          <detaileddescription>
+<para>it&apos;s children are hidden. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a1d69892a5c6da6d1ff9e0f1435718b48" prot="public">
+          <name>wxPG_PROP_INVALID_VALUE</name>
+          <initializer> 0x0040</initializer>
+          <briefdescription>
+<para>If property is selected, then indicates that validation failed for pending value. </para>          </briefdescription>
+          <detaileddescription>
+<para>If property is not selected, then indicates that the actual property value has failed validation (NB: this behaviour is not currently supported, but may be used in the future). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a1aa767adfbe0701f07f62c9e8b003bdd" prot="public">
+          <name>wxPG_PROP_WAS_MODIFIED</name>
+          <initializer> 0x0200</initializer>
+          <briefdescription>
+<para>Switched via SetWasModified(). </para>          </briefdescription>
+          <detaileddescription>
+<para>Temporary flag - only used when setting/changing property value. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751ae925ea2cbfb8ea2ba930d2cb4788f85f" prot="public">
+          <name>wxPG_PROP_AGGREGATE</name>
+          <initializer> 0x0400</initializer>
+          <briefdescription>
+<para>If set, then child properties (if any) are private, and should be &quot;invisible&quot; to the application. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751ad9bb61d4959dd9343b3f773f14f2f830" prot="public">
+          <name>wxPG_PROP_CHILDREN_ARE_COPIES</name>
+          <initializer> 0x0800</initializer>
+          <briefdescription>
+<para>If set, then child properties (if any) are copies and should not be deleted in dtor. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a095d1e66902f868f5feb7ccf58fb3b04" prot="public">
+          <name>wxPG_PROP_PROPERTY</name>
+          <initializer> 0x1000</initializer>
+          <briefdescription>
+<para>Classifies this item as a non-category. </para>          </briefdescription>
+          <detaileddescription>
+<para>Used for faster item type identification. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751ac9aed5f384fd6a0c4828588747640293" prot="public">
+          <name>wxPG_PROP_CATEGORY</name>
+          <initializer> 0x2000</initializer>
+          <briefdescription>
+<para>Classifies this item as a category. </para>          </briefdescription>
+          <detaileddescription>
+<para>Used for faster item type identification. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a70d28cb2cbd380ee238b364c539cc00a" prot="public">
+          <name>wxPG_PROP_MISC_PARENT</name>
+          <initializer> 0x4000</initializer>
+          <briefdescription>
+<para>Classifies this item as a property that has children, but is not aggregate (ie children are not private). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a831c2b4507536fcffcc2adf997c9166e" prot="public">
+          <name>wxPG_PROP_READONLY</name>
+          <initializer> 0x8000</initializer>
+          <briefdescription>
+<para>Property is read-only. </para>          </briefdescription>
+          <detaileddescription>
+<para>Editor is still created for wxTextCtrl-based property editors. For others, editor is not usually created because they do implement wxTE_READONLY style or equivalent. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a92b638ef1a62b9a1aca773ce3bb25aa5" prot="public">
+          <name>wxPG_PROP_COMPOSED_VALUE</name>
+          <initializer> 0x00010000</initializer>
+          <briefdescription>
+<para>Property&apos;s value is composed from values of child properties. </para>          </briefdescription>
+          <detaileddescription>
+<para><simplesect kind="remark"><para>This flag cannot be used with property iterators. </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a1f9d53d1879780398cd585faf1505892" prot="public">
+          <name>wxPG_PROP_USES_COMMON_VALUE</name>
+          <initializer> 0x00020000</initializer>
+          <briefdescription>
+<para>Common value of property is selectable in editor. </para>          </briefdescription>
+          <detaileddescription>
+<para><simplesect kind="remark"><para>This flag cannot be used with property iterators. </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751afeaeef6281a9e1e9e044acbf1bff0252" prot="public">
+          <name>wxPG_PROP_AUTO_UNSPECIFIED</name>
+          <initializer> 0x00040000</initializer>
+          <briefdescription>
+<para>Property can be set to unspecified value via editor. </para>          </briefdescription>
+          <detaileddescription>
+<para>Currently, this applies to following properties:<itemizedlist>
+<listitem><para>wxIntProperty, wxUIntProperty, wxFloatProperty, wxEditEnumProperty: Clear the text field</para></listitem></itemizedlist>
+</para><para><simplesect kind="remark"><para>This flag cannot be used with property iterators.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_p_g_property_1a126a59cc86786f51cc72469bc2143b4c" kindref="member">wxPGProperty::SetAutoUnspecified()</ref> </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a34b5ec724cfcb6f22bca2ec03fe92ecd" prot="public">
+          <name>wxPG_PROP_CLASS_SPECIFIC_1</name>
+          <initializer> 0x00080000</initializer>
+          <briefdescription>
+<para>Indicates the bit useable by derived properties. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a1ef1264da3798b03b5adc3dfa96f2bad" prot="public">
+          <name>wxPG_PROP_CLASS_SPECIFIC_2</name>
+          <initializer> 0x00100000</initializer>
+          <briefdescription>
+<para>Indicates the bit useable by derived properties. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="property_8h_1a2aac85b6d4e1018849f0026b62f1b751a550ede3a97b119618e0cb4aee64f75ff" prot="public">
+          <name>wxPG_PROP_BEING_DELETED</name>
+          <initializer> 0x00200000</initializer>
+          <briefdescription>
+<para>Indicates that the property is being deleted and should be ignored. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="property_8h_1propgrid_propflags">
+<title>wxPGProperty Flags</title>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="191" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="190" bodyend="313"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="property_8h_1a4d056e40c12b986268ac5574a298e7ba" prot="public" static="no">
+        <name>wxNullProperty</name>
+        <initializer>((<ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref>*)NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h"/>
+  </compounddef>
+</doxygen>

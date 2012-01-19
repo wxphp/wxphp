@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_encoding_converter" kind="class" prot="public">
+    <compoundname>wxEncodingConverter</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/encconv.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Conversion functions</header>
+      <description><para><anchor id="_1amgrp9c2e8a06d85d2c9b83b5a0d27e85d535"/> </para></description>
+      <memberdef kind="function" id="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEncodingConverter::Convert</definition>
+        <argsstring>(const char *input, char *output) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>const char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> and writes the result to output. </para>        </briefdescription>
+        <detaileddescription>
+<para>All the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> function overloads return true if the conversion was lossless and false if at least one of the characters couldn&apos;t be converted was and replaced with &apos;?&apos; in the output.</para><para>Note that if <computeroutput>wxCONVERT_SUBSTITUTE</computeroutput> was passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref>, substitution is considered a lossless operation.</para><para><simplesect kind="note"><para>You must call <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> before using this method! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1af8d49c317333738879c5f0528ae113fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEncodingConverter::Convert</definition>
+        <argsstring>(const wchar_t *input, wchar_t *output) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>wchar_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> and writes the result to output. </para>        </briefdescription>
+        <detaileddescription>
+<para>All the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> function overloads return true if the conversion was lossless and false if at least one of the characters couldn&apos;t be converted was and replaced with &apos;?&apos; in the output.</para><para>Note that if <computeroutput>wxCONVERT_SUBSTITUTE</computeroutput> was passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref>, substitution is considered a lossless operation.</para><para><simplesect kind="note"><para>You must call <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> before using this method! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1a7a10e19b42060ad1f9fb4d137ed2a0a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEncodingConverter::Convert</definition>
+        <argsstring>(const char *input, wchar_t *output) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>const char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>wchar_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> and writes the result to output. </para>        </briefdescription>
+        <detaileddescription>
+<para>All the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> function overloads return true if the conversion was lossless and false if at least one of the characters couldn&apos;t be converted was and replaced with &apos;?&apos; in the output.</para><para>Note that if <computeroutput>wxCONVERT_SUBSTITUTE</computeroutput> was passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref>, substitution is considered a lossless operation.</para><para><simplesect kind="note"><para>You must call <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> before using this method! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1ac39043d65bd1fa826cffb52b4bd86f0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEncodingConverter::Convert</definition>
+        <argsstring>(const wchar_t *input, char *output) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> and writes the result to output. </para>        </briefdescription>
+        <detaileddescription>
+<para>All the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> function overloads return true if the conversion was lossless and false if at least one of the characters couldn&apos;t be converted was and replaced with &apos;?&apos; in the output.</para><para>Note that if <computeroutput>wxCONVERT_SUBSTITUTE</computeroutput> was passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref>, substitution is considered a lossless operation.</para><para><simplesect kind="note"><para>You must call <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> before using this method! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1a4c358173754963620d4e9f83ccdf9c56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEncodingConverter::Convert</definition>
+        <argsstring>(char *str) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> in-place, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>write the result to the same memory area.</para><para>See the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert(const char*,char*) const </ref>overload for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1a99ed7cb33aa5e60a9af67da6646456f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEncodingConverter::Convert</definition>
+        <argsstring>(wchar_t *str) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>wchar_t *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Convert input string according to settings passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> and writes the result to output. </para>        </briefdescription>
+        <detaileddescription>
+<para>All the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> function overloads return true if the conversion was lossless and false if at least one of the characters couldn&apos;t be converted was and replaced with &apos;?&apos; in the output.</para><para>Note that if <computeroutput>wxCONVERT_SUBSTITUTE</computeroutput> was passed to <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref>, substitution is considered a lossless operation.</para><para><simplesect kind="note"><para>You must call <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">Init()</ref> before using this method! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1a3ae44d25cc00cb1468af36665f830ef1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxEncodingConverter::Convert</definition>
+        <argsstring>(const wxString &amp;input) const </argsstring>
+        <name>Convert</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Convert a <ref refid="classwx_string" kindref="compound">wxString</ref> and return a new <ref refid="classwx_string" kindref="compound">wxString</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para>See the <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert(const char*,char*) const </ref>overload for more info. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_encoding_converter_1aa9efc84cf19421feaf5ad805f716aa4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxEncodingConverter::wxEncodingConverter</definition>
+        <argsstring>()</argsstring>
+        <name>wxEncodingConverter</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEncodingConverter::Init</definition>
+        <argsstring>(wxFontEncoding input_enc, wxFontEncoding output_enc, int method=wxCONVERT_STRICT)</argsstring>
+        <name>Init</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>input_enc</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>output_enc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>method</declname>
+          <defval>wxCONVERT_STRICT</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the conversion. </para>        </briefdescription>
+        <detaileddescription>
+<para>Both output or input encoding may be wxFONTENCODING_UNICODE, but only if wxUSE_ENCODING is set to 1.</para><para>All subsequent calls to <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> will interpret its argument as a string in <emphasis>input_enc</emphasis> encoding and will output string in <emphasis>output_enc</emphasis> encoding.</para><para>You must call this method before calling Convert. You may call it more than once in order to switch to another conversion.</para><para><emphasis>method</emphasis> affects behaviour of <ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> in case input character cannot be converted because it does not exist in output encoding:</para><para><itemizedlist>
+<listitem><para><bold>wxCONVERT_STRICT:</bold> follow behaviour of GNU Recode - just copy unconvertible characters to output and don&apos;t change them (its integer value will stay the same) </para></listitem>
+<listitem><para><bold>wxCONVERT_SUBSTITUTE:</bold> try some (lossy) substitutions - e.g. replace unconvertible latin capitals with acute by ordinary capitals, replace en-dash or em-dash by &apos;-&apos; etc.</para></listitem>
+</itemizedlist>
+Both modes guarantee that output string will have same length as input string.</para><para><simplesect kind="return"><para>false if given conversion is impossible, true otherwise (conversion may be impossible either if you try to convert to Unicode with non-Unicode build of wxWidgets or if input or output encoding is not supported). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="179"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_encoding_converter_1aca7518e9cebb979aa982ee13e4dd68a8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxEncodingConverter::CanConvert</definition>
+        <argsstring>(wxFontEncoding encIn, wxFontEncoding encOut)</argsstring>
+        <name>CanConvert</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encIn</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>encOut</declname>
+        </param>
+        <briefdescription>
+<para>Return true if (any text in) multibyte encoding <emphasis>encIn</emphasis> can be converted to another one (<emphasis>encOut</emphasis>) losslessly. </para>        </briefdescription>
+        <detaileddescription>
+<para>Do not call this method with <computeroutput>wxFONTENCODING_UNICODE</computeroutput> as either parameter, it doesn&apos;t make sense (always works in one sense and always depends on the text to convert in the other). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1ae4e3ec6c30a419e1ffbe5275a5cb71c6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wxFontEncodingArray</type>
+        <definition>static wxFontEncodingArray wxEncodingConverter::GetAllEquivalents</definition>
+        <argsstring>(wxFontEncoding enc)</argsstring>
+        <name>GetAllEquivalents</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>enc</declname>
+        </param>
+        <briefdescription>
+<para>Similar to <ref refid="classwx_encoding_converter_1a9c34d0a5a8063352facfdb79a2ea55e4" kindref="member">GetPlatformEquivalents()</ref>, but this one will return ALL equivalent encodings, regardless of the platform, and including itself. </para>        </briefdescription>
+        <detaileddescription>
+<para>This platform&apos;s encodings are before others in the array. And again, if <emphasis>enc</emphasis> is in the array, it is the very first item in it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_encoding_converter_1a9c34d0a5a8063352facfdb79a2ea55e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wxFontEncodingArray</type>
+        <definition>static wxFontEncodingArray wxEncodingConverter::GetPlatformEquivalents</definition>
+        <argsstring>(wxFontEncoding enc, int platform=wxPLATFORM_CURRENT)</argsstring>
+        <name>GetPlatformEquivalents</name>
+        <param>
+          <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
+          <declname>enc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>platform</declname>
+          <defval>wxPLATFORM_CURRENT</defval>
+        </param>
+        <briefdescription>
+<para>Return equivalents for given font that are used under given platform. </para>        </briefdescription>
+        <detaileddescription>
+<para>Supported platforms: <itemizedlist>
+<listitem><para>wxPLATFORM_UNIX </para></listitem>
+<listitem><para>wxPLATFORM_WINDOWS </para></listitem>
+<listitem><para>wxPLATFORM_OS2 </para></listitem>
+<listitem><para>wxPLATFORM_MAC </para></listitem>
+<listitem><para>wxPLATFORM_CURRENT</para></listitem>
+</itemizedlist>
+wxPLATFORM_CURRENT means the platform this binary was compiled for.</para><para>Examples:</para><para><verbatim>
+        current platform   enc          returned value
+        ----------------------------------------------
+        unix            CP1250             {ISO8859_2}
+        unix         ISO8859_2             {ISO8859_2}
+        windows      ISO8859_2                {CP1250}
+        unix            CP1252  {ISO8859_1,ISO8859_15}
+        </verbatim></para><para>Equivalence is defined in terms of convertibility: two encodings are equivalent if you can convert text between then without losing information (it may - and will - happen that you lose special chars like quotation marks or em-dashes but you shouldn&apos;t lose any diacritics and language-specific characters when converting between equivalent encodings).</para><para>Remember that this function does <bold>NOT</bold> check for presence of fonts in system. It only tells you what are most suitable encodings. (It usually returns only one encoding.)</para><para><simplesect kind="note"><para>Note that argument enc itself may be present in the returned array, so that you can, as a side-effect, detect whether the encoding is native for this platform or not.</para><simplesectsep/><para><ref refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" kindref="member">Convert()</ref> is not limited to converting between equivalent encodings, it can convert between two arbitrary encodings.</para><simplesectsep/><para>If <emphasis>enc</emphasis> is present in the returned array, then it is always the first item of it.</para><simplesectsep/><para>Please note that the returned array may contain no items at all. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="145"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is capable of converting strings between two 8-bit encodings/charsets. </para>    </briefdescription>
+    <detaileddescription>
+<para>It can also convert from/to Unicode.</para><para>Only a limited subset of encodings is supported by <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>: <computeroutput>wxFONTENCODING_ISO8859_1</computeroutput>..15, <computeroutput>wxFONTENCODING_CP1250</computeroutput>..1257 and <computeroutput>wxFONTENCODING_KOI8</computeroutput>.</para><para><simplesect kind="note"><para>Please use <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> classes instead if possible. <ref refid="classwx_c_s_conv" kindref="compound">wxCSConv</ref> has much better support for various encodings than <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>. <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref> is useful only if you rely on wxCONVERT_SUBSTITUTE mode of operation (see <ref refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" kindref="member">wxEncodingConverter::Init()</ref>).</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref>, <ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref>, <ref refid="overview__nonenglish" kindref="compound">Writing Non-English Applications</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5811">
+        <label>wxEncodingConverter</label>
+        <link refid="classwx_encoding_converter"/>
+        <childnode refid="5812" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5812">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5813">
+        <label>wxEncodingConverter</label>
+        <link refid="classwx_encoding_converter"/>
+        <childnode refid="5814" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5814">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="5815" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="5815">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/encconv.h" bodystart="30" bodyend="180"/>
+    <listofallmembers>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxEncodingConverter</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_encoding_converter_1aca7518e9cebb979aa982ee13e4dd68a8" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>CanConvert</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxEncodingConverter</scope><name>CloneRefData</name></member>
+      <member refid="classwx_encoding_converter_1acf0e559e30d55628f0df2b166b005eba" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Convert</name></member>
+      <member refid="classwx_encoding_converter_1af8d49c317333738879c5f0528ae113fe" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Convert</name></member>
+      <member refid="classwx_encoding_converter_1a7a10e19b42060ad1f9fb4d137ed2a0a8" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Convert</name></member>
+      <member refid="classwx_encoding_converter_1ac39043d65bd1fa826cffb52b4bd86f0e" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Convert</name></member>
+      <member refid="classwx_encoding_converter_1a4c358173754963620d4e9f83ccdf9c56" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Convert</name></member>
+      <member refid="classwx_encoding_converter_1a99ed7cb33aa5e60a9af67da6646456f0" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Convert</name></member>
+      <member refid="classwx_encoding_converter_1a3ae44d25cc00cb1468af36665f830ef1" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Convert</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxEncodingConverter</scope><name>CreateRefData</name></member>
+      <member refid="classwx_encoding_converter_1ae4e3ec6c30a419e1ffbe5275a5cb71c6" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>GetAllEquivalents</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxEncodingConverter</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_encoding_converter_1a9c34d0a5a8063352facfdb79a2ea55e4" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>GetPlatformEquivalents</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>GetRefData</name></member>
+      <member refid="classwx_encoding_converter_1a03398eb316e755f35dba0793bb11afe2" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Init</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>IsSameAs</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxEncodingConverter</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>Ref</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>SetRefData</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>UnShare</name></member>
+      <member refid="classwx_encoding_converter_1aa9efc84cf19421feaf5ad805f716aa4b" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>wxEncodingConverter</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxEncodingConverter</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxEncodingConverter</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

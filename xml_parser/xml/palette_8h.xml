@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="palette_8h" kind="file">
+    <compoundname>palette.h</compoundname>
+    <innerclass refid="classwx_palette" prot="public">wxPalette</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="palette_8h_1a2ecbe58191b89a50dd5dd0643e29f708" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_palette" kindref="compound">wxPalette</ref></type>
+        <definition>wxPalette wxNullPalette</definition>
+        <argsstring></argsstring>
+        <name>wxNullPalette</name>
+        <briefdescription>
+<para>An empty palette. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="163" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h"/>
+  </compounddef>
+</doxygen>

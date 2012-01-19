@@ -1,0 +1,2380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_evt_handler" kind="class" prot="public">
+    <compoundname>wxEvtHandler</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <basecompoundref refid="classwx_trackable" prot="public" virt="non-virtual">wxTrackable</basecompoundref>
+    <derivedcompoundref refid="classwx_app_console" prot="public" virt="non-virtual">wxAppConsole</derivedcompoundref>
+    <derivedcompoundref refid="classwx_aui_manager" prot="public" virt="non-virtual">wxAuiManager</derivedcompoundref>
+    <derivedcompoundref refid="classwx_doc_manager" prot="public" virt="non-virtual">wxDocManager</derivedcompoundref>
+    <derivedcompoundref refid="classwx_document" prot="public" virt="non-virtual">wxDocument</derivedcompoundref>
+    <derivedcompoundref refid="classwx_event_blocker" prot="public" virt="non-virtual">wxEventBlocker</derivedcompoundref>
+    <derivedcompoundref refid="classwx_file_system_watcher" prot="public" virt="non-virtual">wxFileSystemWatcher</derivedcompoundref>
+    <derivedcompoundref refid="classwx_menu" prot="public" virt="non-virtual">wxMenu</derivedcompoundref>
+    <derivedcompoundref refid="classwx_mouse_events_manager" prot="public" virt="non-virtual">wxMouseEventsManager</derivedcompoundref>
+    <derivedcompoundref refid="classwx_notification_message" prot="public" virt="non-virtual">wxNotificationMessage</derivedcompoundref>
+    <derivedcompoundref refid="classwx_process" prot="public" virt="non-virtual">wxProcess</derivedcompoundref>
+    <derivedcompoundref refid="classwx_property_grid_page" prot="public" virt="non-virtual">wxPropertyGridPage</derivedcompoundref>
+    <derivedcompoundref refid="classwx_task_bar_icon" prot="public" virt="non-virtual">wxTaskBarIcon</derivedcompoundref>
+    <derivedcompoundref refid="classwx_timer" prot="public" virt="non-virtual">wxTimer</derivedcompoundref>
+    <derivedcompoundref refid="classwx_validator" prot="public" virt="non-virtual">wxValidator</derivedcompoundref>
+    <derivedcompoundref refid="classwx_view" prot="public" virt="non-virtual">wxView</derivedcompoundref>
+    <derivedcompoundref refid="classwx_window" prot="public" virt="non-virtual">wxWindow</derivedcompoundref>
+    <includes local="no">wx/event.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Event queuing and processing</header>
+      <description><para><anchor id="_1amgrp0c89f3458172ddcc04db1dc4ce9c36fa"/> </para></description>
+      <memberdef kind="function" id="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxEvtHandler::QueueEvent</definition>
+        <argsstring>(wxEvent *event)</argsstring>
+        <name>QueueEvent</name>
+        <reimplementedby refid="classwx_window_1a69e450f21b0d7013269ec1a4771f043b">QueueEvent</reimplementedby>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Queue event for a later processing. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is similar to <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> but while the latter is synchronous, i.e. the event is processed immediately, before the function returns, this one is asynchronous and returns immediately while the event will be processed at some later time (usually during the next event loop iteration).</para><para>Another important difference is that this method takes ownership of the <emphasis>event</emphasis> parameter, i.e. it will delete it itself. This implies that the event should be allocated on the heap and that the pointer can&apos;t be used any more after the function returns (as it can be deleted at any moment).</para><para><ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">QueueEvent()</ref> can be used for inter-thread communication from the worker threads to the main thread, it is safe in the sense that it uses locking internally and avoids the problem mentioned in <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">AddPendingEvent()</ref> documentation by ensuring that the <emphasis>event</emphasis> object is not used by the calling thread any more. Care should still be taken to avoid that some fields of this object are used by it, notably any <ref refid="classwx_string" kindref="compound">wxString</ref> members of the event object must not be shallow copies of another <ref refid="classwx_string" kindref="compound">wxString</ref> object as this would result in them still using the same string buffer behind the scenes. For example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FunctionInAWorkerThread(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>str)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>*<sp/>evt<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_command_event" kindref="compound" tooltip="This event class contains information about command events, which originate from...">wxCommandEvent</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT<sp/>evt-&gt;SetString(str)<sp/>as<sp/>this<sp/>would<sp/>be<sp/>a<sp/>shallow<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evt-&gt;<ref refid="classwx_command_event_1a06ca56ac6680fe3b3178d8abd913d450" kindref="member" tooltip="Sets the m_commandString member.">SetString</ref>(str.<ref refid="classwx_string_1a6418ec90c6d4ffe0b05702be1b35df4f" kindref="member" tooltip="Returns a lightweight intermediate class which is in turn implicitly convertible...">c_str</ref>());<sp/></highlight><highlight class="comment">//<sp/>make<sp/>a<sp/>deep<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member" tooltip="The global pointer to the singleton wxApp object.">wxTheApp</ref>-&gt;<ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member" tooltip="Queue event for a later processing.">QueueEvent</ref>(<sp/>evt<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para>Note that you can use <ref refid="classwx_thread_event" kindref="compound">wxThreadEvent</ref> instead of <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> to avoid this problem: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FunctionInAWorkerThread(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change...">wxString</ref>&amp;<sp/>str)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_thread_event" kindref="compound" tooltip="This class adds some simple functionality to wxEvent to facilitate inter-thread communication...">wxThreadEvent</ref><sp/>evt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evt-&gt;<ref refid="classwx_thread_event_1a72092085fc4e0837d8e56666cb45f4d3" kindref="member" tooltip="Sets the string value.">SetString</ref>(str);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wxThreadEvent::Clone()<sp/>makes<sp/>sure<sp/>that<sp/>the<sp/>internal<sp/>wxString</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>member<sp/>is<sp/>not<sp/>shared<sp/>by<sp/>other<sp/>wxString<sp/>instances:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member" tooltip="The global pointer to the singleton wxApp object.">wxTheApp</ref>-&gt;<ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member" tooltip="Queue event for a later processing.">QueueEvent</ref>(<sp/>evt.<ref refid="classwx_thread_event_1af8d1c4ec499415d84680c1a52a68513a" kindref="member" tooltip="Clones this event making sure that all internal members which use COW (only m_commandString...">Clone</ref>()<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para>Finally notice that this method automatically wakes up the event loop if it is currently idle by calling <ref refid="group__group__funcmacro__appinitterm_1ga97206743f70b5382f9e2615217604d15" kindref="member">wxWakeUpIdle()</ref> so there is no need to do it manually when using it.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A heap-allocated event to be queued, <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">QueueEvent()</ref> takes ownership of it. This parameter shouldn&apos;t be <computeroutput>NULL</computeroutput>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxEvtHandler::AddPendingEvent</definition>
+        <argsstring>(const wxEvent &amp;event)</argsstring>
+        <name>AddPendingEvent</name>
+        <reimplementedby refid="classwx_window_1a774b5b5548a6258727b5e2099e63ae9a">AddPendingEvent</reimplementedby>
+        <param>
+          <type>const <ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Post an event to be processed later. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is similar to <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">QueueEvent()</ref> but can&apos;t be used to post events from worker threads for the event objects with <ref refid="classwx_string" kindref="compound">wxString</ref> fields (i.e. in practice most of them) because of an unsafe use of the same <ref refid="classwx_string" kindref="compound">wxString</ref> object which happens because the <ref refid="classwx_string" kindref="compound">wxString</ref> field in the original <emphasis>event</emphasis> object and its copy made internally by this function share the same string buffer internally. Use <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">QueueEvent()</ref> to avoid this.</para><para>A copy of <emphasis>event</emphasis> is made by the function, so the original can be deleted as soon as function returns (it is common that the original is created on the stack). This requires that the <ref refid="classwx_event_1a26878097a702e8d0368da150125d4158" kindref="member">wxEvent::Clone()</ref> method be implemented by event so that it can be duplicated and stored until it gets processed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event to add to the pending events queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="465"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxEvtHandler::ProcessEvent</definition>
+        <argsstring>(wxEvent &amp;event)</argsstring>
+        <name>ProcessEvent</name>
+        <reimplementedby refid="classwx_window_1a5ebdbd87c28644149a07f1742996df96">ProcessEvent</reimplementedby>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Processes an event, searching event tables and calling zero or more suitable event handler function(s). </para>        </briefdescription>
+        <detaileddescription>
+<para>Normally, your application would not call this function: it is called in the wxWidgets implementation to dispatch incoming user interface events to the framework (and application).</para><para>However, you might need to call it if implementing new functionality (such as a new control) where you define new event types, as opposed to allowing the user to override virtual functions.</para><para>Notice that you don&apos;t usually need to override <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> to customize the event handling, overriding the specially provided <ref refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" kindref="member">TryBefore()</ref> and <ref refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" kindref="member">TryAfter()</ref> functions is usually enough. For example, <ref refid="classwx_m_d_i_parent_frame" kindref="compound">wxMDIParentFrame</ref> may override <ref refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" kindref="member">TryBefore()</ref> to ensure that the menu events are processed in the active child frame before being processed in the parent frame itself.</para><para>The normal order of event table searching is as follows:<orderedlist>
+<listitem><para><ref refid="classwx_app_console_1ada7ab606e014a10d46e4b3c6f602e20c" kindref="member">wxApp::FilterEvent()</ref> is called. If it returns anything but <computeroutput>-1</computeroutput> (default) the processing stops here.</para></listitem><listitem><para><ref refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" kindref="member">TryBefore()</ref> is called (this is where <ref refid="classwx_validator" kindref="compound">wxValidator</ref> are taken into account for <ref refid="classwx_window" kindref="compound">wxWindow</ref> objects). If this returns true, the function exits.</para></listitem><listitem><para>If the object is disabled (via a call to <ref refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" kindref="member">wxEvtHandler::SetEvtHandlerEnabled</ref>) the function skips to step (7).</para></listitem><listitem><para>Dynamic event table of the handlers bound using <ref refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" kindref="member">Bind&lt;&gt;()</ref> is searched. If a handler is found, it is executed and the function returns true unless the handler used <ref refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" kindref="member">wxEvent::Skip()</ref> to indicate that it didn&apos;t handle the event in which case the search continues.</para></listitem><listitem><para>Static events table of the handlers bound using event table macros is searched for this event handler. If this fails, the base class event table is tried, and so on until no more tables exist or an appropriate function was found. If a handler is found, the same logic as in the previous step applies.</para></listitem><listitem><para>The search is applied down the entire chain of event handlers (usually the chain has a length of one). This chain can be formed using <ref refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" kindref="member">wxEvtHandler::SetNextHandler()</ref>: <image type="html" name="overview_events_chain.png"></image>
+ (referring to the image, if <computeroutput>A-&gt;ProcessEvent</computeroutput> is called and it doesn&apos;t handle the event, <computeroutput>B-&gt;ProcessEvent</computeroutput> will be called and so on...). Note that in the case of <ref refid="classwx_window" kindref="compound">wxWindow</ref> you can build a stack of event handlers (see <ref refid="classwx_window_1a398c11ab9af7956067a964f560d1978c" kindref="member">wxWindow::PushEventHandler()</ref> for more info). If any of the handlers of the chain return true, the function exits.</para></listitem><listitem><para><ref refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" kindref="member">TryAfter()</ref> is called: for the <ref refid="classwx_window" kindref="compound">wxWindow</ref> object this may propagate the event to the window parent (recursively). If the event is still not processed, <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> on wxTheApp object is called as the last step.</para></listitem></orderedlist>
+</para><para>Notice that steps (2)-(6) are performed in <ref refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" kindref="member">ProcessEventLocally()</ref> which is called by this function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event to process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a suitable event handler function was found and executed, and the function did not call <ref refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" kindref="member">wxEvent::Skip</ref>.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" kindref="member">SearchEventTable()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="526"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEvtHandler::ProcessEventLocally</definition>
+        <argsstring>(wxEvent &amp;event)</argsstring>
+        <name>ProcessEventLocally</name>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Try to process the event in this handler and all those chained to it. </para>        </briefdescription>
+        <detaileddescription>
+<para>As explained in <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> documentation, the event handlers may be chained in a doubly-linked list. This function tries to process the event in this handler (including performing any pre-processing done in <ref refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" kindref="member">TryBefore()</ref>, e.g. applying validators) and all those following it in the chain until the event is processed or the chain is exhausted.</para><para>This function is called from <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> and, in turn, calls <ref refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" kindref="member">TryThis()</ref> for each handler in turn. It is not virtual and so cannot be overridden but can, and should, be called to forward an event to another handler instead of <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> which would result in a duplicate call to <ref refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" kindref="member">TryAfter()</ref>, e.g. resulting in all unprocessed events being sent to the application object multiple times.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event to process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if this handler of one of those chained to it processed the event. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="552"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEvtHandler::SafelyProcessEvent</definition>
+        <argsstring>(wxEvent &amp;event)</argsstring>
+        <name>SafelyProcessEvent</name>
+        <reimplementedby refid="classwx_window_1a0f9814efc50316b4c57b7ec2bf78b716">SafelyProcessEvent</reimplementedby>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Processes an event by calling <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> and handles any exceptions that occur in the process. </para>        </briefdescription>
+        <detaileddescription>
+<para>If an exception is thrown in event handler, <ref refid="classwx_app_console_1aca806b41cf74fd6166e4fb2e2708e9bf" kindref="member">wxApp::OnExceptionInMainLoop</ref> is called.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event to process.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the event was processed, false if no handler was found or an exception was thrown.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_window_1a665731bbfa46a72c215b04df60216ef1" kindref="member">wxWindow::HandleWindowEvent</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="567"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a6f643dbdcf8e914ae1c8b70dd305e6f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::ProcessPendingEvents</definition>
+        <argsstring>()</argsstring>
+        <name>ProcessPendingEvents</name>
+        <reimplementedby refid="classwx_window_1a7cbee38944dab02d753a4dba74230443">ProcessPendingEvents</reimplementedby>
+        <reimplementedby refid="classwx_app_console_1ab62db8e6265c1e841220c47b9778ab7e">ProcessPendingEvents</reimplementedby>
+        <briefdescription>
+<para>Processes the pending events previously queued using <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">QueueEvent()</ref> or <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">AddPendingEvent()</ref>; you must call this function only if you are sure there are pending events for this handler, otherwise a <computeroutput>wxCHECK</computeroutput> will fail. </para>        </briefdescription>
+        <detaileddescription>
+<para>The real processing still happens in <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> which is called by this function.</para><para>Note that this function needs a valid application object (see <ref refid="classwx_app_console_1a2cb953d248e41fd5bdb95ade98311ad3" kindref="member">wxAppConsole::GetInstance()</ref>) because <ref refid="classwx_app" kindref="compound">wxApp</ref> holds the list of the event handlers with pending events and this function manipulates that list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="582"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::DeletePendingEvents</definition>
+        <argsstring>()</argsstring>
+        <name>DeletePendingEvents</name>
+        <reimplementedby refid="classwx_app_console_1ad89ebde765071beef409f6e6e81d1b31">DeletePendingEvents</reimplementedby>
+        <briefdescription>
+<para>Deletes all events queued on this event handler using <ref refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" kindref="member">QueueEvent()</ref> or <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">AddPendingEvent()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Use with care because the events which are deleted are (obviously) not processed and this may have unwanted consequences (e.g. user actions events will be lost). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="592"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxEvtHandler::SearchEventTable</definition>
+        <argsstring>(wxEventTable &amp;table, wxEvent &amp;event)</argsstring>
+        <name>SearchEventTable</name>
+        <param>
+          <type>wxEventTable &amp;</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Searches the event table, executing an event handler function if an appropriate one is found. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event table to be searched. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event to be matched against an event table entry.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a suitable event handler function was found and executed, and the function did not call <ref refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" kindref="member">wxEvent::Skip</ref>.</para></simplesect>
+<simplesect kind="remark"><para>This function looks through the object&apos;s event table and tries to find an entry that will match the event. An entry will match if: <itemizedlist>
+<listitem><para>The event type matches, and </para></listitem>
+<listitem><para>the identifier or identifier range matches, or the event table entry&apos;s identifier is zero.</para></listitem>
+</itemizedlist>
+If a suitable function is called but calls <ref refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" kindref="member">wxEvent::Skip</ref>, this function will fail, and searching will continue.</para></simplesect>
+<xrefsect id="todo_1_todo000026"><xreftitle>Todo</xreftitle><xrefdescription><para>this function in the header is listed as an &quot;implementation only&quot; function; are we sure we want to document it?</para></xrefdescription></xrefsect><simplesect kind="see"><para><ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="622"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Connecting and disconnecting</header>
+      <description><para><anchor id="_1amgrp85af86e39f85765b30b4c8bb7c73f313"/> </para></description>
+      <memberdef kind="function" id="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::Connect</definition>
+        <argsstring>(int id, int lastId, wxEventType eventType, wxObjectEventFunction function, wxObject *userData=NULL, wxEvtHandler *eventSink=NULL)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lastId</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>wxObjectEventFunction</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>eventSink</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Connects the given function dynamically with the event handler, id and event type. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that <ref refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" kindref="member">Bind()</ref> provides a more flexible and safer way to do the same thing as <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">Connect()</ref>, please use it in any new code -- while <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">Connect()</ref> is not formally deprecated due to its existing widespread usage, it has no advantages compared to <ref refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" kindref="member">Bind()</ref>.</para><para>This is an alternative to the use of static event tables. It is more flexible as it allows to connect events generated by some object to an event handler defined in a different object of a different class (which is impossible to do directly with the event tables -- the events can be only handled in another object if they are propagated upwards to it). Do make sure to specify the correct <emphasis>eventSink</emphasis> when connecting to an event of a different object.</para><para>See <ref refid="overview__events_1overview_events_bind" kindref="member">Dynamic Event Handling</ref> for more detailed explanation of this function and the <ref refid="page__samples_1page_samples_event" kindref="member">Event Sample</ref> sample for usage examples.</para><para>This specific overload allows you to connect an event handler to a <emphasis>range</emphasis> of <emphasis>source</emphasis> IDs. Do not confuse <emphasis>source</emphasis> IDs with event <emphasis>types:</emphasis> source IDs identify the event generator objects (typically <ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> or <ref refid="classwx_window" kindref="compound">wxWindow</ref> objects) while the event <emphasis>type</emphasis> identify which type of events should be handled by the given <emphasis>function</emphasis> (an event generator object may generate many different types of events!).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first ID of the identifier range to be associated with the event handler function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last ID of the identifier range to be associated with the event handler function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event type to be associated with this event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler function. Note that this function should be explicitly converted to the correct type which can be done using a macro called <computeroutput>wxFooEventHandler</computeroutput> for the handler for any <computeroutput>wxFooEvent</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be associated with the event table entry. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventSink</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object whose member function should be called. It must be specified when connecting an event generated by one object to a member function of a different object. If it is omitted, <computeroutput>this</computeroutput> is used.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>wxPerl Note:</bold> In wxPerl this function takes 4 arguments: <emphasis>id</emphasis>, <emphasis>lastid</emphasis>, <emphasis>type</emphasis>, <emphasis>method</emphasis>; if <emphasis>method</emphasis> is undef, the handler is disconnected.}</para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" kindref="member">Bind&lt;&gt;()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="691"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::Connect</definition>
+        <argsstring>(int id, wxEventType eventType, wxObjectEventFunction function, wxObject *userData=NULL, wxEvtHandler *eventSink=NULL)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>wxObjectEventFunction</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>eventSink</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>See the <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">Connect(int, int, wxEventType, wxObjectEventFunction, wxObject*, wxEvtHandler*)</ref> overload for more info. </para>        </briefdescription>
+        <detaileddescription>
+<para>This overload can be used to attach an event handler to a single source ID:</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame-&gt;Connect(<sp/><ref refid="defs_8h_1ac66d0a09761e7d86b2ac0b2e0c6a8cbba37f548d1211c664ede962e943baad4e5" kindref="member">wxID_EXIT</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__events_1ga5705afbf2885acba094565982b5f6407" kindref="member">wxEVT_COMMAND_MENU_SELECTED</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxCommandEventHandler(MyFrame::OnQuit)<sp/>);</highlight></codeline>
+</programlisting></para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="713"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::Connect</definition>
+        <argsstring>(wxEventType eventType, wxObjectEventFunction function, wxObject *userData=NULL, wxEvtHandler *eventSink=NULL)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>wxObjectEventFunction</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>eventSink</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>See the <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">Connect(int, int, wxEventType, wxObjectEventFunction, wxObject*, wxEvtHandler*)</ref> overload for more info. </para>        </briefdescription>
+        <detaileddescription>
+<para>This overload will connect the given event handler so that regardless of the ID of the event source, the handler will be called.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="729"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEvtHandler::Disconnect</definition>
+        <argsstring>(wxEventType eventType, wxObjectEventFunction function, wxObject *userData=NULL, wxEvtHandler *eventSink=NULL)</argsstring>
+        <name>Disconnect</name>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>wxObjectEventFunction</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>eventSink</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Disconnects the given function dynamically from the event handler, using the specified parameters as search criteria and returning true if a matching function has been found and removed. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can only disconnect functions which have been added using the <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">Connect()</ref> method. There is no way to disconnect functions connected using the (static) event tables.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event type associated with this event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data associated with the event table entry. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventSink</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object whose member function should be called.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="756"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEvtHandler::Disconnect</definition>
+        <argsstring>(int id=wxID_ANY, wxEventType eventType=wxEVT_NULL, wxObjectEventFunction function=NULL, wxObject *userData=NULL, wxEvtHandler *eventSink=NULL)</argsstring>
+        <name>Disconnect</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>eventType</declname>
+          <defval><ref refid="group__group__funcmacro__events_1ga310bc3f7977ae79ac1198c7a287dbffe" kindref="member">wxEVT_NULL</ref></defval>
+        </param>
+        <param>
+          <type>wxObjectEventFunction</type>
+          <declname>function</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>eventSink</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>See the <ref refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" kindref="member">Disconnect(wxEventType, wxObjectEventFunction, wxObject*, wxEvtHandler*)</ref> overload for more info. </para>        </briefdescription>
+        <detaileddescription>
+<para>This overload takes the additional <emphasis>id</emphasis> parameter.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="772"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEvtHandler::Disconnect</definition>
+        <argsstring>(int id, int lastId, wxEventType eventType, wxObjectEventFunction function=NULL, wxObject *userData=NULL, wxEvtHandler *eventSink=NULL)</argsstring>
+        <name>Disconnect</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lastId</declname>
+        </param>
+        <param>
+          <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>wxObjectEventFunction</type>
+          <declname>function</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>eventSink</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>See the <ref refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" kindref="member">Disconnect(wxEventType, wxObjectEventFunction, wxObject*, wxEvtHandler*)</ref> overload for more info. </para>        </briefdescription>
+        <detaileddescription>
+<para>This overload takes an additional range of source IDs.</para><para><bold>wxPerl Note:</bold> In wxPerl this function takes 3 arguments: <emphasis>id</emphasis>, <emphasis>lastid</emphasis>, <emphasis>type</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="789"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Binding and Unbinding</header>
+      <description><para><anchor id="_1amgrp53fec3f302cc825d7b06e2715a1e8b44"/> </para></description>
+      <memberdef kind="function" id="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename EventTag</type>
+          </param>
+          <param>
+            <type>typename Functor</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void wxEvtHandler::Bind</definition>
+        <argsstring>(const EventTag &amp;eventType, Functor functor, int id=wxID_ANY, int lastId=wxID_ANY, wxObject *userData=NULL)</argsstring>
+        <name>Bind</name>
+        <param>
+          <type>const EventTag &amp;</type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>Functor</type>
+          <declname>functor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lastId</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Binds the given function, functor or method dynamically with the event. </para>        </briefdescription>
+        <detaileddescription>
+<para>This offers basically the same functionality as <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">Connect()</ref>, but it is more flexible as it also allows you to use ordinary functions and arbitrary functors as event handlers. It is also less restrictive then <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">Connect()</ref> because you can use an arbitrary method as an event handler, whereas <ref refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" kindref="member">Connect()</ref> requires a <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> derived handler.</para><para>See <ref refid="overview__events_1overview_events_bind" kindref="member">Dynamic Event Handling</ref> for more detailed explanation of this function and the <ref refid="page__samples_1page_samples_event" kindref="member">Event Sample</ref> sample for usage examples.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event type to be associated with this event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>functor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler functor. This can be an ordinary function but also an arbitrary functor like boost::function&lt;&gt;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first ID of the identifier range to be associated with the event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last ID of the identifier range to be associated with the event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be associated with the event table entry.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="overview__cpp__rtti__disabled" kindref="compound">Caveats When Not Using C++ RTTI</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="834"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename EventTag</type>
+          </param>
+          <param>
+            <type>typename Class</type>
+          </param>
+          <param>
+            <type>typename EventArg</type>
+          </param>
+          <param>
+            <type>typename EventHandler</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void wxEvtHandler::Bind</definition>
+        <argsstring>(const EventTag &amp;eventType, void(Class::*method)(EventArg &amp;), EventHandler *handler, int id=wxID_ANY, int lastId=wxID_ANY, wxObject *userData=NULL)</argsstring>
+        <name>Bind</name>
+        <param>
+          <type>const EventTag &amp;</type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>void(Class::*)(EventArg &amp;)</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>EventHandler *</type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lastId</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>See the <ref refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" kindref="member">Bind&lt;&gt;(const EventTag&amp;, Functor, int, int, wxObject*)</ref> overload for more info. </para>        </briefdescription>
+        <detaileddescription>
+<para>This overload will bind the given method as the event handler.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event type to be associated with this event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler method. This can be an arbitrary method (doesn&apos;t need to be from a <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> derived class). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object whose method should be called. It must always be specified so it can be checked at compile time whether the given method is an actual member of the given handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first ID of the identifier range to be associated with the event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last ID of the identifier range to be associated with the event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be associated with the event table entry.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="overview__cpp__rtti__disabled" kindref="compound">Caveats When Not Using C++ RTTI</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="870"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename EventTag</type>
+          </param>
+          <param>
+            <type>typename Functor</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool wxEvtHandler::Unbind</definition>
+        <argsstring>(const EventTag &amp;eventType, Functor functor, int id=wxID_ANY, int lastId=wxID_ANY, wxObject *userData=NULL)</argsstring>
+        <name>Unbind</name>
+        <param>
+          <type>const EventTag &amp;</type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>Functor</type>
+          <declname>functor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lastId</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Unbinds the given function, functor or method dynamically from the event handler, using the specified parameters as search criteria and returning true if a matching function has been found and removed. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can only unbind functions, functors or methods which have been added using the <ref refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" kindref="member">Bind&lt;&gt;()</ref> method. There is no way to unbind functions bound using the (static) event tables.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event type associated with this event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>functor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler functor. This can be an ordinary function but also an arbitrary functor like boost::function&lt;&gt;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first ID of the identifier range associated with the event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last ID of the identifier range associated with the event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data associated with the event table entry.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="overview__cpp__rtti__disabled" kindref="compound">Caveats When Not Using C++ RTTI</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="903"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename EventTag</type>
+          </param>
+          <param>
+            <type>typename Class</type>
+          </param>
+          <param>
+            <type>typename EventArg</type>
+          </param>
+          <param>
+            <type>typename EventHandler</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool wxEvtHandler::Unbind</definition>
+        <argsstring>(const EventTag &amp;eventType, void(Class::*method)(EventArg &amp;), EventHandler *handler, int id=wxID_ANY, int lastId=wxID_ANY, wxObject *userData=NULL)</argsstring>
+        <name>Unbind</name>
+        <param>
+          <type>const EventTag &amp;</type>
+          <declname>eventType</declname>
+        </param>
+        <param>
+          <type>void(Class::*)(EventArg &amp;)</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>EventHandler *</type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lastId</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>userData</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>See the <ref refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" kindref="member">Unbind&lt;&gt;(const EventTag&amp;, Functor, int, int, wxObject*)</ref> overload for more info. </para>        </briefdescription>
+        <detaileddescription>
+<para>This overload unbinds the given method from the event..</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event type associated with this event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler method associated with this event. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object whose method was called. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first ID of the identifier range associated with the event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last ID of the identifier range associated with the event handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data associated with the event table entry.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="overview__cpp__rtti__disabled" kindref="compound">Caveats When Not Using C++ RTTI</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="936"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>User-supplied data</header>
+      <description><para><anchor id="_1amgrp34f318f5326093962c8aecb458b26e8e"/> </para></description>
+      <memberdef kind="function" id="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* wxEvtHandler::GetClientData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetClientData</name>
+        <briefdescription>
+<para>Returns user-supplied client data. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>Normally, any extra data the programmer wishes to associate with the object should be made available by deriving a new class with new data members.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" kindref="member">SetClientData()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="952"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
+        <definition>wxClientData* wxEvtHandler::GetClientObject</definition>
+        <argsstring>() const </argsstring>
+        <name>GetClientObject</name>
+        <briefdescription>
+<para>Returns a pointer to the user-supplied client data object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" kindref="member">SetClientObject()</ref>, <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="959"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::SetClientData</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>SetClientData</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Sets user-supplied client data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be associated with the event handler.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>Normally, any extra data the programmer wishes to associate with the object should be made available by deriving a new class with new data members. You must not call this method and SetClientObject on the same class - only one of them.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" kindref="member">GetClientData()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="974"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::SetClientObject</definition>
+        <argsstring>(wxClientData *data)</argsstring>
+        <name>SetClientObject</name>
+        <param>
+          <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Set the client data object. </para>        </briefdescription>
+        <detaileddescription>
+<para>Any previous object will be deleted.</para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" kindref="member">GetClientObject()</ref>, <ref refid="classwx_client_data" kindref="compound">wxClientData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="981"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Event handler chaining</header>
+      <description><para><anchor id="_1amgrp34fce33351e9185ba6de2ad55cd807ce"/><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> can be arranged in a double-linked list of handlers which is automatically iterated by <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> if needed. </para></description>
+      <memberdef kind="function" id="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEvtHandler::GetEvtHandlerEnabled</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEvtHandlerEnabled</name>
+        <briefdescription>
+<para>Returns true if the event handler is enabled, false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" kindref="member">SetEvtHandlerEnabled()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="999"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+        <definition>wxEvtHandler* wxEvtHandler::GetNextHandler</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNextHandler</name>
+        <briefdescription>
+<para>Returns the pointer to the next handler in the chain. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" kindref="member">SetNextHandler()</ref>, <ref refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" kindref="member">GetPreviousHandler()</ref>, <ref refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" kindref="member">SetPreviousHandler()</ref>, <ref refid="classwx_window_1a398c11ab9af7956067a964f560d1978c" kindref="member">wxWindow::PushEventHandler</ref>, <ref refid="classwx_window_1ac45c1f4cf96c70779764c14cf528790b" kindref="member">wxWindow::PopEventHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1007"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+        <definition>wxEvtHandler* wxEvtHandler::GetPreviousHandler</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPreviousHandler</name>
+        <briefdescription>
+<para>Returns the pointer to the previous handler in the chain. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" kindref="member">SetPreviousHandler()</ref>, <ref refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" kindref="member">GetNextHandler()</ref>, <ref refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" kindref="member">SetNextHandler()</ref>, <ref refid="classwx_window_1a398c11ab9af7956067a964f560d1978c" kindref="member">wxWindow::PushEventHandler</ref>, <ref refid="classwx_window_1ac45c1f4cf96c70779764c14cf528790b" kindref="member">wxWindow::PopEventHandler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1015"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::SetEvtHandlerEnabled</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>SetEvtHandlerEnabled</name>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables the event handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the event handler is to be enabled, false if it is to be disabled.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>You can use this function to avoid having to remove the event handler from the chain, for example when implementing a dialog editor and changing from edit to test mode.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" kindref="member">GetEvtHandlerEnabled()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1029"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxEvtHandler::SetNextHandler</definition>
+        <argsstring>(wxEvtHandler *handler)</argsstring>
+        <name>SetNextHandler</name>
+        <reimplementedby refid="classwx_window_1aeab905f61df7004c1b76a3351dca9e96">SetNextHandler</reimplementedby>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pointer to the next handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>See <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> for more info about how the chains of event handlers are internally used. Also remember that <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> uses double-linked lists and thus if you use this function, you should also call <ref refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" kindref="member">SetPreviousHandler()</ref> on the argument passed to this function: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handlerA-&gt;SetNextHandler(handlerB);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handlerB-&gt;SetPreviousHandler(handlerA);</highlight></codeline>
+</programlisting></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler to be set as the next handler. Cannot be NULL.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="overview__events_1overview_events_processing" kindref="member">How Events are Processed</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1051"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxEvtHandler::SetPreviousHandler</definition>
+        <argsstring>(wxEvtHandler *handler)</argsstring>
+        <name>SetPreviousHandler</name>
+        <reimplementedby refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001">SetPreviousHandler</reimplementedby>
+        <param>
+          <type><ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pointer to the previous handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>All remarks about <ref refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" kindref="member">SetNextHandler()</ref> apply to this function as well.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event handler to be set as the previous handler. Cannot be NULL.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="overview__events_1overview_events_processing" kindref="member">How Events are Processed</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1063"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxEvtHandler::Unlink</definition>
+        <argsstring>()</argsstring>
+        <name>Unlink</name>
+        <briefdescription>
+<para>Unlinks this event handler from the chain it&apos;s part of (if any); then links the &quot;previous&quot; event handler to the &quot;next&quot; one (so that the chain won&apos;t be interrupted). </para>        </briefdescription>
+        <detaileddescription>
+<para>E.g. if before calling <ref refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" kindref="member">Unlink()</ref> you have the following chain: <image type="html" name="evthandler_unlink_before.png"></image>
+ then after calling <computeroutput>B-&gt;<ref refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" kindref="member">Unlink()</ref></computeroutput> you&apos;ll have: <image type="html" name="evthandler_unlink_after.png"></image>
+</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1077"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEvtHandler::IsUnlinked</definition>
+        <argsstring>() const </argsstring>
+        <name>IsUnlinked</name>
+        <briefdescription>
+<para>Returns true if the next and the previous handler pointers of this event handler instance are NULL. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" kindref="member">SetPreviousHandler()</ref>, <ref refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" kindref="member">SetNextHandler()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1087"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Global event filters.</header>
+      <description><para><anchor id="_1amgrp214b91cc047e15af8aa8a8516c97cd51"/>Methods for working with the global list of event filters.</para><para>Event filters can be defined to pre-process all the events that happen in an application, see <ref refid="classwx_event_filter" kindref="compound">wxEventFilter</ref> documentation for more information. </para></description>
+      <memberdef kind="function" id="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxEvtHandler::AddFilter</definition>
+        <argsstring>(wxEventFilter *filter)</argsstring>
+        <name>AddFilter</name>
+        <param>
+          <type><ref refid="classwx_event_filter" kindref="compound">wxEventFilter</ref> *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Add an event filter whose FilterEvent() method will be called for each and every event processed by wxWidgets. </para>        </briefdescription>
+        <detaileddescription>
+<para>The filters are called in LIFO order and <ref refid="classwx_app" kindref="compound">wxApp</ref> is registered as an event filter by default. The pointer must remain valid until it&apos;s removed with <ref refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" kindref="member">RemoveFilter()</ref> and is not deleted by <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>.</para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1111"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxEvtHandler::RemoveFilter</definition>
+        <argsstring>(wxEventFilter *filter)</argsstring>
+        <name>RemoveFilter</name>
+        <param>
+          <type><ref refid="classwx_event_filter" kindref="compound">wxEventFilter</ref> *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Remove a filter previously installed with <ref refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" kindref="member">AddFilter()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>It&apos;s an error to remove a filter that hadn&apos;t been previously added or was already removed.</para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxEvtHandler::wxEvtHandler</definition>
+        <argsstring>()</argsstring>
+        <name>wxEvtHandler</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxEvtHandler::~wxEvtHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~wxEvtHandler</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the handler is part of a chain, the destructor will unlink itself (see <ref refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" kindref="member">Unlink()</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="375"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxEvtHandler::TryBefore</definition>
+        <argsstring>(wxEvent &amp;event)</argsstring>
+        <name>TryBefore</name>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Method called by <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> before examining this object event tables. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be overridden to hook into the event processing logic as early as possible. You should usually call the base class version when overriding this method, even if <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> itself does nothing here, some derived classes do use this method, e.g. <ref refid="classwx_window" kindref="compound">wxWindow</ref> implements support for <ref refid="classwx_validator" kindref="compound">wxValidator</ref> in it.</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>BaseClass<sp/></highlight><highlight class="comment">//<sp/>inheriting<sp/>from<sp/>wxEvtHandler</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" kindref="member" tooltip="Method called by ProcessEvent() before examining this object event tables.">TryBefore</ref>(<ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>MyPreProcess(event)<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" kindref="member" tooltip="Method called by ProcessEvent() before examining this object event tables.">BaseClass::TryBefore</ref>(event);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1154"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxEvtHandler::TryThis</definition>
+        <argsstring>(wxEvent &amp;event)</argsstring>
+        <name>TryThis</name>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Try to process the event in this event handler. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called from <ref refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" kindref="member">ProcessEventLocally()</ref> and thus, indirectly, from <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref>, please see the detailed description of the event processing logic there.</para><para>It is currently <emphasis>not</emphasis> virtual and so may not be overridden.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event to process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if this object itself defines a handler for this event and the handler didn&apos;t skip the event. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1173"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxEvtHandler::TryAfter</definition>
+        <argsstring>(wxEvent &amp;event)</argsstring>
+        <name>TryAfter</name>
+        <param>
+          <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Method called by <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> as last resort. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method can be overridden to implement post-processing for the events which were not processed anywhere else.</para><para>The base class version handles forwarding the unprocessed events to <ref refid="classwx_app" kindref="compound">wxApp</ref> at <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> level and propagating them upwards the window child-parent chain at <ref refid="classwx_window" kindref="compound">wxWindow</ref> level and so should usually be called when overriding this method: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>BaseClass<sp/></highlight><highlight class="comment">//<sp/>inheriting<sp/>from<sp/>wxEvtHandler</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" kindref="member" tooltip="Method called by ProcessEvent() as last resort.">TryAfter</ref>(<ref refid="classwx_event" kindref="compound" tooltip="An event is a structure holding information about an event passed to a callback or...">wxEvent</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>BaseClass::TryAfter(event)<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>MyPostProcess(event);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">ProcessEvent()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1202"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class that can handle events from the windowing system. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classwx_window" kindref="compound">wxWindow</ref> is (and therefore all window classes are) derived from this class.</para><para>When events are received, <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> invokes the method listed in the event table using itself as the object. When using multiple inheritance <bold>it is imperative that the <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref>(-derived) class is the first class inherited</bold> such that the <computeroutput>this</computeroutput> pointer for the overall object will be identical to the <computeroutput>this</computeroutput> pointer of the <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> portion.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview__events_1overview_events_processing" kindref="member">How Events are Processed</ref>, <ref refid="classwx_event_blocker" kindref="compound">wxEventBlocker</ref>, <ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6025">
+        <label>wxStaticText</label>
+        <link refid="classwx_static_text"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6021">
+        <label>wxSpinCtrlDouble</label>
+        <link refid="classwx_spin_ctrl_double"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5992">
+        <label>wxGenericDirCtrl</label>
+        <link refid="classwx_generic_dir_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5946">
+        <label>wxValidator</label>
+        <link refid="classwx_validator"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5937">
+        <label>wxEventBlocker</label>
+        <link refid="classwx_event_blocker"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6062">
+        <label>wxDocChildFrame</label>
+        <link refid="classwx_doc_child_frame"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6088">
+        <label>wxSashLayoutWindow</label>
+        <link refid="classwx_sash_layout_window"/>
+        <childnode refid="6087" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5957">
+        <label>wxAnimationCtrl</label>
+        <link refid="classwx_animation_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5994">
+        <label>wxHeaderCtrlSimple</label>
+        <link refid="classwx_header_ctrl_simple"/>
+        <childnode refid="5993" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5967">
+        <label>wxAuiNotebook</label>
+        <link refid="classwx_aui_notebook"/>
+        <childnode refid="5966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5975">
+        <label>wxCollapsiblePane</label>
+        <link refid="classwx_collapsible_pane"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5938">
+        <label>wxFileSystemWatcher</label>
+        <link refid="classwx_file_system_watcher"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6019">
+        <label>wxSpinButton</label>
+        <link refid="classwx_spin_button"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6038">
+        <label>wxNonOwnedWindow</label>
+        <link refid="classwx_non_owned_window"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5983">
+        <label>wxListBox</label>
+        <link refid="classwx_list_box"/>
+        <childnode refid="5981" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6075">
+        <label>wxHScrolledWindow</label>
+        <link refid="classwx_h_scrolled_window"/>
+        <childnode refid="6073" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6066">
+        <label>wxMDIChildFrame</label>
+        <link refid="classwx_m_d_i_child_frame"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5962">
+        <label>wxCommandLinkButton</label>
+        <link refid="classwx_command_link_button"/>
+        <childnode refid="5959" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6008">
+        <label>wxRibbonControl</label>
+        <link refid="classwx_ribbon_control"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5996">
+        <label>wxInfoBar</label>
+        <link refid="classwx_info_bar"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5948">
+        <label>wxNumValidator&lt; T &gt;</label>
+        <link refid="classwx_num_validator"/>
+        <childnode refid="5946" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5966">
+        <label>wxBookCtrlBase</label>
+        <link refid="classwx_book_ctrl_base"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6090">
+        <label>wxTipWindow</label>
+        <link refid="classwx_tip_window"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6032">
+        <label>wxTreeCtrl</label>
+        <link refid="classwx_tree_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5950">
+        <label>wxIntegerValidator&lt; T &gt;</label>
+        <link refid="classwx_integer_validator"/>
+        <childnode refid="5948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6077">
+        <label>wxPreviewControlBar</label>
+        <link refid="classwx_preview_control_bar"/>
+        <childnode refid="6073" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6080">
+        <label>wxVListBox</label>
+        <link refid="classwx_v_list_box"/>
+        <childnode refid="6079" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5930">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="5952">
+        <label>wxView</label>
+        <link refid="classwx_view"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5942">
+        <label>wxProcess</label>
+        <link refid="classwx_process"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6047">
+        <label>wxFontDialog</label>
+        <link refid="classwx_font_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6083">
+        <label>wxSimpleHtmlListBox</label>
+        <link refid="classwx_simple_html_list_box"/>
+        <childnode refid="6081" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6017">
+        <label>wxScrollBar</label>
+        <link refid="classwx_scroll_bar"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6079">
+        <label>wxVScrolledWindow</label>
+        <link refid="classwx_v_scrolled_window"/>
+        <childnode refid="6073" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5956">
+        <label>wxActiveXContainer</label>
+        <link refid="classwx_active_x_container"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6029">
+        <label>wxSearchCtrl</label>
+        <link refid="classwx_search_ctrl"/>
+        <childnode refid="6028" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6045">
+        <label>wxFileDialog</label>
+        <link refid="classwx_file_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5977">
+        <label>wxBitmapComboBox</label>
+        <link refid="classwx_bitmap_combo_box"/>
+        <childnode refid="5976" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6028">
+        <label>wxTextCtrl</label>
+        <link refid="classwx_text_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5929">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="5930" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5931" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6073">
+        <label>wxPanel</label>
+        <link refid="classwx_panel"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6007">
+        <label>wxRadioButton</label>
+        <link refid="classwx_radio_button"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5945">
+        <label>wxTimer</label>
+        <link refid="classwx_timer"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6026">
+        <label>wxStatusBar</label>
+        <link refid="classwx_status_bar"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6024">
+        <label>wxStaticLine</label>
+        <link refid="classwx_static_line"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5989">
+        <label>wxDatePickerCtrl</label>
+        <link refid="classwx_date_picker_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6086">
+        <label>wxPGMultiButton</label>
+        <link refid="classwx_p_g_multi_button"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6052">
+        <label>wxProgressDialog</label>
+        <link refid="classwx_progress_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6013">
+        <label>wxRibbonPanel</label>
+        <link refid="classwx_ribbon_panel"/>
+        <childnode refid="6008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5947">
+        <label>wxGenericValidator</label>
+        <link refid="classwx_generic_validator"/>
+        <childnode refid="5946" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5940">
+        <label>wxMouseEventsManager</label>
+        <link refid="classwx_mouse_events_manager"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6006">
+        <label>wxRadioBox</label>
+        <link refid="classwx_radio_box"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6055">
+        <label>wxRichTextStyleOrganiserDialog</label>
+        <link refid="classwx_rich_text_style_organiser_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5974">
+        <label>wxCheckBox</label>
+        <link refid="classwx_check_box"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6063">
+        <label>wxDocParentFrame</label>
+        <link refid="classwx_doc_parent_frame"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5963">
+        <label>wxToggleButton</label>
+        <link refid="classwx_toggle_button"/>
+        <childnode refid="5958" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6089">
+        <label>wxSplitterWindow</label>
+        <link refid="classwx_splitter_window"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5988">
+        <label>wxDataViewTreeCtrl</label>
+        <link refid="classwx_data_view_tree_ctrl"/>
+        <childnode refid="5986" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6031">
+        <label>wxToolBar</label>
+        <link refid="classwx_tool_bar"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6049">
+        <label>wxMultiChoiceDialog</label>
+        <link refid="classwx_multi_choice_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6010">
+        <label>wxRibbonButtonBar</label>
+        <link refid="classwx_ribbon_button_bar"/>
+        <childnode refid="6008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5972">
+        <label>wxTreebook</label>
+        <link refid="classwx_treebook"/>
+        <childnode refid="5966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6051">
+        <label>wxPrintDialog</label>
+        <link refid="classwx_print_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5984">
+        <label>wxCheckListBox</label>
+        <link refid="classwx_check_list_box"/>
+        <childnode refid="5983" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6060">
+        <label>wxWizard</label>
+        <link refid="classwx_wizard"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5987">
+        <label>wxDataViewListCtrl</label>
+        <link refid="classwx_data_view_list_ctrl"/>
+        <childnode refid="5986" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5931">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="5985">
+        <label>wxRearrangeList</label>
+        <link refid="classwx_rearrange_list"/>
+        <childnode refid="5984" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6040">
+        <label>wxPopupTransientWindow</label>
+        <link refid="classwx_popup_transient_window"/>
+        <childnode refid="6039" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5969">
+        <label>wxListbook</label>
+        <link refid="classwx_listbook"/>
+        <childnode refid="5966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6082">
+        <label>wxRichTextStyleListBox</label>
+        <link refid="classwx_rich_text_style_list_box"/>
+        <childnode refid="6081" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6001">
+        <label>wxColourPickerCtrl</label>
+        <link refid="classwx_colour_picker_ctrl"/>
+        <childnode refid="6000" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5995">
+        <label>wxHyperlinkCtrl</label>
+        <link refid="classwx_hyperlink_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5955">
+        <label>wxControl</label>
+        <link refid="classwx_control"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5998">
+        <label>wxListView</label>
+        <link refid="classwx_list_view"/>
+        <childnode refid="5997" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6015">
+        <label>wxRichTextCtrl</label>
+        <link refid="classwx_rich_text_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5991">
+        <label>wxGauge</label>
+        <link refid="classwx_gauge"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6033">
+        <label>wxWebView</label>
+        <link refid="classwx_web_view"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5953">
+        <label>wxWindow</label>
+        <link refid="classwx_window"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5999">
+        <label>wxMediaCtrl</label>
+        <link refid="classwx_media_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5971">
+        <label>wxToolbook</label>
+        <link refid="classwx_toolbook"/>
+        <childnode refid="5966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5997">
+        <label>wxListCtrl</label>
+        <link refid="classwx_list_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5936">
+        <label>wxDocument</label>
+        <link refid="classwx_document"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6069">
+        <label>wxDocMDIParentFrame</label>
+        <link refid="classwx_doc_m_d_i_parent_frame"/>
+        <childnode refid="6068" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5965">
+        <label>wxAuiToolBar</label>
+        <link refid="classwx_aui_tool_bar"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5978">
+        <label>wxComboCtrl</label>
+        <link refid="classwx_combo_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6011">
+        <label>wxRibbonGallery</label>
+        <link refid="classwx_ribbon_gallery"/>
+        <childnode refid="6008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6042">
+        <label>wxDialog</label>
+        <link refid="classwx_dialog"/>
+        <childnode refid="6041" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6048">
+        <label>wxMessageDialog</label>
+        <link refid="classwx_message_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6046">
+        <label>wxFindReplaceDialog</label>
+        <link refid="classwx_find_replace_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5964">
+        <label>wxBitmapToggleButton</label>
+        <link refid="classwx_bitmap_toggle_button"/>
+        <childnode refid="5963" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6081">
+        <label>wxHtmlListBox</label>
+        <link refid="classwx_html_list_box"/>
+        <childnode refid="6080" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6003">
+        <label>wxFilePickerCtrl</label>
+        <link refid="classwx_file_picker_ctrl"/>
+        <childnode refid="6000" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6009">
+        <label>wxRibbonBar</label>
+        <link refid="classwx_ribbon_bar"/>
+        <childnode refid="6008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6020">
+        <label>wxSpinCtrl</label>
+        <link refid="classwx_spin_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5982">
+        <label>wxChoice</label>
+        <link refid="classwx_choice"/>
+        <childnode refid="5981" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5976">
+        <label>wxComboBox</label>
+        <link refid="classwx_combo_box"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5941">
+        <label>wxNotificationMessage</label>
+        <link refid="classwx_notification_message"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6027">
+        <label>wxStyledTextCtrl</label>
+        <link refid="classwx_styled_text_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5979">
+        <label>wxOwnerDrawnComboBox</label>
+        <link refid="classwx_owner_drawn_combo_box"/>
+        <childnode refid="5978" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5934">
+        <label>wxAuiManager</label>
+        <link refid="classwx_aui_manager"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6061">
+        <label>wxFrame</label>
+        <link refid="classwx_frame"/>
+        <childnode refid="6041" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6036">
+        <label>wxMDIClientWindow</label>
+        <link refid="classwx_m_d_i_client_window"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6037">
+        <label>wxMenuBar</label>
+        <link refid="classwx_menu_bar"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6071">
+        <label>wxPreviewFrame</label>
+        <link refid="classwx_preview_frame"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6076">
+        <label>wxHVScrolledWindow</label>
+        <link refid="classwx_h_v_scrolled_window"/>
+        <childnode refid="6073" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6056">
+        <label>wxSingleChoiceDialog</label>
+        <link refid="classwx_single_choice_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5980">
+        <label>wxRichTextStyleComboCtrl</label>
+        <link refid="classwx_rich_text_style_combo_ctrl"/>
+        <childnode refid="5978" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6044">
+        <label>wxDirDialog</label>
+        <link refid="classwx_dir_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5958">
+        <label>wxAnyButton</label>
+        <link refid="classwx_any_button"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5986">
+        <label>wxDataViewCtrl</label>
+        <link refid="classwx_data_view_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5959">
+        <label>wxButton</label>
+        <link refid="classwx_button"/>
+        <childnode refid="5958" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6014">
+        <label>wxRibbonToolBar</label>
+        <link refid="classwx_ribbon_tool_bar"/>
+        <childnode refid="6008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5954">
+        <label>wxBannerWindow</label>
+        <link refid="classwx_banner_window"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6064">
+        <label>wxHtmlHelpDialog</label>
+        <link refid="classwx_html_help_dialog"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6043">
+        <label>wxColourDialog</label>
+        <link refid="classwx_colour_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6078">
+        <label>wxPropertyGridManager</label>
+        <link refid="classwx_property_grid_manager"/>
+        <childnode refid="6073" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6034">
+        <label>wxGLCanvas</label>
+        <link refid="classwx_g_l_canvas"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6035">
+        <label>wxHtmlHelpWindow</label>
+        <link refid="classwx_html_help_window"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5968">
+        <label>wxChoicebook</label>
+        <link refid="classwx_choicebook"/>
+        <childnode refid="5966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6039">
+        <label>wxPopupWindow</label>
+        <link refid="classwx_popup_window"/>
+        <childnode refid="6038" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5981">
+        <label>wxControlWithItems</label>
+        <link refid="classwx_control_with_items"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6070">
+        <label>wxMiniFrame</label>
+        <link refid="classwx_mini_frame"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6005">
+        <label>wxPropertyGrid</label>
+        <link refid="classwx_property_grid"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6016">
+        <label>wxRichTextStyleListCtrl</label>
+        <link refid="classwx_rich_text_style_list_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6002">
+        <label>wxDirPickerCtrl</label>
+        <link refid="classwx_dir_picker_ctrl"/>
+        <childnode refid="6000" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6022">
+        <label>wxStaticBitmap</label>
+        <link refid="classwx_static_bitmap"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5933">
+        <label>wxApp</label>
+        <link refid="classwx_app"/>
+        <childnode refid="5932" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5932">
+        <label>wxAppConsole</label>
+        <link refid="classwx_app_console"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6018">
+        <label>wxSlider</label>
+        <link refid="classwx_slider"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6041">
+        <label>wxTopLevelWindow</label>
+        <link refid="classwx_top_level_window"/>
+        <childnode refid="6038" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5970">
+        <label>wxNotebook</label>
+        <link refid="classwx_notebook"/>
+        <childnode refid="5966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6054">
+        <label>wxRichTextFormattingDialog</label>
+        <link refid="classwx_rich_text_formatting_dialog"/>
+        <childnode refid="6053" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6091">
+        <label>wxTreeListCtrl</label>
+        <link refid="classwx_tree_list_ctrl"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5939">
+        <label>wxMenu</label>
+        <link refid="classwx_menu"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6058">
+        <label>wxTextEntryDialog</label>
+        <link refid="classwx_text_entry_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6085">
+        <label>wxWizardPageSimple</label>
+        <link refid="classwx_wizard_page_simple"/>
+        <childnode refid="6084" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5951">
+        <label>wxTextValidator</label>
+        <link refid="classwx_text_validator"/>
+        <childnode refid="5946" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5943">
+        <label>wxPropertyGridPage</label>
+        <link refid="classwx_property_grid_page"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6065">
+        <label>wxHtmlHelpFrame</label>
+        <link refid="classwx_html_help_frame"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6074">
+        <label>wxEditableListBox</label>
+        <link refid="classwx_editable_list_box"/>
+        <childnode refid="6073" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5960">
+        <label>wxBitmapButton</label>
+        <link refid="classwx_bitmap_button"/>
+        <childnode refid="5959" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5944">
+        <label>wxTaskBarIcon</label>
+        <link refid="classwx_task_bar_icon"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5993">
+        <label>wxHeaderCtrl</label>
+        <link refid="classwx_header_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5961">
+        <label>wxContextHelpButton</label>
+        <link refid="classwx_context_help_button"/>
+        <childnode refid="5960" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6072">
+        <label>wxSplashScreen</label>
+        <link refid="classwx_splash_screen"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6068">
+        <label>wxMDIParentFrame</label>
+        <link refid="classwx_m_d_i_parent_frame"/>
+        <childnode refid="6061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6084">
+        <label>wxWizardPage</label>
+        <link refid="classwx_wizard_page"/>
+        <childnode refid="6073" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5990">
+        <label>wxFileCtrl</label>
+        <link refid="classwx_file_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6067">
+        <label>wxDocMDIChildFrame</label>
+        <link refid="classwx_doc_m_d_i_child_frame"/>
+        <childnode refid="6066" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5935">
+        <label>wxDocManager</label>
+        <link refid="classwx_doc_manager"/>
+        <childnode refid="5929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6059">
+        <label>wxPasswordEntryDialog</label>
+        <link refid="classwx_password_entry_dialog"/>
+        <childnode refid="6058" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6012">
+        <label>wxRibbonPage</label>
+        <link refid="classwx_ribbon_page"/>
+        <childnode refid="6008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6057">
+        <label>wxSymbolPickerDialog</label>
+        <link refid="classwx_symbol_picker_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5949">
+        <label>wxFloatingPointValidator&lt; T &gt;</label>
+        <link refid="classwx_floating_point_validator"/>
+        <childnode refid="5948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6023">
+        <label>wxStaticBox</label>
+        <link refid="classwx_static_box"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6004">
+        <label>wxFontPickerCtrl</label>
+        <link refid="classwx_font_picker_ctrl"/>
+        <childnode refid="6000" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6053">
+        <label>wxPropertySheetDialog</label>
+        <link refid="classwx_property_sheet_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6030">
+        <label>wxTimePickerCtrl</label>
+        <link refid="classwx_time_picker_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6000">
+        <label>wxPickerBase</label>
+        <link refid="classwx_picker_base"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6087">
+        <label>wxSashWindow</label>
+        <link refid="classwx_sash_window"/>
+        <childnode refid="5953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6050">
+        <label>wxPageSetupDialog</label>
+        <link refid="classwx_page_setup_dialog"/>
+        <childnode refid="6042" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5973">
+        <label>wxCalendarCtrl</label>
+        <link refid="classwx_calendar_ctrl"/>
+        <childnode refid="5955" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6093">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="6094" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="6092">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="6093" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6095" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6095">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="6094">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="362" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="361" bodyend="1203"/>
+    <listofallmembers>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>AddFilter</name></member>
+      <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxEvtHandler</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Bind</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxEvtHandler</scope><name>CloneRefData</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Connect</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxEvtHandler</scope><name>CreateRefData</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Disconnect</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>GetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>GetRefData</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>IsSameAs</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxEvtHandler</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>operator new</name></member>
+      <member refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_evt_handler_1a6f643dbdcf8e914ae1c8b70dd305e6f2" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>QueueEvent</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Ref</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>SetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>SetRefData</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxEvtHandler</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxEvtHandler</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxEvtHandler</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>UnShare</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxEvtHandler</scope><name>wxObject</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxEvtHandler</scope><name>~wxObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

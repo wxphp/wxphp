@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__debugging" kind="group">
+    <compoundname>group_class_debugging</compoundname>
+    <title>Debugging</title>
+    <innerclass refid="classwx_debug_report_preview" prot="public">wxDebugReportPreview</innerclass>
+    <innerclass refid="classwx_debug_report_compress" prot="public">wxDebugReportCompress</innerclass>
+    <innerclass refid="classwx_debug_report" prot="public">wxDebugReport</innerclass>
+    <innerclass refid="classwx_debug_report_preview_std" prot="public">wxDebugReportPreviewStd</innerclass>
+    <innerclass refid="classwx_debug_report_upload" prot="public">wxDebugReportUpload</innerclass>
+    <innerclass refid="classwx_debug_context" prot="public">wxDebugContext</innerclass>
+    <innerclass refid="classwx_stack_walker" prot="public">wxStackWalker</innerclass>
+    <innerclass refid="classwx_stack_frame" prot="public">wxStackFrame</innerclass>
+    <briefdescription>
+<para>wxWidgets supports some aspects of debugging an application through classes, functions and macros. </para>    </briefdescription>
+    <detaileddescription>
+<para>Related Overviews: <ref refid="overview__debugging" kindref="compound">Debugging</ref></para><para>Related macros/global-functions group: <ref refid="group__group__funcmacro__debug" kindref="compound">Debugging macros</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

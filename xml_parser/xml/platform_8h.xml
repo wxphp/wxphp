@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="platform_8h" kind="file">
+    <compoundname>platform.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group__funcmacro__version_1ga0c6e1eafc6b0437c419d03b02f56c886" prot="public" static="no">
+        <name>wxCHECK_GCC_VERSION</name>
+        <param><defname>major</defname></param>
+        <param><defname>minor</defname></param>
+        <briefdescription>
+<para>Returns true if the compiler being used is GNU C++ and its version is at least major.minor or greater. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false otherwise.</para><para>Include file: <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__version_1ga1837086b42f6bb0f186a0197458273d4" prot="public" static="no">
+        <name>wxCHECK_SUNCC_VERSION</name>
+        <param><defname>major</defname></param>
+        <param><defname>minor</defname></param>
+        <briefdescription>
+<para>Returns true if the compiler being used is Sun CC Pro and its version is at least major.minor or greater. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false otherwise.</para><para>Include file: <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__version_1ga5a01a6b9009ee0ef3b90d520b1a0f5c1" prot="public" static="no">
+        <name>wxCHECK_VISUALC_VERSION</name>
+        <param><defname>major</defname></param>
+        <briefdescription>
+<para>Returns true if the compiler being used is Visual C++ and its version is at least major or greater. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false otherwise.</para><para>Include file: <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__group__funcmacro__version_1ga22ed1759d538e8dff27b4f118eab6e14" prot="public" static="no">
+        <name>wxCHECK_W32API_VERSION</name>
+        <param><defname>major</defname></param>
+        <param><defname>minor</defname></param>
+        <briefdescription>
+<para>Returns true if the version of w32api headers used is major.minor or greater. </para>        </briefdescription>
+        <detaileddescription>
+<para>Otherwise, and also if we are not compiling with MinGW32/Cygwin under Win32 at all, returns false.</para><para>Include file: <verbatim>#include &lt;wx/platform.h&gt; </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platform.h"/>
+  </compounddef>
+</doxygen>

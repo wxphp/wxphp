@@ -1,0 +1,940 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_html_window" kind="class" prot="public">
+    <compoundname>wxHtmlWindow</compoundname>
+    <basecompoundref refid="classwx_scrolled" prot="public" virt="non-virtual">wxScrolled&lt; wxPanel &gt;</basecompoundref>
+    <includes local="no">wx/html/htmlwin.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_html_window_1abdabd01ec3b8d25a27ac59df685dce43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHtmlWindow::wxHtmlWindow</definition>
+        <argsstring>()</argsstring>
+        <name>wxHtmlWindow</name>
+        <briefdescription>
+<para>Default ctor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ad3f82c7cb1ea50be9807604a8ac71905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxHtmlWindow::wxHtmlWindow</definition>
+        <argsstring>(wxWindow *parent, wxWindowID id=wxID_ANY, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=wxHW_DEFAULT_STYLE, const wxString &amp;name=&quot;htmlWindow&quot;)</argsstring>
+        <name>wxHtmlWindow</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
+          <declname>id</declname>
+          <defval>wxID_ANY</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+          <defval><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
+          <declname>size</declname>
+          <defval><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref></defval>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>style</declname>
+          <defval>wxHW_DEFAULT_STYLE</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+          <defval>&quot;htmlWindow&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The parameters are the same as <ref refid="classwx_scrolled_1a01d0ecb5daa59ebb7a0806f16b7ac267" kindref="member">wxScrolled::wxScrolled()</ref> constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a6c8cb22b488e8d59ece87fd169140718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlWindow::AppendToPage</definition>
+        <argsstring>(const wxString &amp;source)</argsstring>
+        <name>AppendToPage</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Appends HTML fragment to currently displayed text and refreshes the window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML code fragment</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if an error occurred, true otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ac58ba50face285ddfd28a89f548f34c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
+        <definition>wxHtmlContainerCell* wxHtmlWindow::GetInternalRepresentation</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInternalRepresentation</name>
+        <briefdescription>
+<para>Returns pointer to the top-level container. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="overview__html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="overview__printing" kindref="compound">Printing Framework Overview</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ac4f09301ceab86ff1ccae9209d8ba0d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxHtmlWindow::GetOpenedAnchor</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOpenedAnchor</name>
+        <briefdescription>
+<para>Returns anchor within currently opened page (see <ref refid="classwx_html_window_1a2e4e27fbc971881cfd2b66f69e67b30f" kindref="member">wxHtmlWindow::GetOpenedPage</ref>). </para>        </briefdescription>
+        <detaileddescription>
+<para>If no page is opened or if the displayed page wasn&apos;t produced by call to <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref>, empty string is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a2e4e27fbc971881cfd2b66f69e67b30f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxHtmlWindow::GetOpenedPage</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOpenedPage</name>
+        <briefdescription>
+<para>Returns full location of the opened page. </para>        </briefdescription>
+        <detaileddescription>
+<para>If no page is opened or if the displayed page wasn&apos;t produced by call to <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref>, empty string is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a942a11d4cb16d3ab8de5b180dfc13f09" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxHtmlWindow::GetOpenedPageTitle</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOpenedPageTitle</name>
+        <briefdescription>
+<para>Returns title of the opened page or wxEmptyString if the current page does not contain &lt;TITLE&gt; tag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a6613b1d52e5ba1e8a667270306e4f0aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
+        <definition>wxFrame* wxHtmlWindow::GetRelatedFrame</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRelatedFrame</name>
+        <briefdescription>
+<para>Returns the related frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ac445bd13cce6579d1d74348b6771bc21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlWindow::HistoryBack</definition>
+        <argsstring>()</argsstring>
+        <name>HistoryBack</name>
+        <briefdescription>
+<para>Moves back to the previous page. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only pages displayed using <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> are stored in history list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a43b2e1f13a8ef56144a351fcf1765d33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlWindow::HistoryCanBack</definition>
+        <argsstring>()</argsstring>
+        <name>HistoryCanBack</name>
+        <briefdescription>
+<para>Returns true if it is possible to go back in the history i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_html_window_1ac445bd13cce6579d1d74348b6771bc21" kindref="member">HistoryBack()</ref> won&apos;t fail. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a99097f5c7cfd6198c1309fe2713a5210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlWindow::HistoryCanForward</definition>
+        <argsstring>()</argsstring>
+        <name>HistoryCanForward</name>
+        <briefdescription>
+<para>Returns true if it is possible to go forward in the history i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwx_html_window_1a385e056dba5b8f3d480f7053a9fb305f" kindref="member">HistoryForward()</ref> won&apos;t fail. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a0cf30ee8ee03ff0fa6ee42fb349bb851" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::HistoryClear</definition>
+        <argsstring>()</argsstring>
+        <name>HistoryClear</name>
+        <briefdescription>
+<para>Clears history. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a385e056dba5b8f3d480f7053a9fb305f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlWindow::HistoryForward</definition>
+        <argsstring>()</argsstring>
+        <name>HistoryForward</name>
+        <briefdescription>
+<para>Moves to next page in history. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only pages displayed using <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> are stored in history list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a1ffb71e2736cbe36740fd38bc3d100b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxHtmlWindow::LoadFile</definition>
+        <argsstring>(const wxFileName &amp;filename)</argsstring>
+        <name>LoadFile</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Loads an HTML page from a file and displays it. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false if an error occurred, true otherwise</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxHtmlWindow::LoadPage</definition>
+        <argsstring>(const wxString &amp;location)</argsstring>
+        <name>LoadPage</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+<para>Unlike <ref refid="classwx_html_window_1ac6d0335b1bb749b498598fc5a3b32703" kindref="member">SetPage()</ref> this function first loads the HTML page from <emphasis>location</emphasis> and then displays it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the document. See the <ref refid="overview__fs" kindref="compound">wxFileSystem Overview</ref> for details on the address format and <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> for a description of how the file is opened.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if an error occurred, true otherwise</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_html_window_1a1ffb71e2736cbe36740fd38bc3d100b2" kindref="member">LoadFile()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a519281dbfbddc163b5e73fd6a10cf90a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxHtmlWindow::OnLinkClicked</definition>
+        <argsstring>(const wxHtmlLinkInfo &amp;link)</argsstring>
+        <name>OnLinkClicked</name>
+        <param>
+          <type>const <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref> &amp;</type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Called when user clicks on hypertext link. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default behaviour is to emit a <ref refid="classwx_html_link_event" kindref="compound">wxHtmlLinkEvent</ref> and, if the event was not processed or skipped, call <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> and do nothing else.</para><para>Overloading this method is deprecated; intercept the event instead.</para><para>Also see <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1aaeca6abb2c4c5248d418ca19ee51206d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>wxHtmlOpeningStatus</type>
+        <definition>virtual wxHtmlOpeningStatus wxHtmlWindow::OnOpeningURL</definition>
+        <argsstring>(wxHtmlURLType type, const wxString &amp;url, wxString *redirect) const </argsstring>
+        <name>OnOpeningURL</name>
+        <param>
+          <type>wxHtmlURLType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref> *</type>
+          <declname>redirect</declname>
+        </param>
+        <briefdescription>
+<para>Called when an URL is being opened (either when the user clicks on a link or an image is loaded). </para>        </briefdescription>
+        <detaileddescription>
+<para>The URL will be opened only if <ref refid="classwx_html_window_1aaeca6abb2c4c5248d418ca19ee51206d" kindref="member">OnOpeningURL()</ref> returns <computeroutput>wxHTML_OPEN</computeroutput>. This method is called by <ref refid="classwx_html_parser_1aaecb050ca8be6e6d980f28774aa35bef" kindref="member">wxHtmlParser::OpenURL</ref>.</para><para>You can override <ref refid="classwx_html_window_1aaeca6abb2c4c5248d418ca19ee51206d" kindref="member">OnOpeningURL()</ref> to selectively block some URLs (e.g. for security reasons) or to redirect them elsewhere. Default behaviour is to always return <computeroutput>wxHTML_OPEN</computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates type of the resource. Is one of<itemizedlist>
+<listitem><para>wxHTML_URL_PAGE: Opening a HTML page.</para></listitem><listitem><para>wxHTML_URL_IMAGE: Opening an image.</para></listitem><listitem><para>wxHTML_URL_OTHER: Opening a resource that doesn&apos;t fall into any other category. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL being opened. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>redirect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to <ref refid="classwx_string" kindref="compound">wxString</ref> variable that must be filled with an URL if <ref refid="classwx_html_window_1aaeca6abb2c4c5248d418ca19ee51206d" kindref="member">OnOpeningURL()</ref> returns <computeroutput>wxHTML_REDIRECT</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The return value is:<itemizedlist>
+<listitem><para>wxHTML_OPEN: Open the URL.</para></listitem><listitem><para>wxHTML_BLOCK: Deny access to the URL, <ref refid="classwx_html_parser_1aaecb050ca8be6e6d980f28774aa35bef" kindref="member">wxHtmlParser::OpenURL</ref> will return NULL.</para></listitem><listitem><para>wxHTML_REDIRECT: Don&apos;t open url, redirect to another URL. <ref refid="classwx_html_window_1aaeca6abb2c4c5248d418ca19ee51206d" kindref="member">OnOpeningURL()</ref> must fill *redirect with the new URL. <ref refid="classwx_html_window_1aaeca6abb2c4c5248d418ca19ee51206d" kindref="member">OnOpeningURL()</ref> will be called again on returned URL. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ab8e6c857c4ca602387f38dbfa99ffb35" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxHtmlWindow::OnSetTitle</definition>
+        <argsstring>(const wxString &amp;title)</argsstring>
+        <name>OnSetTitle</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Called on parsing &lt;TITLE&gt; tag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a22f8b0b78251259c01ce5e8f17294fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxHtmlWindow::ReadCustomization</definition>
+        <argsstring>(wxConfigBase *cfg, wxString path=wxEmptyString)</argsstring>
+        <name>ReadCustomization</name>
+        <param>
+          <type><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+          <declname>path</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>This reads custom settings from wxConfig. </para>        </briefdescription>
+        <detaileddescription>
+<para>It uses the path &apos;path&apos; if given, otherwise it saves info into currently selected path. The values are stored in sub-path <computeroutput><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref></computeroutput>. Read values: all things set by <ref refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" kindref="member">SetFonts()</ref>, <ref refid="classwx_html_window_1a3e2350cbf8bc74ba8451ab3f953046dc" kindref="member">SetBorders()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wxConfig from which you want to read the configuration. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional path in config tree. If not given current path is used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a54459a2d5c5cc71f2849c5aa1fbd5e68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SelectAll</definition>
+        <argsstring>()</argsstring>
+        <name>SelectAll</name>
+        <briefdescription>
+<para>Selects all text in the window. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_html_window_1a15acd01f247257d427856713831db699" kindref="member">SelectLine()</ref>, <ref refid="classwx_html_window_1ad3555a940e7916620e60b5f496982b52" kindref="member">SelectWord()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a15acd01f247257d427856713831db699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SelectLine</definition>
+        <argsstring>(const wxPoint &amp;pos)</argsstring>
+        <name>SelectLine</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Selects the line of text that <emphasis>pos</emphasis> points at. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that <emphasis>pos</emphasis> is relative to the top of displayed page, not to window&apos;s origin, use <ref refid="classwx_scrolled_1ac296b6676926ba2fe356c9a12d50579e" kindref="member">wxScrolled::CalcUnscrolledPosition()</ref> to convert physical coordinate.</para><para><simplesect kind="see"><para><ref refid="classwx_html_window_1a54459a2d5c5cc71f2849c5aa1fbd5e68" kindref="member">SelectAll()</ref>, <ref refid="classwx_html_window_1ad3555a940e7916620e60b5f496982b52" kindref="member">SelectWord()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ad3555a940e7916620e60b5f496982b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SelectWord</definition>
+        <argsstring>(const wxPoint &amp;pos)</argsstring>
+        <name>SelectWord</name>
+        <param>
+          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Selects the word at position <emphasis>pos</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that <emphasis>pos</emphasis> is relative to the top of displayed page, not to window&apos;s origin, use <ref refid="classwx_scrolled_1ac296b6676926ba2fe356c9a12d50579e" kindref="member">wxScrolled::CalcUnscrolledPosition()</ref> to convert physical coordinate.</para><para><simplesect kind="see"><para><ref refid="classwx_html_window_1a54459a2d5c5cc71f2849c5aa1fbd5e68" kindref="member">SelectAll()</ref>, <ref refid="classwx_html_window_1a15acd01f247257d427856713831db699" kindref="member">SelectLine()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a341d15c232a620c7c8ec4f72911c954b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxHtmlWindow::SelectionToText</definition>
+        <argsstring>()</argsstring>
+        <name>SelectionToText</name>
+        <briefdescription>
+<para>Returns the current selection as plain text. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns an empty string if no text is currently selected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a3e2350cbf8bc74ba8451ab3f953046dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SetBorders</definition>
+        <argsstring>(int b)</argsstring>
+        <name>SetBorders</name>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the space between border of window and HTML contents. </para>        </briefdescription>
+        <detaileddescription>
+<para>See image: <image type="html" name="htmlwin_border.png"></image>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indentation from borders in pixels </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SetFonts</definition>
+        <argsstring>(const wxString &amp;normal_face, const wxString &amp;fixed_face, const int *sizes=NULL)</argsstring>
+        <name>SetFonts</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>normal_face</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fixed_face</declname>
+        </param>
+        <param>
+          <type>const int *</type>
+          <declname>sizes</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>This function sets font sizes and faces. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_html_d_c_renderer_1a70cfd1cd9f25f91afe40694466b70f7a" kindref="member">wxHtmlDCRenderer::SetFonts</ref> for detailed description.</para><para><simplesect kind="see"><para>SetSize() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a746ac926326153fdccf38a5d36b6288d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SetStandardFonts</definition>
+        <argsstring>(int size=-1, const wxString &amp;normal_face=wxEmptyString, const wxString &amp;fixed_face=wxEmptyString)</argsstring>
+        <name>SetStandardFonts</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>normal_face</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>fixed_face</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Sets default font sizes and/or default font size. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_html_d_c_renderer_1a277ee219b82244b3eecef42f4e67f14c" kindref="member">wxHtmlDCRenderer::SetStandardFonts</ref> for detailed description. <simplesect kind="see"><para><ref refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" kindref="member">SetFonts()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ac6d0335b1bb749b498598fc5a3b32703" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxHtmlWindow::SetPage</definition>
+        <argsstring>(const wxString &amp;source)</argsstring>
+        <name>SetPage</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Sets the source of a page and displays it, for example: </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>htmlwin<sp/>-&gt;<sp/><ref refid="classwx_html_window_1ac6d0335b1bb749b498598fc5a3b32703" kindref="member" tooltip="Sets the source of a page and displays it, for example:">SetPage</ref>(</highlight><highlight class="stringliteral">&quot;&lt;html&gt;&lt;body&gt;Hello,<sp/>world!&lt;/body&gt;&lt;/html&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>If you want to load a document from some location use <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HTML to be displayed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if an error occurred, true otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1ab524aecb99227497a569981a2f11f67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SetRelatedFrame</definition>
+        <argsstring>(wxFrame *frame, const wxString &amp;format)</argsstring>
+        <name>SetRelatedFrame</name>
+        <param>
+          <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Sets the frame in which page title will be displayed. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>format</emphasis> is the format of the frame title, e.g. &quot;HtmlHelp : %s&quot;. It must contain exactly one s. This s is substituted with HTML page title. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a81b658e84cbaf395eddd2d9c40b00c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SetRelatedStatusBar</definition>
+        <argsstring>(int index)</argsstring>
+        <name>SetRelatedStatusBar</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para><bold>After</bold> calling <ref refid="classwx_html_window_1ab524aecb99227497a569981a2f11f67f" kindref="member">SetRelatedFrame()</ref>, this sets statusbar slot where messages will be displayed. </para>        </briefdescription>
+        <detaileddescription>
+<para>(Default is -1 = no messages.)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Statusbar slot number (0..n) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a009c5938a5aa1858c48aa61c71864ff6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxHtmlWindow::SetRelatedStatusBar</definition>
+        <argsstring>(wxStatusBar *statusbar, int index=0)</argsstring>
+        <name>SetRelatedStatusBar</name>
+        <param>
+          <type><ref refid="classwx_status_bar" kindref="compound">wxStatusBar</ref> *</type>
+          <declname>statusbar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para><bold>Sets</bold> the associated statusbar where messages will be displayed. </para>        </briefdescription>
+        <detaileddescription>
+<para>Call this instead of <ref refid="classwx_html_window_1ab524aecb99227497a569981a2f11f67f" kindref="member">SetRelatedFrame()</ref> if you want statusbar updates only, no changing of the frame title.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>statusbar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Statusbar pointer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Statusbar slot number (0..n)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="344"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1aacc7ffe8844ca638008fff488b05314c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxHtmlWindow::ToText</definition>
+        <argsstring>()</argsstring>
+        <name>ToText</name>
+        <briefdescription>
+<para>Returns content of currently displayed page as plain text. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a46bb9859128a69e2d943a248c7bd41bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxHtmlWindow::WriteCustomization</definition>
+        <argsstring>(wxConfigBase *cfg, wxString path=wxEmptyString)</argsstring>
+        <name>WriteCustomization</name>
+        <param>
+          <type><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+          <declname>path</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Saves custom settings into wxConfig. </para>        </briefdescription>
+        <detaileddescription>
+<para>It uses the path &apos;path&apos; if given, otherwise it saves info into currently selected path. Regardless of whether the path is given or not, the function creates sub-path <computeroutput><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref></computeroutput>.</para><para>Saved values: all things set by <ref refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" kindref="member">SetFonts()</ref>, <ref refid="classwx_html_window_1a3e2350cbf8bc74ba8451ab3f953046dc" kindref="member">SetBorders()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wxConfig to which you want to save the configuration. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional path in config tree. If not given, the current path is used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="366"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_html_window_1a7d4293c4d2f03fd8d6252c62573b0529" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxHtmlWindow::AddFilter</definition>
+        <argsstring>(wxHtmlFilter *filter)</argsstring>
+        <name>AddFilter</name>
+        <param>
+          <type><ref refid="classwx_html_filter" kindref="compound">wxHtmlFilter</ref> *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Adds <ref refid="overview__html_1overview_html_filters" kindref="member">input filter</ref> to the static list of available filters. </para>        </briefdescription>
+        <detaileddescription>
+<para>These filters are present by default:<itemizedlist>
+<listitem><para><computeroutput>text/html</computeroutput> MIME type</para></listitem><listitem><para><computeroutput>image/*</computeroutput> MIME types</para></listitem><listitem><para>Plain Text filter (this filter is used if no other filter matches) </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_html_window_1a6eed2e288ecdbb1c2f96fa1cc467f6fa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxHtmlWindow::OnCellClicked</definition>
+        <argsstring>(wxHtmlCell *cell, wxCoord x, wxCoord y, const wxMouseEvent &amp;event)</argsstring>
+        <name>OnCellClicked</name>
+        <param>
+          <type><ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> *</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_mouse_event" kindref="compound">wxMouseEvent</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>This method is called when a mouse button is clicked inside <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default behaviour is to emit a <ref refid="classwx_html_cell_event" kindref="compound">wxHtmlCellEvent</ref> and, if the event was not processed or skipped, call <ref refid="classwx_html_window_1a519281dbfbddc163b5e73fd6a10cf90a" kindref="member">OnLinkClicked()</ref> if the cell contains an hypertext link.</para><para>Overloading this method is deprecated; intercept the event instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cell inside which the mouse was clicked, always a simple (i.e. non-container) cell </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical x coordinate of the click point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical y coordinate of the click point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mouse event containing other information about the click</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a link was clicked, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_html_window_1a0d11dc952a4cb88bdf5a404adbdb3b93" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxHtmlWindow::OnCellMouseHover</definition>
+        <argsstring>(wxHtmlCell *cell, wxCoord x, wxCoord y)</argsstring>
+        <name>OnCellMouseHover</name>
+        <param>
+          <type><ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> *</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>This method is called when a mouse moves over an HTML cell. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default behaviour is to emit a <ref refid="classwx_html_cell_event" kindref="compound">wxHtmlCellEvent</ref>.</para><para>Overloading this method is deprecated; intercept the event instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cell inside which the mouse is currently, always a simple (i.e. non-container) cell </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical x coordinate of the click point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical y coordinate of the click point </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="407"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> is probably the only class you will directly use unless you want to do something special (like adding new tag handlers or MIME filters). </para>    </briefdescription>
+    <detaileddescription>
+<para>The purpose of this class is to display rich content pages (either local file or downloaded via HTTP protocol) in a window based on a subset of the HTML standard. The width of the window is constant - given in the constructor - and virtual height is changed dynamically depending on page size. Once the window is created you can set its content by calling <ref refid="classwx_html_window_1ac6d0335b1bb749b498598fc5a3b32703" kindref="member">SetPage()</ref> with raw HTML, <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> with a <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> location or <ref refid="classwx_html_window_1a1ffb71e2736cbe36740fd38bc3d100b2" kindref="member">LoadFile()</ref> with a filename.</para><para><simplesect kind="note"><para>If you want complete HTML/CSS support as well as a Javascript engine, see instead <ref refid="classwx_web_view" kindref="compound">wxWebView</ref>.</para><simplesectsep/><para><ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> uses the <ref refid="classwx_image" kindref="compound">wxImage</ref> class for displaying images, as such you need to initialize the handlers for any image formats you use before loading a page. See <ref refid="group__group__funcmacro__appinitterm_1ga27f6c78d5d13374a28022b7bd44c6823" kindref="member">wxInitAllImageHandlers</ref> and <ref refid="classwx_image_1ab39fb3747dfb8c2d444eff9fe41fa205" kindref="member">wxImage::AddHandler</ref>.</para></simplesect>
+<heading level="2">Styles</heading>
+</para><para>This class supports the following styles: <itemizedlist>
+<listitem><para>wxHW_SCROLLBAR_NEVER: Never display scrollbars, not even when the page is larger than the window. </para></listitem>
+<listitem><para>wxHW_SCROLLBAR_AUTO: Display scrollbars only if page&apos;s size exceeds window&apos;s size. </para></listitem>
+<listitem><para>wxHW_NO_SELECTION: Don&apos;t allow the user to select text. </para></listitem>
+</itemizedlist>
+<heading level="2">Events emitted by this class</heading>
+</para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_html_cell_event" kindref="compound">wxHtmlCellEvent</ref>&amp;<nonbreakablespace/>event) or void<nonbreakablespace/>handlerFuncName( <ref refid="classwx_html_link_event" kindref="compound">wxHtmlLinkEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
+<listitem><para>EVT_HTML_CELL_CLICKED(id,  func): A <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> was clicked. </para></listitem>
+<listitem><para>EVT_HTML_CELL_HOVER(id,  func): The mouse passed over a <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref>. </para></listitem>
+<listitem><para>EVT_HTML_LINK_CLICKED(id,  func): A <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> which contains an hyperlink was clicked. </para></listitem>
+</itemizedlist>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_html_link_event" kindref="compound">wxHtmlLinkEvent</ref>, <ref refid="classwx_html_cell_event" kindref="compound">wxHtmlCellEvent</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7135">
+        <label>wxHtmlWindow</label>
+        <link refid="classwx_html_window"/>
+        <childnode refid="7136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7136">
+        <label>wxScrolledWindow</label>
+        <link refid="classwx_scrolled"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7137">
+        <label>wxHtmlWindow</label>
+        <link refid="classwx_html_window"/>
+        <childnode refid="7138" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7138">
+        <label>wxScrolledWindow</label>
+        <link refid="classwx_scrolled"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" bodystart="56" bodyend="408"/>
+    <listofallmembers>
+      <member refid="classwx_html_window_1a7d4293c4d2f03fd8d6252c62573b0529" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>AddFilter</name></member>
+      <member refid="classwx_scrolled_1a5b5e335677055e4107903f7d5dad042f" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>AdjustScrollbars</name></member>
+      <member refid="classwx_html_window_1a6c8cb22b488e8d59ece87fd169140718" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>AppendToPage</name></member>
+      <member refid="classwx_scrolled_1ad57ab2754edf096046d87ecd67ad2a68" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>CalcScrolledPosition</name></member>
+      <member refid="classwx_scrolled_1ac296b6676926ba2fe356c9a12d50579e" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>CalcUnscrolledPosition</name></member>
+      <member refid="classwx_scrolled_1a9f03bd3bcbb96c84f90c2482f58f075a" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>Create</name></member>
+      <member refid="classwx_scrolled_1a294b1585caef1c22f5ea1ac6a6787164" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>DisableKeyboardScrolling</name></member>
+      <member refid="classwx_scrolled_1a96a2b41d3bcd07e28491de5f39f9c5cb" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>DoPrepareDC</name></member>
+      <member refid="classwx_scrolled_1ac5a023517721a5ad5b891527b437dd61" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>EnableScrolling</name></member>
+      <member refid="classwx_html_window_1ac58ba50face285ddfd28a89f548f34c9" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetInternalRepresentation</name></member>
+      <member refid="classwx_html_window_1ac4f09301ceab86ff1ccae9209d8ba0d6" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetOpenedAnchor</name></member>
+      <member refid="classwx_html_window_1a2e4e27fbc971881cfd2b66f69e67b30f" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetOpenedPage</name></member>
+      <member refid="classwx_html_window_1a942a11d4cb16d3ab8de5b180dfc13f09" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetOpenedPageTitle</name></member>
+      <member refid="classwx_html_window_1a6613b1d52e5ba1e8a667270306e4f0aa" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetRelatedFrame</name></member>
+      <member refid="classwx_scrolled_1a787b355ef546a900ba9eff9aab7d4036" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetScaleX</name></member>
+      <member refid="classwx_scrolled_1aa25601fb1795a6a38fe425b049366ae3" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetScaleY</name></member>
+      <member refid="classwx_scrolled_1a9619063556af240c66202e0526d49cb3" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetScrollLines</name></member>
+      <member refid="classwx_scrolled_1a194f815525111860f7345a5d6af687d7" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetScrollPageSize</name></member>
+      <member refid="classwx_scrolled_1a573b3bb11a2a90eae9c6b12bcca51dbf" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetScrollPixelsPerUnit</name></member>
+      <member refid="classwx_scrolled_1a81800886d1d5f094caeee683e707de12" prot="protected" virt="virtual"><scope>wxHtmlWindow</scope><name>GetSizeAvailableForScrollTarget</name></member>
+      <member refid="classwx_scrolled_1a753b645a99d21a25ba7db29e78015741" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetTargetRect</name></member>
+      <member refid="classwx_scrolled_1ae9a4680f58855a58235134c32ed742ad" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetTargetWindow</name></member>
+      <member refid="classwx_scrolled_1ae693691d39e53291067f559ac7600604" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetViewStart</name></member>
+      <member refid="classwx_scrolled_1a99e97c6179262456462765127c55d775" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetViewStart</name></member>
+      <member refid="classwx_scrolled_1aec388dc5ab515d1312b58963ef5647b1" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>GetVirtualSize</name></member>
+      <member refid="classwx_html_window_1ac445bd13cce6579d1d74348b6771bc21" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>HistoryBack</name></member>
+      <member refid="classwx_html_window_1a43b2e1f13a8ef56144a351fcf1765d33" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>HistoryCanBack</name></member>
+      <member refid="classwx_html_window_1a99097f5c7cfd6198c1309fe2713a5210" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>HistoryCanForward</name></member>
+      <member refid="classwx_html_window_1a0cf30ee8ee03ff0fa6ee42fb349bb851" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>HistoryClear</name></member>
+      <member refid="classwx_html_window_1a385e056dba5b8f3d480f7053a9fb305f" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>HistoryForward</name></member>
+      <member refid="classwx_scrolled_1a813ba4e0e51842fd08f0758b2690ef00" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>IsAutoScrolling</name></member>
+      <member refid="classwx_scrolled_1a0758df4420ce6992f07287242c66fc4c" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>IsRetained</name></member>
+      <member refid="classwx_html_window_1a1ffb71e2736cbe36740fd38bc3d100b2" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>LoadFile</name></member>
+      <member refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>LoadPage</name></member>
+      <member refid="classwx_html_window_1a6eed2e288ecdbb1c2f96fa1cc467f6fa" prot="protected" virt="virtual"><scope>wxHtmlWindow</scope><name>OnCellClicked</name></member>
+      <member refid="classwx_html_window_1a0d11dc952a4cb88bdf5a404adbdb3b93" prot="protected" virt="virtual"><scope>wxHtmlWindow</scope><name>OnCellMouseHover</name></member>
+      <member refid="classwx_scrolled_1a52284d06a6160fb42b0899aedce2c880" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>OnDraw</name></member>
+      <member refid="classwx_html_window_1a519281dbfbddc163b5e73fd6a10cf90a" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>OnLinkClicked</name></member>
+      <member refid="classwx_html_window_1aaeca6abb2c4c5248d418ca19ee51206d" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>OnOpeningURL</name></member>
+      <member refid="classwx_html_window_1ab8e6c857c4ca602387f38dbfa99ffb35" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>OnSetTitle</name></member>
+      <member refid="classwx_scrolled_1ab33dbfe88be5ede4b04de4dcec4830f0" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>PrepareDC</name></member>
+      <member refid="classwx_html_window_1a22f8b0b78251259c01ce5e8f17294fd4" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>ReadCustomization</name></member>
+      <member refid="classwx_scrolled_1a601bcac37185a2d4a24164d065907f69" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>Scroll</name></member>
+      <member refid="classwx_scrolled_1affb3c1be4945c27b589439a1d47fbbb8" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>Scroll</name></member>
+      <member refid="classwx_html_window_1a54459a2d5c5cc71f2849c5aa1fbd5e68" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SelectAll</name></member>
+      <member refid="classwx_html_window_1a341d15c232a620c7c8ec4f72911c954b" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SelectionToText</name></member>
+      <member refid="classwx_html_window_1a15acd01f247257d427856713831db699" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SelectLine</name></member>
+      <member refid="classwx_html_window_1ad3555a940e7916620e60b5f496982b52" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SelectWord</name></member>
+      <member refid="classwx_html_window_1a3e2350cbf8bc74ba8451ab3f953046dc" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetBorders</name></member>
+      <member refid="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetFonts</name></member>
+      <member refid="classwx_html_window_1ac6d0335b1bb749b498598fc5a3b32703" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>SetPage</name></member>
+      <member refid="classwx_html_window_1ab524aecb99227497a569981a2f11f67f" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetRelatedFrame</name></member>
+      <member refid="classwx_html_window_1a81b658e84cbaf395eddd2d9c40b00c70" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetRelatedStatusBar</name></member>
+      <member refid="classwx_html_window_1a009c5938a5aa1858c48aa61c71864ff6" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetRelatedStatusBar</name></member>
+      <member refid="classwx_scrolled_1a5c8829d39d00ce53901a8b1a67d5d780" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetScale</name></member>
+      <member refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetScrollbars</name></member>
+      <member refid="classwx_scrolled_1aa160351f31a0080784a00023947a06f6" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetScrollPageSize</name></member>
+      <member refid="classwx_scrolled_1a76286e2efa55d0ba85d37106a44a9401" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetScrollRate</name></member>
+      <member refid="classwx_html_window_1a746ac926326153fdccf38a5d36b6288d" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetStandardFonts</name></member>
+      <member refid="classwx_scrolled_1aee90a87e1b3f7f0f70a89e085c0d9928" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetTargetRect</name></member>
+      <member refid="classwx_scrolled_1a117dc8edabb3e1250199eab089e4fa5b" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>SetTargetWindow</name></member>
+      <member refid="classwx_scrolled_1a8590337dc643a64437c56031cf5f2e71" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>ShowScrollbars</name></member>
+      <member refid="classwx_scrolled_1a33c3daf5feb84c357357012e1b0e7a0a" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>StopAutoScrolling</name></member>
+      <member refid="classwx_html_window_1aacc7ffe8844ca638008fff488b05314c" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>ToText</name></member>
+      <member refid="classwx_html_window_1a46bb9859128a69e2d943a248c7bd41bd" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>WriteCustomization</name></member>
+      <member refid="classwx_html_window_1abdabd01ec3b8d25a27ac59df685dce43" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>wxHtmlWindow</name></member>
+      <member refid="classwx_html_window_1ad3f82c7cb1ea50be9807604a8ac71905" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>wxHtmlWindow</name></member>
+      <member refid="classwx_scrolled_1a01d0ecb5daa59ebb7a0806f16b7ac267" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>wxScrolled</name></member>
+      <member refid="classwx_scrolled_1ae68b98d2386b81f413e08cd5410401fc" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>wxScrolled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

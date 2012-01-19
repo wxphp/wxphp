@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_validator" kind="class" prot="public">
+    <compoundname>wxValidator</compoundname>
+    <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
+    <derivedcompoundref refid="classwx_generic_validator" prot="public" virt="non-virtual">wxGenericValidator</derivedcompoundref>
+    <derivedcompoundref refid="classwx_num_validator" prot="public" virt="non-virtual">wxNumValidator&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classwx_text_validator" prot="public" virt="non-virtual">wxTextValidator</derivedcompoundref>
+    <includes local="no">wx/validate.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_validator_1aac102bc64513a0f8bd38e9db81a3d833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxValidator::wxValidator</definition>
+        <argsstring>()</argsstring>
+        <name>wxValidator</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_validator_1a2f77ec13ecdbdcccc3880c247cdfd6bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxValidator::~wxValidator</definition>
+        <argsstring>()</argsstring>
+        <name>~wxValidator</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_validator_1a25a4e0250afe9451059fd7a967c4883f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>virtual wxObject* wxValidator::Clone</definition>
+        <argsstring>() const </argsstring>
+        <name>Clone</name>
+        <reimplementedby refid="classwx_text_validator_1ab22c22d118e2f8c4225076ffbb187aca">Clone</reimplementedby>
+        <reimplementedby refid="classwx_generic_validator_1a4f00ebe861f2098be1b2592e087c2919">Clone</reimplementedby>
+        <briefdescription>
+<para>All validator classes must implement the <ref refid="classwx_validator_1a25a4e0250afe9451059fd7a967c4883f" kindref="member">Clone()</ref> function, which returns an identical copy of itself. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is because validators are passed to control constructors as references which must be copied. Unlike objects such as pens and brushes, it does not make sense to have a reference counting scheme to do this cloning because all validators should have separate data.</para><para><simplesect kind="return"><para>This base function returns NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_validator_1ae202dbdb38377bd61011319a0145070c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+        <definition>wxWindow* wxValidator::GetWindow</definition>
+        <argsstring>() const </argsstring>
+        <name>GetWindow</name>
+        <briefdescription>
+<para>Returns the window associated with the validator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_validator_1acf2179bcc4b256bc71e01f8a12f6da58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxValidator::SetWindow</definition>
+        <argsstring>(wxWindow *window)</argsstring>
+        <name>SetWindow</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Associates a window with the validator. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is automatically called by wxWidgets when creating a wxWindow-derived class instance which takes a <ref refid="classwx_validator" kindref="compound">wxValidator</ref> reference.</para><para>E.g. <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_text_ctrl" kindref="compound" tooltip="A text control allows text to be displayed and edited.">wxTextCtrl</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>wxID_ANY,<sp/><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member" tooltip="The global wxString instance of an empty string.">wxEmptyString</ref>,<sp/><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member" tooltip="Global instance of a wxPoint initialized with values (-1,-1).">wxDefaultPosition</ref>,<sp/><ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member" tooltip="Global instance of a wxSize object initialized to (-1,-1).">wxDefaultSize</ref>,<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_text_validator" kindref="compound" tooltip="wxTextValidator validates text controls, providing a variety of filtering behaviours...">wxTextValidator</ref>(<ref refid="valtext_8h_1aa02d29254d60e0c81f17696c9cecbd07ab7fa483928635f2e066229fe0bceec93" kindref="member" tooltip="Non-alpha characters are filtered out.">wxFILTER_ALPHA</ref>,<sp/>&amp;g_data.m_string));</highlight></codeline>
+</programlisting> will automatically link the <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref> instance with the <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> instance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_validator_1acffa9472b2f741ab29dbfad3b80934da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxValidator::TransferFromWindow</definition>
+        <argsstring>()</argsstring>
+        <name>TransferFromWindow</name>
+        <reimplementedby refid="classwx_text_validator_1a2fcf41e1c0fb40177703f96b3e60193f">TransferFromWindow</reimplementedby>
+        <reimplementedby refid="classwx_num_validator_1a583b267471b029df2b8d0e49f45d9141">TransferFromWindow</reimplementedby>
+        <reimplementedby refid="classwx_generic_validator_1acf9a45aa5199fda6e95db482aa238c92">TransferFromWindow</reimplementedby>
+        <briefdescription>
+<para>This overridable function is called when the value in the window must be transferred to the validator. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false if there is a problem. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_validator_1aa09f9ae3bace5de7a8e577206b75aeae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxValidator::TransferToWindow</definition>
+        <argsstring>()</argsstring>
+        <name>TransferToWindow</name>
+        <reimplementedby refid="classwx_text_validator_1acc486deab1ed74c3f8799e56b8056cbe">TransferToWindow</reimplementedby>
+        <reimplementedby refid="classwx_num_validator_1a629f0860d54bf200fe8779e7daa9a863">TransferToWindow</reimplementedby>
+        <reimplementedby refid="classwx_generic_validator_1aae15ba89856f2e15fc05c8b073f27660">TransferToWindow</reimplementedby>
+        <briefdescription>
+<para>This overridable function is called when the value associated with the validator must be transferred to the window. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false if there is a problem. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_validator_1abe48368bac7f540f0c20b1436e5c71af" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool wxValidator::Validate</definition>
+        <argsstring>(wxWindow *parent)</argsstring>
+        <name>Validate</name>
+        <reimplementedby refid="classwx_text_validator_1a19da7111800bc8aa5283fe9718943738">Validate</reimplementedby>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>This overridable function is called when the value in the associated window must be validated. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parent of the window associated with the validator.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if the value in the window is not valid; you may pop up an error dialog. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_validator_1a810c6c099c730a13b88f04d46ebe720e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void wxValidator::SuppressBellOnError</definition>
+        <argsstring>(bool suppress=true)</argsstring>
+        <name>SuppressBellOnError</name>
+        <param>
+          <type>bool</type>
+          <declname>suppress</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This functions switches on or turns off the error sound produced by the validators if an invalid key is pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.1</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>suppress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, error sound is not played when a validator detects an error. If false, error sound is enabled. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classwx_validator" kindref="compound">wxValidator</ref> is the base class for a family of validator classes that mediate between a class of control, and application data. </para>    </briefdescription>
+    <detaileddescription>
+<para>A validator has three major roles:</para><para><orderedlist>
+<listitem><para>To transfer data from a C++ variable or own storage to and from a control.</para></listitem><listitem><para>To validate data in a control, and show an appropriate error message.</para></listitem><listitem><para>To filter events (such as keystrokes), thereby changing the behaviour of the associated control.</para></listitem></orderedlist>
+</para><para>Validators can be plugged into controls dynamically.</para><para>To specify a default, &quot;null&quot; validator, use <ref refid="validate_8h_1af1e90d8aa1824fd2ce4024ef7e40703c" kindref="member">wxDefaultValidator</ref>.</para><para>For more information, please see <ref refid="overview__validator" kindref="compound">wxValidator Overview</ref>.</para><para><bold>wxPython Note:</bold> If you wish to create a validator class in wxPython you should derive the class from <computeroutput>wxPyValidator</computeroutput> in order to get Python-aware capabilities for the various virtual methods.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__validator" kindref="compound">Validators</ref></para><para>Predefined objects/pointers: <ref refid="validate_8h_1af1e90d8aa1824fd2ce4024ef7e40703c" kindref="member">wxDefaultValidator</ref></para><para><simplesect kind="see"><para><ref refid="overview__validator" kindref="compound">wxValidator Overview</ref>, <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref>, <ref refid="classwx_generic_validator" kindref="compound">wxGenericValidator</ref>, <ref refid="classwx_integer_validator" kindref="compound">wxIntegerValidator</ref>, <ref refid="classwx_floating_point_validator" kindref="compound">wxFloatingPointValidator</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11223">
+        <label>wxValidator</label>
+        <link refid="classwx_validator"/>
+        <childnode refid="11224" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11228">
+        <label>wxNumValidator&lt; T &gt;</label>
+        <link refid="classwx_num_validator"/>
+        <childnode refid="11223" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11230">
+        <label>wxIntegerValidator&lt; T &gt;</label>
+        <link refid="classwx_integer_validator"/>
+        <childnode refid="11228" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11225">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="11224">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="11225" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11226" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11227">
+        <label>wxGenericValidator</label>
+        <link refid="classwx_generic_validator"/>
+        <childnode refid="11223" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11226">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="11231">
+        <label>wxTextValidator</label>
+        <link refid="classwx_text_validator"/>
+        <childnode refid="11223" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11229">
+        <label>wxFloatingPointValidator&lt; T &gt;</label>
+        <link refid="classwx_floating_point_validator"/>
+        <childnode refid="11228" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11232">
+        <label>wxValidator</label>
+        <link refid="classwx_validator"/>
+        <childnode refid="11233" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11234">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="11235" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11233">
+        <label>wxEvtHandler</label>
+        <link refid="classwx_evt_handler"/>
+        <childnode refid="11234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11236" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11236">
+        <label>wxTrackable</label>
+        <link refid="classwx_trackable"/>
+      </node>
+      <node id="11235">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/validate.h" bodystart="44" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>AddFilter</name></member>
+      <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxValidator</scope><name>AddPendingEvent</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxValidator</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Bind</name></member>
+      <member refid="classwx_evt_handler_1a95520e770e157ef93d1d60e03db66e5c" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Bind</name></member>
+      <member refid="classwx_validator_1a25a4e0250afe9451059fd7a967c4883f" prot="public" virt="virtual"><scope>wxValidator</scope><name>Clone</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxValidator</scope><name>CloneRefData</name></member>
+      <member refid="classwx_evt_handler_1a78719e8b82c9f9c6e4056b3449df1943" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1a1e8b5fc4c7e7f6d32d40bc00d4108ba4" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Connect</name></member>
+      <member refid="classwx_evt_handler_1aa290d9b67348e74c1da8497955a4e35c" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Connect</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxValidator</scope><name>CreateRefData</name></member>
+      <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>DeletePendingEvents</name></member>
+      <member refid="classwx_evt_handler_1a13061cf0ed01ac10a804ac057ef4bdbc" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a2f171e19444b9c4034c5e11f24fa9c91" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Disconnect</name></member>
+      <member refid="classwx_evt_handler_1a16a6f823853e4b74b43dd9a2cf3abee6" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Disconnect</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxValidator</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_evt_handler_1ad6e543115a9405962152630138645588" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>GetClientData</name></member>
+      <member refid="classwx_evt_handler_1a2b3949eaba1f25cb48618163a7c0583b" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>GetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a533e62afcb125abf1fcc8bb53fbc2e81" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>GetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>GetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>GetPreviousHandler</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>GetRefData</name></member>
+      <member refid="classwx_validator_1ae202dbdb38377bd61011319a0145070c" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>GetWindow</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>IsSameAs</name></member>
+      <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>IsUnlinked</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxValidator</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>operator new</name></member>
+      <member refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" prot="public" virt="virtual"><scope>wxValidator</scope><name>ProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1ac0f5d2cb29a04c1f7f82eb6b351f79fb" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>ProcessEventLocally</name></member>
+      <member refid="classwx_evt_handler_1a6f643dbdcf8e914ae1c8b70dd305e6f2" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>ProcessPendingEvents</name></member>
+      <member refid="classwx_evt_handler_1acffd03bf407a856166ea71ef0318b59a" prot="public" virt="virtual"><scope>wxValidator</scope><name>QueueEvent</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Ref</name></member>
+      <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>RemoveFilter</name></member>
+      <member refid="classwx_evt_handler_1a8205cb1a5a00d8b550b3ead22266b16b" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>SafelyProcessEvent</name></member>
+      <member refid="classwx_evt_handler_1a3c07426130d2868a5ae7fa918a251f49" prot="public" virt="virtual"><scope>wxValidator</scope><name>SearchEventTable</name></member>
+      <member refid="classwx_evt_handler_1a82c74f2cebfa02cb3c1563d459c872bf" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>SetClientData</name></member>
+      <member refid="classwx_evt_handler_1af1e33a06087b8b2ddc43c7d15a91b326" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>SetClientObject</name></member>
+      <member refid="classwx_evt_handler_1a7388ae19c8657e5656471b658c320036" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>SetEvtHandlerEnabled</name></member>
+      <member refid="classwx_evt_handler_1a68e2ef2d2b7d68c4c9c18ca92933031b" prot="public" virt="virtual"><scope>wxValidator</scope><name>SetNextHandler</name></member>
+      <member refid="classwx_evt_handler_1aff0d1836464be82e2ad723ad3a58eccc" prot="public" virt="virtual"><scope>wxValidator</scope><name>SetPreviousHandler</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>SetRefData</name></member>
+      <member refid="classwx_validator_1acf2179bcc4b256bc71e01f8a12f6da58" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>SetWindow</name></member>
+      <member refid="classwx_validator_1a810c6c099c730a13b88f04d46ebe720e" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>SuppressBellOnError</name></member>
+      <member refid="classwx_validator_1acffa9472b2f741ab29dbfad3b80934da" prot="public" virt="virtual"><scope>wxValidator</scope><name>TransferFromWindow</name></member>
+      <member refid="classwx_validator_1aa09f9ae3bace5de7a8e577206b75aeae" prot="public" virt="virtual"><scope>wxValidator</scope><name>TransferToWindow</name></member>
+      <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxValidator</scope><name>TryAfter</name></member>
+      <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxValidator</scope><name>TryBefore</name></member>
+      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxValidator</scope><name>TryThis</name></member>
+      <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Unbind</name></member>
+      <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>Unlink</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>UnShare</name></member>
+      <member refid="classwx_validator_1abe48368bac7f540f0c20b1436e5c71af" prot="public" virt="virtual"><scope>wxValidator</scope><name>Validate</name></member>
+      <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>wxObject</name></member>
+      <member refid="classwx_validator_1aac102bc64513a0f8bd38e9db81a3d833" prot="public" virt="non-virtual"><scope>wxValidator</scope><name>wxValidator</name></member>
+      <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxValidator</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxValidator</scope><name>~wxObject</name></member>
+      <member refid="classwx_validator_1a2f77ec13ecdbdcccc3880c247cdfd6bc" prot="public" virt="virtual"><scope>wxValidator</scope><name>~wxValidator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

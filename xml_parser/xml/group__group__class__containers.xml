@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__containers" kind="group">
+    <compoundname>group_class_containers</compoundname>
+    <title>Containers</title>
+    <innerclass refid="classwx_array_3_01_t_01_4" prot="public">wxArray&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_list_3_01_t_01_4" prot="public">wxList&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_stack_3_01_t_01_4" prot="public">wxStack&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_vector_3_01_t_01_4" prot="public">wxVector&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_array_string" prot="public">wxArrayString</innerclass>
+    <innerclass refid="classwx_sorted_array_string" prot="public">wxSortedArrayString</innerclass>
+    <innerclass refid="classwx_client_data_container" prot="public">wxClientDataContainer</innerclass>
+    <innerclass refid="classwx_client_data" prot="public">wxClientData</innerclass>
+    <innerclass refid="classwx_string_client_data" prot="public">wxStringClientData</innerclass>
+    <innerclass refid="classwx_hash_table" prot="public">wxHashTable</innerclass>
+    <innerclass refid="classwx_hash_map" prot="public">wxHashMap</innerclass>
+    <innerclass refid="classwx_hash_set" prot="public">wxHashSet</innerclass>
+    <innerclass refid="classwx_tree_item_data" prot="public">wxTreeItemData</innerclass>
+    <briefdescription>
+<para>These are classes, templates and class macros are used by wxWidgets. </para>    </briefdescription>
+    <detaileddescription>
+<para>Most of these classes provide a subset or almost complete STL API.</para><para>Related Overviews: <ref refid="overview__container" kindref="compound">Container Classes</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

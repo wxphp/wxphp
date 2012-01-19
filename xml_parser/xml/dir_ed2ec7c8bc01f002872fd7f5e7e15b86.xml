@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dir_ed2ec7c8bc01f002872fd7f5e7e15b86" kind="dir">
+    <compoundname>interface/wx/xrc/</compoundname>
+    <innerfile refid="xh__sizer_8h">xh_sizer.h</innerfile>
+    <innerfile refid="xmlres_8h">xmlres.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/"/>
+  </compounddef>
+</doxygen>

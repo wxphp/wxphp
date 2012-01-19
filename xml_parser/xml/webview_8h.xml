@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="webview_8h" kind="file">
+    <compoundname>webview.h</compoundname>
+    <innerclass refid="classwx_web_view_history_item" prot="public">wxWebViewHistoryItem</innerclass>
+    <innerclass refid="classwx_web_view_handler" prot="public">wxWebViewHandler</innerclass>
+    <innerclass refid="classwx_web_view" prot="public">wxWebView</innerclass>
+    <innerclass refid="classwx_web_view_event" prot="public">wxWebViewEvent</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="webview_8h_1aacf38eb86740b7b28525fab4f8637a6c" prot="public" static="no">
+        <name>wxWebViewZoom</name>
+        <enumvalue id="webview_8h_1aacf38eb86740b7b28525fab4f8637a6cade8072a0b6ff816a97f32c7ac19b1596" prot="public">
+          <name>wxWEB_VIEW_ZOOM_TINY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1aacf38eb86740b7b28525fab4f8637a6cadea5ffacc5817511a6b589030066ed3b" prot="public">
+          <name>wxWEB_VIEW_ZOOM_SMALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1aacf38eb86740b7b28525fab4f8637a6cac1cf0034500eb4a76dfe0ae9cab26ff8" prot="public">
+          <name>wxWEB_VIEW_ZOOM_MEDIUM</name>
+          <briefdescription>
+<para>default size </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1aacf38eb86740b7b28525fab4f8637a6ca2d695482b07d984afa9a0f8b797969b4" prot="public">
+          <name>wxWEB_VIEW_ZOOM_LARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1aacf38eb86740b7b28525fab4f8637a6ca4a649b60ee5963cc3f6e61211c2752cb" prot="public">
+          <name>wxWEB_VIEW_ZOOM_LARGEST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Zoom levels availiable in <ref refid="classwx_web_view" kindref="compound">wxWebView</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="12" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="enum" id="webview_8h_1a4de3543743ab8fb2b462644182845b69" prot="public" static="no">
+        <name>wxWebViewZoomType</name>
+        <enumvalue id="webview_8h_1a4de3543743ab8fb2b462644182845b69a07ef1e676f8569d5c3fd9ddbee32fe1b" prot="public">
+          <name>wxWEB_VIEW_ZOOM_TYPE_LAYOUT</name>
+          <briefdescription>
+<para>The entire layout scales when zooming, including images. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a4de3543743ab8fb2b462644182845b69a6a4fcdd56100f9892aeaa35d81036335" prot="public">
+          <name>wxWEB_VIEW_ZOOM_TYPE_TEXT</name>
+          <briefdescription>
+<para>Only the text changes in size when zooming, images and other layout elements retain their initial size. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The type of zooming that the web view control can perform. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="24" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="enum" id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7a" prot="public" static="no">
+        <name>wxWebViewNavigationError</name>
+        <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aa5afaf5ee01e7f0c060b672851738004a" prot="public">
+          <name>wxWEB_NAV_ERR_CONNECTION</name>
+          <briefdescription>
+<para>Connection error (timeout, etc. </para>          </briefdescription>
+          <detaileddescription>
+<para>) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aad36efa5dac583d8d2ea5af1803b18d1b" prot="public">
+          <name>wxWEB_NAV_ERR_CERTIFICATE</name>
+          <briefdescription>
+<para>Invalid certificate. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aaf3b34a83397687b698295186c682137b" prot="public">
+          <name>wxWEB_NAV_ERR_AUTH</name>
+          <briefdescription>
+<para>Authentication required. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aa11f708114213df7dc58e93a2c295916b" prot="public">
+          <name>wxWEB_NAV_ERR_SECURITY</name>
+          <briefdescription>
+<para>Other security error. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aa24718e2cebdd905fed1d4e40b2adae1d" prot="public">
+          <name>wxWEB_NAV_ERR_NOT_FOUND</name>
+          <briefdescription>
+<para>Requested resource not found. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aa0070cc82871c487bc83ab476a573e255" prot="public">
+          <name>wxWEB_NAV_ERR_REQUEST</name>
+          <briefdescription>
+<para>Invalid request/parameters (e.g. </para>          </briefdescription>
+          <detaileddescription>
+<para>bad URL, bad protocol, unsupported resource type) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aafc75781f5e96b0b8cfd1d045d24a3700" prot="public">
+          <name>wxWEB_NAV_ERR_USER_CANCELLED</name>
+          <briefdescription>
+<para>The user cancelled (e.g. </para>          </briefdescription>
+          <detaileddescription>
+<para>in a dialog) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7aabbbdce3e92f326ebb81c7ad1c0d395a1" prot="public">
+          <name>wxWEB_NAV_ERR_OTHER</name>
+          <briefdescription>
+<para>Another (exotic) type of error that didn&apos;t fit in other categories. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Types of errors that can cause navigation to fail. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="40" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="enum" id="webview_8h_1a9a49bca43f7eb6ec259c0fb18101979f" prot="public" static="no">
+        <name>wxWebViewReloadFlags</name>
+        <enumvalue id="webview_8h_1a9a49bca43f7eb6ec259c0fb18101979fa60a80c53b549239ecf4093877d86d273" prot="public">
+          <name>wxWEB_VIEW_RELOAD_DEFAULT</name>
+          <briefdescription>
+<para>Default reload, will access cache. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a9a49bca43f7eb6ec259c0fb18101979fa110a07bd93b7de301e280318be25552d" prot="public">
+          <name>wxWEB_VIEW_RELOAD_NO_CACHE</name>
+          <briefdescription>
+<para>Reload the current view without accessing the cache. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of refresh. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="64" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="enum" id="webview_8h_1a6d32d915850a6298c86cb9f56c15c251" prot="public" static="no">
+        <name>wxWebViewBackend</name>
+        <enumvalue id="webview_8h_1a6d32d915850a6298c86cb9f56c15c251a61cc67fe404d34dffec9179f670fc40f" prot="public">
+          <name>wxWEB_VIEW_BACKEND_DEFAULT</name>
+          <briefdescription>
+<para>Value that may be passed to <ref refid="classwx_web_view" kindref="compound">wxWebView</ref> to let it pick an appropriate engine for the current platform. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a6d32d915850a6298c86cb9f56c15c251a6fda0b971cdb78f36c9bbee871625c96" prot="public">
+          <name>wxWEB_VIEW_BACKEND_WEBKIT</name>
+          <briefdescription>
+<para>The WebKit web engine. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="webview_8h_1a6d32d915850a6298c86cb9f56c15c251a3ddcf594cb5976f5708637073a255802" prot="public">
+          <name>wxWEB_VIEW_BACKEND_IE</name>
+          <briefdescription>
+<para>Use Microsoft Internet Explorer as web engine. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>List of available backends for <ref refid="classwx_web_view" kindref="compound">wxWebView</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="76" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="webview_8h_1a26f203d76d41829b5973463c9c1abf98" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_WEB_VIEW_NAVIGATING</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_WEB_VIEW_NAVIGATING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="654" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="webview_8h_1a9f130a22975a39b19f8cc496c195800b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_WEB_VIEW_NAVIGATED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_WEB_VIEW_NAVIGATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="655" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="webview_8h_1ac125cd24fb172ef50946c5813ef07f33" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_WEB_VIEW_LOADED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_WEB_VIEW_LOADED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="656" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="656" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="webview_8h_1aff042d560f319c889f9480d44c8d8f1f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_WEB_VIEW_ERROR</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_WEB_VIEW_ERROR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="657" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="657" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="webview_8h_1a1378f20c678aff031d62afb68e398535" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_WEB_VIEW_NEWWINDOW</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_WEB_VIEW_NEWWINDOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="webview_8h_1adce6a4118e87a90afd6c4449bd5cf80c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
+        <definition>wxEventType wxEVT_COMMAND_WEB_VIEW_TITLE_CHANGED</definition>
+        <argsstring></argsstring>
+        <name>wxEVT_COMMAND_WEB_VIEW_TITLE_CHANGED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="659" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h"/>
+  </compounddef>
+</doxygen>

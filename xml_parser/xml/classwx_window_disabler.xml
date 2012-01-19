@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_window_disabler" kind="class" prot="public">
+    <compoundname>wxWindowDisabler</compoundname>
+    <includes local="no">wx/utils.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_window_disabler_1a1f7e8380ee6f7c3b709a54d68770e08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWindowDisabler::wxWindowDisabler</definition>
+        <argsstring>(bool disable=true)</argsstring>
+        <name>wxWindowDisabler</name>
+        <param>
+          <type>bool</type>
+          <declname>disable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Disables all top level windows of the applications. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <emphasis>disable</emphasis> is <computeroutput>false</computeroutput> nothing is done. This can be convenient if the windows should be disabled depending on some condition.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_window_disabler_1ad2ece1cf29a6957b3d8945d5ed0c1b58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWindowDisabler::wxWindowDisabler</definition>
+        <argsstring>(wxWindow *winToSkip)</argsstring>
+        <name>wxWindowDisabler</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>winToSkip</declname>
+        </param>
+        <briefdescription>
+<para>Disables all top level windows of the applications with the exception of <emphasis>winToSkip</emphasis> if it is not NULL. </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that under MSW if <emphasis>winToSkip</emphasis> appears in the taskbar, the user will be able to close the entire application (even though its main window is disabled) by right clicking on the taskbar icon and selecting the appropriate &quot;Close&quot; command from the context menu. To prevent this from happening you may want to use wxFRAME_TOOL_WINDOW, if applicable, or wxFRAME_NO_TASKBAR style when creating the window that will remain enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_window_disabler_1ac75fd30271c477db8606d5dbe2ada483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxWindowDisabler::~wxWindowDisabler</definition>
+        <argsstring>()</argsstring>
+        <name>~wxWindowDisabler</name>
+        <briefdescription>
+<para>Reenables the windows disabled by the constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class disables all windows of the application (may be with the exception of one of them) in its constructor and enables them back in its destructor. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is useful when you want to indicate to the user that the application is currently busy and cannot respond to user input.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="24" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classwx_window_disabler_1a1f7e8380ee6f7c3b709a54d68770e08b" prot="public" virt="non-virtual"><scope>wxWindowDisabler</scope><name>wxWindowDisabler</name></member>
+      <member refid="classwx_window_disabler_1ad2ece1cf29a6957b3d8945d5ed0c1b58" prot="public" virt="non-virtual"><scope>wxWindowDisabler</scope><name>wxWindowDisabler</name></member>
+      <member refid="classwx_window_disabler_1ac75fd30271c477db8606d5dbe2ada483" prot="public" virt="non-virtual"><scope>wxWindowDisabler</scope><name>~wxWindowDisabler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

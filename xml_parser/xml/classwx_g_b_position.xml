@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_g_b_position" kind="class" prot="public">
+    <compoundname>wxGBPosition</compoundname>
+    <includes local="no">wx/gbsizer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_g_b_position_1a88ebe51f95578714548e4a823fcb164e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGBPosition::wxGBPosition</definition>
+        <argsstring>()</argsstring>
+        <name>wxGBPosition</name>
+        <briefdescription>
+<para>Default constructor, setting the row and column to (0,0). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_position_1a6723ac451dac191b78e2a97aabf39e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGBPosition::wxGBPosition</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>wxGBPosition</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref>, setting the row and column. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_position_1ab322e1b32ac347c85a11fb5bdaf8a573" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGBPosition::GetCol</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCol</name>
+        <briefdescription>
+<para>Get the current column value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_position_1a2ec2d19fa77d136bc0f02765c44641c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGBPosition::GetRow</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRow</name>
+        <briefdescription>
+<para>Get the current row value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_position_1a584e7ce01a9ea442bb61be26f2c3e756" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGBPosition::SetCol</definition>
+        <argsstring>(int col)</argsstring>
+        <name>SetCol</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Set a new column value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_position_1a8ee420815d638827851492b588d990dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGBPosition::SetRow</definition>
+        <argsstring>(int row)</argsstring>
+        <name>SetRow</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Set a new row value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_position_1ae5e7bd9f2cdbd345ccc76bee3b4e720d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGBPosition::operator!</definition>
+        <argsstring>(const wxGBPosition &amp;p) const </argsstring>
+        <name>operator!</name>
+        <param>
+          <type>const <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the position is valid. </para>        </briefdescription>
+        <detaileddescription>
+<para>An invalid position is (-1,-1). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_g_b_position_1a7c14d2092e52fb1d1e7b795e6e3a7358" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGBPosition::operator==</definition>
+        <argsstring>(const wxGBPosition &amp;p) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Compare equality of two wxGBPositions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents the position of an item in a virtual grid of rows and columns managed by a <ref refid="classwx_grid_bag_sizer" kindref="compound">wxGridBagSizer</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" bodystart="18" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classwx_g_b_position_1ab322e1b32ac347c85a11fb5bdaf8a573" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>GetCol</name></member>
+      <member refid="classwx_g_b_position_1a2ec2d19fa77d136bc0f02765c44641c3" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>GetRow</name></member>
+      <member refid="classwx_g_b_position_1ae5e7bd9f2cdbd345ccc76bee3b4e720d" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>operator!</name></member>
+      <member refid="classwx_g_b_position_1a7c14d2092e52fb1d1e7b795e6e3a7358" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>operator==</name></member>
+      <member refid="classwx_g_b_position_1a584e7ce01a9ea442bb61be26f2c3e756" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>SetCol</name></member>
+      <member refid="classwx_g_b_position_1a8ee420815d638827851492b588d990dc" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>SetRow</name></member>
+      <member refid="classwx_g_b_position_1a88ebe51f95578714548e4a823fcb164e" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>wxGBPosition</name></member>
+      <member refid="classwx_g_b_position_1a6723ac451dac191b78e2a97aabf39e2b" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>wxGBPosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

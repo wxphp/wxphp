@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="structwx_font_metrics" kind="struct" prot="public">
+    <compoundname>wxFontMetrics</compoundname>
+    <includes local="no">wx/dc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwx_font_metrics_1ae532a51591deb9056213cca8044b1b87" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxFontMetrics::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+<para>Total character height. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="97" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_font_metrics_1a9533aac68b8db86e4d1b0752edd4af6e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxFontMetrics::ascent</definition>
+        <argsstring></argsstring>
+        <name>ascent</name>
+        <briefdescription>
+<para>Part of the height above the baseline. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_font_metrics_1a6f8f240fe0c6f684fb4ddff02d7ff926" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxFontMetrics::descent</definition>
+        <argsstring></argsstring>
+        <name>descent</name>
+        <briefdescription>
+<para>Part of the height below the baseline. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_font_metrics_1a118ea02d51fa606b315e33fca19fca9f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxFontMetrics::internalLeading</definition>
+        <argsstring></argsstring>
+        <name>internalLeading</name>
+        <briefdescription>
+<para>Intra-line spacing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_font_metrics_1a4fdda5ff1f519c92b2927b873bddaf85" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxFontMetrics::externalLeading</definition>
+        <argsstring></argsstring>
+        <name>externalLeading</name>
+        <briefdescription>
+<para>Inter-line spacing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwx_font_metrics_1afa5a0acb2e38a4ea9286be4e11dac961" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wxFontMetrics::averageWidth</definition>
+        <argsstring></argsstring>
+        <name>averageWidth</name>
+        <briefdescription>
+<para>Average font width, a.k.a. &quot;x-width&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="102" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structwx_font_metrics_1a5e3ca41eb9ca4226547fe2e611a5dc85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFontMetrics::wxFontMetrics</definition>
+        <argsstring>()</argsstring>
+        <name>wxFontMetrics</name>
+        <briefdescription>
+<para>Constructor initializes all fields to 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple collection of various font metrics. </para>    </briefdescription>
+    <detaileddescription>
+<para>This object is returned by <ref refid="classwx_d_c_1a017ad82379a6e52d6b2ba1d212b65950" kindref="member">wxDC::GetFontMetrics()</ref>.</para><para><simplesect kind="since"><para>2.9.2</para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref>, <ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="93" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="92" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structwx_font_metrics_1a9533aac68b8db86e4d1b0752edd4af6e" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>ascent</name></member>
+      <member refid="structwx_font_metrics_1afa5a0acb2e38a4ea9286be4e11dac961" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>averageWidth</name></member>
+      <member refid="structwx_font_metrics_1a6f8f240fe0c6f684fb4ddff02d7ff926" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>descent</name></member>
+      <member refid="structwx_font_metrics_1a4fdda5ff1f519c92b2927b873bddaf85" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>externalLeading</name></member>
+      <member refid="structwx_font_metrics_1ae532a51591deb9056213cca8044b1b87" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>height</name></member>
+      <member refid="structwx_font_metrics_1a118ea02d51fa606b315e33fca19fca9f" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>internalLeading</name></member>
+      <member refid="structwx_font_metrics_1a5e3ca41eb9ca4226547fe2e611a5dc85" prot="public" virt="non-virtual"><scope>wxFontMetrics</scope><name>wxFontMetrics</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

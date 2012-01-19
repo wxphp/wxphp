@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="group__group__class__data" kind="group">
+    <compoundname>group_class_data</compoundname>
+    <title>Data Structures</title>
+    <innerclass refid="classwx_scoped_char_type_buffer" prot="public">wxScopedCharTypeBuffer</innerclass>
+    <innerclass refid="classwx_char_type_buffer" prot="public">wxCharTypeBuffer</innerclass>
+    <innerclass refid="classwx_char_buffer" prot="public">wxCharBuffer</innerclass>
+    <innerclass refid="classwx_w_char_buffer" prot="public">wxWCharBuffer</innerclass>
+    <innerclass refid="classwx_node_3_01_t_01_4" prot="public">wxNode&lt; T &gt;</innerclass>
+    <innerclass refid="classwx_about_dialog_info" prot="public">wxAboutDialogInfo</innerclass>
+    <innerclass refid="classwx_accelerator_entry" prot="public">wxAcceleratorEntry</innerclass>
+    <innerclass refid="classwx_accelerator_table" prot="public">wxAcceleratorTable</innerclass>
+    <innerclass refid="classwx_any" prot="public">wxAny</innerclass>
+    <innerclass refid="classwx_any_value_type" prot="public">wxAnyValueType</innerclass>
+    <innerclass refid="classwx_memory_buffer" prot="public">wxMemoryBuffer</innerclass>
+    <innerclass refid="classwx_calendar_date_attr" prot="public">wxCalendarDateAttr</innerclass>
+    <innerclass refid="classwx_page_setup_dialog_data" prot="public">wxPageSetupDialogData</innerclass>
+    <innerclass refid="classwx_print_data" prot="public">wxPrintData</innerclass>
+    <innerclass refid="classwx_print_dialog_data" prot="public">wxPrintDialogData</innerclass>
+    <innerclass refid="classwx_colour_data" prot="public">wxColourData</innerclass>
+    <innerclass refid="classwx_conv_auto" prot="public">wxConvAuto</innerclass>
+    <innerclass refid="classwx_date_time" prot="public">wxDateTime</innerclass>
+    <innerclass refid="classwx_date_time_work_days" prot="public">wxDateTimeWorkDays</innerclass>
+    <innerclass refid="classwx_date_span" prot="public">wxDateSpan</innerclass>
+    <innerclass refid="classwx_time_span" prot="public">wxTimeSpan</innerclass>
+    <innerclass refid="classwx_date_time_holiday_authority" prot="public">wxDateTimeHolidayAuthority</innerclass>
+    <innerclass refid="classwx_find_replace_data" prot="public">wxFindReplaceData</innerclass>
+    <innerclass refid="classwx_font_data" prot="public">wxFontData</innerclass>
+    <innerclass refid="classwx_real_point" prot="public">wxRealPoint</innerclass>
+    <innerclass refid="classwx_rect" prot="public">wxRect</innerclass>
+    <innerclass refid="classwx_point" prot="public">wxPoint</innerclass>
+    <innerclass refid="classwx_size" prot="public">wxSize</innerclass>
+    <innerclass refid="classwx_list_item_attr" prot="public">wxListItemAttr</innerclass>
+    <innerclass refid="classwx_list_item" prot="public">wxListItem</innerclass>
+    <innerclass refid="classwx_long_long" prot="public">wxLongLong</innerclass>
+    <innerclass refid="classwx_u_long_long" prot="public">wxULongLong</innerclass>
+    <innerclass refid="classwx_file_type" prot="public">wxFileType</innerclass>
+    <innerclass refid="classwx_automation_object" prot="public">wxAutomationObject</innerclass>
+    <innerclass refid="classwx_position" prot="public">wxPosition</innerclass>
+    <innerclass refid="classwx_reg_ex" prot="public">wxRegEx</innerclass>
+    <innerclass refid="classwx_region" prot="public">wxRegion</innerclass>
+    <innerclass refid="classwx_status_bar_pane" prot="public">wxStatusBarPane</innerclass>
+    <innerclass refid="classwx_string" prot="public">wxString</innerclass>
+    <innerclass refid="classwx_string_buffer_length" prot="public">wxStringBufferLength</innerclass>
+    <innerclass refid="classwx_string_buffer" prot="public">wxStringBuffer</innerclass>
+    <innerclass refid="classwx_string_tokenizer" prot="public">wxStringTokenizer</innerclass>
+    <innerclass refid="classwx_tree_item_id" prot="public">wxTreeItemId</innerclass>
+    <innerclass refid="classwx_uni_char" prot="public">wxUniChar</innerclass>
+    <innerclass refid="classwx_uni_char_ref" prot="public">wxUniCharRef</innerclass>
+    <innerclass refid="classwx_u_string" prot="public">wxUString</innerclass>
+    <innerclass refid="classwx_variant" prot="public">wxVariant</innerclass>
+    <innerclass refid="classwx_variant_data" prot="public">wxVariantData</innerclass>
+    <innerclass refid="classwx_version_info" prot="public">wxVersionInfo</innerclass>
+    <briefdescription>
+<para>These are the data structure classes provided by wxWidgets. </para>    </briefdescription>
+    <detaileddescription>
+<para>Some of them are used to store generic data (e.g. <ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_size" kindref="compound">wxSize</ref>, etc), others are mainly helpers of other classes (e.g. <ref refid="classwx_list_item" kindref="compound">wxListItem</ref>, <ref refid="classwx_calendar_date_attr" kindref="compound">wxCalendarDateAttr</ref>, wxFindReplaceDialogData, etc). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

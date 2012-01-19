@@ -1,0 +1,991 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="classwx_xml_resource" kind="class" prot="public">
+    <compoundname>wxXmlResource</compoundname>
+    <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
+    <includes local="no">wx/xrc/xmlres.h</includes>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_xml_resource_1af2080732fd3df5f34227d56a4c0e06ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref> *</type>
+        <definition>wxMenuBar* wxXmlResource::LoadMenuBar</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;name)</argsstring>
+        <name>LoadMenuBar</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a menubar from resource. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns NULL on failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a7cf9d7ef156eae0b5f10a1db0825fd6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_menu_bar" kindref="compound">wxMenuBar</ref> *</type>
+        <definition>wxMenuBar* wxXmlResource::LoadMenuBar</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>LoadMenuBar</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a menubar from resource. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns NULL on failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="283"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_xml_resource_1a92fb76bed2c93c283c940c0a02e0a543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>wxObject* wxXmlResource::LoadObject</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;name, const wxString &amp;classname)</argsstring>
+        <name>LoadObject</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>classname</declname>
+        </param>
+        <briefdescription>
+<para>Load an object from the resource specifying both the resource name and the class name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The first overload lets you load nonstandard container windows and returns NULL on failure. The second one lets you finish the creation of an existing instance and returns false on failure.</para><para>In either case, only the resources defined at the top level of XRC files can be loaded by this function, use <ref refid="classwx_xml_resource_1a510cc9435736fec110c0c941ad35f5df" kindref="member">LoadObjectRecursively()</ref> if you need to load an object defined deeper in the hierarchy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a67b6d2a819689e5324c375eedac0f4c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::LoadObject</definition>
+        <argsstring>(wxObject *instance, wxWindow *parent, const wxString &amp;name, const wxString &amp;classname)</argsstring>
+        <name>LoadObject</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>classname</declname>
+        </param>
+        <briefdescription>
+<para>Load an object from the resource specifying both the resource name and the class name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The first overload lets you load nonstandard container windows and returns NULL on failure. The second one lets you finish the creation of an existing instance and returns false on failure.</para><para>In either case, only the resources defined at the top level of XRC files can be loaded by this function, use <ref refid="classwx_xml_resource_1a510cc9435736fec110c0c941ad35f5df" kindref="member">LoadObjectRecursively()</ref> if you need to load an object defined deeper in the hierarchy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="303"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para><anchor id="_1amgrpd41d8cd98f00b204e9800998ecf8427e"/> </para></description>
+      <memberdef kind="function" id="classwx_xml_resource_1a510cc9435736fec110c0c941ad35f5df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+        <definition>wxObject* wxXmlResource::LoadObjectRecursively</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;name, const wxString &amp;classname)</argsstring>
+        <name>LoadObjectRecursively</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>classname</declname>
+        </param>
+        <briefdescription>
+<para>Load an object from anywhere in the resource tree. </para>        </briefdescription>
+        <detaileddescription>
+<para>These methods are similar to <ref refid="classwx_xml_resource_1a92fb76bed2c93c283c940c0a02e0a543" kindref="member">LoadObject()</ref> but may be used to load an object from anywhere in the resource tree and not only the top level. Note that you will very rarely need to do this as in normal use the entire container window (defined at the top level) is loaded and not its individual children but this method can be useful in some particular situations.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a793b8c5d0c6d84af5d10ec5650d85d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::LoadObjectRecursively</definition>
+        <argsstring>(wxObject *instance, wxWindow *parent, const wxString &amp;name, const wxString &amp;classname)</argsstring>
+        <name>LoadObjectRecursively</name>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>classname</declname>
+        </param>
+        <briefdescription>
+<para>Load an object from anywhere in the resource tree. </para>        </briefdescription>
+        <detaileddescription>
+<para>These methods are similar to <ref refid="classwx_xml_resource_1a92fb76bed2c93c283c940c0a02e0a543" kindref="member">LoadObject()</ref> but may be used to load an object from anywhere in the resource tree and not only the top level. Note that you will very rarely need to do this as in normal use the entire container window (defined at the top level) is loaded and not its individual children but this method can be useful in some particular situations.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="324"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_xml_resource_1a02755ba4a1862da0c2233834c42be1e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxXmlResource::wxXmlResource</definition>
+        <argsstring>(const wxString &amp;filemask, int flags=wxXRC_USE_LOCALE, const wxString &amp;domain=wxEmptyString)</argsstring>
+        <name>wxXmlResource</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filemask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxXRC_USE_LOCALE</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filemask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The XRC file, archive file, or wildcard specification that will be used to load all resource files inside a zip archive. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One or more value of the <ref refid="xmlres_8h_1ad36a879ef645d6ee478f118b211d9431" kindref="member">wxXmlResourceFlags</ref> enumeration. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the gettext catalog to search for translatable strings. By default all loaded catalogs will be searched. This provides a way to allow the strings to only come from a specific catalog. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1ab0f38e10288c5ce115da7e2f381c05f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxXmlResource::wxXmlResource</definition>
+        <argsstring>(int flags=wxXRC_USE_LOCALE, const wxString &amp;domain=wxEmptyString)</argsstring>
+        <name>wxXmlResource</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>wxXRC_USE_LOCALE</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One or more value of the <ref refid="xmlres_8h_1ad36a879ef645d6ee478f118b211d9431" kindref="member">wxXmlResourceFlags</ref> enumeration. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the gettext catalog to search for translatable strings. By default all loaded catalogs will be searched. This provides a way to allow the strings to only come from a specific catalog. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1ab7924009de5da01e0334c489139ebe32" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual wxXmlResource::~wxXmlResource</definition>
+        <argsstring>()</argsstring>
+        <name>~wxXmlResource</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1aa9d5f7a02f3bc4d157a7f4683382f1e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxXmlResource::AddHandler</definition>
+        <argsstring>(wxXmlResourceHandler *handler)</argsstring>
+        <name>AddHandler</name>
+        <param>
+          <type><ref refid="classwx_xml_resource_handler" kindref="compound">wxXmlResourceHandler</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Initializes only a specific handler (or custom handler). </para>        </briefdescription>
+        <detaileddescription>
+<para>Convention says that the handler name is equal to the control&apos;s name plus &apos;XmlHandler&apos;, for example wxTextCtrlXmlHandler, wxHtmlWindowXmlHandler.</para><para>The XML resource compiler (wxxrc) can create include file that contains initialization code for all controls used within the resource. Note that this handler must be allocated on the heap, since it will be deleted by <ref refid="classwx_xml_resource_1a10e62015ee915e895f61a82f201124fc" kindref="member">ClearHandlers()</ref> later. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1ab550cd29efdc7afdf72fd0a1990d0074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::AttachUnknownControl</definition>
+        <argsstring>(const wxString &amp;name, wxWindow *control, wxWindow *parent=NULL)</argsstring>
+        <name>AttachUnknownControl</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>control</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Attaches an unknown control to the given panel/window/dialog. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unknown controls are used in conjunction with &lt;object class=&quot;unknown&quot;&gt;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a10e62015ee915e895f61a82f201124fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxXmlResource::ClearHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>ClearHandlers</name>
+        <briefdescription>
+<para>Removes all handlers and deletes them (this means that any handlers added using <ref refid="classwx_xml_resource_1aa9d5f7a02f3bc4d157a7f4683382f1e0" kindref="member">AddHandler()</ref> must be allocated on the heap). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a18d43b6476d463ed855848638dafcad3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxXmlResource::CompareVersion</definition>
+        <argsstring>(int major, int minor, int release, int revision) const </argsstring>
+        <name>CompareVersion</name>
+        <param>
+          <type>int</type>
+          <declname>major</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>release</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>revision</declname>
+        </param>
+        <briefdescription>
+<para>Compares the XRC version to the argument. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns -1 if the XRC version is less than the argument, +1 if greater, and 0 if they are equal. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a9322a9a024ee02f1231941cb9c4b6928" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+        <definition>const wxString&amp; wxXmlResource::GetDomain</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDomain</name>
+        <briefdescription>
+<para>Returns the domain (message catalog) that will be used to load translatable strings in the XRC. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a76770e3476f9faf78fa7f5347d56eaad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxXmlResource::GetFlags</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFlags</name>
+        <briefdescription>
+<para>Returns flags, which may be a bitlist of <ref refid="xmlres_8h_1ad36a879ef645d6ee478f118b211d9431" kindref="member">wxXmlResourceFlags</ref> enumeration values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a106f729173b0aaa69968810c0a97af43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
+        <definition>const wxXmlNode* wxXmlResource::GetResourceNode</definition>
+        <argsstring>(const wxString &amp;name) const </argsstring>
+        <name>GetResourceNode</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Returns the <ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> containing the definition of the object with the given name or NULL. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function recursively searches all the loaded XRC files for an object with the specified <emphasis>name</emphasis>. If the object is found, the <ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> corresponding to it is returned, so this function can be used to access additional information defined in the XRC file and not used by <ref refid="classwx_xml_resource" kindref="compound">wxXmlResource</ref> itself, e.g. contents of application-specific XML tags.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the resource which must be unique for this function to work correctly, if there is more than one resource with the given name the choice of the one returned by this function is undefined. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The node corresponding to the resource with the given name or NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1af5cc8286f34a9f5541d040d6355d5aab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long wxXmlResource::GetVersion</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVersion</name>
+        <briefdescription>
+<para>Returns version information (a.b.c.d = d + 256*c + 2562*b + 2563*a). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a1fea48a0061b93247b4869a55877862b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxXmlResource::InitAllHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>InitAllHandlers</name>
+        <briefdescription>
+<para>Initializes handlers for all supported controls/windows. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will make the executable quite big because it forces linking against most of the wxWidgets library. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1ac44a714ff459b7f3bd6c78d27482bb60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::Load</definition>
+        <argsstring>(const wxString &amp;filemask)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filemask</declname>
+        </param>
+        <briefdescription>
+<para>Loads resources from XML files that match given filemask. </para>        </briefdescription>
+        <detaileddescription>
+<para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classwx_xml_resource_1ae9a487479dcd6204d12fbbf7be497561" kindref="member" tooltip="Gets the global resources object or creates one if none exists.">wxXmlResource::Get</ref>()-&gt;<ref refid="classwx_xml_resource_1ac44a714ff459b7f3bd6c78d27482bb60" kindref="member" tooltip="Loads resources from XML files that match given filemask.">Load</ref>(</highlight><highlight class="stringliteral">&quot;rc/*.xrc&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member" tooltip="The functions to use for error messages, i.e.">wxLogError</ref>(</highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>load<sp/>resources!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>If wxUSE_FILESYS is enabled, this method understands <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> URLs (see <ref refid="classwx_file_system_1a93f5d9fc8fe388213f8ed7dddc55db71" kindref="member">wxFileSystem::FindFirst()</ref>).</para><simplesectsep/><para>If you are sure that the argument is name of single XRC file (rather than an URL or a wildcard), use <ref refid="classwx_xml_resource_1a1c0b754fb165a656d0b57900a55a49e6" kindref="member">LoadFile()</ref> instead.</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_xml_resource_1a1c0b754fb165a656d0b57900a55a49e6" kindref="member">LoadFile()</ref>, <ref refid="classwx_xml_resource_1abd3231181713edc32ecbeef72807baf8" kindref="member">LoadAllFiles()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a1c0b754fb165a656d0b57900a55a49e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::LoadFile</definition>
+        <argsstring>(const wxFileName &amp;file)</argsstring>
+        <name>LoadFile</name>
+        <param>
+          <type>const <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Simpler form of <ref refid="classwx_xml_resource_1ac44a714ff459b7f3bd6c78d27482bb60" kindref="member">Load()</ref> for loading a single XRC file. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_xml_resource_1ac44a714ff459b7f3bd6c78d27482bb60" kindref="member">Load()</ref>, <ref refid="classwx_xml_resource_1abd3231181713edc32ecbeef72807baf8" kindref="member">LoadAllFiles()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1abd3231181713edc32ecbeef72807baf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::LoadAllFiles</definition>
+        <argsstring>(const wxString &amp;dirname)</argsstring>
+        <name>LoadAllFiles</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>dirname</declname>
+        </param>
+        <briefdescription>
+<para>Loads all .xrc files from directory <emphasis>dirname</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tries to load as many files as possible; if there&apos;s an error while loading one file, it still attempts to load other files.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_xml_resource_1a1c0b754fb165a656d0b57900a55a49e6" kindref="member">LoadFile()</ref>, <ref refid="classwx_xml_resource_1ac44a714ff459b7f3bd6c78d27482bb60" kindref="member">Load()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a1afb7dad6af9fe2230184d755b4abc47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
+        <definition>wxBitmap wxXmlResource::LoadBitmap</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>LoadBitmap</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a bitmap resource from a file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1aa9f2603cb55bfb2c696972be9875e229" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_dialog" kindref="compound">wxDialog</ref> *</type>
+        <definition>wxDialog* wxXmlResource::LoadDialog</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;name)</argsstring>
+        <name>LoadDialog</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a dialog. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>parent</emphasis> points to parent window (if any). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a1014816a83192f9f25742d842784a1d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::LoadDialog</definition>
+        <argsstring>(wxDialog *dlg, wxWindow *parent, const wxString &amp;name)</argsstring>
+        <name>LoadDialog</name>
+        <param>
+          <type><ref refid="classwx_dialog" kindref="compound">wxDialog</ref> *</type>
+          <declname>dlg</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a dialog. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>parent</emphasis> points to parent window (if any).</para><para>This form is used to finish creation of an already existing instance (the main reason for this is that you may want to use derived class with a new event table). Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyDialog<sp/>dlg;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_xml_resource_1ae9a487479dcd6204d12fbbf7be497561" kindref="member" tooltip="Gets the global resources object or creates one if none exists.">wxXmlResource::Get</ref>()-&gt;<ref refid="classwx_xml_resource_1aa9f2603cb55bfb2c696972be9875e229" kindref="member" tooltip="Loads a dialog.">LoadDialog</ref>(&amp;dlg,<sp/>mainFrame,<sp/></highlight><highlight class="stringliteral">&quot;my_dialog&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlg.ShowModal();</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a0255a7dc37ef167c1f462ddb6c2fc859" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::LoadFrame</definition>
+        <argsstring>(wxFrame *frame, wxWindow *parent, const wxString &amp;name)</argsstring>
+        <name>LoadFrame</name>
+        <param>
+          <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a3a1745604fc05861ef7ecaef85a7a230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
+        <definition>wxIcon wxXmlResource::LoadIcon</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>LoadIcon</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads an icon resource from a file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a6fd56e72715273f7b3a656ac3c8a0089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
+        <definition>wxMenu* wxXmlResource::LoadMenu</definition>
+        <argsstring>(const wxString &amp;name)</argsstring>
+        <name>LoadMenu</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads menu from resource. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns NULL on failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1ae0691c02224266411a402a7bc52026b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_panel" kindref="compound">wxPanel</ref> *</type>
+        <definition>wxPanel* wxXmlResource::LoadPanel</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;name)</argsstring>
+        <name>LoadPanel</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a panel. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>parent</emphasis> points to the parent window. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a7759ccd1fc4d58d75a1bb67575c931fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::LoadPanel</definition>
+        <argsstring>(wxPanel *panel, wxWindow *parent, const wxString &amp;name)</argsstring>
+        <name>LoadPanel</name>
+        <param>
+          <type><ref refid="classwx_panel" kindref="compound">wxPanel</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a panel. </para>        </briefdescription>
+        <detaileddescription>
+<para><emphasis>parent</emphasis> points to the parent window. This form is used to finish creation of an already existing instance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1aae4d9971dcdac4bc00d652d6d8adf0e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> *</type>
+        <definition>wxToolBar* wxXmlResource::LoadToolBar</definition>
+        <argsstring>(wxWindow *parent, const wxString &amp;name)</argsstring>
+        <name>LoadToolBar</name>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads a toolbar. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a401ecf0ed02f01d15211fa5dae825f54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxXmlResource::SetDomain</definition>
+        <argsstring>(const wxString &amp;domain)</argsstring>
+        <name>SetDomain</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <briefdescription>
+<para>Sets the domain (message catalog) that will be used to load translatable strings in the XRC. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a5959fcec765f97b2363dfd7a81786646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxXmlResource::SetFlags</definition>
+        <argsstring>(int flags)</argsstring>
+        <name>SetFlags</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Sets flags (bitlist of <ref refid="xmlres_8h_1ad36a879ef645d6ee478f118b211d9431" kindref="member">wxXmlResourceFlags</ref> enumeration values). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a6f668cfcaff0cd7bf67ac69a31f2f2e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxXmlResource::Unload</definition>
+        <argsstring>(const wxString &amp;filename)</argsstring>
+        <name>Unload</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>This function unloads a resource previously loaded by <ref refid="classwx_xml_resource_1ac44a714ff459b7f3bd6c78d27482bb60" kindref="member">Load()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the resource was successfully unloaded and false if it hasn&apos;t been found in the list of loaded resources. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="366"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classwx_xml_resource_1a509e7048613114bb57f56445a98f462e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>static wxString wxXmlResource::FindXRCIDById</definition>
+        <argsstring>(int numId)</argsstring>
+        <name>FindXRCIDById</name>
+        <param>
+          <type>int</type>
+          <declname>numId</declname>
+        </param>
+        <briefdescription>
+<para>Returns a string ID corresponding to the given numeric ID. </para>        </briefdescription>
+        <detaileddescription>
+<para>The string returned is such that calling <ref refid="classwx_xml_resource_1a06ec24247401cda58f0a5eec251d8167" kindref="member">GetXRCID()</ref> with it as parameter yields <emphasis>numId</emphasis>. If there is no string identifier corresponding to the given numeric one, an empty string is returned.</para><para>Notice that, unlike <ref refid="classwx_xml_resource_1a06ec24247401cda58f0a5eec251d8167" kindref="member">GetXRCID()</ref>, this function is slow as it checks all of the identifiers used in XRC.</para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1ae9a487479dcd6204d12fbbf7be497561" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_xml_resource" kindref="compound">wxXmlResource</ref> *</type>
+        <definition>static wxXmlResource* wxXmlResource::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <briefdescription>
+<para>Gets the global resources object or creates one if none exists. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a06ec24247401cda58f0a5eec251d8167" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int wxXmlResource::GetXRCID</definition>
+        <argsstring>(const wxString &amp;str_id, int value_if_not_found=wxID_NONE)</argsstring>
+        <name>GetXRCID</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>str_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value_if_not_found</declname>
+          <defval>wxID_NONE</defval>
+        </param>
+        <briefdescription>
+<para>Returns a numeric ID that is equivalent to the string ID used in an XML resource. </para>        </briefdescription>
+        <detaileddescription>
+<para>If an unknown <emphasis>str_id</emphasis> is requested (i.e. other than wxID_XXX or integer), a new record is created which associates the given string with a number.</para><para>If <emphasis>value_if_not_found</emphasis> is <computeroutput>wxID_NONE</computeroutput>, the number is obtained via <ref refid="group__group__funcmacro__misc_1gaef162e1ba5d17a839b2f7912424bc822" kindref="member">wxNewId()</ref>. Otherwise <emphasis>value_if_not_found</emphasis> is used.</para><para>Macro <computeroutput>XRCID(name)</computeroutput> is provided for convenient use in event tables.</para><para><simplesect kind="note"><para>IDs returned by XRCID() cannot be used with the <computeroutput>EVT_*_RANGE</computeroutput> macros, because the order in which they are assigned to symbolic <emphasis>name</emphasis> values is not guaranteed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1ac7fd00f8f8a2b3397a8d4afd8fbce0c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_xml_resource" kindref="compound">wxXmlResource</ref> *</type>
+        <definition>static wxXmlResource* wxXmlResource::Set</definition>
+        <argsstring>(wxXmlResource *res)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="classwx_xml_resource" kindref="compound">wxXmlResource</ref> *</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Sets the global resources object and returns a pointer to the previous one (may be NULL). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="347"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_xml_resource_1ad92d578f48f243e32227702e7003723f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxXmlResource::ReportError</definition>
+        <argsstring>(const wxXmlNode *context, const wxString &amp;message)</argsstring>
+        <name>ReportError</name>
+        <param>
+          <type>const <ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Reports error in XRC resources to the user. </para>        </briefdescription>
+        <detaileddescription>
+<para>Any errors in XRC input files should be reported using this method (or its <ref refid="classwx_xml_resource_handler_1a0b4c148209e4fcf1e6940895902ac5eb" kindref="member">wxXmlResourceHandler::ReportError()</ref> equivalent). Unlike <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref>, this method presents the error to the user in a more usable form. In particular, the output is compiler-like and contains information about the exact location of the error.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XML node the error occurred in or relates to. This can be NULL, but should be the most specific node possible, as its line number is what is reported to the user. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text of the error message. This string should always be in English (i.e. not wrapped in <ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member">_()</ref>). It shouldn&apos;t be a sentence -- it should start with lower-case letter and shouldn&apos;t have a trailing period or exclamation point.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_xml_resource_handler_1a0b4c148209e4fcf1e6940895902ac5eb" kindref="member">wxXmlResourceHandler::ReportError()</ref>, <ref refid="classwx_xml_resource_1a076562d2d9026d3ae45894006d4ce2e8" kindref="member">DoReportError()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_xml_resource_1a076562d2d9026d3ae45894006d4ce2e8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void wxXmlResource::DoReportError</definition>
+        <argsstring>(const wxString &amp;xrcFile, const wxXmlNode *position, const wxString &amp;message)</argsstring>
+        <name>DoReportError</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>xrcFile</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Implementation of XRC resources errors reporting. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is called by <ref refid="classwx_xml_resource_1ad92d578f48f243e32227702e7003723f" kindref="member">ReportError()</ref> and shouldn&apos;t be called directly; use <ref refid="classwx_xml_resource_1ad92d578f48f243e32227702e7003723f" kindref="member">ReportError()</ref> or <ref refid="classwx_xml_resource_handler_1a0b4c148209e4fcf1e6940895902ac5eb" kindref="member">wxXmlResourceHandler::ReportError()</ref> to log errors.</para><para>Default implementation uses <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xrcFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File the error occurred in or empty string if it couldn&apos;t be determined. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XML node where the error occurred or NULL if it couldn&apos;t be determined. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text of the error message. See <ref refid="classwx_xml_resource_1ad92d578f48f243e32227702e7003723f" kindref="member">ReportError()</ref> documentation for details of the string&apos;s format.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>You may override this method in a derived class to customize errors reporting. If you do so, you&apos;ll need to either use the derived class in all your code or call <ref refid="classwx_xml_resource_1ac7fd00f8f8a2b3397a8d4afd8fbce0c5" kindref="member">wxXmlResource::Set()</ref> to change the global <ref refid="classwx_xml_resource" kindref="compound">wxXmlResource</ref> instance to your class.</para></simplesect>
+<simplesect kind="since"><para>2.9.0</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_xml_resource_1ad92d578f48f243e32227702e7003723f" kindref="member">ReportError()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="420"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the main class for interacting with the XML-based resource system. </para>    </briefdescription>
+    <detaileddescription>
+<para>The class holds XML resources from one or more .xml files, binary files or zip archive files.</para><para>Note that this is a singleton class and you&apos;ll never allocate/deallocate it. Just use the static <ref refid="classwx_xml_resource_1ae9a487479dcd6204d12fbbf7be497561" kindref="member">wxXmlResource::Get()</ref> getter.</para><para><simplesect kind="see"><para><ref refid="overview__xrc" kindref="compound">XML Based Resource System (XRC)</ref>, <ref refid="overview__xrcformat" kindref="compound">XRC File Format</ref></para></simplesect>
+<heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page__libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11676">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
+      <node id="11675">
+        <label>wxXmlResource</label>
+        <link refid="classwx_xml_resource"/>
+        <childnode refid="11676" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11678">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="11679" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11677">
+        <label>wxXmlResource</label>
+        <link refid="classwx_xml_resource"/>
+        <childnode refid="11678" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11679">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" bodystart="42" bodyend="421"/>
+    <listofallmembers>
+      <member refid="classwx_xml_resource_1aa9d5f7a02f3bc4d157a7f4683382f1e0" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>AddHandler</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxXmlResource</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_xml_resource_1ab550cd29efdc7afdf72fd0a1990d0074" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>AttachUnknownControl</name></member>
+      <member refid="classwx_xml_resource_1a10e62015ee915e895f61a82f201124fc" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>ClearHandlers</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxXmlResource</scope><name>CloneRefData</name></member>
+      <member refid="classwx_xml_resource_1a18d43b6476d463ed855848638dafcad3" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>CompareVersion</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxXmlResource</scope><name>CreateRefData</name></member>
+      <member refid="classwx_xml_resource_1a076562d2d9026d3ae45894006d4ce2e8" prot="protected" virt="virtual"><scope>wxXmlResource</scope><name>DoReportError</name></member>
+      <member refid="classwx_xml_resource_1a509e7048613114bb57f56445a98f462e" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>FindXRCIDById</name></member>
+      <member refid="classwx_xml_resource_1ae9a487479dcd6204d12fbbf7be497561" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>Get</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxXmlResource</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_xml_resource_1a9322a9a024ee02f1231941cb9c4b6928" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>GetDomain</name></member>
+      <member refid="classwx_xml_resource_1a76770e3476f9faf78fa7f5347d56eaad" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>GetFlags</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>GetRefData</name></member>
+      <member refid="classwx_xml_resource_1a106f729173b0aaa69968810c0a97af43" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>GetResourceNode</name></member>
+      <member refid="classwx_xml_resource_1af5cc8286f34a9f5541d040d6355d5aab" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>GetVersion</name></member>
+      <member refid="classwx_xml_resource_1a06ec24247401cda58f0a5eec251d8167" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>GetXRCID</name></member>
+      <member refid="classwx_xml_resource_1a1fea48a0061b93247b4869a55877862b" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>InitAllHandlers</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>IsSameAs</name></member>
+      <member refid="classwx_xml_resource_1ac44a714ff459b7f3bd6c78d27482bb60" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>Load</name></member>
+      <member refid="classwx_xml_resource_1abd3231181713edc32ecbeef72807baf8" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadAllFiles</name></member>
+      <member refid="classwx_xml_resource_1a1afb7dad6af9fe2230184d755b4abc47" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadBitmap</name></member>
+      <member refid="classwx_xml_resource_1aa9f2603cb55bfb2c696972be9875e229" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadDialog</name></member>
+      <member refid="classwx_xml_resource_1a1014816a83192f9f25742d842784a1d4" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadDialog</name></member>
+      <member refid="classwx_xml_resource_1a1c0b754fb165a656d0b57900a55a49e6" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadFile</name></member>
+      <member refid="classwx_xml_resource_1a0255a7dc37ef167c1f462ddb6c2fc859" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadFrame</name></member>
+      <member refid="classwx_xml_resource_1a3a1745604fc05861ef7ecaef85a7a230" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadIcon</name></member>
+      <member refid="classwx_xml_resource_1a6fd56e72715273f7b3a656ac3c8a0089" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadMenu</name></member>
+      <member refid="classwx_xml_resource_1af2080732fd3df5f34227d56a4c0e06ef" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadMenuBar</name></member>
+      <member refid="classwx_xml_resource_1a7cf9d7ef156eae0b5f10a1db0825fd6e" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadMenuBar</name></member>
+      <member refid="classwx_xml_resource_1a92fb76bed2c93c283c940c0a02e0a543" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadObject</name></member>
+      <member refid="classwx_xml_resource_1a67b6d2a819689e5324c375eedac0f4c7" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadObject</name></member>
+      <member refid="classwx_xml_resource_1a510cc9435736fec110c0c941ad35f5df" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadObjectRecursively</name></member>
+      <member refid="classwx_xml_resource_1a793b8c5d0c6d84af5d10ec5650d85d1d" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadObjectRecursively</name></member>
+      <member refid="classwx_xml_resource_1ae0691c02224266411a402a7bc52026b0" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadPanel</name></member>
+      <member refid="classwx_xml_resource_1a7759ccd1fc4d58d75a1bb67575c931fe" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadPanel</name></member>
+      <member refid="classwx_xml_resource_1aae4d9971dcdac4bc00d652d6d8adf0e6" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>LoadToolBar</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxXmlResource</scope><name>m_refData</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>operator new</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>Ref</name></member>
+      <member refid="classwx_xml_resource_1ad92d578f48f243e32227702e7003723f" prot="protected" virt="non-virtual"><scope>wxXmlResource</scope><name>ReportError</name></member>
+      <member refid="classwx_xml_resource_1ac7fd00f8f8a2b3397a8d4afd8fbce0c5" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>Set</name></member>
+      <member refid="classwx_xml_resource_1a401ecf0ed02f01d15211fa5dae825f54" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>SetDomain</name></member>
+      <member refid="classwx_xml_resource_1a5959fcec765f97b2363dfd7a81786646" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>SetFlags</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>SetRefData</name></member>
+      <member refid="classwx_xml_resource_1a6f668cfcaff0cd7bf67ac69a31f2f2e9" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>Unload</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>UnShare</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>wxObject</name></member>
+      <member refid="classwx_xml_resource_1a02755ba4a1862da0c2233834c42be1e5" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>wxXmlResource</name></member>
+      <member refid="classwx_xml_resource_1ab0f38e10288c5ce115da7e2f381c05f1" prot="public" virt="non-virtual"><scope>wxXmlResource</scope><name>wxXmlResource</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxXmlResource</scope><name>~wxObject</name></member>
+      <member refid="classwx_xml_resource_1ab7924009de5da01e0334c489139ebe32" prot="public" virt="virtual"><scope>wxXmlResource</scope><name>~wxXmlResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

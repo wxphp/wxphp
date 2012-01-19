@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="ftp_8h" kind="file">
+    <compoundname>ftp.h</compoundname>
+    <innerclass refid="classwx_f_t_p" prot="public">wxFTP</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ftp_8h_1ac6a3bd5749f031b948edd5a5dc74df55" prot="public" static="no">
+        <name>TransferMode</name>
+        <enumvalue id="ftp_8h_1ac6a3bd5749f031b948edd5a5dc74df55ac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+<para>not set by user explicitly. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ftp_8h_1ac6a3bd5749f031b948edd5a5dc74df55af9c208c7d7a0f102f2683165540c882d" prot="public">
+          <name>ASCII</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ftp_8h_1ac6a3bd5749f031b948edd5a5dc74df55aecafbc1299672a8c1521cc0d5f1ae986" prot="public">
+          <name>BINARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Transfer modes used by <ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h"/>
+  </compounddef>
+</doxygen>
