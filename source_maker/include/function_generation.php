@@ -1,13 +1,13 @@
 <?php
-/*
+/**
  * @author Jefferson González
  * 
  * @license 
  * This file is part of wxPHP check the LICENSE file for information.
  * 
  * @description
- * Functions to assist on the generation of the wxWidgets functions
- * to php functions code
+ * Functions to assist on the generation of code to wrap the wxWidgets
+ * class methods and global functions.
  * 
 */
 
@@ -699,7 +699,7 @@ function function_called_overload($method_definitions, $method_name, $class_name
  * @param bool $is_constructor Flag to indicate if constructor or just a regular method.
  * 
  * @return string Generated code ready to insert on the end of 
- * the PHP_METHOD body after the generated code of class_method_called_overload()
+ * the PHP_METHOD or PHP_FUNCTION body after the generated code of class_method_called_overload()
  */
 function function_return($method_definitions, $method_name, $class_name=null, $is_constructor=false)
 {

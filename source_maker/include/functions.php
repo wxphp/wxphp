@@ -1,19 +1,14 @@
 <?php
-/*
+/**
  * @author Mário Soares
  * @contributors Jefferson González
  * 
  * @license 
  * This file is part of wxPHP check the LICENSE file for information.
  * 
- * @description
- * Some predefined classes to wrap that may not be
- * documented by doxygen but are used as method return types
- * and method parameter types
+ * @descrioption
+ * Holds some of the core functions of the parser.
  * 
- * This file maybe isn't needed but it is here as a 
- * quick overview of the array that holds all
- * the classes to be wrapped by wxPHP
 */
 
 /**
@@ -57,6 +52,10 @@ function enum_parent_class($dataType)
 
 /**
  * Checks if a data type is a class enumeration
+ * 
+ * @param string $dataType The name of the type to check
+ * 
+ * @return bool
  */
 function is_class_enum($dataType)
 {
@@ -148,6 +147,8 @@ function derivationsOfClass($class)
  * @param $classN The name of the class to which generate the methods
  * @param $ctor boolean value to indicate if constructors should be generated or not
  * @param $output A reference variable where the output of the function will be stored.
+ * 
+ * @return array All function names
  */
 function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 {
@@ -269,7 +270,7 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 
 /**
  * Merges a parent class methods as overloads to a child class
- * (This can produce a lot of compiling errors)
+ * (This can produce a lot of compiling errors and is deprecated)
  */
 function classes_method_merger(&$classes)
 {
@@ -575,6 +576,11 @@ function remove_methods_duplicated_on_base_classes(&$classes)
 	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
 }
 
+/**
+ * For removing methods with unknown arguments and return types
+ * 
+ * @param array $classes Reference to variable that holds list of classes
+ */
 function remove_methods_implementing_unknown_types(&$classes)
 {
 	file_put_contents("discarded.log", "Methods implementing unknown types\n\n", FILE_APPEND);
@@ -655,6 +661,11 @@ function remove_methods_implementing_unknown_types(&$classes)
 	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
 }
 
+/**
+ * For removing global functions with unknown arguments and return types
+ * 
+ * @param array $functions Reference to variable that holds list of functions
+ */
 function remove_functions_implementing_unknown_types(&$functions)
 {
 	file_put_contents("discarded.log", "Functions implementing unknown types\n\n", FILE_APPEND);
@@ -723,7 +734,7 @@ function remove_functions_implementing_unknown_types(&$functions)
 
 
 /**
- * Generates a string of tabs To deal more cleanly with tabs on output code
+ * Generates a string of tabs, to deal more cleanly with tabs on output code
  * 
  * @param int $count The amount of tabs to generate
  * 
@@ -829,7 +840,8 @@ function php_eval($string)
  * 
  * @param string $parameter_type Type of the parameter (declared as a reference in case the value needs to be substitued).
  * @param string $function_name Name of the function the parameter belongs to.
- * @param string $class_name Name of function parent class.
+ * @param string $class_name Name of function/method's parent class.
+ * @param string $parameter_modifier Reference to the modifier type of the parameter
  * @param bool $return_unknown If true the function returns unknown for parameters not known instead of exiting
  * 
  * @return string Standard value that represents the parameter type.

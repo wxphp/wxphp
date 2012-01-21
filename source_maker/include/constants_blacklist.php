@@ -1,4 +1,16 @@
 <?php
+/**
+ * @author Mário Soares
+ * @contributors Jefferson González
+ * 
+ * @license 
+ * This file is part of wxPHP check the LICENSE file for information.
+ * 
+ * @description
+ * File to include on the main parser.php file after the constants
+ * are loaded from dumps/consts.json to blacklist some of them.
+ * 
+*/
 
 unset($defConsts['wxHTTP_GET']);
 unset($defConsts['wxHTTP_POST']);

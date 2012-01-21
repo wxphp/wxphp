@@ -6,8 +6,8 @@
  * This file is part of wxPHP check the LICENSE file for information.
  * 
  * @description
- * Functions to assist on the generation of the wxWidgets functions
- * to php functions code
+ * Functions to assist on the generation of virtual methods that call
+ * php user space functions
  * 
 */
 

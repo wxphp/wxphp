@@ -1,4 +1,15 @@
 <?php
+/**
+ * @author Jefferson González
+ * 
+ * @license 
+ * This file is part of wxPHP check the LICENSE file for information.
+ * 
+ * @description
+ * File to include on the main parser.php file after the functions
+ * are loaded from dumps/functions.json to blacklist some of them.
+ * 
+*/
 
 //Functions already defined by hand on wxwidgets.cpp
 unset($defFunctions['wxEntry']);
