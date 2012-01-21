@@ -1,6 +1,7 @@
 <?php
 /**
- * @author Jefferson González
+ * @author Mário Soares
+ * @contributors Jefferson González
  * 
  * @license 
  * This file is part of wxPHP check the LICENSE file for information.

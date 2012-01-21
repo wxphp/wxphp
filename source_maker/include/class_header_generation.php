@@ -7,7 +7,7 @@
  * 
  * @description
  * Functions to assist on the generation of the wxWidgets classes
- * declarations header file
+ * declarations header file (classes.h)
  * 
 */
 

@@ -2,6 +2,9 @@
 /**
  * @author Jefferson González
  * 
+ * @license 
+ * This file is part of wxPHP check the LICENSE file for information.
+ * 
  * @description
  * Small application for converting pdf documents to ready to use swf
  * documents for the web using viewers like flexpaper.
