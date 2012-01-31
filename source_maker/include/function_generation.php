@@ -816,6 +816,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 			$return_called_overload .= "\t\t\tcase $required_parameters:\n";
 			$return_called_overload .= "\t\t\t{\n";
 			$after_return_called_overload = ""; //Holds code that sets reference variables (* or &)
+			$after_constructor_called = ""; //Holds code to execute after a constructor was called
 			
 			$parameters_string = "";
 			
@@ -1235,13 +1236,23 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 							case "pointer": //object* Array with reference
 							case "const_pointer": //const object* Array
 								$parameters_string .= "(".$declaration[$parameter_types][$parameter_index].") object_pointer{$declaration_index}_{$parameter_index}" . ", ";
+								
+								if(!$declaration["static"] && $class_name && !$is_constructor)
+									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name);\n";
+								else if($is_constructor)
+									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) _this)->references.AddReference($variable_name);\n";
 								break;
 								
 							case "reference": //object&	
+							case "const_reference": //const object&
 								$parameters_string .= "*(".$argument_parameter_type."*) object_pointer{$declaration_index}_{$parameter_index}" . ", ";
+								
+								if(!$declaration["static"] && $class_name && !$is_constructor)
+									$after_return_called_overload .= tabs(4) . "references->AddReference($variable_name);\n";
+								else if($is_constructor)
+									$after_constructor_called .= tabs(4) . "(({$class_name}_php*) _this)->references.AddReference($variable_name);\n";
 								break;
 								
-							case "const_reference": //const object&
 							case "none": //char
 							case "const_none": //const object
 								$parameters_string .= "*(".$argument_parameter_type."*) object_pointer{$declaration_index}_{$parameter_index}" . ", ";
@@ -1528,7 +1539,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return object pointer\\n\\n\");\n";
 								$return_called_overload .= "\t\t\t\t#endif\n";
 								
-								$return_called_overload .= "\t\t\t\t" . $return_type . "* value_to_return{$required_parameters};\n";
+								$return_called_overload .= "\t\t\t\t" . $return_type . "_php* value_to_return{$required_parameters};\n";
 								
 								if($class_name == null)
 								{
@@ -1540,10 +1551,31 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								}
 								else
 								{
-									$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
+									$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = ({$return_type}_php*) $class_name::$method_name($parameters_string);\n";
 								}
-								$return_called_overload .= "\t\t\t\tobject_init_ex(return_value,php_{$return_type}_entry);\n";
-								$return_called_overload .= "\t\t\t\tadd_property_resource(return_value, \"wxResource\", zend_list_insert(value_to_return{$required_parameters}, le_{$return_type}));\n";
+								$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters} == NULL){\n";
+								$return_called_overload .= tabs(5) . "ZVAL_NULL(return_value);\n";
+								$return_called_overload .= tabs(4) . "}\n";
+								$return_called_overload .= tabs(4) . "else if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
+								$return_called_overload .= tabs(5) . "if(zend_hash_find(Z_OBJPROP_P(value_to_return{$required_parameters}->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){\n";
+								$return_called_overload .= tabs(6) . "return_value = *tmp;\n";
+								$return_called_overload .= tabs(5) . "}\n";
+								$return_called_overload .= tabs(5) . "else{\n";
+								$return_called_overload .= tabs(6) . "zend_error(E_ERROR, \"Could not retreive original zval.\");\n";
+								$return_called_overload .= tabs(5) . "}\n";
+								$return_called_overload .= tabs(4) . "}\n";
+								$return_called_overload .= tabs(4) . "else{\n";
+								$return_called_overload .= tabs(5) . "object_init_ex(return_value,php_{$return_type}_entry);\n";
+								$return_called_overload .= tabs(5) . "add_property_resource(return_value, \"wxResource\", zend_list_insert(value_to_return{$required_parameters}, le_{$return_type}));\n";
+								$return_called_overload .= tabs(4) . "}\n\n";
+								
+								if(!$declaration["static"] && $class_name)
+								{
+									$return_called_overload .= tabs(4) . "if(Z_TYPE_P(return_value) != IS_NULL){\n";
+									$return_called_overload .= tabs(5) . "references->AddReference(return_value);\n";
+									$return_called_overload .= tabs(4) . "}\n";
+								}
+									
 								break;
 								
 							case "const_reference":
@@ -1556,7 +1588,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= "\t\t\t\tphp_printf(\"Executing $class_name::$method_name($parameters_string) to return object reference\\n\\n\");\n";
 								$return_called_overload .= "\t\t\t\t#endif\n";
 								
-								$return_called_overload .= "\t\t\t\t" . $return_type . "* value_to_return{$required_parameters};\n";
+								$return_called_overload .= "\t\t\t\t" . $return_type . "_php* value_to_return{$required_parameters};\n";
 								
 								if($class_name == null)
 								{
@@ -1568,10 +1600,24 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								}
 								else
 								{
-									$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = &$class_name::$method_name($parameters_string);\n";
+									$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = ({$return_type}_php*) &$class_name::$method_name($parameters_string);\n";
 								}
-								$return_called_overload .= "\t\t\t\tobject_init_ex(return_value,php_{$return_type}_entry);\n";
-								$return_called_overload .= "\t\t\t\tadd_property_resource(return_value, \"wxResource\", zend_list_insert(value_to_return{$required_parameters}, le_{$return_type}));\n";
+								$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
+								$return_called_overload .= tabs(5) . "if(zend_hash_find(Z_OBJPROP_P(value_to_return{$required_parameters}->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){\n";
+								$return_called_overload .= tabs(6) . "return_value = *tmp;\n";
+								$return_called_overload .= tabs(5) . "}\n";
+								$return_called_overload .= tabs(5) . "else{\n";
+								$return_called_overload .= tabs(6) . "zend_error(E_ERROR, \"Could not retreive original zval.\");\n";
+								$return_called_overload .= tabs(5) . "}\n";
+								$return_called_overload .= tabs(4) . "}\n";
+								$return_called_overload .= tabs(4) . "else{\n";
+								$return_called_overload .= tabs(5) . "object_init_ex(return_value,php_{$return_type}_entry);\n";
+								$return_called_overload .= tabs(5) . "add_property_resource(return_value, \"wxResource\", zend_list_insert(value_to_return{$required_parameters}, le_{$return_type}));\n";
+								$return_called_overload .= tabs(4) . "}\n\n";
+								
+								if(!$declaration["static"] && $class_name)
+									$return_called_overload .= tabs(4) . "references->AddReference(return_value);\n";
+									
 								break;
 								
 							case "const_none":
@@ -1596,12 +1642,16 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								}
 								else
 								{
-									$return_called_overload .= "\t\t\t\tvalue_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
+									$return_called_overload .= tabs(4) . "value_to_return{$required_parameters} = $class_name::$method_name($parameters_string);\n";
 									
-									$return_called_overload .= "\t\t\t\tvoid* ptr = safe_emalloc(1, sizeof({$return_type}), 0);\n";
-									$return_called_overload .= "\t\t\t\tmemcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
-									$return_called_overload .= "\t\t\t\tobject_init_ex(return_value, php_{$return_type}_entry);\n";
-									$return_called_overload .= "\t\t\t\tadd_property_resource(return_value, \"wxResource\", zend_list_insert(ptr, le_{$return_type}));\n";
+									$return_called_overload .= tabs(4) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
+									$return_called_overload .= tabs(4) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
+									$return_called_overload .= tabs(4) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
+									$return_called_overload .= tabs(4) . "add_property_resource(return_value, _wxResource, zend_list_insert(ptr, le_{$return_type}));\n";
+									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->phpObj = return_value;\n";
+									$return_called_overload .= tabs(4) . "MAKE_STD_ZVAL((({$return_type}_php*) ptr)->evnArray);\n";
+									$return_called_overload .= tabs(4) . "array_init((({$return_type}_php*) ptr)->evnArray);\n";
+									$return_called_overload .= tabs(4) . "(({$return_type}_php*)ptr)->InitProperties();\n";
 								}
 								break;
 						}
@@ -1617,7 +1667,9 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 				$return_called_overload .= "\t\t\t\t#ifdef USE_WXPHP_DEBUG\n";
 				$return_called_overload .= "\t\t\t\tphp_printf(\"Executing __construct($parameters_string)\\n\");\n";
 				$return_called_overload .= "\t\t\t\t#endif\n";
-				$return_called_overload .= "\t\t\t\t_this = new {$method_name}_php($parameters_string);\n";
+				$return_called_overload .= "\t\t\t\t_this = new {$method_name}_php($parameters_string);\n\n";
+				$return_called_overload .= tabs(4) . "(({$class_name}_php*) _this)->references.Initialize();\n";
+				$return_called_overload .= $after_constructor_called;
 			}
 
 			
@@ -1801,12 +1853,12 @@ function function_return_call($method_name, $parameters_string, $required_parame
 			{
 				case "const_pointer":
 				case "pointer":
-					$call_code .= tabs($t) . "value_to_return{$required_parameters} = $method_name($parameters_string);\n";
+					$call_code .= tabs($t) . "value_to_return{$required_parameters} = ({$return_type}_php*) $method_name($parameters_string);\n";
 					break;
 			
 				case "const_reference":
 				case "reference":
-					$call_code .= tabs($t) . "value_to_return{$required_parameters} = &$method_name($parameters_string);\n";
+					$call_code .= tabs($t) . "value_to_return{$required_parameters} = ({$return_type}_php*) &$method_name($parameters_string);\n";
 					break;
 					
 				case "const_none":
@@ -1815,7 +1867,7 @@ function function_return_call($method_name, $parameters_string, $required_parame
 					
 					$call_code .= tabs($t) . "value_to_return{$required_parameters} = $method_name($parameters_string);\n";
 
-					$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}), 0);\n";
+					$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 					$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 					$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 					$call_code .= tabs($t) . "add_property_resource(return_value, \"wxResource\", zend_list_insert(ptr, le_{$return_type}));\n";
@@ -2073,12 +2125,12 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 				{
 					case "const_pointer":
 					case "pointer":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = ({$return_type}_php*) (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n\n";
 						break;
 				
 					case "const_reference":
 					case "reference":
-						$call_code .= tabs($t) . "value_to_return{$required_parameters} = &(({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
+						$call_code .= tabs($t) . "value_to_return{$required_parameters} = ({$return_type}_php*) &(({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n\n";
 						break;
 						
 					case "const_none":
@@ -2087,7 +2139,7 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 						
 						$call_code .= tabs($t) . "value_to_return{$required_parameters} = (({$derivation_class_name}_php*)_this)->$method_name($parameters_string);\n";
 
-						$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}), 0);\n";
+						$call_code .= tabs($t) . "void* ptr = safe_emalloc(1, sizeof({$return_type}_php), 0);\n";
 						$call_code .= tabs($t) . "memcpy(ptr, &value_to_return{$required_parameters}, sizeof({$return_type}));\n";
 						$call_code .= tabs($t) . "object_init_ex(return_value, php_{$return_type}_entry);\n";
 						$call_code .= tabs($t) . "add_property_resource(return_value, \"wxResource\", zend_list_insert(ptr, le_{$return_type}));\n";
@@ -2111,5 +2163,21 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 	}
 	
 	return $call_code;
+}
+
+function references_cast_code($class_name)
+{
+	$derivations = derivationsOfClass($class_name);
+	
+	$code .= "if(parent_rsrc_type == le_{$class_name})\n";
+	$code .= tabs(4) . "references = &(({$class_name}_php*)_this)->references;\n";
+	
+	foreach($derivations as $derivation_name=>$derivation_value)
+	{
+		$code .= tabs(3) . "else if(parent_rsrc_type == le_{$derivation_name})\n";
+		$code .= tabs(4) . "references = &(({$derivation_name}_php*)_this)->references;\n";
+	}
+	
+	return $code;
 }
 ?>

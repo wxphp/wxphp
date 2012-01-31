@@ -1,4 +1,6 @@
 ARG_ENABLE("wxWidgets", "enable wxWdigets extension", "no");
+ARG_ENABLE("wxwidgets-debug", "enable debugging messages support in wxPHP", "no");
+
 if (PHP_WXWIDGETS != "no") {
 	if (
 		CHECK_LIB("wxjpegd.lib", "wxWidgets", PHP_WXWIDGETS) &&
@@ -25,9 +27,15 @@ if (PHP_WXWIDGETS != "no") {
 		CHECK_LIB("wxmsw28d_adv.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_LIB("wxmsw28d_stc.lib", "wxWidgets", PHP_WXWIDGETS) &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\wx.h", "CFLAGS_WXWIDGETS")) {
-		EXTENSION("wxWidgets", "app.cpp frame.cpp wxwidgets.cpp");
+		
+		if (PHP_WXWIDGETS_DEBUG != "no") {
+			AC_DEFINE('USE_WXPHP_DEBUG', 1, 'Print debugging messages');
+		}
+		
+		EXTENSION("wxWidgets", "app.cpp references.cpp classes.cpp wxwidgets.cpp");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc");
 		AC_DEFINE('WX_DEBUG', 0, 'Have WX_DEBug library');
+		
 	} else {
 		WARNING("wxWidgets not enabled; libraries and headers not found");
 	}

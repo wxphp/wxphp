@@ -1,0 +1,7 @@
+* Update config.w32 and configd.w32 to use new wxWidgets 2.9.x
+* Compilation testing and troubleshooting on windows
+* Compilation testing and troubleshooting on mac
+* Implement __set to write to internal wxWidgets class properties.
+* Implement compare_objects handler for wxWidget classes that implement
+  operator== etc...
+* Fix segmentation bug that occurs on shutdown.

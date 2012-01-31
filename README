@@ -76,7 +76,7 @@ On ubuntu this is done by running:
 
 	sudo apt-get install php5-cli
 	
-To run the examples chante to on your console to the examples directory
+To run the examples change on your console to the examples directory
 and run the php interpreter on each file:
 
 	php thread.php

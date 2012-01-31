@@ -17,6 +17,7 @@
 include("include/functions.php");
 include("include/function_generation.php");
 include("include/class_header_generation.php");
+include("include/class_source_generation.php");
 include("include/class_virtual_source_generation.php");
 
 //Disable unnecesary php warnings
@@ -42,6 +43,9 @@ $defFunctions = array();
 
 //Initialize classes definitions
 $defIni = array();
+
+//Initialize class properties
+$defClassProperties = array();
 
 //Load includes parsed by the xml_parser
 if(file_exists("dumps/includes.json"))
@@ -76,6 +80,15 @@ if(file_exists("dumps/classes.json"))
 	
 	//Blacklist classes
 	unset($defIni['wxArrayString']);
+}
+
+//Load classes parsed by the xml_parser
+if(file_exists("dumps/class_variables.json"))
+{
+	$defClassProperties = unserialize_json(file_get_contents("dumps/class_variables.json"));
+	
+	//Blacklist class properties
+	unset($defClassProperties["wxTreeListCtrl"]);
 }
 
 //Load class and global enums parsed by the xml_parser
@@ -282,6 +295,8 @@ foreach($groups as $file_name => $classList)
 			{
 				ob_start();
 				include("templates/classes_source_constructor.php");
+				if(isset($defClassProperties[$class_name]))
+					include("templates/classes_get.php");
 				$classes_source_code .= ob_get_contents();
 				ob_end_clean();
 			}
@@ -302,6 +317,12 @@ foreach($groups as $file_name => $classList)
 	//Generate header file that holds class declarations
 	echo "Generating classes.h ...\n";
 	$classes_header_code = classes_author_header();
+	
+	$classes_header_code .= "#include \"references.h\"\n\n";
+	$classes_header_code .= "ZEND_BEGIN_ARG_INFO_EX(wxphp_get_args, 0, 0, 1)\n";
+	$classes_header_code .= tabs(1) . "ZEND_ARG_INFO(0, name)\n";
+    $classes_header_code .= "ZEND_END_ARG_INFO()\n\n";
+    
 	foreach($defIni as $class_name=>$class_methods)
 	{
 		ob_start();
@@ -602,6 +623,11 @@ foreach($defIni as $className => $classDef)
 		if($fcName==$className)
 		{
 			$fcName = "__construct";
+			
+			if(isset($defClassProperties[$className]))
+			{
+				$output .= "PHP_METHOD(php_$className, __get);\n";
+			}
 		}
 
 		$output .= "PHP_METHOD(php_$className, $fcName);\n";
