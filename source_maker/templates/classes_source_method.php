@@ -17,6 +17,7 @@ PHP_METHOD(php_<?=$class_name?>, <?=$method_name?>)
 	void *_this;
 	zval* dummy;
 	bool already_called = false;
+	wxPHPObjectReferences* references;
 	
 	//Get pointer of object that called this method if not a static method
 	if (getThis() != NULL) 
@@ -31,6 +32,8 @@ PHP_METHOD(php_<?=$class_name?>, <?=$method_name?>)
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			<?=references_cast_code($class_name)?>
 		}
 	}
 	else

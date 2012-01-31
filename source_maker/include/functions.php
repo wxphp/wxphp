@@ -753,6 +753,27 @@ function tabs($count=1)
 }
 
 /**
+ * Check if a given class inherits from another class
+ * 
+ * @param string $parent_class Base/parent class to check
+ * @param string $child_class Child class to check if inherits from parent class
+ * 
+ * @return bool
+ */
+function inherits_from_class($parent_class, $child_class)
+{
+	$derivations = derivationsOfClass($parent_class);
+	
+	foreach($derivations as $derivation_name=>$derivation_value)
+	{
+		if($derivation_name == $child_class)
+			return true;
+	}
+	
+	return false;
+}
+
+/**
  * Checks if a given class inherits a method from a specific class
  * 
  * @param string $method_name 

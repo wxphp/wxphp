@@ -29,17 +29,13 @@ PHP_METHOD(php_<?=$class_name?>, __construct)
 		
 		add_property_resource(getThis(), _wxResource, id_to_find);
 		
-		zend_list_addref(id_to_find);
-		
 		MAKE_STD_ZVAL(((<?=$class_name?>_php*) _this)->evnArray);
 		
 		array_init(((<?=$class_name?>_php*) _this)->evnArray);
 		
-		MAKE_STD_ZVAL(((<?=$class_name?>_php*) _this)->phpObj);
+		((<?=$class_name?>_php*) _this)->phpObj = getThis();
 		
-		*((<?=$class_name?>_php*) _this)->phpObj = *getThis();
-		
-		zval_copy_ctor(((<?=$class_name?>_php*) _this)->phpObj);
+		((<?=$class_name?>_php*) _this)->InitProperties();
 		
 		#ifdef ZTS 
 		((<?=$class_name?>_php*) _this)->TSRMLS_C = TSRMLS_C;

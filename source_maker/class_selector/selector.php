@@ -91,23 +91,23 @@ class myFrame extends wxFrame
 		parent::__construct( null ,null, "wxPHP Classes Selector, v0.2", new wxPoint(0, 0), new wxSize(600,400));
 		$this->SetIcon(new wxIcon("sample.xpm", wxBITMAP_TYPE_XPM));
 		
-		$sz = new wxBoxSizer(wxHORIZONTAL);
+		$this->sz = new wxBoxSizer(wxHORIZONTAL);
 		$sw = new wxSplitterWindow($this, -1, new wxPoint(0, 0), new wxSize(0,0), wxSP_NO_XP_THEME);
 		
 		$leftPanel = new wxPanel($sw);
 		$rightPanel = new wxPanel($sw);
 		
-		$leftSizer = new wxBoxSizer(wxVERTICAL);
+		$this->leftSizer = new wxBoxSizer(wxVERTICAL);
 		
 		$txtAutoCompletion = new wxTextCtrl($leftPanel, wxID_ANY);
 		$tree = new wxTreeCtrl($leftPanel, -1);
 		
-		$leftSizer->Add($txtAutoCompletion, 0, wxEXPAND | wxALL);
-		$leftSizer->Add($tree, 1, wxEXPAND | wxALL);
+		$this->leftSizer->Add($txtAutoCompletion, 0, wxEXPAND | wxALL);
+		$this->leftSizer->Add($tree, 1, wxEXPAND | wxALL);
 		
-		$leftPanel->SetSizer($leftSizer);
+		$leftPanel->SetSizer($this->leftSizer);
 		
-		$sz2 = new wxBoxSizer(wxVERTICAL);
+		$this->sz2 = new wxBoxSizer(wxVERTICAL);
 		$lstMethods	= new wxCheckListBox();
 		$lstMethods->Create($rightPanel, -1);
 		
@@ -117,10 +117,10 @@ class myFrame extends wxFrame
 		$lstMethods->Connect(wxEVT_COMMAND_CHECKLISTBOX_TOGGLED, array($this,"onMethodChecked"));
 		$lstImplements->Connect(wxEVT_COMMAND_CHECKLISTBOX_TOGGLED, array($this,"onParentChecked"));
 		
-		$sz2->Add($lstImplements, 1, wxEXPAND | wxALL);
-		$sz2->Add($lstMethods, 1, wxEXPAND | wxALL);
+		$this->sz2->Add($lstImplements, 1, wxEXPAND | wxALL);
+		$this->sz2->Add($lstMethods, 1, wxEXPAND | wxALL);
 		
-		$rightPanel->SetSizer($sz2);
+		$rightPanel->SetSizer($this->sz2);
 		
 		$this->lstMethods = $lstMethods;
 		$this->lstImplements = $lstImplements;
@@ -150,9 +150,9 @@ class myFrame extends wxFrame
 		
 		$sw->SplitVertically($leftPanel, $rightPanel);
 		$sw->SetMinimumPaneSize(150);
-		$sz->Add($sw,1,wxEXPAND | wxALL);
+		$this->sz->Add($sw,1,wxEXPAND | wxALL);
 		
-		$this->SetSizer($sz);
+		$this->SetSizer($this->sz);
 		
 		$mb = new wxMenuBar();
 		

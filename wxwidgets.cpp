@@ -4449,7 +4449,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 				#endif
 				wxColour value_to_return2;
 				value_to_return2 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1);
-				void* ptr = safe_emalloc(1, sizeof(wxColour), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));
@@ -4465,7 +4465,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 				#endif
 				wxColour value_to_return3;
 				value_to_return3 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8));
-				void* ptr = safe_emalloc(1, sizeof(wxColour), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));
@@ -4481,7 +4481,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 				#endif
 				wxColour value_to_return4;
 				value_to_return4 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8), (wxColourData*) object_pointer0_3);
-				void* ptr = safe_emalloc(1, sizeof(wxColour), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
 				memcpy(ptr, &value_to_return4, sizeof(wxColour));
 				object_init_ex(return_value, php_wxColour_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));
@@ -6883,7 +6883,7 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 				#endif
 				wxFont value_to_return2;
 				value_to_return2 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1);
-				void* ptr = safe_emalloc(1, sizeof(wxFont), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
 				memcpy(ptr, &value_to_return2, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxFont));
@@ -6899,7 +6899,7 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 				#endif
 				wxFont value_to_return3;
 				value_to_return3 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8));
-				void* ptr = safe_emalloc(1, sizeof(wxFont), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
 				memcpy(ptr, &value_to_return3, sizeof(wxFont));
 				object_init_ex(return_value, php_wxFont_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxFont));
@@ -7241,7 +7241,7 @@ PHP_FUNCTION(php_wxGetClientDisplayRect)
 				#endif
 				wxRect value_to_return0;
 				value_to_return0 = wxGetClientDisplayRect();
-				void* ptr = safe_emalloc(1, sizeof(wxRect), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxRect));
 				object_init_ex(return_value, php_wxRect_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
@@ -7301,7 +7301,7 @@ PHP_FUNCTION(php_wxGetDisplayPPI)
 				#endif
 				wxSize value_to_return0;
 				value_to_return0 = wxGetDisplayPPI();
-				void* ptr = safe_emalloc(1, sizeof(wxSize), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
@@ -7437,7 +7437,7 @@ PHP_FUNCTION(php_wxGetDisplaySize)
 				#endif
 				wxSize value_to_return0;
 				value_to_return0 = wxGetDisplaySize();
-				void* ptr = safe_emalloc(1, sizeof(wxSize), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
@@ -7573,7 +7573,7 @@ PHP_FUNCTION(php_wxGetDisplaySizeMM)
 				#endif
 				wxSize value_to_return0;
 				value_to_return0 = wxGetDisplaySizeMM();
-				void* ptr = safe_emalloc(1, sizeof(wxSize), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxSize));
 				object_init_ex(return_value, php_wxSize_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
@@ -8129,10 +8129,24 @@ PHP_FUNCTION(php_wxCreateDynamicObject)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxCreateDynamicObject(wxString(className0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
-				wxObject* value_to_return1;
-				value_to_return1 = wxCreateDynamicObject(wxString(className0, wxConvUTF8));
-				object_init_ex(return_value,php_wxObject_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxObject));
+				wxObject_php* value_to_return1;
+				value_to_return1 = (wxObject_php*) wxCreateDynamicObject(wxString(className0, wxConvUTF8));
+				if(value_to_return1 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return1->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxObject_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxObject));
+				}
+
 
 
 				return;
@@ -8212,10 +8226,24 @@ PHP_FUNCTION(php_wxFindWindowAtPointer)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowAtPointer(*(wxPoint*) object_pointer0_0) to return object pointer\n\n");
 				#endif
-				wxWindow* value_to_return1;
-				value_to_return1 = wxFindWindowAtPointer(*(wxPoint*) object_pointer0_0);
-				object_init_ex(return_value,php_wxWindow_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				wxWindow_php* value_to_return1;
+				value_to_return1 = (wxWindow_php*) wxFindWindowAtPointer(*(wxPoint*) object_pointer0_0);
+				if(value_to_return1 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return1->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxWindow_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				}
+
 
 
 				return;
@@ -8270,10 +8298,24 @@ PHP_FUNCTION(php_wxGetActiveWindow)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetActiveWindow() to return object pointer\n\n");
 				#endif
-				wxWindow* value_to_return0;
-				value_to_return0 = wxGetActiveWindow();
-				object_init_ex(return_value,php_wxWindow_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxWindow));
+				wxWindow_php* value_to_return0;
+				value_to_return0 = (wxWindow_php*) wxGetActiveWindow();
+				if(value_to_return0 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return0->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxWindow_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxWindow));
+				}
+
 
 
 				return;
@@ -8353,10 +8395,24 @@ PHP_FUNCTION(php_wxGetTopLevelParent)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxGetTopLevelParent((wxWindow*) object_pointer0_0) to return object pointer\n\n");
 				#endif
-				wxWindow* value_to_return1;
-				value_to_return1 = wxGetTopLevelParent((wxWindow*) object_pointer0_0);
-				object_init_ex(return_value,php_wxWindow_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				wxWindow_php* value_to_return1;
+				value_to_return1 = (wxWindow_php*) wxGetTopLevelParent((wxWindow*) object_pointer0_0);
+				if(value_to_return1 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return1->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxWindow_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				}
+
 
 
 				return;
@@ -9717,7 +9773,7 @@ PHP_FUNCTION(php_wxGetLibraryVersionInfo)
 				#endif
 				wxVersionInfo value_to_return0;
 				value_to_return0 = wxGetLibraryVersionInfo();
-				void* ptr = safe_emalloc(1, sizeof(wxVersionInfo), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxVersionInfo_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxVersionInfo));
 				object_init_ex(return_value, php_wxVersionInfo_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxVersionInfo));
@@ -10170,7 +10226,7 @@ PHP_FUNCTION(php_wxGetMousePosition)
 				#endif
 				wxPoint value_to_return0;
 				value_to_return0 = wxGetMousePosition();
-				void* ptr = safe_emalloc(1, sizeof(wxPoint), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
 				object_init_ex(return_value, php_wxPoint_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxPoint));
@@ -10230,7 +10286,7 @@ PHP_FUNCTION(php_wxGetMouseState)
 				#endif
 				wxMouseState value_to_return0;
 				value_to_return0 = wxGetMouseState();
-				void* ptr = safe_emalloc(1, sizeof(wxMouseState), 0);
+				void* ptr = safe_emalloc(1, sizeof(wxMouseState_php), 0);
 				memcpy(ptr, &value_to_return0, sizeof(wxMouseState));
 				object_init_ex(return_value, php_wxMouseState_entry);
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxMouseState));
@@ -10383,10 +10439,24 @@ PHP_FUNCTION(php_wxFindWindowAtPoint)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowAtPoint(*(wxPoint*) object_pointer0_0) to return object pointer\n\n");
 				#endif
-				wxWindow* value_to_return1;
-				value_to_return1 = wxFindWindowAtPoint(*(wxPoint*) object_pointer0_0);
-				object_init_ex(return_value,php_wxWindow_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				wxWindow_php* value_to_return1;
+				value_to_return1 = (wxWindow_php*) wxFindWindowAtPoint(*(wxPoint*) object_pointer0_0);
+				if(value_to_return1 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return1->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxWindow_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				}
+
 
 
 				return;
@@ -10468,10 +10538,24 @@ PHP_FUNCTION(php_wxFindWindowByLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowByLabel(wxString(label0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
-				wxWindow* value_to_return1;
-				value_to_return1 = wxFindWindowByLabel(wxString(label0, wxConvUTF8));
-				object_init_ex(return_value,php_wxWindow_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				wxWindow_php* value_to_return1;
+				value_to_return1 = (wxWindow_php*) wxFindWindowByLabel(wxString(label0, wxConvUTF8));
+				if(value_to_return1 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return1->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxWindow_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				}
+
 
 
 				return;
@@ -10482,10 +10566,24 @@ PHP_FUNCTION(php_wxFindWindowByLabel)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowByLabel(wxString(label0, wxConvUTF8), (wxWindow*) object_pointer0_1) to return object pointer\n\n");
 				#endif
-				wxWindow* value_to_return2;
-				value_to_return2 = wxFindWindowByLabel(wxString(label0, wxConvUTF8), (wxWindow*) object_pointer0_1);
-				object_init_ex(return_value,php_wxWindow_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxWindow));
+				wxWindow_php* value_to_return2;
+				value_to_return2 = (wxWindow_php*) wxFindWindowByLabel(wxString(label0, wxConvUTF8), (wxWindow*) object_pointer0_1);
+				if(value_to_return2 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return2->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxWindow_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxWindow));
+				}
+
 
 
 				return;
@@ -10567,10 +10665,24 @@ PHP_FUNCTION(php_wxFindWindowByName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowByName(wxString(name0, wxConvUTF8)) to return object pointer\n\n");
 				#endif
-				wxWindow* value_to_return1;
-				value_to_return1 = wxFindWindowByName(wxString(name0, wxConvUTF8));
-				object_init_ex(return_value,php_wxWindow_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				wxWindow_php* value_to_return1;
+				value_to_return1 = (wxWindow_php*) wxFindWindowByName(wxString(name0, wxConvUTF8));
+				if(value_to_return1 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return1->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxWindow_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
+				}
+
 
 
 				return;
@@ -10581,10 +10693,24 @@ PHP_FUNCTION(php_wxFindWindowByName)
 				#ifdef USE_WXPHP_DEBUG
 				php_printf("Executing ::wxFindWindowByName(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1) to return object pointer\n\n");
 				#endif
-				wxWindow* value_to_return2;
-				value_to_return2 = wxFindWindowByName(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1);
-				object_init_ex(return_value,php_wxWindow_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxWindow));
+				wxWindow_php* value_to_return2;
+				value_to_return2 = (wxWindow_php*) wxFindWindowByName(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1);
+				if(value_to_return2 == NULL){
+					ZVAL_NULL(return_value);
+				}
+				else if(value_to_return2->references.IsUserInitialized()){
+					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
+						return_value = *tmp;
+					}
+					else{
+						zend_error(E_ERROR, "Could not retreive original zval.");
+					}
+				}
+				else{
+					object_init_ex(return_value,php_wxWindow_entry);
+					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxWindow));
+				}
+
 
 
 				return;
@@ -21862,7 +21988,7 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	zend_declare_class_constant_long(php_wxStandardPaths_entry, "ResourceCat_None", 1,  wxStandardPaths::ResourceCat_None TSRMLS_DC);
 	zend_declare_class_constant_long(php_wxStandardPaths_entry, "ResourceCat_Messages", 1,  wxStandardPaths::ResourceCat_Messages TSRMLS_DC);
 	
-	wxUninitialize();
+	wxUninitialize(); //Maybe this shouldn't be called for references like wxNORMAL_FONT
 	
     return SUCCESS;
 }
