@@ -2829,7 +2829,7 @@ class wxIcon_php: public wxIcon{
 	wxIcon_php(const wxString& name, wxBitmapType type=wxICON_DEFAULT_TYPE, int desiredWidth=-1, int desiredHeight=-1):wxIcon(name, type, desiredWidth, desiredHeight){}
 	wxIcon_php(const wxIcon& icon):wxIcon(icon){}
 	wxIcon_php():wxIcon(){}
-	wxIcon_php(const char bits, int width, int height):wxIcon(bits, width, height){}
+	wxIcon_php(const char* bits, int width, int height):wxIcon(bits, width, height){}
 		
 		
 	void InitProperties(){
@@ -54527,6 +54527,72 @@ static function_entry php_wxNotificationMessage_functions[] = {
 	PHP_ME(php_wxNotificationMessage, SetTitle, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxNotificationMessage, Show, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxNotificationMessage, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxSystemOptions_entry;
+void php_wxSystemOptions_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxSystemOptions_NAME "wxSystemOptions"
+#define le_wxSystemOptions_name  "native wxSystemOptions"
+
+class wxSystemOptions_php: public wxSystemOptions{
+	public:
+	
+		
+		
+	void InitProperties(){
+	}
+	
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+	void** properties;
+	wxPHPObjectReferences references;
+};
+
+extern int le_wxSystemOptions;
+    
+static function_entry php_wxSystemOptions_functions[] = {
+	PHP_ME(php_wxSystemOptions, GetOption, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSystemOptions, GetOptionInt, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSystemOptions, HasOption, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSystemOptions, IsFalse, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSystemOptions, SetOption, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	{ NULL, NULL, NULL }
+};
+
+extern zend_class_entry *php_wxSystemSettings_entry;
+void php_wxSystemSettings_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+#define PHP_wxSystemSettings_NAME "wxSystemSettings"
+#define le_wxSystemSettings_name  "native wxSystemSettings"
+
+class wxSystemSettings_php: public wxSystemSettings{
+	public:
+	
+		
+		
+	void InitProperties(){
+	}
+	
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+	void** properties;
+	wxPHPObjectReferences references;
+};
+
+extern int le_wxSystemSettings;
+    
+static function_entry php_wxSystemSettings_functions[] = {
+	PHP_ME(php_wxSystemSettings, GetColour, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSystemSettings, GetFont, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSystemSettings, GetMetric, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSystemSettings, GetScreenType, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxSystemSettings, HasFeature, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	{ NULL, NULL, NULL }
 };
 
