@@ -13730,7 +13730,7 @@
 				"static":false,
 				"protected":false,
 				"parameters_type":[
-					"const char",
+					"const char*",
 					"int",
 					"int"
 				],
@@ -160284,6 +160284,261 @@
 					"wxEmptyString",
 					"NULL",
 					"wxICON_INFORMATION"
+				]
+			}
+		]
+	},
+	"wxSystemOptions":{
+		"GetOption":[
+			{
+				"return_type":"wxString",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_name":[
+					"name"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetOptionInt":[
+			{
+				"return_type":"int",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_name":[
+					"name"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"HasOption":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_name":[
+					"name"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"IsFalse":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_name":[
+					"name"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetOption":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&",
+					"const wxString&"
+				],
+				"parameters_name":[
+					"name",
+					"value"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			},
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&",
+					"int"
+				],
+				"parameters_name":[
+					"name",
+					"value"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		]
+	},
+	"wxSystemSettings":{
+		"GetColour":[
+			{
+				"return_type":"wxColour",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"wxSystemColour"
+				],
+				"parameters_name":[
+					"index"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetFont":[
+			{
+				"return_type":"wxFont",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"wxSystemFont"
+				],
+				"parameters_name":[
+					"index"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetMetric":[
+			{
+				"return_type":"int",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"wxSystemMetric",
+					"wxWindow*"
+				],
+				"parameters_name":[
+					"index",
+					"win"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null,
+					"NULL"
+				]
+			}
+		],
+		"GetScreenType":[
+			{
+				"return_type":"wxSystemScreenType",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"HasFeature":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"wxSystemFeature"
+				],
+				"parameters_name":[
+					"index"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
 				]
 			}
 		]

@@ -1559,6 +1559,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "else if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
 								$return_called_overload .= tabs(5) . "if(zend_hash_find(Z_OBJPROP_P(value_to_return{$required_parameters}->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){\n";
 								$return_called_overload .= tabs(6) . "return_value = *tmp;\n";
+								$return_called_overload .= tabs(6) . "return_is_user_initialized = true;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else{\n";
 								$return_called_overload .= tabs(6) . "zend_error(E_ERROR, \"Could not retreive original zval.\");\n";
@@ -1571,7 +1572,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								
 								if(!$declaration["static"] && $class_name)
 								{
-									$return_called_overload .= tabs(4) . "if(Z_TYPE_P(return_value) != IS_NULL){\n";
+									$return_called_overload .= tabs(4) . "if(Z_TYPE_P(return_value) != IS_NULL && value_to_return{$required_parameters} != _this && return_is_user_initialized){\n";
 									$return_called_overload .= tabs(5) . "references->AddReference(return_value);\n";
 									$return_called_overload .= tabs(4) . "}\n";
 								}
@@ -1605,6 +1606,7 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters}->references.IsUserInitialized()){\n";
 								$return_called_overload .= tabs(5) . "if(zend_hash_find(Z_OBJPROP_P(value_to_return{$required_parameters}->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){\n";
 								$return_called_overload .= tabs(6) . "return_value = *tmp;\n";
+								$return_called_overload .= tabs(6) . "return_is_user_initialized = true;\n";
 								$return_called_overload .= tabs(5) . "}\n";
 								$return_called_overload .= tabs(5) . "else{\n";
 								$return_called_overload .= tabs(6) . "zend_error(E_ERROR, \"Could not retreive original zval.\");\n";
@@ -1616,7 +1618,13 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n\n";
 								
 								if(!$declaration["static"] && $class_name)
+								{
+									$return_called_overload .= tabs(4) . "if(value_to_return{$required_parameters} != _this && return_is_user_initialized){ //Prevent adding references to it self\n";
+									$return_called_overload .= tabs(5) . "references->AddReference(return_value);\n";
+									$return_called_overload .= tabs(4) . "}\n";
+									
 									$return_called_overload .= tabs(4) . "references->AddReference(return_value);\n";
+								}
 									
 								break;
 								
@@ -2165,6 +2173,11 @@ function class_method_return_call($class_name, $method_name, $parameters_string,
 	return $call_code;
 }
 
+/**
+ * Generates the code to correctly cast the references variable using
+ * the parent_rsrc_type in order to correctly retrieve the references
+ * object.
+ */
 function references_cast_code($class_name)
 {
 	$derivations = derivationsOfClass($class_name);

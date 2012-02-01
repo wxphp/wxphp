@@ -1454,6 +1454,12 @@ int le_wxTimerRunner;
 zend_class_entry *php_wxNotificationMessage_entry;
 int le_wxNotificationMessage;
 
+zend_class_entry *php_wxSystemOptions_entry;
+int le_wxSystemOptions;
+
+zend_class_entry *php_wxSystemSettings_entry;
+int le_wxSystemSettings;
+
 
 /**
  * Predefined handcoded class entry for wxApp
@@ -1542,6 +1548,7 @@ PHP_FUNCTION(php_wxHandleFatalExceptions)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool doIt0;
@@ -1612,6 +1619,7 @@ PHP_FUNCTION(php_wxUninitialize)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -1700,6 +1708,7 @@ PHP_FUNCTION(php_wxWakeUpIdle)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -1755,6 +1764,7 @@ PHP_FUNCTION(php_wxYield)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -1810,6 +1820,7 @@ PHP_FUNCTION(php_wxSafeYield)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* win0 = 0;
@@ -1913,6 +1924,7 @@ PHP_FUNCTION(php_wxExit)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -1968,6 +1980,7 @@ PHP_FUNCTION(php_wxFromString)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* string0;
@@ -2110,6 +2123,7 @@ PHP_FUNCTION(php_wxToString)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* font0 = 0;
@@ -2260,6 +2274,7 @@ PHP_FUNCTION(php_wxSafeShowMessage)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* title0;
@@ -2322,6 +2337,7 @@ PHP_FUNCTION(php_wxSysErrorCode)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -2377,6 +2393,7 @@ PHP_FUNCTION(php_wxIsMainThread)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -2432,6 +2449,7 @@ PHP_FUNCTION(php_wxMutexGuiEnter)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -2487,6 +2505,7 @@ PHP_FUNCTION(php_wxMutexGuiLeave)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -2542,6 +2561,7 @@ PHP_FUNCTION(php_wxBase64Encode)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dst0;
@@ -2655,6 +2675,7 @@ PHP_FUNCTION(php_wxBase64DecodedSize)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long srcLen0;
@@ -2714,6 +2735,7 @@ PHP_FUNCTION(php_wxBase64EncodedSize)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long len0;
@@ -2773,6 +2795,7 @@ PHP_FUNCTION(php_wxBase64Decode)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dst0;
@@ -2964,6 +2987,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* message0;
@@ -3622,6 +3646,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* message0;
@@ -4349,6 +4374,7 @@ PHP_FUNCTION(php_wxGetColourFromUser)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* parent0 = 0;
@@ -4512,6 +4538,7 @@ PHP_FUNCTION(php_wxDisableAsserts)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -4567,6 +4594,7 @@ PHP_FUNCTION(php_wxIsDebuggerRunning)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -4622,6 +4650,7 @@ PHP_FUNCTION(php_wxSetDefaultAssertHandler)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -4677,6 +4706,7 @@ PHP_FUNCTION(php_wxTrap)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -4732,6 +4762,7 @@ PHP_FUNCTION(php_wxDirSelector)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* message0;
@@ -4930,6 +4961,7 @@ PHP_FUNCTION(php_wxNewEventType)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -4985,6 +5017,7 @@ PHP_FUNCTION(php_wxPostEvent)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* dest0 = 0;
@@ -5087,6 +5120,7 @@ PHP_FUNCTION(php_wxQueueEvent)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* dest0 = 0;
@@ -5189,6 +5223,7 @@ PHP_FUNCTION(php_wxFileSelector)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* message0;
@@ -5424,6 +5459,7 @@ PHP_FUNCTION(php_wxGetOSDirectory)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -5485,6 +5521,7 @@ PHP_FUNCTION(php_wxParseCommonDialogsFilter)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* wildCard0;
@@ -5603,6 +5640,7 @@ PHP_FUNCTION(php_wxDirExists)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dirname0;
@@ -5663,6 +5701,7 @@ PHP_FUNCTION(php_wxSplitPath)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* fullname0;
@@ -5755,6 +5794,7 @@ PHP_FUNCTION(php_wxRenameFile)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* file10;
@@ -5829,6 +5869,7 @@ PHP_FUNCTION(php_wxCopyFile)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* file10;
@@ -5903,6 +5944,7 @@ PHP_FUNCTION(php_wxFileExists)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* filename0;
@@ -5963,6 +6005,7 @@ PHP_FUNCTION(php_wxMatchWild)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* pattern0;
@@ -6026,6 +6069,7 @@ PHP_FUNCTION(php_wxPathOnly)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* path0;
@@ -6092,6 +6136,7 @@ PHP_FUNCTION(php_wxIsWild)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* pattern0;
@@ -6152,6 +6197,7 @@ PHP_FUNCTION(php_wxIsAbsolutePath)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* filename0;
@@ -6212,6 +6258,7 @@ PHP_FUNCTION(php_wxGetCwd)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -6273,6 +6320,7 @@ PHP_FUNCTION(php_wxSetWorkingDirectory)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dir0;
@@ -6333,6 +6381,7 @@ PHP_FUNCTION(php_wxConcatFiles)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* file10;
@@ -6397,6 +6446,7 @@ PHP_FUNCTION(php_wxRemoveFile)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* file0;
@@ -6457,6 +6507,7 @@ PHP_FUNCTION(php_wxMkdir)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dir0;
@@ -6529,6 +6580,7 @@ PHP_FUNCTION(php_wxRmdir)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dir0;
@@ -6601,6 +6653,7 @@ PHP_FUNCTION(php_wxFindNextFile)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -6662,6 +6715,7 @@ PHP_FUNCTION(php_wxFindFirstFile)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* spec0;
@@ -6746,6 +6800,7 @@ PHP_FUNCTION(php_wxGetFileKind)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long fd0;
@@ -6805,6 +6860,7 @@ PHP_FUNCTION(php_wxGetFontFromUser)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* parent0 = 0;
@@ -6930,6 +6986,7 @@ PHP_FUNCTION(php_wxColourDisplay)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -6985,6 +7042,7 @@ PHP_FUNCTION(php_wxDisplayDepth)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -7040,6 +7098,7 @@ PHP_FUNCTION(php_wxSetCursor)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* cursor0 = 0;
@@ -7120,6 +7179,7 @@ PHP_FUNCTION(php_wxClientDisplayRect)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long* x0;
@@ -7212,6 +7272,7 @@ PHP_FUNCTION(php_wxGetClientDisplayRect)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -7272,6 +7333,7 @@ PHP_FUNCTION(php_wxGetDisplayPPI)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -7332,6 +7394,7 @@ PHP_FUNCTION(php_wxDisplaySize)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long* width0;
@@ -7408,6 +7471,7 @@ PHP_FUNCTION(php_wxGetDisplaySize)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -7468,6 +7532,7 @@ PHP_FUNCTION(php_wxDisplaySizeMM)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long* width0;
@@ -7544,6 +7609,7 @@ PHP_FUNCTION(php_wxGetDisplaySizeMM)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -7604,6 +7670,7 @@ PHP_FUNCTION(php_wxEntryCleanup)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -7659,6 +7726,7 @@ PHP_FUNCTION(php_wxFinite)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	double x0;
@@ -7718,6 +7786,7 @@ PHP_FUNCTION(php_wxIsNaN)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	double x0;
@@ -7777,6 +7846,7 @@ PHP_FUNCTION(php_wxRound)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	double x0;
@@ -7836,6 +7906,7 @@ PHP_FUNCTION(php_wxIsSameDouble)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	double x0;
@@ -7896,6 +7967,7 @@ PHP_FUNCTION(php_wxIsNullDouble)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	double x0;
@@ -7955,6 +8027,7 @@ PHP_FUNCTION(php_wxMessageBox)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* message0;
@@ -8097,6 +8170,7 @@ PHP_FUNCTION(php_wxCreateDynamicObject)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* className0;
@@ -8137,6 +8211,7 @@ PHP_FUNCTION(php_wxCreateDynamicObject)
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -8174,6 +8249,7 @@ PHP_FUNCTION(php_wxFindWindowAtPointer)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* pt0 = 0;
@@ -8234,6 +8310,7 @@ PHP_FUNCTION(php_wxFindWindowAtPointer)
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -8271,6 +8348,7 @@ PHP_FUNCTION(php_wxGetActiveWindow)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -8306,6 +8384,7 @@ PHP_FUNCTION(php_wxGetActiveWindow)
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -8343,6 +8422,7 @@ PHP_FUNCTION(php_wxGetTopLevelParent)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* window0 = 0;
@@ -8403,6 +8483,7 @@ PHP_FUNCTION(php_wxGetTopLevelParent)
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -8440,6 +8521,7 @@ PHP_FUNCTION(php_wxRichTextHasStyle)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long flags0;
@@ -8500,6 +8582,7 @@ PHP_FUNCTION(php_wxGetStockLabel)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long id0;
@@ -8583,6 +8666,7 @@ PHP_FUNCTION(php_wxGetTextFromUser)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* message0;
@@ -8780,6 +8864,7 @@ PHP_FUNCTION(php_wxGetPasswordFromUser)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* message0;
@@ -8977,6 +9062,7 @@ PHP_FUNCTION(php_wxGetTimeZone)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9032,6 +9118,7 @@ PHP_FUNCTION(php_wxGetLocalTime)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9087,6 +9174,7 @@ PHP_FUNCTION(php_wxGetUTCTime)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9142,6 +9230,7 @@ PHP_FUNCTION(php_wxStringTokenize)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* str0;
@@ -9257,6 +9346,7 @@ PHP_FUNCTION(php_wxGetTranslation)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* string0;
@@ -9408,6 +9498,7 @@ PHP_FUNCTION(php_wxBeginBusyCursor)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* cursor0 = 0;
@@ -9499,6 +9590,7 @@ PHP_FUNCTION(php_wxEndBusyCursor)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9554,6 +9646,7 @@ PHP_FUNCTION(php_wxIsBusy)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9609,6 +9702,7 @@ PHP_FUNCTION(php_wxBell)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9664,6 +9758,7 @@ PHP_FUNCTION(php_wxInfoMessageBox)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* parent0 = 0;
@@ -9744,6 +9839,7 @@ PHP_FUNCTION(php_wxGetLibraryVersionInfo)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -9804,6 +9900,7 @@ PHP_FUNCTION(php_wxGetenv)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* name0;
@@ -9906,6 +10003,7 @@ PHP_FUNCTION(php_wxSetEnv)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* var0;
@@ -9968,6 +10066,7 @@ PHP_FUNCTION(php_wxUnsetEnv)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* var0;
@@ -10028,6 +10127,7 @@ PHP_FUNCTION(php_wxGetBatteryState)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -10083,6 +10183,7 @@ PHP_FUNCTION(php_wxGetPowerType)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -10138,6 +10239,7 @@ PHP_FUNCTION(php_wxGetKeyState)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long key0;
@@ -10197,6 +10299,7 @@ PHP_FUNCTION(php_wxGetMousePosition)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -10257,6 +10360,7 @@ PHP_FUNCTION(php_wxGetMouseState)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -10317,6 +10421,7 @@ PHP_FUNCTION(php_wxEnableTopLevelWindows)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool enable0;
@@ -10387,6 +10492,7 @@ PHP_FUNCTION(php_wxFindWindowAtPoint)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* pt0 = 0;
@@ -10447,6 +10553,7 @@ PHP_FUNCTION(php_wxFindWindowAtPoint)
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -10484,6 +10591,7 @@ PHP_FUNCTION(php_wxFindWindowByLabel)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* label0;
@@ -10546,6 +10654,7 @@ PHP_FUNCTION(php_wxFindWindowByLabel)
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -10574,6 +10683,7 @@ PHP_FUNCTION(php_wxFindWindowByLabel)
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -10611,6 +10721,7 @@ PHP_FUNCTION(php_wxFindWindowByName)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* name0;
@@ -10673,6 +10784,7 @@ PHP_FUNCTION(php_wxFindWindowByName)
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -10701,6 +10813,7 @@ PHP_FUNCTION(php_wxFindWindowByName)
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
 						return_value = *tmp;
+						return_is_user_initialized = true;
 					}
 					else{
 						zend_error(E_ERROR, "Could not retreive original zval.");
@@ -10738,6 +10851,7 @@ PHP_FUNCTION(php_wxFindMenuItemId)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	zval* frame0 = 0;
@@ -10822,6 +10936,7 @@ PHP_FUNCTION(php_wxNewId)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -10877,6 +10992,7 @@ PHP_FUNCTION(php_wxRegisterId)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long id0;
@@ -10936,6 +11052,7 @@ PHP_FUNCTION(php_wxLaunchDefaultApplication)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* document0;
@@ -11008,6 +11125,7 @@ PHP_FUNCTION(php_wxLaunchDefaultBrowser)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* url0;
@@ -11080,6 +11198,7 @@ PHP_FUNCTION(php_wxStripMenuCodes)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* str0;
@@ -11164,6 +11283,7 @@ PHP_FUNCTION(php_wxGetHomeDir)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -11225,6 +11345,7 @@ PHP_FUNCTION(php_wxGetFullHostName)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -11286,6 +11407,7 @@ PHP_FUNCTION(php_wxGetUserHome)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* user0;
@@ -11369,6 +11491,7 @@ PHP_FUNCTION(php_wxGetOsDescription)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -11430,6 +11553,7 @@ PHP_FUNCTION(php_wxGetOsVersion)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long* major0;
@@ -11534,6 +11658,7 @@ PHP_FUNCTION(php_wxIsPlatform64Bit)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -11589,6 +11714,7 @@ PHP_FUNCTION(php_wxIsPlatformLittleEndian)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -11644,6 +11770,7 @@ PHP_FUNCTION(php_wxGetProcessId)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -11699,6 +11826,7 @@ PHP_FUNCTION(php_wxKill)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long pid0;
@@ -11809,6 +11937,7 @@ PHP_FUNCTION(php_wxShell)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* command0;
@@ -11880,6 +12009,7 @@ PHP_FUNCTION(php_wxShutdown)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long flags0;
@@ -11950,6 +12080,7 @@ PHP_FUNCTION(php_wxMicroSleep)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long microseconds0;
@@ -12009,6 +12140,7 @@ PHP_FUNCTION(php_wxMilliSleep)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long milliseconds0;
@@ -12068,6 +12200,7 @@ PHP_FUNCTION(php_wxNow)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
@@ -12129,6 +12262,7 @@ PHP_FUNCTION(php_wxSleep)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long secs0;
@@ -12188,6 +12322,7 @@ PHP_FUNCTION(php_wxUsleep)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long milliseconds0;
@@ -12247,6 +12382,7 @@ PHP_FUNCTION(php_wxIsEmpty)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* s0;
@@ -12345,6 +12481,7 @@ PHP_FUNCTION(php_wxTmemchr)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* s0;
@@ -12409,6 +12546,7 @@ PHP_FUNCTION(php_wxTmemcmp)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* sz10;
@@ -12472,6 +12610,7 @@ PHP_FUNCTION(php_wxTmemcpy)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* szOut0;
@@ -12541,6 +12680,7 @@ PHP_FUNCTION(php_wxTmemmove)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* szOut0;
@@ -12610,6 +12750,7 @@ PHP_FUNCTION(php_wxTmemset)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* szOut0;
@@ -12678,6 +12819,7 @@ PHP_FUNCTION(php_wxSetlocale)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	long category0;
@@ -12741,6 +12883,7 @@ PHP_FUNCTION(php_wxStrlen)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* s0;
@@ -12801,6 +12944,7 @@ PHP_FUNCTION(php_wxStrnlen)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* str0;
@@ -12862,6 +13006,7 @@ PHP_FUNCTION(php_wxStrdup)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* s0;
@@ -12924,6 +13069,7 @@ PHP_FUNCTION(php_wxStrcpy)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dest0;
@@ -13038,6 +13184,7 @@ PHP_FUNCTION(php_wxStrncpy)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dest0;
@@ -13154,6 +13301,7 @@ PHP_FUNCTION(php_wxStrlcpy)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dest0;
@@ -13221,6 +13369,7 @@ PHP_FUNCTION(php_wxStrcat)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dest0;
@@ -13335,6 +13484,7 @@ PHP_FUNCTION(php_wxStrncat)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dest0;
@@ -13451,6 +13601,7 @@ PHP_FUNCTION(php_wxStrxfrm)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* dest0;
@@ -13563,6 +13714,7 @@ PHP_FUNCTION(php_wxStrstr)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* haystack0;
@@ -13845,6 +13997,7 @@ PHP_FUNCTION(php_wxStrchr)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* s0;
@@ -14035,6 +14188,7 @@ PHP_FUNCTION(php_wxStrrchr)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* s0;
@@ -14225,6 +14379,7 @@ PHP_FUNCTION(php_wxStrpbrk)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* s0;
@@ -14507,6 +14662,7 @@ PHP_FUNCTION(php_wxRemove)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* path0;
@@ -14567,6 +14723,7 @@ PHP_FUNCTION(php_wxRename)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* oldpath0;
@@ -14629,6 +14786,7 @@ PHP_FUNCTION(php_wxAtoi)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* str0;
@@ -14689,6 +14847,7 @@ PHP_FUNCTION(php_wxAtol)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* str0;
@@ -14749,6 +14908,7 @@ PHP_FUNCTION(php_wxAtof)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* str0;
@@ -14809,6 +14969,7 @@ PHP_FUNCTION(php_wxSystem)
 	int arguments_received = ZEND_NUM_ARGS();
 	zval* dummy;
 	bool already_called = false;
+	bool return_is_user_initialized = false;
 	
 	//Parameters for overload 0
 	char* str0;
@@ -19067,6 +19228,14 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	INIT_CLASS_ENTRY(cf, PHP_wxNotificationMessage_NAME , php_wxNotificationMessage_functions);
 	php_wxNotificationMessage_entry = zend_register_internal_class(&cf TSRMLS_CC);
 	le_wxNotificationMessage = zend_register_list_destructors_ex(php_wxNotificationMessage_destruction_handler, NULL, le_wxNotificationMessage_name, module_number);
+
+	INIT_CLASS_ENTRY(cf, PHP_wxSystemOptions_NAME , php_wxSystemOptions_functions);
+	php_wxSystemOptions_entry = zend_register_internal_class(&cf TSRMLS_CC);
+	le_wxSystemOptions = zend_register_list_destructors_ex(php_wxSystemOptions_destruction_handler, NULL, le_wxSystemOptions_name, module_number);
+
+	INIT_CLASS_ENTRY(cf, PHP_wxSystemSettings_NAME , php_wxSystemSettings_functions);
+	php_wxSystemSettings_entry = zend_register_internal_class(&cf TSRMLS_CC);
+	le_wxSystemSettings = zend_register_list_destructors_ex(php_wxSystemSettings_destruction_handler, NULL, le_wxSystemSettings_name, module_number);
 
 
 	//Variables found on consts.json

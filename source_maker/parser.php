@@ -26,7 +26,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 //Initialize includes list
 $defIncludes = array();
 
-//Initialize class enums
+//Initialize class and global enums
 $defEnums = array();
 
 //Initialize constant definitions
@@ -82,7 +82,7 @@ if(file_exists("dumps/classes.json"))
 	unset($defIni['wxArrayString']);
 }
 
-//Load classes parsed by the xml_parser
+//Load class properties parsed by the xml_parser
 if(file_exists("dumps/class_variables.json"))
 {
 	$defClassProperties = unserialize_json(file_get_contents("dumps/class_variables.json"));
@@ -193,7 +193,7 @@ file_put_contents("discarded.log", "============================================
 remove_protected_methods($defIni);
 
 //Remove virtual methods that override non virtual methods with the same name
-//since this methods cant be overrided causing conflicts and compilation errors.
+//since these methods cant be overrided causing conflicts and compilation errors.
 remove_virtual_methods_overrides($defIni);
 
 //Remove operators (TODO: is there a way to implement them on PHP ZEND?)

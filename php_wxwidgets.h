@@ -6016,6 +6016,16 @@ PHP_METHOD(php_wxNotificationMessage, SetTitle);
 PHP_METHOD(php_wxNotificationMessage, Show);
 PHP_METHOD(php_wxNotificationMessage, __construct);
 PHP_METHOD(php_wxNotificationMessage, Connect);
+PHP_METHOD(php_wxSystemOptions, GetOption);
+PHP_METHOD(php_wxSystemOptions, GetOptionInt);
+PHP_METHOD(php_wxSystemOptions, HasOption);
+PHP_METHOD(php_wxSystemOptions, IsFalse);
+PHP_METHOD(php_wxSystemOptions, SetOption);
+PHP_METHOD(php_wxSystemSettings, GetColour);
+PHP_METHOD(php_wxSystemSettings, GetFont);
+PHP_METHOD(php_wxSystemSettings, GetMetric);
+PHP_METHOD(php_wxSystemSettings, GetScreenType);
+PHP_METHOD(php_wxSystemSettings, HasFeature);
 // <--- entries
 
 

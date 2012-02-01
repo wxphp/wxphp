@@ -845,3 +845,8 @@ provides it as follows:
 	
 
 13. Modified SetBitmap on wxMenuItem removed bool parameter
+
+
+14. Fixed wxIcon constructor from 
+	wxIcon(const char bits, int width, int height) to
+	wxicon(const char* bits, int width, int height)

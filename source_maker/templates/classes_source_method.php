@@ -18,6 +18,7 @@ PHP_METHOD(php_<?=$class_name?>, <?=$method_name?>)
 	zval* dummy;
 	bool already_called = false;
 	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
 	
 	//Get pointer of object that called this method if not a static method
 	if (getThis() != NULL) 
