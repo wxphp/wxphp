@@ -35,7 +35,7 @@ static function_entry php_<?=$class_name?>_functions[] = {
 	print $methods_entry;
 ?>
 <?if(isset($defClassProperties[$class_name]) && isset($defIni[$class_name][$class_name])){?>
-	PHP_ME(php_<?=$class_name?>, __get, wxphp_get_args, ZEND_ACC_PUBLIC)
+	PHP_ME(php_<?=$class_name?>, __get, wxphp_<?=$file_name?>_get_args, ZEND_ACC_PUBLIC)
 <?}?>
 	{ NULL, NULL, NULL }
 };

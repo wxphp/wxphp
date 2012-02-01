@@ -732,6 +732,80 @@ function remove_functions_implementing_unknown_types(&$functions)
 	file_put_contents("discarded.log", "\n\n\n", FILE_APPEND);
 }
 
+/**
+ * Fixes the class_groups.json for correct functioning by 
+ * adding classes without a group to a group called others, removing
+ * empty groups and class repetitions.
+ * 
+ * @param array $groups Reference to the groups array returned by the xml_parser
+ * @param array $all_classes Reference to the classes array returned by xml_parser
+ */
+function prepair_groups(&$groups, $all_classes)
+{
+	$groups["others"] = array(); //Store classes without a group
+
+	foreach($all_classes as $class_name => $class_data)
+	{
+		$found = false;
+		foreach($groups as $file => $classes)
+		{
+			if(in_array($class_name, $classes))
+			{
+				$found = true;
+				break;
+			}
+		}
+		
+		if(!$found)
+			$groups["others"][] = $class_name;
+	}
+
+	//Remove empty groups or with no classes defined on $all_classes
+	foreach($groups as $group_name=>$classes_list)
+	{
+		if(count($classes_list) <= 0)
+			unset($groups[$group_name]);
+		
+		$class_found = false;
+		foreach($classes_list as $class_index=>$class_name)
+		{
+			if(isset($all_classes[$class_name]))
+			{
+				$class_found = true;
+				break;
+			}
+		}
+		
+		if(!$class_found)
+			unset($groups[$group_name]);
+	}
+
+	//Remove classes repeated in more than 1 group
+	$removed = array();
+	foreach($groups as $current_group_name=>$classes_list)
+	{	
+		foreach($classes_list as $class_index=>$class_name)
+		{
+			if(isset($removed[$current_group_name][$class_index]))
+				continue;
+							
+			foreach($groups as $group_name_to_check=>$classes_list_to_check)
+			{
+				if($group_name_to_check != $current_group_name)
+				{
+					foreach($classes_list_to_check as $class_to_check_index=>$class_to_check_name)
+					{
+						if($class_name == $class_to_check_name)
+						{
+							unset($groups[$group_name_to_check][$class_to_check_index]);
+							$removed[$group_name_to_check][$class_to_check_index] = true;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 /**
  * Generates a string of tabs, to deal more cleanly with tabs on output code

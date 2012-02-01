@@ -4,4 +4,4 @@
 * Implement __set to write to internal wxWidgets class properties.
 * Implement compare_objects handler for wxWidget classes that implement
   operator== etc...
-* Fix segmentation bug that occurs on shutdown.
+* Fix segmentation bug that occurs on shutdown (almost fixed).
