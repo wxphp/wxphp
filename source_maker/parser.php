@@ -47,6 +47,9 @@ $defIni = array();
 //Initialize class properties
 $defClassProperties = array();
 
+//Initialize class groups
+$defClassGroups = array();
+
 //Load includes parsed by the xml_parser
 if(file_exists("dumps/includes.json"))
 {
@@ -89,6 +92,12 @@ if(file_exists("dumps/class_variables.json"))
 	
 	//Blacklist class properties
 	unset($defClassProperties["wxTreeListCtrl"]);
+}
+
+//Load class properties parsed by the xml_parser
+if(file_exists("dumps/class_groups.json"))
+{
+	$defClassGroups = unserialize_json(file_get_contents("dumps/class_groups.json"));
 }
 
 //Load class and global enums parsed by the xml_parser
@@ -166,24 +175,8 @@ $evnHandlers = derivationsOfClass('wxEvtHandler');
 //Store all classes that derive from wxObject
 $wxObject_derivations = derivationsOfClass('wxObject');
 
-//This is supposed to group classes to generate different source files
-//depending on the group but for now we store all the generated code
-//on single header and source files called classes.h and classes.cpp
-$groups	= array(
-	"classes"=>array()
-);
-
-foreach($defIni as $cName => $cVal)
-{
-	$found = false;
-	foreach($groups as $file => $cls)
-	{
-		if(in_array($cName,$cls))
-			$found = true;
-	}
-	if(!$found)
-		$groups["classes"][] = $cName;
-}
+//Prepair class groups to generate different source files correctly
+prepair_groups($defClassGroups, $defIni);
 
 //Empty the discarded log
 file_put_contents("discarded.log", "All class methods removed by the cleaning functions\n");
@@ -219,22 +212,34 @@ remove_functions_implementing_unknown_types($defFunctions);
 //Merges method overloads from parents to child classes
 //classes_method_merger($defIni); //This is provoking compilation errors on some classes
 	
-//Generate classes.cpp and classes.h
-foreach($groups as $file_name => $classList)
+//Generate classes source and header files
+foreach($defClassGroups as $file_name => $class_list)
 {
-	$class_name = "wxFrame";
-	$class_methods = $defIni["wxFrame"];
+	//Strip group_class_
+	$file_name = str_replace("group_class_", "", $file_name);
 	
 	//Generate header file that holds class declarations
-	echo "Generating classes.cpp ...\n";
+	echo "Generating $file_name.cpp ...\n";
+	
+	$header_files = "";
+	foreach($defClassGroups as $header_file => $header_class_list)
+	{
+		//Strip group_class_
+		$header_files .= "#include \"" . str_replace("group_class_", "", $header_file) . ".h\"\n";
+	}
 	
 	//Add neccesary headers to classes implementation file
 	$classes_source_code = classes_author_header();
 	$classes_source_code .= "#include \"php_wxwidgets.h\"\n";
-	$classes_source_code .= "#include \"$file_name.h\"\n\n";
+	$classes_source_code .= "$header_files\n\n";
 	
-	foreach($defIni as $class_name=>$class_methods)
+	foreach($class_list as $class_name)
 	{
+		if(!isset($defIni[$class_name]))
+			continue;
+			
+		$class_methods = $defIni[$class_name];
+			
 		ob_start();
 		include("templates/classes_source.php");
 		$classes_source_code .= ob_get_contents();
@@ -315,16 +320,21 @@ foreach($groups as $file_name => $classList)
 	file_put_contents($file_name.".cpp", $classes_source_code);
 	
 	//Generate header file that holds class declarations
-	echo "Generating classes.h ...\n";
+	echo "Generating $file_name.h ...\n";
 	$classes_header_code = classes_author_header();
 	
 	$classes_header_code .= "#include \"references.h\"\n\n";
-	$classes_header_code .= "ZEND_BEGIN_ARG_INFO_EX(wxphp_get_args, 0, 0, 1)\n";
+	$classes_header_code .= "ZEND_BEGIN_ARG_INFO_EX(wxphp_{$file_name}_get_args, 0, 0, 1)\n";
 	$classes_header_code .= tabs(1) . "ZEND_ARG_INFO(0, name)\n";
     $classes_header_code .= "ZEND_END_ARG_INFO()\n\n";
     
-	foreach($defIni as $class_name=>$class_methods)
+	foreach($class_list as $class_name)
 	{
+		if(!isset($defIni[$class_name]))
+			continue;
+			
+		$class_methods = $defIni[$class_name];
+		
 		ob_start();
 		include("templates/classes_header.php");
 		$classes_header_code .= ob_get_contents();
@@ -333,7 +343,7 @@ foreach($groups as $file_name => $classList)
 
 	file_put_contents($file_name.".h", $classes_header_code);
 
-} //Ends foreach($groups as $fileN => $classList)
+} //Ends foreach($defClassGroups as $file_name => $class_list)
 
 
 //Update wxwidgets.cpp by just upgrading the code betewen 
@@ -342,9 +352,10 @@ echo "Generating wxwidgets.cpp...\n";
 
 //Generate zend_class_entry declaration of each class
 $entries = "";
-foreach($groups as $k => $v)
+foreach($defClassGroups as $header_name => $v)
 {
-	$entries .= "#include \"$k.h\"\n";
+	$header_name = str_replace("group_class_", "", $header_name);
+	$entries .= "#include \"$header_name.h\"\n";
 }
 
 $entries .= "\n";
@@ -672,6 +683,34 @@ if(preg_match("/(.*?\/\/ entries --->)[^<]+(\/\/ <--- entries[^§]+)/sm", $old, 
 	fwrite($hd, $output);
 	fclose($hd);
 }
+
+
+//Update config files (config.m4, config.w32)
+echo "\nUpdating config files with list of source files...\n\n";
+$source_files = "";
+
+foreach($defClassGroups as $group_name=>$class_list)
+{
+	$source_files .= str_replace("group_class_", "", $group_name) . ".cpp ";
+}
+
+$source_files = trim($source_files);
+
+$unix_config = "";
+ob_start();
+	include("config_templates/config.m4");
+	$unix_config .= ob_get_contents();
+ob_end_clean();
+
+file_put_contents("config.m4", $unix_config);
+
+$win_config = "";
+ob_start();
+	include("config_templates/config.w32");
+	$win_config .= ob_get_contents();
+ob_end_clean();
+
+file_put_contents("config.w32", $win_config);
 
 
 die("Done!\n");

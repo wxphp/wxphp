@@ -3,9 +3,10 @@ Table of Contents:
 1. Code Generator
 2. Using the source maker
 3. Dumps
-4. Source Templates
-5. Templates
-6. Class Selector
+4. Config Templates
+5. Source Templates
+6. Templates
+7. Class Selector
 	
 
 Code generator
@@ -24,12 +25,13 @@ Using the source maker:
 cd source_maker	
 php parser.php
 
-This will produce 5 files:
-	classes.h
-	clases.cpp
+This will produce a bunch of source and header files like:
+	aui.h
+	aui.cpp
 	php_wxwidgets.h
 	wxwidgets.cpp
 	common.h
+	etc...
 	
 It also generates a file named discarded.log that stores all methods
 and functions that were removed from the source code generation for
@@ -56,8 +58,13 @@ Files on the directory:
 	classes.json:
 		Classes and it's methods with detailed information.
 		
+	class_groups.json:
+		Defines to which group a class belongs in order to generate
+		multiple source files instead of generating a single huge one.
+		
 	classes_variables.json
-		Store the member variables of classes (not implemnted yet)
+		Store the member variables of classes to be able to implement
+		__get and __set
 		
 	consts.json 
 		#define macro names and the values.
@@ -78,6 +85,13 @@ Files on the directory:
 	typedef.json
 		Name of variables declared as typedef with 
 		the original type value.
+
+	
+Config Templates
+------------------------
+The config_templates directory has the files that serve as the skeleton
+for generating the config.m4 and config.w32 with the generated source
+files for correct compilation.
 		
 		
 Source Templates

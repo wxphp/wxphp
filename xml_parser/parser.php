@@ -29,6 +29,7 @@ else
 $includes = array();
 $classes = array();
 $class_variables = array();
+$class_groups = array();
 $structs = array();
 $enums = array();
 $defines = array();
@@ -449,6 +450,30 @@ for ($i = 0; $i < $entries->length; $i++)
 			}
 		}
 	}
+	else if($kind == "group")
+	{
+		//Skip none class groups
+		if("".strpos($refid, "class")."" == "")
+			continue;
+			
+		$group_doc = new DOMDocument();
+		$group_doc->load("xml/$refid.xml");
+		
+		$group_xpath = new DOMXPath($group_doc);
+		
+		$group_name = $group_xpath->evaluate("//compoundname", $group_doc)->item(0)->nodeValue;
+		
+		$group_array = array();
+		
+		//Get the member functions of the class
+		$group_members = $group_xpath->evaluate("//innerclass", $group_doc);
+		for($member=0; $member<$group_members->length; $member++)
+		{
+			$group_array[] = $group_members->item($member)->nodeValue;
+		}
+		
+		$class_groups[$group_name] = $group_array;
+	}
 	
 	//Store compound kinds on index.xml not handled
 	else
@@ -488,6 +513,7 @@ print "Type definitions found: " . count($typedef) . "\n";
 print "Global variables found: " . count($global_variables) . "\n";
 print "Classes found: " . (count($classes)-count($structs)) . "\n";
 print "Classes with variables found: " . count($class_variables) . "\n";
+print "Class groups found: " . count($class_groups) . "\n";
 print "Structs found: " . count($structs) . "\n";
 print "Functions found: " . count($functions) . "\n";
 print "Class enumerations found: " . count($enums[0]) . "\n";
@@ -500,6 +526,7 @@ print "Saving output to files...\n";
 file_put_contents("output/includes.json", serialize_json($includes));
 file_put_contents("output/classes.json", serialize_json($classes));
 file_put_contents("output/class_variables.json", serialize_json($class_variables));
+file_put_contents("output/class_groups.json", serialize_json($class_groups));
 file_put_contents("output/functions.json", serialize_json($functions));
 file_put_contents("output/enums.json", serialize_json($enums));
 file_put_contents("output/consts.json", serialize_json($defines));
